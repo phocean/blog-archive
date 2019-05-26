@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Docker &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/docker/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>BeEF Docker</title>
+		<link>/blog-archive/2017/02/24/beef-docker.html</link>
+		<pubDate>Fri, 24 Feb 2017 21:17:51 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[BeEF]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
+		<description><![CDATA[Just a quick update to tell about a new Docker based on the phocean/msf image. https://hub.docker.com/r/phocean/beef/ https://github.com/phocean/dockerfile-beef It provides an image for the BeEF framework for XSS browser exploitation (http://beefproject.com/). Enjoy it!]]></description>
+				<content:encoded><![CDATA[<p>Just a quick update to tell about a new Docker based on the phocean/msf image.</p>
+<p><a href="https://hub.docker.com/r/phocean/beef/">https://hub.docker.com/r/phocean/beef/</a></p>
+<p><a href="https://github.com/phocean/dockerfile-beef">https://github.com/phocean/dockerfile-beef</a></p>
+<p>It provides an image for the BeEF framework for XSS browser exploitation (<a href="http://beefproject.com/">http://beefproject.com/</a>).</p>
+<p>Enjoy it!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Metasploit framework docker image now published on Docker Hub</title>
+		<link>/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html</link>
+		<pubDate>Tue, 28 Jun 2016 20:56:32 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2117</guid>
+		<description><![CDATA[I pushed the image on Docker Hub, so that deploying it is now as easy as: docker pull phocean/msf It is an automatic build based on the Github repository. It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I pushed the image on <a href="https://hub.docker.com/r/phocean/msf/">Docker Hub</a>, so that deploying it is now as easy as:</p>
+<pre>docker pull phocean/msf</pre>
+<p>It is an automatic build based on the <a href="https://github.com/phocean/dockerfile-debian-metasploit">Github repository</a>.</p>
+<p>It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github.</p>
+<p>Thus, you may place in this image the same level of trust than the one you have in Docker (I cannot interfere in the process and mess with the image).</p>
+<p>I say it because I am myself reluctant of installing third-party images. While I prefer to rebuild everything from Dockerfiles, I am fine with automatically built images if I am in a hurry and for non sensitive data.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Msf docker image now in REMnux!</title>
+		<link>/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html</link>
+		<pubDate>Thu, 12 May 2016 17:50:14 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[REMnux]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
+		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Just a quick note to say that I am very happy about this <a href="https://github.com/phocean/dockerfile-debian-metasploit">Metasploit docker image</a> being useful to some people, according to the feedback I got.</p>
+<p>And <a href="https://twitter.com/lennyzeltser">Lenny</a> was kind enough to integrate it into his Linux distro, <a href="https://remnux.org/">REMnux</a>, well known among reversing people. He also came up with very good suggestions and helped me to bring some improvements, so many thanks to him.</p>
+<p>Don&#8217;t miss reading his blog article on how to use the image in REMnux : <a href="https://zeltser.com/metasploit-framework-docker-container/"><em>&#8220;Run Metasploit Framework as a Docker Container Without Installation Pains&#8221;</em></a>.<br />
+Stay tuned ;-)</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
+		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Etherpad]]></category>
+		<category><![CDATA[Nodejs]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Context</h2>
+<p>I have kept playing with Docker recently, just for fun and to learn.</p>
+<p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
+<p>Indeed, I had some issues with Etherpad, which is a Nodejs application, and its integration into Docker.</p>
+<p>Initially, I made something quite simple, so my Dockerfile ended like that:</p>
+<pre>USER etherpad
+CMD ["node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>Thus, I simply start the app with a low privileges user.</p>
+<p>It worked, but I had two issues:</p>
+<ol>
+<li>Docker was not able to stop it nicely. Instead, it timed out after 10 sec and finally killed the app and the container altogether.</li>
+<li>No persistence of any kind, of course.</li>
+</ol>
+<p>I decided to tackle these two issues to understand what was going on behind.</p>
+<h2>The PID 1 issue</h2>
+<p>I could not understand immediately the first issue: why was Docker unable to terminate the container properly?</p>
+<p>After wandering a few hours on wrong paths (trying to get through with Nodejs nodemon or supervisor), I finally found some good articles, explaining that Docker misses an init system to catch signals, wich causes some issues with applications started with a PID = 1, which cannot be killed, or with Bash (the shell doesn&#8217;t handle transmitted signals.</p>
+<p>I am not going to repeat poorly what has already been explained very well, so I encourage you to read this two excellent posts:</p>
+<ul>
+<li><a href="https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/">The PID 1 zombie reaping problem</a></li>
+<li><a href="https://medium.com/@gchudnov/trapping-signals-in-docker-containers-7a57fdda7d86#.wqy8msjbk">Trapping signals in Docker containers</a></li>
+</ul>
+<p>You will also find a lot of bug reports in the Docker github about this issue, and a lot of hacky or overkilling solutions.</p>
+<p>In my opinion, the most elegant solution among them is to use a launcher program, very simple and dedicated to catch and handle signal.</p>
+<p>I chose to use <a href="https://github.com/yelp/dumb-init">Dumb-init</a>, as it is well packaged (there are plenty of options) and seems to be well maintained.</p>
+<p>So, after installing Dump-init in the Dockerfile, the CMD line should now look like this:</p>
+<pre>USER etherpad
+CMD ["dumb-init","node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>And indeed, as expected, <em>docker stop</em> now works flawlessly.</p>
+<h2>Volume permissions</h2>
+<p>This is where I had the toughest issue, although it is supposed to be straightforward with volumes.</p>
+<p>Volumes enable to share files or folders between host and containers, or between containers solely. There are plenty of possibilities, nicely illustrated on this blog:</p>
+<ul>
+<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker: storage patterns for persistence</a></li>
+</ul>
+<p>And it works very well&#8230;. as long as you application runs as root.</p>
+<p>In my case, for instance, Etherpad runs with a low privileged user, which is highly recommended. At startup, it creates a sqlite database, etherpad.db,  in its ./var folder.</p>
+<p>Mounting a volume, of any kind, over the ./var folder, would result in a folder with root only permissions. Subsequently, of course, the launch of Etherpad from the CMD command would fail miserably.</p>
+<p>Simple solutions like <em>chown</em> in the Dockerfile don&#8217;t work, because they apply <em>before</em> the mount. The <em>mount</em> occurs at runtime and works like a standard Linux <em>mount:</em> it is created by the docker daemon, with <em>root</em> permissions, over possibly existing data.</p>
+<p>My solution was to completely change the way Etherpad is started. I now use an external script which is started at runtime:</p>
+<ol>
+<li>First, it applies the appropriate permissions to the mounted volume with <em>chown,</em></li>
+<li>Then, it starts Etherpad with a low privileged user thanks to a <em>su</em> hack.</li>
+</ol>
+<p>So now the Dockerfile ends with:</p>
+<pre>VOLUME /opt/etherpad-lite/var
+ADD run-docker.sh ./bin/
+CMD ["./bin/run-docker.sh"]</pre>
+<p>And here is the script:</p>
+<pre>#!/bin/bash
+
+chown -R etherpad:etherpad /opt/etherpad-lite/var
+su etherpad -s /bin/bash -c  "dumb-init node /opt/etherpad-lite/node_modules/ep_etherpad-lite/no
+de/server.js"</pre>
+<p>I use a data volume for persistency, so the run command looks like this:</p>
+<pre>docker run -d --name etherpad -p 80:9001 -v etherpad:/opt/etherpad-lite/var -t debian-etherpad</pre>
+<p>Far from being ideal, but it works. I really hope some features are coming to bring more options in this area, especially in the Dockerfile.</p>
+<h2>Some final thoughts</h2>
+<p>Globally, we can still hope a lot of improvements in security, because when I look at many Dockerfiles around, I see two behaviors:</p>
+<ul>
+<li>A lot of people don&#8217;t care and everything is happily running as root, from unauthenticated third-party images or binaries&#8230;</li>
+<li>Some people do care but end up with dirty hacks, because there is no other way to do so.</li>
+</ul>
+<p>It is scary and so far from the Linux philosophy. Let&#8217;s wait for the enhancements to come.</p>
+<p>You can find the complete <em>updated</em> Dockerfile on <a href="https://github.com/phocean/dockerfile-debian-etherpad/blob/master/Dockerfile">this github page</a>.</p>
+<p>While we are on this topic, have a look to <a href="http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks">this nice post with some nice tips and tricks</a> for Docker.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Small improvements to the Metasploit-framework Dockerfile</title>
+		<link>/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html</link>
+		<pubDate>Tue, 03 May 2016 20:36:38 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2094</guid>
+		<description><![CDATA[I made a few improvements (at least, I think they are) to the metasploit-frameword Dockerfile : A volume from the container /root/.msf4 to $HOME/.msf4, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I made a few improvements (at least, I think they are) to the <a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">metasploit-frameword Dockerfile</a> :</p>
+<ul>
+<li>A <a href="https://docs.docker.com/engine/userguide/containers/dockervolumes/">volume</a> from the container <em>/root/.msf4</em> to <em>$HOME/.msf4</em>, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be readily available to the <em>msf</em> container.</li>
+<li>A volume from the container <em>/tmp/data</em> to the host <em>/tmp/msf</em>, so that you can get access to dump files and stuff like that.</li>
+<li><em><a href="https://tmux.github.io/">Tmux</a></em> window manager tool, so that you can easily navigate between <em>msfconsole,</em> bash and other sessions.</li>
+<li><em><a href="https://nmap.org/">nmap</a></em> network scanner, just because sometimes it may be useful (along with its <em>ncat</em>).</li>
+<li><a href="http://www.nasm.us/"><em>nasm,</em></a> to support your custom encoders.</li>
+</ul>
+<p>It is all up-to-date in <a href="https://github.com/phocean/dockerfile-debian-metasploit">its github repo</a>. I will keep adjusting it, if I feel something is missing.</p>
+<p>I hope I did it the right way, let me know what you think!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Metasploit Dockerfile</title>
+		<link>/blog-archive/2016/04/27/metasploit-dockerfile.html</link>
+		<comments>/blog-archive/2016/04/27/metasploit-dockerfile.html#comments</comments>
+		<pubDate>Wed, 27 Apr 2016 18:26:10 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[pentest]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
+		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Hey,</p>
+<p>Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive.</p>
+<p>Instead of keeping reproducing boring installation steps every <em>x</em> months, I decided to build a <em>Dockerfile</em> for once.</p>
+<p>I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that I could have used as a base. But:</p>
+<ul>
+<li> It is a definitely over-killing image (more than 1 GB) and, at this cost, it does not come with a fully-featured Metasploit (no database connection, for instance).</li>
+<li>I like keeping minimal and controlled stuff. In other words, I like doing things on my own.</li>
+</ul>
+<p>So, this Debian-based Metasploit container comes with:</p>
+<ul>
+<li>all dependencies installed,</li>
+<li>automatic updates at startup,</li>
+<li>a connection with the local Postgres database,</li>
+<li>an improved prompt with timestamping and sessions/jobs status.</li>
+</ul>
+<p>You can find it on <a href="https://github.com/phocean/dockerfile-debian-metasploit">my github</a>.</p>
+<p>If you have any trouble or suggestion on how to improve it, please let me know. Enjoy it and go ahead if you want to fork it!</p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/blog-archive/wp-content/uploads/2016/04/msf-580x320.png 580w, /blog-archive/wp-content/uploads/2016/04/msf-624x344.png 624w, /blog-archive/wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>A few (convenient) dockerfiles</title>
+		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Etherpad]]></category>
+		<category><![CDATA[Phishing Frenzy]]></category>
+		<category><![CDATA[Tor]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
+<p>Here they are:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-etherpad">Debian-based Etherpad</a></li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-phishingfrenzy">Debian-based Phishing Frenzy</a></li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-torbrowser">Debian-based Tor Browser</a></li>
+</ul>
+<p>I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation and shrinking, etc.).</p>
+<p>It makes perfect sense to use Docker just for that, and on top of that it consumes much fewer resources. Starting with the disk usage : all these containers along with their image stands below 1 GB!</p>
+<p>The fact that I am using Btrfs as the underlying storage driver is not for nothing: compression is extremely efficient on images!</p>
+<p>Note that my Dockerfiles have nothing special, you can actually find others on the Internet (and I was inspired by some).</p>
+<p>There are a few differences, however:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I care much about security, so at least I try to make Web services not running as root, even if it is inside a container (the root user is still the same as on the host, so let&#8217;s make a compromise as unlikely as possible).</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I like simple things, so I tried to keep everything straightforward and simplified some stuff.</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I don&#8217;t like to waste disk space. So when I some Dockerfiles based on Ubuntu, Debian Wheezy, Debian Jessie, Fedora, etc., I try to unify all of them under Debian &#8220;stable&#8221; (so as of today, Jessie). Why bother with useless images? I chose a versatile and common server distribution and I am trying to stick with it.</li>
+</ul>
+<p>While I was playing, I had two things bothering me:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/docker/docker/issues/3804">No quota support</a>: for a Samba sharing guest that I have, I would have liked to implement quotas from within the container. There is no support for that at the moment, and the global limitation by container is not nice (and once you choose a big size, you can&#8217;t go backward for existing containers&#8230;). I have a dedicated partition for Docker, so, while not perfect, it is okay for now.</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">The devicemapper storage driver totally sucks at this time: <a href="https://github.com/docker/docker/issues/3182">free space is never reclaimed after you delete images or containers</a>! So the more you use Docker, the more your partition gets full.</li>
+</ul>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

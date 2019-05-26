@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OpenBSD &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/category/administration-systeme/openbsd/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Perl : how to monitor a service remotely using sockets</title>
+		<link>/blog-archive/2007/07/15/perl-how-to-monitor-a-service-remotely-using-sockets.html</link>
+		<pubDate>Sun, 15 Jul 2007 17:59:55 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[OpenBSD]]></category>
+		<category><![CDATA[IPSEC]]></category>
+		<category><![CDATA[Isakmpd]]></category>
+		<category><![CDATA[IsakmpdMon]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[Protocols]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=64</guid>
+		<description><![CDATA[I came to program my first Perl script based on sockets, after setting an IPSEC tunnel.
+
+This tunnel is linking the remote peer and the local peer through an OpenBSD VPN gateway (managed with Isakmp).
+
+The problem is that this connection is limited time, for access right reason. So it is not a 24 hours standard tunnel, but rather an on-demand type connection.
+
+Note that the connection is automatically reseted by the remote peer, by invaliding the cookie of the connection and therefore obliging to renegotiate the VPN tunnel from the beginning : phase 1 of the key exchange.
+
+In one word, the Isakmp service has to be restarted every time we need the tunnel to be up.
+
+Of course, this is not the purpose of Isakmp to have such a mecanism and what is interesting is to start the tunnel from the local peer, every time it needs to do some transfer.
+
+The graph below summarizes the situation :
+
+IPSEC tunnel with OpenBSD as a VPN gateway
+
+That why I came to develop a script that listen on a socket and allow that peer to remotely restart the Isakmp service.]]></description>
+				<content:encoded><![CDATA[<p>I came to program my first Perl script based on sockets, after setting an IPSEC tunnel.</p>
+<p>This tunnel is linking the remote peer and the local peer through an OpenBSD VPN gateway (managed with Isakmp).</p>
+<p>The problem is that time allowed for this connection is limited, for security policy reasons. So it is not a 24- hour standard tunnel, but rather an on-demand type connection.</p>
+<p>Note that the connection is automatically reset by the remote peer, by invalidating the connection cookie and therefore oblige to renegotiate the VPN tunnel from the beginning (phase 1 of the key exchange).</p>
+<p>In other words, the Isakmp service has to be restarted every time we need the tunnel to be up.</p>
+<p>Of course, it is not the purpose of Isakmp to have such a mechanism and what we want is to start the tunnel from the local peer, every time it needs to do some transfer.</p>
+<p>The graph below summarizes the situation :</p>
+<p style="text-align: center;"><img src="/blog-archive/wp-content/uploads/2007/07/ipsec-tunnel.png" alt="IPSEC tunnel with OpenBSD as a VPN gateway" /></p>
+<p>That is why I came to develop a script that opens a socket and allows the peer to remotely restart the Isakmp service.</p>
+<p><span id="more-64"></span></p>
+<p>Perl is once again the perfect language for someone like me, who is not a developer. My script uses mainly 2 CPAN modules : <a title="NetServer::generic" href="http://http://search.cpan.org/~chstross/NetServer-Generic-1.03/Generic.pm" target="_blank">NetServer::Generic</a> to manage the socket and <a title="Proc::ProcessTable" href="http://search.cpan.org/~durist/Proc-ProcessTable-0.41/ProcessTable.pm" target="_blank">Proc::ProcessTable</a> to get the PID of a running process.</p>
+<p>You can dowload it here : <strong><a title="IsakmpdMon" href="/blog-archive/wp-content/uploads/2007/07/isakmpdmon.zip">IsakmpdMon</a></strong>.</p>
+<p>And here is the documentation on how to use it : <a title="IsakmpdMon Synopsys" href="/blog-archive/wp-content/uploads/2007/07/isakmpdmon.html"><strong>IsakmpdMon Synopsys</strong>.</a></p>
+<p><strong>ATTENTION</strong> : for security reason, only trusted IPs should be allowed to send the commands.</p>
+<p>To have your commands accepted, edit the line :</p>
+<pre>my ($allowed) = ['10\.80\.1\.2'];</pre>
+<p>with your IPs. It can be a list of IPs or hostnames separated by commas. You can use some jockers (*) for the names. Please refer to the <a title="NetServer::generic" href="http://http://search.cpan.org/~chstross/NetServer-Generic-1.03/Generic.pm" target="_blank">NetServer::Generic</a> documentation for more info.</p>
+<p>Note that this script can be adapted to any usage to manage all kinds of services remotely&#8230;</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>SSH timout</title>
+		<link>/blog-archive/2007/04/21/ssh-timout.html</link>
+		<pubDate>Sat, 21 Apr 2007 18:18:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[OpenBSD]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[DNS]]></category>
+		<category><![CDATA[Pix]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=28</guid>
+		<description><![CDATA[<p>After a fresh set up of your network, don't be surprised that your ssh connections are slow.</p>]]></description>
+				<content:encoded><![CDATA[<p>After a fresh set up of your network, don&#8217;t be surprised that your ssh connections are slow.</p>
+<p><span id="more-28"></span></p>
+<p>Depending on the systems and equipment you use, you might encounter some timeout that make any login impossible.</p>
+<p>I got such timeouts with an OpenBSD machine behind a Pix firewall. With Linux machines, it was very slow but worked.</p>
+<p>This issue is related to the reverse DNS check that SSH makes by default during the login process. This is in order to improve the security. Howerver, this is not so secure as a DNS cache can also be spoofed.<br />
+Considering this, you can disable this check with not much worry with the right option in your <strong>/etc/sshd_config</strong> file :</p>
+<pre>UseDNS no</pre>
+<p>Of course, the best solution will be that you set up a full DNS infrastructure as soon as possible.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

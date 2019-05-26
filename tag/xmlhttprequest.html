@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/fontello.css">
+<link rel="stylesheet" href="../css/animation.css">
+
+<!-- Mirrored from phocean.net/tag/xmlhttprequest by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:45:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>XMLHttpRequest | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; XMLHttpRequest Tag Feed" href="xmlhttprequest/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="archive tag tag-xmlhttprequest tag-400 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../index.html" >
+			<img class="logo" src="../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Tag Archives: <span>XMLHttpRequest</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-1765" class="post-1765 post type-post status-publish format-standard hentry category-pentesting category-security tag-csrf tag-json tag-jsonp tag-pentest tag-sop tag-web-browser tag-xmlhttprequest tag-xss">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2013/10/13/csrf-with-jsonp.html" title="Permalink to (in)Security of JSONP: CSRF risks" rel="bookmark">(in)Security of JSONP: CSRF risks</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h2>JSONP vs JSON</h2>
+<p>I had an opportunity to experiment exploiting <em>JSONP</em> in real life. Honestly, I had never heard of it before.</p>
+<p><em>JSON</em> is a well known method to serialize data, but what is <em>JSONP</em><i>?</i> Actually, it is nothing new, but rather a specific use of <em>JSON</em>.</p>
+<p>In <em>AJAX</em> websites, <code>XMLHttpRequest</code> is used in client-side Javascript code to forge <em>HTTP</em> requests, which fetch data from some <em>JSON</em> service.</p>
+<p><strong></strong><span style="line-height: 1.714285714; font-size: 1rem;"> For example, following a GUI event (</span><em style="line-height: 1.714285714; font-size: 1rem;">onclick</em><span style="line-height: 1.714285714; font-size: 1rem;">, </span><em style="line-height: 1.714285714; font-size: 1rem;">mouseover</em><span style="line-height: 1.714285714; font-size: 1rem;">, &#8230;), such </span><em style="line-height: 1.714285714; font-size: 1rem;">XHR</em><span style="line-height: 1.714285714; font-size: 1rem;"> code may be executed:</span></p>
+<pre>var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://example.com/search.php', true);
+xhr.send(null);</pre>
+<p>The requested server may answer with XML data, or JSON like here:</p>
+<pre>{"id": 1, "name": "Foo", "price": 123}</pre>
+<p>However, <em>XHR</em> request is limited to the current domain, due to the <em>SOP</em> (Same Origin Policy) that is enforced on modern browsers. What if it is necessary to retrieve data from another domain?</p>
+<p>Here comes <em>JSONP</em> as one of the possible solutions.</p>
+<pre><span style="color: #ff0000;"><strong>hello(</strong></span>{"id": 1, "name": "Foo", "price": 123}<span style="color: #ff0000;"><strong>);</strong></span></pre>
+<p>As you can see, data is <em>padded</em> (<em>P</em> in <em>JSONP</em>) inside a callback function, which we are going to study.</p>
+<h2>How JSONP works</h2>
+<p>The trick consists in requesting the <em>JSONP</em> service inside <code>&lt;script&gt;</code> tags, which, by design, are out of the <em>SOP</em> scope.</p>
+<p>The call to the <em>JSONP</em> service just defines a <em>callback</em> function name as a parameter. Note that the callback function is included in the same page as the call.</p>
+<p>Then, the <em>JSONP</em> service answers with data encapsulated inside the callback function name.  That way, the browser will execute the callback function and pass data as its parameters.</p>
+<p>It is confusing to explain and I may have lost you in trying to explain. Hopefully this diagram may clarify this stuff:</p>
+<div>
+<dl id="attachment_1774">
+<dt>
+<div id="attachment_1774" style="width: 428px" class="wp-caption aligncenter"><img class="size-full wp-image-1774" alt="XHR vs JSONP" src="../wp-content/uploads/2013/10/jsonp1.png" width="418" height="515" /><p class="wp-caption-text">XHR vs JSONP</p></div>
+</dt>
+</dl>
+</div>
+<p><em>Domain1</em> <em>XHR</em> requests to <em>domain2</em> are not allowed. Therefore, the <em>callback</em> trick ensures that data is fetched from <em>domain2</em> while the corresponding code is processed in the context of <em>domain1</em>.</p>
+<p>All this way around has a unique goal: have the code to be executed in the same context as the originating page. In other words: bypassing the SOP.</p>
+<h2> Security Concerns</h2>
+<p>This is not without any security caveats. Someone outlined some very valid points on <a href="http://security.stackexchange.com/a/23439">Stackexchange</a>, and it is well written, so I will just copy and paste what he said about <em>JSONP</em> security:</p>
+<blockquote>
+<ul>
+<li><strong>Requires excessive trust.</strong> Suppose you have a page hosted on <code>a.com</code> and it uses JSONP to access services provided by <code>b.org</code>. This involves placing 100% trust in <code>b.org</code>. If <code>b.org</code> is malicious or buggy, it can subvert the security of the embedding page and all of the <code>a.com</code> origin. This kind of excess trust is dangerous from a security perspective: it makes your application fragile.<br />
+To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know it&#8217;s a feature, not a bug, but still&#8230;</li>
+<li><strong>CSRF vulnerabilities.</strong> You have to remember to defend against CSRF vulnerabilities, and with JSONP, that gets a bit tricky. Standard advice is to ensure that only POST requests can trigger a side-effect, and to include a CSRF token in all POST requests; but JSONP involves sending a GET request to trigger a side-effect, which ain&#8217;t exactly the cleanest solution you&#8217;ve ever seen. So this means that the host that provides JSONP service needs to remember to check CSRF tokens even on GET requests. Also, it requires a bit of a tricky protocol for the embedding page (<code>a.com</code>) to obtain the proper CSRF token from the JSONP service (<code>b.org</code>). It gets messy.</li>
+<li><strong>Causes mixed-content warnings.</strong> Suppose we have a page hosted on <code>https://a.com</code> and it accesses a JSONP service on <code>http://b.org</code>. Then this will inevitably trigger a scary-looking mixed-content warning (since JSONP involving loading a script from <code>http://b.org</code>).</li>
+<li><strong>User authentication gets ugly.</strong> If <code>b.org</code> wants to authenticate the user, that gets tricky to do when using JSONP. The embedding page (<code>a.com</code>) needs to first somehow give the user an opportunity to log into <code>b.org</code> in advance, before accessing <code>b.org</code>&#8216;s JSONP service. Both sites need to coordinate.</li>
+</ul>
+</blockquote>
+<p>I would just add that, though it is not perfect, it is at least possible to mitigate CSRF on GET requests by checking the <strong><em>HTTP</em></strong> <strong><em>referer</em></strong> (when possible).</p>
+<p>Is this complete? Let me know if you have other suggestions.</p>
+<h2>Simple Exploitation</h2>
+<p>During a pentest, I had to audit a rather complex application which happened to do some requests to another server in <em>JSONP</em>.</p>
+<p>The few following snippets are a simplified representation of the case.</p>
+<p>Exploitation code right below may be uploaded to a server controlled by the attacker (who may need some <em>social engineering</em> to get the visitor to reach his page).</p>
+<pre>&lt;html&gt;
+ &lt;head&gt;
+ <span style="color: #339966;"><strong>&lt;script&gt;
+ hello = function(data) {
+ alert("hello " + data.name);
+ }
+ &lt;/script&gt;</strong></span>
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;h1&gt;JSONP Call&lt;/h1&gt;
+ <span style="color: #ff0000;"><strong>&lt;script src="http://domain.com/jsonp.php?jsonp_callback=hello"&gt;&lt;/script&gt;</strong></span>
+ &lt;/body&gt;
+ &lt;/html&gt;</pre>
+<p>So in <span style="color: #ff0000;"><em>red</em></span>, the call to JSONP with the callback function name indicated. In <span style="color: #339966;"><em>green</em></span>, the callback function itself. It is just displaying an alert box containing the fetched JSONP data, but of course it could have malicious features (like cookie stealing).</p>
+<p>The JSONP service can be simulated by the following code,  hosted on another server (e.g. the attack target):</p>
+<pre>&lt;?php
+ header('Cache-Control: no-cache, must-revalidate');
+ header('Expires: Mon, 1 Jan 2000 01:00:00 GMT');
+ header('Content-type: application/json');
+ $data = '{ "name": "world" }';
+ <strong>echo $_GET['jsonp_callback'] . '(' . $data . ');';</strong>
+?&gt;</pre>
+<p>After receiving the <code>&lt;script&gt;</code> call, the function would just return:</p>
+<pre>hello({ "name": "world" });</pre>
+<p>Which, when received by the browser, would trigger the nice alert box.</p>
+<p>&nbsp;</p>
+<div id="attachment_1793" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1793" alt="JSONP callback execution" src="../wp-content/uploads/2013/10/CapturFiles_21-580x416.png" width="580" height="416" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21-624x448.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21.png 729w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">JSONP callback execution</p></div>
+<p>The attack sequence may be represented like this:</p>
+<div id="attachment_1784" style="width: 432px" class="wp-caption aligncenter"><img class="size-full wp-image-1784" alt="Example of exploitation process of JSONP" src="../wp-content/uploads/2013/10/jsonp-exploit.png" width="422" height="445" /><p class="wp-caption-text">Example of exploitation process of JSONP</p></div>
+<p>In other words, the user browser is used as a <em>proxy</em> to make <em>CSRF</em> requests, which should be forbidden.</p>
+<h2>So what?</h2>
+<p>Exploitation depends on the target application configuration and the capability of the attacker to inject a Javascript call along with the callback function into the victim&#8217;s browser.</p>
+<p>In the case I experienced, the <em>JSONP</em> host was not checking the <em>referer</em>. On top of that, it was hosted inside the corporate <em>LAN</em>.</p>
+<p>So I was able to have a user visit a page on my server, which would silently make his browser call the <em>JSONP</em> service… and execute the Javascript in turn in the context of my page.</p>
+<p>Impacts:</p>
+<ul>
+<li>hijack of the user session to the server (theft of user cookies),</li>
+<li>access to confidential data,</li>
+<li>bypass of network filtering and <em>SOP</em> (the browser acts as a proxy),</li>
+<li>phishing scenarios (fake forms, redirections, …).</li>
+</ul>
+<p>Even if the target <em>JSONP</em> server had checked the <em>referer</em>, it would still be vulnerable in case the legitimate calling application would suffer from code injection (<em>XSS</em>).</p>
+<h2>Conclusion</h2>
+<p>Once the concept of <em>JSONP</em> is clear, it appears to be very simple and powerful to exploit.</p>
+<p>As I just discovered this and had to craft the exploitation quickly, I would not conclude definitely on the topic.</p>
+<p>Though, it seems that a JSONP service should at least check the <em>referer</em> before processing a call to get to an acceptable security level.</p>
+<p>But I am not sure yet of what else could be done to improve the security further. It may be just crappy by design.</p>
+<p>Please share if you have a more educated opinion on the topic. And as always, comments and constructive criticisms are welcome. Let me know if something is unclear or incorrect.</p>
+<h2>References</h2>
+<ul>
+<li><a title="JSON vs JSONP" href="http://www.mattlunn.me.uk/blog/2011/10/json-vs-jsonp/">www.mattlunn.me.uk</a></li>
+<li><a title="JSONP" href="http://border-labs.fr/?p=21">border-labs.fr</a></li>
+<li><a href="http://security.stackexchange.com/a/23439">security.stackexchange.com</a></li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/pentesting.html" rel="category tag">Pentesting</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="csrf.html" rel="tag">CSRF</a>, <a href="json.html" rel="tag">JSON</a>, <a href="jsonp.html" rel="tag">JSONP</a>, <a href="pentest.html" rel="tag">pentest</a>, <a href="sop.html" rel="tag">SOP</a>, <a href="web-browser.html" rel="tag">web browser</a>, <a href="xmlhttprequest.html" rel="tag">XMLHttpRequest</a>, <a href="xss.html" rel="tag">XSS</a> <i class="icon-calendar"></i> <a href="../2013/10/13/csrf-with-jsonp.html" title="10:51 pm" rel="bookmark"><time class="entry-date" datetime="2013-10-13T22:51:49+00:00">October 13, 2013</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.431 seconds. Made 11 queries to database and 45 cached queries. Memory used - 27.4MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/tag/xmlhttprequest by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:45:29 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.381 seconds. -->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Internet &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/internet/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Internet providers in France suck</title>
+		<link>/blog-archive/2007/07/24/internet-providers-in-france-suck.html</link>
+		<comments>/blog-archive/2007/07/24/internet-providers-in-france-suck.html#comments</comments>
+		<pubDate>Tue, 24 Jul 2007 15:35:35 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[provider]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=70</guid>
+		<description><![CDATA[And as a result, almost one day without Internet access. That why the website was done all this time. Really, there is an incredible amount of claims from many users here. My personal experience : &#8211; Noos, my actual provider : poor customer service, few interruptions but always long, quite expensive and behind technically speaking....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/07/24/internet-providers-in-france-suck.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>And as a result, almost one day without Internet access. That why the website was done all this time.</p>
+<p>Really, there is an incredible amount of claims from many users here.</p>
+<p>My personal experience :</p>
+<p>&#8211; Noos, my actual provider : poor customer service, few interruptions but always long, quite expensive and behind technically speaking.</p>
+<p>&#8211; Free : cool and technically inovating&#8230; when it works ! Very slow to get an operating ADSL line and in my new appartement, they just could not manage to make it work !</p>
+<p>&#8211; Orange : probably quite reliable, but out of price !</p>
+<p>&#8211; Others : as fas as I read on the forums, probably the same kind as Noos or Free&#8230;</p>
+<p>I am looking now for a reliable Internet access. Maybe I should look for company-aimed providers or a wireless one like Ozone, which cover now a big part of Paris&#8230;</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/07/24/internet-providers-in-france-suck.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

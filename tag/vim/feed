@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>vim &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/vim/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>How do you manage your passwords?</title>
+		<link>/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html</link>
+		<comments>/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html#comments</comments>
+		<pubDate>Sun, 17 Apr 2011 20:58:35 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[aes]]></category>
+		<category><![CDATA[gpg]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[vim]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1028</guid>
+		<description><![CDATA[We all know that passwords sucks, that they are the nightmare of all administrators and security guys. So many hacks have been eased because the victims reused the same password everywhere : email account, forum, bank, critical systems&#8230; Sadly, so far, there is even not the beginning of a replacement solution. Passwords will be there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>We all know that passwords sucks, that they are the nightmare of all administrators and security guys. So many hacks have been eased because the victims reused the same password everywhere : email account, forum, bank, critical systems&#8230;</p>
+<p>Sadly, so far, there is even not the beginning of a replacement solution. Passwords will be there for long, so we would better use them accordingly.</p>
+<p>Yes, I am aware of many on-line services like FisrtPass, KeePass, 1stPassword, etc. However, I don&#8217;t feel comfortable with having all my password somewhere on-line, even if they claim &#8211; and I believe they are sincere, that they use strong encryption and can&#8217;t access to it.</p>
+<p>Instead, I use a combination of the Firefox password manager and the <a title="Pwgen for Firefox" href="https://addons.mozilla.org/en-us/firefox/addon/pwgen-password-generator/" target="_blank">Pwgen add-on</a>. I use this add-on to quickly and conveniently generate a random password when I subscribe to a web service. When Firefox prompts for it, I just choose to remember the password automatically. SSO quick and dirty.</p>
+<p>For the other passwords that I can&#8217;t and don&#8217;t need to memorize, I store them in a local encrypted file.</p>
+<p>To edit the file, I simply use Vim with this nice <a title="GPG Vim plugin" href="http://vim.wikia.com/wiki/Edit_gpg_encrypted_files" target="_blank">GPG plugin</a>:</p>
+<ul>
+<li>copy gpg.vim to /home/$user/.vim/plugin</li>
+<li>if not done yet, generate you GPG key :
+<pre> $ gpg --gen-key</pre>
+</li>
+<li>Encrypt your password file and erase it:
+<pre>$ gpg --encrypt --recipient 'your name' passwords
+$ rm passwords</pre>
+</li>
+<li>Now, it&#8217;s done. Just edit password.gpg to decrypt and access to your passwords (you will be prompted for your passphrase):
+<pre>$ vim passwords.gpg</pre>
+</li>
+</ul>
+<p>If you don&#8217;t like the overhead of GPG, a more straightforward solution is to use the <a title="OpenSSL Vim extension" href="http://www.vim.org/scripts/script.php?script_id=2012" target="_blank">OpenSSL extension</a> :</p>
+<ul>
+<li>Copy the openssl.vim file to /home/$user/.vim/plugin as well.</li>
+</ul>
+<ul>
+<li>Now, to encrypt to file to, say, AES (note the .aes file extension which makes sense for the plugin):
+<pre>$ openssl aes-256-cbc -in passwords -out passwords.aes</pre>
+</li>
+<li>Decryption will occur as soon as you edit the file with Vim:
+<pre>$ vim passwords.aes</pre>
+</li>
+</ul>
+<p>I believe that, if not perfect, it is pretty secure. I mean not more, not less than your system is. Anyway I don&#8217;t have any need for an on-line manager. And you, how do you manage your passwords? Let us know about your tips.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

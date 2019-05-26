@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MiTM &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/mitm/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Possible use of SSL rogue certificates for spying purposes</title>
+		<link>/blog-archive/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html</link>
+		<pubDate>Sun, 04 Apr 2010 20:48:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[MiTM]]></category>
+		<category><![CDATA[rogue certificate]]></category>
+		<category><![CDATA[sniff]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=763</guid>
+		<description><![CDATA[Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be. But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this paper alerts us on a more serious and stealth threat....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be.</p>
+<p>But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this <strong><a title="defeating ssl mitm" href="http://files.cloudprivacy.net/ssl-mitm.pdf" target="_blank">paper</a></strong> alerts us on a more serious and stealth threat.</p>
+<p>It explains brilliantly, providing us with real case scenarios, how a CA (probably under the authority of a government agency or a similar powerful organisation) can create a rogue certificate that will be silently trusted by our browsers.</p>
+<p>The problem relies in the chain of trust : a root CA delegates trust to intermediate CA, which can at this point generate any &#8220;valid&#8221; certificate they want, even for a domain they shouldn&#8217;t sign.</p>
+<p>Excerpt :</p>
+<blockquote><p><em>&lt;&lt; As an example, the Israeli government could compel StartCom, an Israeli CA to issue an intermediate CA certiﬁcate that falsely listed the country of the intermediate CA as the United States. This rogue intermediate CA would then be used to issue site certiﬁcates for subsequent surveillance activities. In this hypothetical scenario, let us imagine that the rogue CA issued a certiﬁcate for Bank Of America, whose actual certiﬁcate was issued by VeriSign in the United States. Were CertLock to simply evaluate the issuing CA’s country of the previously seen Bank of America certiﬁcate, and compare it to the issuing country of the rogue intermediate CA (falsely listed as the United States), CertLock would not detect the hijacking attempt. In order to detect such rogue intermediate CAs, a more thorough comparison must be conducted. &gt;&gt;</em></p></blockquote>
+<p>In such a case, no browser will ever send an alert, so even the most experienced and most paranoid users would be easily cheated. It makes it very easy for an agency to conduct a man-in-the-middle attack, sniffing all of the user activity.<br />
+So here is a need for an add-on.</p>
+<p>As a Firefox user, I am using <strong><a title="Certificate Patrol" href="https://addons.mozilla.org/fr/firefox/addon/6415" target="_blank">Certificate Patrol</a></strong>. It basically alerts the user whenever the certificate of a site changes. The inconvenience is that it requires a long learning period and it also generates quite a lot of false positive (when a certificate is renewed, for instance).</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2010/04/certpatrol.png" rel="lightbox[763]"><img class="aligncenter size-full wp-image-764" title="Certificate Patrol add-on" src="/blog-archive/wp-content/uploads/2010/04/certpatrol.png" alt="" width="394" height="409" /></a></p>
+<p><strong>Adi Shamir</strong> and <strong>Phil Zimmerman</strong>, the author of the paper above, plan to publish a new add-on, <strong>Certlock</strong>. It will check carefully all the chain of trust for a certicate and send out an alert whenever a detail is incoherent, for instance when the country of the parent&#8217;s certificate is different from the country the rogue certificate is pretending to be.</p>
+<p>I really hope Certlock is coming soon.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mind map &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/mind-map/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Security Mind Map</title>
+		<link>/blog-archive/2011/07/03/security-mind-map.html</link>
+		<comments>/blog-archive/2011/07/03/security-mind-map.html#comments</comments>
+		<pubDate>Sun, 03 Jul 2011 00:52:24 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[mind map]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1125</guid>
+		<description><![CDATA[I recently attended to the 2011 edition of the SSTIC conference (a major security conference in France), where I had a good time and where the slides of Joanna Rutkowska somehow inspired me. I shamelessly decided to reuse and extend her mind-map style diagram from a system security centric view into something more generic and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/07/03/security-mind-map.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I recently attended to the 2011 edition of the SSTIC conference (a major security conference in France), where I had a good time and where the <a title="Slides of Joanna Rutkowska" href="http://www.sstic.org/media/SSTIC2011/SSTIC-actes/ThoughtsonClientSystems/SSTIC2011-Slides-ThoughtsonClientSystems-rutkowska.pdf">slides of Joanna Rutkowska</a> somehow inspired me.</p>
+<p>I shamelessly decided to reuse and extend her mind-map style diagram from a system security centric view into something more generic and operational on IT security.</p>
+<p>Then, I came with this first version of the diagram:</p>
+<p><a href="/blog-archive/wp-content/uploads/2011/07/Securing-Infrastructure.png" rel="lightbox[1125]"><img class="aligncenter size-full wp-image-1138" title="Securing Infrastructure" src="/blog-archive/wp-content/uploads/2011/07/Securing-Infrastructure-small.png" alt="" width="600" height="341" /></a>A the moment it is probably quite incomplete and incoherent on some aspects, but I am quite satisfied of the shape it is taking. I will certainly update it quite often, as soon as I think about something new.</p>
+<p>I find it convenient as a memo summarizing goals, steps and tools to achieve security. It may also help clarifying some points during a presentation.</p>
+<p>Feel free to use it (as long as you keep the credit to this website). I am waiting for your comments and suggestions on how to improve it.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/07/03/security-mind-map.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

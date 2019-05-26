@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Keylogger &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/keylogger/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Rootkit in my lab? (part II)</title>
+		<link>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
+		<comments>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
+		<pubDate>Wed, 11 Jul 2012 20:18:58 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Keylogger]]></category>
+		<category><![CDATA[Rootkit]]></category>
+		<category><![CDATA[Sysinternals]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[Volatility]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
+		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I finished checking the RAM with Volatility and&#8230; I found nothing. Nada.</p>
+<p>It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills.</p>
+<p>I attach here some of the main outputs of Volatility. As far as I can tell:</p>
+<ul>
+<li>no evidence of injection or kernel hooking</li>
+<li>no suspicious process</li>
+<li>no suspicious driver</li>
+<li>no suspicious registry entry</li>
+<li>etc.</li>
+</ul>
+<p>Based on <a title="Rootkit in my lab?" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
+<p>Dear reader, any help or tip is welcomed! Am I missing something obvious? Could it be possibly not a rootkit but some kind of corruption? If so, how to detect it?</p>
+<p>Just drop me an e-mail if you want to have a look on the dump itself.</p>
+<p>Volatility outputs:</p>
+<ul>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/handles.txt">handles</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/idt.txt">idt</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+		</item>
+		<item>
+		<title>Rootkit in my lab?</title>
+		<link>/blog-archive/2012/06/30/rootkit-in-my-lab.html</link>
+		<comments>/blog-archive/2012/06/30/rootkit-in-my-lab.html#comments</comments>
+		<pubDate>Sat, 30 Jun 2012 17:49:49 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Keylogger]]></category>
+		<category><![CDATA[Rootkit]]></category>
+		<category><![CDATA[Sysinternals]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[Volatility]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
+		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Context</h2>
+<p>For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on.</p>
+<p>What makes the case really interesting though, is that it occurred on a fresh install of a Windows XP virtual machine. I aimed it to be a clean malware reversing snapshot. I noticed the weired behavior minutes after finishing the system install and setting up a bunch of reversing and live analysis tools.</p>
+<p>So I bet that if I got some malware, it probably comes from one of those. At this time, unfortunately, there are too many and I could not spot the exact time, so I can not start the analysis from this angle.</p>
+<p>This article is almost written in live, so pardon my mistakes. I will update it as soon as I find something new. Of course, I am really expecting your feedback, suggestions and corrections. I see it as a great opportunity to learn, even though this one may not be the easiest&#8230;</p>
+<h2>Symptoms</h2>
+<p>Two things alerted me quickly.</p>
+<p>The first one was, at a point, the permanent failure of going through the full windows update process. Believe me, I have tried all ways.</p>
+<p>The second one was the weird dialog when trying to access to the keyboard layout settings. It says &#8220;<em><strong>Incompatible driver detected</strong></em>&#8220;. To me, this looks like there is a keylogger somewhere&#8230;</p>
+<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
+<p>Then, as I started to check around, more odd stuff came out.</p>
+<p>I fired up Process Explorer, and soon realize that it was &#8220;unable to verify&#8221; the signatures of all the running Windows processes. I could not find anything else suspicious, though (no odd process, memory content looks normal, etc.).</p>
+<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /blog-archive/wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
+<p>Ok, while I am with the Sysinternal suite, why not scanning with Rootkit Revealer:</p>
+<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
+<p>Interesting&#8230; and what about GMER:</p>
+<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
+<p>Oops! Now it crashes when it is accessing the registry&#8230;</p>
+<p>For the fun, let&#8217;s see what happens if we try to set up an antivirus (Security Essentials):</p>
+<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
+<p>Nice one! Very suspicious! Note that after a full scan, Security Essentials reports me that the system is clean and everything is fine. I am so relieved. :)</p>
+<p>Curious to see how my certificates are, I run <em><strong>certmgr.msc. </strong></em><strong></strong>I compared all Microsoft root certificates with a clean machine and could not see anything different. But again something happened:</p>
+<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
+<p>Oh, just one of my last attempts to do live analysis (this the WinPcap setup included with Wireshark):</p>
+<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
+<p>Ok, so enough played. The thing seems to be nicely done, and live analysis is going to be way too hard and unreliable.</p>
+<h2>Memory Analysis</h2>
+<p>This is where I am now. I reverted to a snapshot prior to my live analysis attemps, confirmed the strange behaviors are still observable, and suspended the VM to get the vmem file.</p>
+<p>So I have spent the last hours scanning the memory with, of course, <em><strong>Volatility</strong></em>.</p>
+<p>So far, I have to confess that I found NOTHING. But analyzing the memory can be a harsh process when it comes to sophisticated threats, and I may have reached the limits of my skills.</p>
+<p>But, anyway, I could not dream of a greater and more exciting opportunity to learn!</p>
+<p>My discoveries, if there are, will be published in another article.</p>
+<p><strong>UPDATE: I forgot to tell that it is a Windows XP SP3 machine, but not fully updated due to the issues.</strong></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+	</channel>
+</rss>

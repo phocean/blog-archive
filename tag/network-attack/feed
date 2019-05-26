@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Network attack &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/network-attack/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>About network attacks&#8230;</title>
+		<link>/blog-archive/2008/06/23/about-network-attacks.html</link>
+		<pubDate>Sun, 22 Jun 2008 23:56:08 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Network attack]]></category>
+		<category><![CDATA[OSI]]></category>
+		<category><![CDATA[RFC]]></category>
+		<category><![CDATA[TCP/IP]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=111</guid>
+		<description><![CDATA[I will post later a few examples of network attacks. But, before that, I want to clarify what I call a network attack. I see many people making a confusion about the use of this term, even among professional or specialized journalists. Whenever there is a hack originated from the Internet, they call it a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/23/about-network-attacks.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I will post later a few examples of network attacks. But, before that, I want to clarify what I call a network attack.</p>
+<p>I see many people making a confusion about the use of this term, even among professional or specialized journalists. Whenever there is a hack originated from the Internet, they call it a network attack.</p>
+<p>This is a true misunderstanding of the reality. We will see why when a website is hacked, or a domain name spoofed, we can&#8217;t call it a network attack.</p>
+<p>First of all, we need to have a good picture of the way the protocols of the Internet are organized.</p>
+<p>We can visualize it with the <strong>OSI </strong>concept, whose scheme is below :</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/06/osi.png" rel="lightbox[111]"><img class="size-medium wp-image-112" style="vertical-align: middle;" title="osi" src="/blog-archive/wp-content/uploads/2008/06/osi-300x270.png" alt="" width="300" height="270" srcset="/blog-archive/wp-content/uploads/2008/06/osi-300x270.png 300w, /blog-archive/wp-content/uploads/2008/06/osi.png 434w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>This model offers <strong>7 layers</strong> to contain all protocols involved in the data transportation, from the system or the program of a local computer to its peer on the other side of the network.</p>
+<p><span id="more-111"></span></p>
+<p>Actually, and to the contrary of another common belief, this model was never really applied on the Internet. Instead, a simplified model of 4 layers was chosen, <a href="http://en.wikipedia.org/wiki/Tcp/ip_model">the TCP/IP model</a>.</p>
+<p>Anyway, acconding to this model, each data is encapsulated by the protocols of each layer from the top to the bottom before traveling on the network.</p>
+<p>Normally, equipments between the sender and the recipient will not check the data upper than the transport layer. It means that to connect two peers through the Internet, protocols like <em>Ethernet, ARP, RIP, OSPF, IP, TCP</em> and <em>UDP</em> are used.</p>
+<p>Protocols like <em>HTTP, DNS, FTP </em>and so many others belong  to the Application layer. Therefore, they are used to serve application, not to connect two peers from the network point of view.</p>
+<p>Therefore, when a web server is attacked from the Internet, it is not a network attack. It is an application level attack : the network is just a vector, but the vulnerability is at the application level. It may concern the architecture or the conception of the application, but not the network.</p>
+<p>So many popular attacks like brute force attacks to guess a password, exploits, shellcodes, DNS spoofing, PHP misconceptions, etc., are off the network attack categories.</p>
+<p>Nowadays, as there are more and more services offered on the Internet, application attacks became the most popular and most efficient for attackers. However, if network attacks have been spectacular <a href="http://en.wikipedia.org/wiki/Mitnick" target="_blank">in the 90s and entered the history</a>, they are still efficient.</p>
+<p>Among network attacks, we can differentiate two main categories : <em>protocol vulnerabilities</em> and <em>implementation weaknesses</em>. Of course, it is not that simple and some attacks are a combination of these categories.</p>
+<h4 class="western">Protocol weaknesses</h4>
+<p>Most of the protocols we use today were conceived in the 80s, or even before. At the name, the engineers never predicted such a growth of the Internet. They did not put much thinking on problems like scalability or security : their needs were very simple and basics, and Internet was very confidential, mostly connecting a few universities in the world.</p>
+<p>The growth of the Internet have been so fast, that the protocols could not be adapted at the right pace to the new needs. Now, we inherit of conceptual security leaks at all OSI layers and there is nothing much being done against that.</p>
+<h4 class="western">Implementation weaknesses</h4>
+<p><a href="http://www.rfc-editor.org/" target="_blank">The RFC</a> put the bases to implement the protocol in the hardware or in the systems. It implies programming and therefore a classical development cycle : putting down the needs, interpreting the specifications, making arbitrary choices and finally coding. Of course, at any of these stages, there is a potential risk of human mistake, misconception, bug, buffer overflow, unexpected behaviour, etc. Some can be very critical for the whole security of the hardware or the system.</p>
+<p>In that case, it is just like an application level vulnerability, but on the IP stack or the drivers handling the network packets. That leads to a network attack.</p>
+<p>There is <a href="http://www.securityfocus.com/" target="_blank">a huge number of vulnerabilities</a>. All operating systems are concerned, as well as all hardware equipments (switches, routers, firewalls, etc.).</p>
+<p>That&#8217;s it about this short introduction to network attacks. It does not aim to be complete, but just to put the basics of my next articles.</p>
+<p>In the coming articles, we will see a few example of network attacks. In the next one, we will start from the bottom of the OSI model : <strong>physical layer attacks</strong>.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

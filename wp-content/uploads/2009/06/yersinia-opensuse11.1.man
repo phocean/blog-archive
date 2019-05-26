@@ -1,0 +1,126 @@
+Seulement dans yersinia-0.7.1: config.log
+Seulement dans yersinia-0.7.1: config.status
+diff -rc orig/yersinia-0.7.1/configure yersinia-0.7.1/configure
+*** orig/yersinia-0.7.1/configure	2007-01-26 20:22:30.000000000 +0100
+--- yersinia-0.7.1/configure	2009-06-14 18:42:43.992256608 +0200
+***************
+*** 4455,4472 ****
+  
+  pcap_dir=""
+  for dir in $PCAP_DIR ; do
+!     if test -d $dir -a -r "$dir/pcap.h" ; then
+!        if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
+!           echo
+!           echo; echo more than one set found in:
+!           echo  $pcap_dir
+!           echo  $dir
+!           echo; echo please wipe out all unused pcap installations
+!           exit
+!        else
+            pcap_dir="$dir"
+!        fi
+!     fi
+  done
+  
+  if test -z "$pcap_dir" ; then
+--- 4455,4472 ----
+  
+  pcap_dir=""
+  for dir in $PCAP_DIR ; do
+!     #if test -d $dir -a -r "$dir/pcap.h" ; then
+!     #   if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
+!     #      echo
+!     #      echo; echo more than one set found in:
+!     #      echo  $pcap_dir
+!     #      echo  $dir
+!     #      echo; echo please wipe out all unused pcap installations
+!     #      exit
+!     #   else
+            pcap_dir="$dir"
+!     #   fi
+!     #fi
+  done
+  
+  if test -z "$pcap_dir" ; then
+Seulement dans yersinia-0.7.1: Makefile
+Seulement dans yersinia-0.7.1/src: admin.o
+Seulement dans yersinia-0.7.1/src: arp.o
+Seulement dans yersinia-0.7.1/src: attack.o
+Seulement dans yersinia-0.7.1/src: cdp.o
+Seulement dans yersinia-0.7.1/src: commands.o
+Seulement dans yersinia-0.7.1/src: config.h
+Seulement dans yersinia-0.7.1/src: dhcp.o
+Seulement dans yersinia-0.7.1/src: dlist.o
+Seulement dans yersinia-0.7.1/src: dot1q.o
+Seulement dans yersinia-0.7.1/src: dot1x.o
+Seulement dans yersinia-0.7.1/src: dtp.o
+Seulement dans yersinia-0.7.1/src: gtk-callbacks.o
+Seulement dans yersinia-0.7.1/src: gtk-gui.o
+Seulement dans yersinia-0.7.1/src: gtk-interface.o
+Seulement dans yersinia-0.7.1/src: gtk-support.o
+Seulement dans yersinia-0.7.1/src: hsrp.o
+Seulement dans yersinia-0.7.1/src: interfaces.o
+Seulement dans yersinia-0.7.1/src: isl.o
+Seulement dans yersinia-0.7.1/src: Makefile
+Seulement dans yersinia-0.7.1/src: md5.o
+Seulement dans yersinia-0.7.1/src: md5-sum.o
+diff -rc orig/yersinia-0.7.1/src/ncurses-callbacks.h yersinia-0.7.1/src/ncurses-callbacks.h
+*** orig/yersinia-0.7.1/src/ncurses-callbacks.h	2006-07-16 14:37:31.000000000 +0200
+--- yersinia-0.7.1/src/ncurses-callbacks.h	2009-06-14 20:58:24.753007662 +0200
+***************
+*** 31,39 ****
+  #include <curses.h>
+  #endif
+  
+! #ifdef HAVE_PANEL_H
+! #include <panel.h>
+! #endif
+  
+  #include <ctype.h>
+  
+--- 31,39 ----
+  #include <curses.h>
+  #endif
+  
+! //#ifdef HAVE_PANEL_H
+! #include <ncurses/panel.h>
+! //#endif
+  
+  #include <ctype.h>
+  
+Seulement dans yersinia-0.7.1/src: ncurses-callbacks.o
+Seulement dans yersinia-0.7.1/src: ncurses-gui.o
+diff -rc orig/yersinia-0.7.1/src/ncurses-interface.h yersinia-0.7.1/src/ncurses-interface.h
+*** orig/yersinia-0.7.1/src/ncurses-interface.h	2006-07-16 14:37:31.000000000 +0200
+--- yersinia-0.7.1/src/ncurses-interface.h	2009-06-14 20:56:16.522007987 +0200
+***************
+*** 31,39 ****
+  #include <curses.h>
+  #endif
+  
+! #ifdef HAVE_PANEL_H
+! #include <panel.h>
+! #endif
+  
+  #include <ctype.h>
+  
+--- 31,39 ----
+  #include <curses.h>
+  #endif
+  
+! //#ifdef HAVE_PANEL_H
+! #include <ncurses/panel.h>
+! //#endif
+  
+  #include <ctype.h>
+  
+Seulement dans yersinia-0.7.1/src: ncurses-interface.o
+Seulement dans yersinia-0.7.1/src: parser.o
+Seulement dans yersinia-0.7.1/src: protocols.o
+Seulement dans yersinia-0.7.1/src: stamp-h1
+Seulement dans yersinia-0.7.1/src: terminal.o
+Seulement dans yersinia-0.7.1/src: thread-util.o
+Seulement dans yersinia-0.7.1/src: vtp.o
+Seulement dans yersinia-0.7.1/src: xstp.o
+Seulement dans yersinia-0.7.1/src: yersinia
+Seulement dans yersinia-0.7.1/src: yersinia.o

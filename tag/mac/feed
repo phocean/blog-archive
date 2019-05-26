@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mac &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/mac/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Introduction to network attacks : Physical Layer</title>
+		<link>/blog-archive/2008/08/24/introduction-to-network-attacks-physical-layer.html</link>
+		<pubDate>Sun, 24 Aug 2008 12:36:05 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[aircrack-ng]]></category>
+		<category><![CDATA[arp]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[physical layer]]></category>
+		<category><![CDATA[spoofing]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=207</guid>
+		<description><![CDATA[That will be a short article, mainly because of two things. First, some methods are beyond my knowledge, involving electronics or hardware manipulation. Second, such methods are not efficient compare to higher level ones, and so rarely used. The mere concept of a physical attack implies that you have a direct physical access to your...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/24/introduction-to-network-attacks-physical-layer.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>That will be a short article, mainly because of two things. First, some methods are beyond my knowledge, involving electronics or hardware manipulation. Second, such methods are not efficient compare to higher level ones, and so rarely used.</p>
+<p>The mere concept of a physical attack implies that you have a direct physical access to your target, giving you the ability to modify it as you wish.<br />
+This is an ideal situation for an attacker, not quite common. And in that case, there is nothing much to be done on the defensive side.</p>
+<p><span id="more-207"></span></p>
+<p>It is one of the reason why, as a computer security enginneer, a lot of attention must be always payed on the physical security : access to the machine in a locked room, identification of the persons entering with an electronic card, etc.<br />
+Without it, the best security software setting is useless.</p>
+<p>There can be many way to implement a physical layer attack : modifying the firmware of a router at the maker itself, plug an electronic sniffer on a network segment, inserting a hub, etc.</p>
+<p>Attacks on wireless networks are the most popular and easy to do, because of the nature itself of wifi.<br />
+Check at the man of <a href="http://www.aircrack-ng.org/doku.php" target="_blank">aircrack-ng</a> or one of the numerous wifi craking tutorial on the Net if by any chance you were not aware of it.</p>
+<p>Another kind of attacks, that can be done without interfering directly with the hardware, concern the MAC address manipulation.</p>
+<p>The MAC address is the &#8220;physical&#8221; way to identify a machine on the network. This address, supposedly unique world-wide, is set by the network card maker.<br />
+It is coded with 48 bits, generally on a read-only chip (ROM) to ensure that it can&#8217;t be modified. In reality, all operating systems allow to override this value at a logical level (as seen by the network stack of the system).</p>
+<p>On Windows XP, changing the MAC address of a network card is as easy as going in the advanced properties of the network card driver, changing the value and deactivating / reactivating the network card.</p>
+<div id="attachment_211" style="width: 449px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2008/08/windows-mac.png" rel="lightbox[207]"><img class="size-full wp-image-211" title="windows-mac" src="/blog-archive/wp-content/uploads/2008/08/windows-mac.png" alt="Changing the MAC address on Windows" width="439" height="458" srcset="/blog-archive/wp-content/uploads/2008/08/windows-mac.png 439w, /blog-archive/wp-content/uploads/2008/08/windows-mac-287x300.png 287w" sizes="(max-width: 439px) 100vw, 439px" /></a><p class="wp-caption-text">Changing the MAC address on Windows</p></div>
+<p>In case it does not work (it depends on the driver), there is a free specific tool : <a title="Macshift" href="http://devices.natetrue.com/macshift/" target="_blank">Macshift</a>.</p>
+<p>On GNU/Linux, it is even easier. Just fire up these two commands :</p>
+<pre lang="bash">$ ifconfig eth1 down hw ether 00:00:00:00:00:01
+$ ifconfig eth1 up</pre>
+<p>As you can see, the MAC address really cannot be considered as reliable way of identification.</p>
+<p>At last, the MAC duplicating attack consists in using on the hostile node the same MAC address as an active machine of the same network.<br />
+A basic or unprotected switch will see the same MAC address coming from two different ports and transfer the packets to both.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

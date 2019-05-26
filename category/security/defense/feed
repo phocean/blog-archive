@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Defense &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/category/security/defense/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Reducing the friction™ with social medias thanks to Netvibes</title>
+		<link>/blog-archive/2016/11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html</link>
+		<pubDate>Sun, 27 Nov 2016 12:31:20 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[technology watch]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2134</guid>
+		<description><![CDATA[I have been a big fan of the &#8220;Reducing the friction&#8221; series of article published by Scott Lowe a while back. These articles consist in tips to automate or improve the smoothness of repeated professional tasks. If you haven&#8217;t, I recommend you to read them. Some are specific to the Mac OS X environments, but...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I have been a big fan of the &#8220;<a href="http://blog.scottlowe.org/archives/">Reducing the friction</a>&#8221; series of article published by <a href="https://twitter.com/scott_lowe">Scott Lowe</a> a while back.</p>
+<p>These articles consist in tips to automate or improve the smoothness of repeated professional tasks. If you haven&#8217;t, I recommend you to read them.</p>
+<p>Some are specific to the Mac OS X environments, but most of time it is easy to find alternative stuff for Linux. By the way, I am thinking of sharing my own tips for Linux some day.</p>
+<h2>The issues with technology watch</h2>
+<p>Today, I will start with an article on how I tackled the issues I have with technology watching : too much information, too many sources, too much noise, too much time wasted&#8230; Hmm, yes, that&#8217;s a lot of issues!</p>
+<p>Before, below are the sources that I used to visit plenty of times a day:</p>
+<ul>
+<li>RSS/Atom feeds, from <a href="http://www.feedly.com/">Feedly</a> with a few hundreds of sources.</li>
+<li>Twitter</li>
+<li>Reddit (most often /r/netsec, but also others)</li>
+<li>Hacker News</li>
+</ul>
+<p>So my typical checks consisted in visiting these places subsequently, several times a day. With all the hassle of using different interfaces and the distractions that you can find there, it used to be very time costly and not really efficient.</p>
+<p>Typically, I would save interesting topics there (&#8220;<em>like&#8221;</em> in Twitter, &#8220;<em>save</em>&#8221; for Feedly&#8230;) for a later check. Sometimes I would also use <a href="https://getpocket.com/">Pocket</a> to read them offline, or a simple PDF export.</p>
+<p>As I already said, such a process with many tools is far from ideal and from the <em>Reduce the friction</em><img src="https://s.w.org/images/core/emoji/11/72x72/2122.png" alt="™" class="wp-smiley" style="height: 1em; max-height: 1em;" /> theory.</p>
+<h2>Reducing the friction with Netvibes</h2>
+<p><a href="https://www.netvibes.com">Netvibes</a> is a Web platform allowing to gather many kinds of contents within dashboards. It is in fact possible to use it as a news aggregator like Feedly, but it has much more capabilities.</p>
+<p>First, it can handle sources from various technologies or social media actors (at least, major ones are supported):</p>
+<ul>
+<li>RSS/Atom</li>
+<li>Twitter</li>
+<li>Reddit</li>
+<li>Facebook</li>
+</ul>
+<p>After adding some sources (they call them <em>applications</em>), you can get a classic feed view like below:</p>
+<div id="attachment_2138" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2138" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png" alt="Feed view on Netvibes" width="580" height="106" srcset="/blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png 580w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-768x141.png 768w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-940x173.png 940w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-624x115.png 624w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Feed view on Netvibes</p></div>
+<p>Nice! We now have a lot of stuff in one place and you can easily distinct what you have read or not (which is not easy to achieve in Twitter, for instance).</p>
+<p>Then, similar to what <a href="https://ifttt.com">IFTT</a> offers, you can create automated actions easily.</p>
+<p>Here are some of the supported triggers:</p>
+<div id="attachment_2137" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2137" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png" alt="Services supported by Netvibes" width="580" height="256" srcset="/blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png 580w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-768x340.png 768w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-940x416.png 940w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-624x276.png 624w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59.png 1192w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Services supported by Netvibes</p></div>
+<p>Based on a trigger like <em>marking</em> an article from within Netvibes, I can decide to send that article to Pocket or by e-mail for offline reading:</p>
+<div id="attachment_2139" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2139" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png" alt="Netvibes action" width="580" height="263" srcset="/blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png 580w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-768x348.png 768w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-940x427.png 940w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-624x283.png 624w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11.png 1503w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Netvibes action</p></div>
+<p>I have also another action: when a new post appears on a subreddit, I also send it to Pocket.</p>
+<p>The possibilities, while not yet infinite, are huge.</p>
+<p>You can do a lot with the free version, but for 2€ a month, you get content indexing to quickly find back some items in your feeds. I took this option, as it is useful but also as it is a way to support this project.</p>
+<p>There is a premium offer, by far more expensive, but it is not really aimed to individual (analytics and collaborative features). See <a href="https://www.netvibes.com/fr/products">this page</a> for more information.</p>
+<h2>Conclusion</h2>
+<p>I have tried, I believe, all possible alternatives. Including integrating Feedly with IFFT, which is nice but does not solve the issue of reading many sources.</p>
+<p>Netvibes is so far very interesting and powerful. It is not perfect, however.</p>
+<p>Sometimes the interface is a little clumsy or cumbersome. I also miss a mobile application (for Android), even though the mobile HTML 5 interface is not that bad (http://mobile.netvibes.com).</p>
+<p>Finally, I could not find a way to republish a dashboard feed as RSS, so that I could use a mobile reader. Let&#8217;s hope that this powerful tool will continue to improve, and for that I hope it gains in popularity.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
+		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Etherpad]]></category>
+		<category><![CDATA[Nodejs]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Context</h2>
+<p>I have kept playing with Docker recently, just for fun and to learn.</p>
+<p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
+<p>Indeed, I had some issues with Etherpad, which is a Nodejs application, and its integration into Docker.</p>
+<p>Initially, I made something quite simple, so my Dockerfile ended like that:</p>
+<pre>USER etherpad
+CMD ["node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>Thus, I simply start the app with a low privileges user.</p>
+<p>It worked, but I had two issues:</p>
+<ol>
+<li>Docker was not able to stop it nicely. Instead, it timed out after 10 sec and finally killed the app and the container altogether.</li>
+<li>No persistence of any kind, of course.</li>
+</ol>
+<p>I decided to tackle these two issues to understand what was going on behind.</p>
+<h2>The PID 1 issue</h2>
+<p>I could not understand immediately the first issue: why was Docker unable to terminate the container properly?</p>
+<p>After wandering a few hours on wrong paths (trying to get through with Nodejs nodemon or supervisor), I finally found some good articles, explaining that Docker misses an init system to catch signals, wich causes some issues with applications started with a PID = 1, which cannot be killed, or with Bash (the shell doesn&#8217;t handle transmitted signals.</p>
+<p>I am not going to repeat poorly what has already been explained very well, so I encourage you to read this two excellent posts:</p>
+<ul>
+<li><a href="https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/">The PID 1 zombie reaping problem</a></li>
+<li><a href="https://medium.com/@gchudnov/trapping-signals-in-docker-containers-7a57fdda7d86#.wqy8msjbk">Trapping signals in Docker containers</a></li>
+</ul>
+<p>You will also find a lot of bug reports in the Docker github about this issue, and a lot of hacky or overkilling solutions.</p>
+<p>In my opinion, the most elegant solution among them is to use a launcher program, very simple and dedicated to catch and handle signal.</p>
+<p>I chose to use <a href="https://github.com/yelp/dumb-init">Dumb-init</a>, as it is well packaged (there are plenty of options) and seems to be well maintained.</p>
+<p>So, after installing Dump-init in the Dockerfile, the CMD line should now look like this:</p>
+<pre>USER etherpad
+CMD ["dumb-init","node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>And indeed, as expected, <em>docker stop</em> now works flawlessly.</p>
+<h2>Volume permissions</h2>
+<p>This is where I had the toughest issue, although it is supposed to be straightforward with volumes.</p>
+<p>Volumes enable to share files or folders between host and containers, or between containers solely. There are plenty of possibilities, nicely illustrated on this blog:</p>
+<ul>
+<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker: storage patterns for persistence</a></li>
+</ul>
+<p>And it works very well&#8230;. as long as you application runs as root.</p>
+<p>In my case, for instance, Etherpad runs with a low privileged user, which is highly recommended. At startup, it creates a sqlite database, etherpad.db,  in its ./var folder.</p>
+<p>Mounting a volume, of any kind, over the ./var folder, would result in a folder with root only permissions. Subsequently, of course, the launch of Etherpad from the CMD command would fail miserably.</p>
+<p>Simple solutions like <em>chown</em> in the Dockerfile don&#8217;t work, because they apply <em>before</em> the mount. The <em>mount</em> occurs at runtime and works like a standard Linux <em>mount:</em> it is created by the docker daemon, with <em>root</em> permissions, over possibly existing data.</p>
+<p>My solution was to completely change the way Etherpad is started. I now use an external script which is started at runtime:</p>
+<ol>
+<li>First, it applies the appropriate permissions to the mounted volume with <em>chown,</em></li>
+<li>Then, it starts Etherpad with a low privileged user thanks to a <em>su</em> hack.</li>
+</ol>
+<p>So now the Dockerfile ends with:</p>
+<pre>VOLUME /opt/etherpad-lite/var
+ADD run-docker.sh ./bin/
+CMD ["./bin/run-docker.sh"]</pre>
+<p>And here is the script:</p>
+<pre>#!/bin/bash
+
+chown -R etherpad:etherpad /opt/etherpad-lite/var
+su etherpad -s /bin/bash -c  "dumb-init node /opt/etherpad-lite/node_modules/ep_etherpad-lite/no
+de/server.js"</pre>
+<p>I use a data volume for persistency, so the run command looks like this:</p>
+<pre>docker run -d --name etherpad -p 80:9001 -v etherpad:/opt/etherpad-lite/var -t debian-etherpad</pre>
+<p>Far from being ideal, but it works. I really hope some features are coming to bring more options in this area, especially in the Dockerfile.</p>
+<h2>Some final thoughts</h2>
+<p>Globally, we can still hope a lot of improvements in security, because when I look at many Dockerfiles around, I see two behaviors:</p>
+<ul>
+<li>A lot of people don&#8217;t care and everything is happily running as root, from unauthenticated third-party images or binaries&#8230;</li>
+<li>Some people do care but end up with dirty hacks, because there is no other way to do so.</li>
+</ul>
+<p>It is scary and so far from the Linux philosophy. Let&#8217;s wait for the enhancements to come.</p>
+<p>You can find the complete <em>updated</em> Dockerfile on <a href="https://github.com/phocean/dockerfile-debian-etherpad/blob/master/Dockerfile">this github page</a>.</p>
+<p>While we are on this topic, have a look to <a href="http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks">this nice post with some nice tips and tricks</a> for Docker.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Quick tip: harden your ARP table the easy way (Linux)</title>
+		<link>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
+		<comments>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
+		<pubDate>Fri, 14 Aug 2015 20:52:05 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[arp]]></category>
+		<category><![CDATA[arp spoofing]]></category>
+		<category><![CDATA[mac address]]></category>
+		<category><![CDATA[NetworkManager]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
+		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc.</p>
+<p>Yet, most networks do not have port security and ARP inspect on their switches to mitigate such attacks. So you have to count on yourself.</p>
+<p>Most people know how to protect a client , e.g. by maintaining a static mapping of MAC / IP addresses on the operating systems. But almost no one does it, because it would be a pain to manage&#8230;</p>
+<p>But, really ? No, here is what I do to get a reasonable protection.</p>
+<p>I do a few compromises at first:</p>
+<ol>
+<li><span style="text-decoration: underline;">I am not looking to protect ALL my traffic</span> toward  other peers on the LAN, but at least outbound communications with the gateway and, optionally, with a few critical servers.</li>
+<li><span style="text-decoration: underline;">An attacker may still poison the gateway</span> and eavesdrop on responses directed to my machine, and get some interesting stuff anyway.</li>
+<li>So, <span style="text-decoration: underline;">this is not a protection on its own</span>. You have to think defense-in-depth : encryption on all your services (TLS), VPN, etc. Especially, depending on where you are, do not rely on the DNS / DHCP servers.</li>
+</ol>
+<p>With that said, what follows is a hardening move that you can do on most of Linux distributions, with little pain.</p>
+<p>Get the MAC address of the gateway, either by finding it out physically (tag) or by checking it at a safe moment (when ARP spoofing is supposedly not happening).</p>
+<p>Fill in a flat file, like /etc/ethers, with mappings like :</p>
+<pre> 00:11:22:33:44:55  1.2.3.4</pre>
+<p>Now, NetworkManager will do all the magic.</p>
+<p>Create a script like :</p>
+<pre> % cat /etc/NetworkManager/dispatcher.d/40-arp 
+ #!/bin/bash
+ arp -f /etc/ethers
+</pre>
+<p>All scripts in the above folder will be executed every time an interface gets up, as long as you give it executable rights :</p>
+<pre>% chmod +x /etc/NetworkManager/dispatcher.d/40-arp</pre>
+<p>Now, either execute it directly or unplug / plug back in your interface. You should have a permanent static MAC address now, effectively bypassing the ARP protocol and its weaknesses :</p>
+<pre>% arp -a -n
+? (172.16.100.254) at 00:15:17:9d:d6:d1 [ether] PERM on eth0</pre>
+<p>Voilà! Should you not use NetworkManager for some reason, you can do something equivalent with <em>ifup</em> scripts in respect with the syntax of you current Linux distribution.</p>
+<p>But, let me stress it out once more, to be sure you don&#8217;t get me wrong :</p>
+<p><strong><span style="color: #ff0000;">Despite an enhancement, this is no a sufficient protection and you may still get pwned ! Authentication and encryption MUST also come into the play, so use only TLS enabled services, HTTPS sites and, ideally, a good IPSEC / SSH / TLS tunnel to carry ALL of your traffic !</span></strong></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>The evolution of ICS security</title>
+		<link>/blog-archive/2013/02/03/the-evolution-of-ics-security.html</link>
+		<pubDate>Sun, 03 Feb 2013 12:35:40 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[ICS]]></category>
+		<category><![CDATA[Mestasploit]]></category>
+		<category><![CDATA[PLC]]></category>
+		<category><![CDATA[Scada]]></category>
+		<category><![CDATA[schneider]]></category>
+		<category><![CDATA[WinCC]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1529</guid>
+		<description><![CDATA[This article, which comes with nice screencasts, is an interesting state of art on industrial system &#8211; or rather lack of &#8211; security. These systems are popularly known as SCADA systems, but SCADA systems are just a subpart of ICS (Industrial Control Systems). Well, there is no surprise that they have been highly insecure from their...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/02/03/the-evolution-of-ics-security.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This <a href="http://blog.ptsecurity.com/2013/01/ics-security-analysis-new-pentest-tools.html">article</a>, which comes with nice screencasts, is an interesting state of art on industrial system &#8211; or rather lack of &#8211; security. These systems are popularly known as <strong>SCADA</strong> systems, but SCADA systems are just a subpart of <strong>ICS</strong> (<strong>I</strong>ndustrial <strong>C</strong>ontrol <strong>S</strong>ystems).</p>
+<p>Well, there is no surprise that they have been highly insecure from their conception, and that many are exposed on the Internet.</p>
+<p>What is interesting is to note the recent evolution:</p>
+<ul>
+<li><span style="line-height: 14px;">As ICS are getting more media coverage, they are more and more targeted by both security researchers and activists (e.g. Anonymous). The latter is especially scary if you think of what some of them are capable to do for their cause and their degree of amateurism.</span></li>
+<li>More and more automatic exploitation tools are developed, making the task of the attacker easier: Metasploit modules, WinCC Harvester, PLCScan&#8230;</li>
+<li>Stuxnet was discovered about 3 years ago, but vendors have yet to fix systems and publish security hardening guides (still drafts). I am even talking about end-users awareness&#8230;</li>
+</ul>
+<p>Conclusion: we are still at the beginning of the ICS insecurity era and we can expect more hack news&#8230;</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Review of McAfee Application Control (ex-SolidCore): the ultimate solution to patching?</title>
+		<link>/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html</link>
+		<comments>/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html#comments</comments>
+		<pubDate>Fri, 14 Dec 2012 17:55:18 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Vulnerabilities]]></category>
+		<category><![CDATA[Application Control]]></category>
+		<category><![CDATA[asm]]></category>
+		<category><![CDATA[Assembly]]></category>
+		<category><![CDATA[backtrack]]></category>
+		<category><![CDATA[buffer overflow]]></category>
+		<category><![CDATA[hardening]]></category>
+		<category><![CDATA[heap]]></category>
+		<category><![CDATA[McAfee]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[ollyDbg]]></category>
+		<category><![CDATA[SHA-1]]></category>
+		<category><![CDATA[SolidCore]]></category>
+		<category><![CDATA[stack]]></category>
+		<category><![CDATA[WinDBG]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1394</guid>
+		<description><![CDATA[What is McAfee Application Control I had the opportunity to review this security software, and I want to share here the results of my tests. McAfee bought the SolidCore solution and renamed it into McAfee Application Control (along with other features). For convenience, we will keep referring the solution as SolidCore. In a few words, this tool...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h1>What is McAfee Application Control</h1>
+<p>I had the opportunity to review this security software, and I want to share here the results of my tests.</p>
+<p>McAfee bought the SolidCore solution and renamed it into <a title="McAfee Application Control" href="http://www.mcafee.com/us/products/application-control.aspx#vt=vtab-Benefits">McAfee Application Control </a>(along with other features). For convenience, we will keep referring the solution as SolidCore.</p>
+<p>In a few words, this tool falls into the category of white-listing defense systems. It hardens a Windows system by fingerprinting all executables files of the disk drive and enforcing access control based on this hash. Somehow a sort of Tripwire but with access control and attack detection.</p>
+<p>The problem is that McAfee claims that the solution will protect unpatched systems. Such a claim is appealing, because in real life it is not always easy to patch systems in production. Beyond technical considerations, there is always business and management constraints. The solution of McAfee is supposed to prevent vulnerabilities to be triggered thanks to the memory protection features. Look on their website, they say it loudly: &#8220;you can delay patching and it protects from buffer overflows&#8221;.</p>
+<div id="attachment_1450" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet.png" rel="lightbox[1394]"><img class="size-large wp-image-1450" title="SolidCore-commercial_sheet" alt="" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-940x929.png" width="584" height="577" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-940x929.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-580x573.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-303x300.png 303w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-120x120.png 120w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet.png 1106w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">MacAfee Application Control commercial sheet</p></div>
+<p>Really? When you check more thoroughly, you find that the solution operates only in user-mode, leaving all kernel-mode issues on the side. Already, any security specialist should become suspicious and think about the numerous limitations it implies&#8230;</p>
+<p>Anyway, such a statement deserves serious testing. Here we go.</p>
+<h1>Testing Lab</h1>
+<p>The testing environment is composed of:</p>
+<ul>
+<li>a Windows XP SP1 virtual machine (no patch),</li>
+<li>a Windows XP SP1 virtual machine (no patch) with SolidCore installed and enabled,</li>
+<li>a Windows virtual machine running WinDBG for kernel debugging,</li>
+<li>a Linux virtual machine running Metasploit (Backtrack),</li>
+<li>a few vulnerable programs: aurora.html for heap overflows and two executables vulnerable against buffer overflow,</li>
+<li>OllyDbg on both machines to observe the exploitation process.</li>
+</ul>
+<p>The point is simple: test some vulnerabilities against unpatched systems, with and without SolidCore, and compare the results.</p>
+<blockquote><p>The purpose here is only to focus on what SolidCore is doing (though we are not going to attempt to reverse the application). I will not get here into explanations on assembly and memory exploitation, so please refer to the many great tutorials that can be found on the Internet.</p>
+<p>As mentioned, I am myself a noob in reversing and shellcoding so please drop a comment if you see something wrong.</p></blockquote>
+<h1>Installing SolidCore</h1>
+<p>Like Tripwire, SolidCore needs to take an image of the system when it is sane.</p>
+<p>So, basically, after setting it, there are a few commands to type into a command window to scan the whole disk:</p>
+<pre>sadmin so
+sadmin enable</pre>
+<p>It will look for executables (.exe, .dll, etc.) and build a database using SHA-1 hashes.</p>
+<div id="attachment_1406" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation.png" rel="lightbox[1394]"><img class="size-medium wp-image-1406" title="SolidCore_activation" alt="SolidCore Activation" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation-580x413.png" width="580" height="413" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation-580x413.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_activation-420x300.png 420w, /blog-archive/wp-content/uploads/2012/12/SolidCore_activation.png 933w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore commands and status after activation</p></div>
+<p>Now, only applications installed before the scan will be allowed. If you drop a new file or move an existing one to a new patch and try to execute it, it will fail like this:</p>
+<div id="attachment_1409" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution.png" rel="lightbox[1394]"><img class="size-medium wp-image-1409" title="SolidCore_blocking_execution" alt="SolidCore blocking execution of a program" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-580x317.png" width="580" height="317" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-580x317.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-500x273.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution.png 787w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore blocks the execution of a new executable file</p></div>
+<p>After that, whenever you need to install a new application, you have to go through the &#8220;update mode&#8221;. Just enter:</p>
+<pre>sadmin bu</pre>
+<p>At this moment, the protection is deactivated and you can execute anything. Then, you need to do a new scan and re-enable the protection as done previously.</p>
+<p>Also, not all memory protections are activated by default. This is supposed to enable memory randomization (aka ALSR but McAfee made):</p>
+<pre>sadmin features enable mp-vasr</pre>
+<p>Now, see the enabled features:</p>
+<div id="attachment_1412" style="width: 444px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_features_list.png" rel="lightbox[1394]"><img class="size-full wp-image-1412" title="SolidCore_features_list" alt="SolidCore features list" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_features_list.png" width="434" height="178" /></a><p class="wp-caption-text">SolidCore features list and memory protection (mp-vasr, mp-casp)</p></div>
+<p>So far so good, now we can play!</p>
+<h1>Let&#8217;s see what is behind the scene&#8230;</h1>
+<p>The first thing to notice is that SolidCore installs a service launched with the LocalSystem account.</p>
+<div id="attachment_1415" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1.png" rel="lightbox[1394]"><img class="size-large wp-image-1415" title="SolidCore_service1" alt="SolidCore service" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1-940x562.png" width="584" height="349" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1-940x562.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1-580x346.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1-500x300.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1.png 983w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore service</p></div>
+<div id="attachment_1416" style="width: 336px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png" rel="lightbox[1394]"><img class=" wp-image-1416 " title="SolidCore_service2" alt="SolidCore background service process" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png" width="326" height="365" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png 408w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service2-268x300.png 268w" sizes="(max-width: 326px) 100vw, 326px" /></a><p class="wp-caption-text">SolidCore background service process</p></div>
+<p>Let&#8217;s have a look within a kernel debugging session with WinDbg.</p>
+<p>While booting, the target displays a lot of interesting info concerning the McAfee solution:</p>
+<pre>Solidcore log buf: F8418B60, F84415C0
+K.0004.0008: Nov 30 2012:04:49:09.812: SYSTEM: rtinit.c : 1474: McAfee Solidifier driver version 6.0.1-9049
+K.0004.0008: Nov 30 2012:04:49:09.828: SYSTEM: rtinit.c : 1476: DriverEntry @F846E500
+K.0004.0028: Nov 30 2012:04:49:10.093: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\ntdll.dll to \Device\HarddiskVolume1\Solidcore\vasr\ntdll.dll at 0x5cda0000.</strong>
+K.0004.0028: Nov 30 2012:04:49:10.500: SYSTEM: rtinit.c : 129: Booting up with RTEMode = 1
+[...]
+K.0432.0436: Nov 30 2012:04:49:15.671: ERROR: cap_kern.c : 1106: Failed to compute checksum for '\Device\HarddiskVolume1\WINDOWS\system32\autochk.exe'. err = 1099
+K.0432.0436: Nov 30 2012:04:49:15.796: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\kernel32.dll to \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll at 0x65d60000.</strong>
+K.0432.0436: Nov 30 2012:04:49:15.828: SYSTEM: imgp.c : 3114: Starting decoying of \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll (\Device\HarddiskVolume1\Solidcore\k32_c__v.dll)
+K.0432.0436: Nov 30 2012:04:49:15.890: SYSTEM: imgp.c : 3118: Finished decoying of \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll (\Device\HarddiskVolume1\Solidcore\k32_c__v.dll) with err = 0
+K.0432.0436: Nov 30 2012:04:49:15.953: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\user32.dll to \Device\HarddiskVolume1\Solidcore\vasr\user32.dll at 0x48c60000.</strong>
+K.0732.0828: Nov 30 2012:04:49:20.859: SYSTEM: utl.c : 500: Failed to find username, err 0xc000020c, perhaps the service is not running.
+K.1312.1316: Nov 30 2012:04:49:21.281: SYSTEM: pkgc_misc.c : 679: <strong>Rebased \Device\HarddiskVolume1\Solidcore\pkgc\10980000\Device\HarddiskVolume1\WINDOWS\system32\_si.dll to 10980000</strong>
+K.1312.1316: Nov 30 2012:04:49:21.390: ERROR: imgp.c : 3190: 0001 Failed to set branch target 0x10c46740 from 0x00000000 at VA 0x10a56760.
+K.0732.0828: Nov 30 2012:04:49:23.875: SYSTEM: utl.c : 520: Retrying usermode lookup of username [1].
+K.0732.0828: Nov 30 2012:04:49:23.890: SYSTEM: utl.c : 476: Found username as WINXP-MCAFEE\phocean
+K.1904.1932: Nov 30 2012:04:49:27.078: SYSTEM: pkgc_misc.c : 679: <strong>Rebased \Device\HarddiskVolume1\Solidcore\pkgc\20170000\Device\HarddiskVolume1\WINDOWS\system32\_si.dll to 20170000</strong>
+K.1904.1932: Nov 30 2012:04:49:27.453: ERROR: imgp.c : 3190: 0002 Failed to set branch targ et 0x20436740 from 0x00000000 at VA 0x20246760.
+[...]</pre>
+<p>We learn the driver entry point and that it is relocating a few strategic DLL: ntdll, kernel32, user32 and _si.dll. Ntdll, kernel32 and user32 are obviously the main user-mode API of Windows and we can expect that SolidCore is also putting a few hooks inside them. _si.dll is part of SolidCore and appear to be unlinked while the system is running.</p>
+<p>Let&#8217;s look around modules to confirm the position fo the driver:</p>
+<div id="attachment_1418" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver.png" rel="lightbox[1394]"><img class="size-large wp-image-1418" title="SolidCore_driver" alt="SolidCore driver" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver-940x815.png" width="584" height="506" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver-940x815.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver-580x503.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver-345x300.png 345w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver.png 945w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore driver (WinDbg kernel debugging)</p></div>
+<p>So, the McAfee driver is named <em><strong>swin</strong></em>. Quickly looking around, we also find that a DLL is injected in all processes: <strong><em>scinject.dll</em></strong>. Also, see on the screenshot, how <em><strong>kernel32</strong></em> was effectively relocated. So every time the machine will start, the library will be located at a different address (it could be interesting to check the entropy of this randomization, by the way, but this is another topic).</p>
+<div id="attachment_1432" style="width: 466px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png" rel="lightbox[1394]"><img class=" wp-image-1432 " title="McAfee_SolidCore-DLL_injection" alt="McAfee SolidCore, injection of scinject.dll in processes" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png" width="456" height="367" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png 570w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection-372x300.png 372w" sizes="(max-width: 456px) 100vw, 456px" /></a><p class="wp-caption-text">McAfee SolidCore injects the DLL &#8220;scinject.dll&#8221; in running processes.</p></div>
+<p>Just to make sure, I checked that the dll does not get injected by the registry setting:</p>
+<div id="attachment_1434" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry.png" rel="lightbox[1394]"><img class="size-medium wp-image-1434" title="McAfee_Solicore-Registry" alt="McAfee SolidCore AppInit_DLLs" src="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-580x297.png" width="580" height="297" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-580x297.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-500x256.png 500w, /blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry.png 753w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">McAfee SolidCore does not use AppInit_DLLs</p></div>
+<p>Nothing there, so it must be done through a hook.</p>
+<h1>First tests: Metasploit</h1>
+<p>I was told that SolidCore was doing good against Metasploit, so one of the first thing I did was to fire up Backtrack and play with it against the SP1 &#8220;solidified&#8221; target.</p>
+<p>And I have to say that I was quickly disapointed.</p>
+<p>Sure, I could not get a Meterpreter session or get a standard payload to work out of the box, whereas it was a piece of cake on the standard SP1.</p>
+<div id="attachment_1437" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails.png" rel="lightbox[1394]"><img class="size-medium wp-image-1437" title="McAfee_SolidCore-Payload_fails" alt="SolidCore and payload failure" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-580x175.png" width="580" height="175" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-580x175.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-940x285.png 940w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-500x151.png 500w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails.png 1009w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore prevents standard Metasploit payloads (including Meterpreter) to run successfully.</p></div>
+<p>But if SolidCore was at least disturbing the exploitation, it did not protect at all against the vulnerability itself. So I got things like this:</p>
+<div id="attachment_1435" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS.png" rel="lightbox[1394]"><img class="size-medium wp-image-1435" title="McAfee_SolidCore-Metasploit_DoS" alt="SolidCore and Metasploit DoS" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-580x433.png" width="580" height="433" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-580x433.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-401x300.png 401w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS.png 801w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Denial of Service during exploitation attempt with Metasploit: SolidCore will not magically &#8220;patch&#8221; vulnerabilities!</p></div>
+<p>A good old denial of service. Note that on the event log, SolidCore itself doesn&#8217;t log the exploitation attempt.</p>
+<p>I did several tests and depending on the vulnerability I got:</p>
+<ul>
+<li>service crash</li>
+<li>system instability</li>
+<li>complete DoS (system shutdown)</li>
+</ul>
+<div>So if a script skiddie will not be able to control the target, he will still obviously be able to cause a lot of damage!</div>
+<p>It was not really a surprise: McAfee will not patch the system! But think twice when you are said the contrary&#8230;</p>
+<h1>More tests, about memory protection: buffer overflows</h1>
+<p>As I was also told that McAfee was protecting user-mode apps against buffer overflows, I was even more excited.</p>
+<p>I prepared various representative tests:</p>
+<ul>
+<li>heap overflow, based on Aurora</li>
+<li>stack overflows (one base on strcpy, the other one on Windows CreateFile)</li>
+</ul>
+<p>But first, one thing I wanted to quickly eliminate was the memory randomization feature, named <strong>mp-vasr</strong>:</p>
+<div id="attachment_1439" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr.png" rel="lightbox[1394]"><img class="size-large wp-image-1439" title="SolidCore_mp-vasr" alt="SolidCore mp-vasr" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-940x587.png" width="584" height="364" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-940x587.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-580x362.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-480x300.png 480w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr.png 1280w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore mp-vasr IS NOT ALSR</p></div>
+<p><strong>mp-vasr is not ALSR!</strong> The function gets always loaded at the same memory address, so there is not process memory randomization at all&#8230; Another disappointment&#8230;</p>
+<p>Next step was to try to exploit the stack overflow. The first payload I used displays a message box. It calls LoadLibrary and GetProcAddress to dynamically resolve function addresses.</p>
+<p>When we try to exploit the buffer overflow, we get this:</p>
+<div id="attachment_1444" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11.png" rel="lightbox[1394]"><img class="size-medium wp-image-1444" title="McAfee_SolidCore-Shellcode1" alt="SolidCore blocking a shellcode" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-580x405.png" width="580" height="405" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-580x405.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-429x300.png 429w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11.png 668w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore causes memory access violation during shellcode injection</p></div>
+<p>We have a memory access violation, because the code is trying the access to the address NULL. Weird, let&#8217;s see it with OllyDbg.</p>
+<p>First, there is something that looks like a hook in ntdll:</p>
+<div id="attachment_1446" style="width: 556px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png" rel="lightbox[1394]"><img class="size-full wp-image-1446" title="SolidCore-PE" alt="SolidCore checking against PE signature" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png" width="546" height="171" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png 546w, /blog-archive/wp-content/uploads/2012/12/SolidCore-PE-500x156.png 500w" sizes="(max-width: 546px) 100vw, 546px" /></a><p class="wp-caption-text">SolidCore checking against PE signature</p></div>
+<p>So this thing is checking the code for a PE signature (<em><strong>5A4D</strong></em>). Then, it will go through <em><strong>scinject.dll</strong> </em>(by calling <em><strong>casp_inject_save_addr</strong></em>, wich is the only exported function).</p>
+<p>I could not reverse it (which would require much more time and skills than I have now), but at least we know where it is sitting and how it is triggered.</p>
+<p>If we continue the execution, we can then see that the buffer overflow is happening very well:</p>
+<div id="attachment_1448" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof.png" rel="lightbox[1394]"><img class="size-large wp-image-1448" title="SolidCore-bof" alt="SolidCore and buffer overflow" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof-940x587.png" width="584" height="364" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof-940x587.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof-580x362.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof-480x300.png 480w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof.png 1280w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore does not prevent stack overflow!</p></div>
+<p>Yes, we have the stack is fully overflowed and we can control EIP! So nothing should prevent us from exploiting it, shouldn&#8217;t it? ;-)</p>
+<p>Here we go:</p>
+<p><iframe src="http://player.vimeo.com/video/55797517?badge=0" height="375" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p>This first payload is low-tech, with hardcoded addresses of <em><strong>MessageBoxA</strong></em> and <strong><em>ExitProcess</em></strong>:</p>
+<pre>global _start
+
+_start:
+
+ ;MessageBoxA(windowhandle,msg,title,type)
+ mov ebx, 0xEEEEEEEF
+ add ebx, 0x11111111 ;\0
+ push ebx
+ push 0x293a2064 ;d :)
+ push 0x656e7770 ;pwne
+ mov ecx, esp
+ xor edx,edx
+ push edx ;OK button
+ push ecx ;title
+ push ecx ;message
+ push edx ;NULL window handle
+ mov eax, 0x6a216476 ;MessageBoxA
+ call eax
+ ;exit
+ xor edx,edx ;empty edx out
+ push edx ;move address of MessageBoxA onto stack
+ mov eax, 0x5cdb98fd ;ExitProcess(exitcode);
+ call eax ;exit cleanly so we don't crash parent</pre>
+<p>Let&#8217;s how it looks in OllyDbg:</p>
+<div id="attachment_1452" style="width: 594px" class="wp-caption alignnone"><a href="/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html/solidcore-buffer_overflow_exploitation" rel="attachment wp-att-1452"><img class="size-large wp-image-1452" alt="Buffer overflow exploitation despite McAfee Application Control" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-940x564.png" width="584" height="350" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-940x564.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-580x348.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-500x300.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation.png 1047w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">Buffer overflow exploitation despite McAfee Application Control</p></div>
+<p>I then tested with another more sophisticated shellcode (sorry, I cannot publish this one as I am not the author), which resolves dynamically the addresses of kernel32 and GetProcAddress. It works as well. The only caveat that I observed is that LoadLibraryA is systemically blocked (after going through some scinject.dll routines, it always returns 0 in EAX, wich means failure).</p>
+<p>In other words, a simple shellcode will work as long as the necessary library are loaded. Though most real life programs will already come with at least kernel32 and user32, it still gives a lot of opportunities.</p>
+<p>And then, with more shellcoding kung-fu, I am sure it is possible to get something even more target independant. The following two articles from Phrack probably give most hints to achieve this:</p>
+<ul>
+<li><a title="Phrack62: Bypassing third-party Windows Buffer Overflow Protection" href="http://www.phrack.org/issues.html?issue=62&amp;id=5">Phrack62: Bypassing third-party Windows Buffer Overflow Protection</a></li>
+<li><a title="Phrack63: NT Shellcodes Prevention demystified" href="http://www.phrack.org/issues.html?issue=63&amp;id=15">Phrack63: NT Shellcodes Prevention demystified</a></li>
+</ul>
+<p>But I need much more knowledge and practice in shellcoding before I can get something to work. I will see it later, and let me know if you could go ahead yourself.</p>
+<h1>Conclusion</h1>
+<p>Clearly, McAfee Application Control aka SolidCore is not an efficient protection against buffer overflows. If you want something much better, update your systems to something like Windows 7 64 bits and use Microsoft EMET to force DEP and ALSR on programs that don&#8217;t support it by default.</p>
+<p>Also, no way to delay patching because you have SolidCore. Full exploitation (shellcode) is just made a little bit more difficult, and that&#8217;s it. The systems will still be exposed to many risks like denial of service unless they are patched. Like always, defense in depth and a proper security policy are the foundations to decide on the patching policy, not a tool or a feature.</p>
+<p>This is a pity that the marketing teams give the wrong message, because McAfee still surely addresses many use cases. It is surely efficient enough to improve the control on workstations, that, for some reason, are difficult to control. For example, SolidCore will probably be enough to prevent the average Joe to mess the system. Why not being honest and keeping focus on this feature?</p>
+<p>On the other hand, if the McAfee guys want to be as ambitious as they claim,  they will have to move SolidCore to the kernel-mode and enhance the memory protections from there.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html/feed</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		</item>
+		<item>
+		<title>Soktspy</title>
+		<link>/blog-archive/2012/06/20/soktspy.html</link>
+		<pubDate>Wed, 20 Jun 2012 20:45:54 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Forensics]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[socket]]></category>
+		<category><![CDATA[Soktpy]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
+		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Soktspy is a small script that may be helpful for some investigation.</p>
+<p>Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets.</p>
+<p>But sometimes, the behavior may be very sneaky, consisting of one or two packets, at rare and random intervals. Unless you spend all the day before the screen, it may be very difficult to trace.</p>
+<p>Especially with stock tools or without installing any intrusive hardware, which is also the reason why I did this tool. On a production server, you want to install as little dependencies as possible, right?</p>
+<p>So here is the Soktspy, a python script that easily build into a portable and standalone executable to deploy on the target machine.</p>
+<p>Once launched, it just loops in the background and log sockets that are created for some given peers (the IP addresses you found involved in the suspicious network activity).</p>
+<p>Maybe, some other tool exist, but I could not find anything similar. Let me know if you have any suggestion. Anyway, it was a nice exercise to do :)</p>
+<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/blog-archive/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy01.png 668w, /blog-archive/wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
+<p><strong>Download</strong></p>
+<p><a href="/blog-archive/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
+<p><strong>Pre-requisites</strong></p>
+<ul>
+<li>Install Visual C++ Runtime libraries with v<strong>credist_x86.exe </strong>(not necessary if the target machine happens to have Python already installed)</li>
+</ul>
+<div>So far, I tested it successfully on Windows XP, Windows 2003, Ubuntu 11.10 and Mac OS Lion. But as it is a simple Python script, it is supposed to work on all platform.</div>
+<div>
+<p><strong>Compiling</strong></p>
+<p>You may recompile the program as a Windows binary executable by issuing this command:</p>
+<p><strong>&gt; setup.py py2exe</strong></p>
+</div>
+<p><strong>How to use</strong></p>
+<ul>
+<li>Copy <strong>soktSpy.exe </strong>and its configuration file <strong>config.cfg</strong>.</li>
+<li>Edit <strong>config.cfg </strong>with the IP you want to monitor</li>
+<li>Start <strong>soktSpy.exe</strong>.</li>
+</ul>
+<p>Then, as soon as the sneaky process will send out a packet toward the monitored IP, a log record will be triggered:</p>
+<p><a href="/blog-archive/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /blog-archive/wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /blog-archive/wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>The log file contains the following info, in that order:</p>
+<ul>
+<li>Detection time (based on the system local time)</li>
+<li>Process creation time</li>
+<li>PID</li>
+<li>Process Name</li>
+<li>Protocol Family (2 = IPv4, 23 = IPv6)</li>
+<li>Process Owner</li>
+<li>Source socket (IP, port)</li>
+<li>Destination socket (IP, port)</li>
+<li>Socket Status</li>
+</ul>
+<p><strong>Future Plans</strong></p>
+<p>Please tell me if you have any idea on how to improve it.</p>
+<p>For now, I plan to add a feature that will dump the memory of the suspicious processes when it is executing.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Misc rants on Linux desktop, Mac OS and Antivirus</title>
+		<link>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html</link>
+		<comments>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html#comments</comments>
+		<pubDate>Tue, 05 Jun 2012 21:29:27 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Antivirus]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Gnome]]></category>
+		<category><![CDATA[kde]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[Sophos]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1230</guid>
+		<description><![CDATA[Linux desktop is in bad shape&#8230; The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs. Unity? Like many people, I just don&#8217;t get it....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Linux desktop is in bad shape&#8230;</h2>
+<p>The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs.</p>
+<p>Unity? Like many people, I just don&#8217;t get it. It is pretty clumsy and feels unachieved. I also suffered from a lot of performance issues like <a title="Unity lag" href="https://bugs.launchpad.net/bugs/764330" target="_blank">this</a> that are never fixed and make it a pain to use daily.<br />
+Gnome 3? Actually, I liked it. It looks nice, is pretty fast and smooth. What I like the most is the workflow. It really makes use of workspaces logical and optimum. But&#8230; it did not work for me! Instability, <a title="Gnome 3 VMWare hang" href="https://bugs.launchpad.net/bugs/869408" target="_blank">again</a> and <a title="Gnome 3 and ATI" href="http://ati.cchtml.com/show_bug.cgi?id=99" target="_blank">again</a>.<br />
+You will tell me, that I should have stayed with Gnome 2 or go to XFCE / Openbox / etc. I have used all of them. They have qualities, sure, but we are in 2012 and I want something with more features.</p>
+<p><strong>Conclusion</strong>: it is sad that after so many years, Linux is not yet ready for the desktop, because some guys decided to break everything again instead of doing incremental enhancements. Why breaking so suddenly things that work? I don&#8217;t get it. I felt really fustrated with the feeling that I was at the same point as 5 years ago, dealing with the same kind of bugs. I have long been a Linux advocate and I believed I was right a few years back when I told people it was promising and superior to the competition (Windows XP at the time). Now years have passed, and I started to feel I was lying, or hiding the truth that is Linux Desktop failed and went nowhere.<br />
+Yes, I just got tired to fight with the computer to get basic things done. And considering the <a title="Linus Thorvalds on Gnome 3" href="https://plus.google.com/102150693225130002912/posts/UkoAaLDpF4i" target="_blank">Linus post</a> and several reactions into the comments, I am not alone in this case.</p>
+<h2>&#8230; so I gave a try to Apple&#8230;</h2>
+<p>I recently got a Mac Book Pro. The main reason is I wanted a very stable workstation to focus on my work. It was hard to admit after so many years using it, but I came to the conclusion that a Linux desktop could not meet this requirement anymore.</p>
+<p>So I am going to be with Mac OS Lion for a while (though I am certainly not closing the door to the Linux desktop forever). I have to say that it is a nice OS and it is damned stable. It is good to have something that works out of the box, without any frustration or need to customize things to have something suitable.</p>
+<p>And what about the stability of Mac OS? It is very eye candy, but is it stable?</p>
+<p>At first, I actually had some serious troubles. It was freezing almost every day, forcing me to a cold reboot. I started to be seriously doubtful concerning the stability of Mac OS, when I found by chance that the freeze occured every time that Sophos Antivirus started an update&#8230;</p>
+<h2>Antivirus and Mac OS&#8230;</h2>
+<p>Wait, what? Antivirus? On Mac OS? I know it will be the reaction of many Mac users. I do also think that it is useless, but for a different reason than most of them.<br />
+Of course, I don&#8217;t get the &#8220;Mac OS is secure&#8221; marketing. Actually, it has the less secure kernel around, even though it benefits from a robust Unix architecture.<br />
+No, my point is that antivirus all fail anyway. In forensic analysis, we can even not trust an antivirus scan to decide if a machine is sane or not. Instead, we have to use specific tools and memory acquisition to make sure.<br />
+It is simply because signature-based detection can always be worked around by malwares. There are hundreds of ways to achieve it successfully: changing binary headers, code obfuscation, encryption, hooking (see rootkits and bootkits).<br />
+Ok, antivirus vendors claim that they also offer behavioral detection, sandboxes, etc. Yes, that&#8217;s a good move, but they can&#8217;t check all of the system activity and again there are many ways to bypass it. So why bother?</p>
+<p>I mean, I still think it matters to have an antivirus on Windows. Especially for people who are not too techy. At least, it will detect the most basics threats and throw out alarms. There are thousands of such threats on Windows, and on this point antivirus offer a simple way to defeat them (though awareness and education are certainly more important).</p>
+<p>But on Mac Os, and on Linux as well, there are very few threats. Once again, it is not that they are so much secure, but at the time I am writing, it is a fact.</p>
+<p>So to summarize:</p>
+<ul>
+<li>very few threats on Mac OS and Linux</li>
+<li>antivirus still massively rely on signature-based detection</li>
+</ul>
+<p>You see: if there is nothing much to detect, an antivirus is overhead. It will only eat some resources and fail anyway against coming threats.<br />
+Just keeping the system up-to-date is certainly the best thing to do so far.</p>
+<p>Well, so why did I set an antivirus? I was actually using it for my forensic analysis on Windows machines. It was a convenient way for me to have a local scanner that I could started on dumped suspicious processes, without having to connect on Viruscan. It used to be convenient when I was traveling without connection, but I can live without it.</p>
+<h2>About Sophos for Mac OS</h2>
+<p>So moreover this piece of software was crashing my laptop. The update part seems to be executed with root privileges, and for some reason it locks the system (not only mine, <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Version-8-s-AutoUpdate-consistently-CRASHING/td-p/5957o29DA&amp;usg=AFQjCNGa-t6bKUNhGqDIdvtkicGvsdvMmg" target="_blank">look</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Sophos-AV-7-3-8C-Crashed-MacBook-Pro-AGAIN-Unacceptable-Software/td-p/5397" target="_blank">at</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Given-up-temporarily-on-Sophos-for-Mac/td-p/3703" target="_blank">the</a> forums). Not to mention that having such a component may offer more room to malicious code to exploit the kernel&#8230;</p>
+<p>A shame, a pure piece of crap. Now that I removed it, I am enjoying an uptime of about 30 days!</p>
+<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="/blog-archive/wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
+<h2>Conclusion</h2>
+<p>Sophos Antivirus for Mac OS is pure crap, run to remove it if it happens to be on your computer.</p>
+<p>Anyway, you don&#8217;t need an antivirus on Mac OS. Moreover, it seems that several vendor offer solution that lack of maturity and testing on this platform. So you would actually degrade your system stability and security if you would installed on of these.</p>
+<p>And Mac OS is a nice Unix-based desktop alternative to have the work done, even though sadly it is not open-source.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>HES 2012</title>
+		<link>/blog-archive/2012/04/14/hes-2012.html</link>
+		<pubDate>Sat, 14 Apr 2012 17:48:10 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[conference]]></category>
+		<category><![CDATA[HES]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1173</guid>
+		<description><![CDATA[It has been a long long time since my last post&#8230; I have been very busy, but hopefully I am coming back in the coming months. Just a quick note to tell that I just come back from the Hackito Ergo Sum 2012 (HES). And that was great. All conferences were interesting and the level...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/04/14/hes-2012.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>It has been a long long time since my last post&#8230; I have been very busy, but hopefully I am coming back in the coming months.</p>
+<p>Just a quick note to tell that I just come back from the <a title="HES 2012" href="http://2012.hackitoergosum.org/blog/schedule/schedule">Hackito Ergo Sum 2012</a> (HES).</p>
+<p>And that was great. All conferences were interesting and the level was very high. We could enjoy a lot of new stuff that is going to be discussed in the community during the next months. On top of that, it was really well organized.</p>
+<p>So far it is the conference that I enjoyed the most in France. Keep up the good work!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Acquisitions among SIEM actors</title>
+		<link>/blog-archive/2011/10/04/acquisitions-among-siem-actors.html</link>
+		<pubDate>Tue, 04 Oct 2011 17:14:13 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Arcsight]]></category>
+		<category><![CDATA[correlation]]></category>
+		<category><![CDATA[Gartner]]></category>
+		<category><![CDATA[log]]></category>
+		<category><![CDATA[SIEM]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1167</guid>
+		<description><![CDATA[The SIEM planet has recently gone crazy. Following the acquisition of the leader, Arcsight, by HP last year, IBM just acquired Q1 Labs&#8230; and Mc Afee, Nitrosecurity ! With RSA and Norton having their own solutions, we know have 5 big players in the arena (see Gartner 2011). This is a good proof that the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/10/04/acquisitions-among-siem-actors.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The <strong>SIEM</strong> planet has recently gone crazy. Following the acquisition of the leader, <a title="HP to acquire" href="http://www.hp.com/hpinfo/newsroom/press/2010/100913xa.html" target="_blank">Arcsight, by HP</a> last year, <a title="IBM to acquire Q1 Labs" href="http://www.net-security.org/secworld.php?id=11729" target="_blank">IBM just acquired Q1 Labs</a>&#8230; and <a title="Mc Afee to acquire Nitrosecurity" href="http://www.net-security.org/secworld.php?id=11727" target="_blank">Mc Afee, Nitrosecurity</a> !</p>
+<p>With RSA and Norton having their own solutions, we know have 5 big players in the arena (see <a title="Gartner Magic Quadrant 2011" href="http://www.arcsight.com/collateral/whitepapers/Gartner_Magic_Quadrant_2011.pdf">Gartner 2011</a>). This is a good proof that the correlation market is growing and that the solutions are getting mature.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>EMET, pretty weak ALSR</title>
+		<link>/blog-archive/2011/08/16/emet-pretty-weak-alsr.html</link>
+		<pubDate>Tue, 16 Aug 2011 17:20:36 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[ALSR]]></category>
+		<category><![CDATA[EMET]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1150</guid>
+		<description><![CDATA[Didier Stevens &#8220;benchmarked&#8221; the efficiency of ALSR as implemented by the EMET tool. The conclusion is that it is pretty weak, whereas I thought it was on pair with true ALSR (as advertised). Very instructive.]]></description>
+				<content:encoded><![CDATA[<p>Didier Stevens &#8220;<a title="Pseudo ALSR" href="http://blog.didierstevens.com/2011/08/16/so-how-good-is-pseudo-aslr/" target="_blank">benchmarked</a>&#8221; the efficiency of ALSR as implemented by the <a title="EMET" href="/blog-archive/2010/09/25/emet-configure…ion-on-windows.html">EMET</a> tool.</p>
+<p>The conclusion is that it is pretty weak, whereas I thought it was on pair with true ALSR (as advertised). Very instructive.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

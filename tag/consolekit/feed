@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ConsoleKit &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/consolekit/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>get rid off ConsoleKit / Dbus / Hal stuff on a server</title>
+		<link>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html</link>
+		<comments>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html#comments</comments>
+		<pubDate>Mon, 04 Oct 2010 20:41:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[ConsoleKit]]></category>
+		<category><![CDATA[dbus]]></category>
+		<category><![CDATA[hal]]></category>
+		<category><![CDATA[service]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=915</guid>
+		<description><![CDATA[Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing. Unfortunately, they are settled with the default...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing.</p>
+<p>Unfortunately, they are settled with the default basic installation and they have some dependencies (e.g the kernel and zypper) that make them impossible to simply uninstall .</p>
+<p>Here is a way to at least deactivate these services at startup on openSUSE 11.2 (it might also work with 11.3).</p>
+<p>First, ConsoleKit is not a standalone daemon anymore on the latest versions of openSUSE. It is started along with dbus (you will see that if you stop dbus, all the ConsoleKit thread will magically vanish).</p>
+<p>But trying straight to remove dbus from the startup doesn&#8217;t work, because of dependencies among services. On my system, it complained like this:</p>
+<pre># chkconfig dbus off
+ insserv: Service dbus has to be enabled to start service bluez-coldplug
+ insserv: Service dbus has to be enabled to start service network
+ insserv: Service dbus has to be enabled to start service haldaemon
+ insserv: Service dbus has to be enabled to start service earlyxdm
+ insserv: exiting now!
+ /sbin/insserv failed, exit code 1
+ [1]    7954 exit 1     chkconfig dbus off</pre>
+<p>So, let&#8217;s remove the bluetooth stuff:</p>
+<pre># zypper remove bluez</pre>
+<p>Then, we just deactivate the services that can&#8217;t uninstalled:</p>
+<pre># chkconfig earlyxdm off
+# chkconfig network-remotefs off
+# chkconfig haldaemon off</pre>
+<p>You will probably want to keep the network service on, otherwise your configurations scripts won&#8217;t be read anymore. In fact, we will just edit the dependency of the startup script itself, by editing /etc/init.d/network and editing these lines:</p>
+<pre># Required-Start:    $local_fs dbus
+# Required-Stop:    $local_fs dbus</pre>
+<p>What we do is just deleting the dbus word, so that the script section looks like it:</p>
+<pre>### BEGIN INIT INFO
+# Provides:        network
+# Required-Start:    $local_fs
+# Should-Start:        isdn openibd SuSEfirewall2_init
+# Required-Stop:    $local_fs
+# Should-Stop:        isdn openibd SuSEfirewall2_init
+# Default-Start:    2 3 5
+# Default-Stop:
+# Short-Description:    Configure the localfs depending network interfaces
+# Description:        Configure the localfs depending network interfaces
+#                       and set up routing
+### END INIT INFO</pre>
+<p>Now we are done and we should be able to definitely turn dbus off:</p>
+<pre># chkconfig dbus off</pre>
+<p>Bingo! I didn&#8217;t monitor the memory precisely, but I believe I saved around 50 MB, which is always welcomed on a small server.</p>
+<p>I don&#8217;t know if it is the best way &#8211; I may have missed something &#8211; however I am pretty happy as it now works as I wanted. Please let me know if you have a better tip.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

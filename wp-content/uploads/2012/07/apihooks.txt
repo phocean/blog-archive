@@ -1,0 +1,5 @@
+Volatile Systems Volatility Framework 2.0
+Name                             Type     Target                                   Value
+lsass.exe[740]                   inline   pstorsvc.dll!PSTOREServiceMain[0x743a1459] 0x743a1459 CALL [0x743a1010] =>> 0x77df3e77 (ADVAPI32.dll)
+svchost.exe[1124]                inline   cryptsvc.dll!CryptServiceMain[0x76ce1579] 0x76ce1579 CALL [0x76ce10a0] =>> 0x77df3e77 (ADVAPI32.dll)
+Finished after 444.35178709 seconds

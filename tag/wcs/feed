@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WCS &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/wcs/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Pentest of a Wi-Fi network with Cisco NCS</title>
+		<link>/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html</link>
+		<pubDate>Fri, 04 Oct 2013 12:46:56 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Oracle]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[WCS]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1750</guid>
+		<description><![CDATA[I had a chance to audit this device during a Wi-Fi pentest. Cisco Prime Network Control System is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc. I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I had a chance to audit this device during a Wi-Fi pentest. <em>Cisco Prime Network Control System </em>is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc.</p>
+<p>I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course, Cisco published a patch… however how many network teams would have applied the patch ? Routers, switches, Wi-Fi controllers, especially when they are not part of the core infrastructure, are often dropped and forgotten for years&#8230;</p>
+<p>Here is the vendor <a href="http://tools.cisco.com/security/center/mcontent/CiscoSecurityAdvisory/cisco-sa-20130410-ncs">advisory</a>, which is about &#8220;unspecified&#8221; default credentials. With a little of ninja googling, I managed to glue the pieces.</p>
+<p>It was not that easy to find the credentials in questions, but the guys from Tenable Security managed to get the <a href="http://tenablenetworksecurity.info/plugins/index.php?view=single&amp;id=66861">info</a>: <code>wcsdba / wcs123</code>.</p>
+<p>Now, you will think, &#8220;ok, but we need to find a way to reach the database&#8230;&#8217;. Piece of cake! By default, the device exposes an Oracle listener on port <code>1522</code>.</p>
+<p>Then, we would need to know the Oracle instance… Don&#8217;t think too much, don&#8217;t even look up at your wordlists, this is just: <code>WCS</code>.</p>
+<p>Of course, as you should guess now, the account has <em>DBA</em> privileges. :-)</p>
+<p>So, in summary:</p>
+<pre>Oracle listener on port <strong>TCP 1522</strong>
+Instance: <strong>WCS</strong>
+Account: <strong>wcsdba</strong>
+Password: <strong>wcs123</strong>
+Privileges: <strong>DBA</strong></pre>
+<p><span style="line-height: 1.714285714; font-size: 1rem;">Now you can do pretty much every thing: control network settings, grab and crack password hashes, etc.</span></p>
+<p>Besides, there is also an XSS on a login page&#8230;</p>
+<p>Well done Cisco, for not hardening anything.  :-/</p>
+<p>Have fun!</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

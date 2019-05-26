@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Adsense &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/adsense/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Donating our Google Adsense income</title>
+		<link>/blog-archive/2007/06/28/donating-our-google-adsense-income.html</link>
+		<pubDate>Thu, 28 Jun 2007 20:49:19 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Adsense]]></category>
+		<category><![CDATA[Google]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=63</guid>
+		<description><![CDATA[We received our first income for our website from the Google Adsense program. Well, if later we may keep some money for the websites fees, we wanted to do something special for the occasion : we made some donation to Unicef and WWF (tree adoption program). We hope this will be helpful. If ever you...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/06/28/donating-our-google-adsense-income.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>We received our first income for our website from the Google Adsense program.</p>
+<p>Well, if later we may keep some money for the websites fees, we wanted to do something special for the occasion : we made some donation to Unicef and WWF (tree adoption program).</p>
+<p>We hope this will be helpful. If ever you can, please also consider donating to better our whole world.</p>
+<p align="center"><a title="WWF" rel="attachment wp-att-61" href="/blog-archive/?attachment_id=61"><img src="/blog-archive/wp-content/uploads/2007/06/wwf.png" alt="WWF" /></a></p>
+<p><a title="Unicef" rel="attachment wp-att-62" href="/blog-archive/?attachment_id=62"></a></p>
+<p style="text-align: center"><a title="Unicef" rel="attachment wp-att-62" href="/blog-archive/?attachment_id=62"><img src="/blog-archive/wp-content/uploads/2007/06/unicef.png" alt="Unicef" /></a></p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

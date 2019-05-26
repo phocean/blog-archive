@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Netflow &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/netflow/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Netflow on MLS switches</title>
+		<link>/blog-archive/2009/09/23/netflow-on-mls-switches.html</link>
+		<comments>/blog-archive/2009/09/23/netflow-on-mls-switches.html#comments</comments>
+		<pubDate>Wed, 23 Sep 2009 20:12:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[CEF]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[MLS]]></category>
+		<category><![CDATA[Monitoring]]></category>
+		<category><![CDATA[NDE]]></category>
+		<category><![CDATA[Netflow]]></category>
+		<category><![CDATA[Switch]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=443</guid>
+		<description><![CDATA[I had some trouble today at office with monitoring flows going through a MLS switch. The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch. The traffic reported was way below the real one. After some research,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/23/netflow-on-mls-switches.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I had some trouble today at office with monitoring flows going through a MLS switch.</p>
+<p>The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch.</p>
+<p>The traffic reported was way below the real one.</p>
+<p>After some research, what I suspected was confirmed by <a title="Netflow on 6500" href="http://www.cisco.com/en/US/tech/tk812/technologies_tech_note09186a008015efaa.shtml" target="_blank">this documentation</a> from Cisco.</p>
+<p>Some more steps are required to make Netflow report flow processed by the switching module.</p>
+<p>Otherwise, as only the first packet is routed and the following ones are switched by CEF, Netflow will only see the first packet at layer 3.</p>
+<p>That explains why the reported traffic was ridicoulously small.</p>
+<p>So, where on routers the following commands are enough :</p>
+<pre>(config)# ip cef
+(config)# ip flow-export version 5
+(config)# ip flow-export destination 192.168.1.1 1234
+(config)# interface fa 1
+(config-if)# ip route-cache flow</pre>
+<p>On MLS switches (like 6500 or 7200), add :</p>
+<pre>(config)# mls netflow
+(config)# mls nde sender
+(config)# mls aging long 64
+(config)# mls flow ip full</pre>
+<p>The commands are described <a href="http://www.cisco.com/en/US/docs/switches/lan/catalyst6500/ios/12.1E/native/configuration/guide/nde.html">there</a>. Unfortunately, as often with Cisco, they may vary depending on the IOS version your are running.<br />
+<a href="/blog-archive/wp-content/uploads/2009/09/cisco_6500_switches.js" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/09/23/netflow-on-mls-switches.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

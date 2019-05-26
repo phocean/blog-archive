@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../../css/fontello.css">
+<link rel="stylesheet" href="../../../css/animation.css">
+
+<!-- Mirrored from phocean.net/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:24:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Quick tip: harden your ARP table the easy way (Linux) | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Installation of Metasploit on Fedora 21 / 22' href='../../02/10/installation-of-metasploit-on-fedora-21.html' />
+<link rel='next' title='A journey with Btrfs' href='../../../2016/03/20/a-journey-with-btrfs.html' />
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="quick-tip-harden-your-arp-table-the-easy-way-linux.html" />
+<link rel='shortlink' href='../../../index30f0.html?p=2041' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embedc3af.js" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embed0d1a?url=https%3A%2F%2Fphocean.net%2F2015%2F08%2F14%2Fquick-tip-harden-your-arp-table-the-easy-way-linux.html&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-2041 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../../index.html" >
+			<img class="logo" src="../../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-2041" class="post-2041 post type-post status-publish format-standard hentry category-defense category-security tag-arp tag-arp-spoofing tag-mac-address tag-networkmanager">
+				<header class="entry-header">
+
+						<h1 class="entry-title">Quick tip: harden your ARP table the easy way (Linux)</h1>			
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc.</p>
+<p>Yet, most networks do not have port security and ARP inspect on their switches to mitigate such attacks. So you have to count on yourself.</p>
+<p>Most people know how to protect a client , e.g. by maintaining a static mapping of MAC / IP addresses on the operating systems. But almost no one does it, because it would be a pain to manage&#8230;</p>
+<p>But, really ? No, here is what I do to get a reasonable protection.</p>
+<p>I do a few compromises at first:</p>
+<ol>
+<li><span style="text-decoration: underline;">I am not looking to protect ALL my traffic</span> toward  other peers on the LAN, but at least outbound communications with the gateway and, optionally, with a few critical servers.</li>
+<li><span style="text-decoration: underline;">An attacker may still poison the gateway</span> and eavesdrop on responses directed to my machine, and get some interesting stuff anyway.</li>
+<li>So, <span style="text-decoration: underline;">this is not a protection on its own</span>. You have to think defense-in-depth : encryption on all your services (TLS), VPN, etc. Especially, depending on where you are, do not rely on the DNS / DHCP servers.</li>
+</ol>
+<p>With that said, what follows is a hardening move that you can do on most of Linux distributions, with little pain.</p>
+<p>Get the MAC address of the gateway, either by finding it out physically (tag) or by checking it at a safe moment (when ARP spoofing is supposedly not happening).</p>
+<p>Fill in a flat file, like /etc/ethers, with mappings like :</p>
+<pre> 00:11:22:33:44:55  1.2.3.4</pre>
+<p>Now, NetworkManager will do all the magic.</p>
+<p>Create a script like :</p>
+<pre> % cat /etc/NetworkManager/dispatcher.d/40-arp 
+ #!/bin/bash
+ arp -f /etc/ethers
+</pre>
+<p>All scripts in the above folder will be executed every time an interface gets up, as long as you give it executable rights :</p>
+<pre>% chmod +x /etc/NetworkManager/dispatcher.d/40-arp</pre>
+<p>Now, either execute it directly or unplug / plug back in your interface. You should have a permanent static MAC address now, effectively bypassing the ARP protocol and its weaknesses :</p>
+<pre>% arp -a -n
+? (172.16.100.254) at 00:15:17:9d:d6:d1 [ether] PERM on eth0</pre>
+<p>Voilà! Should you not use NetworkManager for some reason, you can do something equivalent with <em>ifup</em> scripts in respect with the syntax of you current Linux distribution.</p>
+<p>But, let me stress it out once more, to be sure you don&#8217;t get me wrong :</p>
+<p><strong><span style="color: #ff0000;">Despite an enhancement, this is no a sufficient protection and you may still get pwned ! Authentication and encryption MUST also come into the play, so use only TLS enabled services, HTTPS sites and, ideally, a good IPSEC / SSH / TLS tunnel to carry ALL of your traffic !</span></strong></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../../../category/security/defense.html" rel="category tag">Defense</a>, <a href="../../../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="../../../tag/arp.html" rel="tag">arp</a>, <a href="../../../tag/arp-spoofing.html" rel="tag">arp spoofing</a>, <a href="../../../tag/mac-address.html" rel="tag">mac address</a>, <a href="../../../tag/networkmanager.html" rel="tag">NetworkManager</a> <i class="icon-calendar"></i> <a href="quick-tip-harden-your-arp-table-the-easy-way-linux.html" title="10:52 pm" rel="bookmark"><time class="entry-date" datetime="2015-08-14T22:52:05+00:00">August 14, 2015</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../02/10/installation-of-metasploit-on-fedora-21.html" rel="prev"><span class="meta-nav">&larr;</span> Installation of Metasploit on Fedora 21 / 22</a></span>
+					<span class="nav-next"><a href="../../../2016/03/20/a-journey-with-btrfs.html" rel="next">A journey with Btrfs <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.367 seconds. Made 14 queries to database and 46 cached queries. Memory used - 27.43MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:24:39 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.335 seconds. -->

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/fontello.css">
+<link rel="stylesheet" href="../css/animation.css">
+
+<!-- Mirrored from phocean.net/tag/security by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:45:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Security | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Security Tag Feed" href="security/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="archive tag tag-security tag-420 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../index.html" >
+			<img class="logo" src="../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Tag Archives: <span>Security</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-1246" class="post-1246 post type-post status-publish format-standard hentry category-news category-security tag-challenge tag-conference tag-defense tag-hacking tag-security tag-sstic">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2012/06/10/sstic-2012.html" title="Permalink to SSTIC 2012" rel="bookmark">SSTIC 2012</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>I came back from the 2012 edition of <a title="SSTIC" href="https://www.sstic.org/">SSTIC</a>, where despite the concerns, there were still some nice conferences.</p>
+<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="../2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="../2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
+<p>Big respect for the guys who have the talent of going over so many tricks.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/news.html" rel="category tag">News</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="challenge.html" rel="tag">Challenge</a>, <a href="conference.html" rel="tag">conference</a>, <a href="defense.html" rel="tag">Defense</a>, <a href="hacking.html" rel="tag">Hacking</a>, <a href="security.html" rel="tag">Security</a>, <a href="sstic.html" rel="tag">SSTIC</a> <i class="icon-calendar"></i> <a href="../2012/06/10/sstic-2012.html" title="7:40 am" rel="bookmark"><time class="entry-date" datetime="2012-06-10T07:40:41+00:00">June 10, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-1010" class="post-1010 post type-post status-publish format-standard hentry category-defense category-security tag-browser tag-cloud tag-csrf tag-security tag-ssl tag-xss">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html" title="Permalink to Cloud in the security sky or should I see a psychologist?" rel="bookmark">Cloud in the security sky or should I see a psychologist?</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later.</p>
+<p>Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can count on the salesmen to get a great picture of it again and again, its cons are silenced.</p>
+<p>Too bad, a major disadvantage is security. But guess what? The other day an &#8220;analyst&#8221; presenting his study about cloud computing just cleared out the issue in 3 words :</p>
+<blockquote><p>&#8220;Concerning the people who doubt of the security in the cloud, it is a typical psychological issue of theses persons fearing change or something new . There is really nothing concrete to worry about cloud security.&#8221;</p></blockquote>
+<p>Well, not sure I am going to see a psychologist. Of course the guy did not give any solid argument, so here we go.</p>
+<p>In short, cloud computing expose to the Internet services that were, in normal conditions, always kept inside an internal network and behind peripheral protections.</p>
+<p>Of course, these services offer authentication, but basically almost every traditional web attacks will work as usual. After all, we are talking about the same web portal, the same users, the same browsers, etc.</p>
+<p>Let quickly summarize the potential threats: CSRF, XSS, phishing, SSL attacks (MiTM, certificate spoofing),  browser exploits and many more.</p>
+<p>So really, it is not a question of being crazy, paranoid or reluctant to change. There are just many issues that don&#8217;t make the cloud useless but should incite to caution.</p>
+<p>Cloud computing can be used for what it is good at (flexibility, convenience) but not to replace a datacenter. It should not be used if security is a concern.</p>
+<p>Don&#8217;t listen to the salesman only, read what some specialists are saying. Here is a compilation of some interesting articles I found :</p>
+<ul>
+<li>Black Hat 2009 presentation : <a title="BackHat 2009 and cloud computing" href="http://www.isecpartners.com/storage/docs/presentations/Cloud-BlackHat-2009-iSEC.pdf">pdf</a> and <a title="black hat could models" href="http://www.cupfighter.net/index.php/2009/07/blackhat-talk-cloud-computing-models-and-vulnerabilities-raining-on-the-trendy-new-paradise-by-alex-stamos-andrew-becherer-nathan-wilcox/">summary</a></li>
+<li>Owasp presentation (<a title="Owasp and cloud computing security" href="http://www.owasp.org/images/1/12/Cloudy_with_a_chance_of_0_day_-_Jon_Rose-Tom_Leavey.pdf">pdf</a>)</li>
+<li><a title="dangers in the cloud" href="http://www.webvivant.com/dangers-in-the-cloud.html">Dangers in the cloud </a></li>
+<li><a title="Browsers vulnerabilities" href="http://lcamtuf.blogspot.com/2011/02/so-you-think-your-capability-model-is.html" target="_self">So you think *your* capability model is bad?</a> (browser&#8217;s weak design)</li>
+</ul>
+<p>And last but not least, in case our favorite salesman keeps pushy:</p>
+<ul>
+<li><a title="Amazon EC2 vulnerabilities" href="http://cloudsecurity.org/blog/2008/12/18/whats-new-in-the-amazon-cloud-security-vulnerability-in-amazon-ec2-and-simpledb-fixed-75-months-after-notification.html">Amazon EC2 vulnerabilities</a></li>
+<li><a title="Salesforce phishing incident" href="http://www.ebizq.net/blogs/security_insider/2007/11/implications_of_salesforce_phi.php">Salesforce phishing incident</a></li>
+</ul>
+<p>But that&#8217;s not all. The same goes with &#8220;virtualization everywhere&#8221;, but that will be another topic&#8230;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="browser.html" rel="tag">browser</a>, <a href="cloud.html" rel="tag">cloud</a>, <a href="csrf.html" rel="tag">CSRF</a>, <a href="security.html" rel="tag">Security</a>, <a href="ssl.html" rel="tag">SSL</a>, <a href="xss.html" rel="tag">XSS</a> <i class="icon-calendar"></i> <a href="../2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html" title="7:22 pm" rel="bookmark"><time class="entry-date" datetime="2011-02-05T19:22:45+00:00">February 5, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-877" class="post-877 post type-post status-publish format-standard hentry category-defense category-news category-security tag-authentication tag-openid tag-password tag-security tag-wordpress">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2010/07/23/openid-rants.html" title="Permalink to OpenID rants" rel="bookmark">OpenID rants</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>After I tried to set this blog as my own OpenID provider using the <a title="OpenID WordPress Plugin" href="http://wordpress.org/extend/plugins/openid/" target="_blank">OpenID WordPress plugin</a>, I got a weired error message:</p>
+<p><em>&#8220;This is an OpenID Server, Nothing to See Here&#8230; Move  Along&#8221;</em></p>
+<p>I could not find what as wrong, as all prerequisites were fulfilled, until I find this <a title="openID server" href="http://patchlog.com/wordpress/openid-server-on-php-5-3/" target="_blank">nice post</a>. The patch there works very well, thanks to the author (it is a shame that it wasn&#8217;t yet included in the trunk).</p>
+<p>This and the lack of active open-source development around OpenID seems to show that it is not really popular. It is a shame because it is a pretty good solution against the multiplication of passwords. I wouldn&#8217;t want to use OpenID for my bank account access, but it is just right for many sites, forums, etc. Unfortunately, no many sites are yet OpenID enabled and the choice when you want to become your own provider is very limited (most of projects listed in the official wiki are dead, with no update for the last 2 years).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/news.html" rel="category tag">News</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="authentication.html" rel="tag">Authentication</a>, <a href="openid.html" rel="tag">OpenID</a>, <a href="password.html" rel="tag">password</a>, <a href="security.html" rel="tag">Security</a>, <a href="wordpress.html" rel="tag">Wordpress</a> <i class="icon-calendar"></i> <a href="../2010/07/23/openid-rants.html" title="5:44 am" rel="bookmark"><time class="entry-date" datetime="2010-07-23T05:44:37+00:00">July 23, 2010</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-862" class="post-862 post type-post status-publish format-standard hentry category-defense category-pentesting category-privacy-security category-security tag-book tag-hacking tag-review tag-security">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2010/05/16/books-review.html" title="Permalink to Books review" rel="bookmark">Books review</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them.</p>
+<h4>Hacking: the next generation</h4>
+<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="../wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
+<p>The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc.<br />
+It was easy to read : the authors are straight to the point and their sentences are clear.</p>
+<p>I especially appreciated their state of art about XSS and CSRF attacks. It is certainly the best I have read so far, greatly illustrated with exciting and real case studies.</p>
+<p>On the other hand,  I quickly passed over the networking stuff (both wired and wireless). It was too basic and didn&#8217;t show anything new &#8211; maybe it is because I specialize in those fields.</p>
+<p>Anyway, globally, I strongly recommend this book. It is worth while your money if you want to know more on web attacks or to have a good overview of modern threats.</p>
+<h4>Beautiful Security</h4>
+<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="../wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
+<p>This is a collection of essays by some of the best security experts and hackers.</p>
+<p>Well, I won&#8217;t go around, I have been quite disappointed by this book. The overall lacks coherence and after a while you start wondering what this book is trying to demonstrate. At the end, there is a crual lack of connection between the essays and it globally makes it appear very confusing.</p>
+<p>It also sometimes lacks technical references and the writing style is too verbose, too literal for a technical book to be attractive.</p>
+<p>There are however some good essays, like one about PGP (by Philip Zimmermann himself, though). It is hard to find some good and complete documentation about it, and this essay is definitely a good one, which I will probably read again when I feel the need of it.</p>
+<p>But I wouldn&#8217;t recommend this book only for this short piece of writing. Lack of cohesion, too much litterature and not enough technical stuff actually bored me, though that&#8217;s just my personal taste.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/security/pentesting.html" rel="category tag">Pentesting</a>, <a href="../category/security/privacy-security.html" rel="category tag">Privacy</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="book.html" rel="tag">Book</a>, <a href="hacking.html" rel="tag">Hacking</a>, <a href="review.html" rel="tag">Review</a>, <a href="security.html" rel="tag">Security</a> <i class="icon-calendar"></i> <a href="../2010/05/16/books-review.html" title="6:16 pm" rel="bookmark"><time class="entry-date" datetime="2010-05-16T18:16:46+00:00">May 16, 2010</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-534" class="post-534 post type-post status-publish format-standard hentry category-defense category-pentesting category-security tag-nessus tag-scanner tag-security tag-vulnerability">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2009/12/01/nessus-4-2.html" title="Permalink to Nessus 4.2" rel="bookmark">Nessus 4.2</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p><a title="Nessus 4.2" href="http://www.nessus.org/download/" target="_blank">Nessus 4.2</a> is out.</p>
+<p>I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be, they come to you in the right order.</p>
+<p>I also appreciate that the server and the client set-up are now unified thanks to the web interface (you can access it from localhost or from the network indifferently).</p>
+<p>The report section has also been greatly improved.</p>
+<p>So, if you were already an Nessus user, it is worth upgrading.</p>
+<p>Talking about the set-up, there is an up-to-date package for openSUSE (of course, there are a lot less dependencies than before).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/security/pentesting.html" rel="category tag">Pentesting</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="nessus.html" rel="tag">nessus</a>, <a href="scanner.html" rel="tag">scanner</a>, <a href="security.html" rel="tag">Security</a>, <a href="vulnerability.html" rel="tag">Vulnerability</a> <i class="icon-calendar"></i> <a href="../2009/12/01/nessus-4-2.html" title="9:21 pm" rel="bookmark"><time class="entry-date" datetime="2009-12-01T21:21:23+00:00">December 1, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-524" class="post-524 post type-post status-publish format-standard hentry category-cryptography category-linux category-security category-administration-systeme tag-apache tag-debian tag-linux tag-opensuse tag-security tag-ssl tag-vulnerability">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" title="Permalink to OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage" rel="bookmark">OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
+<p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
+<p>A proof of concept of an attack against Twitter was made.</p>
+<p>Fine. But so far, <strong>the answer was to just disable any renegociation</strong>.</p>
+<p>This actually causes some issues with SSL session timeout and totally broke client authentication.</p>
+<p>I got into problems because of the latter. I am using client authentication for some location of my web server, and I recently could not connect anymore to these with the following log in apache :</p>
+<pre>[Tue Nov 24 16:56:15 2009] [debug] ssl_engine_kernel.c(1912): OpenSSL:Exit: error in SSLv3 read client hello A
+[Tue Nov 24 16:56:15 2009] [error] [client x.x.x.x] Re-negotiation handshake failed: Not accepted by client!?</pre>
+<p>I first was not aware of the openssl patch and tried almost anything possible. My focus was, of course, on the certificate and the client.<br />
+But, a nice guy on IRC #suse,<strong> Stittel</strong>, had a good hunch and suggested me to look at the CVE-2009-3555 fix.</p>
+<p>After more tests, it was quickly confirmed to work well with older versions of OpenSSL (as shipped in Debian Lenny).<br />
+Finally, I downgraded the OpenSSL version on my openSUSE box to a version prior to the CVE-2009-3555 fix and it just worked fine.</p>
+<p>Then, I dig into it and found a lot of interesting reports <a href="https://bugzilla.redhat.com/show_bug.cgi?id=533125" target="_blank">there</a> and <a href="http://old.nabble.com/TLS-renegotiation-disabling-:-mod_ssl-and-OpenSSL--0.9.8l-td26285568.html" target="_blank">there</a>. So far it is a real mess.<br />
+In short, the breakage will stay as long as browsers don&#8217;t also include a patch to avoid renegotiation.<br />
+So far, I could not find a browser that does include a patch.<br />
+If anyone reading it knows a version that does it, please let me know.</p>
+<p>Meanwhile, you have actually the choice between :</p>
+<ul>
+<li>low security by deactivating client authentication on your server</li>
+<li>low security by keeping a vulnerable version of OpenSSL</li>
+</ul>
+<p>As my server is not very exposed, I chose the latter, but that&#8217;s not satisfying.  It is not recommended, but if like me you need to use client authentication with mod_ssl on openSUSE 11.2, do :</p>
+<pre>% zypper install --from repo-oss openssl openssl-certs libopenssl0_9_8 libopenssl0_9_8-32bit</pre>
+<p>where repo-oss is the alias to the 11.2 release (without updates) on your system.</p>
+<p>What a brutal way to fix an issues without much notification and consideration to the users ! Even the log message is wrong and just confusing the administrator&#8230;</p>
+<p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
+<p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/cryptography.html" rel="category tag">Cryptography</a>, <a href="../category/administration-systeme/linux.html" rel="category tag">Linux</a>, <a href="../category/security.html" rel="category tag">Security</a>, <a href="../category/administration-systeme.html" rel="category tag">System</a> <i class="icon-tag"></i> <a href="apache.html" rel="tag">Apache</a>, <a href="debian.html" rel="tag">Debian</a>, <a href="linux.html" rel="tag">Linux</a>, <a href="opensuse.html" rel="tag">openSUSE</a>, <a href="security.html" rel="tag">Security</a>, <a href="ssl.html" rel="tag">SSL</a>, <a href="vulnerability.html" rel="tag">Vulnerability</a> <i class="icon-calendar"></i> <a href="../2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" title="6:08 pm" rel="bookmark"><time class="entry-date" datetime="2009-11-28T18:08:50+00:00">November 28, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->			<nav id="nav-below" class="navigation" role="navigation">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="security/page/2.html" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- .navigation -->
+			
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.587 seconds. Made 11 queries to database and 45 cached queries. Memory used - 27.59MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/tag/security by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:46:00 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.557 seconds. -->

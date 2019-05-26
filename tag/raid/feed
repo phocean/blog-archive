@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>RAID &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/raid/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>How to physically identify a software RAID disk member</title>
+		<link>/blog-archive/2010/09/25/how-to-physically-identify-a-software-raid-disk-member.html</link>
+		<comments>/blog-archive/2010/09/25/how-to-physically-identify-a-software-raid-disk-member.html#comments</comments>
+		<pubDate>Fri, 24 Sep 2010 23:22:14 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[RAID]]></category>
+		<category><![CDATA[SMART]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=907</guid>
+		<description><![CDATA[What you need: a good earing smartmontools Indeed, so far, I haven&#8217;t found anything better than launching a process making a lot of disk activity. This command just do it: % sudo smartctl -t short /dev/sda The &#8220;short&#8221; test will give you a few minutes to carefully listen and select the right disk. Well, it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/09/25/how-to-physically-identify-a-software-raid-disk-member.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>What you need:</p>
+<ul>
+<li>a good earing</li>
+<li>smartmontools</li>
+</ul>
+<p>Indeed, so far, I haven&#8217;t found anything better than launching a process making a lot of disk activity.</p>
+<p>This command just do it:</p>
+<pre>% sudo smartctl -t short /dev/sda</pre>
+<p>The &#8220;short&#8221; test will give you a few minutes to carefully listen and select the right disk.</p>
+<p>Well, it sure is pretty primitive! But do you know anything better?</p>
+<p>By the way, <a title="Raid recovery procedure" href="http://www.anchor.com.au/hosting/support/Linux_Software_RAID_Repair" target="_self">there</a> is a good article for the recovery procedure.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/09/25/how-to-physically-identify-a-software-raid-disk-member.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>openSUSE 11.1 and /boot on RAID 1</title>
+		<link>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
+		<comments>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
+		<pubDate>Wed, 21 Oct 2009 18:06:27 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Fedora]]></category>
+		<category><![CDATA[Grub]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[RAID]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
+		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I tried yesterday to set up a home server with two disks in a RAID 1 array.</p>
+<p>My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one.<br />
+That&#8217;s the way I think it should work anyway, despite the number of tutorials or forum posts advising not to do so.</p>
+<p>The openSUSE partitionner, during the installation process, warned me that having /boot on the RAID 1 array may not work with grub.<br />
+And indeed, at the end of the installation, I could not be able to set grub properly :</p>
+<ul>
+<li>the installer seemed to be lost, writing wrong devices in the various grub config file like menu.lst and grub.conf</li>
+<li>I tried to use the manual edition mode offered by the installer, but either because I missed something or there is a bug somewhere, I could never save my modifications.</li>
+</ul>
+<p>Conclusion : there was a no go.</p>
+<p>I became curious to see how a few other distributions could handle it.</p>
+<p>At first, I thought they would all fail, because I have always found the openSUSE installer to be the best out there.</p>
+<p>So I took a <strong>Debian Lenny</strong> CD, which is my second favorite distribution, and looked at it. The Debian installer is straightforward, but the partionner has always lacked of flexibility. It is fine when you are doing something pretty standard, but you get quickly limited when you want to do something more complicated.<br />
+There, no way to have /boot on a RAID volume, and the interface was really painful to use. Any mistake almost oblige you for sure to restart all from scratch.</p>
+<p>Then, I looked at <strong>Fedora 11</strong>&#8230; without expecting much. The last time I tried it on a machine, it just froze every time it read the disk configuration.<br />
+<strong>But&#8230; surprise ! All I wanted was supported out of the box</strong>. The partionner was as pleasant to use as the one of openSUSE, and setting grub on /dev/md0 was just a matter of checking a box.</p>
+<p>I have been quite impressed this time and Fedora will stay on this machine for a while.</p>
+<p>I haven&#8217;t tested <strong>openSUSE 11.2</strong> yet because the purpose of this machine is to be a server, so I care about stability.</p>
+<p>But I will, and I wish it can support this feature also, or that it will be the case some day.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+	</channel>
+</rss>

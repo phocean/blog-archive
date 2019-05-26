@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Virtualization &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/category/administration-systeme/virtualization/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
+		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Etherpad]]></category>
+		<category><![CDATA[Nodejs]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Context</h2>
+<p>I have kept playing with Docker recently, just for fun and to learn.</p>
+<p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
+<p>Indeed, I had some issues with Etherpad, which is a Nodejs application, and its integration into Docker.</p>
+<p>Initially, I made something quite simple, so my Dockerfile ended like that:</p>
+<pre>USER etherpad
+CMD ["node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>Thus, I simply start the app with a low privileges user.</p>
+<p>It worked, but I had two issues:</p>
+<ol>
+<li>Docker was not able to stop it nicely. Instead, it timed out after 10 sec and finally killed the app and the container altogether.</li>
+<li>No persistence of any kind, of course.</li>
+</ol>
+<p>I decided to tackle these two issues to understand what was going on behind.</p>
+<h2>The PID 1 issue</h2>
+<p>I could not understand immediately the first issue: why was Docker unable to terminate the container properly?</p>
+<p>After wandering a few hours on wrong paths (trying to get through with Nodejs nodemon or supervisor), I finally found some good articles, explaining that Docker misses an init system to catch signals, wich causes some issues with applications started with a PID = 1, which cannot be killed, or with Bash (the shell doesn&#8217;t handle transmitted signals.</p>
+<p>I am not going to repeat poorly what has already been explained very well, so I encourage you to read this two excellent posts:</p>
+<ul>
+<li><a href="https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/">The PID 1 zombie reaping problem</a></li>
+<li><a href="https://medium.com/@gchudnov/trapping-signals-in-docker-containers-7a57fdda7d86#.wqy8msjbk">Trapping signals in Docker containers</a></li>
+</ul>
+<p>You will also find a lot of bug reports in the Docker github about this issue, and a lot of hacky or overkilling solutions.</p>
+<p>In my opinion, the most elegant solution among them is to use a launcher program, very simple and dedicated to catch and handle signal.</p>
+<p>I chose to use <a href="https://github.com/yelp/dumb-init">Dumb-init</a>, as it is well packaged (there are plenty of options) and seems to be well maintained.</p>
+<p>So, after installing Dump-init in the Dockerfile, the CMD line should now look like this:</p>
+<pre>USER etherpad
+CMD ["dumb-init","node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>And indeed, as expected, <em>docker stop</em> now works flawlessly.</p>
+<h2>Volume permissions</h2>
+<p>This is where I had the toughest issue, although it is supposed to be straightforward with volumes.</p>
+<p>Volumes enable to share files or folders between host and containers, or between containers solely. There are plenty of possibilities, nicely illustrated on this blog:</p>
+<ul>
+<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker: storage patterns for persistence</a></li>
+</ul>
+<p>And it works very well&#8230;. as long as you application runs as root.</p>
+<p>In my case, for instance, Etherpad runs with a low privileged user, which is highly recommended. At startup, it creates a sqlite database, etherpad.db,  in its ./var folder.</p>
+<p>Mounting a volume, of any kind, over the ./var folder, would result in a folder with root only permissions. Subsequently, of course, the launch of Etherpad from the CMD command would fail miserably.</p>
+<p>Simple solutions like <em>chown</em> in the Dockerfile don&#8217;t work, because they apply <em>before</em> the mount. The <em>mount</em> occurs at runtime and works like a standard Linux <em>mount:</em> it is created by the docker daemon, with <em>root</em> permissions, over possibly existing data.</p>
+<p>My solution was to completely change the way Etherpad is started. I now use an external script which is started at runtime:</p>
+<ol>
+<li>First, it applies the appropriate permissions to the mounted volume with <em>chown,</em></li>
+<li>Then, it starts Etherpad with a low privileged user thanks to a <em>su</em> hack.</li>
+</ol>
+<p>So now the Dockerfile ends with:</p>
+<pre>VOLUME /opt/etherpad-lite/var
+ADD run-docker.sh ./bin/
+CMD ["./bin/run-docker.sh"]</pre>
+<p>And here is the script:</p>
+<pre>#!/bin/bash
+
+chown -R etherpad:etherpad /opt/etherpad-lite/var
+su etherpad -s /bin/bash -c  "dumb-init node /opt/etherpad-lite/node_modules/ep_etherpad-lite/no
+de/server.js"</pre>
+<p>I use a data volume for persistency, so the run command looks like this:</p>
+<pre>docker run -d --name etherpad -p 80:9001 -v etherpad:/opt/etherpad-lite/var -t debian-etherpad</pre>
+<p>Far from being ideal, but it works. I really hope some features are coming to bring more options in this area, especially in the Dockerfile.</p>
+<h2>Some final thoughts</h2>
+<p>Globally, we can still hope a lot of improvements in security, because when I look at many Dockerfiles around, I see two behaviors:</p>
+<ul>
+<li>A lot of people don&#8217;t care and everything is happily running as root, from unauthenticated third-party images or binaries&#8230;</li>
+<li>Some people do care but end up with dirty hacks, because there is no other way to do so.</li>
+</ul>
+<p>It is scary and so far from the Linux philosophy. Let&#8217;s wait for the enhancements to come.</p>
+<p>You can find the complete <em>updated</em> Dockerfile on <a href="https://github.com/phocean/dockerfile-debian-etherpad/blob/master/Dockerfile">this github page</a>.</p>
+<p>While we are on this topic, have a look to <a href="http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks">this nice post with some nice tips and tricks</a> for Docker.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>A few (convenient) dockerfiles</title>
+		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Etherpad]]></category>
+		<category><![CDATA[Phishing Frenzy]]></category>
+		<category><![CDATA[Tor]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
+<p>Here they are:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-etherpad">Debian-based Etherpad</a></li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-phishingfrenzy">Debian-based Phishing Frenzy</a></li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-torbrowser">Debian-based Tor Browser</a></li>
+</ul>
+<p>I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation and shrinking, etc.).</p>
+<p>It makes perfect sense to use Docker just for that, and on top of that it consumes much fewer resources. Starting with the disk usage : all these containers along with their image stands below 1 GB!</p>
+<p>The fact that I am using Btrfs as the underlying storage driver is not for nothing: compression is extremely efficient on images!</p>
+<p>Note that my Dockerfiles have nothing special, you can actually find others on the Internet (and I was inspired by some).</p>
+<p>There are a few differences, however:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I care much about security, so at least I try to make Web services not running as root, even if it is inside a container (the root user is still the same as on the host, so let&#8217;s make a compromise as unlikely as possible).</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I like simple things, so I tried to keep everything straightforward and simplified some stuff.</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I don&#8217;t like to waste disk space. So when I some Dockerfiles based on Ubuntu, Debian Wheezy, Debian Jessie, Fedora, etc., I try to unify all of them under Debian &#8220;stable&#8221; (so as of today, Jessie). Why bother with useless images? I chose a versatile and common server distribution and I am trying to stick with it.</li>
+</ul>
+<p>While I was playing, I had two things bothering me:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/docker/docker/issues/3804">No quota support</a>: for a Samba sharing guest that I have, I would have liked to implement quotas from within the container. There is no support for that at the moment, and the global limitation by container is not nice (and once you choose a big size, you can&#8217;t go backward for existing containers&#8230;). I have a dedicated partition for Docker, so, while not perfect, it is okay for now.</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">The devicemapper storage driver totally sucks at this time: <a href="https://github.com/docker/docker/issues/3182">free space is never reclaimed after you delete images or containers</a>! So the more you use Docker, the more your partition gets full.</li>
+</ul>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>A journey with Btrfs</title>
+		<link>/blog-archive/2016/03/20/a-journey-with-btrfs.html</link>
+		<comments>/blog-archive/2016/03/20/a-journey-with-btrfs.html#comments</comments>
+		<pubDate>Sun, 20 Mar 2016 15:35:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[btrfs]]></category>
+		<category><![CDATA[snapper]]></category>
+		<category><![CDATA[virtualbox]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
+		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h1>Why BTRFS ?</h1>
+<p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
+<p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
+<p>As a quick reminder, the goal of this file system is to bring to Linux a fully featured file system similar to zfs. Some of these features promise a lot of awesomeness: snapshots, native RAID, automatic defragmentation and repairs, etc.</p>
+<p>Wouldn&#8217;t it be cool to have such a file system for your data? Among them, snapshotting really is a killer feature. See it as a global git for all your data. You can track any file history, make a diff comparison on them and revert back to a chosen version, anytime and on-line.</p>
+<p>Btrfs has been under development for a while and it is still undergoing. However, the first stable version has finally been released last year.</p>
+<p>Many people warn that it is not production ready yet. It seems obvious for critical production systems, under heavy load or using the most advanced features (e.g. RAID). But what about a simple /home, mainly using snapshots (which have been around for a while)?</p>
+<p>You will see that there are still some issues with virtualization.</p>
+<p><strong><em>Disclaimer 1: this is in no way a review or a benchmark of Btrfs. Consider it simply as some feedback for my specific use case.</em></strong></p>
+<h1>Getting ready</h1>
+<p>This chapter is a summary of procedures found in various resources, along with my feedback.</p>
+<p><em><strong>Disclaimer 2: First of all, make several backup of your entire /home. And make sure that it is operational and complete. Anyway, beware that there is obviously some inherent risk for your data in manipulating your home partition. So, do not come back to insult me if you lose any data.</strong></em></p>
+<p>First, note that there is a conversion utility <em>btrfs-convert</em>, to convert an existing ext4 partition to btrfs. While this sounds cool, it did not work well with my partition, leading to many corrupted inodes.</p>
+<p>So my advice is to just make a good backup of your home:</p>
+<pre>% rsync -av /home /your/backup/</pre>
+<p>Then, log out and format the partition as root:</p>
+<pre># mount | grep home
+/dev/mapper/system-home on /home type ext4 (rw,noatime,data=ordered)
+# umount /home
+# mkfs.btrfs /dev/mapper/system-home</pre>
+<p>Change the file system and its options in /etc/fstab. For example:</p>
+<pre>/dev/system/home     /home     ext4     defaults,noatime     1 1</pre>
+<p>should become (also note the change on the last digit):</p>
+<pre>/dev/system/home   /home    btrfs  defaults,noatime,ssd,space_cache,compress=lzo    1 0</pre>
+<p>Re-mount /home and you are done!</p>
+<h1>Snapper</h1>
+<p>The main purpose for me to test Btrfs was the snapshot feature, in the hope to keep a version history of each file and avoid accidental deletions and changes.</p>
+<p>Of course, one could use the Btrfs commands and implement snapshots manually. But why reinventing the wheel?</p>
+<p>The guys behind <a href="http://snapper.io/">snapper</a>  already made a service especially for that. It is basically a wrapper over Btrfs that will make automatic snapshots in the background, based on your frequency settings, and ease their handling.</p>
+<p>Once installed, it can be enabled with the following command:</p>
+<pre># snapper -c home create-config /home</pre>
+<p>It has the effect of creating a configuration file, where you can adjust the number of snapshots you want to keep per day, week, month, etc. Of course, don&#8217;t keep too much data as it will waste free space, especially if you happen to move large amounts of data. Hourly and daily snapshots are OK, as they would be cleaned up quickly. But monthly or yearly snapshots would consume a lot of space and would be pretty useless for a /home.</p>
+<p>Here is what I used, without consuming much more than 10 GB:</p>
+<pre># subvolume to snapshot
+SUBVOLUME="/home"
+
+# filesystem type
+FSTYPE="btrfs"
+
+# users and groups allowed to work with config
+ALLOW_USERS=""
+ALLOW_GROUPS="
+
+# sync users and groups from ALLOW_USERS and ALLOW_GROUPS to .snapshots
+# directory
+SYNC_ACL="no"
+
+# start comparing pre- and post-snapshot in background after creating
+# post-snapshot
+BACKGROUND_COMPARISON="yes"
+
+# run daily number cleanup
+NUMBER_CLEANUP="yes"
+
+# limit for number cleanup
+NUMBER_MIN_AGE="1800"
+NUMBER_LIMIT="10"
+NUMBER_LIMIT_IMPORTANT="5"
+
+# create hourly snapshots
+TIMELINE_CREATE="yes"
+
+# cleanup hourly snapshots after some time
+TIMELINE_CLEANUP="yes"
+
+# limits for timeline cleanup
+TIMELINE_MIN_AGE="1800"
+<strong>TIMELINE_LIMIT_HOURLY="10"</strong>
+<strong>TIMELINE_LIMIT_DAILY="7"</strong>
+<strong>TIMELINE_LIMIT_WEEKLY="2"</strong>
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+
+# cleanup empty pre-post-pairs
+EMPTY_PRE_POST_CLEANUP="yes"
+
+# limits for empty pre-post-pair cleanup
+EMPTY_PRE_POST_MIN_AGE="1800"</pre>
+<p>Now, let&#8217;s play a little. In the following sequence, we create a file containing &#8220;Hello World!&#8221;, we then create a manual snapshot, change the file and display the differences:</p>
+<pre># vim test.txt
+# snapper -c home create --description "before test"
+# vim test.txt
+# sudo snapper -c home list
+Type   | # | Pre # | Date                     | User | Cleanup  | Description  | Userdata
+-------+---+-------+--------------------------+------+----------+--------------+---------
+single | 0 |       |                          | root |          | current      | 
+single | 1 |       | Sun Mar 13 19:44:21 2016 | root |          | before test  | 
+single | 2 |       | Sun Mar 13 19:45:12 2016 | root |          | created test | 
+single | 3 |       | Sun Mar 13 19:52:39 2016 | root |          | update test  | 
+single | 4 |       | Sun Mar 13 20:00:01 2016 | root | timeline | timeline     | 
+single | 5 |       | Sun Mar 13 21:00:01 2016 | root | timeline | timeline     | 
+single | 6 |       | Sun Mar 13 22:00:01 2016 | root | timeline | timeline     | 
+# snapper -c home status 1..0
+--- "/home/.snapshots/2/snapshot/phocean/test.txt" 2016-03-13 19:44:53.370641373 +0100
++++ "/home/phocean/test.txt" 2016-03-13 19:45:27.226586459 +0100
+@@ -1 +1,2 @@
+Hell World!
++Good bye.
+@@ -0,0 +1,2 @@
++Hell World!
++Good bye</pre>
+<p>Neat, isn&#8217;t it? Now, what if we decide to restore the file to this snapshot:</p>
+<pre>snapper -c home undochange 1..0 /home/phocean/test.txt</pre>
+<p>That&#8217;s it!</p>
+<p>Note that all these operations can be done against the entire partition (no argument needed), a folder or a file.</p>
+<h1>Pros</h1>
+<p>Regarding regular files, I had no issue at all. After a week of intensive use, I already the occasion to enjoy the benefits of having snapshots and being able to restore a file.</p>
+<p>On the performance side, even though I haven&#8217;t done any benchmark, it is a least as fast as ext4. It is said that under some conditions, compression can be a big read rate boost.</p>
+<p>On the compression side, on my partition of 400 GB, it allowed me to reclaim around 20 GB of space. Of course, the gain you can expect is totally related to the sorts of files you have (you won&#8217;t gain much on files that are already compressed or encrypted).</p>
+<h1>Cons</h1>
+<p>As warned on the official wiki itself, you should not use Btrfs as-is with database or virtualization solutions.</p>
+<p>Dixit the official wiki:</p>
+<blockquote><p>Files with a lot of random writes can become heavily fragmented (10000+ extents) causing trashing on HDDs and excessive multi-second spikes of CPU load on systems with an SSD or large amount a RAM.</p></blockquote>
+<p>Indeed, I quickly experienced some issues with Virtualbox. Under heavy I/O operations, and having several machines running at a time, I had the guest file systems corrupted more than once. And so badly that the guest machine was unrecoverable (even with snapshots). Sometimes I got plenty of ext4 errors, or sometimes it just froze, while copying a bunch of file or doing an <em>apt-get upgrade.</em>..</p>
+<p>The <a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">workarounds</a> did not make it for me:</p>
+<ol>
+<li>I even did not test disabling CoW for the whole partition. It kills one of the main advantages of using Btrfs.</li>
+<li>I tried disabling CoW for all the VM folder. While the corruption frequency decreased, it still occurred after a while.</li>
+</ol>
+<p>So, I would simply adivse of not putting any virtual machine on the Btrfs partitions, until this thing definitely get sorted. I use virtual machines intensively at work and need them to be reliable.</p>
+<h1>Conclusion</h1>
+<p>Btrfs is awesome and pretty stable at this time, unless you need to host virtual machines. You could still have a dedicate ext4 partition for you VMs, and enjoy Btrfs for the rest of your home.</p>
+<p>To be honest, I did not bother (not wanting to manage several partitions), and switched back to ext4 for all, in the expectation of better days. I am not sure if this should be addressed on the Btrfs, or the Virtualbox side (or both).</p>
+<h1>References</h1>
+<ul>
+<li><a href="https://en.opensuse.org/openSUSE:Snapper_FAQ">Snapper FAQ</a></li>
+<li><a href="https://fr.opensuse.org/openSUSE:Snapper_Tutorial">Snapper tutorial</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs">Arch Linux Btrfs wiki</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Btrfs">Gentoo Btrfs wiki</a></li>
+<li><a href="http://www.nrtm.org/index.php/2012/03/13/the-joys-of-btrfs-and-opensuse-or-no-space-left-on-device/">The joys of btrfs and opensuse or no space left on device</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">CoW workarounds</a></li>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>My goodness, I got mainframed!</title>
+		<link>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html</link>
+		<comments>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
+		<pubDate>Tue, 28 May 2013 12:20:17 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[hercules390]]></category>
+		<category><![CDATA[ISPF]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[mainframe]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[simulation]]></category>
+		<category><![CDATA[tn3270]]></category>
+		<category><![CDATA[TSO]]></category>
+		<category><![CDATA[tun]]></category>
+		<category><![CDATA[unix]]></category>
+		<category><![CDATA[z/os]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
+		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Mainframes are not dead, why not pentesting it?</p>
+<p>I just watched the presentation of <strong>Phil Young</strong> at <a href="https://www.shmoocon.org/shmoocon_2013" target="_blank">Shmoocon 2013</a>: &#8220;<a href="https://www.shmoocon.org/2013/videos/Shmoocon%202013%20-%20Mainframed%20The%20Secrets%20Inside%20that%20Black%20Box.mp4" target="_blank">Mainframed: the secrets inside that black box</a>&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they have some Unix interface, and that there is a emulator for x86. Where it was less of a surprise is that their security is pretty low :-)</p>
+<p>Anyway, don&#8217;t miss watching the video. <a href="http://mainframed767.tumblr.com" target="_blank">Phil&#8217;s blog, &#8220;Soldier of Fortran&#8221;</a>, is also a gold mine, he wrote many tips, tutos and tools.</p>
+<p>It made me very curious and just in case I find some IBM Z/OS during a pentest, I though it would be nice to run it.</p>
+<h1>Installing</h1>
+<blockquote><p>Disclaimer:</p>
+<p>Although some Z/OS files are available for download on the Internet, you must own a legal license of Z/OS. This tutorial is exclusively for education-purpose, use it only for testing, never in production nor for illegal activities.</p>
+<p>Also, I am a noob in the area. So if some of you are skilled and find mistakes or improvements, please let me know in the comments. I give a great importance to your feedback and it encourages me to continue.</p></blockquote>
+<p>I glued the pieces in the following steps (Mac OS oriented and tested only with it, the same should work for Linux with minor adjustments and see the reference otherwise):</p>
+<ol class="split start">
+<li>Download and install <a href="http://www.brown.edu/cis/tn3270/" target="_blank">tn3270</a> (Mac) or <a href="http://x3270.bgp.nu/download.html" target="_blank">x3270</a> (Windows, Linux, Mac): this will be the client terminal used to connect to the mainframe.</li>
+<li>Download the emulator, <a href="http://www.hercules-390.eu" target="_blank">Hercules</a>. Install it, following the README instructions relevant to your system. Note that the instructions for Mac OS are outdated and won&#8217;t work. I followed Phil&#8217;s instructions:</li>
+</ol>
+<pre>git clone git://github.com/s390guy/hercules-390.git
+cd hercules-390
+sh autogen.sh
+./configure
+make
+make install</pre>
+<ol class="split">
+<li>Take some IBM Z/OS release, and install it:</li>
+</ol>
+<pre>mv IBM\ ZOS\ 1.10/Z110SA/images/Z110\ -\ Copy /YOUR/PATH/HERE/Z110
+cd /YOUR/PATH/HERE/Z110
+mkdir PRTR
+cd CONF
+cp ADCD_LINUX.CONF ADCD_MAC.CONF
+sed -i '' 's/\/home\/ehrocha\/hercules\/images/\/YOUR\/PATH\/HERE/g' ADCD_MAC.CONF
+sed -i '' 's/CNSLPORT \{2\}23/CNSLPORT  3270/g' ADCD_MAC.CONF
+sed -i '' 's/0E20.2   LCS  10.0.1.20/0E20.2 3088 CTCI \/dev\/tun0 1500 10.10.10.11 10.10.10.12 255.255.255.255/g' ADCD_MAC.CONF</pre>
+<ol class="split">
+<li>Getting the network to work on Mac OS require some extra steps (skip it if your are using Linux).</li>
+</ol>
+<p><a href="http://sourceforge.net/projects/tuntaposx/files/tuntap/20111101/">Download tuntaposx</a>, uncompress and install the package. No reboot it necessary, you should now have plenty of tun* (and tap*) interfaces:</p>
+<pre>$ ls /dev/tun*
+/dev/tun0 /dev/tun10 /dev/tun12 /dev/tun14 /dev/tun2 /dev/tun4 /dev/tun6 /dev/tun8
+/dev/tun1 /dev/tun11 /dev/tun13 /dev/tun15 /dev/tun3 /dev/tun5 /dev/tun7 /dev/tun9</pre>
+<ol class="split">
+<li>Okay, now we can start the emulator (we need to sudo to access to the tun0 interface, among other reasons):</li>
+</ol>
+<pre>sudo hercules -f ADCD_MAC.CONF</pre>
+<p>First of all, checks that the network is fine:</p>
+<pre># From Mac OS:
+$ ifconfig tun0
+tun0: flags=8851&lt;UP,POINTOPOINT,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500
+ inet 10.10.10.12 --&gt; 10.10.10.11 netmask 0xff000000 
+ open (pid 98687)
+
+# From Hercules:
+herc =====&gt; devlist
+[...]
+HHC02279I 0:0E20 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open
+HHC02279I 0:0E21 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open</pre>
+<p>Open <strong>tn3270</strong> and connect with default settings on localhost:</p>
+<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/blog-archive/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
+<p>And then in the hercules terminal, enter <code>ipl a80</code></p>
+<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /blog-archive/wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /blog-archive/wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
+<p><strong>It is very long to boot, don&#8217;t worry. You will actually have to use 2 terminals</strong>, so open the second one, which will show the logon screen (see screenshot below) after booting is done. It will be used for &#8220;userland&#8221; aka TSO commands.</p>
+<p>The first terminal shall be kept open as the master console, which receive system logs and can be used for &#8220;system-level&#8221;* commands (e.g root level).</p>
+<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
+<ol class="split">
+<li>At the prompt, enter <code>TSO</code>, then <code>IBMUSER</code> as the login, and <code>SYS1</code> as the password. It will automatically launch the ISPF menu:</li>
+</ol>
+<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/ispf-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
+<ol class="split">
+<li>Now, you are good to go ahead with Z/OS commands&#8230;</li>
+</ol>
+<p>This video demonstrates the boot process:</p>
+<p><iframe src="http://player.vimeo.com/video/67114095" height="281" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p><a href="http://vimeo.com/67114095">Z/OS emulation with Hercules390</a> from <a href="http://vimeo.com/user12629826">phocean</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<ol class="split">
+<li>Now, let&#8217;s get the network up.</li>
+</ol>
+<p><strong>Prepare Mac OS</strong>:</p>
+<ul>
+<li>Make sure that the Mac OS firewall is deactivated or/and that you configured pf to allow the <code>tun0</code> interface (another article coming soon on this topic).</li>
+<li>Add a route to <code>tun0</code></li>
+</ul>
+<pre>sudo route add -net 10.10.10.0/24 -interface tun0</pre>
+<ul>
+<li><span style="line-height: 14px;">You may want to activate ip forwarding, to have the Z/OS reach other interfaces through the kernel:</span></li>
+</ul>
+<pre>sudo sysctl -w net.inet.ip.forwarding=1</pre>
+<p>Now every thing is in place to allow the mainframe to reach the outside. Further routing considerations are outside the scope of this article.</p>
+<p><strong>Prepare Z/OS</strong>:</p>
+<ul>
+<li>In TSO menu, choose 3 (utilities), 4 (Dslist)</li>
+<li>Click on the line besides <code>Dsname Level</code> and type-in <code>ADCD</code> and then press <code>[Enter]</code>. ADCD is what is called a dataset.</li>
+<li>In the Command column, on the left of <code>ADCD.Z110S.PROCLIB</code>, type in <code>e</code> (stands for edit, reproduce the same pattern when I say &#8220;edit&#8221; in the following steps)</li>
+<li>Edit the TCPIP member, and make sure that the <code>//PROFILE</code> line looks like this:</li>
+</ul>
+<pre>//PROFILE DD DISP=SHR,DSN=ADCD.Z110S.TCPPARMS(DUZA)</pre>
+<p>You could change the <code>DUZA</code> string, but you would have to make sure that the corresponding profile exists in <code>ADCD.Z110S.TCPPARMS</code> (see TODO section).</p>
+<ul>
+<li>Go back to <code>Dslist</code> page using end or exit as a command. This time, type <code>DUZA</code> as dataset.</li>
+<li>Edit the <code>TCPARMS</code> member, then <code>PROFILE</code>. Once in the file, edit carefuly the following lines (at the bottom, around line 90):</li>
+</ul>
+<pre>000090 DEVICE CTCA1 CTC e20
+000091 LINK CTC1 CTC 1 CTCA1
+000092
+000093 HOME
+000094    10.10.10.11  CTC1
+000095
+000096 GATEWAY
+000097    10.10.10.12  = CTC1 1492 HOST
+000098
+000099 DEFAULTNET 10.10.10.12 CTC1 1492 0
+[...]
+000109 START CTCA1</pre>
+<ul>
+<li>In the console window, restart the network stack:</li>
+</ul>
+<pre>stop tcpip
+# wait for termination message
+start tcpip</pre>
+<ul>
+<li>If every is going well, the tunnel should get up and you should be able to ping both side (use the ping command in Z/OS from the command menu).</li>
+</ul>
+<p>This video illustrates some of this networking stuff:</p>
+<p><iframe src="http://player.vimeo.com/video/69912699" height="281" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p><a href="http://vimeo.com/69912699">Hercules390 and Z/OS, getting the network up</a> from <a href="http://vimeo.com/user12629826">phocean</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<h1>Useful commands</h1>
+<ul>
+<li>Ifconfig</li>
+</ul>
+<pre>netstat home</pre>
+<ul>
+<li>Shutdown</li>
+</ul>
+<pre># in "system" terminal:
+S SHUTSYS
+Z EOD
+
+# then, once finished, in Hercules:
+exit</pre>
+<h1>Tips</h1>
+<ul>
+<li>I was stuck at an early moment during the boot process with:</li>
+</ul>
+<pre>IXC208I THE RESPONSE TO MESSAGE IXC420D IS INCORRECT: IS NOT A VALID 
+ACTION 
+ IXC420D REPLY I TO INITIALIZE SYSPLEX ADCDPL, OR R TO REINITIALIZE 
+XCF.     
+  REPLYING I WILL IMPACT OTHER ACTIVE SYSTEMS.</pre>
+<p>You can go over it by entering this in your terminal session (tn3270):</p>
+<pre>R 00, I</pre>
+<ul>
+<li><span style="line-height: 14px;">After the long process, I actually had to open a second connection with the terminal to get the logon screen. So, just check from time to time instead of waiting for nothing in front of the first window.</span></li>
+<li>To logoff, type <code>X</code> from the ISPF main menu. The first time, you have to configure the printer. Choose <code>LOCAL</code> as print mode, and give it any name as <code>Local printer ID</code>. Then press <code>[Enter]</code>, and if you are asked for a <code>sysout class</code>, choose <code>"J"</code>. You should be back in TSO, where you can execute <code>logoff</code>. Next time, it will default to these values, so you should get straight from ISPF to TSO.</li>
+<li>Don&#8217;t forget that TSO is a CLI where you can type Z/OS and Unix commands. You actually don&#8217;t need or have to use ISPF, so don&#8217;t hesitate to use it!</li>
+</ul>
+<p>Of course, a good source of information is the <a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">hercules390 forum</a> may also be of help.</p>
+<p>Voilà, happy hacking! WTF, it seems I got mainframed too! Did you?</p>
+<p>Big thanks again to Phil Young for catching our attention on this stuff.</p>
+<h1>TODO</h1>
+<ul>
+<li><span style="line-height: 14px;">Understand and get rid off the DUZO profile: you probably noticed that we are using the DUZO  profile to load the network stack (which is after the name of the torrent, and does probably more stuff behind). For example, there is no DUZO profile in ADCD.Z110S.TCPPARMS, so I still have no idea how it actually gets loaded. It has been only 2 days that I work on Z/OS, so I still have to read the doc (and any help is welcome).</span></li>
+<li>Change the logon screen (see references).</li>
+</ul>
+<h1>References</h1>
+<ul>
+<li><a href="http://mainframed767.tumblr.com/post/27787457789/hercules-3-08-on-mac-os-x-lion" target="_blank">Hercules 3.08 on Mac OS X Lion</a></li>
+<li><a href="http://mainframed767.tumblr.com/post/40836059586/instructions-to-installing-z-os-in-hercules" target="_blank">Instructions to installing z/OS in Hercules</a></li>
+<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/blog-archive/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
+<li><a href="http://kat.ph/ibm-z-os-emulation-files-t5780374.html" target="_blank">Z/OS files</a></li>
+<li><a href="http://patata.homeip.net/blog/hercules-and-zos-tcp-ip-networking-for-adcd-versions" target="_blank">Hercules and Z/OS TCP/IP networking for ADCD versions</a></li>
+<li><a href="http://mainframed.wordpress.com/2012/06/17/changing-the-logon-screen-on-the-mainframe-zos-vtam-in-adcd/" target="_blank">Changing the logon screen on the mainframe</a></li>
+<li><a href="http://tuntaposx.sourceforge.net/">tuntaposx</a></li>
+<li><a href="http://www.js">TSO tutorial</a></li>
+<li><a href="http://answers.uchicago.edu/page.php?id=19482#GETTINGM" target="_blank">Mainframe &#8211; using TSO and ISPF</a></li>
+<li><a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">IBM online documentation</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Rootkit in my lab? (part II)</title>
+		<link>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
+		<comments>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
+		<pubDate>Wed, 11 Jul 2012 20:18:58 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Keylogger]]></category>
+		<category><![CDATA[Rootkit]]></category>
+		<category><![CDATA[Sysinternals]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[Volatility]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
+		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I finished checking the RAM with Volatility and&#8230; I found nothing. Nada.</p>
+<p>It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills.</p>
+<p>I attach here some of the main outputs of Volatility. As far as I can tell:</p>
+<ul>
+<li>no evidence of injection or kernel hooking</li>
+<li>no suspicious process</li>
+<li>no suspicious driver</li>
+<li>no suspicious registry entry</li>
+<li>etc.</li>
+</ul>
+<p>Based on <a title="Rootkit in my lab?" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
+<p>Dear reader, any help or tip is welcomed! Am I missing something obvious? Could it be possibly not a rootkit but some kind of corruption? If so, how to detect it?</p>
+<p>Just drop me an e-mail if you want to have a look on the dump itself.</p>
+<p>Volatility outputs:</p>
+<ul>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/handles.txt">handles</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/idt.txt">idt</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
+<li><a href="/blog-archive/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+		</item>
+		<item>
+		<title>Rootkit in my lab?</title>
+		<link>/blog-archive/2012/06/30/rootkit-in-my-lab.html</link>
+		<comments>/blog-archive/2012/06/30/rootkit-in-my-lab.html#comments</comments>
+		<pubDate>Sat, 30 Jun 2012 17:49:49 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Keylogger]]></category>
+		<category><![CDATA[Rootkit]]></category>
+		<category><![CDATA[Sysinternals]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[Volatility]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
+		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Context</h2>
+<p>For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on.</p>
+<p>What makes the case really interesting though, is that it occurred on a fresh install of a Windows XP virtual machine. I aimed it to be a clean malware reversing snapshot. I noticed the weired behavior minutes after finishing the system install and setting up a bunch of reversing and live analysis tools.</p>
+<p>So I bet that if I got some malware, it probably comes from one of those. At this time, unfortunately, there are too many and I could not spot the exact time, so I can not start the analysis from this angle.</p>
+<p>This article is almost written in live, so pardon my mistakes. I will update it as soon as I find something new. Of course, I am really expecting your feedback, suggestions and corrections. I see it as a great opportunity to learn, even though this one may not be the easiest&#8230;</p>
+<h2>Symptoms</h2>
+<p>Two things alerted me quickly.</p>
+<p>The first one was, at a point, the permanent failure of going through the full windows update process. Believe me, I have tried all ways.</p>
+<p>The second one was the weird dialog when trying to access to the keyboard layout settings. It says &#8220;<em><strong>Incompatible driver detected</strong></em>&#8220;. To me, this looks like there is a keylogger somewhere&#8230;</p>
+<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
+<p>Then, as I started to check around, more odd stuff came out.</p>
+<p>I fired up Process Explorer, and soon realize that it was &#8220;unable to verify&#8221; the signatures of all the running Windows processes. I could not find anything else suspicious, though (no odd process, memory content looks normal, etc.).</p>
+<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /blog-archive/wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
+<p>Ok, while I am with the Sysinternal suite, why not scanning with Rootkit Revealer:</p>
+<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
+<p>Interesting&#8230; and what about GMER:</p>
+<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
+<p>Oops! Now it crashes when it is accessing the registry&#8230;</p>
+<p>For the fun, let&#8217;s see what happens if we try to set up an antivirus (Security Essentials):</p>
+<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
+<p>Nice one! Very suspicious! Note that after a full scan, Security Essentials reports me that the system is clean and everything is fine. I am so relieved. :)</p>
+<p>Curious to see how my certificates are, I run <em><strong>certmgr.msc. </strong></em><strong></strong>I compared all Microsoft root certificates with a clean machine and could not see anything different. But again something happened:</p>
+<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
+<p>Oh, just one of my last attempts to do live analysis (this the WinPcap setup included with Wireshark):</p>
+<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
+<p>Ok, so enough played. The thing seems to be nicely done, and live analysis is going to be way too hard and unreliable.</p>
+<h2>Memory Analysis</h2>
+<p>This is where I am now. I reverted to a snapshot prior to my live analysis attemps, confirmed the strange behaviors are still observable, and suspended the VM to get the vmem file.</p>
+<p>So I have spent the last hours scanning the memory with, of course, <em><strong>Volatility</strong></em>.</p>
+<p>So far, I have to confess that I found NOTHING. But analyzing the memory can be a harsh process when it comes to sophisticated threats, and I may have reached the limits of my skills.</p>
+<p>But, anyway, I could not dream of a greater and more exciting opportunity to learn!</p>
+<p>My discoveries, if there are, will be published in another article.</p>
+<p><strong>UPDATE: I forgot to tell that it is a Windows XP SP3 machine, but not fully updated due to the issues.</strong></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Network virtualization and the DMZ paradigm</title>
+		<link>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
+		<comments>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
+		<pubDate>Sat, 30 Apr 2011 19:15:53 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[DMZ]]></category>
+		<category><![CDATA[nexus]]></category>
+		<category><![CDATA[vdc]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[vswitch]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
+		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>The virtualization buzz</h2>
+<p>I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier.</p>
+<p>But what about the security? Convenience and security rarely come together, right? Oh, wait&#8230; we are in 2011, so lessons must have been learned. After all, Mr Salesman swear that it is more secure than ever. Convenience and security packed together, he says&#8230; it sounds promising. Let&#8217;s dig a little to find out what they won&#8217;t tell you&#8230;</p>
+<p>I will focus on what really changes with virtualization : the architecture. One of the main goals of the technology is to reduce the number of physical devices to cut the costs, save space and energy. Of course, it goes with a simplification of the <strong>physical </strong>architecture. Therefore, some features previously handled by dedicated physical devices are now handled <strong>logically by a unique piece of hardware</strong>.</p>
+<p>This obviously goes against the security best practices about designing network architectures with various degrees of exposure. But has the technology evolved so much that we should reconsider these recommendations?</p>
+<h2>VMware Vswitches or Nexus 1000V</h2>
+<p>These technologies are similar in the sense that they are designed to work directly inside the VMware platform. Vswitches are integrated with the solution of VMware, while Nexus benefits from the experience of Cisco and bring more layer 2 control (more settings, more protocols).</p>
+<p>As well on the architecture documents of VMware as within the administration interface of Vcenter, it appears so easy to create segregated switches and build this way in a few clicks a DMZ architecture:</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/blog-archive/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
+<p>But it is slightly different in reality, as <strong>Brad Hedlund</strong> from Cisco shows in an interesting article: <a title="the vswitch illusion and DMZ virtualization" href="http://bradhedlund.com/2010/02/10/vswitch-illusion-dmz-virtualization/" target="_blank">the vswitch illusion and DMZ virtualization</a>. In short, whether you are using VMware Vswitches or Nexus 1000V, a single threaded program runs all the configured virtual switches. In clear, all the virtual switches share the same memory space. So, any vulnerability in the code would compromise all the switches, in other words: the entire network. And, not a surprise here, there have been many vulnerabilities. Just browse a <a title="CVE database" href="http://cve.mitre.org/cve/" target="_blank">CVE database</a> if you want to check.</p>
+<p>So you don&#8217;t want to rely on such a design for your datacenter, right?</p>
+<h2>Nexus 7000</h2>
+<p>In the case of the Nexus 7000, it is a little bit different because most   of the switching work is handled by specific hardware, which have a   much smaller attack surface than the vswitches stuff. But is it really   safe?</p>
+<p>The Nexus family is quite new and from what I could witness, they are  quite pushy selling that. Because it is new, there is still neither much  info surrounding the technologies used, nor user feedback, nor security  research. Anyway, below is a quick sum-up of what I could find.</p>
+<h3>A few words about the architecture</h3>
+<p>In a layer 3 Nexus architecture, Nexus 2000, 5000 and 7000 are designed to work together. Nexus 2000 are basically top-of-the-rack port panels, with no intelligence. Nexus 5000 takes care of most of the layer 2 switching, while Nexus 7000 adds layer 2 functionalities and layer 3 support. Nexus 2000 and 5000 can work without the 7000, but in that case there is not so much difference with a classic layer 2 switch in terms of security (but it has the advantage to be more flexible to integrate in a datacenter). <a title="Difference between Nexus 7000 and Nexus 5000" href="http://www.netcraftsmen.net/resources/technical-articles/348.html" target="_blank">This</a> and <a title="Nexus 7000 architecture" href="http://www.scribd.com/doc/33217473/RST-3009-Cisco-Nexus-7000-Switch-Architecture" target="_blank">this</a> may help you to visualize the differences.</p>
+<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/blog-archive/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
+<p>So we will focus on the Nexus 7000 architecture, which bring VDC as a way to handle DMZ architectures. VDC are somehow similar to VLANs. But whereas VLANs virtualized LANs on a switch, VDC virtualize switches. So, on the same Nexus 5000 device, VDC will add the capacity to have multiple virtual switches which are in theory properly isolated.</p>
+<p>This is a very basic sum-up for what we are interested in, but if you want to learn more, I encourage you to read the <a title="Cisco VDC" href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/White_Paper_Tech_Overview_Virtual_Device_Contexts.html" target="_blank">Cisco whitepaper about VDCs</a>.</p>
+<h3>The flaws</h3>
+<p>Now that the presentations are made, the downside&#8230;</p>
+<p><strong>George Hedfors</strong> is the only researcher that worked notably on this platform, as far as I am aware. He made some really great findings, that you can discover within <a title="NX OS Speech, George Hedfors" href="http://george.hedfors.com/content/slides-my-nx-os-speech-t2-helsinki" target="_blank">his slides</a>.<br />
+At the time of his work &#8211; 2010, it appeared that the NX-OS consisted of a Linux Kernel 2.6.10 (released in 2004!). We can imagine that the OS has been signifiantly customized and hardened by Cisco. They may have include NX-bit support  (included since 2.6.8 and later improved). However, there is probably no ALSR support (2.6.12), no MAC system (SELinux or Tomoyo). Of course, I may be wrong but I haven&#8217;t found any documentation about that and my Cisco contact did not provide me with any consistent detail.</p>
+<p>Anyway, he found a bunch of design flaws:</p>
+<ul>
+<li><strong>Poor CLI design</strong>: there are 686 hidden commands (system, debugging) that can be launched as root (sudo without password). One of these command is gdb, which can start a network daemon as root. The attacker can then connect to the socket to attach to any process on the system to elevate his privileges. Of course, it requires some shell access, so the exposure is limited. However, it is very instructive of how the system was designed!</li>
+<li><strong>Insecure daemon configuration</strong>: Daemon are not chrooted and run with the root user.</li>
+<li><strong>Embarassing CDP vulnerability</strong> : a vulnerability from 2001 was reintroduced in the code handling CDP. So it is possible to crash a daemon running as root. What if another vulnerability on a layer 2 daemon (vtp, hsrp, stp&#8230;) was discovered and allowed to rewrite the stack? Game over, the attacker is root.</li>
+<li><strong>Strange hidden account</strong> : there is a ftpuser hidden account with a dumb password (nbv123). Secret backdoor? I don&#8217;t know, but anyway it is not serious at all and should have been revealed by any consistent audit.</li>
+<li><strong>Shell design flaw</strong>: the VSH shell accepts a parameter (-a) that allow to spawn any command over the security roles normaly in place.</li>
+<li>You can also get a root shell by simply spawning <strong><em>ssh `/bin/bash`</em></strong> from the CLI.</li>
+</ul>
+<p>To any serious security guy or unix administrator, these should look like amateurism. And what&#8217;s the hell are all the security audits for?</p>
+<p>So concerning the Nexus 7000, it is obvious that at best it is not specifically designed to be secure, at worst it was simply as poorly designed (or released too quickly) as most stuff.</p>
+<h2>Conclusion</h2>
+<p>In conclusion, one thing we can tell for sure is that none of the virtualized networking solutions are designed to be secure. Of course, all these flaws are hopefully already or will be soon fixed. But, despite what Cisco may claim, the facts are here: there is no VDC miracle. The Nexus platform is certainly great, but not more bug-free, flaw-free than any other piece of code.<br />
+No virtualized architecture can give the same degree of protection than physical segregation.</p>
+<p>In the case of Vswitches or Nexus 1000, the attack surface is just too high to use it for DMZ segregation if you are serious about security. The vulnerabilities are already here and it will be feasible for a skillful and motivated attacker to own your datacenter.</p>
+<p>Concerning the Nexus 7000 and its VDC, the attack surface is considerably reduced because there is less code and fewer protocols at layer 2. However, it is undoubtly less secure than physical segregation. Any zero-day vulnerability would potentially expose the datacenter (and we all know that some zero-day sometimes take years before coming to the public, which is a lot of time for the criminals or the government agencies to exploit it). You can&#8217;t take it lightly when it comes to the whole datacenter integrity and it doesn&#8217;t make sense if you have expensive (in cash or in labor hours) security at upper layers.</p>
+<p>But, of course, it may depend on what you have to protect. If your datacenter hosts sensitive data for your company&#8217;s buisiness, then you should think twice on how you deploy virtualization or use the cloud.</p>
+<p>Don&#8217;t get me wrong. These technologies are great and very useful. In many areas, there are an improvement. Simply, they must be used with as much care as always. Concerning the DMZ topic, as far as I am concerned, I will not rely on virtualization and keep physical segregation between zones, supported by different  devices from different makers.</p>
+<p>One thing I keep an eye on, though, is the development of virtualized firewalls, IPS, etc. In a few years, if these technologies should became really mature (enforcing segregation on all OSI layers) and the hosting OS security should really improved, most of the concerns here would be addressed.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Corrupted virtual disk with VMware</title>
+		<link>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html</link>
+		<comments>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html#comments</comments>
+		<pubDate>Sun, 16 Jan 2011 17:02:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[crash]]></category>
+		<category><![CDATA[File system]]></category>
+		<category><![CDATA[VMware]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=961</guid>
+		<description><![CDATA[Wow, this article and especially one of its comments saved my day. My computer crashed and one of the VMware machine hosted on it could not start anymore : “Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on. Reason: the specific virtual disk needs repair. Checking on the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Wow, <a title="Repair vmware" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/" target="_blank">this article</a> and especially <a title="virtual disk development" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/?cid=3319" target="_blank">one of its comments</a> saved my day.</p>
+<p>My computer crashed and one of the VMware machine hosted on it could not start anymore :</p>
+<blockquote><p>“Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on.<br />
+Reason: the specific virtual disk needs repair.</p></blockquote>
+<p>Checking on the VMware forums, I quickly found the command that was supposed to help :</p>
+<pre>$ vmware-vdiskmanager -R /path/to/disk.vmdk
+The virtual disk, '/path/to/disk.vmdk', is corrupted but the repair process has failed.</pre>
+<p>Damned ! I almost resigned restoring the last backup and loosing a week of work when, by chance, I found the article mentioned above.</p>
+<p>As recommended, I downloaded the <strong>Virtual Disk Development Kit 1.2</strong> from VMware, untared it and still doubtfully launched :</p>
+<pre>$ ./bin64/vmware-vdiskmanager -R /path/to/disk.vmdk
+The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully repaired.</pre>
+<p>Saved! Thanks so much to the guys. I would have never thought about trying it, I wonder how they could find it.</p>
+<p>But how is it possible that the utility coming with vmware workstation 7.1 suck so much and is not on par with other versions ?</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html/feed</wfw:commentRss>
+		<slash:comments>18</slash:comments>
+		</item>
+		<item>
+		<title>VMWare Workstation 6.5</title>
+		<link>/blog-archive/2008/10/05/vmware-workstation-65.html</link>
+		<comments>/blog-archive/2008/10/05/vmware-workstation-65.html#comments</comments>
+		<pubDate>Sun, 05 Oct 2008 16:46:40 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Gnome]]></category>
+		<category><![CDATA[kernel 2.6.26]]></category>
+		<category><![CDATA[Unity]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[vmware-any-any]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
+		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p style="text-align: left;">I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features.</p>
+<p style="text-align: left;">The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file.</p>
+<p style="text-align: left;">After downloading, as root, just make it executable or start it with sh :</p>
+<pre>% sh VMware-Workstation-6.5.0-118166.x86_64.bundle</pre>
+<p style="text-align: left;">It now starts a graphic installer, that takes care of everything. All the compilation process is now hidden to the user.</p>
+<p style="text-align: left;">I was expecting the compilation to fail and that I would have to look for a patch to run on my edge Linux kernel. Indeed, I just compiled 2.6.26 kernel (64 bits) a few days ago.</p>
+<p style="text-align: left;">But nothing like that. the process went smoothly.</p>
+<p style="text-align: left;">However, I was still prudent. Even after a compiling, previous versions almost always required some patch to get full networking to work.</p>
+<p style="text-align: left;">So I gave a try and launch one of my virtual machines. Surprise : all worked out of the box !</p>
+<p style="text-align: left;">For the first time, I even did not need any vmware-any-any patch or any network patched vmmon and vmnet modules to get wifi networking operational.</p>
+<p style="text-align: left;">I also quickly noticed some very nice and fancy features :</p>
+<ul style="text-align: left;">
+<li><strong>3D graphics support</strong></li>
+<li><strong>more</strong> <strong>devices supported</strong> : fingerprint reader device, audio driver for Vista, &#8230;</li>
+<li>a <strong>graphical virtual network settings</strong> editor : this utility had been for ages on the Windows version and finally will make your easier on Linux</li>
+</ul>
+<p style="text-align: left;">At last, but not least, the <strong>Unity</strong> display mode.</p>
+<p style="text-align: left;">Though I am not a Mac user, I believe this can be compared to VMWare Fusion. Anyway, it allows you to display the virtual machines programs within your X session.</p>
+<p style="text-align: left;">Look at this screenshot :</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /blog-archive/wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="text-align: left;">The result is quite spectacular. On my Gnome desktop, I am now able to display some windows from Windows XP and Windows Vista.</p>
+<p style="text-align: left;">Well, this is not yet perfectly smooth or artifact free, but this is already really usable and responsive enough to be used intensively.</p>
+<p style="text-align: left;">Another limit is the operating system support. So far, among my virtual machines, I was able to do it with Windows systems but not Open Solaris for instance.</p>
+<p style="text-align: left;">There must have been more improvements, more or less visible, that I am not aware of. I won&#8217;t go for a full review.</p>
+<p style="text-align: left;">I just wanted to insist that if you are a VMWare user,  you really should consider to upgrade for the <strong>complete support of the latest kernel</strong> and the <strong>Unity</strong> feature.</p>
+<p style="text-align: left;">It seems that VMWare has listened to the Linux users, or at least is taking it more seriously. Not that they are nice, but the competitors are close (Virtual box, KVM, Xen&#8230;) !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Xen vs KVM</title>
+		<link>/blog-archive/2008/05/03/xen-vs-kvm.html</link>
+		<pubDate>Sat, 03 May 2008 21:38:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[KVM]]></category>
+		<category><![CDATA[Xen]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=105</guid>
+		<description><![CDATA[I was planning to give a try to Xen for my future virtual servers. This blog made me think twice. I think I am going to check KVM first.]]></description>
+				<content:encoded><![CDATA[<p>I was planning to give a try to Xen for my future virtual servers.</p>
+<p><a title="Critics about Xen" href="http://udrepper.livejournal.com/tag/virtualization" target="_blank">This blog</a> made me think twice. I think I am going to check KVM first.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

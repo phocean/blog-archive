@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>stuxnet &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/stuxnet/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>A link between Stuxnet and the OpenBSD IPSEC backdoor rumor ?</title>
+		<link>/blog-archive/2011/01/16/a-link-between-stuxnet-and-the-openbsd-ipsec-backdoor-rumor.html</link>
+		<pubDate>Sun, 16 Jan 2011 22:12:53 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[backdoor]]></category>
+		<category><![CDATA[IPSEC]]></category>
+		<category><![CDATA[OpenBSD]]></category>
+		<category><![CDATA[stuxnet]]></category>
+		<category><![CDATA[worm]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=967</guid>
+		<description><![CDATA[Found on Full Disclosure, a weired but troubling connection of two security affairs : the OpenBSD backdoor rumor and the stuxnet worm.]]></description>
+				<content:encoded><![CDATA[<p>Found on Full Disclosure, a weired but troubling connection of two security affairs : <a title="OpenBSD backdoor and stuxnet" href="http://extendedsubset.com/?p=43" target="_blank">the OpenBSD backdoor rumor and the stuxnet worm</a>.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

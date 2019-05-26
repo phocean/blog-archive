@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/fontello.css">
+<link rel="stylesheet" href="../css/animation.css">
+
+<!-- Mirrored from phocean.net/tools/c-port-scanner-snippet by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:44:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>C port scanner snippet | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="c-port-scanner-snippet.html" />
+<link rel='shortlink' href='../index2b52.html?p=1048' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embedc4bf.js" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed57a5?url=https%3A%2F%2Fphocean.net%2Ftools%2Fc-port-scanner-snippet&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="page-template-default page page-id-1048 page-child parent-pageid-494 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../index.html" >
+			<img class="logo" src="../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1525"><a href="../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+							
+	<article id="post-1048" class="post-1048 page type-page status-publish hentry">
+		<header class="entry-header">
+													<h1 class="entry-title">C port scanner snippet</h1>
+		</header>
+
+		<div class="entry-content">
+			<pre>//      hostcheck-ng.c
+//
+//      Copyright 2010 phocean &lt;jc@phocean.net&gt;
+//
+//      This program is free software; you can redistribute it and/or modify
+//      it under the terms of the GNU General Public License as published by
+//      the Free Software Foundation; either version 2 of the License, or
+//      (at your option) any later version.
+//
+//      This program is distributed in the hope that it will be useful,
+//      but WITHOUT ANY WARRANTY; without even the implied warranty of
+//      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//      GNU General Public License for more details.
+//
+//      You should have received a copy of the GNU General Public License
+//      along with this program; if not, write to the Free Software
+//      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+//      MA 02110-1301, USA.
+//
+//              Compilation :
+//              gcc hostcheck-ng.c -o hostcheck-ng -pthread -g -O1
+//              - with debug :
+//              gcc hostcheck-ng.c -o hostcheck-ng -pthread -g -O1 -DDEBUG
+
+#include &lt;stdio.h&gt;              /* stderr, stdout */
+#include &lt;errno.h&gt;              /* errno */
+#include &lt;netdb.h&gt;              /* hostent struct, gethostbyname() */
+#include &lt;string.h&gt;             /* memset */
+#include &lt;sys/socket.h&gt;         /* socket handling */
+#include &lt;arpa/inet.h&gt;          /* inet_ntoa() to format IP address */
+#include &lt;netinet/in.h&gt;         /* in_addr structure */
+#include &lt;assert.h&gt;             /* assert */
+#include &lt;fcntl.h&gt;              /* socket non blocking */
+#include &lt;stdlib.h&gt;             /* malloc, free, etc. */
+#include &lt;pthread.h&gt;            /* threading */
+
+#define MAX_THREADS 3
+#define IPBUF 16
+
+struct myHost
+{
+        int port;
+        char ip[IPBUF];
+        int state;
+};
+
+/* resolve FQDN */
+char *resolv(char *name) {
+        struct in_addr h_addr;          /* internet address */
+        struct hostent *host;           /* host information */
+        if ( (host = gethostbyname(name) ) == NULL) {
+                printf( "(!) Wrong parameter, exiting\n" );
+                return NULL;
+        }
+        h_addr.s_addr = *((unsigned long *) host-&gt;h_addr_list[0]);
+        #ifdef DEBUG
+        printf ("(-) %s resolved as %s\n",name,inet_ntoa(h_addr));
+        #endif
+        return (inet_ntoa(h_addr));
+}
+
+/* socket functions */
+int init_socket(struct sockaddr_in *addr, char *ip, int *port)
+{
+        int fd;
+        /* create TCP INET socket */
+        fd = socket( AF_INET, SOCK_STREAM, 0 );
+        /* Initialize structure content */
+        memset( addr, 0, sizeof(*addr) );
+        addr-&gt;sin_family = AF_INET;
+        addr-&gt;sin_port = htons ( *port );
+        //printf("%d\n%d\n", *port, addr-&gt;sin_port);
+        addr-&gt;sin_addr.s_addr = inet_addr( ip );
+        return(fd);
+}
+
+/* set socket as non-blocking */
+int set_nonblock(int fd)
+{
+        int flags;
+        flags = fcntl(fd,F_GETFL,0);
+        assert(flags != -1);
+        if ( (fcntl(fd, F_SETFL, flags | O_NONBLOCK)) == -1) {
+                perror("(!) Error setting non-blocking socket");
+                return 1;
+        }
+        return 0;
+}
+
+/* socket timeout option */
+int set_options(int fd, fd_set *rst, struct timeval *tm)
+{
+        //struct timeval tv; /*timeout */
+        /* Options */
+        tm-&gt;tv_sec = 2;
+        tm-&gt;tv_usec = 0;
+        if ( (setsockopt( fd, SOL_SOCKET, SO_RCVTIMEO, tm, sizeof(*tm))) != 0) {
+                perror("(!) Error setting socket options");
+                return 1;
+        }
+        FD_ZERO(rst);
+        FD_SET(fd, rst);
+        return 0;
+}
+
+/* scan thread */
+void *scanThread( void *arg )
+{
+        struct myHost *args = arg;
+        int port = args-&gt;port;
+        char *ip = args-&gt;ip;
+        /* file descriptor and socket structure */
+        int connFd, ret, ret2, valopt, lon;
+        //struct hostent *host; /* host information */
+        struct sockaddr_in *servaddr;
+        struct timeval tv; /*timeout */
+        fd_set rset;
+
+        connFd = ret = ret2 = valopt = lon = 0;
+
+        /* detachable thread */
+        //pthread_detach( pthread_self() );
+
+        servaddr = (struct sockaddr_in*)malloc(sizeof(*servaddr));
+        if (servaddr == NULL) {
+                printf( "(!) %s - Error allocating %ld bytes of memory\n",ip,sizeof(*servaddr));
+                goto bad;
+        }
+
+        connFd = init_socket( servaddr, ip, &amp;port );
+
+        /* set socket as non-blocking */
+        if ( (set_nonblock(connFd)) != 0 )
+                goto bad;
+        /* set options (timeout) */
+        if ( (set_options( connFd, &amp;rset, &amp;tv)) != 0)
+                goto bad;
+
+        /* Connect */
+        #ifdef DEBUG
+        printf( "(-) %s - Trying to open port %d\n", ip, port );
+        #endif
+        ret = connect ( connFd, (struct sockaddr *)servaddr, sizeof(*servaddr) );
+
+        /* not connected yet */
+        if (ret &lt; 0) {
+                /* errno : operation in progress */
+                if (errno == EINPROGRESS) {
+                        #ifdef DEBUG
+                        fprintf(stderr, "(-) %s - EINPROGRESS in connect() - selecting\n",ip);
+                        #endif
+                        /* select loop */
+                        do {
+                                ret2 = select(connFd+1, NULL, &amp;rset, NULL, &amp;tv);
+                                /* error which is not an interruption */
+                                if (ret2 &lt; 0 &amp;&amp; errno != EINTR) {
+                                        fprintf(stderr, "(!) %s - Error from select()\n", ip, errno, strerror(errno));
+                                        goto bad;
+                                }
+                                /* socket selected : host up */
+                                else if (ret2 &gt; 0) {
+                                        // Socket selected for write
+                                        lon = sizeof(int);
+                                        if (getsockopt(connFd, SOL_SOCKET, SO_ERROR, (void*)(&amp;valopt), &amp;lon) &lt; 0) {
+                                                fprintf(stderr, "(!) %s - Error in getsockopt() %d - %s\n", ip, errno, strerror(errno));
+                                                goto bad;
+                                        }
+                                        // Check the value returned...
+                                        /*if (valopt) {
+                                                fprintf(stderr, "Error in delayed connection() %d - %s\n", valopt, strerror(valopt));
+                                                //free_exit( connFd, servaddr, 1 );
+                                                //return NULL;
+                                        }*/
+                                        #ifdef DEBUG
+                                        printf("(-) %s:%d is open (selected)\n",ip,port);
+                                        #endif
+                                        args-&gt;state=1;
+                                        break;
+                                }
+                                /* timeout case */
+                                else {
+                                        #ifdef DEBUG
+                                        printf("(!) %s:%d is down (timeout)\n",ip,port);
+                                        #endif
+                                        args-&gt;state=0;
+                                        break;
+                                }
+                        } while (1);
+                }
+                /* any other errno : host down */
+                else {
+                        #ifdef DEBUG
+                        printf("(!) %s:%d is down (connect error)\n",ip,port);
+                        #endif
+                        args-&gt;state=0;
+                }
+        }
+        /* connected */
+        else if (ret == 0) {
+                #ifdef DEBUG
+                printf("(-) %s:%d is up\n",ip,port);
+                #endif
+                args-&gt;state=1;
+        }
+        /* should not get here */
+        else {
+                printf("(-) Unexpected error\n");
+        }
+
+        close(connFd);
+        free(servaddr);
+        pthread_exit( NULL );
+
+        bad:
+                if (connFd)
+                        close(connFd);
+                if (servaddr)
+                        free(servaddr);
+                pthread_exit((void *)1);
+}
+
+int main( int argc, char *argv[] )
+{
+        int status,nbHosts,i,j;
+        int posHost=0;
+        int numHost=0;
+        pthread_t threadIds[MAX_THREADS];
+        struct myHost *hosts;
+
+        /* Arg sanity check */
+        if (argc &lt; 3) {
+                printf("Usage: %s &lt;dst ip&gt; &lt;dst port&gt;\n", argv[0]);
+                printf("\nCoded by phocean (/blog-archive).\n");
+                exit(-1);
+        }
+
+        nbHosts = (argc-1)/2;
+        hosts = (struct myHost*)calloc(nbHosts,sizeof(struct myHost));
+
+        /* resolv hostname */
+        for (i=0,j=0; i &lt; argc - 1; i=i+2, j++) {
+                hosts[j].port = atoi(argv[i+2]);
+                strncpy(hosts[j].ip, resolv(argv[i+1]), sizeof(hosts[j].ip)-1);
+                hosts[j].ip[IPBUF] = '\0';
+        }
+
+        #ifdef DEBUG
+        printf ("(-) Going to scan:\n");
+        for (i = 0; i &lt; nbHosts; i++) {
+                printf ("\t%s:%d\n",hosts[i].ip,hosts[i].port);
+        }
+        #endif
+
+        /* for all hosts */
+        printf ("(-) Scanning...\n");
+
+        /* Loop for processing all hosts */
+        while (numHost &lt; nbHosts) {
+                /* save the first host processed */
+                posHost = numHost;
+
+                /* Loop for the configured number of threads */
+                i = 0;
+                while (i &lt; MAX_THREADS &amp;&amp; i &lt; (nbHosts - numHost)) {
+
+                        /* Loop to create the max number of threads minus the already processed hosts */
+                        do {
+                                if ( (pthread_create( &amp;threadIds[i],NULL,scanThread,&amp;hosts[numHost])) != 0 )
+                                        printf( "(!) Thread %d failed to start\n", (int)threadIds[i] );
+                                i++; numHost++;
+                        } while (i &lt; (nbHosts - posHost - 1) &amp;&amp; i &lt; MAX_THREADS);
+
+                        /* joining threads */
+                        for (j = 0; j &lt; i; j++) {
+                                if ( (pthread_join(threadIds[j],(void **)&amp;status)) != 0 )
+                                        printf( "(!) Thread %d - Error joining\n", (int)threadIds[j] );
+                                else if (status == 1) {
+                                        printf( "(!) Thread %d terminated in error, status = %d\n", (int)threadIds[j], status );
+                                }
+                                else {
+                                        #ifdef DEBUG
+                                        printf( "(-) Thread %d - done,  status = %d\n", (int)threadIds[j], status );
+                                        #endif
+                                }
+                        }
+
+                }
+        }
+
+        printf ("(+) Scan result:\n");
+        for (i = 0; i &lt; nbHosts; i++) {
+                if (hosts[i].state == 0)
+                        printf ("\t%s:%d\tCLOSED\n",hosts[i].ip,hosts[i].port);
+                else if (hosts[i].state == 1)
+                        printf ("\t%s:%d\tOPEN\n",hosts[i].ip,hosts[i].port);
+                else
+                        printf ("\t%s:%d\tERROR\n",hosts[i].ip,hosts[i].port);
+        }
+
+        printf ("(-) All done\n");
+
+        free(hosts);
+        return 0;
+}</pre>
+					</div><!-- .entry-content -->
+		<footer class="entry-meta">
+					</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+							
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.310 seconds. Made 12 queries to database and 43 cached queries. Memory used - 27.34MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/tools/c-port-scanner-snippet by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:44:39 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.276 seconds. -->

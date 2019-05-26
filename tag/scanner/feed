@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>scanner &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/scanner/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Hostcheck</title>
+		<link>/blog-archive/2010/01/15/hostcheck.html</link>
+		<pubDate>Fri, 15 Jan 2010 12:44:21 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Hostcheck]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[scanner]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
+		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I continue to publish some my coding.</p>
+<p>Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up.<br />
+It just read a host file and check if the host are available doing a ping test or trying to open a socket.</p>
+<p>Nothing great, but it may help to quickly check that most of things are right after a network change, for instance.<br />
+Because we want to test many hosts, and not to scan, the pace is fast so it may not be 100% reliable. The idea is to see roughly is the connectivity is correct or if your whole LAN is down.<br />
+It uses colors and is easy to read, so it might be good to show to your manager ! :)</p>
+<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/blog-archive/tools/hostcheck">there</a>.</p>
+<p><a href="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>waf00f</title>
+		<link>/blog-archive/2009/12/16/waf00f.html</link>
+		<pubDate>Wed, 16 Dec 2009 22:40:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Fingerprinting]]></category>
+		<category><![CDATA[httprint]]></category>
+		<category><![CDATA[ModSecurity]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[Waf]]></category>
+		<category><![CDATA[waf00f]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
+		<description><![CDATA[waf00f is another nice fingerprinting tool. It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls. Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out. Check it there.]]></description>
+				<content:encoded><![CDATA[<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
+It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
+Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out.<br />
+Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerprint-web-application-firewall/" target="_blank">there</a>.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Nessus 4.2</title>
+		<link>/blog-archive/2009/12/01/nessus-4-2.html</link>
+		<pubDate>Tue, 01 Dec 2009 20:21:23 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[nessus]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=534</guid>
+		<description><![CDATA[Nessus 4.2 is out. I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/01/nessus-4-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="Nessus 4.2" href="http://www.nessus.org/download/" target="_blank">Nessus 4.2</a> is out.</p>
+<p>I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be, they come to you in the right order.</p>
+<p>I also appreciate that the server and the client set-up are now unified thanks to the web interface (you can access it from localhost or from the network indifferently).</p>
+<p>The report section has also been greatly improved.</p>
+<p>So, if you were already an Nessus user, it is worth upgrading.</p>
+<p>Talking about the set-up, there is an up-to-date package for openSUSE (of course, there are a lot less dependencies than before).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Nmap 5.0 is out</title>
+		<link>/blog-archive/2009/07/17/nmap-5-0-is-out.html</link>
+		<pubDate>Fri, 17 Jul 2009 08:41:46 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Fingerprint]]></category>
+		<category><![CDATA[Nmap]]></category>
+		<category><![CDATA[scanner]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=395</guid>
+		<description><![CDATA[Nmap 5.0 has been released, with a bunch of improvments : look at the changelog.]]></description>
+				<content:encoded><![CDATA[<p><a title="Nmap 5.0 download" href="http://nmap.org/dist/nmap-5.00.tar.bz2" target="_blank">Nmap 5.0</a> has been released, with a bunch of improvments : look at the <a title="Nmap 5.0 change" href="http://nmap.org/changelog.html" target="_blank">changelog</a>.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Prads &#8211; a new passive scanner !</title>
+		<link>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html</link>
+		<comments>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html#comments</comments>
+		<pubDate>Sun, 31 May 2009 21:19:47 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Fingerprinting]]></category>
+		<category><![CDATA[Prads]]></category>
+		<category><![CDATA[scanner]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=369</guid>
+		<description><![CDATA[Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called Prads. Prads is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out. Prads operates differently from Nmap or SinFP that I already...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/31/prads-a-new-passive-scanner.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called <strong>Prads</strong>.</p>
+<p><a title="Prads" href="http://gamelinux.github.com/prads/" target="_blank">Prads</a> is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out.</p>
+<p>Prads operates differently from Nmap or SinFP that I already introduced on this blog. It works passively, meaning that it aims to scan systems without sending out a single packet. It does this by capturing the traffic silently though an interface in promiscuous mode.<br />
+The advantage, of course, is that it is much more stealth than a classic scanner, which leaves usually a lot of log entries in firewalls or IDS.<br />
+It works on several layers and is based on all the common protocols, that should make it efficient and fast : TCP, UDP, ICMP, ARP.</p>
+<p>Using Prads is very simple, just look at prads &#8211;help for more info.</p>
+<p>There is a sample output, after running it a few seconds on my network :</p>
+<pre>% sudo perl prads.pl -d eth0 --os --service
+Starting prads.pl...
+Using eth0
+DBD::SQLite::db prepare failed: table asset already exists(1) at dbdimp.c line 271 at prads.pl line 320.
+ 1243801518 [SYN       ] ip:  192.168.222.23 - Linux - 2.6 (newer, 7) [S4:64:1:60:M1460,S,T,N,W7:.] distance:0 link:&quot;ethernet/modem&quot;
+ 1243801518 [SYNACK    ] ip: 192.168.222.254 - Linux - 2.6 (newer, 0) [5792:64:1:60:M1460,S,T,N,W0:ZA] distance:0 link:&quot;ethernet/modem&quot;
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44555] distance:1 link:SERVICE
+ 1243801518 [SERVICE   ] ip: 192.168.222.254 - Unknown HTTP - HTTP;  [192.168.222.254:80] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44556] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44557] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44558] distance:1 link:SERVICE
+; 3.0.10-1.1.1 Firefox [192.168.222.23:44559] distance:1 link:SERVICE
+ 1243801536 [SYNACK    ] ip:    91.121.56.96 - Linux - 2.6 (newer, 5) [5792:64:1:60:M1380,S,T,N,W5:ZA] distance:7 link:&quot;GPRS, T1, FreeS/WAN&quot;
+ 1243801536 [SERVICE   ] ip:    91.121.56.96 - Generic TLS 1.0 SSL - ;  [91.121.56.96:443] distance:1 link:SERVICE
+ 1243801438 [UDP       ] ip:  192.168.222.23 - @Linux - 2.6 [20:64:1:.:2:0] distance:0 link:ethernet [OLD]
+ 1243801438 [UDP       ] ip:        89.2.0.1 - @Linux - 2.6 [20:64:1:.:2:0] distance:2 link:ethernet [OLD]
+ 1243801544 [SERVICE   ] ip:        89.2.0.1 - - - DNS; - [89.2.0.1:53] distance:1 link:SERVICE
+ 1243801549 [SYNACK    ] ip:   192.168.222.1 - Cisco - 7200, Catalyst 3500, etc [4096:255:0:44:M1460:A] distance:0 link:&quot;ethernet/modem&quot;
+ 1243801549 [SERVICE   ] ip:   192.168.222.1 - Cisco SSH - Protocol 1.5; 1.25 [192.168.222.1:22] distance:1 link:SERVICE
+ 1243801549 [SERVICE   ] ip:  192.168.222.23 - OpenSSH - Protocol 1.5; 5.1 [192.168.222.23:42208] distance:1 link:SERVICE
+ 1243801600 [SYN       ] ip:  192.168.222.23 - Linux - 2.6 (newer, 7) [S4:64:1:60:M1460,S,T,N,W7:.] distance:0 link:&quot;ethernet/modem&quot;  [OLD]
+ 1243802459 [SYNACK    ] ip:   192.168.222.2 - UNKNOWN - UNKNOWN [8192:128:1:60:M1460,N,W8,S,T:A] distance:0 link:&quot;ethernet/modem&quot;
+ 1243802459 [SERVICE   ] ip:  192.168.222.23 - Windows SMB - ;  [192.168.222.23:37748] distance:1 link:SERVICE
+ 1243802459 [SERVICE   ] ip:   192.168.222.2 - Windows SMB - ;  [192.168.222.2:445] distance:1 link:SERVICE
+ 1243801596 [SYNACK    ] ip:    91.121.56.96 - Linux - 2.6 (newer, 5) [5792:64:1:60:M1380,S,T,N,W5:ZA] distance:7 link:&quot;GPRS, T1, FreeS/WAN&quot;  [OLD]
+ 1243801596 [SERVICE   ] ip:    91.121.56.96 - Generic TLS 1.0 SSL - ;  [91.121.56.96:443] distance:1 link:SERVICE [OLD]
+ 1243801367 [UDP       ] ip:   192.168.222.2 - @Windows - MS [20:128:0:.:0:0] distance:0 link:ethernet [OLD]</pre>
+<p>As you can see, there is already some interesting output.<br />
+It detected quite well my Linux laptop running Firefox (UPDATE : according to the author, it is a bug as client detection has not been implemented yet) and surfing a few website, the provider&#8217;s DNS servers, another Linux machine and a Windows desktop. Concerning the last two, I guess that a more completed signature database would have allowed a more precise fingerprinting. The Linux box is a wifi Linksys router and the Windows one runs Vista.<br />
+Also, the gateway curiously did not show up itself, but the presence of a  SSH connection helped to find it.<br />
+Finally, there is a little incoherence between the distance shown for the DNS server (=2, correct) and for the service (=1).</p>
+<p>To be honnest, so far, I had never found interest in the existing passive scanners. There were POf but it is now pretty outdated and seems not to be developped anymore. Ettercap could fingerprint the system seen while sniffing (profiles), but it was definitely too limited and not really furtive. Moreover, Nmap with the right options, or SinFP itself can be quite stealth.</p>
+<p>But now Prads has a place among the tools I use. It is efficient, straight forward and provide some useful info, beyond the OS detection : service and client info, distance, etc. It is nice because, once again, all these data are obtained withou sending out any request at all.</p>
+<p>As it is in its early stage, it is very promising and I am looking forward to Prads and its signature database improving. Please keep up the good job !</p>
+<p>That&#8217;s all for today. This tour was short but I will write again about this tool, as I will be using it. The next post will probably introduce the way the signature database is built and how it can be extended. So keep wired and don&#8217;t forget to check the <a href="http://gamelinux.github.com/prads/">Prads homepage</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>SinFP, part II : comparison with Nmap 4.20</title>
+		<link>/blog-archive/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
+		<pubDate>Sun, 24 Dec 2006 14:53:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[footprinting]]></category>
+		<category><![CDATA[Nmap]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[SinFP]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=14</guid>
+		<description><![CDATA[<p style="margin-bottom: 0cm;">Here is the update of my previous test of SinFP.</p> <p style="margin-bottom: 0cm;">I compared then the output of SinFP and Nmap on different machines, and found out that SinFP made a slightly better job than Nmap in OS detection, though it is not the primary goal of Nmap whereas it is the one of SinFP.</p> <p style="margin-bottom: 0cm;" lang="en-US">However, I made a mistake that the author of SinFP made me aware of.</p> <p style="margin-bottom: 0cm;">I conducted the tests of Nmap using the <span lang="en-US">package</span> of my distribution, thinking it was the latest one.</p> <p style="margin-bottom: 0cm;" lang="en-US">Actually, it was only the version 4.10. Moreover, the current version, 4.20, brought up a new OS detection engine.</p> <p style="margin-bottom: 0cm;" lang="en-US">Therefore, a new test with version 4.20 was absolutely needed.</p>]]></description>
+				<content:encoded><![CDATA[<p style="margin-bottom: 0cm;">Here is the update of my previous test of SinFP.</p>
+<p style="margin-bottom: 0cm;">I compared then the output of SinFP and Nmap on different machines, and found out that SinFP made a slightly better job than Nmap in OS detection, though it is not the primary goal of Nmap whereas it is the one of SinFP.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">However, I made a mistake that the author of SinFP made me aware of.</p>
+<p style="margin-bottom: 0cm;">I conducted the tests of Nmap using the <span lang="en-US">package</span> of my distribution, thinking it was the latest one.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">Actually, it was only the version 4.10. Moreover, the current version, 4.20, brought up a new OS detection engine.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">Therefore, a new test with version 4.20 was absolutely needed.</p>
+<p><span id="more-14"></span></p>
+<p>I took the source of Nmap 4.20 and compiled it.</p>
+<p lang="en-US">First, I just rescanned the same machines with Nmap 4.20 and compared them with the corresponding output of SinFP.</p>
+<p lang="en-US">I also added a new test, to demonstrate what SinFP is made for. I always use :</p>
+<pre>$ nmap -sS -O -PI -PT $IP </pre>
+<p>and</p>
+<pre>$ sinfp.pl -i $IP -p $PORT</pre>
+<p>.</p>
+<h2><strong>FREEBSD 6.1, open port with Netcat</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:25 CET
+Interesting ports on 192.168.0.3:
+Not shown: 1696 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: FreeBSD 6.X
+OS details: FreeBSD 6.1-RELEASE through 6.2-BETA3 (x86)
+Uptime: 0.242 days (since Tue Dec 19 05:37:30 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 18.289 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>We can say this is a draw.</p>
+<h2><strong>Windows 2000 server, various open port, real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:29 CET
+Interesting ports on 192.168.0.20:
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+42/tcp   open  nameserver
+53/tcp   open  domain
+80/tcp   open  http
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+1026/tcp open  LSA-or-nterm
+1029/tcp open  ms-lsa
+1112/tcp open  msql
+1723/tcp open  pptp
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+3372/tcp open  msdtc
+5800/tcp open  vnc-http
+5900/tcp open  vnc
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Microsoft Windows 2000
+OS details: Microsoft Windows 2000, SP0, SP1, or SP2
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.735 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>Another draw</p>
+<h2><strong>Debian Sarge (2.4 kernel), various open port, real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:33 CET
+Interesting ports on 192.168.0.5:
+Not shown: 1690 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+111/tcp open  rpcbind
+113/tcp open  auth
+199/tcp open  smux
+907/tcp open  unknown
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose|WAP|storage-misc
+Running: Linux 2.4.X, Linksys Linux 2.4.X, Asus Linux 2.4.X, Maxtor Linux 2.4.X
+OS details: Linux 2.4.20 - 2.4.32, Linux-based embedded device (Linksys WRT54GL WAP, Buffalo AirStation WLA-G54 WAP, Maxtor Shared Storage Drive, or Asus Wireless Storage Router)
+Uptime: 0.392 days (since Tue Dec 19 02:09:54 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.432 seconds</pre>
+<h3>SinFP</h3>
+<p><strong><br />
+</strong></p>
+<pre>IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x</pre>
+<p><strong> </strong></p>
+<h3><strong>Conclusion</strong></h3>
+<p>Draw again (note that the OS details are not correct)</p>
+<h2><strong>Debian Etch (2.6 kernel), various open ports with real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-24 01:19 CET
+Interesting ports on mars.int.jcbnet.org (192.168.1.10):
+Not shown: 1684 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+993/tcp  open  imaps
+995/tcp  open  pop3s
+2000/tcp open  callbook
+2500/tcp open  rtsserv
+3000/tcp open  ppp
+5432/tcp open  postgres
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.9 - 2.6.12 (x86)
+Uptime: 37.392 days (since Thu Nov 16 15:55:38 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.354 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2: GNU/Linux: Linux: 2.6.x&lt;/strong&gt;</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>Draw always</p>
+<h2><strong>Debian NAT box</strong></h2>
+<p>Now, it is time to test SinFP in the condition it is aimed at : a NAT environement.</p>
+<p>For this test, I took the debian box and set NAT (should say PAT) for 2 ports with iptables :</p>
+<pre>$ echo « 1 » &amp;gt; /proc/sys/net/ipv4/ip_forward
+$ iptables -t nat -A PREROUTING -p  --dport 21 -j DNAT –to 192.168.1.20
+$ iptables -t nat -A PREROUTING -p  --dport 800 -j DNAT –to 192.168.1.115</pre>
+<p>The 192.168.1.20 is the Windows 2000 server machine, with the IIS FTP server running.</p>
+<p>The 192.168.1.115 is the FreeBSD box, having Netcat listening on the port 800.</p>
+<p>Doing that, we expect Nmap to be lost as it considers the target is a single machine. Will it detect Linux, FreeBSD or Windows ?</p>
+<p>Let&#8217;s try :</p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.110
+
+Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-24 01:01 CET
+Interesting ports on 192.168.1.110:
+Not shown: 1688 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+111/tcp open  rpcbind
+113/tcp open  auth
+199/tcp open  smux
+618/tcp open  unknown
+800/tcp open  mdbs_daemon
+MAC Address: xx:xx:xx:xx:xx:xx
+No OS matches for host (If you know what OS is running on it, see http://insecure.org/nmap/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=4.20%D=12/24%OT=21%CT=1%CU=37629%PV=Y%DS=1%G=Y%M=0012F0%TM=458DC3
+OS:56%P=i686-pc-linux-gnu)SEQ(SP=82%GCD=1%ISR=98%TI=I%II=I%SS=O%TS=0)SEQ(SP
+OS:=8C%GCD=1%ISR=97%TI=I%II=I%SS=O%TS=0)SEQ(SP=8B%GCD=1%ISR=98%TI=I%II=I%SS
+OS:=O%TS=0)SEQ(SP=88%GCD=1%ISR=98%TI=I%II=I%SS=O%TS=0)SEQ(SP=8B%GCD=1%ISR=9
+OS:8%TI=I%II=I%SS=O%TS=0)OPS(O1=M5B4NW0NNT00NNS%O2=M5B4NW0NNT00NNS%O3=M5B4N
+OS:W0NNT00%O4=M5B4NW0NNT00NNS%O5=M5B4NW0NNT00NNS%O6=M5B4NNT00NNS)WIN(W1=FAF
+OS:0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=7F%W=FAF0%O=M5B
+OS:4NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T=7F%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=40%
+OS:W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=7F%W=FAF0%S=O%A=S+%F=AS%O=M5B4
+OS:NW0NNT00NNS%RD=0%Q=)T4(R=Y%DF=N%T=7F%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O
+OS:=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40
+OS:%TOS=C0%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUL=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%TOSI=S%CD=S%SI=S%DLI=S)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 13.061 seconds&lt;/blockquote&gt;
+Indeed, Nmap could not determine the system and ask me to submit the fingerprint to improve the signature database.</pre>
+<p>In such a case, SinFP should be able to detect the systems on each port :</p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 21
+
+P1: B11113 F0x12 W64240 O0204ffff M1460
+P2: B11113 F0x12 W64240 O0204ffff010303000101080a000000000000000001010402 M1460
+P3: B11021 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 22
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030300 M1460
+P3: B10120 F0x04 W0 O0 M0
+
+IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x
+
+[sourcecode language=&quot;text&quot;]$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 800
+
+P1: B11113 F0x12 W65535 O0204ffff M1460
+P2: B11113 F0x12 W65535 O0204ffff010303010101080affffffff4445414404020000 M1460
+P3: B11120 F0x04 W0 O0 M0
+
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<p>Correct. Now we have a good picture of the target. A big evidence that the two tools are complementary, isn&#8217;t it ?</p>
+<h2><strong>Conclusion</strong></h2>
+<p>Well, Nmap did a lot improved, indeed !</p>
+<p>With rather common systems, we have a draw  between SinFP and Nmap. It would be interesting to test more esoteric OS, but I can&#8217;t for now.</p>
+<p>So, Nmap or SinFP ? Of course, you should use both !</p>
+<p>Nmap will give you a quick and stealth overview of the open port of the target. Then, scan each port to check if it is a single machine or if there is some NAT activated.<br />
+In case of NAT, SinFP will give you a quite precise idea of what is running behind.  Anyway, matching the outputs of both Nmap and SinFP will provide you with much more interesting data.</p>
+<p>Thanks again to the authors of these nice tools.</p>
+<p>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a><br />
+Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nmap/</a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>SinFP, part I : introduction and comparison with Nmap 4.10</title>
+		<link>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
+		<comments>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
+		<pubDate>Sun, 17 Dec 2006 06:59:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[audit]]></category>
+		<category><![CDATA[footprinting]]></category>
+		<category><![CDATA[Nmap]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[SinFP]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=13</guid>
+		<description><![CDATA[<p style="margin-bottom: 0cm;">Last week, I found out a very interesting program, SinFP (those who are french and read the Misc magazine must already know ;) ).</p> <p style="margin-bottom: 0cm;">Its goal is to help you detecting what operating system a remote machine is running. <br />Well, you will tell me that we already have many programs that does this job, starting from the so famous nmap... but the approach is quite different this time.</p>]]></description>
+				<content:encoded><![CDATA[<p style="margin-bottom: 0cm">Last week, I found out a very interesting program, SinFP (those who are french and read the Misc magazine must already know ;) ).</p>
+<p style="margin-bottom: 0cm">Its goal is to help you detecting what operating system a remote machine is running.<br />
+Well, you will tell me that we already have many programs that does this job, starting from the so famous nmap&#8230; but the approach is quite different this time.</p>
+<p><span id="more-13"></span></p>
+<p style="margin-bottom: 0.5cm">Let me explain in a short, but I hope clear, version.</p>
+<p style="margin-bottom: 0cm">A program like Nmap usually scan all the open ports of a remote IP address. According to the answers it gets back on each port, and using a signature database, nmap can identify the target OS.</p>
+<p style="margin-bottom: 0cm">Sounds good. But actually, SinFP shows there is a better way to do.</p>
+<p style="margin-bottom: 0cm">The author of SinFP got to the conclusion that nowadays, most of the IP addresses are managed by a NAT / PAT equipement (firewall, router). It means that behind a single public IP address, there is not only the firewall itself, but several machines and systems for each open service. For instance, you will have the HTTP port redirected to a Windows IIS machine, the SMTP one to a Linux box, the DNS to a solaris server, and so on.</p>
+<p style="margin-bottom: 0cm">So obviously Nmap just can&#8217;t be so reliable in such a case. How trustful will its detection be if it finds a Postfix service and a IIS service running on the same address ?</p>
+<p style="margin-bottom: 0cm">The solution of SinFP is rather elegant. First, considering the NAT problem, it focuses on one port. So you are practically sure that you are on the final machine, just the proxy case is left.</p>
+<p style="margin-bottom: 0cm">On this port, it tries fingerprinting with its internal signature database. The way it does it makes all the strengh of SinFP.<br />
+It sends 3 requests, similar to any request generated by the system call connect() :</p>
+<pre>P1 = P2 without option
+P2 = TCP SYN with options
+P3 = TCP SYN-ACK</pre>
+<p style="margin-bottom: 0cm" lang="en-US">For your scan, you can also use only P2, for stealthiness.</p>
+<p style="margin-bottom: 0cm" lang="en-US">Then it catches the answers to these requests and generate from them a single signature with some selected patterns.<br />
+Finally, it compares it with the signatures in its database. The mathematic model it uses is far too complex for me to explain, but just now it tries to find the closest signature as possible, accepting some variations due to specific configurations or network conditions.</p>
+<p style="margin-bottom: 0cm" lang="en-US">You will get an answer like that :</p>
+<pre>IPv4: HEURISTIC0/P1P2P3 &lt;detected OS&gt;</pre>
+<p>It means that the signature matched all the requests, P1, P2 and P3. This result is the most reliable.</p>
+<p style="margin-bottom: 0cm" lang="en-US">If you get P1P2, it means that the signature did not fully match the one in the database&#8230; but it is still pretty reliable, as we will see further.</p>
+<p style="margin-bottom: 0cm" lang="en-US">As a final try, if there is still no exact signature, SinFP will try to modify the signature according to a transformation mask to get closer to an existing ones.</p>
+<p style="margin-bottom: 0cm">If you want to have more details on how it works, you should go the website of the author : <a href="http://www.gomor.org/">http://www.gomor.org</a></p>
+<p style="margin-bottom: 0cm">But now, let&#8217;s have a quick and dirty test, comparing this tool with Nmap :</p>
+<p style="margin-bottom: 0cm; text-decoration: underline"><strong>Debian Etch box (2.6 kernel), various open ports with real services</strong></p>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>Nmap</strong></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.230
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:26
+Interesting ports on xxx (192.168.1.230):
+Not shown: 1674 closed ports
+PORT STATE SERVICE
+22/tcp open ssh
+25/tcp open smtp
+53/tcp open domain
+
+80/tcp open http
+443/tcp open https
+Device type: general purpose
+Running: Linux 2.4.X|2.5.X|2.6.X
+OS details: Linux 2.4.7 - 2.6.11</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.230 80
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030302 M1460
+P3: B00000 F0 W0 O0 M0
+IPv4: HEURISTIC0/P1P2: GNU/Linux: Linux: 2.6.x</pre>
+<p style="margin-bottom: 0cm"><strong><em>Conclusion</em></strong> : <strong>SinFP</strong> gives the exact result (Linux 2.6.X) when Nmap is detecting a Linux box, nothing more.</p>
+<p style="margin-bottom: 0cm"><ins><strong>FreeBSD 6.1, no open port</strong></ins></p>
+<p><em><strong>Nmap</strong></em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.115
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:37 CET
+Warning: OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+All 1679 scanned ports on 192.168.1.115 are closed
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Apple Mac OS X 10.1.X, Apple Mac OS 8.X, FreeBSD 5.X|6.X
+Too many fingerprints match this host to give specific OS details</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.115 80
+
+*** Cannot fingerprint a closed or filtered port</pre>
+<p style="margin-bottom: 0cm"><strong><strong><em>Conclusion</em></strong></strong> : No surprise, SinFP can&#8217;t be tested on this point, since it applies to an open port (I wanted to check that you follow :D ). That is not the goal of SinFP to do differently. However, it was interesting to see that <strong>Nmap</strong> gives a answer. Not precise, but at least it guesses that it is a BSD kernel.</p>
+<p style="margin-bottom: 0cm"><ins><strong>FreeBSD 6.1, open port with NetCat</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>Nmap</em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.115
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:56 CET
+Interesting ports on 192.168.1.115:
+Not shown: 1678 closed ports
+PORT STATE SERVICE
+80/tcp open http
+MAC Address: xx:xx:xx:xx:xx:xx
+No exact OS matches for host &lt;/strong&gt;(If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+
+TCP/IP fingerprint:
+SInfo(V=4.10%P=i686-pc-linux-gnu%D=12/17%Tm=4584DC41%O=80%C=1%M=0012F0)
+TSeq(Class=TR%IPID=I%TS=1000HZ)
+T1(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=MNWNNT)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=0%ULEN=134%DAT=E)</pre>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>SinFP</em></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.115 80
+
+P1: B11113 F0x12 W65535 O0204ffff M1460
+P2: B11113 F0x12 W65535 O0204ffff010303010101080affffffff4445414404020000 M1460
+P3: B11120 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<p style="margin-bottom: 0cm"><strong style="font-weight: normal; font-style: italic">Conclusion</strong> : well, I was quite surprised. Nmap is totally lost. Why did it do a better job with no open port at all ? I haven&#8217;t searched yet, so if someone has a clue to explain well this pattern, please tell me. I have a feeling that it is because of the nmap port on FreeBSD, but I am not sure to be right.<br />
+<strong>SinFP</strong> does a pretty good job, all 3 patterns displayed concern FreeBSD from 6.0 to 7.0.</p>
+<p><ins><strong>Debian Sarge (2.4 kernel), various open port, real services</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>Nmap</em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.110
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:46 CET
+
+Interesting ports on 192.168.1.110:
+Not shown: 1671 closed ports
+PORT STATE SERVICE
+22/tcp open ssh
+25/tcp open smtp
+80/tcp open http
+111/tcp open rpcbind
+113/tcp open auth
+199/tcp open smux
+443/tcp open https
+907/tcp open unknown
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Linux 2.4.X|2.5.X
+OS details: Linux 2.4.0 - 2.5.20
+Uptime 0.354 days (since Sat Dec 16 22:17:30 2006)</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 443
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030300 M1460
+P3: B10120 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x</pre>
+<p style="margin-bottom: 0cm"><strong><em>Conclusion</em></strong> : Here I think we can consider that both <strong>Nmap</strong> and <strong>SinFP</strong> give the exact answer. This is a draw here.</p>
+<p style="margin-bottom: 0cm"><ins><strong>Windows 2000 server, various open port, real services</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold; font-style: italic">Nmap</p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.20
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 07:11 CET
+Interesting ports on moon.int.jcbnet.org (192.168.1.20):
+Not shown: 1656 closed ports
+PORT STATE SERVICE
+21/tcp open ftp
+25/tcp open smtp
+42/tcp open nameserver
+53/tcp open domain
+80/tcp open http
+88/tcp open kerberos-sec
+135/tcp open msrpc
+139/tcp open netbios-ssn
+389/tcp open ldap
+443/tcp open https
+445/tcp open microsoft-ds
+464/tcp open kpasswd5
+593/tcp open http-rpc-epmap
+636/tcp open ldapssl
+1026/tcp open LSA-or-nterm
+1029/tcp open ms-lsa
+1112/tcp open msql
+1723/tcp open pptp
+3268/tcp open globalcatLDAP
+3269/tcp open globalcatLDAPssl
+3372/tcp open msdtc
+5800/tcp open vnc-http
+5900/tcp open vnc
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Microsoft Windows 95/98/ME|NT/2K/XP
+OS details: Microsoft Windows Millennium Edition (Me), Windows 2000 Professional or Advanced Server, or Windows XP</pre>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>SinFP</em></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.20 5900
+
+P1: B11113 F0x12 W64240 O0204ffff M1460
+P2: B11113 F0x12 W64240 O0204ffff010303000101080a000000000000000001010402 M1460
+P3: B11021 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<p style="margin-bottom: 0cm"><em><strong>Conclusion</strong></em> : SinFP is right and far more precise than Nmap.</p>
+<p style="margin-bottom: 0cm">As you can see, the results of SinFP are just fine for each of my tests. Ok, it was not the perfect test, it was rather quick and dirty, but personnally it is enough for me to be convinced. It will be from now one of my favorite tools.</p>
+<p style="margin-bottom: 0cm" lang="en-US">When it comes to OS fingerprinting, SinFP makes a better job than Nmap. But we should not be hard on Nmap. They are different tools, and we actually should not have compared them directly. Nmap is an excellent port scanner for which OS detection is just an option, while SinFP focusses on it.</p>
+<p style="margin-bottom: 0cm">Its approach is new, ingenious and efficient.</p>
+<p style="margin-bottom: 0cm">I could not test SinFP on more systems for now, but I will update here if I can. You can also comment here if you find a system that could not be detected by SinFP. In that case, contact also the author of SinFP, sending him the new fingerprint.</p>
+<p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
+<p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
+<h3>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a></h3>
+<p><img src="/blog-archive/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

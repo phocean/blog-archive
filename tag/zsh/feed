@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>zsh &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/zsh/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Installing Metasploit on Mac OS X [Mountain Lion]</title>
+		<link>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html</link>
+		<comments>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html#comments</comments>
+		<pubDate>Sun, 05 May 2013 17:08:36 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[rbenv]]></category>
+		<category><![CDATA[ruby]]></category>
+		<category><![CDATA[zsh]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1571</guid>
+		<description><![CDATA[It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few good tutorials already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences. Getting Metasploit First, let&#8217;s fetch Metasploit. Adjust...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><!--StartFragment-->It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few <a href="http://www.darkoperator.com/installing-metasploit-in-ubunt/">good</a> <a href="http://briancanfixit.blogspot.fr/2011/12/setting-up-metasploit-and-armitage-on.html">tutorials</a> already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences.</p>
+<h1>Getting Metasploit</h1>
+<p>First, let&#8217;s fetch Metasploit. Adjust the last two lines by replacing <code>.zshrc</code> (I am using Zsh) with <code>.bash_profile</code> if you are using Bash, for instance.</p>
+<p>This will download, create symlinks and set the database settings path (we will come back on it later) in your environment:</p>
+<pre>cd /usr/local/share/
+git clone https://github.com/rapid7/metasploit-framework.git
+cd metasploit-framework
+for MSF in $(ls msf*); do ln -s /usr/local/share/metasploit-framework/$MSF /usr/local/bin/$MSF;done
+ln -s /usr/local/share/metasploit-framework/armitage /usr/local/bin/armitage
+echo export MSF_DATABASE_CONFIG=/usr/local/share/metasploit-framework/config/database.yml &gt;&gt; ~/.zshrc
+source ~/.zshrc</pre>
+<p>Metasploit is almost ready, but don&#8217;t run anything yet. There a still quite a few steps&#8230;</p>
+<h1>Getting Postgres</h1>
+<p>We use Homebrew:</p>
+<pre>brew install postgresql --without-ossp-build</pre>
+<p>Initialization stuff:</p>
+<pre>initdb /usr/local/var/postgres</pre>
+<p>To have launchd start postgresql at login:</p>
+<pre>ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents</pre>
+<p>But I prefer to keep my startup clean, so I added two aliases in my <code>.zshrc</code></p>
+<pre>alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pg_stop='pg_ctl stop'</pre>
+<p>So you now have two commands, <code>pg_start</code> and <code>pg_stop</code>, to use for Metasploit.<br />
+Finally, we create the msf user that will connect to the database from within Metasploit:</p>
+<pre><code>createuser msf -P -h localhost  
+createdb -O msf msf -h localhost </code></pre>
+<p>While we are at the database stuff, let&#8217;s configure Metasploit to use it. Create a <code>database.yml</code> file in  <code>/usr/local/share/metasploit-framework/config/</code> and put these lines:</p>
+<pre>production:
+    adapter: postgresql
+    database: msf
+    username: msf
+    password: &lt;password&gt;
+    host: 127.0.0.1
+    port: 5432
+    pool: 75
+    timeout: 5</pre>
+<p>The database is ready!</p>
+<h1>Getting Ruby</h1>
+<p>The last big step is to install Ruby. The one provided by Mac Os is a little too old, and you don&#8217;t want to mess with system libraries, so let&#8217;s leave it untouched. You could install Ruby with Homebrew, but it happens that the latest version (2.0.0-p0) is not working with Metasploit (OpenSSL libraries conflicts). So we need to use something like the 1.9.3 version of Ruby.</p>
+<p>Anyway, a good practice is to have some flexibility on the version you are going to use, so you would be able to switch between 1.9.3, 2.0.0 or whatever and that whenever you need.</p>
+<p>Here comes <strong>rbenv</strong>. For the next steps, I will assume that you have a working homebrew setting.</p>
+<p>Let&#8217;s go:</p>
+<pre>brew install rbenv ruby-build</pre>
+<p>Add this line to your .zshrc or bash_profile:</p>
+<pre>eval "$(rbenv init -)"</pre>
+<p>Now you should be able to list all installable versions of Ruby:</p>
+<pre>rbenv install --list</pre>
+<p>Let&#8217;s pick up 1.9.3:</p>
+<pre>rbenv install 1.9.3-p392</pre>
+<p>It takes a while, but after it is completed, you can set it as your default:</p>
+<pre>rbenv rehash
+rbenv global 1.9.3-p392</pre>
+<p>Note that you could use the <code>local</code> command instead of <code>global</code> to set it for the current terminal only.</p>
+<p>Let&#8217;s check that everything is correctly set. This is where the Ruby versions are stored:</p>
+<pre>$ ls ~/.rbenv/versions/
+1.9.3-p392 2.0.0-p0</pre>
+<p><code>ruby</code> and <code>gem</code> MUST point to the 1.9.3 version:</p>
+<pre>$ rbenv which ruby
+$HOME/.rbenv/versions/1.9.3-p392/bin/ruby
+$ rbenv which gem
+$HOME/.rbenv/versions/1.9.3-p392/bin/gem</pre>
+<p>Looks good, let&#8217;s go ahead.</p>
+<p>We are now able to install up the required gems for Metasploit. They made it easy by packaging these in a Gemfile that can be read by the &#8220;bundle&#8221; utility:</p>
+<pre>gem install bundle
+cd /usr/local/share/metasploit-framework
+rbenv rehash
+bundle install</pre>
+<h1>Final steps</h1>
+<p>Create an <code>vncviewer</code> wrapper to facilitate use from within Metasploit:</p>
+<pre>echo '#!/usr/bin/env bash'  &gt;&gt; /usr/local/bin/vncviewer   
+echo open vnc://\$1 &gt;&gt; /usr/local/bin/vncviewer  
+chmod +x /usr/local/bin/vncviewer</pre>
+<p>Get and compile the pcaprub library (optional):</p>
+<pre>cd /usr/local/share/metasploit-framework/external
+git clone <a href="http://github.com/shadowbq/pcaprub.git">http://github.com/shadowbq/pcaprub.git</a>
+cd ./ext/pcaprub
+ruby extconf.rb &amp;&amp; make &amp;&amp; make install</pre>
+<h1>Have fun!</h1>
+<p>If you haven&#8217;t, don&#8217;t forget to start Postgres, and you are ready to play:</p>
+<pre>sudo -E msfconsole</pre>
+<p>It should deploy the database structure and then start to work without warning. Hurrah! That was not hard, but a bit long, wasn&#8217;t it?</p>
+<p>In case it still fails for you, it means that something went wrong with the setup. Check the steps again, and then leave a comment as it may be the time for an update or a correction of this article.</p>
+<h1>Credits</h1>
+<p>As stated in the introduction, this article is mostly taken from <a href="http://www.darkoperator.com/installing-metasploit-in-ubunt/">darkoperator.com</a> with minor adjustments (it actually did not work out of the box for me), so the use of rbenv. I hope it will be helpful to other people in the same case as me.</p>
+<p><em><strong>UPDATE 09/07/2013</strong>:</em></p>
+<ul>
+<li><em>change in pcaprub directory (./pcaprub &#8211;&gt; ./ext/pcaprub)</em></li>
+</ul>
+<p><em><strong>UPDATE 07/23/2013</strong>:</em></p>
+<ul>
+<li><em><span style="line-height: 1.714285714; font-size: 1rem;">add missing </span><span style="line-height: 1.714285714; font-size: 1rem;">rbenv rehash command (thanks @</span><span style="line-height: 1.714285714; font-size: 1rem;">amukofes)</span></em></li>
+<li><em>add missing commands to retrieve pcaprub (thanks @Ton)</em></li>
+<li><em>fix indentation in postgres config file</em></li>
+</ul>
+<p><!--EndFragment--></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html/feed</wfw:commentRss>
+		<slash:comments>15</slash:comments>
+		</item>
+	</channel>
+</rss>

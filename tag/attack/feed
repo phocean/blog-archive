@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Attack &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/attack/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Simulated massive cyber attack filmed by CNN</title>
+		<link>/blog-archive/2010/02/18/simulated-massive-cyber-attack-filmed-by-cnn.html</link>
+		<pubDate>Thu, 18 Feb 2010 07:32:10 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Attack]]></category>
+		<category><![CDATA[Hacking]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=719</guid>
+		<description><![CDATA[This video, while &#8220;amusing&#8221;, is quite interesting : Though not many details are given, I am quite skeptical about the possibility of such a massive attack. However, it shows well that security is not just a technical matter. It has many implications in law, politics, economics, and a whole information system must be prepared to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/02/18/simulated-massive-cyber-attack-filmed-by-cnn.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This video, while &#8220;amusing&#8221;, is quite interesting :</p>
+<p style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.youtube.com/v/PJ0_Km7_s8I&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/PJ0_Km7_s8I&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<p>Though not many details are given, I am quite skeptical about the possibility of such a massive attack.</p>
+<p>However, it shows well that security is not just a technical matter. It has many implications in law, politics, economics, and a whole information system must be prepared to that, starting with our leaders.</p>
+<p>That would be a HUGE effort for our politicians here in France &#8211; if they ever care&#8230;</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>So much noise from Google about the attacks in China !?</title>
+		<link>/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html</link>
+		<comments>/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html#comments</comments>
+		<pubDate>Fri, 15 Jan 2010 08:42:41 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[0-day]]></category>
+		<category><![CDATA[Attack]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Trojan]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=677</guid>
+		<description><![CDATA[And Google is making so much noise about that ? If what is said is true, it nothing else but a trojan. A good one, but nothing new otherwise. I would also say that the most targeted company was Microsoft. After all, it was an Internet Explorer 0-days breach that was exploited. Once the computer...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>And Google is making so much noise about <a title="Google vs China" href="http://www.wired.com/threatlevel/2010/01/operation-aurora/">that</a> ?</p>
+<p>If what is said is true, it nothing else but a trojan. A good one, but nothing new otherwise.</p>
+<p>I would also say that the most targeted company was Microsoft. After all, it was an Internet Explorer 0-days breach that was exploited. Once the computer was infected, I bet that the trojan was doing much more than just targeting Gmail. To maximise the chance of an attack to succeed, a good trojan comes with a bunch of functionalities and harvest as many things as possible on the computer. Thus I doubt the target was only Google.</p>
+<p>As <a title="Ballmer about Google and China" href="http://www.osnews.com/comments/22738">Steve Ballmer</a> said (hey, I didn&#8217;t think I would ever quote him here ! :D ), it happens every day. And it must not be something new in a country like China. And suddenly, Google cares ? Whereas they quietly applied censorship in China until then ? I always become suspicious when a multinational company claims it cares about human rights to the detriment of its business.</p>
+<p>Maybe Google is just really wanting to get out of China for some reason (not so popular there with the competition of <a title="Baidu" href="http://www.baidu.com/">Baidu</a>?) and is looking for an excuse. More details will certainly be coming so time will tell&#8230;</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

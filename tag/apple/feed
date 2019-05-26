@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Apple &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/apple/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>CVE-2009-3555: Safari, fix reached Mountain Lion&#8230;</title>
+		<link>/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html</link>
+		<pubDate>Mon, 13 Aug 2012 17:53:15 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[CVE-2009-3555]]></category>
+		<category><![CDATA[Safari]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[TLS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1348</guid>
+		<description><![CDATA[I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation. Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;. Note that Safari 6.0 on Lion did not (at least on my...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation.</p>
+<p>Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;.</p>
+<p>Note that Safari 6.0 on Lion <a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">did not</a> (at least on my computer, if someone could confirm)&#8230; so same browser version, different OS, the system SSL library must have been &#8211; silently &#8211; updated.</p>
+<p>Anyway, good move finally.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Misc rants on Linux desktop, Mac OS and Antivirus</title>
+		<link>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html</link>
+		<comments>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html#comments</comments>
+		<pubDate>Tue, 05 Jun 2012 21:29:27 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Antivirus]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Gnome]]></category>
+		<category><![CDATA[kde]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[Sophos]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1230</guid>
+		<description><![CDATA[Linux desktop is in bad shape&#8230; The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs. Unity? Like many people, I just don&#8217;t get it....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>Linux desktop is in bad shape&#8230;</h2>
+<p>The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs.</p>
+<p>Unity? Like many people, I just don&#8217;t get it. It is pretty clumsy and feels unachieved. I also suffered from a lot of performance issues like <a title="Unity lag" href="https://bugs.launchpad.net/bugs/764330" target="_blank">this</a> that are never fixed and make it a pain to use daily.<br />
+Gnome 3? Actually, I liked it. It looks nice, is pretty fast and smooth. What I like the most is the workflow. It really makes use of workspaces logical and optimum. But&#8230; it did not work for me! Instability, <a title="Gnome 3 VMWare hang" href="https://bugs.launchpad.net/bugs/869408" target="_blank">again</a> and <a title="Gnome 3 and ATI" href="http://ati.cchtml.com/show_bug.cgi?id=99" target="_blank">again</a>.<br />
+You will tell me, that I should have stayed with Gnome 2 or go to XFCE / Openbox / etc. I have used all of them. They have qualities, sure, but we are in 2012 and I want something with more features.</p>
+<p><strong>Conclusion</strong>: it is sad that after so many years, Linux is not yet ready for the desktop, because some guys decided to break everything again instead of doing incremental enhancements. Why breaking so suddenly things that work? I don&#8217;t get it. I felt really fustrated with the feeling that I was at the same point as 5 years ago, dealing with the same kind of bugs. I have long been a Linux advocate and I believed I was right a few years back when I told people it was promising and superior to the competition (Windows XP at the time). Now years have passed, and I started to feel I was lying, or hiding the truth that is Linux Desktop failed and went nowhere.<br />
+Yes, I just got tired to fight with the computer to get basic things done. And considering the <a title="Linus Thorvalds on Gnome 3" href="https://plus.google.com/102150693225130002912/posts/UkoAaLDpF4i" target="_blank">Linus post</a> and several reactions into the comments, I am not alone in this case.</p>
+<h2>&#8230; so I gave a try to Apple&#8230;</h2>
+<p>I recently got a Mac Book Pro. The main reason is I wanted a very stable workstation to focus on my work. It was hard to admit after so many years using it, but I came to the conclusion that a Linux desktop could not meet this requirement anymore.</p>
+<p>So I am going to be with Mac OS Lion for a while (though I am certainly not closing the door to the Linux desktop forever). I have to say that it is a nice OS and it is damned stable. It is good to have something that works out of the box, without any frustration or need to customize things to have something suitable.</p>
+<p>And what about the stability of Mac OS? It is very eye candy, but is it stable?</p>
+<p>At first, I actually had some serious troubles. It was freezing almost every day, forcing me to a cold reboot. I started to be seriously doubtful concerning the stability of Mac OS, when I found by chance that the freeze occured every time that Sophos Antivirus started an update&#8230;</p>
+<h2>Antivirus and Mac OS&#8230;</h2>
+<p>Wait, what? Antivirus? On Mac OS? I know it will be the reaction of many Mac users. I do also think that it is useless, but for a different reason than most of them.<br />
+Of course, I don&#8217;t get the &#8220;Mac OS is secure&#8221; marketing. Actually, it has the less secure kernel around, even though it benefits from a robust Unix architecture.<br />
+No, my point is that antivirus all fail anyway. In forensic analysis, we can even not trust an antivirus scan to decide if a machine is sane or not. Instead, we have to use specific tools and memory acquisition to make sure.<br />
+It is simply because signature-based detection can always be worked around by malwares. There are hundreds of ways to achieve it successfully: changing binary headers, code obfuscation, encryption, hooking (see rootkits and bootkits).<br />
+Ok, antivirus vendors claim that they also offer behavioral detection, sandboxes, etc. Yes, that&#8217;s a good move, but they can&#8217;t check all of the system activity and again there are many ways to bypass it. So why bother?</p>
+<p>I mean, I still think it matters to have an antivirus on Windows. Especially for people who are not too techy. At least, it will detect the most basics threats and throw out alarms. There are thousands of such threats on Windows, and on this point antivirus offer a simple way to defeat them (though awareness and education are certainly more important).</p>
+<p>But on Mac Os, and on Linux as well, there are very few threats. Once again, it is not that they are so much secure, but at the time I am writing, it is a fact.</p>
+<p>So to summarize:</p>
+<ul>
+<li>very few threats on Mac OS and Linux</li>
+<li>antivirus still massively rely on signature-based detection</li>
+</ul>
+<p>You see: if there is nothing much to detect, an antivirus is overhead. It will only eat some resources and fail anyway against coming threats.<br />
+Just keeping the system up-to-date is certainly the best thing to do so far.</p>
+<p>Well, so why did I set an antivirus? I was actually using it for my forensic analysis on Windows machines. It was a convenient way for me to have a local scanner that I could started on dumped suspicious processes, without having to connect on Viruscan. It used to be convenient when I was traveling without connection, but I can live without it.</p>
+<h2>About Sophos for Mac OS</h2>
+<p>So moreover this piece of software was crashing my laptop. The update part seems to be executed with root privileges, and for some reason it locks the system (not only mine, <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Version-8-s-AutoUpdate-consistently-CRASHING/td-p/5957o29DA&amp;usg=AFQjCNGa-t6bKUNhGqDIdvtkicGvsdvMmg" target="_blank">look</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Sophos-AV-7-3-8C-Crashed-MacBook-Pro-AGAIN-Unacceptable-Software/td-p/5397" target="_blank">at</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Given-up-temporarily-on-Sophos-for-Mac/td-p/3703" target="_blank">the</a> forums). Not to mention that having such a component may offer more room to malicious code to exploit the kernel&#8230;</p>
+<p>A shame, a pure piece of crap. Now that I removed it, I am enjoying an uptime of about 30 days!</p>
+<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="/blog-archive/wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
+<h2>Conclusion</h2>
+<p>Sophos Antivirus for Mac OS is pure crap, run to remove it if it happens to be on your computer.</p>
+<p>Anyway, you don&#8217;t need an antivirus on Mac OS. Moreover, it seems that several vendor offer solution that lack of maturity and testing on this platform. So you would actually degrade your system stability and security if you would installed on of these.</p>
+<p>And Mac OS is a nice Unix-based desktop alternative to have the work done, even though sadly it is not open-source.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

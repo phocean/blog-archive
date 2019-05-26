@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>yersinia &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/yersinia/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Yersinia : patch to compile under openSUSE (11.1)</title>
+		<link>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html</link>
+		<comments>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html#comments</comments>
+		<pubDate>Sun, 14 Jun 2009 19:25:34 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[compilation]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[patch]]></category>
+		<category><![CDATA[yersinia]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=391</guid>
+		<description><![CDATA[Yet another post in the series of compilation failures due to unexpected libraries paths. This time, it is about Yersinia and the ncurses library. I made the following yersinia-opensuse11.1 patch which should work for openSUSE 11.1 and maybe other versions or distros.]]></description>
+				<content:encoded><![CDATA[<p>Yet another post in the series of compilation failures due to unexpected libraries paths.</p>
+<p>This time, it is about <a title="Yersinia" href="http://www.yersinia.net/" target="_blank">Yersinia</a> and the ncurses library. I made the following <a href="/blog-archive/wp-content/uploads/2009/06/yersinia-opensuse11.1.patch">yersinia-opensuse11.1 patch</a> which should work for openSUSE 11.1 and maybe other versions or distros.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

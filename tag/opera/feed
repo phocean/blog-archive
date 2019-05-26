@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Opera &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/opera/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>CVE-2009-3555: Safari not yet patched ???</title>
+		<link>/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html</link>
+		<pubDate>Sun, 10 Jun 2012 18:17:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Vulnerabilities]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[chrome]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[CVE-2009-3555]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[IE]]></category>
+		<category><![CDATA[Opera]]></category>
+		<category><![CDATA[Safari]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[TLS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1249</guid>
+		<description><![CDATA[The other day I was shocked to find this entry in my Apache logs: [error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page. So it seems...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The other day I was shocked to find this entry in my Apache logs:</p>
+<pre>[error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled</pre>
+<p>It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page.</p>
+<p>So it seems that Safari is the last browser which was not patched against <a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">CVE-2009-3555</a> !</p>
+<p>2009 !! At least, I quickly checked the other browsers I had around and they were fine: IE, Firefox, Chrome&#8230; I am having an issue with Opera also, but although I have not identified the problem yet, it seems unrelated (and does not throw the same error).</p>
+<p>Note that I reported the issue to Apple, but I did not receive any answer. Silence on the wire.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Yet OpenSSL renegociation not fully fixed</title>
+		<link>/blog-archive/2010/10/16/yet-openssl-renegociation-not-fully-fixed.html</link>
+		<pubDate>Sat, 16 Oct 2010 07:35:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[chrome]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[openSSL]]></category>
+		<category><![CDATA[Opera]]></category>
+		<category><![CDATA[renegociation]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=924</guid>
+		<description><![CDATA[How the hell is it possible that after so many months, the fix for OpenSSL renegociation has not been yet included in either Chrome (6.0.4) or Opera (10.61)? I haven&#8217;t tested other browsers though, except Firefox which at least has fixed the issue since several months.]]></description>
+				<content:encoded><![CDATA[<p>How the hell is it possible that after so many months, <a title="OpenSSL renegociation issue" href="/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html" target="_self">the fix for OpenSSL renegociation</a> has not been yet included in either Chrome (6.0.4) or Opera (10.61)? I haven&#8217;t tested other browsers though, except Firefox which at least has fixed the issue since several months.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Opera segmentation fault after upgrading</title>
+		<link>/blog-archive/2007/04/06/opera-segmentation-fault-after-upgrading.html</link>
+		<pubDate>Fri, 06 Apr 2007 19:05:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Opera]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=27</guid>
+		<description><![CDATA[<p>For those who have a segmentation fault after the last update on Feisty (libx11 upgraded)...</p>]]></description>
+				<content:encoded><![CDATA[<p>For those who have a segmentation fault after the last update on Feisty (libx11 upgraded)&#8230;</p>
+<p><span id="more-27"></span></p>
+<p>you will find a fix <a hreflang="en" href="http://my.opera.com/desktopteam/blog/">there</a>.</p>
+<p>There is a link to a new version of Opera to download, which works with the latest libx11.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mod-security &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/mod-security/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>New book about ModSecurity</title>
+		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Firewall]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[mod-security]]></category>
+		<category><![CDATA[ModSecurity]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p>ModSecurity is essential when it comes to secure any web site.</p>
+<p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
+However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
+<p>So, stay tuned :  I will talk more about the ModSecurity stuff and publish a review about this book soon.</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px;">http://www.packtpub.com/modsecurity-2-5/book</div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>How-to : Mod-security 2 set-up for Apache 2</title>
+		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[mod-security]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[regxp]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
+<p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
+<span id="more-114"></span></p>
+<p>Due to license issues, mod-security is no more shipped with Debian &#8211; it was until Debian Sarge.</p>
+<p>Fortunately, the Debian maintainer continue to provide some packages on his website.</p>
+<p>So, the easy way to set up mod-security on your Debian system is to add this line in your <strong>/etc/apt/source.list</strong> file :</p>
+<pre lang="bash">$ echo "deb http://etc.inittab.org/~agi/debian/libapache-mod-security2/ etch/" >> /etc/apt/source.list</pre>
+<p>
+Then type in the usual sequence :</p>
+<pre lang="bash">$ aptitude update && aptitude install libapache-mod-security2</pre>
+<p>You could also download the source from <a title="mod-security" href="http://www.modsecurity.org/download/index.html">the official website</a>.<br />
+<br />
+Once it is done, comes the configuration part. The configuration is critical because any mistake on it will make it at best useless, or at worst blocking your website.<br />
+You have the choice between creating your rules from scratch or getting some ready made.<br />
+Creating your rules will require a lot of time and expertise in the http protocol, php, sql, and any other service that you offer with Apache.<br />
+That was not really my case, so I started to look for some ready made rules on google. I could not get good ones. Most of tutorial gives only some very basic and incomplete rules : useless. I found a good paper, notably containing some specific rules for WordPress, but the rules were written for mod-security v1 whereas it is now in its second version.<br />
+Oh, did I forget to tell you ? Most of the syntax was changed between the two versions !!! Not very nice, even if it was worth doing it.</p>
+<p>Finally, I came to find a way with the rules provided by this website, <a title="Go Root ? mod-security rules" href="http://gotroot.com/tiki-index.php?page=Setup+of+mod_security">Got Root ?</a>. They provide quite up-to-date rules, with a delay of 30 days subscription-free, which is quite acceptable for what I want to do. After all, Php exploits and Sql injection technics don&#8217;t change every day.</p>
+<p>The rules are also complete and spread over several files, one for each category in : generic rules, blacklist, usergents, proxies, rootkits&#8230;</p>
+<p>We can fetch them with a little script. They suggest to add it as a cron job, but you <strong><em>should not</em></strong>, except if you don&#8217;t mind that your website becomes unavailable ! These rules always require testing, some of them may be broken or require customizing&#8230; be careful and always check what&#8217;s inside the rule files !</p>
+<p>Here is the small script, <strong>modsec.sh</strong>, that I made to retrieve the rules and put them in the right directory :</p>
+<pre lang="bash">#!/bin/sh
+
+wget http://www.gotroot.com/downloads/ftp/mod_security/2.0/apache2/apache2-gotrootrules-modsec2.0-latest.tar.gz
+if [ -e apache2-gotrootrules-modsec2.0-latest.tar.gz ]
+then
+tar -xzvf apache2-gotrootrules-modsec2.0-latest.tar.gz -C /etc/apache2/modsecurity/
+fi
+rm apache2-gotrootrules-modsec2.0-latest.tar.gz
+/etc/init.d/apache2 restart</pre>
+<p>
+Make it executable and run it :</p>
+<pre lang="bash"># chmod +x modsec.sh
+$ ./modsec.sh</pre>
+<p>
+Now, let&#8217;s edit the <strong>/etc/apache2/apache2.conf </strong>file.</p>
+<p>Just before these lines (probably at the bottom of the file) :</p>
+<pre lang="bash"># Include the virtual host configurations:
+Include /etc/apache2/sites-enabled/</pre>
+<p>
+Add these :</p>
+<pre lang="bash">#Turn the filtering engine On or Off
+SecRuleEngine On
+SecRequestBodyAccess On
+SecResponseBodyAccess Off
+
+# Handling of file uploads
+# TODO Choose a folder private to Apache.
+# SecUploadDir /opt/apache-frontend/tmp/
+SecUploadKeepFiles Off
+
+# Maximum request body size we will
+# accept for buffering
+SecRequestBodyLimit 131072
+# Store up to 128 KB in memory
+SecRequestBodyInMemoryLimit 131072
+# Buffer response bodies of up to
+# 512 KB in length
+SecResponseBodyLimit 524288
+
+SecDebugLog /var/log/apache2/modsec_debug.log
+SecDebugLogLevel 0
+# Serial audit log
+SecAuditEngine RelevantOnly
+SecAuditLogRelevantStatus ^5
+SecAuditLogParts ABIFHZ
+SecAuditLogType Serial
+SecAuditLog /var/log/apache2/modsec_audit.log
+
+#should mod_security inspect POST payloads
+#SecRuleScanPOST On
+
+# by default log and deny suspicious requests with HTTP status 500
+SecDefaultAction log,auditlog,deny,status:403,phase:2,t:none
+
+#First, add in your exclusion rules:
+#These MUST come first!
+Include /etc/apache2/modsecurity/exclude.conf
+
+#Application protection rules
+Include /etc/apache2/modsecurity/rules.conf
+
+#Comment spam rules
+Include /etc/apache2/modsecurity/blacklist.conf
+
+#Bad hosts, bad proxies and other bad players
+Include /etc/apache2/modsecurity/blacklist2.conf
+
+#Bad clients, known bogus useragents and other signs of malware
+Include /etc/apache2/modsecurity/useragents.conf
+
+#Known bad software, rootkits and other malware
+Include /etc/apache2/modsecurity/rootkits.conf
+
+#Signatures to prevent proxying through your server
+#only rule these rules if your server is NOT a proxy
+#Include /etc/apache2/modsecurity/proxy.conf
+
+#Additional rules for Apache 2.x ONLY!  Do not add this line if you use Apache 1.x
+Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
+<p>As you can see, we just include the rule files we just downloaded. You can easily activate or deactivate some to fit your needs.</p>
+<p>You will probably notice that there is a performance impact after activating mod-security &#8211; not so big to me, but it also depends on your traffic. It is up to you to optimize the number of activated rules to make it faster.</p>
+<p>If some page appear to be blocked, check the<strong> /var/log/apache2/error.log </strong>for something like :</p>
+<pre lang="text">[Fri Jul 11 19:33:08 2008] [error] [client 192.168.222.21] ModSecurity: Access
+denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
+\\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
+mG38AAAEAACa@AVUAAAAA"]</pre>
+<p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>
+<pre lang="bash">$ grep 340000 /etc/apache2/modsecurity</pre>
+<p>Regxp knowledge required ! :D</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

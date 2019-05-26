@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Soktpy &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/soktpy/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Soktspy</title>
+		<link>/blog-archive/2012/06/20/soktspy.html</link>
+		<pubDate>Wed, 20 Jun 2012 20:45:54 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Forensics]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[socket]]></category>
+		<category><![CDATA[Soktpy]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
+		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Soktspy is a small script that may be helpful for some investigation.</p>
+<p>Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets.</p>
+<p>But sometimes, the behavior may be very sneaky, consisting of one or two packets, at rare and random intervals. Unless you spend all the day before the screen, it may be very difficult to trace.</p>
+<p>Especially with stock tools or without installing any intrusive hardware, which is also the reason why I did this tool. On a production server, you want to install as little dependencies as possible, right?</p>
+<p>So here is the Soktspy, a python script that easily build into a portable and standalone executable to deploy on the target machine.</p>
+<p>Once launched, it just loops in the background and log sockets that are created for some given peers (the IP addresses you found involved in the suspicious network activity).</p>
+<p>Maybe, some other tool exist, but I could not find anything similar. Let me know if you have any suggestion. Anyway, it was a nice exercise to do :)</p>
+<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/blog-archive/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy01.png 668w, /blog-archive/wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
+<p><strong>Download</strong></p>
+<p><a href="/blog-archive/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
+<p><strong>Pre-requisites</strong></p>
+<ul>
+<li>Install Visual C++ Runtime libraries with v<strong>credist_x86.exe </strong>(not necessary if the target machine happens to have Python already installed)</li>
+</ul>
+<div>So far, I tested it successfully on Windows XP, Windows 2003, Ubuntu 11.10 and Mac OS Lion. But as it is a simple Python script, it is supposed to work on all platform.</div>
+<div>
+<p><strong>Compiling</strong></p>
+<p>You may recompile the program as a Windows binary executable by issuing this command:</p>
+<p><strong>&gt; setup.py py2exe</strong></p>
+</div>
+<p><strong>How to use</strong></p>
+<ul>
+<li>Copy <strong>soktSpy.exe </strong>and its configuration file <strong>config.cfg</strong>.</li>
+<li>Edit <strong>config.cfg </strong>with the IP you want to monitor</li>
+<li>Start <strong>soktSpy.exe</strong>.</li>
+</ul>
+<p>Then, as soon as the sneaky process will send out a packet toward the monitored IP, a log record will be triggered:</p>
+<p><a href="/blog-archive/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /blog-archive/wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /blog-archive/wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>The log file contains the following info, in that order:</p>
+<ul>
+<li>Detection time (based on the system local time)</li>
+<li>Process creation time</li>
+<li>PID</li>
+<li>Process Name</li>
+<li>Protocol Family (2 = IPv4, 23 = IPv6)</li>
+<li>Process Owner</li>
+<li>Source socket (IP, port)</li>
+<li>Destination socket (IP, port)</li>
+<li>Socket Status</li>
+</ul>
+<p><strong>Future Plans</strong></p>
+<p>Please tell me if you have any idea on how to improve it.</p>
+<p>For now, I plan to add a feature that will dump the memory of the suspicious processes when it is executing.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

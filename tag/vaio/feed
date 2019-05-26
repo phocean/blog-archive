@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Vaio &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/vaio/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Is it a good idea to buy a substitute battery ?</title>
+		<link>/blog-archive/2007/01/27/is-it-a-good-idea-to-buy-a-substitute-battery.html</link>
+		<pubDate>Sat, 27 Jan 2007 16:52:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Laptop]]></category>
+		<category><![CDATA[Vaio]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=18</guid>
+		<description><![CDATA[<p>I had been long wondering how are these subsitute batteries that you can find all around the web and why there are so cheap compared to the laptop constructor ones.<br />I was affraid about the quality, the design and even the safety.<br />I often buy substitute ink for my printer, but that is not exactly the same kind of thing nor the same price.</p>]]></description>
+				<content:encoded><![CDATA[<p>I had been long wondering how are these subsitute batteries that you can find all around the web and why there are so cheap compared to the laptop constructor ones.<br />
+I was affraid about the quality, the design and even the safety.<br />
+I often buy substitute ink for my printer, but that is not exactly the same kind of thing nor the same price.</p>
+<p><span id="more-18"></span></p>
+<p>But my need overpassed my fears.</p>
+<p>I found one rather cheap on this <a hreflang="en" href="http://www.global-batteries.com/advanced_search_result.php?keywords=fs215&amp;submit=Search%21">website</a>. I mean much cheaper than the one from Sony, which was around 300 € !!! And this is always very expensive whatever the brand is.<br />
+At this price, it is better to buy a new laptop (maybe that&#8217;s what they aim).</p>
+<p>I chose the one with a bigger power and payed with paypal. Surprisingly, I received it quickly, just two days after my purchase.</p>
+<p>Concerning the quality of this battery, so far, I am very happy. Over my expectations. The design exactly look like the Sony one. I guess it just come out from the same factory but doesn&#8217;t have the Sony stick&#8230;</p>
+<p>This new battery has 7200 mAh and offers me about 4h30 of work on battery ! To be compared with the 2h30 I had with the original one (and only 1h more recently).</p>
+<p>So, don&#8217;t be affraid anymore to buy no-name replacement batteries !<br />
+I will definitely so in the future, when I need.</p>
+<p><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/GBCOMUS-NSN020_DSCN2667-175x117x0.js" /></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>buying a new laptop or upgrading to 1Gb RAM ?</title>
+		<link>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html</link>
+		<comments>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html#comments</comments>
+		<pubDate>Sun, 03 Dec 2006 12:44:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Laptop]]></category>
+		<category><![CDATA[Vaio]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=7</guid>
+		<description><![CDATA[<p>I just upgraded my laptop from 512 Mb of RAM to 1 Gb.</p> <p>Well, I was expecting quite a lot from this upgrade. I am using an Ubuntu 6.10 OS and having a dozen of applications running at the same time : Firefox, Liferea, Evolution, Open Office, Skype, Gaim, Beagle, plus a dozen of applets (Tomboy, Mail Notification, Deskbar, etc), small programs or other accessories.</p>]]></description>
+				<content:encoded><![CDATA[<p>I just upgraded my laptop from 512 Mb of RAM to 1 Gb.</p>
+<p>Well, I was expecting quite a lot from this upgrade. I am using an Ubuntu 6.10 OS and having a dozen of applications running at the same time : Firefox, Liferea, Evolution, Open Office, Skype, Gaim, Beagle, plus a dozen of applets (Tomboy, Mail Notification, Deskbar, etc), small programs or other accessories.</p>
+<p><span id="more-7"></span></p>
+<p>You may guess how swappy it was. And having a 4200 rpm hard drive doesn&#8217;t really help.</p>
+<p>I became almost crazy every time I had to use VMWare to run a Windows XP. The great memory management of Linux made it possible where it would have been unthinkable on a windows host, but it was still a painful exercise every time I had to get in and out of the WMWare guest.</p>
+<p>I have even been thinking of buying a new laptop. But I decided it was not the time for that :</p>
+<ol>
+<li>I use little CPU in my daily work and even the celeron processor of my Sony VGN-FS215E laptop is not much used. It is not time for me yet to get a core duo.</li>
+<li>A new laptop is expensive and mine is still quite recent.</li>
+<li>There are going to be new technologies soon, which could be very interesting for the laptops : new kind of batteries and hard drives with built-in flash memory (to speed-up and save power).</li>
+</ol>
+<p>So I finally decided to change the two 256 Mb modules for 512 Mb ones (because of dual transport). Hmm it was expensive so I didn&#8217;t want to get disappointed&#8230;</p>
+<p>And now this is great ! It is much over what I expected. The system is now running smoothly, even with a virtual host running. The terrible hard drive is less often in use and that makes all the difference.</p>
+<p>Yes, 1 Gb has been the standard for a while and it was time for me to get it ! I feel much more relaxed while I am working. Now, I plan soon to change my hard drive for a 7200 Rpm Hitachi one. No doubt it will be smoother and give me better startup performances.</p>
+<p>My plan is now to enjoy my Vaio one more year. Do most of people need a core duo processor on their laptop ? I don&#8217;t think so, but many people may think they need when their computer is swapping&#8230; cunning marketing !</p>
+<p><img style="margin: 0pt auto; display: block" title="OLYMPUS DIGITAL CAMERA         " src="/blog-archive/wp-content/uploads/2007/05/public/PC030009.JPG" alt="OLYMPUS DIGITAL CAMERA         " /></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

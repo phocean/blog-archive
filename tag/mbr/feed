@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MBR &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/mbr/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Debugging the MBR with IDA Pro and Bochs</title>
+		<link>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html</link>
+		<comments>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html#comments</comments>
+		<pubDate>Thu, 20 Jan 2011 19:57:46 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Assem]]></category>
+		<category><![CDATA[Bochs]]></category>
+		<category><![CDATA[Bootkit]]></category>
+		<category><![CDATA[Debugger]]></category>
+		<category><![CDATA[Forensics]]></category>
+		<category><![CDATA[IDA Pro]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[MBR]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=980</guid>
+		<description><![CDATA[Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more. Prerequisite : IDA Pro (6.0) with the IDA Python plug-in (1.4.3) Steps : Prepare...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more.</p>
+<h2>Prerequisite :</h2>
+<ul>
+<li>IDA Pro (6.0) with the IDA Python plug-in (1.4.3)</li>
+</ul>
+<h2>Steps :</h2>
+<ol>
+<li>Prepare your forensic disk image.<br />
+In general, it is that simple :</p>
+<pre>$ dd if=&lt;source&gt; of=disk.img bs=65536 conv=noerror</pre>
+<p>Or :</p>
+<pre>$ ddrescue -n &lt;source&gt; &lt;dest&gt; file.log</pre>
+<p>Check the disk geometry using :</p>
+<pre>$ fdisk -luc disk.img</pre>
+<p>These values will be useful for step 5.<br />
+However, if you have an exotic disk, it may be much trickier. For example, I got some geometry errors with a flash disk when using Bochs at step 11. Special thanks to Gene Cumm from the bochs-developpers mailing list who gave me the tip to specify the geometry to dd :</p>
+<pre>$ dd if=input of=output bs=2064384 count=507</pre>
+</li>
+<p>Refer to <a title="CHS" href="http://en.wikipedia.org/wiki/Cylinder-head-sector" target="_blank">CHS</a> if you wonder how to get these values.</p>
+<li>Extract the MBR from the disk or from the image you just took.
+<pre>$ dd if=&lt;source&gt; of=mbr.dump bs=512 count=5</pre>
+</li>
+<li>Download and install the <a title="Bochs emulator" href="http://bochs.sourceforge.net/" target="_blank">Bochs x86-64 emulator</a>, which comes with a debugger that will work nicely with IDA.</li>
+<li>Download <a title="MBR Bochs scripts" href="http://hexblog.com/ida_pro/files/mbr_bochs.zip" target="_self">this archive</a> from Hexblog (IDA Pro&#8217;s blog). We will use two files from there : <em>bochrc</em>, wich is the configuration file for Bochs, and <em>mbr.py</em> which a python file helpful from preparing the debugging environment.</li>
+<li> Copy <em>bochrc</em> in your working directory and edit the following line to match your disk image geometry :
+<pre>ata0-master: type=disk, path="sdb.img", mode=flat, cylinders=507, heads=64, spt=63</pre>
+<p>Before going on, you may test that Bochs can use the image with these settings :</p>
+<pre>C:\&gt;"c:\Program Files\Bochs-2.4.5\bochsdbg.exe" -f bochsrc -q</pre>
+</li>
+<li>In the same directory, copy <em>mbr.py</em> and edit the following settings :
+<pre># Some constants
+SECTOR_SIZE = 512
+BOOT_START  = 0x7C00
+BOOT_SIZE   = 0x7C00 + SECTOR_SIZE * 4
+BOOT_END    = BOOT_START + BOOT_SIZE
+SECTOR2     = BOOT_START + SECTOR_SIZE
+MBRNAME    = "mbr.img"
+IMGNAME     = "sdb.img"</pre>
+</li>
+<li>Now open a console and type :
+<pre>C:\&gt; mbr update</pre>
+</li>
+<li>With IDA Pro, open the <em>boshrc</em> file. IDA should recognize the format and set the proper settings.</li>
+<li>From the menu, open <em>File/Script File</em> and select <em>mbr.py</em>. It will close IDA after execution.</li>
+<li>Open again your <em>*.idb</em> file, set a breakpoint at <em>0x7C00</em>.</li>
+<li>Start the debugger.</li>
+</ol>
+<p>You should now be able to go ahead and debug the MBR step by step.</p>
+<p><img class="aligncenter size-full wp-image-996" title="ida-mbr" src="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png" alt="" width="600" height="546" srcset="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png 600w, /blog-archive/wp-content/uploads/2011/01/ida-mbr-300x273.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<h2>References :</h2>
+<ul>
+<li>Hexblog : <a title="Develop your master boot record and debug it with IDA Pro and the Bochs debugger " href="http://www.hexblog.com/?p=103" target="_blank">Develop your master boot record and debug it with IDA Pro and the Bochs debugger plugin</a></li>
+<li>MISC Magazine #53 : Votre MBR pris en otage ! &#8211; Nicolas Brulez (Kaspersky labs)</li>
+<li>Bochs User Manual : <a title="Bochs tips and techniques" href="http://bochs.sourceforge.net/doc/docbook/user/howto.html#AEN2776" target="_blank">Chapter 8, Tips and Techniques</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

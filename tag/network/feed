@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Network &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/network/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>My goodness, I got mainframed!</title>
+		<link>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html</link>
+		<comments>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
+		<pubDate>Tue, 28 May 2013 12:20:17 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[hercules390]]></category>
+		<category><![CDATA[ISPF]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[mainframe]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[simulation]]></category>
+		<category><![CDATA[tn3270]]></category>
+		<category><![CDATA[TSO]]></category>
+		<category><![CDATA[tun]]></category>
+		<category><![CDATA[unix]]></category>
+		<category><![CDATA[z/os]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
+		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Mainframes are not dead, why not pentesting it?</p>
+<p>I just watched the presentation of <strong>Phil Young</strong> at <a href="https://www.shmoocon.org/shmoocon_2013" target="_blank">Shmoocon 2013</a>: &#8220;<a href="https://www.shmoocon.org/2013/videos/Shmoocon%202013%20-%20Mainframed%20The%20Secrets%20Inside%20that%20Black%20Box.mp4" target="_blank">Mainframed: the secrets inside that black box</a>&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they have some Unix interface, and that there is a emulator for x86. Where it was less of a surprise is that their security is pretty low :-)</p>
+<p>Anyway, don&#8217;t miss watching the video. <a href="http://mainframed767.tumblr.com" target="_blank">Phil&#8217;s blog, &#8220;Soldier of Fortran&#8221;</a>, is also a gold mine, he wrote many tips, tutos and tools.</p>
+<p>It made me very curious and just in case I find some IBM Z/OS during a pentest, I though it would be nice to run it.</p>
+<h1>Installing</h1>
+<blockquote><p>Disclaimer:</p>
+<p>Although some Z/OS files are available for download on the Internet, you must own a legal license of Z/OS. This tutorial is exclusively for education-purpose, use it only for testing, never in production nor for illegal activities.</p>
+<p>Also, I am a noob in the area. So if some of you are skilled and find mistakes or improvements, please let me know in the comments. I give a great importance to your feedback and it encourages me to continue.</p></blockquote>
+<p>I glued the pieces in the following steps (Mac OS oriented and tested only with it, the same should work for Linux with minor adjustments and see the reference otherwise):</p>
+<ol class="split start">
+<li>Download and install <a href="http://www.brown.edu/cis/tn3270/" target="_blank">tn3270</a> (Mac) or <a href="http://x3270.bgp.nu/download.html" target="_blank">x3270</a> (Windows, Linux, Mac): this will be the client terminal used to connect to the mainframe.</li>
+<li>Download the emulator, <a href="http://www.hercules-390.eu" target="_blank">Hercules</a>. Install it, following the README instructions relevant to your system. Note that the instructions for Mac OS are outdated and won&#8217;t work. I followed Phil&#8217;s instructions:</li>
+</ol>
+<pre>git clone git://github.com/s390guy/hercules-390.git
+cd hercules-390
+sh autogen.sh
+./configure
+make
+make install</pre>
+<ol class="split">
+<li>Take some IBM Z/OS release, and install it:</li>
+</ol>
+<pre>mv IBM\ ZOS\ 1.10/Z110SA/images/Z110\ -\ Copy /YOUR/PATH/HERE/Z110
+cd /YOUR/PATH/HERE/Z110
+mkdir PRTR
+cd CONF
+cp ADCD_LINUX.CONF ADCD_MAC.CONF
+sed -i '' 's/\/home\/ehrocha\/hercules\/images/\/YOUR\/PATH\/HERE/g' ADCD_MAC.CONF
+sed -i '' 's/CNSLPORT \{2\}23/CNSLPORT  3270/g' ADCD_MAC.CONF
+sed -i '' 's/0E20.2   LCS  10.0.1.20/0E20.2 3088 CTCI \/dev\/tun0 1500 10.10.10.11 10.10.10.12 255.255.255.255/g' ADCD_MAC.CONF</pre>
+<ol class="split">
+<li>Getting the network to work on Mac OS require some extra steps (skip it if your are using Linux).</li>
+</ol>
+<p><a href="http://sourceforge.net/projects/tuntaposx/files/tuntap/20111101/">Download tuntaposx</a>, uncompress and install the package. No reboot it necessary, you should now have plenty of tun* (and tap*) interfaces:</p>
+<pre>$ ls /dev/tun*
+/dev/tun0 /dev/tun10 /dev/tun12 /dev/tun14 /dev/tun2 /dev/tun4 /dev/tun6 /dev/tun8
+/dev/tun1 /dev/tun11 /dev/tun13 /dev/tun15 /dev/tun3 /dev/tun5 /dev/tun7 /dev/tun9</pre>
+<ol class="split">
+<li>Okay, now we can start the emulator (we need to sudo to access to the tun0 interface, among other reasons):</li>
+</ol>
+<pre>sudo hercules -f ADCD_MAC.CONF</pre>
+<p>First of all, checks that the network is fine:</p>
+<pre># From Mac OS:
+$ ifconfig tun0
+tun0: flags=8851&lt;UP,POINTOPOINT,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500
+ inet 10.10.10.12 --&gt; 10.10.10.11 netmask 0xff000000 
+ open (pid 98687)
+
+# From Hercules:
+herc =====&gt; devlist
+[...]
+HHC02279I 0:0E20 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open
+HHC02279I 0:0E21 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open</pre>
+<p>Open <strong>tn3270</strong> and connect with default settings on localhost:</p>
+<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/blog-archive/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
+<p>And then in the hercules terminal, enter <code>ipl a80</code></p>
+<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /blog-archive/wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /blog-archive/wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
+<p><strong>It is very long to boot, don&#8217;t worry. You will actually have to use 2 terminals</strong>, so open the second one, which will show the logon screen (see screenshot below) after booting is done. It will be used for &#8220;userland&#8221; aka TSO commands.</p>
+<p>The first terminal shall be kept open as the master console, which receive system logs and can be used for &#8220;system-level&#8221;* commands (e.g root level).</p>
+<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
+<ol class="split">
+<li>At the prompt, enter <code>TSO</code>, then <code>IBMUSER</code> as the login, and <code>SYS1</code> as the password. It will automatically launch the ISPF menu:</li>
+</ol>
+<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/ispf-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
+<ol class="split">
+<li>Now, you are good to go ahead with Z/OS commands&#8230;</li>
+</ol>
+<p>This video demonstrates the boot process:</p>
+<p><iframe src="http://player.vimeo.com/video/67114095" height="281" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p><a href="http://vimeo.com/67114095">Z/OS emulation with Hercules390</a> from <a href="http://vimeo.com/user12629826">phocean</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<ol class="split">
+<li>Now, let&#8217;s get the network up.</li>
+</ol>
+<p><strong>Prepare Mac OS</strong>:</p>
+<ul>
+<li>Make sure that the Mac OS firewall is deactivated or/and that you configured pf to allow the <code>tun0</code> interface (another article coming soon on this topic).</li>
+<li>Add a route to <code>tun0</code></li>
+</ul>
+<pre>sudo route add -net 10.10.10.0/24 -interface tun0</pre>
+<ul>
+<li><span style="line-height: 14px;">You may want to activate ip forwarding, to have the Z/OS reach other interfaces through the kernel:</span></li>
+</ul>
+<pre>sudo sysctl -w net.inet.ip.forwarding=1</pre>
+<p>Now every thing is in place to allow the mainframe to reach the outside. Further routing considerations are outside the scope of this article.</p>
+<p><strong>Prepare Z/OS</strong>:</p>
+<ul>
+<li>In TSO menu, choose 3 (utilities), 4 (Dslist)</li>
+<li>Click on the line besides <code>Dsname Level</code> and type-in <code>ADCD</code> and then press <code>[Enter]</code>. ADCD is what is called a dataset.</li>
+<li>In the Command column, on the left of <code>ADCD.Z110S.PROCLIB</code>, type in <code>e</code> (stands for edit, reproduce the same pattern when I say &#8220;edit&#8221; in the following steps)</li>
+<li>Edit the TCPIP member, and make sure that the <code>//PROFILE</code> line looks like this:</li>
+</ul>
+<pre>//PROFILE DD DISP=SHR,DSN=ADCD.Z110S.TCPPARMS(DUZA)</pre>
+<p>You could change the <code>DUZA</code> string, but you would have to make sure that the corresponding profile exists in <code>ADCD.Z110S.TCPPARMS</code> (see TODO section).</p>
+<ul>
+<li>Go back to <code>Dslist</code> page using end or exit as a command. This time, type <code>DUZA</code> as dataset.</li>
+<li>Edit the <code>TCPARMS</code> member, then <code>PROFILE</code>. Once in the file, edit carefuly the following lines (at the bottom, around line 90):</li>
+</ul>
+<pre>000090 DEVICE CTCA1 CTC e20
+000091 LINK CTC1 CTC 1 CTCA1
+000092
+000093 HOME
+000094    10.10.10.11  CTC1
+000095
+000096 GATEWAY
+000097    10.10.10.12  = CTC1 1492 HOST
+000098
+000099 DEFAULTNET 10.10.10.12 CTC1 1492 0
+[...]
+000109 START CTCA1</pre>
+<ul>
+<li>In the console window, restart the network stack:</li>
+</ul>
+<pre>stop tcpip
+# wait for termination message
+start tcpip</pre>
+<ul>
+<li>If every is going well, the tunnel should get up and you should be able to ping both side (use the ping command in Z/OS from the command menu).</li>
+</ul>
+<p>This video illustrates some of this networking stuff:</p>
+<p><iframe src="http://player.vimeo.com/video/69912699" height="281" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p><a href="http://vimeo.com/69912699">Hercules390 and Z/OS, getting the network up</a> from <a href="http://vimeo.com/user12629826">phocean</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<h1>Useful commands</h1>
+<ul>
+<li>Ifconfig</li>
+</ul>
+<pre>netstat home</pre>
+<ul>
+<li>Shutdown</li>
+</ul>
+<pre># in "system" terminal:
+S SHUTSYS
+Z EOD
+
+# then, once finished, in Hercules:
+exit</pre>
+<h1>Tips</h1>
+<ul>
+<li>I was stuck at an early moment during the boot process with:</li>
+</ul>
+<pre>IXC208I THE RESPONSE TO MESSAGE IXC420D IS INCORRECT: IS NOT A VALID 
+ACTION 
+ IXC420D REPLY I TO INITIALIZE SYSPLEX ADCDPL, OR R TO REINITIALIZE 
+XCF.     
+  REPLYING I WILL IMPACT OTHER ACTIVE SYSTEMS.</pre>
+<p>You can go over it by entering this in your terminal session (tn3270):</p>
+<pre>R 00, I</pre>
+<ul>
+<li><span style="line-height: 14px;">After the long process, I actually had to open a second connection with the terminal to get the logon screen. So, just check from time to time instead of waiting for nothing in front of the first window.</span></li>
+<li>To logoff, type <code>X</code> from the ISPF main menu. The first time, you have to configure the printer. Choose <code>LOCAL</code> as print mode, and give it any name as <code>Local printer ID</code>. Then press <code>[Enter]</code>, and if you are asked for a <code>sysout class</code>, choose <code>"J"</code>. You should be back in TSO, where you can execute <code>logoff</code>. Next time, it will default to these values, so you should get straight from ISPF to TSO.</li>
+<li>Don&#8217;t forget that TSO is a CLI where you can type Z/OS and Unix commands. You actually don&#8217;t need or have to use ISPF, so don&#8217;t hesitate to use it!</li>
+</ul>
+<p>Of course, a good source of information is the <a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">hercules390 forum</a> may also be of help.</p>
+<p>Voilà, happy hacking! WTF, it seems I got mainframed too! Did you?</p>
+<p>Big thanks again to Phil Young for catching our attention on this stuff.</p>
+<h1>TODO</h1>
+<ul>
+<li><span style="line-height: 14px;">Understand and get rid off the DUZO profile: you probably noticed that we are using the DUZO  profile to load the network stack (which is after the name of the torrent, and does probably more stuff behind). For example, there is no DUZO profile in ADCD.Z110S.TCPPARMS, so I still have no idea how it actually gets loaded. It has been only 2 days that I work on Z/OS, so I still have to read the doc (and any help is welcome).</span></li>
+<li>Change the logon screen (see references).</li>
+</ul>
+<h1>References</h1>
+<ul>
+<li><a href="http://mainframed767.tumblr.com/post/27787457789/hercules-3-08-on-mac-os-x-lion" target="_blank">Hercules 3.08 on Mac OS X Lion</a></li>
+<li><a href="http://mainframed767.tumblr.com/post/40836059586/instructions-to-installing-z-os-in-hercules" target="_blank">Instructions to installing z/OS in Hercules</a></li>
+<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/blog-archive/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
+<li><a href="http://kat.ph/ibm-z-os-emulation-files-t5780374.html" target="_blank">Z/OS files</a></li>
+<li><a href="http://patata.homeip.net/blog/hercules-and-zos-tcp-ip-networking-for-adcd-versions" target="_blank">Hercules and Z/OS TCP/IP networking for ADCD versions</a></li>
+<li><a href="http://mainframed.wordpress.com/2012/06/17/changing-the-logon-screen-on-the-mainframe-zos-vtam-in-adcd/" target="_blank">Changing the logon screen on the mainframe</a></li>
+<li><a href="http://tuntaposx.sourceforge.net/">tuntaposx</a></li>
+<li><a href="http://www.js">TSO tutorial</a></li>
+<li><a href="http://answers.uchicago.edu/page.php?id=19482#GETTINGM" target="_blank">Mainframe &#8211; using TSO and ISPF</a></li>
+<li><a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">IBM online documentation</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Ethernet duplex issues</title>
+		<link>/blog-archive/2007/03/31/ethernet-duplex-issues.html</link>
+		<pubDate>Sat, 31 Mar 2007 18:45:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Ethernet]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=26</guid>
+		<description><![CDATA[<p>I had a weired issue with a server. Whereas other machines worked well with an high speed Internet connection, dowloading was painfully slow on this one. The network card, a 3Com, was also different from others (Intel).</p>]]></description>
+				<content:encoded><![CDATA[<p>I had a weired issue with a server. Whereas other machines worked well with an high speed Internet connection, dowloading was painfully slow on this one. The network card, a 3Com, was also different from others (Intel).</p>
+<p><span id="more-26"></span><br />
+Of course, I immediately thought it was a speed negociation concern with the switch.</p>
+<p>I found out that by default with Debian the network card is set on autonegociation. This is set on a card module.</p>
+<p>You can use two tools to enforce the settings : <strong>Mii-tool</strong> and <strong>ethtool</strong>.</p>
+<p>Here are some example to enforce 100 Mb full duplex with both tools :</p>
+<pre>$ mii-tool -F 10baseT-FD eth0
+$ ethtool -s eth0 duplex full</pre>
+<p>After that you can test and find the best setting for you. For that, you need to know what module your kernel is using.</p>
+<p>First, let&#8217;s find what is the model of the network card :</p>
+<pre>$ lspci | grep Ethernet</pre>
+<p>Now look at the modules availables for your kernel :</p>
+<pre>$ ls /lib/modules/`uname -r`/kernel/drivers/net/</pre>
+<p>It will give you a list of <strong>&lt;card_model&gt;.ko</strong> files that are these modules (except generic ones like <strong>mii.ko</strong>, <strong>slhc.ko </strong>and<strong> bsd_comp.ko</strong>).<br />
+You can get more info (in my case the module for my card is 3c59x.ko) :</p>
+<pre>$ modinfo 3c59x.ko</pre>
+<p>You should have found the module you need. If not, search on the web if you can use an existing module that would be compatible. At last resort, download it from the maker website and compile it.</p>
+<p>To apply it on the network card module :</p>
+<pre>$ modprobe -r 3c59x
+$ modprobe 3c59x options=1 full_duplex=1</pre>
+<p>To have this set at startup, you will have to create an 3c59cx file in the <strong>/etc/modutils</strong> directory (with a 2.4 kernel) :</p>
+<pre>options 3c59x full_duplex=1</pre>
+<p>Then :</p>
+<pre>$ update-modules</pre>
+<p>With a 2.6 kernel, just  create the same file in the /etc/modprobe.d directory.</p>
+<p>If you reboot, that shloud be all fine. Ok, now we enforce 100 Mb with full duplex on the client side. That may not be enough !</p>
+<p>You may have to enforce it on the switch. For instance, on a Cisco switch :</p>
+<pre>$ configure terminal
+$ interface fastethernet3/2
+$ speed 100
+$ duplex full
+$ no shut
+$ exit
+$ copy run start</pre>
+<p>As a conclusion, Auto-negociation is convenient but does not always success depending on the hardware you use. In my case, the same card autonegociated correctly with a different switch, and other cards worked well with that switch. So it was a very specific problem but I am sure that it is not so rare.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>SinFP, part II : comparison with Nmap 4.20</title>
+		<link>/blog-archive/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
+		<pubDate>Sun, 24 Dec 2006 14:53:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[footprinting]]></category>
+		<category><![CDATA[Nmap]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[SinFP]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=14</guid>
+		<description><![CDATA[<p style="margin-bottom: 0cm;">Here is the update of my previous test of SinFP.</p> <p style="margin-bottom: 0cm;">I compared then the output of SinFP and Nmap on different machines, and found out that SinFP made a slightly better job than Nmap in OS detection, though it is not the primary goal of Nmap whereas it is the one of SinFP.</p> <p style="margin-bottom: 0cm;" lang="en-US">However, I made a mistake that the author of SinFP made me aware of.</p> <p style="margin-bottom: 0cm;">I conducted the tests of Nmap using the <span lang="en-US">package</span> of my distribution, thinking it was the latest one.</p> <p style="margin-bottom: 0cm;" lang="en-US">Actually, it was only the version 4.10. Moreover, the current version, 4.20, brought up a new OS detection engine.</p> <p style="margin-bottom: 0cm;" lang="en-US">Therefore, a new test with version 4.20 was absolutely needed.</p>]]></description>
+				<content:encoded><![CDATA[<p style="margin-bottom: 0cm;">Here is the update of my previous test of SinFP.</p>
+<p style="margin-bottom: 0cm;">I compared then the output of SinFP and Nmap on different machines, and found out that SinFP made a slightly better job than Nmap in OS detection, though it is not the primary goal of Nmap whereas it is the one of SinFP.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">However, I made a mistake that the author of SinFP made me aware of.</p>
+<p style="margin-bottom: 0cm;">I conducted the tests of Nmap using the <span lang="en-US">package</span> of my distribution, thinking it was the latest one.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">Actually, it was only the version 4.10. Moreover, the current version, 4.20, brought up a new OS detection engine.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">Therefore, a new test with version 4.20 was absolutely needed.</p>
+<p><span id="more-14"></span></p>
+<p>I took the source of Nmap 4.20 and compiled it.</p>
+<p lang="en-US">First, I just rescanned the same machines with Nmap 4.20 and compared them with the corresponding output of SinFP.</p>
+<p lang="en-US">I also added a new test, to demonstrate what SinFP is made for. I always use :</p>
+<pre>$ nmap -sS -O -PI -PT $IP </pre>
+<p>and</p>
+<pre>$ sinfp.pl -i $IP -p $PORT</pre>
+<p>.</p>
+<h2><strong>FREEBSD 6.1, open port with Netcat</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:25 CET
+Interesting ports on 192.168.0.3:
+Not shown: 1696 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: FreeBSD 6.X
+OS details: FreeBSD 6.1-RELEASE through 6.2-BETA3 (x86)
+Uptime: 0.242 days (since Tue Dec 19 05:37:30 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 18.289 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>We can say this is a draw.</p>
+<h2><strong>Windows 2000 server, various open port, real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:29 CET
+Interesting ports on 192.168.0.20:
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+42/tcp   open  nameserver
+53/tcp   open  domain
+80/tcp   open  http
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+1026/tcp open  LSA-or-nterm
+1029/tcp open  ms-lsa
+1112/tcp open  msql
+1723/tcp open  pptp
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+3372/tcp open  msdtc
+5800/tcp open  vnc-http
+5900/tcp open  vnc
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Microsoft Windows 2000
+OS details: Microsoft Windows 2000, SP0, SP1, or SP2
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.735 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>Another draw</p>
+<h2><strong>Debian Sarge (2.4 kernel), various open port, real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:33 CET
+Interesting ports on 192.168.0.5:
+Not shown: 1690 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+111/tcp open  rpcbind
+113/tcp open  auth
+199/tcp open  smux
+907/tcp open  unknown
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose|WAP|storage-misc
+Running: Linux 2.4.X, Linksys Linux 2.4.X, Asus Linux 2.4.X, Maxtor Linux 2.4.X
+OS details: Linux 2.4.20 - 2.4.32, Linux-based embedded device (Linksys WRT54GL WAP, Buffalo AirStation WLA-G54 WAP, Maxtor Shared Storage Drive, or Asus Wireless Storage Router)
+Uptime: 0.392 days (since Tue Dec 19 02:09:54 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.432 seconds</pre>
+<h3>SinFP</h3>
+<p><strong><br />
+</strong></p>
+<pre>IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x</pre>
+<p><strong> </strong></p>
+<h3><strong>Conclusion</strong></h3>
+<p>Draw again (note that the OS details are not correct)</p>
+<h2><strong>Debian Etch (2.6 kernel), various open ports with real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-24 01:19 CET
+Interesting ports on mars.int.jcbnet.org (192.168.1.10):
+Not shown: 1684 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+993/tcp  open  imaps
+995/tcp  open  pop3s
+2000/tcp open  callbook
+2500/tcp open  rtsserv
+3000/tcp open  ppp
+5432/tcp open  postgres
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.9 - 2.6.12 (x86)
+Uptime: 37.392 days (since Thu Nov 16 15:55:38 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.354 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2: GNU/Linux: Linux: 2.6.x&lt;/strong&gt;</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>Draw always</p>
+<h2><strong>Debian NAT box</strong></h2>
+<p>Now, it is time to test SinFP in the condition it is aimed at : a NAT environement.</p>
+<p>For this test, I took the debian box and set NAT (should say PAT) for 2 ports with iptables :</p>
+<pre>$ echo « 1 » &amp;gt; /proc/sys/net/ipv4/ip_forward
+$ iptables -t nat -A PREROUTING -p  --dport 21 -j DNAT –to 192.168.1.20
+$ iptables -t nat -A PREROUTING -p  --dport 800 -j DNAT –to 192.168.1.115</pre>
+<p>The 192.168.1.20 is the Windows 2000 server machine, with the IIS FTP server running.</p>
+<p>The 192.168.1.115 is the FreeBSD box, having Netcat listening on the port 800.</p>
+<p>Doing that, we expect Nmap to be lost as it considers the target is a single machine. Will it detect Linux, FreeBSD or Windows ?</p>
+<p>Let&#8217;s try :</p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.110
+
+Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-24 01:01 CET
+Interesting ports on 192.168.1.110:
+Not shown: 1688 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+111/tcp open  rpcbind
+113/tcp open  auth
+199/tcp open  smux
+618/tcp open  unknown
+800/tcp open  mdbs_daemon
+MAC Address: xx:xx:xx:xx:xx:xx
+No OS matches for host (If you know what OS is running on it, see http://insecure.org/nmap/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=4.20%D=12/24%OT=21%CT=1%CU=37629%PV=Y%DS=1%G=Y%M=0012F0%TM=458DC3
+OS:56%P=i686-pc-linux-gnu)SEQ(SP=82%GCD=1%ISR=98%TI=I%II=I%SS=O%TS=0)SEQ(SP
+OS:=8C%GCD=1%ISR=97%TI=I%II=I%SS=O%TS=0)SEQ(SP=8B%GCD=1%ISR=98%TI=I%II=I%SS
+OS:=O%TS=0)SEQ(SP=88%GCD=1%ISR=98%TI=I%II=I%SS=O%TS=0)SEQ(SP=8B%GCD=1%ISR=9
+OS:8%TI=I%II=I%SS=O%TS=0)OPS(O1=M5B4NW0NNT00NNS%O2=M5B4NW0NNT00NNS%O3=M5B4N
+OS:W0NNT00%O4=M5B4NW0NNT00NNS%O5=M5B4NW0NNT00NNS%O6=M5B4NNT00NNS)WIN(W1=FAF
+OS:0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=7F%W=FAF0%O=M5B
+OS:4NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T=7F%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=40%
+OS:W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=7F%W=FAF0%S=O%A=S+%F=AS%O=M5B4
+OS:NW0NNT00NNS%RD=0%Q=)T4(R=Y%DF=N%T=7F%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O
+OS:=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40
+OS:%TOS=C0%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUL=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%TOSI=S%CD=S%SI=S%DLI=S)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 13.061 seconds&lt;/blockquote&gt;
+Indeed, Nmap could not determine the system and ask me to submit the fingerprint to improve the signature database.</pre>
+<p>In such a case, SinFP should be able to detect the systems on each port :</p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 21
+
+P1: B11113 F0x12 W64240 O0204ffff M1460
+P2: B11113 F0x12 W64240 O0204ffff010303000101080a000000000000000001010402 M1460
+P3: B11021 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 22
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030300 M1460
+P3: B10120 F0x04 W0 O0 M0
+
+IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x
+
+[sourcecode language=&quot;text&quot;]$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 800
+
+P1: B11113 F0x12 W65535 O0204ffff M1460
+P2: B11113 F0x12 W65535 O0204ffff010303010101080affffffff4445414404020000 M1460
+P3: B11120 F0x04 W0 O0 M0
+
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<p>Correct. Now we have a good picture of the target. A big evidence that the two tools are complementary, isn&#8217;t it ?</p>
+<h2><strong>Conclusion</strong></h2>
+<p>Well, Nmap did a lot improved, indeed !</p>
+<p>With rather common systems, we have a draw  between SinFP and Nmap. It would be interesting to test more esoteric OS, but I can&#8217;t for now.</p>
+<p>So, Nmap or SinFP ? Of course, you should use both !</p>
+<p>Nmap will give you a quick and stealth overview of the open port of the target. Then, scan each port to check if it is a single machine or if there is some NAT activated.<br />
+In case of NAT, SinFP will give you a quite precise idea of what is running behind.  Anyway, matching the outputs of both Nmap and SinFP will provide you with much more interesting data.</p>
+<p>Thanks again to the authors of these nice tools.</p>
+<p>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a><br />
+Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nmap/</a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>SinFP, part I : introduction and comparison with Nmap 4.10</title>
+		<link>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
+		<comments>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
+		<pubDate>Sun, 17 Dec 2006 06:59:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[audit]]></category>
+		<category><![CDATA[footprinting]]></category>
+		<category><![CDATA[Nmap]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[SinFP]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=13</guid>
+		<description><![CDATA[<p style="margin-bottom: 0cm;">Last week, I found out a very interesting program, SinFP (those who are french and read the Misc magazine must already know ;) ).</p> <p style="margin-bottom: 0cm;">Its goal is to help you detecting what operating system a remote machine is running. <br />Well, you will tell me that we already have many programs that does this job, starting from the so famous nmap... but the approach is quite different this time.</p>]]></description>
+				<content:encoded><![CDATA[<p style="margin-bottom: 0cm">Last week, I found out a very interesting program, SinFP (those who are french and read the Misc magazine must already know ;) ).</p>
+<p style="margin-bottom: 0cm">Its goal is to help you detecting what operating system a remote machine is running.<br />
+Well, you will tell me that we already have many programs that does this job, starting from the so famous nmap&#8230; but the approach is quite different this time.</p>
+<p><span id="more-13"></span></p>
+<p style="margin-bottom: 0.5cm">Let me explain in a short, but I hope clear, version.</p>
+<p style="margin-bottom: 0cm">A program like Nmap usually scan all the open ports of a remote IP address. According to the answers it gets back on each port, and using a signature database, nmap can identify the target OS.</p>
+<p style="margin-bottom: 0cm">Sounds good. But actually, SinFP shows there is a better way to do.</p>
+<p style="margin-bottom: 0cm">The author of SinFP got to the conclusion that nowadays, most of the IP addresses are managed by a NAT / PAT equipement (firewall, router). It means that behind a single public IP address, there is not only the firewall itself, but several machines and systems for each open service. For instance, you will have the HTTP port redirected to a Windows IIS machine, the SMTP one to a Linux box, the DNS to a solaris server, and so on.</p>
+<p style="margin-bottom: 0cm">So obviously Nmap just can&#8217;t be so reliable in such a case. How trustful will its detection be if it finds a Postfix service and a IIS service running on the same address ?</p>
+<p style="margin-bottom: 0cm">The solution of SinFP is rather elegant. First, considering the NAT problem, it focuses on one port. So you are practically sure that you are on the final machine, just the proxy case is left.</p>
+<p style="margin-bottom: 0cm">On this port, it tries fingerprinting with its internal signature database. The way it does it makes all the strengh of SinFP.<br />
+It sends 3 requests, similar to any request generated by the system call connect() :</p>
+<pre>P1 = P2 without option
+P2 = TCP SYN with options
+P3 = TCP SYN-ACK</pre>
+<p style="margin-bottom: 0cm" lang="en-US">For your scan, you can also use only P2, for stealthiness.</p>
+<p style="margin-bottom: 0cm" lang="en-US">Then it catches the answers to these requests and generate from them a single signature with some selected patterns.<br />
+Finally, it compares it with the signatures in its database. The mathematic model it uses is far too complex for me to explain, but just now it tries to find the closest signature as possible, accepting some variations due to specific configurations or network conditions.</p>
+<p style="margin-bottom: 0cm" lang="en-US">You will get an answer like that :</p>
+<pre>IPv4: HEURISTIC0/P1P2P3 &lt;detected OS&gt;</pre>
+<p>It means that the signature matched all the requests, P1, P2 and P3. This result is the most reliable.</p>
+<p style="margin-bottom: 0cm" lang="en-US">If you get P1P2, it means that the signature did not fully match the one in the database&#8230; but it is still pretty reliable, as we will see further.</p>
+<p style="margin-bottom: 0cm" lang="en-US">As a final try, if there is still no exact signature, SinFP will try to modify the signature according to a transformation mask to get closer to an existing ones.</p>
+<p style="margin-bottom: 0cm">If you want to have more details on how it works, you should go the website of the author : <a href="http://www.gomor.org/">http://www.gomor.org</a></p>
+<p style="margin-bottom: 0cm">But now, let&#8217;s have a quick and dirty test, comparing this tool with Nmap :</p>
+<p style="margin-bottom: 0cm; text-decoration: underline"><strong>Debian Etch box (2.6 kernel), various open ports with real services</strong></p>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>Nmap</strong></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.230
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:26
+Interesting ports on xxx (192.168.1.230):
+Not shown: 1674 closed ports
+PORT STATE SERVICE
+22/tcp open ssh
+25/tcp open smtp
+53/tcp open domain
+
+80/tcp open http
+443/tcp open https
+Device type: general purpose
+Running: Linux 2.4.X|2.5.X|2.6.X
+OS details: Linux 2.4.7 - 2.6.11</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.230 80
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030302 M1460
+P3: B00000 F0 W0 O0 M0
+IPv4: HEURISTIC0/P1P2: GNU/Linux: Linux: 2.6.x</pre>
+<p style="margin-bottom: 0cm"><strong><em>Conclusion</em></strong> : <strong>SinFP</strong> gives the exact result (Linux 2.6.X) when Nmap is detecting a Linux box, nothing more.</p>
+<p style="margin-bottom: 0cm"><ins><strong>FreeBSD 6.1, no open port</strong></ins></p>
+<p><em><strong>Nmap</strong></em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.115
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:37 CET
+Warning: OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+All 1679 scanned ports on 192.168.1.115 are closed
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Apple Mac OS X 10.1.X, Apple Mac OS 8.X, FreeBSD 5.X|6.X
+Too many fingerprints match this host to give specific OS details</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.115 80
+
+*** Cannot fingerprint a closed or filtered port</pre>
+<p style="margin-bottom: 0cm"><strong><strong><em>Conclusion</em></strong></strong> : No surprise, SinFP can&#8217;t be tested on this point, since it applies to an open port (I wanted to check that you follow :D ). That is not the goal of SinFP to do differently. However, it was interesting to see that <strong>Nmap</strong> gives a answer. Not precise, but at least it guesses that it is a BSD kernel.</p>
+<p style="margin-bottom: 0cm"><ins><strong>FreeBSD 6.1, open port with NetCat</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>Nmap</em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.115
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:56 CET
+Interesting ports on 192.168.1.115:
+Not shown: 1678 closed ports
+PORT STATE SERVICE
+80/tcp open http
+MAC Address: xx:xx:xx:xx:xx:xx
+No exact OS matches for host &lt;/strong&gt;(If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+
+TCP/IP fingerprint:
+SInfo(V=4.10%P=i686-pc-linux-gnu%D=12/17%Tm=4584DC41%O=80%C=1%M=0012F0)
+TSeq(Class=TR%IPID=I%TS=1000HZ)
+T1(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=MNWNNT)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=0%ULEN=134%DAT=E)</pre>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>SinFP</em></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.115 80
+
+P1: B11113 F0x12 W65535 O0204ffff M1460
+P2: B11113 F0x12 W65535 O0204ffff010303010101080affffffff4445414404020000 M1460
+P3: B11120 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<p style="margin-bottom: 0cm"><strong style="font-weight: normal; font-style: italic">Conclusion</strong> : well, I was quite surprised. Nmap is totally lost. Why did it do a better job with no open port at all ? I haven&#8217;t searched yet, so if someone has a clue to explain well this pattern, please tell me. I have a feeling that it is because of the nmap port on FreeBSD, but I am not sure to be right.<br />
+<strong>SinFP</strong> does a pretty good job, all 3 patterns displayed concern FreeBSD from 6.0 to 7.0.</p>
+<p><ins><strong>Debian Sarge (2.4 kernel), various open port, real services</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>Nmap</em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.110
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:46 CET
+
+Interesting ports on 192.168.1.110:
+Not shown: 1671 closed ports
+PORT STATE SERVICE
+22/tcp open ssh
+25/tcp open smtp
+80/tcp open http
+111/tcp open rpcbind
+113/tcp open auth
+199/tcp open smux
+443/tcp open https
+907/tcp open unknown
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Linux 2.4.X|2.5.X
+OS details: Linux 2.4.0 - 2.5.20
+Uptime 0.354 days (since Sat Dec 16 22:17:30 2006)</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 443
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030300 M1460
+P3: B10120 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x</pre>
+<p style="margin-bottom: 0cm"><strong><em>Conclusion</em></strong> : Here I think we can consider that both <strong>Nmap</strong> and <strong>SinFP</strong> give the exact answer. This is a draw here.</p>
+<p style="margin-bottom: 0cm"><ins><strong>Windows 2000 server, various open port, real services</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold; font-style: italic">Nmap</p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.20
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 07:11 CET
+Interesting ports on moon.int.jcbnet.org (192.168.1.20):
+Not shown: 1656 closed ports
+PORT STATE SERVICE
+21/tcp open ftp
+25/tcp open smtp
+42/tcp open nameserver
+53/tcp open domain
+80/tcp open http
+88/tcp open kerberos-sec
+135/tcp open msrpc
+139/tcp open netbios-ssn
+389/tcp open ldap
+443/tcp open https
+445/tcp open microsoft-ds
+464/tcp open kpasswd5
+593/tcp open http-rpc-epmap
+636/tcp open ldapssl
+1026/tcp open LSA-or-nterm
+1029/tcp open ms-lsa
+1112/tcp open msql
+1723/tcp open pptp
+3268/tcp open globalcatLDAP
+3269/tcp open globalcatLDAPssl
+3372/tcp open msdtc
+5800/tcp open vnc-http
+5900/tcp open vnc
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Microsoft Windows 95/98/ME|NT/2K/XP
+OS details: Microsoft Windows Millennium Edition (Me), Windows 2000 Professional or Advanced Server, or Windows XP</pre>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>SinFP</em></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.20 5900
+
+P1: B11113 F0x12 W64240 O0204ffff M1460
+P2: B11113 F0x12 W64240 O0204ffff010303000101080a000000000000000001010402 M1460
+P3: B11021 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<p style="margin-bottom: 0cm"><em><strong>Conclusion</strong></em> : SinFP is right and far more precise than Nmap.</p>
+<p style="margin-bottom: 0cm">As you can see, the results of SinFP are just fine for each of my tests. Ok, it was not the perfect test, it was rather quick and dirty, but personnally it is enough for me to be convinced. It will be from now one of my favorite tools.</p>
+<p style="margin-bottom: 0cm" lang="en-US">When it comes to OS fingerprinting, SinFP makes a better job than Nmap. But we should not be hard on Nmap. They are different tools, and we actually should not have compared them directly. Nmap is an excellent port scanner for which OS detection is just an option, while SinFP focusses on it.</p>
+<p style="margin-bottom: 0cm">Its approach is new, ingenious and efficient.</p>
+<p style="margin-bottom: 0cm">I could not test SinFP on more systems for now, but I will update here if I can. You can also comment here if you find a system that could not be detected by SinFP. In that case, contact also the author of SinFP, sending him the new fingerprint.</p>
+<p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
+<p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
+<h3>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a></h3>
+<p><img src="/blog-archive/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

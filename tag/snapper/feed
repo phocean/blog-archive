@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>snapper &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/snapper/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>A journey with Btrfs</title>
+		<link>/blog-archive/2016/03/20/a-journey-with-btrfs.html</link>
+		<comments>/blog-archive/2016/03/20/a-journey-with-btrfs.html#comments</comments>
+		<pubDate>Sun, 20 Mar 2016 15:35:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[btrfs]]></category>
+		<category><![CDATA[snapper]]></category>
+		<category><![CDATA[virtualbox]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
+		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h1>Why BTRFS ?</h1>
+<p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
+<p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
+<p>As a quick reminder, the goal of this file system is to bring to Linux a fully featured file system similar to zfs. Some of these features promise a lot of awesomeness: snapshots, native RAID, automatic defragmentation and repairs, etc.</p>
+<p>Wouldn&#8217;t it be cool to have such a file system for your data? Among them, snapshotting really is a killer feature. See it as a global git for all your data. You can track any file history, make a diff comparison on them and revert back to a chosen version, anytime and on-line.</p>
+<p>Btrfs has been under development for a while and it is still undergoing. However, the first stable version has finally been released last year.</p>
+<p>Many people warn that it is not production ready yet. It seems obvious for critical production systems, under heavy load or using the most advanced features (e.g. RAID). But what about a simple /home, mainly using snapshots (which have been around for a while)?</p>
+<p>You will see that there are still some issues with virtualization.</p>
+<p><strong><em>Disclaimer 1: this is in no way a review or a benchmark of Btrfs. Consider it simply as some feedback for my specific use case.</em></strong></p>
+<h1>Getting ready</h1>
+<p>This chapter is a summary of procedures found in various resources, along with my feedback.</p>
+<p><em><strong>Disclaimer 2: First of all, make several backup of your entire /home. And make sure that it is operational and complete. Anyway, beware that there is obviously some inherent risk for your data in manipulating your home partition. So, do not come back to insult me if you lose any data.</strong></em></p>
+<p>First, note that there is a conversion utility <em>btrfs-convert</em>, to convert an existing ext4 partition to btrfs. While this sounds cool, it did not work well with my partition, leading to many corrupted inodes.</p>
+<p>So my advice is to just make a good backup of your home:</p>
+<pre>% rsync -av /home /your/backup/</pre>
+<p>Then, log out and format the partition as root:</p>
+<pre># mount | grep home
+/dev/mapper/system-home on /home type ext4 (rw,noatime,data=ordered)
+# umount /home
+# mkfs.btrfs /dev/mapper/system-home</pre>
+<p>Change the file system and its options in /etc/fstab. For example:</p>
+<pre>/dev/system/home     /home     ext4     defaults,noatime     1 1</pre>
+<p>should become (also note the change on the last digit):</p>
+<pre>/dev/system/home   /home    btrfs  defaults,noatime,ssd,space_cache,compress=lzo    1 0</pre>
+<p>Re-mount /home and you are done!</p>
+<h1>Snapper</h1>
+<p>The main purpose for me to test Btrfs was the snapshot feature, in the hope to keep a version history of each file and avoid accidental deletions and changes.</p>
+<p>Of course, one could use the Btrfs commands and implement snapshots manually. But why reinventing the wheel?</p>
+<p>The guys behind <a href="http://snapper.io/">snapper</a>  already made a service especially for that. It is basically a wrapper over Btrfs that will make automatic snapshots in the background, based on your frequency settings, and ease their handling.</p>
+<p>Once installed, it can be enabled with the following command:</p>
+<pre># snapper -c home create-config /home</pre>
+<p>It has the effect of creating a configuration file, where you can adjust the number of snapshots you want to keep per day, week, month, etc. Of course, don&#8217;t keep too much data as it will waste free space, especially if you happen to move large amounts of data. Hourly and daily snapshots are OK, as they would be cleaned up quickly. But monthly or yearly snapshots would consume a lot of space and would be pretty useless for a /home.</p>
+<p>Here is what I used, without consuming much more than 10 GB:</p>
+<pre># subvolume to snapshot
+SUBVOLUME="/home"
+
+# filesystem type
+FSTYPE="btrfs"
+
+# users and groups allowed to work with config
+ALLOW_USERS=""
+ALLOW_GROUPS="
+
+# sync users and groups from ALLOW_USERS and ALLOW_GROUPS to .snapshots
+# directory
+SYNC_ACL="no"
+
+# start comparing pre- and post-snapshot in background after creating
+# post-snapshot
+BACKGROUND_COMPARISON="yes"
+
+# run daily number cleanup
+NUMBER_CLEANUP="yes"
+
+# limit for number cleanup
+NUMBER_MIN_AGE="1800"
+NUMBER_LIMIT="10"
+NUMBER_LIMIT_IMPORTANT="5"
+
+# create hourly snapshots
+TIMELINE_CREATE="yes"
+
+# cleanup hourly snapshots after some time
+TIMELINE_CLEANUP="yes"
+
+# limits for timeline cleanup
+TIMELINE_MIN_AGE="1800"
+<strong>TIMELINE_LIMIT_HOURLY="10"</strong>
+<strong>TIMELINE_LIMIT_DAILY="7"</strong>
+<strong>TIMELINE_LIMIT_WEEKLY="2"</strong>
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+
+# cleanup empty pre-post-pairs
+EMPTY_PRE_POST_CLEANUP="yes"
+
+# limits for empty pre-post-pair cleanup
+EMPTY_PRE_POST_MIN_AGE="1800"</pre>
+<p>Now, let&#8217;s play a little. In the following sequence, we create a file containing &#8220;Hello World!&#8221;, we then create a manual snapshot, change the file and display the differences:</p>
+<pre># vim test.txt
+# snapper -c home create --description "before test"
+# vim test.txt
+# sudo snapper -c home list
+Type   | # | Pre # | Date                     | User | Cleanup  | Description  | Userdata
+-------+---+-------+--------------------------+------+----------+--------------+---------
+single | 0 |       |                          | root |          | current      | 
+single | 1 |       | Sun Mar 13 19:44:21 2016 | root |          | before test  | 
+single | 2 |       | Sun Mar 13 19:45:12 2016 | root |          | created test | 
+single | 3 |       | Sun Mar 13 19:52:39 2016 | root |          | update test  | 
+single | 4 |       | Sun Mar 13 20:00:01 2016 | root | timeline | timeline     | 
+single | 5 |       | Sun Mar 13 21:00:01 2016 | root | timeline | timeline     | 
+single | 6 |       | Sun Mar 13 22:00:01 2016 | root | timeline | timeline     | 
+# snapper -c home status 1..0
+--- "/home/.snapshots/2/snapshot/phocean/test.txt" 2016-03-13 19:44:53.370641373 +0100
++++ "/home/phocean/test.txt" 2016-03-13 19:45:27.226586459 +0100
+@@ -1 +1,2 @@
+Hell World!
++Good bye.
+@@ -0,0 +1,2 @@
++Hell World!
++Good bye</pre>
+<p>Neat, isn&#8217;t it? Now, what if we decide to restore the file to this snapshot:</p>
+<pre>snapper -c home undochange 1..0 /home/phocean/test.txt</pre>
+<p>That&#8217;s it!</p>
+<p>Note that all these operations can be done against the entire partition (no argument needed), a folder or a file.</p>
+<h1>Pros</h1>
+<p>Regarding regular files, I had no issue at all. After a week of intensive use, I already the occasion to enjoy the benefits of having snapshots and being able to restore a file.</p>
+<p>On the performance side, even though I haven&#8217;t done any benchmark, it is a least as fast as ext4. It is said that under some conditions, compression can be a big read rate boost.</p>
+<p>On the compression side, on my partition of 400 GB, it allowed me to reclaim around 20 GB of space. Of course, the gain you can expect is totally related to the sorts of files you have (you won&#8217;t gain much on files that are already compressed or encrypted).</p>
+<h1>Cons</h1>
+<p>As warned on the official wiki itself, you should not use Btrfs as-is with database or virtualization solutions.</p>
+<p>Dixit the official wiki:</p>
+<blockquote><p>Files with a lot of random writes can become heavily fragmented (10000+ extents) causing trashing on HDDs and excessive multi-second spikes of CPU load on systems with an SSD or large amount a RAM.</p></blockquote>
+<p>Indeed, I quickly experienced some issues with Virtualbox. Under heavy I/O operations, and having several machines running at a time, I had the guest file systems corrupted more than once. And so badly that the guest machine was unrecoverable (even with snapshots). Sometimes I got plenty of ext4 errors, or sometimes it just froze, while copying a bunch of file or doing an <em>apt-get upgrade.</em>..</p>
+<p>The <a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">workarounds</a> did not make it for me:</p>
+<ol>
+<li>I even did not test disabling CoW for the whole partition. It kills one of the main advantages of using Btrfs.</li>
+<li>I tried disabling CoW for all the VM folder. While the corruption frequency decreased, it still occurred after a while.</li>
+</ol>
+<p>So, I would simply adivse of not putting any virtual machine on the Btrfs partitions, until this thing definitely get sorted. I use virtual machines intensively at work and need them to be reliable.</p>
+<h1>Conclusion</h1>
+<p>Btrfs is awesome and pretty stable at this time, unless you need to host virtual machines. You could still have a dedicate ext4 partition for you VMs, and enjoy Btrfs for the rest of your home.</p>
+<p>To be honest, I did not bother (not wanting to manage several partitions), and switched back to ext4 for all, in the expectation of better days. I am not sure if this should be addressed on the Btrfs, or the Virtualbox side (or both).</p>
+<h1>References</h1>
+<ul>
+<li><a href="https://en.opensuse.org/openSUSE:Snapper_FAQ">Snapper FAQ</a></li>
+<li><a href="https://fr.opensuse.org/openSUSE:Snapper_Tutorial">Snapper tutorial</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs">Arch Linux Btrfs wiki</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Btrfs">Gentoo Btrfs wiki</a></li>
+<li><a href="http://www.nrtm.org/index.php/2012/03/13/the-joys-of-btrfs-and-opensuse-or-no-space-left-on-device/">The joys of btrfs and opensuse or no space left on device</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">CoW workarounds</a></li>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+	</channel>
+</rss>

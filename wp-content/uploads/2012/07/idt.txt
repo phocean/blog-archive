@@ -1,0 +1,257 @@
+Index    Selector Function                   Value        Details
+0        8        KiTrap00                   0x8053e25c   ntoskrnl.exe .text
+1        8        KiTrap01                   0x8053e3d4   ntoskrnl.exe .text
+2        58       KiTrap02                   0x0          
+3        8        KiTrap03                   0x8053e7a4   ntoskrnl.exe .text
+4        8        KiTrap04                   0x8053e924   ntoskrnl.exe .text
+5        8        KiTrap05                   0x8053ea80   ntoskrnl.exe .text
+6        8        KiTrap06                   0x8053ebf4   ntoskrnl.exe .text
+7        8        KiTrap07                   0x8053f25c   ntoskrnl.exe .text
+8        50       KiTrap08                   0x0          
+9        8        KiTrap09                   0x8053f680   ntoskrnl.exe .text
+A        8        KiTrap0A                   0x8053f7a0   ntoskrnl.exe .text
+B        8        KiTrap0B                   0x8053f8e0   ntoskrnl.exe .text
+C        8        KiTrap0C                   0x8053fb3c   ntoskrnl.exe .text
+D        8        KiTrap0D                   0x8053fe20   ntoskrnl.exe .text
+E        8        KiTrap0E                   0x80540528   ntoskrnl.exe .text
+F        8        KiTrap0F                   0x80540858   ntoskrnl.exe .text
+10       8        KiTrap10                   0x80540978   ntoskrnl.exe .text
+11       8        KiTrap11                   0x80540ab0   ntoskrnl.exe .text
+12       A0       KiTrap12                   0x80540858   ntoskrnl.exe .text
+13       8        KiTrap13                   0x80540c18   ntoskrnl.exe .text
+14       8        -                          0x80540858   ntoskrnl.exe .text
+15       8        -                          0x80540858   ntoskrnl.exe .text
+16       8        -                          0x80540858   ntoskrnl.exe .text
+17       8        -                          0x80540858   ntoskrnl.exe .text
+18       8        -                          0x80540858   ntoskrnl.exe .text
+19       8        -                          0x80540858   ntoskrnl.exe .text
+1A       8        -                          0x80540858   ntoskrnl.exe .text
+1B       8        -                          0x80540858   ntoskrnl.exe .text
+1C       8        -                          0x80540858   ntoskrnl.exe .text
+1D       8        -                          0x80540858   ntoskrnl.exe .text
+1E       8        -                          0x80540858   ntoskrnl.exe .text
+1F       8        -                          0x80540858   ntoskrnl.exe .text
+20       8        -                          0x0          
+21       8        -                          0x0          
+22       8        -                          0x0          
+23       8        -                          0x0          
+24       8        -                          0x0          
+25       8        -                          0x0          
+26       8        -                          0x0          
+27       8        -                          0x0          
+28       8        -                          0x0          
+29       8        -                          0x0          
+2A       8        KiGetTickCount             0x8053da9e   ntoskrnl.exe .text
+2B       8        KiCallbackReturn           0x8053dba0   ntoskrnl.exe .text
+2C       8        KiSetLowWaitHighThread     0x8053dd40   ntoskrnl.exe .text
+2D       8        KiDebugService             0x8053e680   ntoskrnl.exe .text
+2E       8        KiSystemService            0x8053d541   ntoskrnl.exe .text
+2F       8        -                          0x80540858   ntoskrnl.exe .text
+30       8        KiUnexpectedInterrupt0     0x806d7d54   hal.dll .text
+31       8        KiUnexpectedInterrupt1     0x8235d044   
+32       8        KiUnexpectedInterrupt2     0x8053cc14   ntoskrnl.exe .text => JMP 0x8053d3e7
+33       8        KiUnexpectedInterrupt3     0x82390044   
+34       8        KiUnexpectedInterrupt4     0x8201f044   
+35       8        KiUnexpectedInterrupt5     0x820bfdd4   
+36       8        KiUnexpectedInterrupt6     0x8053cc3c   ntoskrnl.exe .text => JMP 0x8053d3e7
+37       8        KiUnexpectedInterrupt7     0x8053cc46   ntoskrnl.exe .text => JMP 0x8053d3e7
+38       8        KiUnexpectedInterrupt8     0x806d1ef0   hal.dll .text
+39       8        KiUnexpectedInterrupt9     0x8253c80c   
+3A       8        KiUnexpectedInterrupt10    0x8202339c   
+3B       8        KiUnexpectedInterrupt11    0x81f79dd4   
+3C       8        KiUnexpectedInterrupt12    0x8202360c   
+3D       8        KiUnexpectedInterrupt13    0x8053cc82   ntoskrnl.exe .text => JMP 0x8053d3e7
+3E       8        KiUnexpectedInterrupt14    0x8242142c   
+3F       8        KiUnexpectedInterrupt15    0x820a3dd4   
+40       8        KiUnexpectedInterrupt16    0x8053cca0   ntoskrnl.exe .text => JMP 0x8053d3e7
+41       8        KiUnexpectedInterrupt17    0x8053ccaa   ntoskrnl.exe .text => JMP 0x8053d3e7
+42       8        KiUnexpectedInterrupt18    0x8053ccb4   ntoskrnl.exe .text => JMP 0x8053d3e7
+43       8        KiUnexpectedInterrupt19    0x8053ccbe   ntoskrnl.exe .text => JMP 0x8053d3e7
+44       8        KiUnexpectedInterrupt20    0x8053ccc8   ntoskrnl.exe .text => JMP 0x8053d3e7
+45       8        KiUnexpectedInterrupt21    0x8053ccd2   ntoskrnl.exe .text => JMP 0x8053d3e7
+46       8        KiUnexpectedInterrupt22    0x8053ccdc   ntoskrnl.exe .text => JMP 0x8053d3e7
+47       8        KiUnexpectedInterrupt23    0x8053cce6   ntoskrnl.exe .text => JMP 0x8053d3e7
+48       8        KiUnexpectedInterrupt24    0x8053ccf0   ntoskrnl.exe .text => JMP 0x8053d3e7
+49       8        KiUnexpectedInterrupt25    0x8053ccfa   ntoskrnl.exe .text => JMP 0x8053d3e7
+4A       8        KiUnexpectedInterrupt26    0x8053cd04   ntoskrnl.exe .text => JMP 0x8053d3e7
+4B       8        KiUnexpectedInterrupt27    0x8053cd0e   ntoskrnl.exe .text => JMP 0x8053d3e7
+4C       8        KiUnexpectedInterrupt28    0x8053cd18   ntoskrnl.exe .text => JMP 0x8053d3e7
+4D       8        KiUnexpectedInterrupt29    0x8053cd22   ntoskrnl.exe .text => JMP 0x8053d3e7
+4E       8        KiUnexpectedInterrupt30    0x8053cd2c   ntoskrnl.exe .text => JMP 0x8053d3e7
+4F       8        KiUnexpectedInterrupt31    0x8053cd36   ntoskrnl.exe .text => JMP 0x8053d3e7
+50       8        KiUnexpectedInterrupt32    0x8053cd40   ntoskrnl.exe .text => JMP 0x8053d3e7
+51       8        KiUnexpectedInterrupt33    0x8053cd4a   ntoskrnl.exe .text => JMP 0x8053d3e7
+52       8        KiUnexpectedInterrupt34    0x8053cd54   ntoskrnl.exe .text => JMP 0x8053d3e7
+53       8        KiUnexpectedInterrupt35    0x8053cd5e   ntoskrnl.exe .text => JMP 0x8053d3e7
+54       8        KiUnexpectedInterrupt36    0x8053cd68   ntoskrnl.exe .text => JMP 0x8053d3e7
+55       8        KiUnexpectedInterrupt37    0x8053cd72   ntoskrnl.exe .text => JMP 0x8053d3e7
+56       8        KiUnexpectedInterrupt38    0x8053cd7c   ntoskrnl.exe .text => JMP 0x8053d3e7
+57       8        KiUnexpectedInterrupt39    0x8053cd86   ntoskrnl.exe .text => JMP 0x8053d3e7
+58       8        KiUnexpectedInterrupt40    0x8053cd90   ntoskrnl.exe .text => JMP 0x8053d3e7
+59       8        KiUnexpectedInterrupt41    0x8053cd9a   ntoskrnl.exe .text => JMP 0x8053d3e7
+5A       8        KiUnexpectedInterrupt42    0x8053cda4   ntoskrnl.exe .text => JMP 0x8053d3e7
+5B       8        KiUnexpectedInterrupt43    0x8053cdae   ntoskrnl.exe .text => JMP 0x8053d3e7
+5C       8        KiUnexpectedInterrupt44    0x8053cdb8   ntoskrnl.exe .text => JMP 0x8053d3e7
+5D       8        KiUnexpectedInterrupt45    0x8053cdc2   ntoskrnl.exe .text => JMP 0x8053d3e7
+5E       8        KiUnexpectedInterrupt46    0x8053cdcc   ntoskrnl.exe .text => JMP 0x8053d3e7
+5F       8        KiUnexpectedInterrupt47    0x8053cdd6   ntoskrnl.exe .text => JMP 0x8053d3e7
+60       8        KiUnexpectedInterrupt48    0x8053cde0   ntoskrnl.exe .text => JMP 0x8053d3e7
+61       8        KiUnexpectedInterrupt49    0x8053cdea   ntoskrnl.exe .text => JMP 0x8053d3e7
+62       8        KiUnexpectedInterrupt50    0x8053cdf4   ntoskrnl.exe .text => JMP 0x8053d3e7
+63       8        KiUnexpectedInterrupt51    0x8053cdfe   ntoskrnl.exe .text => JMP 0x8053d3e7
+64       8        KiUnexpectedInterrupt52    0x8053ce08   ntoskrnl.exe .text => JMP 0x8053d3e7
+65       8        KiUnexpectedInterrupt53    0x8053ce12   ntoskrnl.exe .text => JMP 0x8053d3e7
+66       8        KiUnexpectedInterrupt54    0x8053ce1c   ntoskrnl.exe .text => JMP 0x8053d3e7
+67       8        KiUnexpectedInterrupt55    0x8053ce26   ntoskrnl.exe .text => JMP 0x8053d3e7
+68       8        KiUnexpectedInterrupt56    0x8053ce30   ntoskrnl.exe .text => JMP 0x8053d3e7
+69       8        KiUnexpectedInterrupt57    0x8053ce3a   ntoskrnl.exe .text => JMP 0x8053d3e7
+6A       8        KiUnexpectedInterrupt58    0x8053ce44   ntoskrnl.exe .text => JMP 0x8053d3e7
+6B       8        KiUnexpectedInterrupt59    0x8053ce4e   ntoskrnl.exe .text => JMP 0x8053d3e7
+6C       8        KiUnexpectedInterrupt60    0x8053ce58   ntoskrnl.exe .text => JMP 0x8053d3e7
+6D       8        KiUnexpectedInterrupt61    0x8053ce62   ntoskrnl.exe .text => JMP 0x8053d3e7
+6E       8        KiUnexpectedInterrupt62    0x8053ce6c   ntoskrnl.exe .text => JMP 0x8053d3e7
+6F       8        KiUnexpectedInterrupt63    0x8053ce76   ntoskrnl.exe .text => JMP 0x8053d3e7
+70       8        KiUnexpectedInterrupt64    0x8053ce80   ntoskrnl.exe .text => JMP 0x8053d3e7
+71       8        KiUnexpectedInterrupt65    0x8053ce8a   ntoskrnl.exe .text => JMP 0x8053d3e7
+72       8        KiUnexpectedInterrupt66    0x8053ce94   ntoskrnl.exe .text => JMP 0x8053d3e7
+73       8        KiUnexpectedInterrupt67    0x8053ce9e   ntoskrnl.exe .text => JMP 0x8053d3e7
+74       8        KiUnexpectedInterrupt68    0x8053cea8   ntoskrnl.exe .text => JMP 0x8053d3e7
+75       8        KiUnexpectedInterrupt69    0x8053ceb2   ntoskrnl.exe .text => JMP 0x8053d3e7
+76       8        KiUnexpectedInterrupt70    0x8053cebc   ntoskrnl.exe .text => JMP 0x8053d3e7
+77       8        KiUnexpectedInterrupt71    0x8053cec6   ntoskrnl.exe .text => JMP 0x8053d3e7
+78       8        KiUnexpectedInterrupt72    0x8053ced0   ntoskrnl.exe .text => JMP 0x8053d3e7
+79       8        KiUnexpectedInterrupt73    0x8053ceda   ntoskrnl.exe .text => JMP 0x8053d3e7
+7A       8        KiUnexpectedInterrupt74    0x8053cee4   ntoskrnl.exe .text => JMP 0x8053d3e7
+7B       8        KiUnexpectedInterrupt75    0x8053ceee   ntoskrnl.exe .text => JMP 0x8053d3e7
+7C       8        KiUnexpectedInterrupt76    0x8053cef8   ntoskrnl.exe .text => JMP 0x8053d3e7
+7D       8        KiUnexpectedInterrupt77    0x8053cf02   ntoskrnl.exe .text => JMP 0x8053d3e7
+7E       8        KiUnexpectedInterrupt78    0x8053cf0c   ntoskrnl.exe .text => JMP 0x8053d3e7
+7F       8        KiUnexpectedInterrupt79    0x8053cf16   ntoskrnl.exe .text => JMP 0x8053d3e7
+80       8        KiUnexpectedInterrupt80    0x8053cf20   ntoskrnl.exe .text => JMP 0x8053d3e7
+81       8        KiUnexpectedInterrupt81    0x8053cf2a   ntoskrnl.exe .text => JMP 0x8053d3e7
+82       8        KiUnexpectedInterrupt82    0x8053cf34   ntoskrnl.exe .text => JMP 0x8053d3e7
+83       8        KiUnexpectedInterrupt83    0x8053cf3e   ntoskrnl.exe .text => JMP 0x8053d3e7
+84       8        KiUnexpectedInterrupt84    0x8053cf48   ntoskrnl.exe .text => JMP 0x8053d3e7
+85       8        KiUnexpectedInterrupt85    0x8053cf52   ntoskrnl.exe .text => JMP 0x8053d3e7
+86       8        KiUnexpectedInterrupt86    0x8053cf5c   ntoskrnl.exe .text => JMP 0x8053d3e7
+87       8        KiUnexpectedInterrupt87    0x8053cf66   ntoskrnl.exe .text => JMP 0x8053d3e7
+88       8        KiUnexpectedInterrupt88    0x8053cf70   ntoskrnl.exe .text => JMP 0x8053d3e7
+89       8        KiUnexpectedInterrupt89    0x8053cf7a   ntoskrnl.exe .text => JMP 0x8053d3e7
+8A       8        KiUnexpectedInterrupt90    0x8053cf84   ntoskrnl.exe .text => JMP 0x8053d3e7
+8B       8        KiUnexpectedInterrupt91    0x8053cf8e   ntoskrnl.exe .text => JMP 0x8053d3e7
+8C       8        KiUnexpectedInterrupt92    0x8053cf98   ntoskrnl.exe .text => JMP 0x8053d3e7
+8D       8        KiUnexpectedInterrupt93    0x8053cfa2   ntoskrnl.exe .text => JMP 0x8053d3e7
+8E       8        KiUnexpectedInterrupt94    0x8053cfac   ntoskrnl.exe .text => JMP 0x8053d3e7
+8F       8        KiUnexpectedInterrupt95    0x8053cfb6   ntoskrnl.exe .text => JMP 0x8053d3e7
+90       8        KiUnexpectedInterrupt96    0x8053cfc0   ntoskrnl.exe .text => JMP 0x8053d3e7
+91       8        KiUnexpectedInterrupt97    0x8053cfca   ntoskrnl.exe .text => JMP 0x8053d3e7
+92       8        KiUnexpectedInterrupt98    0x8053cfd4   ntoskrnl.exe .text => JMP 0x8053d3e7
+93       8        KiUnexpectedInterrupt99    0x8053cfde   ntoskrnl.exe .text => JMP 0x8053d3e7
+94       8        KiUnexpectedInterrupt100   0x8053cfe8   ntoskrnl.exe .text => JMP 0x8053d3e7
+95       8        KiUnexpectedInterrupt101   0x8053cff2   ntoskrnl.exe .text => JMP 0x8053d3e7
+96       8        KiUnexpectedInterrupt102   0x8053cffc   ntoskrnl.exe .text => JMP 0x8053d3e7
+97       8        KiUnexpectedInterrupt103   0x8053d006   ntoskrnl.exe .text => JMP 0x8053d3e7
+98       8        KiUnexpectedInterrupt104   0x8053d010   ntoskrnl.exe .text => JMP 0x8053d3e7
+99       8        KiUnexpectedInterrupt105   0x8053d01a   ntoskrnl.exe .text => JMP 0x8053d3e7
+9A       8        KiUnexpectedInterrupt106   0x8053d024   ntoskrnl.exe .text => JMP 0x8053d3e7
+9B       8        KiUnexpectedInterrupt107   0x8053d02e   ntoskrnl.exe .text => JMP 0x8053d3e7
+9C       8        KiUnexpectedInterrupt108   0x8053d038   ntoskrnl.exe .text => JMP 0x8053d3e7
+9D       8        KiUnexpectedInterrupt109   0x8053d042   ntoskrnl.exe .text => JMP 0x8053d3e7
+9E       8        KiUnexpectedInterrupt110   0x8053d04c   ntoskrnl.exe .text => JMP 0x8053d3e7
+9F       8        KiUnexpectedInterrupt111   0x8053d056   ntoskrnl.exe .text => JMP 0x8053d3e7
+A0       8        KiUnexpectedInterrupt112   0x8053d060   ntoskrnl.exe .text => JMP 0x8053d3e7
+A1       8        KiUnexpectedInterrupt113   0x8053d06a   ntoskrnl.exe .text => JMP 0x8053d3e7
+A2       8        KiUnexpectedInterrupt114   0x8053d074   ntoskrnl.exe .text => JMP 0x8053d3e7
+A3       8        KiUnexpectedInterrupt115   0x8053d07e   ntoskrnl.exe .text => JMP 0x8053d3e7
+A4       8        KiUnexpectedInterrupt116   0x8053d088   ntoskrnl.exe .text => JMP 0x8053d3e7
+A5       8        KiUnexpectedInterrupt117   0x8053d092   ntoskrnl.exe .text => JMP 0x8053d3e7
+A6       8        KiUnexpectedInterrupt118   0x8053d09c   ntoskrnl.exe .text => JMP 0x8053d3e7
+A7       8        KiUnexpectedInterrupt119   0x8053d0a6   ntoskrnl.exe .text => JMP 0x8053d3e7
+A8       8        KiUnexpectedInterrupt120   0x8053d0b0   ntoskrnl.exe .text => JMP 0x8053d3e7
+A9       8        KiUnexpectedInterrupt121   0x8053d0ba   ntoskrnl.exe .text => JMP 0x8053d3e7
+AA       8        KiUnexpectedInterrupt122   0x8053d0c4   ntoskrnl.exe .text => JMP 0x8053d3e7
+AB       8        KiUnexpectedInterrupt123   0x8053d0ce   ntoskrnl.exe .text => JMP 0x8053d3e7
+AC       8        KiUnexpectedInterrupt124   0x8053d0d8   ntoskrnl.exe .text => JMP 0x8053d3e7
+AD       8        KiUnexpectedInterrupt125   0x8053d0e2   ntoskrnl.exe .text => JMP 0x8053d3e7
+AE       8        KiUnexpectedInterrupt126   0x8053d0ec   ntoskrnl.exe .text => JMP 0x8053d3e7
+AF       8        KiUnexpectedInterrupt127   0x8053d0f6   ntoskrnl.exe .text => JMP 0x8053d3e7
+B0       8        KiUnexpectedInterrupt128   0x8053d100   ntoskrnl.exe .text => JMP 0x8053d3e7
+B1       8        KiUnexpectedInterrupt129   0x8053d10a   ntoskrnl.exe .text => JMP 0x8053d3e7
+B2       8        KiUnexpectedInterrupt130   0x8053d114   ntoskrnl.exe .text => JMP 0x8053d3e7
+B3       8        KiUnexpectedInterrupt131   0x8053d11e   ntoskrnl.exe .text => JMP 0x8053d3e7
+B4       8        KiUnexpectedInterrupt132   0x8053d128   ntoskrnl.exe .text => JMP 0x8053d3e7
+B5       8        KiUnexpectedInterrupt133   0x8053d132   ntoskrnl.exe .text => JMP 0x8053d3e7
+B6       8        KiUnexpectedInterrupt134   0x8053d13c   ntoskrnl.exe .text => JMP 0x8053d3e7
+B7       8        KiUnexpectedInterrupt135   0x8053d146   ntoskrnl.exe .text => JMP 0x8053d3e7
+B8       8        KiUnexpectedInterrupt136   0x8053d150   ntoskrnl.exe .text => JMP 0x8053d3e7
+B9       8        KiUnexpectedInterrupt137   0x8053d15a   ntoskrnl.exe .text => JMP 0x8053d3e7
+BA       8        KiUnexpectedInterrupt138   0x8053d164   ntoskrnl.exe .text => JMP 0x8053d3e7
+BB       8        KiUnexpectedInterrupt139   0x8053d16e   ntoskrnl.exe .text => JMP 0x8053d3e7
+BC       8        KiUnexpectedInterrupt140   0x8053d178   ntoskrnl.exe .text => JMP 0x8053d3e7
+BD       8        KiUnexpectedInterrupt141   0x8053d182   ntoskrnl.exe .text => JMP 0x8053d3e7
+BE       8        KiUnexpectedInterrupt142   0x8053d18c   ntoskrnl.exe .text => JMP 0x8053d3e7
+BF       8        KiUnexpectedInterrupt143   0x8053d196   ntoskrnl.exe .text => JMP 0x8053d3e7
+C0       8        KiUnexpectedInterrupt144   0x8053d1a0   ntoskrnl.exe .text => JMP 0x8053d3e7
+C1       8        KiUnexpectedInterrupt145   0x8053d1aa   ntoskrnl.exe .text => JMP 0x8053d3e7
+C2       8        KiUnexpectedInterrupt146   0x8053d1b4   ntoskrnl.exe .text => JMP 0x8053d3e7
+C3       8        KiUnexpectedInterrupt147   0x8053d1be   ntoskrnl.exe .text => JMP 0x8053d3e7
+C4       8        KiUnexpectedInterrupt148   0x8053d1c8   ntoskrnl.exe .text => JMP 0x8053d3e7
+C5       8        KiUnexpectedInterrupt149   0x8053d1d2   ntoskrnl.exe .text => JMP 0x8053d3e7
+C6       8        KiUnexpectedInterrupt150   0x8053d1dc   ntoskrnl.exe .text => JMP 0x8053d3e7
+C7       8        KiUnexpectedInterrupt151   0x8053d1e6   ntoskrnl.exe .text => JMP 0x8053d3e7
+C8       8        KiUnexpectedInterrupt152   0x8053d1f0   ntoskrnl.exe .text => JMP 0x8053d3e7
+C9       8        KiUnexpectedInterrupt153   0x8053d1fa   ntoskrnl.exe .text => JMP 0x8053d3e7
+CA       8        KiUnexpectedInterrupt154   0x8053d204   ntoskrnl.exe .text => JMP 0x8053d3e7
+CB       8        KiUnexpectedInterrupt155   0x8053d20e   ntoskrnl.exe .text => JMP 0x8053d3e7
+CC       8        KiUnexpectedInterrupt156   0x8053d218   ntoskrnl.exe .text => JMP 0x8053d3e7
+CD       8        KiUnexpectedInterrupt157   0x8053d222   ntoskrnl.exe .text => JMP 0x8053d3e7
+CE       8        KiUnexpectedInterrupt158   0x8053d22c   ntoskrnl.exe .text => JMP 0x8053d3e7
+CF       8        KiUnexpectedInterrupt159   0x8053d236   ntoskrnl.exe .text => JMP 0x8053d3e7
+D0       8        KiUnexpectedInterrupt160   0x8053d240   ntoskrnl.exe .text => JMP 0x8053d3e7
+D1       8        KiUnexpectedInterrupt161   0x8053d24a   ntoskrnl.exe .text => JMP 0x8053d3e7
+D2       8        KiUnexpectedInterrupt162   0x8053d254   ntoskrnl.exe .text => JMP 0x8053d3e7
+D3       8        KiUnexpectedInterrupt163   0x8053d25e   ntoskrnl.exe .text => JMP 0x8053d3e7
+D4       8        KiUnexpectedInterrupt164   0x8053d268   ntoskrnl.exe .text => JMP 0x8053d3e7
+D5       8        KiUnexpectedInterrupt165   0x8053d272   ntoskrnl.exe .text => JMP 0x8053d3e7
+D6       8        KiUnexpectedInterrupt166   0x8053d27c   ntoskrnl.exe .text => JMP 0x8053d3e7
+D7       8        KiUnexpectedInterrupt167   0x8053d286   ntoskrnl.exe .text => JMP 0x8053d3e7
+D8       8        KiUnexpectedInterrupt168   0x8053d290   ntoskrnl.exe .text => JMP 0x8053d3e7
+D9       8        KiUnexpectedInterrupt169   0x8053d29a   ntoskrnl.exe .text => JMP 0x8053d3e7
+DA       8        KiUnexpectedInterrupt170   0x8053d2a4   ntoskrnl.exe .text => JMP 0x8053d3e7
+DB       8        KiUnexpectedInterrupt171   0x8053d2ae   ntoskrnl.exe .text => JMP 0x8053d3e7
+DC       8        KiUnexpectedInterrupt172   0x8053d2b8   ntoskrnl.exe .text => JMP 0x8053d3e7
+DD       8        KiUnexpectedInterrupt173   0x8053d2c2   ntoskrnl.exe .text => JMP 0x8053d3e7
+DE       8        KiUnexpectedInterrupt174   0x8053d2cc   ntoskrnl.exe .text => JMP 0x8053d3e7
+DF       8        KiUnexpectedInterrupt175   0x8053d2d6   ntoskrnl.exe .text => JMP 0x8053d3e7
+E0       8        KiUnexpectedInterrupt176   0x8053d2e0   ntoskrnl.exe .text => JMP 0x8053d3e7
+E1       8        KiUnexpectedInterrupt177   0x8053d2ea   ntoskrnl.exe .text => JMP 0x8053d3e7
+E2       8        KiUnexpectedInterrupt178   0x8053d2f4   ntoskrnl.exe .text => JMP 0x8053d3e7
+E3       8        KiUnexpectedInterrupt179   0x8053d2fe   ntoskrnl.exe .text => JMP 0x8053d3e7
+E4       8        KiUnexpectedInterrupt180   0x8053d308   ntoskrnl.exe .text => JMP 0x8053d3e7
+E5       8        KiUnexpectedInterrupt181   0x8053d312   ntoskrnl.exe .text => JMP 0x8053d3e7
+E6       8        KiUnexpectedInterrupt182   0x8053d31c   ntoskrnl.exe .text => JMP 0x8053d3e7
+E7       8        KiUnexpectedInterrupt183   0x8053d326   ntoskrnl.exe .text => JMP 0x8053d3e7
+E8       8        KiUnexpectedInterrupt184   0x8053d330   ntoskrnl.exe .text => JMP 0x8053d3e7
+E9       8        KiUnexpectedInterrupt185   0x8053d33a   ntoskrnl.exe .text => JMP 0x8053d3e7
+EA       8        KiUnexpectedInterrupt186   0x8053d344   ntoskrnl.exe .text => JMP 0x8053d3e7
+EB       8        KiUnexpectedInterrupt187   0x8053d34e   ntoskrnl.exe .text => JMP 0x8053d3e7
+EC       8        KiUnexpectedInterrupt188   0x8053d358   ntoskrnl.exe .text => JMP 0x8053d3e7
+ED       8        KiUnexpectedInterrupt189   0x8053d362   ntoskrnl.exe .text
+EE       8        KiUnexpectedInterrupt190   0x8053d369   ntoskrnl.exe .text
+EF       8        KiUnexpectedInterrupt191   0x8053d370   ntoskrnl.exe .text
+F0       8        KiUnexpectedInterrupt192   0x8053d377   ntoskrnl.exe .text
+F1       8        KiUnexpectedInterrupt193   0x8053d37e   ntoskrnl.exe .text
+F2       8        KiUnexpectedInterrupt194   0x8053d385   ntoskrnl.exe .text
+F3       8        KiUnexpectedInterrupt195   0x8053d38c   ntoskrnl.exe .text
+F4       8        KiUnexpectedInterrupt196   0x8053d393   ntoskrnl.exe .text
+F5       8        KiUnexpectedInterrupt197   0x8053d39a   ntoskrnl.exe .text
+F6       8        KiUnexpectedInterrupt198   0x8053d3a1   ntoskrnl.exe .text
+F7       8        KiUnexpectedInterrupt199   0x8053d3a8   ntoskrnl.exe .text
+F8       8        KiUnexpectedInterrupt200   0x8053d3af   ntoskrnl.exe .text
+F9       8        KiUnexpectedInterrupt201   0x8053d3b6   ntoskrnl.exe .text
+FA       8        KiUnexpectedInterrupt202   0x8053d3bd   ntoskrnl.exe .text
+FB       8        KiUnexpectedInterrupt203   0x8053d3c4   ntoskrnl.exe .text
+FC       8        KiUnexpectedInterrupt204   0x8053d3cb   ntoskrnl.exe .text
+FD       8        KiUnexpectedInterrupt205   0x8053d3d2   ntoskrnl.exe .text
+FE       8        KiUnexpectedInterrupt206   0x8053d3d9   ntoskrnl.exe .text
+FF       8        KiUnexpectedInterrupt207   0x8053d3e0   ntoskrnl.exe .text => JMP [0x8053d3ee] =>> 0x8053de97

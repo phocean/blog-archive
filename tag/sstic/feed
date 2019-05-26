@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SSTIC &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/sstic/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>SSTIC 2012</title>
+		<link>/blog-archive/2012/06/10/sstic-2012.html</link>
+		<pubDate>Sun, 10 Jun 2012 05:40:41 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Challenge]]></category>
+		<category><![CDATA[conference]]></category>
+		<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[SSTIC]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1246</guid>
+		<description><![CDATA[I came back from the 2012 edition of SSTIC, where despite the concerns, there were still some nice conferences. Until slides and papers are published, you can find some nice reports (all in French). But the most impressive will remain the challenge: look at the solution! What a hell! Just reading and trying to understand...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/sstic-2012.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I came back from the 2012 edition of <a title="SSTIC" href="https://www.sstic.org">SSTIC</a>, where despite the concerns, there were still some nice conferences.</p>
+<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
+<p>Big respect for the guys who have the talent of going over so many tricks.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

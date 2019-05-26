@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Ubuntu &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/ubuntu/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>How to connect to a Cisco device using the serial port on Linux</title>
+		<link>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
+		<comments>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
+		<pubDate>Tue, 13 Nov 2007 11:41:35 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Minicom]]></category>
+		<category><![CDATA[Pix]]></category>
+		<category><![CDATA[serial port]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
+		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230;</p>
+<p>Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port.  Not a problem, there are many cheap serial-usb converters <a href="http://www.usbgear.com/USB-1S1PQ.html" target="_blank">like this</a>.</p>
+<p>As an alternative to the Hyperterminal of Microsoft, there is Minicom on Linux.</p>
+<p>It is very easy to install and configure :</p>
+<pre>$ apt-get install minicom lrzsz</pre>
+<p>Before going further, you need to know what is the corresponding Linux device for the port where you plugged the router. As I used an usb adapter, my device was <strong>/dev/ttyUSB0</strong>. Otherwise, it will probably be one of the <strong>/dev/ttyS*</strong> devices.<br />
+Checking the <strong>dmesg</strong> output while you plug the device will give you the right device to use.</p>
+<p>Now start minicom this way to edit the configuration :</p>
+<pre>$ minicom -s</pre>
+<p>In the menu, select <em>Serial Port Configuration</em> and  :</p>
+<ul>
+<li> press A and update the serial port path with the one you found in dmesg</li>
+<li>press E and then C to change the speed to 9600</li>
+<li>press F to switch off the hardware flow control</li>
+<li>select <em>Save the configuration as&#8230;</em> and name it as, let&#8217;s say, &#8220;cisco&#8221;</li>
+</ul>
+<p>You should be able to connect right now. Next time, just start Minicom like this :</p>
+<pre>$ minicom cisco</pre>
+<p>That&#8217;s it !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Launchpad.net bug report #154274 : Website does not reference Debian visibly</title>
+		<link>/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html</link>
+		<comments>/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html#comments</comments>
+		<pubDate>Fri, 19 Oct 2007 17:12:43 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=79</guid>
+		<description><![CDATA[This bug report, created by a Debian developper, reproaches that the Ubuntu website is not refering enough to Debian. I am both using Debian and Ubuntu and loves each other. However, on this point, I am defending the Debian side. Ubuntu should definitely refers more to the Debian community on their website and, in general,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a href="https://bugs.launchpad.net/ubuntu-website/+bug/154274">This bug report</a>, created by a Debian developper, reproaches that the Ubuntu website is not refering enough to Debian.</p>
+<p>I am both using Debian and Ubuntu and loves each other.</p>
+<p>However, on this point, I am defending the Debian side.</p>
+<p>Ubuntu should definitely refers more to the Debian community on their website and, in general, be more cooperative &#8211; though on the latter, according to some recent news, it is improving.</p>
+<p>Ubuntu is doing a great work, but they should not forget that most of its packages come from Debian, and not being graceful for that is, at least, a serious lack of respect.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>pm-utils instead of acpi-support ?</title>
+		<link>/blog-archive/2007/10/05/pm-utils-instead-of-acpi-support.html</link>
+		<pubDate>Fri, 05 Oct 2007 14:32:36 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[ACPI]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=78</guid>
+		<description><![CDATA[I had several issues with gnome-power-manager and acpi-support. Both are base on the acpid daemon for power management. Acpi-support is a convenient package of scripts to configure the power management. It is bundled in many distributions, including Ubuntu and Debian. The problem is that it does not cooperate very well with gnome-power-manager. As a result,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/10/05/pm-utils-instead-of-acpi-support.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I had several issues with <strong>gnome-power-manager</strong> and <strong>acpi-support</strong>.</p>
+<p>Both are base on the <strong>acpid</strong> daemon for power management. Acpi-support is a convenient package of scripts to configure the power management.</p>
+<p>It is bundled in many distributions, including Ubuntu and Debian.</p>
+<p>The problem is that it does not cooperate very well with gnome-power-manager. As a result, I had many small but anoying issues.</p>
+<p>The most anoying was, that after a suspend / hibernation, gnome-power-manager was not able anymore to turn off the screen for power saving. Workaround : kill it and start it again. Not good !</p>
+<p>Pretty annoying, especially since I stopped using a screen saver with my LCD screens&#8230;</p>
+<p>So I tried a new alternative to acpi-support : <strong>pm-utils</strong>. This is another collection of scripts, attached to the <a href="http://www.freedesktop.org" target="_blank">Freedesktop.org</a> project, as gnome-power-manager : the integration with Gnome should now be much better, shouldn&#8217;t it ?</p>
+<p>So :</p>
+<pre>$ aptitude remove acpi-support
+$ aptitude install pm-utils</pre>
+<p>Now we copy the default configuration file to the /etc directory. All files will be parsed, but the one in /etc has the priority if you change a value :</p>
+<pre>$ cp /usr/lib/pm-utils/defaults /etc/pm/config.d/</pre>
+<p>With my laptop, I had to edit a line to activate suspend-to-ram, so that it looks like :</p>
+<pre>S2RAM_OPTS=&quot;-f -a 3&quot;</pre>
+<p>And that&#8217;s it ! I did not go deeper, but there are already much fewer issues with gnome-power-manager (though it still need some work).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Easy search on Planet Debian and Planet Ubuntu</title>
+		<link>/blog-archive/2007/09/22/easy-search-on-planet-debian-and-planet-ubuntu.html</link>
+		<pubDate>Sat, 22 Sep 2007 08:46:06 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=76</guid>
+		<description><![CDATA[Russel Coker, a famous Debian developper, took a really interesting initiative. He used the Google Custom search to create 2 Google search engines : one to search on Planet Debian one to search on Planet Ubuntu These blogs beeing a big source of information, these engines will be extremely convenient. The links are available on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/09/22/easy-search-on-planet-debian-and-planet-ubuntu.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Russel Coker, a famous Debian developper, took a really interesting initiative.</p>
+<p>He used the Google Custom search to create 2 Google search engines :</p>
+<ul>
+<li>one to search on Planet Debian</li>
+<li>one to search on Planet Ubuntu</li>
+</ul>
+<p>These blogs beeing a big source of information, these engines will be extremely convenient.</p>
+<p>The links are available <a title="planet Ubuntu and planet Debian search engines" href="http://etbe.coker.com.au/2007/09/21/google-custom-search-engine/">on the author&#8217;s page</a>.</p>
+<p>Note that you can easely access them through a dedicated link (homepage) , and you can also, from the Google page, get a link to embed them on your own homepage&#8230; what I will do soon.</p>
+<p>Thanks to Russel Coker !</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Solved : network-manager issue with ACPI hibernation</title>
+		<link>/blog-archive/2007/08/03/solved-network-manager-issue-with-acpi-hibernation.html</link>
+		<pubDate>Fri, 03 Aug 2007 13:04:26 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[ACPI]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Network-manager]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=74</guid>
+		<description><![CDATA[If you have a laptop, Network-Manager running and use ACPI to hibernate, look at this bug report and its nice tip : Editing /etc/default/acpi-support with this line : STOP_SERVICES=&#8221;networking&#8221; solved an old issue I used to have (and for which I wrote a dirty script with modprobe, dhclient, etc.]]></description>
+				<content:encoded><![CDATA[<p>If you have a laptop, Network-Manager running and use ACPI to hibernate, look at <a href="http://https://bugs.launchpad.net/ubuntu/+bug/69426">this bug report</a> and its nice tip :</p>
+<p>Editing /etc/default/acpi-support with this line :</p>
+<p>STOP_SERVICES=&#8221;networking&#8221;</p>
+<p>solved an old issue I used to have (and for which I wrote a dirty script with modprobe, dhclient, etc.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>How to dupplicate your packages selection</title>
+		<link>/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html</link>
+		<comments>/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html#comments</comments>
+		<pubDate>Sun, 29 Jul 2007 10:16:16 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=73</guid>
+		<description><![CDATA[You may want to save your selection of packages, in order to reinstall all your softs later without having to look for and manually install them one after another. It is a convenient way to move a server to a new machine. On Debian / Ubuntu, this is quite easy. A while ago the solution...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>You may want to save your selection of packages, in order to reinstall all your softs later without having to look for and manually install them one after another. It is a convenient way to move a server to a new machine.</p>
+<p>On Debian / Ubuntu, this is quite easy.</p>
+<p>A while ago the solution used to be :</p>
+<pre>$ dpkg --get-selections &gt; file.txt</pre>
+<p>and then, an a freshed installed machine :</p>
+<pre>$ dpkg --set-selections &lt; file.txt
+$ apt-get upgrade</pre>
+<p>But, for some reason I don&#8217;t know and that I would be happy to learn, it seems that this does not work anymore.</p>
+<p>Below is the way I got it to work, though it is a little bit more complicated.</p>
+<p>So, let&#8217;s save the selection of packages into a clean list file, though we are only interested in the packages names :</p>
+<pre>$ COLUMNS=200 dpkg -l | awk '/^[hi]i/{print $2}' | xargs &gt; liste-apt.txt</pre>
+<p>and to install on the new machine :</p>
+<pre>$ cat liste-apt.txt | xargs apt-get install -y</pre>
+<p>So far, it worked very well on my servers ! APT is a great tool.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Compiz Fusion : Debian / Ubuntu repositories</title>
+		<link>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html</link>
+		<comments>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html#comments</comments>
+		<pubDate>Fri, 27 Jul 2007 18:21:08 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Compiz]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=72</guid>
+		<description><![CDATA[Edit your source.list file with the following repositories : deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git Add the corresponding key with : $ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- &#124; sudo apt-key add - Compiz Fusion is really great and &#8211; so far &#8211; stable enough !]]></description>
+				<content:encoded><![CDATA[<p>Edit your source.list file with the following repositories :</p>
+<pre>deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git</pre>
+<p>Add the corresponding key with :</p>
+<pre>$ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- | sudo apt-key add -</pre>
+<p>Compiz Fusion is really great and &#8211; so far &#8211;  stable enough !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Switching from Ubuntu to OpenSuse</title>
+		<link>/blog-archive/2007/05/14/switching-from-ubuntu-to-opensuse.html</link>
+		<comments>/blog-archive/2007/05/14/switching-from-ubuntu-to-opensuse.html#comments</comments>
+		<pubDate>Mon, 14 May 2007 19:50:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=30</guid>
+		<description><![CDATA[<p>Yes, I just switched my desktop computer from Ubuntu to OpenSuse.</p> <p>I am sure that some people won't believe it or think that I am stupid or that I work for Microsoft, but here are the reasons of this choice.</p> <br /><br />]]></description>
+				<content:encoded><![CDATA[<p>Yes, I just switched my desktop computer from Ubuntu to OpenSuse.</p>
+<p>I am sure that some people won&#8217;t believe it or think that I am stupid or that I work for Microsoft, but here are the reasons of this choice.</p>
+<p><span id="more-30"></span></p>
+<p style="margin-bottom: 0cm">The first reason why I did it was a number of bugs with the latest release, Feisty. I mean, not just simple bugs. At every new release, there are new bugs (I have been using Ubuntu since Breezy) : this is quite understanding and I can deal with it.<br />
+What make me fustrated is when some of these bugs are regression bugs. And especially when you already reported them months ago and see that they were not taken into account.<br />
+You will tell me that this must happen because making a new release is not an easy thing. Ok, but a release is supposed to be stable, and particulary on pretty standard hardware.</p>
+<p>The bugs  that I experienced with my pretty standard laptop hardware (and not only me, though there were several topics on the forums or bug reports) :</p>
+<ul>
+<li>The synaptic touchpad had random messing the interfaces of my applications. It was dramatic and frequent enough to make it unusable.</li>
+</ul>
+<ul>
+<li>I could never get the touchpad to work.</li>
+</ul>
+<ul>
+<li>Trying to use a 686 kernel made the computer increadibly slow. Ok, let&#8217;s fall back to i386&#8230; better but not great !</li>
+</ul>
+<ul>
+<li> I could not get main-menu to work (slab port to Ubuntu). And I was convinced neither by the messy gnome menu nor by the USP development.</li>
+</ul>
+<ul>
+<li> After any hibernation, the acpi module of the kernel became extrimely unresponsive. For instance, after pressing to adjust the screen brightness, it took 20 seconds to be effective !</li>
+</ul>
+<p style="margin-bottom: 0cm">I may forgot some but that is enough. And yes, all of these are regression bugs&#8230; It means it worked fine with Edgy ! I really wonder if the developpers did test on centrino laptops&#8230;</p>
+<p style="margin-bottom: 0cm">The second reason why I decided to leave Ubuntu is that I was just tired and wanted to see something else. Everyone is talking about this distribution as if it was an Eldorado. I (still) like it but it is far from it and there are many other good distribution. I generally don&#8217;t like when something become so popular that its popularity takes over its real qualities.</p>
+<p>So, changing, but for what ? I immediatly thought about three distribution : Debian, OpenSuse, Gentoo. There are all also very popular and each has a particular flavour.<br />
+I decided not to use Debian, because I use Debian on many other machines, including servers. That would not have been really a change.<br />
+On the other hand, I never tried Gentoo. I am sure that this is a great distribution, but I also know that it requires some investment in time. Recently, I really haven&#8217;t had much time&#8230; So I will give a try soon, but not now&#8230;</p>
+<p>So let&#8217;s go for Suse ! Note that a few years ago, I already tried this distribution but so many things must have changed !</p>
+<p style="margin-bottom: 0cm">So how did it become since then ?</p>
+<p style="margin-bottom: 0cm">The installation was smooth (the graphical installation process is rather easy but functionnal) and I got a nice Gnome desktop pretty quickly. I won&#8217;t make a long review but I like :</p>
+<ul>
+<li>
+<p style="margin-bottom: 0cm">The very clean and polished desktop, with a nice theme (so much better than the human theme, sorry). I was always tweacking something in my Ubuntu, trying to have an organised desktop. Here Slab and Application Browser both do a pretty good job and the default theme is coherent and smooth.</p>
+</li>
+<li>
+<p style="margin-bottom: 0cm">The speed : I was shocked, I did not realize that my Ubuntu was so slow&#8230; I think that this is one of the kernel issue I had with Ubuntu. The feeling I have is that the OpenSuse developpers did a great job optimizing the kernel. Ubuntu just keep the advantage for the startup time.</p>
+</li>
+<li>
+<p style="margin-bottom: 0cm">With Powernow, true power management works out of the box : no need to set up laptop-mode, cpufreq, sony_acpi, etc.</p>
+</li>
+</ul>
+<p style="margin-bottom: 0cm">I don&#8217;t like :</p>
+<ul>
+<li>
+<p style="margin-bottom: 0cm">The rpm package system ! On this point, I was not expecting that it would compete with Deb packaging. It is not that bad, but deb packages with apt are definitely superior ! It won&#8217;t protect yourself against your own mistakes, as it happened to me a few times. Fixing a mistake might also ask you some more work&#8230; Talking about package management, it is worth using Smart instead of Yast to set up new packages. It is almost as powerful as Synaptics (just don&#8217;t trust as much the dependencies) and is even much faster. It dowloads simultanously all the packages during set-up and can manage a number of repositories : APT, RPM, Yast, etc. This tool is great !</p>
+</li>
+<li>
+<p style="margin-bottom: 0cm">Yast is still good for hardware management, but it is becoming old and needs to be refreshed.</p>
+</li>
+</ul>
+<p style="margin-bottom: 0cm">So, globally, I am extremely satisfied with this OpenSuse and will certainly keep it for a while.</p>
+<p style="margin-bottom: 0cm">It is polished, light and fast. You feel you have a professional and user friendly OS, compared to Ubuntu where you need to spend more time for tweaking.</p>
+<p style="margin-bottom: 0cm">I recommand you to give it a try ! OpenSuse deserves to become as popular as Ubuntu for desktops and laptops.</p>
+<p style="margin-bottom: 0cm"><a hreflang="en" href="http://www.opensuse.org"><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/Opensuse_1.gif" alt="" width="110" height="32" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/05/14/switching-from-ubuntu-to-opensuse.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Slow performance in VMWARE using Ubuntu ?</title>
+		<link>/blog-archive/2006/12/06/slow-performance-in-vmware-using-ubuntu.html</link>
+		<comments>/blog-archive/2006/12/06/slow-performance-in-vmware-using-ubuntu.html#comments</comments>
+		<pubDate>Wed, 06 Dec 2006 13:03:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[swap]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+		<category><![CDATA[VMware]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=10</guid>
+		<description><![CDATA[<p>WMWare does not really work out of the box on Ubuntu.</p> <p>There is an issue concerning the ACPI, which makes the guest machine so slow that it is barely usable.</p>]]></description>
+				<content:encoded><![CDATA[<p>WMWare does not really work out of the box on Ubuntu.</p>
+<p>There is an issue concerning the ACPI, which makes the guest machine so slow that it is barely usable.</p>
+<p><span id="more-10"></span></p>
+<p>If you do on your terminal :</p>
+<pre>$ cat /sys/module/processor/parameters/max_cstate</pre>
+<p>You will probably get a value bigger than 1. In my case, it was 8 (default in Ubuntu, I guess). This value is related to the number of level that the processor takes to save energy (reducing its performance and power consumption when idle).</p>
+<p>For a try, fix it to a smaller value and check how VMWare is going :</p>
+<pre>$ sudo -s
+$ echo 3 &gt; /sys/module/processor/parameters/max_cstate</pre>
+<p>I think 3 is a good compromise. At least it is working very well on my machine, no slow down at all. If you still have the issue, reduce it to 2 or even 1. The side effect is that your laptop will be a little bit more power hungry, but so little that you probably won&#8217;t see any difference.</p>
+<p>If you stop here, you will loose the change at the next startup. To have it set on boot, edit the /etc/init.d/acpid file.</p>
+<p>Add the line at the end of the function named load_modules() :</p>
+<pre>echo 3 &gt; /sys/module/processor/parameters/max_cstate</pre>
+<p>I found out the solution thanks to <a hreflang="en" href="http://www.thinkwiki.org/wiki/Problem_with_high_pitch_noises">this article</a>. Go there for more info or alternative solutions (including for different systems).</p>
+<p>I hope this will be helpful.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2006/12/06/slow-performance-in-vmware-using-ubuntu.html/feed</wfw:commentRss>
+		<slash:comments>19</slash:comments>
+		</item>
+	</channel>
+</rss>

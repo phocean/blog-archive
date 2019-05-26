@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Spamassassin &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/spamassassin/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Dovecot LDA vs Procmail</title>
+		<link>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html</link>
+		<comments>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
+		<pubDate>Wed, 09 Dec 2009 01:10:17 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Amavis]]></category>
+		<category><![CDATA[Dovecot]]></category>
+		<category><![CDATA[IMAP]]></category>
+		<category><![CDATA[mta]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[Postifx]]></category>
+		<category><![CDATA[SMTP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[Spamassassin]]></category>
+		<category><![CDATA[umask]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
+		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I have a mail server configuration based on <strong>Postfix</strong> for the smtp, <strong>Dovecot</strong> for the imap and virtual users receiving e-mails in maildir boxes.</p>
+<p>I am also using <strong>Amavis</strong> and <strong>Spamassassin</strong> for content filtering.</p>
+<p>I am not going now to describe this configuration, I think there are already a lot of very good tutorials about it all over the web. Moreover, the openSUSE maintainers made such a configuration quite easy : a sensible part of the work just consists in commenting out some line in the configuration files.</p>
+<p>However, with the basic setup, I had an issue with permissions :  all e-mails delivered by Postfix were created with permissions set to 600.</p>
+<p>A typical use case with which I got into trouble was spam learning, done with a cron script with a dedicated account (&#8220;vscan&#8221;, you don&#8217;t want to execute such a script with root, right ?).</p>
+<p>In that case, what I need is files to be created with permissions 660.</p>
+<p>It seems easy and rather obvious at first, but actually there is not such a setting in Postfix.</p>
+<p>Actually, it is not really the job of the MTA to do it, so in the case of Postfix it doesn&#8217;t bother with the transmission of such a parameter.<br />
+Then, I tried to use Procmail and set UMASK in <strong>/etc/procmailrc</strong>, but this just didn&#8217;t have any effect.</p>
+<p>After searching and trying in vain a couple of hours, I found out that Dovecot can also deliver e-mails from the MTA to the maildir with Dovecot LDA.</p>
+<p>So I tested it out. The configuration is pretty straightforward.</p>
+<p>Add the line in bold to the virtual user configuration in <strong>/etc/postfix/main.cf</strong> :</p>
+<pre>[...]
+virtual_mailbox_domains = domain.com
+virtual_mailbox_maps = hash:/etc/postfix/vmailbox
+virtual_mailbox_base = /home/vmail
+virtual_minimum_uid = 100
+virtual_gid_maps = static:1002
+virtual_uid_maps = static:1001
+virtual_transport = dovecot
+[...]</pre>
+<p>Now, add these lines in <strong>/etc/postfix/master.cf</strong> :</p>
+<pre>[...]
+# Dovecot LDA
+dovecot   unix  -       n       n       -       -       pipe
+   flags=DRhu user=vmail argv=/usr/lib/dovecot/deliver -d ${recipient}
+[...]</pre>
+<p>Finally, configure <strong>/etc/dovecot/dovecot.conf</strong> with these sections :</p>
+<pre>[...]
+protocol lda {
+  # If you wish to use plugins you need to specify plugin directory
+  # For example quota enforcing is implemented by plugin
+  module_dir = /usr/lib/dovecot/modules/lda
+  # Address from LDA should send MDNs like out of quota
+  postmaster_address = postmaster@domain.com
+  # UNIX socket path to master authentication server to find users.
+  auth_socket_path = /var/run/dovecot/auth-master
+}
+[...]
+auth default {
+[...]
+  socket listen {
+	master {
+		# Master socket provides access to userdb information. It's typically
+		# used to give Dovecot's local delivery agent access to userdb so it
+		# can find mailbox locations.
+	      	path = /var/run/dovecot/auth-master
+      		mode = 0660
+		user = vmail
+		group = vmail
+	}
+	client {
+		# The client socket is generally safe to export to everyone. Typical use
+		# is to export it to your SMTP server so it can do SMTP AUTH lookups
+		# using it.
+		path = /var/run/dovecot/auth-client
+		mode = 0660
+	}
+  }
+}
+[...]</pre>
+<p>And that&#8217;s all !<br />
+Restart Postfix and Dovecot, check the log to ensure that everything works fine.<br />
+Now all new mails should come out in the maildir folder with permissions set to 660.</p>
+<p>Definitely, in my opinion, Dovecot LDA is the way to go : simple and extensible. Good bye Procmail and your cluttered configuration file.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

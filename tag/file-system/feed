@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>File system &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/file-system/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Corrupted virtual disk with VMware</title>
+		<link>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html</link>
+		<comments>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html#comments</comments>
+		<pubDate>Sun, 16 Jan 2011 17:02:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[crash]]></category>
+		<category><![CDATA[File system]]></category>
+		<category><![CDATA[VMware]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=961</guid>
+		<description><![CDATA[Wow, this article and especially one of its comments saved my day. My computer crashed and one of the VMware machine hosted on it could not start anymore : “Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on. Reason: the specific virtual disk needs repair. Checking on the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Wow, <a title="Repair vmware" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/" target="_blank">this article</a> and especially <a title="virtual disk development" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/?cid=3319" target="_blank">one of its comments</a> saved my day.</p>
+<p>My computer crashed and one of the VMware machine hosted on it could not start anymore :</p>
+<blockquote><p>“Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on.<br />
+Reason: the specific virtual disk needs repair.</p></blockquote>
+<p>Checking on the VMware forums, I quickly found the command that was supposed to help :</p>
+<pre>$ vmware-vdiskmanager -R /path/to/disk.vmdk
+The virtual disk, '/path/to/disk.vmdk', is corrupted but the repair process has failed.</pre>
+<p>Damned ! I almost resigned restoring the last backup and loosing a week of work when, by chance, I found the article mentioned above.</p>
+<p>As recommended, I downloaded the <strong>Virtual Disk Development Kit 1.2</strong> from VMware, untared it and still doubtfully launched :</p>
+<pre>$ ./bin64/vmware-vdiskmanager -R /path/to/disk.vmdk
+The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully repaired.</pre>
+<p>Saved! Thanks so much to the guys. I would have never thought about trying it, I wonder how they could find it.</p>
+<p>But how is it possible that the utility coming with vmware workstation 7.1 suck so much and is not on par with other versions ?</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html/feed</wfw:commentRss>
+		<slash:comments>18</slash:comments>
+		</item>
+		<item>
+		<title>Btrfs : a key feature coming to Linux</title>
+		<link>/blog-archive/2009/04/23/btrfs-a-key-feature-coming-to-linux.html</link>
+		<pubDate>Thu, 23 Apr 2009 14:17:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[btrfs]]></category>
+		<category><![CDATA[File system]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=350</guid>
+		<description><![CDATA[Great and clear article there from Linux magazine that sums up the new BTRFS file system. I can&#8217;t wait for it to become stable ! UPDATE 2009-02-05 : I hope to see this soon on a Linux distribution.]]></description>
+				<content:encoded><![CDATA[<p><a title="BTRFS article" href="http://www.linux-mag.com/id/7308/1/" target="_blank">Great and clear article there from Linux magazine</a> that sums up the new BTRFS file system.</p>
+<p>I can&#8217;t wait for it to become stable !</p>
+<p>UPDATE 2009-02-05 : I hope to see <a href="http://blogs.sun.com/erwann/entry/new_time_slider_features_in">this</a> soon on a Linux distribution.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>ACL on Linux</title>
+		<link>/blog-archive/2007/03/25/acl-on-linux.html</link>
+		<pubDate>Sun, 25 Mar 2007 15:46:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[ACL]]></category>
+		<category><![CDATA[Ext3]]></category>
+		<category><![CDATA[File system]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=25</guid>
+		<description><![CDATA[<p>Rights management on Linux is enough for most use.<br />In a few words, a file or a directory belongs to the owner and what you can do is positionning some right to this owner, to his group or all other users (= guests).<br />This is not bad, but sometimes you (or your application) may need more advanced right management, as on the latest windows versions : putting several owners with different rights, inheritance, etc.<br />There are named ACL (Access List Management) and they are supported on Linux also.<br /> This is not going to be an how-to but just a brief informative introduction to ACL on Linux. You will find many how-to on the web if you need more.</p>]]></description>
+				<content:encoded><![CDATA[<p>Rights management on Linux is enough for most use.<br />
+In a few words, a file or a directory belongs to the owner and what you can do is positionning some right to this owner, to his group or all other users (= guests).<br />
+This is not bad, but sometimes you (or your application) may need more advanced right management, as on the latest windows versions : putting several owners with different rights, inheritance, etc.<br />
+There are named ACL (Access List Management) and they are supported on Linux also.<br />
+This is not going to be an how-to but just a brief informative introduction to ACL on Linux. You will find many how-to on the web if you need more.</p>
+<p><span id="more-25"></span></p>
+<p>Fisrt, you will need a kernel that supports ACL. As far as I now, most of modern distributions include it in their 2.6.x kernel.</p>
+<p>To ensure, type :</p>
+<pre lang="bash">$ grep ACL /boot/config-<em>kernel-version</em></pre>
+<p>If your kernel supports it, you will get many lines like :</p>
+<pre lang="text">CONFIG_FS_POSIX_ACL=y
+CONFIG_EXT3_FS_POSIX_ACL=y
+...</pre>
+<p>If you don&#8217;t, you will have to recompile your kernel with the right module.</p>
+<p>Let&#8217;s say that we are going to add ACL management to the<strong> /home</strong> partition (on <strong>/dev/sda3</strong>) :</p>
+<pre lang="bash">$ mount -t ext3 -o defaults,acl /dev/sda3/ /home</pre>
+<p>Or, if<strong> /home</strong> were already mounted :</p>
+<pre lang="bash">$ mount -o remount,acl /home</pre>
+<p>If you want to add it at startup, edit<strong> /etc/fstab</strong> in the following way :</p>
+<pre lang="text">/dev/sda3       /home               ext3    defaults,acl 0       0</pre>
+<p>Now take your favorite packages manager and set up ACL tools, which allow us to assign ACL to files. Mine will be :</p>
+<pre lang="bash">$ apt-get install acl</pre>
+<p>Now you can assign ACL using setfacl or consulting them using <strong>getfacl</strong>.<br />
+Use <strong>man</strong> to get some precise examples of syntax.</p>
+<p>Be advised of the following :<br />
+&#8211; using <strong>cp</strong> with default does not preserve ACL. Use <strong>cp -a</strong>.<br />
+&#8211; using <strong>mv</strong> always keep ACL.<br />
+&#8211; in any case, if you copy/move files to a partition which is not mounted with ACL management (or with a file system that does not support it), ACL are lost.<br />
+&#8211; <strong>ls -l</strong> gives an output with a &#8216;<strong>+</strong>&#8216;, that indicates that some ACL are presents. For more information, use <strong>getfacl</strong>.<br />
+&#8211; KDE supports ACL in its interface, but Gnome does not yet. Maybe there is a <a href="http://rofi.pinchito.com/eiciel/">workaround</a>, but I haven&#8217;t tried yet.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

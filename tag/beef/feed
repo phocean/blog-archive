@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>BeEF &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/beef/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>BeEF Docker</title>
+		<link>/blog-archive/2017/02/24/beef-docker.html</link>
+		<pubDate>Fri, 24 Feb 2017 21:17:51 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[BeEF]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
+		<description><![CDATA[Just a quick update to tell about a new Docker based on the phocean/msf image. https://hub.docker.com/r/phocean/beef/ https://github.com/phocean/dockerfile-beef It provides an image for the BeEF framework for XSS browser exploitation (http://beefproject.com/). Enjoy it!]]></description>
+				<content:encoded><![CDATA[<p>Just a quick update to tell about a new Docker based on the phocean/msf image.</p>
+<p><a href="https://hub.docker.com/r/phocean/beef/">https://hub.docker.com/r/phocean/beef/</a></p>
+<p><a href="https://github.com/phocean/dockerfile-beef">https://github.com/phocean/dockerfile-beef</a></p>
+<p>It provides an image for the BeEF framework for XSS browser exploitation (<a href="http://beefproject.com/">http://beefproject.com/</a>).</p>
+<p>Enjoy it!</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Alsa &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/alsa/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Headphones not muting the speakers with a Gigabyte motherboard</title>
+		<link>/blog-archive/2011/05/28/headphones-not-muting-the-speakers-with-a-gigabyte-motherboard.html</link>
+		<comments>/blog-archive/2011/05/28/headphones-not-muting-the-speakers-with-a-gigabyte-motherboard.html#comments</comments>
+		<pubDate>Sat, 28 May 2011 21:22:32 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Alsa]]></category>
+		<category><![CDATA[Intel]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1078</guid>
+		<description><![CDATA[It had been months since I had an weired issue with the embedded audio controller of my Gigabyte motherboard. Plugin the headphones on the front panel of my box didn&#8217;t mute the output to the speakers, which nullified the purpose of having headphones. I long thought that it was some hardware issue that I would...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/05/28/headphones-not-muting-the-speakers-with-a-gigabyte-motherboard.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>It had been months since I had an weired issue with the embedded audio controller of my Gigabyte motherboard.</p>
+<p>Plugin the headphones on the front panel of my box didn&#8217;t mute the output to the speakers, which nullified the purpose of having headphones.</p>
+<p>I long thought that it was some hardware issue that I would have to sort some day by opening the box and checking the connections.</p>
+<p>Yesterday, I decided to solve it for good and I started to google&#8230; and found out that it was a pure software issue!</p>
+<p>The culprit sounded to be some unproper settings of the ALSA module and this <a title="Hda Intel Sound Howto" href="https://help.ubuntu.com/community/HdaIntelSoundHowto">Ubuntu guide</a> just saved me.</p>
+<p>I carefully followed the steps and it appeared that for my <a title="Gigabyte GA-790FXTA-UD5" href="http://www.gigabyte.com/products/product-page.aspx?pid=3258" target="_blank">Gigabyte GA-790FXTA-UD5</a>, it was necessary to this line:</p>
+<pre>add ﻿options snd-hda-intel model=3stack-hp</pre>
+<p>to</p>
+<pre>/etc/modprobe.d/alsa-base.conf</pre>
+<p>Ok, it did not go so smoothly as I picked out randomly models from the list until I find the right one (I had no idea of what was embbeded on my board). I hope this may help, as I have quite a lot of people with similar issues with all kinds of vendors.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/05/28/headphones-not-muting-the-speakers-with-a-gigabyte-motherboard.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

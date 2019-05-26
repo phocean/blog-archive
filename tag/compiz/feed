@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Compiz &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/compiz/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Compiz Fusion : Debian / Ubuntu repositories</title>
+		<link>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html</link>
+		<comments>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html#comments</comments>
+		<pubDate>Fri, 27 Jul 2007 18:21:08 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Compiz]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=72</guid>
+		<description><![CDATA[Edit your source.list file with the following repositories : deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git Add the corresponding key with : $ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- &#124; sudo apt-key add - Compiz Fusion is really great and &#8211; so far &#8211; stable enough !]]></description>
+				<content:encoded><![CDATA[<p>Edit your source.list file with the following repositories :</p>
+<pre>deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git</pre>
+<p>Add the corresponding key with :</p>
+<pre>$ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- | sudo apt-key add -</pre>
+<p>Compiz Fusion is really great and &#8211; so far &#8211;  stable enough !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Battery power and Compiz</title>
+		<link>/blog-archive/2007/05/20/battery-power-and-compiz.html</link>
+		<pubDate>Sun, 20 May 2007 12:57:16 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[ACPI]]></category>
+		<category><![CDATA[Compiz]]></category>
+		<category><![CDATA[Intel]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=51</guid>
+		<description><![CDATA[I decided to drop Compiz since I found out (thanks to the Powertop utility by Intel) that it was power monger. Result : Compiz : 3h30 Metacity : 5h00]]></description>
+				<content:encoded><![CDATA[<p>I decided to drop Compiz since I found out (thanks to the <a href="http://www.linuxpowertop.org/" target="_blank">Powertop</a> utility by Intel) that it was power monger.</p>
+<p>Result :</p>
+<p>Compiz : 3h30</p>
+<p>Metacity : 5h00</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Screenlets : widgets for Compiz or Beryl</title>
+		<link>/blog-archive/2007/03/17/screenlets-widgets-for-compiz-or-beryl.html</link>
+		<pubDate>Sat, 17 Mar 2007 11:21:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Compiz]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=24</guid>
+		<description><![CDATA[<p>It is still under heavy development but already nice, usable and quite stable.<br />I have been using it for 2 weeks now, and did not get any freeze. It just does not have all the options I am sure it will get in the future.</p>]]></description>
+				<content:encoded><![CDATA[<p>It is still under heavy development but already nice, usable and quite stable.<br />
+I have been using it for 2 weeks now, and did not get any freeze. It just does not have all the options I am sure it will get in the future.</p>
+<p><span id="more-24"></span><br />
+Let&#8217;s install it. It&#8217;s a piece of cake, as always.</p>
+<p>However, I assume that you have already installed Compiz or Beryl which are necessary to run it.<br />
+If not, please refer to one of the numerous guides on the web explaining how to do that.</p>
+<p>I would personnally advise <a hreflang="en" href="http://www.go-compiz.org/index.php?title=Ubuntu_Installation_Guide">the official Compiz guide</a>, because after several months of daily use and on my hardware, <a hreflang="en" href="/index.php/post/2007/03/01/Switched-back-from-Beryl-to-Compiz">Compiz has proven to be far more stable than Beryl</a>.<br />
+I don&#8217;t want to start a flame war here, but I am convinced that Beryl is not taking a good path.</p>
+<p>So here we go for Screenlets :</p>
+<p>Edit your<strong> /etc/apt/source.list</strong> file and add this line :</p>
+<pre lang="text">deb http://hendrik.kaju.pri.ee/ubuntu edgy screenlets</pre>
+<p>Then, add the GPG key for more safety :</p>
+<pre lang="bash">$ wget http://hendrik.kaju.pri.ee/ubuntu/619A3D4E.gpg -O- | sudo apt-key add - &amp;&amp; sudo apt-get update</pre>
+<p>Finally, you can enter in your terminal :</p>
+<pre lang="bash">$ apt-get update && apt-get install screenlets</pre>
+<p>Now, you should have an icon in your Accessories menu : just click to start it.<br />
+The same icon (the one at the left side of the screenshot below, representing a computer) will show off near the clock.</p>
+<p><img src="http://192.168.1.10/wordpress/wp-content/uploads/2007/05/public/screenlets/screenlets-tray-icon.png" alt="screenlets tray icon" /></p>
+<p>Right click on it and choose settings to get this screen :</p>
+<p><img title="screenlets control panel" src="/blog-archive/wp-content/uploads/2007/05/public/screenlets/Screenlets-Control_Panel.png" alt="screenlets control panel" width="337" height="570" /></p>
+<p>As you can see, it shows the widgets that are available currently.</p>
+<p>To add one to your desktop, just double click on it. According to the widget, you can get more configuration options by right clicking individually on each.</p>
+<p>Now you can play with it and dig for more tricks ! :)<br />
+For more info, don&#8217;t forget check <a hreflang="en" href="http://www.go-compiz.org/index.php?title=Desktop_Screenlets">the official web site</a>.</p>
+<p>Here is screenlets as it runs on my desktop :</p>
+<p><img title="screenlets" src="/blog-archive/wp-content/uploads/2007/05/public/screenlets/screenlets.png" alt="screenlets" width="252" height="322" /></p>
+<p>There are the 3 most useful widgets that I found and there work very well. I am now looking forward to seeing more and more widgets and options. :)</p>
+<p>Oh and don&#8217;t be affraid that it slows down your computer : it takes 6 Mb of memory on mine, and has no measurable impact on the CPU (and my laptop has a modest Celeron processor).</p>
+<p>Have fun !</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Switched back from Beryl to Compiz</title>
+		<link>/blog-archive/2007/03/01/switched-back-from-beryl-to-compiz.html</link>
+		<comments>/blog-archive/2007/03/01/switched-back-from-beryl-to-compiz.html#comments</comments>
+		<pubDate>Thu, 01 Mar 2007 16:42:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Compiz]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=21</guid>
+		<description><![CDATA[<p>I have run Beryl for months and have seen many huge and nice improvements.</p> <p>I switched to Beryl soon after the fork from Compiz. At the time, I was on Ubuntu Breezy. The reason of my switch was a major issue with Compiz, making it impossible for my laptop to hibernate. Beryl did it. I could have solved it by myself, maybe, but didn't have time to dig out desktop things.</p> <p>Today, it is again some bugs that pushed me to switch back from Beryl to Compiz.</p>]]></description>
+				<content:encoded><![CDATA[<p>I have run Beryl for months and have seen many huge and nice improvements.</p>
+<p>I switched to Beryl soon after the fork from Compiz. At the time, I was on Ubuntu Breezy. The reason of my switch was a major issue with Compiz, making it impossible for my laptop to hibernate. Beryl did it. I could have solved it by myself, maybe, but didn&#8217;t have time to dig out desktop things.</p>
+<p>Today, it is again some bugs that pushed me to switch back from Beryl to Compiz.</p>
+<p><span id="more-21"></span></p>
+<p>I have recently seen Beryl having more and more features &#8211; to be honnest, most of them are rather useless, but with no improvement on the overall stability.</p>
+<p>I know it is one of the points that made them disagree with Compiz : adding always more and more features without much bug track. What I think now is that time shows Compiz was right.</p>
+<p>During the past 2 months, there were not a day without a Beryl crash. I always had to reorganize my windows and reloading Beryl only gave me few minutes before the next crash. The better solution was to restart my session, giving me one more day free of bug.</p>
+<p>Ok, you are going to tell me that it is not such a big problem. But it was one for me, considering my productivity, as I spend all the day on my laptop.</p>
+<p>Also, despite nice efforts from Beryl to improve the settings interface, it appears to be more and more confusing. It is just too much and asks too much investment in configuration for an average user.</p>
+<p>I, as a Gnome user, got tired with that. I like Gnome because it is simple. I feel that Beryl is looking more and more like a KDE thing&#8230;</p>
+<p>On the other hand, I got used to the new features AIGLX gives (especially transparency and the cube) and did not want to stop using it.</p>
+<p>So, without expecting much, I decided to give a new try to Compiz.</p>
+<p>I was nicely surprised. It is now as easy as Beryl to set up. Just follow <a hreflang="en" href="http://www.go-compiz.org/index.php?title=Ubuntu_Installation_Guide">this easy guide</a>.</p>
+<p>After few days, I can say that I reached my primary goal : there is no crash anymore.<br />
+They also fixed the hibernating bug I had a long time ago. On this point, it is still not as fast as with Beryl, but no problem.</p>
+<p>I found out a minor bug, however : some boxes showed totally empty, just the frame. I found out the workaround on <a hreflang="en" href="http://forum.go-compiz.org">the official forum</a>.<br />
+<span class="postbody"> Open <strong>/etc/X11/xorg.conf</strong> in your favourite editor as root and add<br />
+</span></p>
+<blockquote><p>Option &#8220;AddARGBGLXVisuals&#8221; &#8220;True&#8221;</p></blockquote>
+<p><span class="postbody">to the Screen section and :</span></p>
+<blockquote><p>Option &#8220;XAANoOffscreenPixmaps&#8221;</p></blockquote>
+<p>to the Device section.</p>
+<p>I hope it will help.</p>
+<p>Talking about the functionalities, it is all fine out of the box. Without any tweak, I have the default settings offering nice effects. My overall feeling is that it is maybe less shiny, but less kiddy and more polished than Beryl.</p>
+<p>This is the kind of philosophy I like.</p>
+<p>I definitely recommend you to give it a try, despite the major trend for Beryl that is on the forums.<br />
+Compiz, for now, is cleaner and more &#8220;professional&#8221; in its approach.</p>
+<p>Below is my desktop :</p>
+<p><img style="display: block" src="/blog-archive/wp-content/uploads/2007/05/public/compiz.png" alt="" align="bottom" /></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/03/01/switched-back-from-beryl-to-compiz.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

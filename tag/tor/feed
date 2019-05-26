@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Tor &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/tor/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>A few (convenient) dockerfiles</title>
+		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Etherpad]]></category>
+		<category><![CDATA[Phishing Frenzy]]></category>
+		<category><![CDATA[Tor]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
+<p>Here they are:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-etherpad">Debian-based Etherpad</a></li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-phishingfrenzy">Debian-based Phishing Frenzy</a></li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/phocean/dockerfile-debian-torbrowser">Debian-based Tor Browser</a></li>
+</ul>
+<p>I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation and shrinking, etc.).</p>
+<p>It makes perfect sense to use Docker just for that, and on top of that it consumes much fewer resources. Starting with the disk usage : all these containers along with their image stands below 1 GB!</p>
+<p>The fact that I am using Btrfs as the underlying storage driver is not for nothing: compression is extremely efficient on images!</p>
+<p>Note that my Dockerfiles have nothing special, you can actually find others on the Internet (and I was inspired by some).</p>
+<p>There are a few differences, however:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I care much about security, so at least I try to make Web services not running as root, even if it is inside a container (the root user is still the same as on the host, so let&#8217;s make a compromise as unlikely as possible).</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I like simple things, so I tried to keep everything straightforward and simplified some stuff.</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">I don&#8217;t like to waste disk space. So when I some Dockerfiles based on Ubuntu, Debian Wheezy, Debian Jessie, Fedora, etc., I try to unify all of them under Debian &#8220;stable&#8221; (so as of today, Jessie). Why bother with useless images? I chose a versatile and common server distribution and I am trying to stick with it.</li>
+</ul>
+<p>While I was playing, I had two things bothering me:</p>
+<ul>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;"><a href="https://github.com/docker/docker/issues/3804">No quota support</a>: for a Samba sharing guest that I have, I would have liked to implement quotas from within the container. There is no support for that at the moment, and the global limitation by container is not nice (and once you choose a big size, you can&#8217;t go backward for existing containers&#8230;). I have a dedicated partition for Docker, so, while not perfect, it is okay for now.</li>
+<li style="font-family: 'Open Sans,Helvetica,Arial,sans-serif'; color: #444444;">The devicemapper storage driver totally sucks at this time: <a href="https://github.com/docker/docker/issues/3182">free space is never reclaimed after you delete images or containers</a>! So the more you use Docker, the more your partition gets full.</li>
+</ul>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

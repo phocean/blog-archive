@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DoS &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/dos/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Mitigating Slow HTTP DoS Attacks</title>
+		<link>/blog-archive/2010/11/24/mitigating-slow-http-dos-attacks.html</link>
+		<pubDate>Wed, 24 Nov 2010 22:54:29 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[DoS]]></category>
+		<category><![CDATA[HTTP]]></category>
+		<category><![CDATA[ModSecurity]]></category>
+		<category><![CDATA[RUDY]]></category>
+		<category><![CDATA[Slowloris]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=928</guid>
+		<description><![CDATA[Interesting article on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks. The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.]]></description>
+				<content:encoded><![CDATA[<p><a title="HTTP DoS attacks" href="http://blog.spiderlabs.com/2010/11/advanced-topic-of-the-week-mitigating-slow-http-dos-attacks.html" target="_blank">Interesting article</a> on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks.</p>
+<p>The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

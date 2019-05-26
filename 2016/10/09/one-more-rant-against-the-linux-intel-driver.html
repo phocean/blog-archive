@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../../css/fontello.css">
+<link rel="stylesheet" href="../../../css/animation.css">
+
+<!-- Mirrored from phocean.net/2016/10/09/one-more-rant-against-the-linux-intel-driver.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:24:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>One more rant against the Linux Intel graphic driver | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Metasploit framework docker image now published on Docker Hub' href='../../06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html' />
+<link rel='next' title='Reducing the friction™ with social medias thanks to Netvibes' href='../../11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html' />
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="one-more-rant-against-the-linux-intel-driver.html" />
+<link rel='shortlink' href='../../../index55cf.html?p=2123' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embed5466.js" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embedfdd3?url=https%3A%2F%2Fphocean.net%2F2016%2F10%2F09%2Fone-more-rant-against-the-linux-intel-driver.html&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-2123 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../../index.html" >
+			<img class="logo" src="../../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-2123" class="post-2123 post type-post status-publish format-standard hentry category-linux category-administration-systeme">
+				<header class="entry-header">
+
+						<h1 class="entry-title">One more rant against the Linux Intel graphic driver</h1>			
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>Some quick notes that may help random Linux users looking for similar issues.</p>
+<p>I am, like many, the unfortunate user of a laptop with Intel graphics (Thinkpad T460 to be precise). Why unfortunate? Because the graphic driver provided by Intel sucks.</p>
+<p><em><strong>i915</strong></em>, as it is being called, really has been sucking for years, and it is known for that (just google it, if you don&#8217;t believe me).</p>
+<p>For the sake of completeness, here is the exact model with which I experienced some issues:</p>
+<pre>%  lspci
+00:00.0 Host bridge: Intel Corporation Skylake Host Bridge/DRAM Registers (rev 08)
+00:02.0 VGA compatible controller: Intel Corporation HD Graphics 520 (rev 07)
+...</pre>
+<h2>For performance, remove the X11 Intel driver</h2>
+<p>First, its X11 module is generally under-performing under X11, so I just removed it to have X11 using <em>modsettings. </em>These are the instructions for Fedora (24), but you can virtually do something similar for any distribution:</p>
+<pre>% dnf remove xorg-x11-drv-intel</pre>
+<p>Do not worry, it just remove the X11 part of the driver, not the kernel driver itself.</p>
+<p>Login, logout, job done: you should have less lags with desktop environments like gnome-shell.</p>
+<h2>For stability, disable RC6</h2>
+<p>I experienced frequent, daily freezes of my work session. The display would totally hang or display a blank screen, forcing me to cold reboot the computer.</p>
+<p>Here is an extract of the <em>dmesg</em> kernel traces leading the the crash (it is a bit lengthy, but that may help people to find this post):</p>
+<pre>oct. 06 11:00:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:00:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:01:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:01:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:01:43 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:02:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:02:22 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:04:08 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=6364 end=6365) time 287 us, min 954, max 959, scanline start 950, end 967
+oct. 06 11:13:58 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=41777 end=41778) time 340 us, min 954, max 959, scanline start 946, end 967
+oct. 06 11:20:18 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=64583 end=64584) time 284 us, min 954, max 959, scanline start 946, end 964
+oct. 06 11:20:33 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=65517 end=65518) time 284 us, min 1073, max 1079, scanline start 1071, end 1091
+oct. 06 11:28:27 localhost.localdomain kernel: [drm:intel_cpu_fifo_underrun_irq_handler [i915]] *ERROR* CPU pipe B FIFO underrun
+oct. 06 11:31:53 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=106339 end=106340) time 285 us, min 1073, max 1079, scanline start 1066, end 1086
+oct. 06 11:33:58 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=113803 end=113804) time 287 us, min 954, max 959, scanline start 948, end 966
+oct. 06 11:35:13 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=118345 end=118346) time 285 us, min 1073, max 1079, scanline start 1062, end 1081
+oct. 06 11:52:59 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=182278 end=182279) time 282 us, min 1073, max 1079, scanline start 1064, end 1084
+oct. 06 12:01:29 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=212893 end=212894) time 284 us, min 1073, max 1079, scanline start 1068, end 1088
+oct. 06 12:02:44 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=217395 end=217396) time 282 us, min 1073, max 1079, scanline start 1068, end 1088
+oct. 06 12:02:49 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=217642 end=217643) time 247 us, min 954, max 959, scanline start 949, end 964
+oct. 06 12:03:54 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=221597 end=221598) time 281 us, min 1073, max 1079, scanline start 1067, end 1086
+oct. 06 12:05:49 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=228446 end=228447) time 290 us, min 954, max 959, scanline start 948, end 966
+oct. 06 12:17:32 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:18:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:18:23 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:18:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:19:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:19:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:19:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in Xorg [2322], reason: Engine(s) hung, action: reset
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] GPU hangs can indicate a bug anywhere in the entire gfx stack, including userspace.
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] Please file a _new_ bug report on bugs.freedesktop.org against DRI -&gt; DRM/Intel
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] drm/i915 developers can then reassign to the right component if it's not a kernel issue.
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] The gpu crash dump is required to analyze gpu hangs, so please always attach it.
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] GPU crash dump saved to /sys/class/drm/card0/error
+oct. 06 12:20:52 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:20:54 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:05 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:05 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in gnome-shell [2532], reason: Engine(s) hung, action: reset
+oct. 06 12:21:05 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:07 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:15 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:15 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in gnome-shell [2532], reason: Engine(s) hung, action: reset
+oct. 06 12:21:15 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:17 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:27 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:27 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in Xorg [2322], reason: Engine(s) hung, action: reset
+oct. 06 12:21:27 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:29 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:37 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:37 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in Xorg [2322], reason: Engine(s) hung, action: reset
+oct. 06 12:21:37 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:39 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:43 localhost.localdomain kernel: ------------[ cut here ]------------
+oct. 06 12:21:43 localhost.localdomain kernel: WARNING: CPU: 0 PID: 1109 at drivers/gpu/drm/i915/intel_display.c:13533 intel_atomic_commit+0x13b8/0x1470 [i915]
+oct. 06 12:21:43 localhost.localdomain kernel: pipe A vblank wait timed out
+oct. 06 12:21:43 localhost.localdomain kernel: Modules linked in: tun nfnetlink_queue nfnetlink_log uas usb_storage xt_nat veth rfcomm ccm ipt_MASQUERADE nf_nat_masquerade_ipv4 xt_addrtype br_netfilter ip6t_rpfilter ip6t_REJECT nf_reject_ipv6 xt_conntrack dm_thin_pool dm_persistent_data dm_bio_prison loop ip_set nfnetlink ebtable_nat ebtable_broute bridge ip6table_raw ip6table_mangle ip6table_nat nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_ipv6 ip6table_security iptable_raw iptable_mangle iptable_nat nf_conntrack_ipv4 nf_defrag_ipv4 nf_nat_ipv4 nf_nat nf_conntrack iptable_security ebtable_filter ebtables ip6table_filter ip6_tables vmnet(O) ppdev parport_pc parport vboxpci(O) vboxnetadp(O) vboxnetflt(O) fuse vmw_vsock_vmci_transport vsock vmw_vmci vmmon(O) vboxdrv(O) cmac bnep cpufreq_stats vfat fat arc4 iTCO_wdt snd_soc_skl iTCO_vendor_support
+oct. 06 12:21:43 localhost.localdomain kernel:  snd_soc_skl_ipc snd_hda_codec_hdmi snd_soc_sst_ipc intel_rapl snd_soc_sst_dsp x86_pkg_temp_thermal snd_hda_codec_realtek snd_hda_ext_core intel_powerclamp snd_hda_codec_generic coretemp snd_soc_sst_match kvm_intel snd_soc_core kvm snd_compress snd_pcm_dmaengine ac97_bus snd_hda_intel snd_hda_codec iwlmvm snd_hda_core mac80211 irqbypass intel_cstate intel_rapl_perf snd_hwdep snd_seq snd_seq_device btusb snd_pcm btrtl uvcvideo btbcm btintel videobuf2_vmalloc videobuf2_memops joydev bluetooth videobuf2_v4l2 iwlwifi i2c_i801 snd_timer videobuf2_core cfg80211 rtsx_pci_ms videodev memstick media mei_me mei shpchp thinkpad_acpi intel_pch_thermal snd soundcore rfkill wmi tpm_tis tpm nfsd auth_rpcgss nfs_acl lockd grace sunrpc xfs libcrc32c dm_crypt hid_logitech_hidpp hid_logitech_dj 8021q garp
+oct. 06 12:21:43 localhost.localdomain kernel:  stp llc mrp i915 rtsx_pci_sdmmc mmc_core crct10dif_pclmul crc32_pclmul crc32c_intel e1000e i2c_algo_bit drm_kms_helper ghash_clmulni_intel drm serio_raw ptp pps_core rtsx_pci video fjes
+oct. 06 12:21:43 localhost.localdomain kernel: CPU: 0 PID: 1109 Comm: systemd-logind Tainted: G     U  W  O    4.7.5-200.fc24.x86_64 #1
+oct. 06 12:21:43 localhost.localdomain kernel: Hardware name: LENOVO 20FNCTO1WW/20FNCTO1WW, BIOS R06ET42W (1.16 ) 09/20/2016
+oct. 06 12:21:43 localhost.localdomain kernel:  0000000000000286 0000000018e0c148 ffff8800d283b850 ffffffffb63daaaf
+oct. 06 12:21:43 localhost.localdomain kernel:  ffff8800d283b8a0 0000000000000000 ffff8800d283b890 ffffffffb60a0b0b
+oct. 06 12:21:43 localhost.localdomain kernel:  000034dd00000000 ffff88040f607000 0000000000000000 0000000000000000
+oct. 06 12:21:43 localhost.localdomain kernel: Call Trace:
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb63daaaf&gt;] dump_stack+0x63/0x84
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60a0b0b&gt;] __warn+0xcb/0xf0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60a0b8f&gt;] warn_slowpath_fmt+0x5f/0x80
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60e4483&gt;] ? finish_wait+0x53/0x70
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc05046a8&gt;] intel_atomic_commit+0x13b8/0x1470 [i915]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60e46e0&gt;] ? prepare_to_wait_event+0xf0/0xf0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc0380ba7&gt;] drm_atomic_commit+0x37/0x60 [drm]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc03e21e8&gt;] restore_fbdev_mode+0x238/0x260 [drm_kms_helper]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc03e45d4&gt;] drm_fb_helper_restore_fbdev_mode_unlocked+0x34/0x80 [drm_kms_helper]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc03e464d&gt;] drm_fb_helper_set_par+0x2d/0x50 [drm_kms_helper]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc051ea4a&gt;] intel_fbdev_set_par+0x1a/0x60 [i915]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb645a6b6&gt;] fb_set_var+0x236/0x460
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60e4004&gt;] ? __wake_up+0x44/0x50
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb67ea562&gt;] ? down_write+0x12/0x40
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64caabb&gt;] ? tty_unthrottle+0x3b/0x60
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb645074f&gt;] fbcon_blank+0x30f/0x350
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64db0b2&gt;] do_unblank_screen+0xd2/0x1a0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64d0ef6&gt;] vt_ioctl+0x4f6/0x1270
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64c537a&gt;] tty_ioctl+0x35a/0xc50
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb625f909&gt;] ? dput+0xd9/0x260
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb625b4b2&gt;] do_vfs_ioctl+0xa2/0x5d0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60be9b8&gt;] ? task_work_run+0x88/0xb0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb625ba59&gt;] SyS_ioctl+0x79/0x90
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb67ec572&gt;] entry_SYSCALL_64_fastpath+0x1a/0xa4
+oct. 06 12:21:43 localhost.localdomain kernel: ---[ end trace 9f62268cfd97b6cb ]---</pre>
+<p>As seen above, it would always happen after a while and when the graphic chip goes to the RC6 power saving mode.</p>
+<p>After searching on different forum and wikis, I applied the proposed solution of completly disabling the RC6 mode. Add the part in <span style="color: #ff0000;">red</span> to the kernel options in your grub configuration file:</p>
+<pre>%  cat /etc/default/grub 
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="rd.lvm.lv=fedora/root rd.luks.uuid=luks-a9d14a0e-6c22-4976-919a-d216bd69d563 rd.lvm.lv=fedora/swap resume=/dev/dm-2 quiet splash <span style="color: #ff0000;"><strong>i915.enable_rc6=0</strong></span>"
+GRUB_DISABLE_RECOVERY="true"</pre>
+<p>Then, just rebuild grub and reboot. If you are on a UEFI system (as root):</p>
+<pre class="prettyprint"><code><span class="pln">grub2</span><span class="pun">-</span><span class="pln">mkconfig </span><span class="pun">-</span><span class="pln">o </span><span class="pun">/</span><span class="pln">boot</span><span class="pun">/</span><span class="pln">efi</span><span class="pun">/</span><span class="pln">EFI</span><span class="pun">/</span><span class="pln">fedora</span><span class="pun">/</span><span class="pln">grub</span><span class="pun">.</span><span class="pln">cfg</span></code></pre>
+<p><span style="text-decoration: underline;">Or</span>, for legacy BIOS:</p>
+<pre class="prettyprint"><code><span class="com">grub2-mkconfig -o /boot/grub2/grub.cfg</span></code></pre>
+<p>Finally reboot and you are done.</p>
+<p>There is a caveat however, as it will probably cause some battery drain. With <em>Powertop</em>, I measured a consumption increase of around 6 W (8 to 13W), which caused my battery life to drop from approximately 10h to 5h30.</p>
+<p>Still enough and a acceptable price to pay to work reliably without risking a complete system hang.</p>
+<p>But, if I had to buy a computer personally, I would make sure that it has an nvidia card. Yeah, I know that there proprietary blob has its caveats too, but from what I heard it is probably more stable.</p>
+<p>Graphic drivers have always been a problem for &#8220;Linux on the desktop&#8221;.</p>
+<h2>References</h2>
+<ul>
+<li>https://wiki.archlinux.org/index.php/intel_graphics</li>
+<li>https://wiki.gentoo.org/wiki/Intel</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../category/administration-systeme/linux.html" rel="category tag">Linux</a>, <a href="../../../category/administration-systeme.html" rel="category tag">System</a> on <a href="one-more-rant-against-the-linux-intel-driver.html" title="11:21 pm" rel="bookmark"><time class="entry-date" datetime="2016-10-09T23:21:04+00:00">October 9, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html" rel="prev"><span class="meta-nav">&larr;</span> Metasploit framework docker image now published on Docker Hub</a></span>
+					<span class="nav-next"><a href="../../11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html" rel="next">Reducing the friction™ with social medias thanks to Netvibes <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.316 seconds. Made 13 queries to database and 45 cached queries. Memory used - 27.38MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/2016/10/09/one-more-rant-against-the-linux-intel-driver.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:24:07 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.286 seconds. -->

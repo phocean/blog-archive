@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Security &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/security/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>SSTIC 2012</title>
+		<link>/blog-archive/2012/06/10/sstic-2012.html</link>
+		<pubDate>Sun, 10 Jun 2012 05:40:41 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Challenge]]></category>
+		<category><![CDATA[conference]]></category>
+		<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[SSTIC]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1246</guid>
+		<description><![CDATA[I came back from the 2012 edition of SSTIC, where despite the concerns, there were still some nice conferences. Until slides and papers are published, you can find some nice reports (all in French). But the most impressive will remain the challenge: look at the solution! What a hell! Just reading and trying to understand...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/sstic-2012.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I came back from the 2012 edition of <a title="SSTIC" href="https://www.sstic.org">SSTIC</a>, where despite the concerns, there were still some nice conferences.</p>
+<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
+<p>Big respect for the guys who have the talent of going over so many tricks.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Cloud in the security sky or should I see a psychologist?</title>
+		<link>/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html</link>
+		<pubDate>Sat, 05 Feb 2011 18:22:45 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[CSRF]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1010</guid>
+		<description><![CDATA[The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later. Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later.</p>
+<p>Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can count on the salesmen to get a great picture of it again and again, its cons are silenced.</p>
+<p>Too bad, a major disadvantage is security. But guess what? The other day an &#8220;analyst&#8221; presenting his study about cloud computing just cleared out the issue in 3 words :</p>
+<blockquote><p>&#8220;Concerning the people who doubt of the security in the cloud, it is a typical psychological issue of theses persons fearing change or something new . There is really nothing concrete to worry about cloud security.&#8221;</p></blockquote>
+<p>Well, not sure I am going to see a psychologist. Of course the guy did not give any solid argument, so here we go.</p>
+<p>In short, cloud computing expose to the Internet services that were, in normal conditions, always kept inside an internal network and behind peripheral protections.</p>
+<p>Of course, these services offer authentication, but basically almost every traditional web attacks will work as usual. After all, we are talking about the same web portal, the same users, the same browsers, etc.</p>
+<p>Let quickly summarize the potential threats: CSRF, XSS, phishing, SSL attacks (MiTM, certificate spoofing),  browser exploits and many more.</p>
+<p>So really, it is not a question of being crazy, paranoid or reluctant to change. There are just many issues that don&#8217;t make the cloud useless but should incite to caution.</p>
+<p>Cloud computing can be used for what it is good at (flexibility, convenience) but not to replace a datacenter. It should not be used if security is a concern.</p>
+<p>Don&#8217;t listen to the salesman only, read what some specialists are saying. Here is a compilation of some interesting articles I found :</p>
+<ul>
+<li>Black Hat 2009 presentation : <a title="BackHat 2009 and cloud computing" href="http://www.isecpartners.com/storage/docs/presentations/Cloud-BlackHat-2009-iSEC.pdf">pdf</a> and <a title="black hat could models" href="http://www.cupfighter.net/index.php/2009/07/blackhat-talk-cloud-computing-models-and-vulnerabilities-raining-on-the-trendy-new-paradise-by-alex-stamos-andrew-becherer-nathan-wilcox/">summary</a></li>
+<li>Owasp presentation (<a title="Owasp and cloud computing security" href="http://www.owasp.org/images/1/12/Cloudy_with_a_chance_of_0_day_-_Jon_Rose-Tom_Leavey.pdf">pdf</a>)</li>
+<li><a title="dangers in the cloud" href="http://www.webvivant.com/dangers-in-the-cloud.html">Dangers in the cloud </a></li>
+<li><a title="Browsers vulnerabilities" href="http://lcamtuf.blogspot.com/2011/02/so-you-think-your-capability-model-is.html" target="_self">So you think *your* capability model is bad?</a> (browser&#8217;s weak design)</li>
+</ul>
+<p>And last but not least, in case our favorite salesman keeps pushy:</p>
+<ul>
+<li><a title="Amazon EC2 vulnerabilities" href="http://cloudsecurity.org/blog/2008/12/18/whats-new-in-the-amazon-cloud-security-vulnerability-in-amazon-ec2-and-simpledb-fixed-75-months-after-notification.html">Amazon EC2 vulnerabilities</a></li>
+<li><a title="Salesforce phishing incident" href="http://www.ebizq.net/blogs/security_insider/2007/11/implications_of_salesforce_phi.php">Salesforce phishing incident</a></li>
+</ul>
+<p>But that&#8217;s not all. The same goes with &#8220;virtualization everywhere&#8221;, but that will be another topic&#8230;</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>OpenID rants</title>
+		<link>/blog-archive/2010/07/23/openid-rants.html</link>
+		<pubDate>Fri, 23 Jul 2010 03:44:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Authentication]]></category>
+		<category><![CDATA[OpenID]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
+		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>After I tried to set this blog as my own OpenID provider using the <a title="OpenID WordPress Plugin" href="http://wordpress.org/extend/plugins/openid/" target="_blank">OpenID WordPress plugin</a>, I got a weired error message:</p>
+<p><em>&#8220;This is an OpenID Server, Nothing to See Here&#8230; Move  Along&#8221;</em></p>
+<p>I could not find what as wrong, as all prerequisites were fulfilled, until I find this <a title="openID server" href="http://patchlog.com/wordpress/openid-server-on-php-5-3/" target="_blank">nice post</a>. The patch there works very well, thanks to the author (it is a shame that it wasn&#8217;t yet included in the trunk).</p>
+<p>This and the lack of active open-source development around OpenID seems to show that it is not really popular. It is a shame because it is a pretty good solution against the multiplication of passwords. I wouldn&#8217;t want to use OpenID for my bank account access, but it is just right for many sites, forums, etc. Unfortunately, no many sites are yet OpenID enabled and the choice when you want to become your own provider is very limited (most of projects listed in the official wiki are dead, with no update for the last 2 years).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Books review</title>
+		<link>/blog-archive/2010/05/16/books-review.html</link>
+		<pubDate>Sun, 16 May 2010 16:16:46 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Book]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Review]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
+		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them.</p>
+<h4>Hacking: the next generation</h4>
+<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/blog-archive/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
+<p>The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc.<br />
+It was easy to read : the authors are straight to the point and their sentences are clear.</p>
+<p>I especially appreciated their state of art about XSS and CSRF attacks. It is certainly the best I have read so far, greatly illustrated with exciting and real case studies.</p>
+<p>On the other hand,  I quickly passed over the networking stuff (both wired and wireless). It was too basic and didn&#8217;t show anything new &#8211; maybe it is because I specialize in those fields.</p>
+<p>Anyway, globally, I strongly recommend this book. It is worth while your money if you want to know more on web attacks or to have a good overview of modern threats.</p>
+<h4>Beautiful Security</h4>
+<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/blog-archive/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
+<p>This is a collection of essays by some of the best security experts and hackers.</p>
+<p>Well, I won&#8217;t go around, I have been quite disappointed by this book. The overall lacks coherence and after a while you start wondering what this book is trying to demonstrate. At the end, there is a crual lack of connection between the essays and it globally makes it appear very confusing.</p>
+<p>It also sometimes lacks technical references and the writing style is too verbose, too literal for a technical book to be attractive.</p>
+<p>There are however some good essays, like one about PGP (by Philip Zimmermann himself, though). It is hard to find some good and complete documentation about it, and this essay is definitely a good one, which I will probably read again when I feel the need of it.</p>
+<p>But I wouldn&#8217;t recommend this book only for this short piece of writing. Lack of cohesion, too much litterature and not enough technical stuff actually bored me, though that&#8217;s just my personal taste.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Nessus 4.2</title>
+		<link>/blog-archive/2009/12/01/nessus-4-2.html</link>
+		<pubDate>Tue, 01 Dec 2009 20:21:23 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[nessus]]></category>
+		<category><![CDATA[scanner]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=534</guid>
+		<description><![CDATA[Nessus 4.2 is out. I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/01/nessus-4-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="Nessus 4.2" href="http://www.nessus.org/download/" target="_blank">Nessus 4.2</a> is out.</p>
+<p>I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be, they come to you in the right order.</p>
+<p>I also appreciate that the server and the client set-up are now unified thanks to the web interface (you can access it from localhost or from the network indifferently).</p>
+<p>The report section has also been greatly improved.</p>
+<p>So, if you were already an Nessus user, it is worth upgrading.</p>
+<p>Talking about the set-up, there is an up-to-date package for openSUSE (of course, there are a lot less dependencies than before).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</title>
+		<link>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
+		<comments>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
+		<pubDate>Sat, 28 Nov 2009 16:08:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
+		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
+<p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
+<p>A proof of concept of an attack against Twitter was made.</p>
+<p>Fine. But so far, <strong>the answer was to just disable any renegociation</strong>.</p>
+<p>This actually causes some issues with SSL session timeout and totally broke client authentication.</p>
+<p>I got into problems because of the latter. I am using client authentication for some location of my web server, and I recently could not connect anymore to these with the following log in apache :</p>
+<pre>[Tue Nov 24 16:56:15 2009] [debug] ssl_engine_kernel.c(1912): OpenSSL:Exit: error in SSLv3 read client hello A
+[Tue Nov 24 16:56:15 2009] [error] [client x.x.x.x] Re-negotiation handshake failed: Not accepted by client!?</pre>
+<p>I first was not aware of the openssl patch and tried almost anything possible. My focus was, of course, on the certificate and the client.<br />
+But, a nice guy on IRC #suse,<strong> Stittel</strong>, had a good hunch and suggested me to look at the CVE-2009-3555 fix.</p>
+<p>After more tests, it was quickly confirmed to work well with older versions of OpenSSL (as shipped in Debian Lenny).<br />
+Finally, I downgraded the OpenSSL version on my openSUSE box to a version prior to the CVE-2009-3555 fix and it just worked fine.</p>
+<p>Then, I dig into it and found a lot of interesting reports <a href="https://bugzilla.redhat.com/show_bug.cgi?id=533125" target="_blank">there</a> and <a href="http://old.nabble.com/TLS-renegotiation-disabling-:-mod_ssl-and-OpenSSL--0.9.8l-td26285568.html" target="_blank">there</a>. So far it is a real mess.<br />
+In short, the breakage will stay as long as browsers don&#8217;t also include a patch to avoid renegotiation.<br />
+So far, I could not find a browser that does include a patch.<br />
+If anyone reading it knows a version that does it, please let me know.</p>
+<p>Meanwhile, you have actually the choice between :</p>
+<ul>
+<li>low security by deactivating client authentication on your server</li>
+<li>low security by keeping a vulnerable version of OpenSSL</li>
+</ul>
+<p>As my server is not very exposed, I chose the latter, but that&#8217;s not satisfying.  It is not recommended, but if like me you need to use client authentication with mod_ssl on openSUSE 11.2, do :</p>
+<pre>% zypper install --from repo-oss openssl openssl-certs libopenssl0_9_8 libopenssl0_9_8-32bit</pre>
+<p>where repo-oss is the alias to the 11.2 release (without updates) on your system.</p>
+<p>What a brutal way to fix an issues without much notification and consideration to the users ! Even the log message is wrong and just confusing the administrator&#8230;</p>
+<p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
+<p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Nmap 5.0 is out</title>
+		<link>/blog-archive/2009/07/17/nmap-5-0-is-out.html</link>
+		<pubDate>Fri, 17 Jul 2009 08:41:46 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Fingerprint]]></category>
+		<category><![CDATA[Nmap]]></category>
+		<category><![CDATA[scanner]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=395</guid>
+		<description><![CDATA[Nmap 5.0 has been released, with a bunch of improvments : look at the changelog.]]></description>
+				<content:encoded><![CDATA[<p><a title="Nmap 5.0 download" href="http://nmap.org/dist/nmap-5.00.tar.bz2" target="_blank">Nmap 5.0</a> has been released, with a bunch of improvments : look at the <a title="Nmap 5.0 change" href="http://nmap.org/changelog.html" target="_blank">changelog</a>.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Windows Vista memory protection : defeated ?</title>
+		<link>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html</link>
+		<comments>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
+		<pubDate>Fri, 08 Aug 2008 15:44:45 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[memory injection]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
+		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>It seems, at least according to <a href="http://taossa.com/index.php/2008/08/07/impressing-girls-with-vista-memory-protection-bypasses/" target="_blank">some researchers showed it at the Black Hat conference</a>.</p>
+<p>Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk.</p>
+<p>Especially, <a href="http://taossa.com/archive/bh08sotirovdowd.pdf" target="_blank">this paper</a> will be an interesting reading, even if it is not as simple as they say &#8211; at least for me.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>How-to : Mod-security 2 set-up for Apache 2</title>
+		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[mod-security]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[regxp]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
+<p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
+<span id="more-114"></span></p>
+<p>Due to license issues, mod-security is no more shipped with Debian &#8211; it was until Debian Sarge.</p>
+<p>Fortunately, the Debian maintainer continue to provide some packages on his website.</p>
+<p>So, the easy way to set up mod-security on your Debian system is to add this line in your <strong>/etc/apt/source.list</strong> file :</p>
+<pre lang="bash">$ echo "deb http://etc.inittab.org/~agi/debian/libapache-mod-security2/ etch/" >> /etc/apt/source.list</pre>
+<p>
+Then type in the usual sequence :</p>
+<pre lang="bash">$ aptitude update && aptitude install libapache-mod-security2</pre>
+<p>You could also download the source from <a title="mod-security" href="http://www.modsecurity.org/download/index.html">the official website</a>.<br />
+<br />
+Once it is done, comes the configuration part. The configuration is critical because any mistake on it will make it at best useless, or at worst blocking your website.<br />
+You have the choice between creating your rules from scratch or getting some ready made.<br />
+Creating your rules will require a lot of time and expertise in the http protocol, php, sql, and any other service that you offer with Apache.<br />
+That was not really my case, so I started to look for some ready made rules on google. I could not get good ones. Most of tutorial gives only some very basic and incomplete rules : useless. I found a good paper, notably containing some specific rules for WordPress, but the rules were written for mod-security v1 whereas it is now in its second version.<br />
+Oh, did I forget to tell you ? Most of the syntax was changed between the two versions !!! Not very nice, even if it was worth doing it.</p>
+<p>Finally, I came to find a way with the rules provided by this website, <a title="Go Root ? mod-security rules" href="http://gotroot.com/tiki-index.php?page=Setup+of+mod_security">Got Root ?</a>. They provide quite up-to-date rules, with a delay of 30 days subscription-free, which is quite acceptable for what I want to do. After all, Php exploits and Sql injection technics don&#8217;t change every day.</p>
+<p>The rules are also complete and spread over several files, one for each category in : generic rules, blacklist, usergents, proxies, rootkits&#8230;</p>
+<p>We can fetch them with a little script. They suggest to add it as a cron job, but you <strong><em>should not</em></strong>, except if you don&#8217;t mind that your website becomes unavailable ! These rules always require testing, some of them may be broken or require customizing&#8230; be careful and always check what&#8217;s inside the rule files !</p>
+<p>Here is the small script, <strong>modsec.sh</strong>, that I made to retrieve the rules and put them in the right directory :</p>
+<pre lang="bash">#!/bin/sh
+
+wget http://www.gotroot.com/downloads/ftp/mod_security/2.0/apache2/apache2-gotrootrules-modsec2.0-latest.tar.gz
+if [ -e apache2-gotrootrules-modsec2.0-latest.tar.gz ]
+then
+tar -xzvf apache2-gotrootrules-modsec2.0-latest.tar.gz -C /etc/apache2/modsecurity/
+fi
+rm apache2-gotrootrules-modsec2.0-latest.tar.gz
+/etc/init.d/apache2 restart</pre>
+<p>
+Make it executable and run it :</p>
+<pre lang="bash"># chmod +x modsec.sh
+$ ./modsec.sh</pre>
+<p>
+Now, let&#8217;s edit the <strong>/etc/apache2/apache2.conf </strong>file.</p>
+<p>Just before these lines (probably at the bottom of the file) :</p>
+<pre lang="bash"># Include the virtual host configurations:
+Include /etc/apache2/sites-enabled/</pre>
+<p>
+Add these :</p>
+<pre lang="bash">#Turn the filtering engine On or Off
+SecRuleEngine On
+SecRequestBodyAccess On
+SecResponseBodyAccess Off
+
+# Handling of file uploads
+# TODO Choose a folder private to Apache.
+# SecUploadDir /opt/apache-frontend/tmp/
+SecUploadKeepFiles Off
+
+# Maximum request body size we will
+# accept for buffering
+SecRequestBodyLimit 131072
+# Store up to 128 KB in memory
+SecRequestBodyInMemoryLimit 131072
+# Buffer response bodies of up to
+# 512 KB in length
+SecResponseBodyLimit 524288
+
+SecDebugLog /var/log/apache2/modsec_debug.log
+SecDebugLogLevel 0
+# Serial audit log
+SecAuditEngine RelevantOnly
+SecAuditLogRelevantStatus ^5
+SecAuditLogParts ABIFHZ
+SecAuditLogType Serial
+SecAuditLog /var/log/apache2/modsec_audit.log
+
+#should mod_security inspect POST payloads
+#SecRuleScanPOST On
+
+# by default log and deny suspicious requests with HTTP status 500
+SecDefaultAction log,auditlog,deny,status:403,phase:2,t:none
+
+#First, add in your exclusion rules:
+#These MUST come first!
+Include /etc/apache2/modsecurity/exclude.conf
+
+#Application protection rules
+Include /etc/apache2/modsecurity/rules.conf
+
+#Comment spam rules
+Include /etc/apache2/modsecurity/blacklist.conf
+
+#Bad hosts, bad proxies and other bad players
+Include /etc/apache2/modsecurity/blacklist2.conf
+
+#Bad clients, known bogus useragents and other signs of malware
+Include /etc/apache2/modsecurity/useragents.conf
+
+#Known bad software, rootkits and other malware
+Include /etc/apache2/modsecurity/rootkits.conf
+
+#Signatures to prevent proxying through your server
+#only rule these rules if your server is NOT a proxy
+#Include /etc/apache2/modsecurity/proxy.conf
+
+#Additional rules for Apache 2.x ONLY!  Do not add this line if you use Apache 1.x
+Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
+<p>As you can see, we just include the rule files we just downloaded. You can easily activate or deactivate some to fit your needs.</p>
+<p>You will probably notice that there is a performance impact after activating mod-security &#8211; not so big to me, but it also depends on your traffic. It is up to you to optimize the number of activated rules to make it faster.</p>
+<p>If some page appear to be blocked, check the<strong> /var/log/apache2/error.log </strong>for something like :</p>
+<pre lang="text">[Fri Jul 11 19:33:08 2008] [error] [client 192.168.222.21] ModSecurity: Access
+denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
+\\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
+mG38AAAEAACa@AVUAAAAA"]</pre>
+<p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>
+<pre lang="bash">$ grep 340000 /etc/apache2/modsecurity</pre>
+<p>Regxp knowledge required ! :D</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>The SSL/SSH disaster</title>
+		<link>/blog-archive/2008/05/15/the-sslssh-disaster.html</link>
+		<comments>/blog-archive/2008/05/15/the-sslssh-disaster.html#comments</comments>
+		<pubDate>Thu, 15 May 2008 16:23:22 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[SSH]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
+		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses.</p>
+<p>I have had no time so far to check all the keys on my server. I prefer to stay on the safe side, though I have some reason to believe that my keys might not be so vulnerable : I generated them a long time ago, maybe before the Debian maintainer sad mistake.</p>
+<p>It is going to be pretty easy now, for those who are motivated, to get access to the ssh server running keys generated during the 2 last years&#8230;</p>
+<p>I recommend <a title="ssl and ssh weakness" href="http://blog.drinsama.de/erich/en/linux/2008051401-consequences-of-sslssh-weakness.html" target="_blank">this article</a> which summarize pretty well the situation. You may also use <a title="downkd.pl" href="http://security.debian.org/project/extra/dowkd/dowkd.pl.gz">this tool</a>, which checks if your keys are vulnerable :</p>
+<pre>$  perl dowkd.pl file ~/.ssh/*.pub</pre>
+<p>It find it funny to think that I chose to use certificates for security (avoiding brute force attacks).<br />
+What&#8217;s less funny is the pure disaster for the reputation of Debian.</p>
+<p>I already noticed in the past that some companies switched their servers from Debian to Red Hat because of such security problems. They claimed about some security holes being patch much too slowly and about the lack of official support to rely on in such a crisis.<br />
+This kind of news is not going to enforce trust from companies.</p>
+<p>I myself will think twice in the future about what system to use when I design my networks.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

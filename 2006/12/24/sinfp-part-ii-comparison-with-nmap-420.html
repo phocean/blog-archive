@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../../css/fontello.css">
+<link rel="stylesheet" href="../../../css/animation.css">
+
+<!-- Mirrored from phocean.net/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:43:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>SinFP, part II : comparison with Nmap 4.20 | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='SinFP, part I : introduction and comparison with Nmap 4.10' href='../17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html' />
+<link rel='next' title='Final upgrade of my laptop' href='../29/final-upgrade-of-my-laptop.html' />
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="sinfp-part-ii-comparison-with-nmap-420.html" />
+<link rel='shortlink' href='../../../index0b69.html?p=14' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embedc9d5.js" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embed9110?url=https%3A%2F%2Fphocean.net%2F2006%2F12%2F24%2Fsinfp-part-ii-comparison-with-nmap-420.html&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-14 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../../index.html" >
+			<img class="logo" src="../../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-14" class="post-14 post type-post status-publish format-standard hentry category-administration-reseau category-security tag-footprinting tag-network tag-nmap tag-scan tag-scanner tag-security tag-sinfp">
+				<header class="entry-header">
+
+						<h1 class="entry-title">SinFP, part II : comparison with Nmap 4.20</h1>			
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p style="margin-bottom: 0cm;">Here is the update of my previous test of SinFP.</p>
+<p style="margin-bottom: 0cm;">I compared then the output of SinFP and Nmap on different machines, and found out that SinFP made a slightly better job than Nmap in OS detection, though it is not the primary goal of Nmap whereas it is the one of SinFP.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">However, I made a mistake that the author of SinFP made me aware of.</p>
+<p style="margin-bottom: 0cm;">I conducted the tests of Nmap using the <span lang="en-US">package</span> of my distribution, thinking it was the latest one.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">Actually, it was only the version 4.10. Moreover, the current version, 4.20, brought up a new OS detection engine.</p>
+<p style="margin-bottom: 0cm;" lang="en-US">Therefore, a new test with version 4.20 was absolutely needed.</p>
+<p><span id="more-14"></span></p>
+<p>I took the source of Nmap 4.20 and compiled it.</p>
+<p lang="en-US">First, I just rescanned the same machines with Nmap 4.20 and compared them with the corresponding output of SinFP.</p>
+<p lang="en-US">I also added a new test, to demonstrate what SinFP is made for. I always use :</p>
+<pre>$ nmap -sS -O -PI -PT $IP </pre>
+<p>and</p>
+<pre>$ sinfp.pl -i $IP -p $PORT</pre>
+<p>.</p>
+<h2><strong>FREEBSD 6.1, open port with Netcat</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:25 CET
+Interesting ports on 192.168.0.3:
+Not shown: 1696 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: FreeBSD 6.X
+OS details: FreeBSD 6.1-RELEASE through 6.2-BETA3 (x86)
+Uptime: 0.242 days (since Tue Dec 19 05:37:30 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 18.289 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>We can say this is a draw.</p>
+<h2><strong>Windows 2000 server, various open port, real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:29 CET
+Interesting ports on 192.168.0.20:
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+42/tcp   open  nameserver
+53/tcp   open  domain
+80/tcp   open  http
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+1026/tcp open  LSA-or-nterm
+1029/tcp open  ms-lsa
+1112/tcp open  msql
+1723/tcp open  pptp
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+3372/tcp open  msdtc
+5800/tcp open  vnc-http
+5900/tcp open  vnc
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Microsoft Windows 2000
+OS details: Microsoft Windows 2000, SP0, SP1, or SP2
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.735 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>Another draw</p>
+<h2><strong>Debian Sarge (2.4 kernel), various open port, real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-19 11:33 CET
+Interesting ports on 192.168.0.5:
+Not shown: 1690 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+111/tcp open  rpcbind
+113/tcp open  auth
+199/tcp open  smux
+907/tcp open  unknown
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose|WAP|storage-misc
+Running: Linux 2.4.X, Linksys Linux 2.4.X, Asus Linux 2.4.X, Maxtor Linux 2.4.X
+OS details: Linux 2.4.20 - 2.4.32, Linux-based embedded device (Linksys WRT54GL WAP, Buffalo AirStation WLA-G54 WAP, Maxtor Shared Storage Drive, or Asus Wireless Storage Router)
+Uptime: 0.392 days (since Tue Dec 19 02:09:54 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.432 seconds</pre>
+<h3>SinFP</h3>
+<p><strong><br />
+</strong></p>
+<pre>IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x</pre>
+<p><strong> </strong></p>
+<h3><strong>Conclusion</strong></h3>
+<p>Draw again (note that the OS details are not correct)</p>
+<h2><strong>Debian Etch (2.6 kernel), various open ports with real services</strong></h2>
+<h3>Nmap</h3>
+<pre>Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-24 01:19 CET
+Interesting ports on mars.int.jcbnet.org (192.168.1.10):
+Not shown: 1684 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+993/tcp  open  imaps
+995/tcp  open  pop3s
+2000/tcp open  callbook
+2500/tcp open  rtsserv
+3000/tcp open  ppp
+5432/tcp open  postgres
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.9 - 2.6.12 (x86)
+Uptime: 37.392 days (since Thu Nov 16 15:55:38 2006)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 3.354 seconds</pre>
+<h3>SinFP</h3>
+<pre>IPv4: HEURISTIC0/P1P2: GNU/Linux: Linux: 2.6.x&lt;/strong&gt;</pre>
+<h3><strong>Conclusion</strong></h3>
+<p>Draw always</p>
+<h2><strong>Debian NAT box</strong></h2>
+<p>Now, it is time to test SinFP in the condition it is aimed at : a NAT environement.</p>
+<p>For this test, I took the debian box and set NAT (should say PAT) for 2 ports with iptables :</p>
+<pre>$ echo « 1 » &amp;gt; /proc/sys/net/ipv4/ip_forward
+$ iptables -t nat -A PREROUTING -p  --dport 21 -j DNAT –to 192.168.1.20
+$ iptables -t nat -A PREROUTING -p  --dport 800 -j DNAT –to 192.168.1.115</pre>
+<p>The 192.168.1.20 is the Windows 2000 server machine, with the IIS FTP server running.</p>
+<p>The 192.168.1.115 is the FreeBSD box, having Netcat listening on the port 800.</p>
+<p>Doing that, we expect Nmap to be lost as it considers the target is a single machine. Will it detect Linux, FreeBSD or Windows ?</p>
+<p>Let&#8217;s try :</p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.110
+
+Starting Nmap 4.20 ( http://insecure.org ) at 2006-12-24 01:01 CET
+Interesting ports on 192.168.1.110:
+Not shown: 1688 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+111/tcp open  rpcbind
+113/tcp open  auth
+199/tcp open  smux
+618/tcp open  unknown
+800/tcp open  mdbs_daemon
+MAC Address: xx:xx:xx:xx:xx:xx
+No OS matches for host (If you know what OS is running on it, see http://insecure.org/nmap/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=4.20%D=12/24%OT=21%CT=1%CU=37629%PV=Y%DS=1%G=Y%M=0012F0%TM=458DC3
+OS:56%P=i686-pc-linux-gnu)SEQ(SP=82%GCD=1%ISR=98%TI=I%II=I%SS=O%TS=0)SEQ(SP
+OS:=8C%GCD=1%ISR=97%TI=I%II=I%SS=O%TS=0)SEQ(SP=8B%GCD=1%ISR=98%TI=I%II=I%SS
+OS:=O%TS=0)SEQ(SP=88%GCD=1%ISR=98%TI=I%II=I%SS=O%TS=0)SEQ(SP=8B%GCD=1%ISR=9
+OS:8%TI=I%II=I%SS=O%TS=0)OPS(O1=M5B4NW0NNT00NNS%O2=M5B4NW0NNT00NNS%O3=M5B4N
+OS:W0NNT00%O4=M5B4NW0NNT00NNS%O5=M5B4NW0NNT00NNS%O6=M5B4NNT00NNS)WIN(W1=FAF
+OS:0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=7F%W=FAF0%O=M5B
+OS:4NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T=7F%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=40%
+OS:W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=7F%W=FAF0%S=O%A=S+%F=AS%O=M5B4
+OS:NW0NNT00NNS%RD=0%Q=)T4(R=Y%DF=N%T=7F%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O
+OS:=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40
+OS:%TOS=C0%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUL=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%TOSI=S%CD=S%SI=S%DLI=S)
+Network Distance: 1 hop
+OS detection performed. Please report any incorrect results at http://insecure.org/nmap/submit/ .
+Nmap finished: 1 IP address (1 host up) scanned in 13.061 seconds&lt;/blockquote&gt;
+Indeed, Nmap could not determine the system and ask me to submit the fingerprint to improve the signature database.</pre>
+<p>In such a case, SinFP should be able to detect the systems on each port :</p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 21
+
+P1: B11113 F0x12 W64240 O0204ffff M1460
+P2: B11113 F0x12 W64240 O0204ffff010303000101080a000000000000000001010402 M1460
+P3: B11021 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 22
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030300 M1460
+P3: B10120 F0x04 W0 O0 M0
+
+IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x
+
+[sourcecode language=&quot;text&quot;]$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 -p 800
+
+P1: B11113 F0x12 W65535 O0204ffff M1460
+P2: B11113 F0x12 W65535 O0204ffff010303010101080affffffff4445414404020000 M1460
+P3: B11120 F0x04 W0 O0 M0
+
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<p>Correct. Now we have a good picture of the target. A big evidence that the two tools are complementary, isn&#8217;t it ?</p>
+<h2><strong>Conclusion</strong></h2>
+<p>Well, Nmap did a lot improved, indeed !</p>
+<p>With rather common systems, we have a draw  between SinFP and Nmap. It would be interesting to test more esoteric OS, but I can&#8217;t for now.</p>
+<p>So, Nmap or SinFP ? Of course, you should use both !</p>
+<p>Nmap will give you a quick and stealth overview of the open port of the target. Then, scan each port to check if it is a single machine or if there is some NAT activated.<br />
+In case of NAT, SinFP will give you a quite precise idea of what is running behind.  Anyway, matching the outputs of both Nmap and SinFP will provide you with much more interesting data.</p>
+<p>Thanks again to the authors of these nice tools.</p>
+<p>SinFP : <a hreflang="en" href="http://www.gomor.org/">http://www.gomor.org</a><br />
+Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nmap/</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../../../category/administration-reseau.html" rel="category tag">Network</a>, <a href="../../../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="../../../tag/footprinting.html" rel="tag">footprinting</a>, <a href="../../../tag/network.html" rel="tag">Network</a>, <a href="../../../tag/nmap.html" rel="tag">Nmap</a>, <a href="../../../tag/scan.html" rel="tag">scan</a>, <a href="../../../tag/scanner.html" rel="tag">scanner</a>, <a href="../../../tag/security.html" rel="tag">Security</a>, <a href="../../../tag/sinfp.html" rel="tag">SinFP</a> <i class="icon-calendar"></i> <a href="sinfp-part-ii-comparison-with-nmap-420.html" title="2:53 pm" rel="bookmark"><time class="entry-date" datetime="2006-12-24T14:53:00+00:00">December 24, 2006</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html" rel="prev"><span class="meta-nav">&larr;</span> SinFP, part I : introduction and comparison with Nmap 4.10</a></span>
+					<span class="nav-next"><a href="../29/final-upgrade-of-my-laptop.html" rel="next">Final upgrade of my laptop <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.362 seconds. Made 13 queries to database and 45 cached queries. Memory used - 27.41MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:43:38 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.332 seconds. -->

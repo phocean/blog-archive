@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>hal &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/hal/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>get rid off ConsoleKit / Dbus / Hal stuff on a server</title>
+		<link>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html</link>
+		<comments>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html#comments</comments>
+		<pubDate>Mon, 04 Oct 2010 20:41:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[ConsoleKit]]></category>
+		<category><![CDATA[dbus]]></category>
+		<category><![CDATA[hal]]></category>
+		<category><![CDATA[service]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=915</guid>
+		<description><![CDATA[Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing. Unfortunately, they are settled with the default...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing.</p>
+<p>Unfortunately, they are settled with the default basic installation and they have some dependencies (e.g the kernel and zypper) that make them impossible to simply uninstall .</p>
+<p>Here is a way to at least deactivate these services at startup on openSUSE 11.2 (it might also work with 11.3).</p>
+<p>First, ConsoleKit is not a standalone daemon anymore on the latest versions of openSUSE. It is started along with dbus (you will see that if you stop dbus, all the ConsoleKit thread will magically vanish).</p>
+<p>But trying straight to remove dbus from the startup doesn&#8217;t work, because of dependencies among services. On my system, it complained like this:</p>
+<pre># chkconfig dbus off
+ insserv: Service dbus has to be enabled to start service bluez-coldplug
+ insserv: Service dbus has to be enabled to start service network
+ insserv: Service dbus has to be enabled to start service haldaemon
+ insserv: Service dbus has to be enabled to start service earlyxdm
+ insserv: exiting now!
+ /sbin/insserv failed, exit code 1
+ [1]    7954 exit 1     chkconfig dbus off</pre>
+<p>So, let&#8217;s remove the bluetooth stuff:</p>
+<pre># zypper remove bluez</pre>
+<p>Then, we just deactivate the services that can&#8217;t uninstalled:</p>
+<pre># chkconfig earlyxdm off
+# chkconfig network-remotefs off
+# chkconfig haldaemon off</pre>
+<p>You will probably want to keep the network service on, otherwise your configurations scripts won&#8217;t be read anymore. In fact, we will just edit the dependency of the startup script itself, by editing /etc/init.d/network and editing these lines:</p>
+<pre># Required-Start:    $local_fs dbus
+# Required-Stop:    $local_fs dbus</pre>
+<p>What we do is just deleting the dbus word, so that the script section looks like it:</p>
+<pre>### BEGIN INIT INFO
+# Provides:        network
+# Required-Start:    $local_fs
+# Should-Start:        isdn openibd SuSEfirewall2_init
+# Required-Stop:    $local_fs
+# Should-Stop:        isdn openibd SuSEfirewall2_init
+# Default-Start:    2 3 5
+# Default-Stop:
+# Short-Description:    Configure the localfs depending network interfaces
+# Description:        Configure the localfs depending network interfaces
+#                       and set up routing
+### END INIT INFO</pre>
+<p>Now we are done and we should be able to definitely turn dbus off:</p>
+<pre># chkconfig dbus off</pre>
+<p>Bingo! I didn&#8217;t monitor the memory precisely, but I believe I saved around 50 MB, which is always welcomed on a small server.</p>
+<p>I don&#8217;t know if it is the best way &#8211; I may have missed something &#8211; however I am pretty happy as it now works as I wanted. Please let me know if you have a better tip.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Automatic backup when inserting a drive</title>
+		<link>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
+		<comments>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
+		<pubDate>Mon, 28 Sep 2009 09:34:11 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Backup]]></category>
+		<category><![CDATA[hal]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[script]]></category>
+		<category><![CDATA[udev]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
+		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work.</p>
+<p>Being lazy, it happened that I did not backup my data. Yes, it is a shame, but inserting a drive and launching the commands to rsync the discs was preventing me from this best practice.</p>
+<p>So, I decided to make it automatic. The goal was that the only thing I would have to do would be to insert the drive, and then remove it when it is done.</p>
+<p>Thanks to the magic of Gnu/Linux, it had been very easy. I will show below how I did it, thought they are many things that could be improved (but I haven&#8217;t felt the need so far).</p>
+<h2><span style="text-decoration: underline;">Udev</span></h2>
+<p><strong>Udev</strong> not only allows to create /dev entries dynamically, but offers a lot of triggers to perfom all kind of actions when some hardware is inserted.</p>
+<p>The <strong><em>udevinfo</em></strong> command will show you a lot of output concerning your drive. What we want is a unique way to differenciate the backup drive from any other drive that will be inserted in the future.</p>
+<p>What would be better than the manufacturer serial ?</p>
+<p>So let&#8217;s look for it :</p>
+<pre>$ udevinfo -a -p /sys/block/sdc | grep serial</pre>
+<p><em><strong>*UPDATE 06/2011* </strong> It seems that on recent versions, the syntax of this command slightly changed into this :</em></p>
+<pre>$ udevadm info -a -p /sys/block/sdc | grep serial</pre>
+<p>Copy the serial.</p>
+<p>Now we have to create a rule file, that will tell to udev what to do when this particular drive is inserted.</p>
+<p>This is done in the <em><strong>/etc/udev/rules.d</strong></em> folder. Let&#8217;s create a file <em><strong>30-mnt.rules</strong></em> or anything you like.</p>
+<p>We edit this file so that it contains :</p>
+<pre>ACTION=="add",KERNEL=="sd*",SUBSYSTEMS=="usb", ATTRS{serial}=="57442D57584E3430394C5A38", RUN+="/home/jc/bin/backup/bckp-home.sh %k"</pre>
+<p><em><strong>ACTION==&#8221;add&#8221;</strong></em> will tell udev that this action must be triggered when the drive is inserted.<br />
+<em><strong>SUBSYSTEMS</strong></em> could be changed according to the drive you are using (scsi, usb, &#8230;).<br />
+<em><strong>ATTRS{serial} </strong></em>must contain the serial you just grabbed.<br />
+<em><strong>RUN+=&#8221;/path/to/bin/backup.sh %k&#8221;</strong></em> tells udev to launch the backup script. %k, which contains the device name, sdc, is passed as an argument.</p>
+<p>Optionally, it is quite convenient, you may want to make a symlink to the <em><strong>/dev/sd?</strong></em> device, with :</p>
+<pre>KERNEL=="sd*",SUBSYSTEMS=="scsi", ATTRS{model}=="GJ0250EAGSQ     ", SYMLINK+="ultrabay%n"</pre>
+<h2><span style="text-decoration: underline;">The shell script</span></h2>
+<p>Now, the script itself :</p>
+<pre>#!/bin/sh
+LOGFILE=/PATH/TO/bckp.log
+echo "--- BCKP - INFO : \$1=_${1}_" &gt;&gt; $LOGFILE
+[[ $1 ]] || { echo "ERROR : missing parameter"&gt;&gt;$LOGFILE; exit 1; }
+
+# give time for the user, if needed to kill the process
+sleep 6
+MOUNT_PATH=$(grep $(echo $1) /etc/mtab | awk '{print $2}')
+[[ $MOUNT_PATH ]] || {
+  echo "ERROR fretching mount point"&gt;&gt;$LOGFILE;
+  exit 1;
+}
+echo " Synchronizing $MOUNT_PATH)"&gt;&gt;$LOG
+
+# add here all you rsync commands
+rsync -av --delete /PATH/TO/DATA $MOUNT_PATH/backup/
+...
+exit 0</pre>
+<h2><span style="text-decoration: underline;">Testing it</span></h2>
+<p>Now, let&#8217;s reload udev :</p>
+<pre>$ sudo udevadm control --reload-rules</pre>
+<p>To test if it works :</p>
+<pre>$ sudo udevadm trigger</pre>
+<p>or maybe :</p>
+<pre>$ /etc/init.d/boot.udev restart</pre>
+<p>Plug off/in your drive, and the script should be executed as expected.</p>
+<h2><span style="text-decoration: underline;">Optional : setting more options with Hal<strong><br />
+</strong></span></h2>
+<p>It is not necessary at all for the backup script to work, but it would be very practical to have  a fixed mount point for a drive.<br />
+For instance, I use a second drive (in the untrabay slot of my thinkpad) that contains all my virtual machines.</p>
+<p>The benefice is to prevent a performance drain of the system when many virtual machines are doing I/O like swapping or anything else.</p>
+<p>Create a file like <strong><em>/etc/hal/fdi/policy/15-static-mount.fdi</em></strong>, containing :</p>
+<pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;deviceinfo version="0.2"&gt;
+  &lt;device&gt;
+    &lt;match key="volume.uuid" string="aa0019ef-86e0-4011-b996-31ef3e7174c8"&gt;
+      &lt;merge key="volume.policy.should_mount" type="bool"&gt;true&lt;/merge&gt;
+      &lt;merge key="volume.fstype" type="string"&gt;ext4&lt;/merge&gt;
+<span style="color: #ff0000;">      &lt;merge key="volume.policy.desired_mount_point" type="string"&gt;ultrabay&lt;/merge&gt;</span>
+      &lt;merge key="volume.label" type="string"&gt;Fuji&lt;/merge&gt;
+      &lt;merge key="volume.policy.mount_option.noatime" type="bool"&gt;true&lt;/merge&gt;
+      &lt;merge key="volume.policy.mount_option.acl" type="bool"&gt;true&lt;/merge&gt;
+    &lt;/match&gt;
+  &lt;/device&gt;
+&lt;/deviceinfo&gt;</pre>
+<p>The drive is matched by it uuid. You can get the uuid of your disk with :</p>
+<pre>$ ls -la /dev/disk/by-uuid/</pre>
+<p>You can, if you want, set the volume label and specify several options of the file system.</p>
+<p>However, the most interesting option is the &#8220;desired_mount_point&#8221; one which allow you to fix the mount point. In the example, the disk will always be mounted in </p>
+<pre>/media/ultrabay</pre>
+<p>, and not the system disk, or disk_1, etc.</p>
+<h2><span style="text-decoration: underline;">Coming next</span> !</h2>
+<p>That&#8217;s all for today folks. Let me know if there are some things not clear or that can be optimized.</p>
+<p>Next time, we will see how to run the same script from <strong>Hal</strong> instead. We will also use Zenity to get a nice GUI prompt when the disk is inserted.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

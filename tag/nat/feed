@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>NAT &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/nat/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>BNAT</title>
+		<link>/blog-archive/2011/09/13/bnat.html</link>
+		<pubDate>Tue, 13 Sep 2011 19:34:58 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[BNAT]]></category>
+		<category><![CDATA[DEFCON]]></category>
+		<category><![CDATA[iptables]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[NAT]]></category>
+		<category><![CDATA[Nmap]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1155</guid>
+		<description><![CDATA[BNAT stands for &#8220;Broken NAT&#8220;. In the scope of Jonathan Claudius work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to. It happens with bad implementations where the DNAT (destination NAT) and the SNAT (source NAT) use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/09/13/bnat.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><strong>BNAT</strong> stands for &#8220;<strong><em>Broken NAT</em></strong>&#8220;. In the scope of <em><strong>Jonathan Claudius</strong></em> work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to.</p>
+<p>It happens with bad implementations where the <em>DNAT</em> (destination NAT) and the <em>SNAT</em> (source NAT) use a different IP because of a wrong rule or because the outbound and inbound interfaces are separated.</p>
+<p>As a result, the operating system of the client will discard right away such a reply (with a<em> TCP RST</em>), because it does not match an existing TCP session.</p>
+<p><img class="aligncenter size-full wp-image-1157" title="bnat" src="/blog-archive/wp-content/uploads/2011/08/bnat.png" alt="" width="532" height="165" /></p>
+<p>The idea is that a pentester auditing such an infrastructure with a classic scanner will miss some entry points. A typical scanner relies on the network stack of the system : it will not receive the reply and will consider the port as filtered.</p>
+<p>So Jonathan came with a proof-of-concept to illustrate his purpose.</p>
+<p>It is composed of a B-Router and a client. The B-Router will intercept the reply and maintain the session by sending an ACK. This way, it handles an asymetric routing scheme for the client. Just add a filtering rule to block your system&#8217;s <em>RST</em> (<em>iptables -A OUTPUT -p tcp &#8211;tcp-flags RST RST -j DROP</em> ), and you are good to go.</p>
+<p>Simple but brilliant, isn&#8217;t it ? The great thing is that the code has now been <a title="BNAT in Metasploit" href="https://community.rapid7.com/community/metasploit/blog/2011/08/26/a-tale-from-defcon-and-the-fun-of-bnat" target="_blank">included in Metasploit</a>, so it is even more straightforward.</p>
+<p>Check the <a title="BNAT slides" href="http://www.slideshare.net/claudijd/dc-skytalk-bnat-hijacking-repairing-broken-communication-channels " target="_blank">slides of Jonathan at DEFCON</a> for more info. You can download the source <a title="BNAT source" href="https://github.com/claudijd/BNAT-Suite" target="_blank">there</a> (or just update your Metasploit and look for it in auxiliaries).<br />
+<img class="aligncenter size-full wp-image-1158" title="bnat architecture" src="/blog-archive/wp-content/uploads/2011/08/bnat-archi.png" alt="" width="579" height="347" /></p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/fontello.css">
+<link rel="stylesheet" href="../css/animation.css">
+
+<!-- Mirrored from phocean.net/tag/modsecurity by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:46:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>ModSecurity | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; ModSecurity Tag Feed" href="modsecurity/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="archive tag tag-modsecurity tag-219 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../index.html" >
+			<img class="logo" src="../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Tag Archives: <span>ModSecurity</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-928" class="post-928 post type-post status-publish format-standard hentry category-defense category-security tag-apache tag-dos tag-http tag-modsecurity tag-rudy tag-slowloris">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2010/11/24/mitigating-slow-http-dos-attacks.html" title="Permalink to Mitigating Slow HTTP DoS Attacks" rel="bookmark">Mitigating Slow HTTP DoS Attacks</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p><a title="HTTP DoS attacks" href="http://blog.spiderlabs.com/2010/11/advanced-topic-of-the-week-mitigating-slow-http-dos-attacks.html" target="_blank">Interesting article</a> on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks.</p>
+<p>The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="apache.html" rel="tag">Apache</a>, <a href="dos.html" rel="tag">DoS</a>, <a href="http.html" rel="tag">HTTP</a>, <a href="modsecurity.html" rel="tag">ModSecurity</a>, <a href="rudy.html" rel="tag">RUDY</a>, <a href="slowloris.html" rel="tag">Slowloris</a> <i class="icon-calendar"></i> <a href="../2010/11/24/mitigating-slow-http-dos-attacks.html" title="11:54 pm" rel="bookmark"><time class="entry-date" datetime="2010-11-24T23:54:29+00:00">November 24, 2010</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-571" class="post-571 post type-post status-publish format-standard hentry category-pentesting category-security tag-apache tag-fingerprinting tag-httprint tag-modsecurity tag-scanner tag-waf tag-waf00f">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2009/12/16/waf00f.html" title="Permalink to waf00f" rel="bookmark">waf00f</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
+It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
+Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out.<br />
+Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerprint-web-application-firewall/" target="_blank">there</a>.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/pentesting.html" rel="category tag">Pentesting</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="apache.html" rel="tag">Apache</a>, <a href="fingerprinting.html" rel="tag">Fingerprinting</a>, <a href="httprint.html" rel="tag">httprint</a>, <a href="modsecurity.html" rel="tag">ModSecurity</a>, <a href="scanner.html" rel="tag">scanner</a>, <a href="waf.html" rel="tag">Waf</a>, <a href="waf00f.html" rel="tag">waf00f</a> <i class="icon-calendar"></i> <a href="../2009/12/16/waf00f.html" title="11:40 pm" rel="bookmark"><time class="entry-date" datetime="2009-12-16T23:40:09+00:00">December 16, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-555" class="post-555 post type-post status-publish format-standard hentry category-defense category-linux category-security category-administration-systeme tag-apache tag-firewall tag-modsecurity tag-regex tag-xss">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2009/12/10/modsecurity-2-5-review.html" title="Permalink to ModSecurity 2.5 review" rel="bookmark">ModSecurity 2.5 review</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>I finished reading the <strong>ModSecurity 2.5</strong> book, written by <strong>Magnus Mischell</strong> and published by <strong>Packt Publishing</strong>.</p>
+<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="../wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p>I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should.<br />
+I was actually using it partially. It is not trivial to secure a web application, and the rule engine of ModSecurity is very powerful but it is also quite complex.</p>
+<p>So this book was a good opportunity for me to dig into it further.</p>
+<p>The book covers all topics : from the set-up to a real use-case.<br />
+The author explains how to write rules, how to deal with the performance impact, logging and gives us a range of various core rules to implement to get a good security basis.</p>
+<p>The difficulty goes up progressively and the author doesn&#8217;t forget the beginners.<br />
+The set-up of the module is precisely described. All requirements are also explained and there are some good recalls about regular expressions, common attacks on systems, server and client sides, and other stuff like that.</p>
+<p>After reading the book, I could harden my rules, reorganize and optimize them for better performance &#8211; something I hadn&#8217;t cared about before.</p>
+<p>So I have nothing else to say but to recommend this book.<br />
+It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;s worth having next to you. The variety of configuration patterns makes it a reference.</p>
+<p>Check it <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">there</a>. I also appreciated the availability of PDF version, so that I can carry it everywhere with my laptop and index it with Beagle.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/administration-systeme/linux.html" rel="category tag">Linux</a>, <a href="../category/security.html" rel="category tag">Security</a>, <a href="../category/administration-systeme.html" rel="category tag">System</a> <i class="icon-tag"></i> <a href="apache.html" rel="tag">Apache</a>, <a href="firewall.html" rel="tag">Firewall</a>, <a href="modsecurity.html" rel="tag">ModSecurity</a>, <a href="regex.html" rel="tag">Regex</a>, <a href="xss.html" rel="tag">XSS</a> <i class="icon-calendar"></i> <a href="../2009/12/10/modsecurity-2-5-review.html" title="3:12 pm" rel="bookmark"><time class="entry-date" datetime="2009-12-10T15:12:56+00:00">December 10, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-520" class="post-520 post type-post status-publish format-standard hentry category-defense category-security tag-apache tag-firewall tag-injection tag-mod-security tag-modsecurity">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2009/11/15/new-book-about-modsecurity.html" title="Permalink to New book about ModSecurity" rel="bookmark">New book about ModSecurity</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
+<p style="text-align: center;"><a href="../wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p>ModSecurity is essential when it comes to secure any web site.</p>
+<p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
+However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
+<p>So, stay tuned :  I will talk more about the ModSecurity stuff and publish a review about this book soon.</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px;">http://www.packtpub.com/modsecurity-2-5/book</div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="apache.html" rel="tag">Apache</a>, <a href="firewall.html" rel="tag">Firewall</a>, <a href="injection.html" rel="tag">Injection</a>, <a href="mod-security.html" rel="tag">mod-security</a>, <a href="modsecurity.html" rel="tag">ModSecurity</a> <i class="icon-calendar"></i> <a href="../2009/11/15/new-book-about-modsecurity.html" title="3:49 pm" rel="bookmark"><time class="entry-date" datetime="2009-11-15T15:49:48+00:00">November 15, 2009</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.556 seconds. Made 11 queries to database and 45 cached queries. Memory used - 27.48MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/tag/modsecurity by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:46:07 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.524 seconds. -->

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Dev &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/category/dev/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Soktspy</title>
+		<link>/blog-archive/2012/06/20/soktspy.html</link>
+		<pubDate>Wed, 20 Jun 2012 20:45:54 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Forensics]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[socket]]></category>
+		<category><![CDATA[Soktpy]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
+		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Soktspy is a small script that may be helpful for some investigation.</p>
+<p>Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets.</p>
+<p>But sometimes, the behavior may be very sneaky, consisting of one or two packets, at rare and random intervals. Unless you spend all the day before the screen, it may be very difficult to trace.</p>
+<p>Especially with stock tools or without installing any intrusive hardware, which is also the reason why I did this tool. On a production server, you want to install as little dependencies as possible, right?</p>
+<p>So here is the Soktspy, a python script that easily build into a portable and standalone executable to deploy on the target machine.</p>
+<p>Once launched, it just loops in the background and log sockets that are created for some given peers (the IP addresses you found involved in the suspicious network activity).</p>
+<p>Maybe, some other tool exist, but I could not find anything similar. Let me know if you have any suggestion. Anyway, it was a nice exercise to do :)</p>
+<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/blog-archive/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy01.png 668w, /blog-archive/wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
+<p><strong>Download</strong></p>
+<p><a href="/blog-archive/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
+<p><strong>Pre-requisites</strong></p>
+<ul>
+<li>Install Visual C++ Runtime libraries with v<strong>credist_x86.exe </strong>(not necessary if the target machine happens to have Python already installed)</li>
+</ul>
+<div>So far, I tested it successfully on Windows XP, Windows 2003, Ubuntu 11.10 and Mac OS Lion. But as it is a simple Python script, it is supposed to work on all platform.</div>
+<div>
+<p><strong>Compiling</strong></p>
+<p>You may recompile the program as a Windows binary executable by issuing this command:</p>
+<p><strong>&gt; setup.py py2exe</strong></p>
+</div>
+<p><strong>How to use</strong></p>
+<ul>
+<li>Copy <strong>soktSpy.exe </strong>and its configuration file <strong>config.cfg</strong>.</li>
+<li>Edit <strong>config.cfg </strong>with the IP you want to monitor</li>
+<li>Start <strong>soktSpy.exe</strong>.</li>
+</ul>
+<p>Then, as soon as the sneaky process will send out a packet toward the monitored IP, a log record will be triggered:</p>
+<p><a href="/blog-archive/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /blog-archive/wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /blog-archive/wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>The log file contains the following info, in that order:</p>
+<ul>
+<li>Detection time (based on the system local time)</li>
+<li>Process creation time</li>
+<li>PID</li>
+<li>Process Name</li>
+<li>Protocol Family (2 = IPv4, 23 = IPv6)</li>
+<li>Process Owner</li>
+<li>Source socket (IP, port)</li>
+<li>Destination socket (IP, port)</li>
+<li>Socket Status</li>
+</ul>
+<p><strong>Future Plans</strong></p>
+<p>Please tell me if you have any idea on how to improve it.</p>
+<p>For now, I plan to add a feature that will dump the memory of the suspicious processes when it is executing.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.76</title>
+		<link>/blog-archive/2010/07/13/netios-0-76.html</link>
+		<pubDate>Tue, 13 Jul 2010 17:48:46 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=874</guid>
+		<description><![CDATA[Netios 0.76 is out! Complete changelog : * fix prompt for enable issue * fix issue with log directory * add timeout option * remove fail check for password mode (source of confusion and not so useful on second thought) Check there for more details and a download link.]]></description>
+				<content:encoded><![CDATA[<p>Netios 0.76 is out!</p>
+<p>Complete changelog :</p>
+<blockquote><p>* fix prompt for enable issue<br />
+* fix issue with log directory<br />
+* add timeout option<br />
+* remove fail check for password mode (source of confusion and not so useful on second thought)</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.75</title>
+		<link>/blog-archive/2010/04/24/netios-0-75.html</link>
+		<pubDate>Sat, 24 Apr 2010 17:06:51 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=822</guid>
+		<description><![CDATA[Netios 0.75 is out. Complete changelog : 2010-04-24  (0.75) Phocean &#60;jc@phocean.net&#62; * always force to specify the user to update and remove useless options concerning tacacs and newuser mode Check there for more details and a download link.]]></description>
+				<content:encoded><![CDATA[<div>
+<div>
+<p>Netios 0.75 is out.</p>
+<p>Complete changelog :</p>
+<blockquote><p>2010-04-24  (0.75) Phocean &lt;jc@phocean.net&gt;</p>
+<p>* always force to specify the user to update and remove useless options concerning tacacs and newuser mode</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> for more details and a download link.</p>
+</div>
+</div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.74</title>
+		<link>/blog-archive/2010/04/18/netios-0-74.html</link>
+		<pubDate>Sun, 18 Apr 2010 17:07:56 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=787</guid>
+		<description><![CDATA[Netios 0.74 is out. Complete changelog : 2010-04-08  (0.74) phocean &#60;jc@phocean.net&#62; * improve logging and  error handling * clean up some crapy code Check there for more details and a download link.]]></description>
+				<content:encoded><![CDATA[<div>
+<p>Netios 0.74 is out.</p>
+<p>Complete changelog :</p>
+<blockquote><p>2010-04-08  (0.74) phocean &lt;jc@phocean.net&gt;</p>
+<p>* improve logging and  error handling<br />
+* clean up some crapy code</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> for more details and a download link.</p>
+</div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.73</title>
+		<link>/blog-archive/2010/02/10/netios-0-73.html</link>
+		<pubDate>Wed, 10 Feb 2010 14:51:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
+				<content:encoded><![CDATA[<p>Netios 0.73 fixes some bugs and</p>
+<p>Complete changelog :</p>
+<blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
+<p>* remove useless options<br />
+* fix various bugs</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Hostcheck</title>
+		<link>/blog-archive/2010/01/15/hostcheck.html</link>
+		<pubDate>Fri, 15 Jan 2010 12:44:21 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Hostcheck]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[scanner]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
+		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I continue to publish some my coding.</p>
+<p>Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up.<br />
+It just read a host file and check if the host are available doing a ping test or trying to open a socket.</p>
+<p>Nothing great, but it may help to quickly check that most of things are right after a network change, for instance.<br />
+Because we want to test many hosts, and not to scan, the pace is fast so it may not be 100% reliable. The idea is to see roughly is the connectivity is correct or if your whole LAN is down.<br />
+It uses colors and is easy to read, so it might be good to show to your manager ! :)</p>
+<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/blog-archive/tools/hostcheck">there</a>.</p>
+<p><a href="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.72</title>
+		<link>/blog-archive/2010/01/15/netios-0-72.html</link>
+		<pubDate>Fri, 15 Jan 2010 10:20:55 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now.</p>
+<p>Complete changelog :</p>
+<blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
+<p>* ciscoclass.py : forgot to remove a debug print<br />
+* ciscoclass.py : finish and fix a bunch of bugs in the show run function, format the config file properly<br />
+* ciscoclass.py : fix the prompt regex</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.71</title>
+		<link>/blog-archive/2009/12/20/netios-0-71.html</link>
+		<pubDate>Sun, 20 Dec 2009 16:34:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
+		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I release a new version of Netios : 0.71.</p>
+<p>There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing.</p>
+<p>It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up.</p>
+<p>A downside is that it now requires at least Python 2.6, as multiprocessing started to be supported with this version only. Most Linux distributions now include Python 2.6, but still not all. Anyway it will be more and more the case. If you can&#8217;t uprade your distribution, you can stick with 0.60 which still do most of the work fine.</p>
+<p>It is also now able to fetch a configuration file remotly, but it requires more testing before I feel confident in the way it works.</p>
+<p>The complete changelog :</p>
+<blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
+<p>* ciscoclass.py : handle correctly the cisco pager &#8212; More &#8212; so that &#8220;show run&#8221; mode should work even with large config files<br />
+* sshclass.py : allow to override terminal size system settings (make use of the cisco pager to avoid filling the buffer)</p>
+<p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
+<p>* implement multiprocessing<br />
+* improve code documentation<br />
+* clean up UI<br />
+* reduce useless logging<br />
+* netios.py : bug : missing startTime parameter in f_skip_error and f_command functions</p></blockquote>
+<p>I cross my fingers so that there are not too many bugs, but if so, please don&#8217;t forget to report it to me.</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios</title>
+		<link>/blog-archive/2009/11/07/netios.html</link>
+		<pubDate>Sat, 07 Nov 2009 15:53:30 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
+		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches :</p>
+<blockquote><p><strong>Netios</strong> is a little tool aimed to help network administrators to administrate a large number of Cisco network devices.<br />
+Providing it with a list of equipments, it connects within SSH to remotly apply IOS commands.</p>
+<p>It can automatically :</p>
+<ul>
+<li> retrieve and export in a CSV file the list of local users</li>
+<li> update the local user, the enable password</li>
+<li> change NTP settings</li>
+<li> execute a file of customed IOS commands</li>
+<li> retrieve configuration files</li>
+</ul>
+<p>It can read the targets from the command line or from a text file.</p></blockquote>
+<p>Its primary goal is to improve the security by making it easier to renew regularly the local password of these equipments, but it can do more convenient things (and I will continue to work to add more of them).</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Automatic backup when inserting a drive</title>
+		<link>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
+		<comments>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
+		<pubDate>Mon, 28 Sep 2009 09:34:11 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Backup]]></category>
+		<category><![CDATA[hal]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[script]]></category>
+		<category><![CDATA[udev]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
+		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work.</p>
+<p>Being lazy, it happened that I did not backup my data. Yes, it is a shame, but inserting a drive and launching the commands to rsync the discs was preventing me from this best practice.</p>
+<p>So, I decided to make it automatic. The goal was that the only thing I would have to do would be to insert the drive, and then remove it when it is done.</p>
+<p>Thanks to the magic of Gnu/Linux, it had been very easy. I will show below how I did it, thought they are many things that could be improved (but I haven&#8217;t felt the need so far).</p>
+<h2><span style="text-decoration: underline;">Udev</span></h2>
+<p><strong>Udev</strong> not only allows to create /dev entries dynamically, but offers a lot of triggers to perfom all kind of actions when some hardware is inserted.</p>
+<p>The <strong><em>udevinfo</em></strong> command will show you a lot of output concerning your drive. What we want is a unique way to differenciate the backup drive from any other drive that will be inserted in the future.</p>
+<p>What would be better than the manufacturer serial ?</p>
+<p>So let&#8217;s look for it :</p>
+<pre>$ udevinfo -a -p /sys/block/sdc | grep serial</pre>
+<p><em><strong>*UPDATE 06/2011* </strong> It seems that on recent versions, the syntax of this command slightly changed into this :</em></p>
+<pre>$ udevadm info -a -p /sys/block/sdc | grep serial</pre>
+<p>Copy the serial.</p>
+<p>Now we have to create a rule file, that will tell to udev what to do when this particular drive is inserted.</p>
+<p>This is done in the <em><strong>/etc/udev/rules.d</strong></em> folder. Let&#8217;s create a file <em><strong>30-mnt.rules</strong></em> or anything you like.</p>
+<p>We edit this file so that it contains :</p>
+<pre>ACTION=="add",KERNEL=="sd*",SUBSYSTEMS=="usb", ATTRS{serial}=="57442D57584E3430394C5A38", RUN+="/home/jc/bin/backup/bckp-home.sh %k"</pre>
+<p><em><strong>ACTION==&#8221;add&#8221;</strong></em> will tell udev that this action must be triggered when the drive is inserted.<br />
+<em><strong>SUBSYSTEMS</strong></em> could be changed according to the drive you are using (scsi, usb, &#8230;).<br />
+<em><strong>ATTRS{serial} </strong></em>must contain the serial you just grabbed.<br />
+<em><strong>RUN+=&#8221;/path/to/bin/backup.sh %k&#8221;</strong></em> tells udev to launch the backup script. %k, which contains the device name, sdc, is passed as an argument.</p>
+<p>Optionally, it is quite convenient, you may want to make a symlink to the <em><strong>/dev/sd?</strong></em> device, with :</p>
+<pre>KERNEL=="sd*",SUBSYSTEMS=="scsi", ATTRS{model}=="GJ0250EAGSQ     ", SYMLINK+="ultrabay%n"</pre>
+<h2><span style="text-decoration: underline;">The shell script</span></h2>
+<p>Now, the script itself :</p>
+<pre>#!/bin/sh
+LOGFILE=/PATH/TO/bckp.log
+echo "--- BCKP - INFO : \$1=_${1}_" &gt;&gt; $LOGFILE
+[[ $1 ]] || { echo "ERROR : missing parameter"&gt;&gt;$LOGFILE; exit 1; }
+
+# give time for the user, if needed to kill the process
+sleep 6
+MOUNT_PATH=$(grep $(echo $1) /etc/mtab | awk '{print $2}')
+[[ $MOUNT_PATH ]] || {
+  echo "ERROR fretching mount point"&gt;&gt;$LOGFILE;
+  exit 1;
+}
+echo " Synchronizing $MOUNT_PATH)"&gt;&gt;$LOG
+
+# add here all you rsync commands
+rsync -av --delete /PATH/TO/DATA $MOUNT_PATH/backup/
+...
+exit 0</pre>
+<h2><span style="text-decoration: underline;">Testing it</span></h2>
+<p>Now, let&#8217;s reload udev :</p>
+<pre>$ sudo udevadm control --reload-rules</pre>
+<p>To test if it works :</p>
+<pre>$ sudo udevadm trigger</pre>
+<p>or maybe :</p>
+<pre>$ /etc/init.d/boot.udev restart</pre>
+<p>Plug off/in your drive, and the script should be executed as expected.</p>
+<h2><span style="text-decoration: underline;">Optional : setting more options with Hal<strong><br />
+</strong></span></h2>
+<p>It is not necessary at all for the backup script to work, but it would be very practical to have  a fixed mount point for a drive.<br />
+For instance, I use a second drive (in the untrabay slot of my thinkpad) that contains all my virtual machines.</p>
+<p>The benefice is to prevent a performance drain of the system when many virtual machines are doing I/O like swapping or anything else.</p>
+<p>Create a file like <strong><em>/etc/hal/fdi/policy/15-static-mount.fdi</em></strong>, containing :</p>
+<pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;deviceinfo version="0.2"&gt;
+  &lt;device&gt;
+    &lt;match key="volume.uuid" string="aa0019ef-86e0-4011-b996-31ef3e7174c8"&gt;
+      &lt;merge key="volume.policy.should_mount" type="bool"&gt;true&lt;/merge&gt;
+      &lt;merge key="volume.fstype" type="string"&gt;ext4&lt;/merge&gt;
+<span style="color: #ff0000;">      &lt;merge key="volume.policy.desired_mount_point" type="string"&gt;ultrabay&lt;/merge&gt;</span>
+      &lt;merge key="volume.label" type="string"&gt;Fuji&lt;/merge&gt;
+      &lt;merge key="volume.policy.mount_option.noatime" type="bool"&gt;true&lt;/merge&gt;
+      &lt;merge key="volume.policy.mount_option.acl" type="bool"&gt;true&lt;/merge&gt;
+    &lt;/match&gt;
+  &lt;/device&gt;
+&lt;/deviceinfo&gt;</pre>
+<p>The drive is matched by it uuid. You can get the uuid of your disk with :</p>
+<pre>$ ls -la /dev/disk/by-uuid/</pre>
+<p>You can, if you want, set the volume label and specify several options of the file system.</p>
+<p>However, the most interesting option is the &#8220;desired_mount_point&#8221; one which allow you to fix the mount point. In the example, the disk will always be mounted in </p>
+<pre>/media/ultrabay</pre>
+<p>, and not the system disk, or disk_1, etc.</p>
+<h2><span style="text-decoration: underline;">Coming next</span> !</h2>
+<p>That&#8217;s all for today folks. Let me know if there are some things not clear or that can be optimized.</p>
+<p>Next time, we will see how to run the same script from <strong>Hal</strong> instead. We will also use Zenity to get a nice GUI prompt when the disk is inserted.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

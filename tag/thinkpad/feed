@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Thinkpad &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/thinkpad/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Tested the Lenovo support&#8230;</title>
+		<link>/blog-archive/2008/09/21/tested-the-lenovo-support.html</link>
+		<pubDate>Sat, 20 Sep 2008 23:38:55 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[battery]]></category>
+		<category><![CDATA[lenovo]]></category>
+		<category><![CDATA[Thinkpad]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
+		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>&#8230; and was quite impressed.</p>
+<p><strong>Wednesday evening</strong>, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months.</p>
+<p><strong>Thursday morning</strong>, I am recalled by someone from the technical service. They first say that the battery is no more under warranty &#8211; 1 year long. I guess they say so after checking when the battery was made or sold the retailer. That does not concern the end-consumer like me : the warranty only started when I purchased the laptop, and I still have 4 months of warranty ahead.</p>
+<p>As they asked, I send them by fax the bill which proves that, <strong>thursday afternoon</strong>. Soon after, they recall me again, just to tell me that a new battery is going to be sent to me.</p>
+<p><strong>Friday morning</strong>, it arrived ! So far, so good !</p>
+<p>Next time, I may test it again concerning <a href="http://jp.youtube.com/watch?v=AnRXhZMiAaU" target="_blank">this issue</a> (not so terrible in fact, and I am reluctant to send back my laptop).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>My new toy : Thinkpad T61</title>
+		<link>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html</link>
+		<comments>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
+		<pubDate>Thu, 21 Feb 2008 12:22:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Laptop]]></category>
+		<category><![CDATA[Thinkpad]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
+		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61.</p>
+<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"></a></p>
+<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"><img src="/blog-archive/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
+<p>About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am looking for.<br />
+<span id="more-97"></span><br />
+So this time I am giving a try to Lenovo. What really decided me is its old fashion screen, I mean a non-bright one. My eyes are really getting tired with all these new bright laptop screens. Plus, its resolution is impressive : 1440 x 900.</p>
+<p>So far I am pretty satisfied. For my need, the 14.1&#8243; screen is the best compromise, and so is the weight and size of the laptop.</p>
+<p>Without surprise, the keyboard and the trackpoint are just excellent. I also aprreciate some features like the hardware encryption of the hard drive, which also benefits from the active protection (head parking in case of shock to protect the data).</p>
+<p>The laptop built and design are not as nice and polished as the Sony ones, but it is certainly solid.</p>
+<p>After I took it just out of the box, I thought I would give a look to the pre-installed Windows Vista system. But the first startup appeared to be so long that I quickly stopped it in the middle of its process, inserted a fresh Debian Lenny 64 bits CD and went for a set up.</p>
+<p>I worked pretty well out of the box. Like usual, I had to download the Intel Wifi firmware and the proprietary nvidia driver to use all the features of my Quadro NVS  140M graphic card.</p>
+<p>More annoying, the active protection is not supported by default by the kernel.</p>
+<p>I also have a problem with hibernation. Suspend to RAM works well, but resuming after suspend to disk always leave me on a blank screen. I guess this is related to the graphic driver, but so far the workaround that I found from other users don&#8217;t work for me.</p>
+<p>Other things, including the fingerprint reader, work pretty well.</p>
+<p>There are a number of guides from the <a title="ThinkWiki" href="http://www.thinkwiki.org/wiki/ThinkWiki" target="_blank">ThinkWiki</a> website that helped me a lot. Among them :</p>
+<p><a href="http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T61" target="_blank">http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T61</a></p>
+<p>Set up the active protection (patch and recompile the kernel :( ) :</p>
+<p><a href="http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T60#hdapsd">http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T60#hdapsd </a></p>
+<p>Get the fingerprint reader work :</p>
+<p><a href="https://wiki.ubuntu.com/ThinkFinger" target="_blank">https://wiki.ubuntu.com/ThinkFinger </a></p>
+<p>However, after a few days, I realized that I was not satisfied by the responsiveness of  the laptop, and especially the way it managed multiprocessing. I also wanted to use the active protection for my hard drive.</p>
+<p>I decided to compile my own kernel, more optimized than the generic AMD 64 one provided by Debian.</p>
+<p>Here is an excerpt from my .config file activating some features for a Core 2 Duo Intel processor &#8211; this apply to the latest version of Linux today, 2.6.24-2 :</p>
+<pre lang="txt">
+#
+# Processor type and features
+#
+CONFIG_TICK_ONESHOT=y
+CONFIG_NO_HZ=y
+CONFIG_HIGH_RES_TIMERS=y
+CONFIG_GENERIC_CLOCKEVENTS_BUILD=y
+CONFIG_SMP=y
+CONFIG_X86_PC=y
+CONFIG_MCORE2=y
+CONFIG_X86_L1_CACHE_BYTES=64
+CONFIG_X86_INTERNODE_CACHE_BYTES=64
+CONFIG_X86_CMPXCHG=y
+CONFIG_X86_L1_CACHE_SHIFT=6
+CONFIG_X86_GOOD_APIC=y
+CONFIG_X86_INTEL_USERCOPY=y
+CONFIG_X86_USE_PPRO_CHECKSUM=y
+CONFIG_X86_TSC=y
+CONFIG_X86_MINIMUM_CPU_FAMILY=64
+CONFIG_HPET_TIMER=y
+CONFIG_HPET_EMULATE_RTC=y
+CONFIG_GART_IOMMU=y
+CONFIG_CALGARY_IOMMU=y
+CONFIG_CALGARY_IOMMU_ENABLED_BY_DEFAULT=y
+CONFIG_SWIOTLB=y
+CONFIG_NR_CPUS=8
+CONFIG_SCHED_SMT=y
+CONFIG_SCHED_MC=y
+CONFIG_PREEMPT_VOLUNTARY=y
+CONFIG_PREEMPT_BKL=y
+CONFIG_X86_LOCAL_APIC=y
+CONFIG_X86_IO_APIC=y
+CONFIG_X86_MCE=y
+CONFIG_X86_MCE_INTEL=y
+CONFIG_X86_MCE_AMD=y
+CONFIG_MICROCODE=m
+CONFIG_MICROCODE_OLD_INTERFACE=y
+CONFIG_X86_MSR=m
+CONFIG_X86_CPUID=m
+CONFIG_NUMA=y
+CONFIG_K8_NUMA=y
+CONFIG_X86_64_ACPI_NUMA=y
+CONFIG_NODES_SHIFT=6
+CONFIG_ARCH_DISCONTIGMEM_ENABLE=y
+CONFIG_ARCH_DISCONTIGMEM_DEFAULT=y
+CONFIG_ARCH_SPARSEMEM_ENABLE=y
+CONFIG_SELECT_MEMORY_MODEL=y
+CONFIG_DISCONTIGMEM_MANUAL=y
+CONFIG_DISCONTIGMEM=y
+CONFIG_FLAT_NODE_MEM_MAP=y
+CONFIG_NEED_MULTIPLE_NODES=y
+CONFIG_SPARSEMEM_VMEMMAP_ENABLE=y
+CONFIG_SPLIT_PTLOCK_CPUS=4
+CONFIG_MIGRATION=y
+CONFIG_RESOURCES_64BIT=y
+CONFIG_ZONE_DMA_FLAG=1
+CONFIG_BOUNCE=y
+CONFIG_VIRT_TO_BUS=y
+CONFIG_MTRR=y
+CONFIG_SECCOMP=y
+CONFIG_CC_STACKPROTECTOR=y
+CONFIG_HZ_1000=y
+CONFIG_HZ=1000
+CONFIG_KEXEC=y
+CONFIG_PHYSICAL_START=0x200000
+CONFIG_PHYSICAL_ALIGN=0x200000
+CONFIG_HOTPLUG_CPU=y
+CONFIG_ARCH_ENABLE_MEMORY_HOTPLUG=y
+CONFIG_HAVE_ARCH_EARLY_PFN_TO_NID=y
+CONFIG_OUT_OF_LINE_PFN_TO_PAGE=y
+</pre>
+<p>The important differences with the standard kernel are :</p>
+<ul>
+<li> the timer frequency set to &#8220;1000 Hz&#8221;,</li>
+<li>processor familly to &#8220;Core 2&#8221;</li>
+<li>preemption model to &#8220;Voluntary&#8221;</li>
+</ul>
+<p>I am seeing now better performance in threading and global responsiveness &#8211; including, believe it or not, with the compiz effect, what I didn&#8217;t expect at all.</p>
+<p>At the end, I just have hibernation not working : it is nice to see how good the support of Debian Lenny is, thought the hardware is pretty recent. Things are really improving quickly.</p>
+<p>If you have some issue installing Linux on your Thinpad,  post your problem here. I will be happy to help you as much as I can.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

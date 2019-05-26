@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>password &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/password/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Pentest of a Wi-Fi network with Cisco NCS</title>
+		<link>/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html</link>
+		<pubDate>Fri, 04 Oct 2013 12:46:56 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Oracle]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[WCS]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1750</guid>
+		<description><![CDATA[I had a chance to audit this device during a Wi-Fi pentest. Cisco Prime Network Control System is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc. I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I had a chance to audit this device during a Wi-Fi pentest. <em>Cisco Prime Network Control System </em>is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc.</p>
+<p>I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course, Cisco published a patch… however how many network teams would have applied the patch ? Routers, switches, Wi-Fi controllers, especially when they are not part of the core infrastructure, are often dropped and forgotten for years&#8230;</p>
+<p>Here is the vendor <a href="http://tools.cisco.com/security/center/mcontent/CiscoSecurityAdvisory/cisco-sa-20130410-ncs">advisory</a>, which is about &#8220;unspecified&#8221; default credentials. With a little of ninja googling, I managed to glue the pieces.</p>
+<p>It was not that easy to find the credentials in questions, but the guys from Tenable Security managed to get the <a href="http://tenablenetworksecurity.info/plugins/index.php?view=single&amp;id=66861">info</a>: <code>wcsdba / wcs123</code>.</p>
+<p>Now, you will think, &#8220;ok, but we need to find a way to reach the database&#8230;&#8217;. Piece of cake! By default, the device exposes an Oracle listener on port <code>1522</code>.</p>
+<p>Then, we would need to know the Oracle instance… Don&#8217;t think too much, don&#8217;t even look up at your wordlists, this is just: <code>WCS</code>.</p>
+<p>Of course, as you should guess now, the account has <em>DBA</em> privileges. :-)</p>
+<p>So, in summary:</p>
+<pre>Oracle listener on port <strong>TCP 1522</strong>
+Instance: <strong>WCS</strong>
+Account: <strong>wcsdba</strong>
+Password: <strong>wcs123</strong>
+Privileges: <strong>DBA</strong></pre>
+<p><span style="line-height: 1.714285714; font-size: 1rem;">Now you can do pretty much every thing: control network settings, grab and crack password hashes, etc.</span></p>
+<p>Besides, there is also an XSS on a login page&#8230;</p>
+<p>Well done Cisco, for not hardening anything.  :-/</p>
+<p>Have fun!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Password stealing using a password filter</title>
+		<link>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html</link>
+		<comments>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html#comments</comments>
+		<pubDate>Wed, 02 Oct 2013 09:12:31 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[backdoor]]></category>
+		<category><![CDATA[IDA Pro]]></category>
+		<category><![CDATA[lsass]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[Sysinternals]]></category>
+		<category><![CDATA[visual studio]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1736</guid>
+		<description><![CDATA[Nice stuff from @mubix: the technic consists in injecting a DLL to lsass.exe, using the password filter feature of Windows. The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity. Microsoft...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a href="http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html">Nice stuff</a> from <a href="https://twitter.com/mubix">@mubix</a>: the technic consists in injecting a DLL to <code>lsass.exe</code>, using the <em>password filter</em> feature of Windows.</p>
+<p>The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity.</p>
+<p>Microsoft opened the API so that users can extend the functionality with their own filters.</p>
+<p>Mubix diverted this API by developing a password logger: the DLL just logs the password both on the disk and a remote server,  and does nothing else.</p>
+<p>A perfect way to maintain a persistent access… I tested it:</p>
+<div id="attachment_1738" style="width: 635px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14.png" rel="lightbox[1736]"><img class="size-large wp-image-1738" alt="Evilpassfilter exploitation process" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14-940x587.png" width="625" height="390" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14-940x587.png 940w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_14-580x362.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_14-624x389.png 624w" sizes="(max-width: 625px) 100vw, 625px" /></a><p class="wp-caption-text">Evilpassfilter exploitation process</p></div>
+<ol>
+<li><code>Evilpassfilter.dll</code> is loaded into <code>lsass.exe</code></li>
+<li>A user updates his password</li>
+<li>The password goes through the <em>Evilpassfilter </em>password filter, which notifies the attacker through HTTP and also logs it locally.</li>
+</ol>
+<p>Here is what I did to get it work (Windows 7 x64):</p>
+<ul>
+<li>Make sure the local password security policy is enabled on the target</li>
+<li>Create a new Win32 project in Visual Studio (2012)</li>
+<li>Eventually delete unnecessary files, to start with an empty project (<code>stadfx.h</code> and cie)</li>
+<li>Import the <a title="Evilpassfilter" href="https://gist.github.com/mubix/6514311#file-evilpassfilter-cpp">source code</a></li>
+<li>Create a <code>Evilpassfilter.def</code> file, which defines the exports:
+<pre>LIBRARY Evilpassfilter
+EXPORTS
+   InitializeChangeNotify
+   PasswordFilter
+   PasswordChangeNotify</pre>
+</li>
+<li>In the project properties, make sure to select the appropriate architecture, matching with the one of your target.
+<p><div id="attachment_1745" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18.png" rel="lightbox[1736]"><img class="size-medium wp-image-1745" alt="Selecting the compilation target architecture (win32/x64)" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18-580x133.png" width="580" height="133" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18-580x133.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_18-624x143.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_18.png 725w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Selecting the compilation target architecture (win32/x64)</p></div></li>
+<li>In the input settings of the link editor, add wininet.lib as additional dependancy.</li>
+<li>Also add <code>Evilpassfilter.def</code> as module definition file.
+<p><div id="attachment_1743" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16.png" rel="lightbox[1736]"><img class="size-medium wp-image-1743" alt="Evilpassfilter Visual Studio settings" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16-580x413.png" width="580" height="413" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16-580x413.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_16-624x444.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_16.png 859w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Evilpassfilter Visual Studio settings</p></div></li>
+<li>In the source code, fix line 72: <code>return;</code> &#8211;&gt; <code>return 1;</code></li>
+<li>Now you should be able to compile the library. You may want to make sure that the DLL is valid and integrated the exports (open it with IDA or a PE tool):
+<p><div id="attachment_1741" style="width: 913px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png" rel="lightbox[1736]"><img class="size-full wp-image-1741" alt="Evilpassfilter.dll exports seen in IDA" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png" width="903" height="226" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png 903w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_19-580x145.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_19-624x156.png 624w" sizes="(max-width: 903px) 100vw, 903px" /></a><p class="wp-caption-text">Evilpassfilter.dll exports seen in IDA</p></div></li>
+<li>Copy the resulting DLL to the <code>system32</code> folder.</li>
+<li>Open regedit <code>HKLM\System\CurrentControlSet\Control\Lsa</code><br />
+and add <code>Evilpassfilter</code> to the <code>Notification Packages</code></li>
+</ul>
+<p>Reboot and… now you should know what to do next :-)</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html/feed</wfw:commentRss>
+		<slash:comments>18</slash:comments>
+		</item>
+		<item>
+		<title>How do you manage your passwords?</title>
+		<link>/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html</link>
+		<comments>/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html#comments</comments>
+		<pubDate>Sun, 17 Apr 2011 20:58:35 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[aes]]></category>
+		<category><![CDATA[gpg]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[vim]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1028</guid>
+		<description><![CDATA[We all know that passwords sucks, that they are the nightmare of all administrators and security guys. So many hacks have been eased because the victims reused the same password everywhere : email account, forum, bank, critical systems&#8230; Sadly, so far, there is even not the beginning of a replacement solution. Passwords will be there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>We all know that passwords sucks, that they are the nightmare of all administrators and security guys. So many hacks have been eased because the victims reused the same password everywhere : email account, forum, bank, critical systems&#8230;</p>
+<p>Sadly, so far, there is even not the beginning of a replacement solution. Passwords will be there for long, so we would better use them accordingly.</p>
+<p>Yes, I am aware of many on-line services like FisrtPass, KeePass, 1stPassword, etc. However, I don&#8217;t feel comfortable with having all my password somewhere on-line, even if they claim &#8211; and I believe they are sincere, that they use strong encryption and can&#8217;t access to it.</p>
+<p>Instead, I use a combination of the Firefox password manager and the <a title="Pwgen for Firefox" href="https://addons.mozilla.org/en-us/firefox/addon/pwgen-password-generator/" target="_blank">Pwgen add-on</a>. I use this add-on to quickly and conveniently generate a random password when I subscribe to a web service. When Firefox prompts for it, I just choose to remember the password automatically. SSO quick and dirty.</p>
+<p>For the other passwords that I can&#8217;t and don&#8217;t need to memorize, I store them in a local encrypted file.</p>
+<p>To edit the file, I simply use Vim with this nice <a title="GPG Vim plugin" href="http://vim.wikia.com/wiki/Edit_gpg_encrypted_files" target="_blank">GPG plugin</a>:</p>
+<ul>
+<li>copy gpg.vim to /home/$user/.vim/plugin</li>
+<li>if not done yet, generate you GPG key :
+<pre> $ gpg --gen-key</pre>
+</li>
+<li>Encrypt your password file and erase it:
+<pre>$ gpg --encrypt --recipient 'your name' passwords
+$ rm passwords</pre>
+</li>
+<li>Now, it&#8217;s done. Just edit password.gpg to decrypt and access to your passwords (you will be prompted for your passphrase):
+<pre>$ vim passwords.gpg</pre>
+</li>
+</ul>
+<p>If you don&#8217;t like the overhead of GPG, a more straightforward solution is to use the <a title="OpenSSL Vim extension" href="http://www.vim.org/scripts/script.php?script_id=2012" target="_blank">OpenSSL extension</a> :</p>
+<ul>
+<li>Copy the openssl.vim file to /home/$user/.vim/plugin as well.</li>
+</ul>
+<ul>
+<li>Now, to encrypt to file to, say, AES (note the .aes file extension which makes sense for the plugin):
+<pre>$ openssl aes-256-cbc -in passwords -out passwords.aes</pre>
+</li>
+<li>Decryption will occur as soon as you edit the file with Vim:
+<pre>$ vim passwords.aes</pre>
+</li>
+</ul>
+<p>I believe that, if not perfect, it is pretty secure. I mean not more, not less than your system is. Anyway I don&#8217;t have any need for an on-line manager. And you, how do you manage your passwords? Let us know about your tips.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/04/17/how-do-you-manage-your-passwords.html/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Ravan, password cracking using Javascript!</title>
+		<link>/blog-archive/2010/12/18/ravan-password-cracking-using-javascript.html</link>
+		<pubDate>Sat, 18 Dec 2010 22:53:22 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[cracking]]></category>
+		<category><![CDATA[hash]]></category>
+		<category><![CDATA[html5]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[password]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=940</guid>
+		<description><![CDATA[Ravan is a new password cracking tool based on Javascript. Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/12/18/ravan-password-cracking-using-javascript.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="Ravan" href="http://www.andlabs.org/tools/ravan.html" target="_blank">Ravan</a> is a new password cracking tool based on Javascript.</p>
+<p>Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page executing the script).</p>
+<p>Combine it with several computers connecting to the same page executing a password cracking script and you get easily quite a powerful distributed password cracker.</p>
+<p>Visit <a title="Ravan description" href="http://www.andlabs.org/tools/ravan/ravan.html" target="_blank">this page</a> for more details.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>OpenID rants</title>
+		<link>/blog-archive/2010/07/23/openid-rants.html</link>
+		<pubDate>Fri, 23 Jul 2010 03:44:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Authentication]]></category>
+		<category><![CDATA[OpenID]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
+		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>After I tried to set this blog as my own OpenID provider using the <a title="OpenID WordPress Plugin" href="http://wordpress.org/extend/plugins/openid/" target="_blank">OpenID WordPress plugin</a>, I got a weired error message:</p>
+<p><em>&#8220;This is an OpenID Server, Nothing to See Here&#8230; Move  Along&#8221;</em></p>
+<p>I could not find what as wrong, as all prerequisites were fulfilled, until I find this <a title="openID server" href="http://patchlog.com/wordpress/openid-server-on-php-5-3/" target="_blank">nice post</a>. The patch there works very well, thanks to the author (it is a shame that it wasn&#8217;t yet included in the trunk).</p>
+<p>This and the lack of active open-source development around OpenID seems to show that it is not really popular. It is a shame because it is a pretty good solution against the multiplication of passwords. I wouldn&#8217;t want to use OpenID for my bank account access, but it is just right for many sites, forums, etc. Unfortunately, no many sites are yet OpenID enabled and the choice when you want to become your own provider is very limited (most of projects listed in the official wiki are dead, with no update for the last 2 years).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.71</title>
+		<link>/blog-archive/2009/12/20/netios-0-71.html</link>
+		<pubDate>Sun, 20 Dec 2009 16:34:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
+		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I release a new version of Netios : 0.71.</p>
+<p>There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing.</p>
+<p>It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up.</p>
+<p>A downside is that it now requires at least Python 2.6, as multiprocessing started to be supported with this version only. Most Linux distributions now include Python 2.6, but still not all. Anyway it will be more and more the case. If you can&#8217;t uprade your distribution, you can stick with 0.60 which still do most of the work fine.</p>
+<p>It is also now able to fetch a configuration file remotly, but it requires more testing before I feel confident in the way it works.</p>
+<p>The complete changelog :</p>
+<blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
+<p>* ciscoclass.py : handle correctly the cisco pager &#8212; More &#8212; so that &#8220;show run&#8221; mode should work even with large config files<br />
+* sshclass.py : allow to override terminal size system settings (make use of the cisco pager to avoid filling the buffer)</p>
+<p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
+<p>* implement multiprocessing<br />
+* improve code documentation<br />
+* clean up UI<br />
+* reduce useless logging<br />
+* netios.py : bug : missing startTime parameter in f_skip_error and f_command functions</p></blockquote>
+<p>I cross my fingers so that there are not too many bugs, but if so, please don&#8217;t forget to report it to me.</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios</title>
+		<link>/blog-archive/2009/11/07/netios.html</link>
+		<pubDate>Sat, 07 Nov 2009 15:53:30 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
+		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches :</p>
+<blockquote><p><strong>Netios</strong> is a little tool aimed to help network administrators to administrate a large number of Cisco network devices.<br />
+Providing it with a list of equipments, it connects within SSH to remotly apply IOS commands.</p>
+<p>It can automatically :</p>
+<ul>
+<li> retrieve and export in a CSV file the list of local users</li>
+<li> update the local user, the enable password</li>
+<li> change NTP settings</li>
+<li> execute a file of customed IOS commands</li>
+<li> retrieve configuration files</li>
+</ul>
+<p>It can read the targets from the command line or from a text file.</p></blockquote>
+<p>Its primary goal is to improve the security by making it easier to renew regularly the local password of these equipments, but it can do more convenient things (and I will continue to work to add more of them).</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

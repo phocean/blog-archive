@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Ethernet &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/ethernet/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Compilation of PackETH on openSUSE</title>
+		<link>/blog-archive/2009/06/14/compilation-of-packeteth-on-opensuse.html</link>
+		<pubDate>Sun, 14 Jun 2009 12:08:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Ethernet]]></category>
+		<category><![CDATA[forge]]></category>
+		<category><![CDATA[openSUSE]]></category>
+		<category><![CDATA[packETH]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=387</guid>
+		<description><![CDATA[PackETH is a nice gkt tool to play with Ethernet packet. I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the packETH-opensuse patch to compile correctly. If you are on a 32 bits system, all you will have to do is editing the CPPFLAGS line...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/14/compilation-of-packeteth-on-opensuse.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="PackETH" href="http://packeth.sourceforge.net/" target="_blank">PackETH</a> is a nice gkt tool to play with Ethernet packet.</p>
+<p>I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the <a href="/blog-archive/wp-content/uploads/2009/06/packETH-opensuse.patch">packETH-opensuse patch</a> to compile correctly.</p>
+<p>If you are on a 32 bits system, all you will have to do is editing the <em>CPPFLAGS</em> line and replace all <em>lib64</em> occurences with<em> lib</em>.</p>
+<p>I hope one will find it useful.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Ethernet duplex issues</title>
+		<link>/blog-archive/2007/03/31/ethernet-duplex-issues.html</link>
+		<pubDate>Sat, 31 Mar 2007 18:45:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Ethernet]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=26</guid>
+		<description><![CDATA[<p>I had a weired issue with a server. Whereas other machines worked well with an high speed Internet connection, dowloading was painfully slow on this one. The network card, a 3Com, was also different from others (Intel).</p>]]></description>
+				<content:encoded><![CDATA[<p>I had a weired issue with a server. Whereas other machines worked well with an high speed Internet connection, dowloading was painfully slow on this one. The network card, a 3Com, was also different from others (Intel).</p>
+<p><span id="more-26"></span><br />
+Of course, I immediately thought it was a speed negociation concern with the switch.</p>
+<p>I found out that by default with Debian the network card is set on autonegociation. This is set on a card module.</p>
+<p>You can use two tools to enforce the settings : <strong>Mii-tool</strong> and <strong>ethtool</strong>.</p>
+<p>Here are some example to enforce 100 Mb full duplex with both tools :</p>
+<pre>$ mii-tool -F 10baseT-FD eth0
+$ ethtool -s eth0 duplex full</pre>
+<p>After that you can test and find the best setting for you. For that, you need to know what module your kernel is using.</p>
+<p>First, let&#8217;s find what is the model of the network card :</p>
+<pre>$ lspci | grep Ethernet</pre>
+<p>Now look at the modules availables for your kernel :</p>
+<pre>$ ls /lib/modules/`uname -r`/kernel/drivers/net/</pre>
+<p>It will give you a list of <strong>&lt;card_model&gt;.ko</strong> files that are these modules (except generic ones like <strong>mii.ko</strong>, <strong>slhc.ko </strong>and<strong> bsd_comp.ko</strong>).<br />
+You can get more info (in my case the module for my card is 3c59x.ko) :</p>
+<pre>$ modinfo 3c59x.ko</pre>
+<p>You should have found the module you need. If not, search on the web if you can use an existing module that would be compatible. At last resort, download it from the maker website and compile it.</p>
+<p>To apply it on the network card module :</p>
+<pre>$ modprobe -r 3c59x
+$ modprobe 3c59x options=1 full_duplex=1</pre>
+<p>To have this set at startup, you will have to create an 3c59cx file in the <strong>/etc/modutils</strong> directory (with a 2.4 kernel) :</p>
+<pre>options 3c59x full_duplex=1</pre>
+<p>Then :</p>
+<pre>$ update-modules</pre>
+<p>With a 2.6 kernel, just  create the same file in the /etc/modprobe.d directory.</p>
+<p>If you reboot, that shloud be all fine. Ok, now we enforce 100 Mb with full duplex on the client side. That may not be enough !</p>
+<p>You may have to enforce it on the switch. For instance, on a Cisco switch :</p>
+<pre>$ configure terminal
+$ interface fastethernet3/2
+$ speed 100
+$ duplex full
+$ no shut
+$ exit
+$ copy run start</pre>
+<p>As a conclusion, Auto-negociation is convenient but does not always success depending on the hardware you use. In my case, the same card autonegociated correctly with a different switch, and other cards worked well with that switch. So it was a very specific problem but I am sure that it is not so rare.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

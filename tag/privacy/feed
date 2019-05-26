@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Privacy &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/privacy/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Deleteyouraccount.com to easily get rid off social networking</title>
+		<link>/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html</link>
+		<comments>/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html#comments</comments>
+		<pubDate>Sun, 04 Apr 2010 17:31:28 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Privacy]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=761</guid>
+		<description><![CDATA[Deleteyouraccount.com is a very convenient website if you consider deleting your account from one of these social networking sites that are everywhere now. Of course, they all do their best to make it difficult, trying to hide it and discourage you. Here Deleteyouraccount comes to help. I will still take a few days of thoughts,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a title="Deleteyouraccount.com" href="http://deleteyouraccount.com/" target="_blank">Deleteyouraccount.com</a> is a very convenient website if you consider deleting your account from one of these social networking sites that are everywhere now. Of course, they all do their best to make it difficult, trying to hide it and discourage you. Here Deleteyouraccount comes to help.</p>
+<p>I will still take a few days of thoughts, but I am seriously considering deleting my Linkedin account. I once got invited to it and got trapped.</p>
+<p>My private data are certainly useful to Linkedin, but all this stuff has been totally useless to me so far. One of the things I really hate is that it tends to  increase the number of contacts artificially even though the relationship is not sincere.</p>
+<p>I have a number of &#8220;contacts&#8221; that I barely know or keep in touch with, whereas I don&#8217;t need Linkedin to communicate with the people I truly appreciate.</p>
+<p>Less social networking, more human reliationship, more freedom, more privacy : sounds good.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>bugmenot.com</title>
+		<link>/blog-archive/2010/03/08/bugmenot-com.html</link>
+		<pubDate>Mon, 08 Mar 2010 19:34:09 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Identity]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=731</guid>
+		<description><![CDATA[I just discovered the BugMeNot service today. It offers a database of logins shared by the community to login to free websites that require free registration. This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/03/08/bugmenot-com.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just discovered the <a title="BugMeNot" href="http://www.bugmenot.com/" target="_blank">BugMeNot</a> service today.</p>
+<p>It offers a database of logins shared by the community to login to free websites that require free registration.</p>
+<p>This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins.</p>
+<p>They even provide an extension for Firefox. Thanks to this great website, you are probably going to save a lot of time.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Privacy and Facebook</title>
+		<link>/blog-archive/2010/01/11/privacy-and-facebook.html</link>
+		<pubDate>Mon, 11 Jan 2010 09:51:42 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Privacy]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=675</guid>
+		<description><![CDATA[That is exactly why I have never used &#8211; and will never use &#8211; Facebook or anything like that.]]></description>
+				<content:encoded><![CDATA[<p><a title="Facebook and privacy" href="http://www.readwriteweb.com/archives/facebooks_zuckerberg_says_the_age_of_privacy_is_ov.php?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed:+readwriteweb+%28ReadWriteWeb%29" target="_blank">That</a> is exactly why I have never used &#8211; and will never use &#8211; Facebook or anything like that.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>crashdump &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/crashdump/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Rootkit in my lab? (Part III)</title>
+		<link>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
+		<comments>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
+		<pubDate>Sun, 22 Jul 2012 07:48:06 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Assembly]]></category>
+		<category><![CDATA[BSOD]]></category>
+		<category><![CDATA[crashdump]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[Regshot]]></category>
+		<category><![CDATA[Rootkit]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[WinDBG]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
+		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
+<p>I decided to analyze one the crash I experienced during registry analysis.<br />
+I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG.</p>
+<p>I had my environment set up with the suspicious VM configured to debug activated on the serial port, which is a simple pipe on Mac OS X.<br />
+Another VM is configured with a serial port as the other end of this pipe, and WinDBG attached to it.<br />
+Another method would be to just configure Windows to create a crashdump file with kernel symbols, that you can later load into WinDBG. Of course, the first method offers more opportunities to check and play with the live system.</p>
+<p>Then, I just boot the target and trigger the crash, simply by starting a scan with Regshot:</p>
+<p style="text-align: center;"><iframe src="http://player.vimeo.com/video/46157626" frameborder="0" width="500" height="281"></iframe></p>
+<p>Windows then crashes, WinDBG catches the exception and stops.</p>
+<p>So what do we have ?</p>
+<p>First, the error type, <em><strong>PAGE_FAULT_IN_NONPAGED_AREA (50)</strong></em>, means that an instruction pointed to an invalid memory address. Let&#8217;s check this.</p>
+<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/blog-archive/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
+<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
+<p>It shows the function (nt!CmpGetValueKeyFromCache, offset 0x89) and the memory address where the crash was triggered.</p>
+<p>The instruction at this address is:</p>
+<pre>80637807 f3a5 rep movs dword ptr es:[edi],dword ptr [esi]</pre>
+<p>This instruction is trying to copy 8 bytes at the address pointed by EDI.<br />
+EDI has the value of <strong>0xe1285050</strong> at execution time.</p>
+<p>And what do we have at this memory location ?</p>
+<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
+<p>Nothing indeed. Note that this corruption persists at every boot.</p>
+<p>So what can we conclude?<br />
+We can certainly exclude hardware failure, because it is a virtual machine and because the corruption always occur at the same memory region, even after a reboot.<br />
+At least, I can now be sure that something in the kernel is definitely corrupted.</p>
+<p>Could it be a rootkit trick? Still the question remains, but to me it now looks very, very suspicious. Some rootkit code, poorly written, could have sat in this non-paged memory area and been paged out, causing the BSOD. I have not much knowledge about it at this time but I am going to search on this. At least, I now have good starting point to look at.</p>
+<p>That&#8217;s all for today, folks. I wrote it while I am still working on it, so sorry if it looks rough and incomplete. It is sort of live, thoughts are still in process.</p>
+<p>Again, I am looking forward to reading your comments and suggestions. (Hopefully) there will be a part IV!</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

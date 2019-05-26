@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SDR &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/sdr/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>RF fun with a SDR</title>
+		<link>/blog-archive/2014/04/24/rf-fun-with-a-sdr.html</link>
+		<pubDate>Thu, 24 Apr 2014 20:24:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[gqrx]]></category>
+		<category><![CDATA[Radio]]></category>
+		<category><![CDATA[RF]]></category>
+		<category><![CDATA[SDR]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1967</guid>
+		<description><![CDATA[So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own. I just received my RTL-SDR to play with radio frequencies. This one is based on a RTL2832U chipset and a R820T tuner. My choice was in part influenced by this review. Note that this kind of device isa receiver, so it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/04/24/rf-fun-with-a-sdr.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own.</p>
+<p>I just received my RTL-SDR to play with radio frequencies.</p>
+<p>This one is based on a RTL2832U chipset and a R820T tuner. My <a href="http://www.amazon.fr/gp/product/B00DFYRA8S/ref=oh_details_o03_s00_i00?ie=UTF8&amp;psc=1">choice</a> was in part influenced by <a href="http://www.hamradioscience.com/rtl2832u-r820t-vs-rtl2832u-e4000/">this review</a>. Note that this kind of device isa receiver, so it will not be able to transmit anything.</p>
+<div id="attachment_1968" style="width: 650px" class="wp-caption aligncenter"><img class="size-full wp-image-1968" src="/blog-archive/wp-content/uploads/2014/04/P1030301-2.js">Keedox RTL-SDR (RTL2832U with R820T tuner)</p></div>
+<p>This model has the advantage of being really small, but maybe at the costing of heating. I noticed the USB connector becomes painfully hot during long sessions. Nothing serious, but a negative point though.</p>
+<p>Of course, it is fully compatible with Linux and <a href="http://gqrx.dk/download">Gqrx</a> even maintain a package for Ubuntu, so getting it to work consists simply in one <code>apt-get</code> command.</p>
+<div id="attachment_1971" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1971" src="/blog-archive/wp-content/uploads/2014/04/Gqrx-580x461.png" alt="Gqrx" width="580" height="461" srcset="/blog-archive/wp-content/uploads/2014/04/Gqrx-580x461.png 580w, /blog-archive/wp-content/uploads/2014/04/Gqrx-624x497.png 624w, /blog-archive/wp-content/uploads/2014/04/Gqrx.png 919w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Gqrx</p></div>
+<p>I already intercepted a few conversations on the AM 430Hz range, and a lot of weird signals (many are probably car or parking doors) all over that I recorded and will look at later.</p>
+<p>Well, it is fun! Thanks to @virtualabs for bringing it up to my interest.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

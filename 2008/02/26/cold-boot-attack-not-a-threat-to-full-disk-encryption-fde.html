@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../../css/fontello.css">
+<link rel="stylesheet" href="../../../css/animation.css">
+
+<!-- Mirrored from phocean.net/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:39:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Cold boot attack, not a threat to Full disk encryption (FDE) | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Disk encryption methods : hacked !' href='../25/disk-encryption-methods-hacked.html' />
+<link rel='next' title='My article in the magazine, Hakin9' href='../../04/16/104.html' />
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html" />
+<link rel='shortlink' href='../../../index3f5a.html?p=100' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embed7342.js" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embed0f8e?url=https%3A%2F%2Fphocean.net%2F2008%2F02%2F26%2Fcold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-100 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../../index.html" >
+			<img class="logo" src="../../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-100" class="post-100 post type-post status-publish format-standard hentry category-cryptography category-hardware category-linux category-security tag-cold-boot-attack tag-encryption tag-fde tag-hard-drive tag-security tag-tpm tag-vulnerability">
+				<header class="entry-header">
+
+						<h1 class="entry-title">Cold boot attack, not a threat to Full disk encryption (FDE)</h1>			
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption.</p>
+<p>Hardware encryption is provided by a few laptop makers, generally on high-range an business models.</p>
+<p>It has much less performance impact than software encryption, and protect the data independently from your system configuration and its partitions.</p>
+<p>Full disk encryption is the so called hardware encryption technology used by Lenovo on my Thinkpad.</p>
+<p><span id="more-100"></span></p>
+<p>Mine comes with a Hitachi hard drive. Hitachi names its encryption technology <strong><em>&#8220;Bulk Data Encryption&#8221;</em></strong>.</p>
+<p>I know at least Seagate provides the same kind of feature.</p>
+<p>The bulk data encryption is based on the<strong> AES algorithm with a 128 bits key</strong>.</p>
+<p>Actually, the encryption is not done by the laptop itself but by the hard-drive.</p>
+<p>You need both the hard drive and the laptop supporting encryption , for the following reasons :</p>
+<ol>
+<li>your motherboard must have a TPM chip, which is used for the encryption, as a unique source to derivate the encryption keys.</li>
+<li>the BIOS must interface with the hard drive FDE, to set/unset the encryption and to prompt for the password before the real boot (actually, a small OS embedded on the drive take care of this authentication).</li>
+</ol>
+<p>In reality, the encryption is always active and the password to access to the drive is just another security feature. There is no link between these two functions. That&#8217;s why the fact of setting a password is immediate : no reencryption is done because the password has nothing to do with encryption.</p>
+<p>In case of authentication success, the system boots normally.</p>
+<p>In case of failure, and if the maximum number of attempt is reached, the data is erased. Instead of initializing the content with 0, which would take a lot of time and could be interrupted by shutting down the machine, just the keys are destroyed within a few seconds.</p>
+<p>Anyway, the content is supposed to be very hard to retrieve thanks to the effectiveness of the AES algorithm.</p>
+<p>One important thing is that <strong>the key is not a derivate of the password you set</strong>.</p>
+<p>The hard drive password is a feature that does not come necessarily with encryption.</p>
+<p>It is just there to limit the access of the content, but not its confidentiality.</p>
+<p>For instance, you could imagine that if the drive is stolen, someone opens physically the drive, change the ROM to pass over the password and read your data without any pain.</p>
+<p>The con of that is <strong>the encryption keys generation is based on your hardware</strong>. A different hardware can&#8217;t decipher the drive.</p>
+<p>If your motherboard breaks down, you won&#8217;t be able to read your data from another computer ! Make some good backups&#8230;</p>
+<p>To go back to the main topic, <strong>is the cold boot attack a threat for this hardware encryption ?</strong></p>
+<p>No. The encryption algorithm is not in the user land, so no key is stored in RAM.</p>
+<p><strong> The key hashes are stored directly on the disk.</strong></p>
+<p>These documents from Hitachi provide more detailed information :</p>
+<p><a title="Bulk encryption white paper" href="../../../wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
+<p><a title="HowTo guide for bulk data encryption" href="../../../wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
+<p><a title="Hardware encryption" href="http://en.wikipedia.org/wiki/Full_disk_encryption">This Wikipedia article</a>, underlining the main points of hardware encryption,  is also interesting.</p>
+<p>I guess that at some point it would be possible to read some hash on the hard drive electronic board, but this is not going to be easy. You need to be a hardware expert in hard drives and for sure it can&#8217;t be done as quickly as with the RAM chip.</p>
+<p>Of course, even the cold boot attack is extreme. Most of thief won&#8217;t care about your data, or won&#8217;t be the knowledge or the practical possibility to conduct a successful attack.</p>
+<p>If you don&#8217;t have FDE support, you should continue to use an encryption solution like dm-crypt or Truecrypt and maybe consider turning off your computer more often.</p>
+<p>It anyway remains an excellent solution for external disks, as it is normally not all the time attached to your computer.</p>
+<p>Personally, as FDE offers more performance and transparency, I am using it on my laptop but I keep using dm-crypt on all my external drives.</p>
+<p>Now the question is : what good workaround can be found to provide more secure software encryption ?</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../../../category/security/cryptography.html" rel="category tag">Cryptography</a>, <a href="../../../category/hardware.html" rel="category tag">Hardware</a>, <a href="../../../category/administration-systeme/linux.html" rel="category tag">Linux</a>, <a href="../../../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="../../../tag/cold-boot-attack.html" rel="tag">Cold boot attack</a>, <a href="../../../tag/encryption.html" rel="tag">Encryption</a>, <a href="../../../tag/fde.html" rel="tag">FDE</a>, <a href="../../../tag/hard-drive.html" rel="tag">Hard drive</a>, <a href="../../../tag/security.html" rel="tag">Security</a>, <a href="../../../tag/tpm.html" rel="tag">TPM</a>, <a href="../../../tag/vulnerability.html" rel="tag">Vulnerability</a> <i class="icon-calendar"></i> <a href="cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html" title="11:53 am" rel="bookmark"><time class="entry-date" datetime="2008-02-26T11:53:02+00:00">February 26, 2008</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../25/disk-encryption-methods-hacked.html" rel="prev"><span class="meta-nav">&larr;</span> Disk encryption methods : hacked !</a></span>
+					<span class="nav-next"><a href="../../04/16/104.html" rel="next">My article in the magazine, Hakin9 <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.267 seconds. Made 14 queries to database and 47 cached queries. Memory used - 27.45MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:39:52 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.240 seconds. -->

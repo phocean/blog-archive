@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>arp spoofing &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/arp-spoofing/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Quick tip: harden your ARP table the easy way (Linux)</title>
+		<link>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
+		<comments>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
+		<pubDate>Fri, 14 Aug 2015 20:52:05 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[arp]]></category>
+		<category><![CDATA[arp spoofing]]></category>
+		<category><![CDATA[mac address]]></category>
+		<category><![CDATA[NetworkManager]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
+		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc.</p>
+<p>Yet, most networks do not have port security and ARP inspect on their switches to mitigate such attacks. So you have to count on yourself.</p>
+<p>Most people know how to protect a client , e.g. by maintaining a static mapping of MAC / IP addresses on the operating systems. But almost no one does it, because it would be a pain to manage&#8230;</p>
+<p>But, really ? No, here is what I do to get a reasonable protection.</p>
+<p>I do a few compromises at first:</p>
+<ol>
+<li><span style="text-decoration: underline;">I am not looking to protect ALL my traffic</span> toward  other peers on the LAN, but at least outbound communications with the gateway and, optionally, with a few critical servers.</li>
+<li><span style="text-decoration: underline;">An attacker may still poison the gateway</span> and eavesdrop on responses directed to my machine, and get some interesting stuff anyway.</li>
+<li>So, <span style="text-decoration: underline;">this is not a protection on its own</span>. You have to think defense-in-depth : encryption on all your services (TLS), VPN, etc. Especially, depending on where you are, do not rely on the DNS / DHCP servers.</li>
+</ol>
+<p>With that said, what follows is a hardening move that you can do on most of Linux distributions, with little pain.</p>
+<p>Get the MAC address of the gateway, either by finding it out physically (tag) or by checking it at a safe moment (when ARP spoofing is supposedly not happening).</p>
+<p>Fill in a flat file, like /etc/ethers, with mappings like :</p>
+<pre> 00:11:22:33:44:55  1.2.3.4</pre>
+<p>Now, NetworkManager will do all the magic.</p>
+<p>Create a script like :</p>
+<pre> % cat /etc/NetworkManager/dispatcher.d/40-arp 
+ #!/bin/bash
+ arp -f /etc/ethers
+</pre>
+<p>All scripts in the above folder will be executed every time an interface gets up, as long as you give it executable rights :</p>
+<pre>% chmod +x /etc/NetworkManager/dispatcher.d/40-arp</pre>
+<p>Now, either execute it directly or unplug / plug back in your interface. You should have a permanent static MAC address now, effectively bypassing the ARP protocol and its weaknesses :</p>
+<pre>% arp -a -n
+? (172.16.100.254) at 00:15:17:9d:d6:d1 [ether] PERM on eth0</pre>
+<p>Voilà! Should you not use NetworkManager for some reason, you can do something equivalent with <em>ifup</em> scripts in respect with the syntax of you current Linux distribution.</p>
+<p>But, let me stress it out once more, to be sure you don&#8217;t get me wrong :</p>
+<p><strong><span style="color: #ff0000;">Despite an enhancement, this is no a sufficient protection and you may still get pwned ! Authentication and encryption MUST also come into the play, so use only TLS enabled services, HTTPS sites and, ideally, a good IPSEC / SSH / TLS tunnel to carry ALL of your traffic !</span></strong></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

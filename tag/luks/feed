@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Luks &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/luks/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Disk Encryption on Linux</title>
+		<link>/blog-archive/2007/11/18/disk-encryption-on-linux.html</link>
+		<comments>/blog-archive/2007/11/18/disk-encryption-on-linux.html#comments</comments>
+		<pubDate>Sun, 18 Nov 2007 17:56:47 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[cryptoloop]]></category>
+		<category><![CDATA[cryptsetup]]></category>
+		<category><![CDATA[dmcrypt]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Hard drive]]></category>
+		<category><![CDATA[Luks]]></category>
+		<category><![CDATA[swap]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=85</guid>
+		<description><![CDATA[I finally encrypted some partitions of my hard drive.
+
+An external hard drive that I just bought (320 Gb) that allowed me to back up my entire /home partition and consider encrypting it.]]></description>
+				<content:encoded><![CDATA[<p>I finally encrypted some partitions of my hard drive.</p>
+<p>An external hard drive that I just bought (320 Gb) that allowed me to back up my entire /home partition and consider encrypting it.</p>
+<p>I mainly used <a title="Encryption on Ubuntu" href="http://johnleach.co.uk/words/archives/2006/12/06/245/" target="_blank">this tutorial</a>, but I derived a little from it about the unlocking system : I did not want to input a password while the machine boots, I wanted it to be transparent while I log in. This <a title="dmcrypt" href="http://dev.riseup.net/grimoire/storage/encryption/dmcrypt/" target="_blank">how to</a> provides more complete information, if needed.</p>
+<p>So I will summarize here the actions to get an encrypted volume.</p>
+<p><strong>The tools</strong></p>
+<p><a title="dmcrypt" href="http://www.saout.de/misc/dm-crypt/" target="_blank">dmcrypt</a> is a device mapper supported by the 2.6 Linux kernel. Roughly, this is an abstraction layer between the kernel and the real file system, doing all encrypting / decrypt operations. It is a replacement of <a title="cryptoloop" href="http://tldp.org/HOWTO/Cryptoloop-HOWTO/index.html">cryptoloop</a>, which created a loop device in a file within the file system. It can&#8217;t encrypt a whole partition and can be considered now as less reliable and secured.</p>
+<p>The encryption is based on <a title="LUKS" href="http://luks.endorphin.org/" target="_blank">LUKS</a> is a userland tool aiming to simplify the set-up of dm-crypt. It also stores some set-up information related to the encryption in the partition header, to make easy the transportation of the data from a machine to another, changing the passphrase without having to re-encode the entire partition, and even support having multi passphrases for the same device.</p>
+<p><strong>What to encrypt and why ? </strong></p>
+<p>The first thing is to decide what you will encrypt and how. Of course, I consider that your drive is rightly partitioned with, at least, the /, /home and swap having each a separated partition.</p>
+<p>It is the case on my laptop. I chose to encrypt both the /home and the swap partitions.</p>
+<p>In my case, there were little interest in encrypting the / partition. It contains only configuration files (without any password hardcoded), the /temp and applications &#8211; nothing to keep secret. But of course it might be different for you, depending on the security level you are looking for.</p>
+<p>To the contrary, the /home partitions contains a lot of private data that I wouldn&#8217;t like anyone access in any case.</p>
+<p>Then, it is rather important to encrypt the swap, because it is roughly a partial of you RAM and therefore contains all kind of information from your opened session. The annoying thing is that hibernation (suspend to disk) will not work anymore. It is anyway worth to be done, as it is well explained by <a title="Why encrypting the swap" href="http://theworldofapenguin.blogspot.com/2006_12_01_archive.html" target="_blank">this blogger</a>.</p>
+<p><strong>Preparing the software</strong></p>
+<p>Using Debian Etch or Ubundu Festy/Gutsy, it is easy though the provided kernel (2.6) already supports device mapper, crypt target and AES cipher algorithm as modules :</p>
+<pre>$ apt-get install dmsetup cryptsetup libpam-mount</pre>
+<p><strong>Encrypting swap</strong></p>
+<p><em><strong>UPDATE 2008/04/13 : it is now possible to encrypt the swap in <a title="Encrypting Swap and Suspend to disk" href="http://feeding.cloud.geek.nz/2008/03/encrypted-swap-partition-on.html" target="_blank">a way that preserve suspend-to-disk</a>.</strong></em></p>
+<p>It is a good test to start with the swap, as there is no risk that you loose some valuable data.</p>
+<p>First, let&#8217;s deactivate the current swap before any operation :</p>
+<pre>$ swapoff /dev/hda2</pre>
+<p>We suppose that hda2 is your swap partition :</p>
+<pre>$ cryptsetup luksFormat -c aes-cbc-essiv:sha256 /dev/hda2</pre>
+<p>add this line to the /etc/crypttab file :</p>
+<pre>swap    /dev/hda2       /dev/urandom     swap</pre>
+<p>It means that we are going to create a mapper named swap for the <strong>/dev/hda2</strong> device. It will use a random key as a passphrase for the encryption.</p>
+<p>There is a choice to do between <strong>/dev/random</strong> and <strong>/dev/urandom</strong>. The latter is in theory a little bit less secure (the randomizing is inferior to the /dev/random, as it reuses the internal pool data for the generation), but it is preferable if you don&#8217;t want to be blocked at boot time, while the kernel is trying to get more entropy (you can shorten this by pressing some keys, though).</p>
+<p>Now starts this script :</p>
+<pre>$ /etc/init.d/cryptdisks start</pre>
+<p>It will create a mapper named <strong>swap</strong> to the <strong>/dev/hda2</strong> partition, as set in the <strong>crypttab</strong> file.<br />
+This is equivalent to this command :</p>
+<pre>$ cryptsetup -y create swap /dev/hda2</pre>
+<p>Now, we need to create the file system :</p>
+<pre>$ mkswap /dev/mapper/swap</pre>
+<p>Now we need to update the /etc/fstab file, commenting the old entry for hda2 and adding a new one for the mapped device :</p>
+<pre>/dev/hda2       none            swap    sw              0       0
+/dev/mapper/swap        none    swap    sw      0       0</pre>
+<p>Now you are ready to test ! Just reboot, and without any user interaction, you should get an encrypted swap with a randomized key.</p>
+<p><strong>Encrypting /home</strong></p>
+<p>Now let&#8217;s encrypt the /home. Before doing anything, <strong>be SURE that you made a BACK UP of ALL your data</strong>. <strong>The entire /home will be ERASED !</strong></p>
+<p>We consider that <strong>hda3</strong> is the /home partition :</p>
+<pre>$ cryptsetup luksFormat -c aes-cbc-essiv:sha256 /dev/had
+$ cryptsetup -y create home /dev/hda
+$ mkfs.ext3 /dev/mapper/home</pre>
+<p>We won&#8217;t use neither the <strong>crypttab</strong> file or the <strong>fstab</strong> one, because we don&#8217;t want to be prompted at boot time for a password. And of course we can&#8217;t afford to crypt our data with a randomized key, changing at every boot !</p>
+<p>What we want is the encryption to be done at log-in time, without prompting the user for another passphrase. Don&#8217;t we have enough passwords to memorize to add one more !?</p>
+<p>We are going to use <strong>PAM,</strong> the Linux authentication mechanism, with its <strong>libpam-mount</strong> module. It is designed to mount some devices while the user log in, exactly what we need ! The user Linux password will be used as the encryption passphrase.</p>
+<p>Of course, the security level will depend on your user password &#8211; take a good care on its length and complexity (though it must be already the case, encryption or not). A good compromise is probably an 8 digits password. Of course, if you are looking for the top level security, prefer the boot time passphrase prompting method&#8230;</p>
+<p>To activate it, create or edit the <strong>/etc/security/pam-mount.conf.xml</strong> file and add this line :</p>
+<pre><code>&lt;volume user="user" fstype="crypt" path="/dev/mapper/home" mountpoint="/home" options="fsck,relatime" /&gt;</code></pre>
+<p>Also add this at the end of the <strong>/etc/pam.d/common-auth</strong> file :</p>
+<pre># cryptsetup
+auth    optional        pam_mount.so use_first_pass</pre>
+<p>That&#8217;s done ! Testing is easy : log off, log in and check that your /home partition is well monted. It should not been mounted or readable for other users, including root.</p>
+<p><strong>Encrypting a removable device</strong></p>
+<p>We assume that you have a usb key (once again BACK UP your data) inserted, corresponding to the <strong>/dev/sda</strong> device :</p>
+<pre>$ cryptsetup luksFormat -c aes-cbc-essiv:sha256 /dev/sda1</pre>
+<p>We open manually the luks partition :</p>
+<pre>$ cryptsetup luksOpen /dev/sda1 usbkey</pre>
+<p>We format it with the filesystem of your choice (here ext3) :</p>
+<pre>$ mkfs.ext3 /dev/mapper/usbkey</pre>
+<p>We close the partition :</p>
+<pre>$ cryptsetup luksClose usbkey</pre>
+<p>Now every time you insert the key, you will be prompted for the password (at least by Gnome through the keyring manager box, though I haven&#8217;t tested yet with a different window manager).</p>
+<p><strong>Conclusion</strong></p>
+<p>This was a much easier experience than I previously thought. Much work has been made to hide the complex layers behind that, and it now takes only a few steps to get a pretty well secured hard drive.</p>
+<p>However I think it really must become more user-friendly for the masses. Most of people will still be scared to open a terminal and type the commands above, so I am looking forward to seeing some graphical front-end to manage all that. Sure there are coming, and if you already know some project, please let me know.</p>
+<p>About performance, if encryption must have a resource cost, I could not notice any slow down on a pretty modest hardware (celeron M 1,5 Ghz).</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/11/18/disk-encryption-on-linux.html/feed</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		</item>
+	</channel>
+</rss>

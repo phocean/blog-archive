@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gns3 &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/gns3/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Use Gnome-terminal with GNS3</title>
+		<link>/blog-archive/2009/10/01/use-gnome-terminal-with-gns3.html</link>
+		<pubDate>Thu, 01 Oct 2009 15:28:10 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Gnome]]></category>
+		<category><![CDATA[gns3]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=473</guid>
+		<description><![CDATA[GNS3 is configure to use Xterm by default. If you are on Gnome, you may want to use the Gnome terminal. The proper command to set is : gnome-terminal -t %d -e 'telnet %h %p' &#62; /dev/null 2&#62;&#38;1 &#38;]]></description>
+				<content:encoded><![CDATA[<p>GNS3 is configure to use Xterm by default.</p>
+<p>If you are on Gnome, you may want to use the Gnome terminal.</p>
+<p>The proper command to set is :</p>
+<pre>gnome-terminal -t %d -e 'telnet %h %p' &gt; /dev/null 2&gt;&amp;1 &amp;</pre>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/10/Capture-Préférences1.png" rel="lightbox[473]"><img class="aligncenter size-full wp-image-475" title="Capture-Préférences" src="/blog-archive/wp-content/uploads/2009/10/Capture-Préférences1.png" alt="Capture-Préférences" width="532" height="443" /></a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Connecting your GNS3 labs to the real network</title>
+		<link>/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html</link>
+		<comments>/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html#comments</comments>
+		<pubDate>Sun, 01 Mar 2009 02:02:21 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[bridge]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[dummy]]></category>
+		<category><![CDATA[gns3]]></category>
+		<category><![CDATA[openSUSE]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=334</guid>
+		<description><![CDATA[There is a nice video tutorial to get your GNS3 lab connected to your physical network. However, it requires you to use a real network card with a fixed IP for doing that. This is not really handy if, llike me, you use GNS3 on a laptop whose connectivity is frequently switching between cable and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>There is a <a title="GNS3 bridge to the physical network" href="http://www.blindhog.net/linux-bridging-for-gns3-lan-communications/" target="_blank">nice video tutorial</a> to get your GNS3 lab connected to your physical network.</p>
+<p>However, it requires you to use a real network card with a fixed IP for doing that. This is not really handy if, llike me, you use GNS3 on a laptop whose connectivity is frequently switching between cable and wireless, and on different subnets.</p>
+<p>I started to look for something more convenient like a virtual interface.</p>
+<p>I first thought about declaring a virtual IP on eth0, but no way : briding is layer 2 (based on MAC address), you can&#8217;t add eth0:0 to a bridge.</p>
+<p>Then I found the very handy <strong><em>dummy</em></strong> interface.</p>
+<p>Load the module :</p>
+<pre>% sudo modprobe dummy
+% lsmod | grep dummy
+dummy                   3192  0
+% ifconfig dummy0
+dummy0    Link encap:Ethernet  HWaddr AE:89:91:BD:61:87
+BROADCAST NOARP  MTU:1500  Metric:1
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0 lg file transmission:0
+RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)</pre>
+<p>To have the module loaded at boot time, do :</p>
+<p><em>In debian :</em></p>
+<pre>% echo dummy &gt;&gt; /etc/modules</pre>
+<p><em>In openSUSE, edit this line in <strong>/etc/sysconfig/kernel </strong>:</em></p>
+<pre>MODULES_LOADED_ON_BOOT=&quot;dummy&quot;</pre>
+<p>Then, you could go on with the tutorial linked above, replacing <strong><em>eth0</em></strong> with <em><strong>dummy0</strong></em>, or use the script I made :</p>
+<pre>#!/bin/sh
+
+/bin/tunctl -t tap0
+/sbin/ifconfig tap0 0.0.0.0 promisc up
+/sbin/ifconfig dummy0 0.0.0.0 promisc up
+/sbin/brctl addbr br0
+/sbin/brctl addif br0 tap0
+/sbin/brctl addif br0 dummy0
+/sbin/ifconfig br0 10.10.10.99/24 up
+/path/to/GNS3-0.6-src/gns3</pre>
+<p>You may also insert this line if you want to interconnect your lab network with your other networks (it activates kernel&#8217;s IP forwarding) :</p>
+<pre>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</pre>
+<p>I saved it <strong><em>/usr/local/bin/gns</em> </strong>and created a pretty shortcut for the application browser of Gnome :</p>
+<pre>% cat /usr/share/applications/gns3.desktop
+[Desktop Entry]
+X-SuSE-translate=true
+Encoding=UTF-8
+Name=gns3
+GenericName=Cisco routers emulator
+Exec=/usr/local/bin/gns-start
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=true
+Icon=gnome-window-manager
+Categories=GNOME;Network;</pre>
+<p>This shortcut will prompt you for the root password (unfortunately, when dealing with tap interface, GNS3 requires root access &#8211; security could be tighten with SELinux or AppArmor) and launch GNS3 with most of the network stuff prepared.</p>
+<p>Just in case you want to clear that all quickly, there is the <strong><em>gns-stop</em></strong> script :</p>
+<pre>#!/bin/sh
+ifconfig br0 down
+brctl delif br0 tap0
+brctl delif br0 eth0
+brctl delbr br0
+tunctl -d tap0</pre>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Practicing Cisco networking with GNS3 and Dynamips</title>
+		<link>/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html</link>
+		<pubDate>Tue, 19 Aug 2008 08:07:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[dynamips]]></category>
+		<category><![CDATA[gns3]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[router]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=195</guid>
+		<description><![CDATA[GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers. I sometimes use Boson Netsim, which is not only non-free but not...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers.</p>
+<p>I sometimes use <a href="http://www.boson.com/AboutNetSim.html">Boson Netsim</a>, which is not only non-free but not so reliable.</p>
+<p>However, as I just started to use GNS3 and Dynamips, I don&#8217;t know it so well yet and won&#8217;t compare any further the two solutions.</p>
+<p>On this page, I am just summarizing the few steps to set it up on your Linux system.</p>
+<p>First, set up the prerequisite :</p>
+<pre>$ aptitude install python-qt4</pre>
+<p>Now, go to <a href="http://www.gns3.net/" target="_blank">gns3.net</a> and download the source code for Linux (<a href="http://pfe.epitech.net/frs/download.php/819/GNS3-0.5-src.tar.gz" target="_blank">direct link</a>).</p>
+<p>You may extract the archive in your local application folder :</p>
+<pre>$ wget http://pfe.epitech.net/frs/download.php/819/GNS3-0.5-src.tar.gz
+$ tar -xzvf GNS3-0.5-src.tar.gz -C /opt</pre>
+<p>Then, you need the dynamips binary from the <a href="http://www.ipflow.utc.fr/blog/" target="_blank">dynamips blog</a> (direct links for <a href="http://www.ipflow.utc.fr/dynamips/dynamips-0.2.8-RC2-x86.bin" target="_blank">x86</a> or <a href="http://www.ipflow.utc.fr/dynamips/dynamips-0.2.8-RC2-amd64.bin" target="_blank">amd64</a> platforms).<br />
+The file must be executable.</p>
+<pre>$ wget http://www.ipflow.utc.fr/dynamips/dynamips-0.2.8-RC2-amd64.bin
+$ chmod u+x dynamips*.bin
+$ mv dynamips-0.2.8-RC2-amd64.bin /opt</pre>
+<p>Now, start GNS3 :</p>
+<pre>$ /opt/GNS3-0.5-src/gns3</pre>
+<p>In the <strong>edit</strong> menu, select <strong>preferences</strong> and go the <strong>dynamips</strong> section.</p>
+<p>Just browse to the dynamips binary you dowloaded, to fill the value of the <strong>executable path</strong> field.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-preferences.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-198" title="GNS3 preferences settings" src="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png" alt="" width="300" height="264" srcset="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-preferences.png 694w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Still from the <strong>edit</strong> menu, select <strong>IOS images and hypervisors</strong>. There, you have to add all the IOS images you want to use, one after another. Normally, the default settings for each file loaded are suitable.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-202" title="GNS3 ios-images-and-hypervisors" src="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png" alt="" width="300" height="184" srcset="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png 881w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Back to the main window, you can drag and drop routers and link them, creating the topology you wish.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-gns3.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-197" title="GNS3" src="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png" alt="" width="300" height="190" srcset="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-gns3.png 1182w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>For now, just add one router. Right click on it and select <strong>start</strong> to start it up. Right click again and select <strong>console</strong>.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-r01.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-200" title="GNS3 console" src="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png" alt="" width="300" height="181" srcset="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-r01.png 580w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Enjoy ! Of course, I strongly recommand that you start reading further from <a href="http://www.gns3.net/documentation" target="_blank">this page</a>.</p>
+<p><strong>Resources</strong> :</p>
+<p><a href="http://www.ipflow.utc.fr/blog/" target="_blank">http://www.ipflow.utc.fr/blog/</a><br />
+<a href="http://www.gns3.net/" target="_blank">http://www.gns3.net/</a><br />
+<a href="http://www.blindhog.net/tutorials/gns3-linux-install/gns3-linux-install.html" target="_blank">http://www.blindhog.net/tutorials/gns3-linux-install/gns3-linux-install.html</a></p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

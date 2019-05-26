@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>tunneling &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/tunneling/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>IPv6 tunneling and security</title>
+		<link>/blog-archive/2009/11/04/ipv6-tunneling-and-security.html</link>
+		<pubDate>Wed, 04 Nov 2009 10:11:41 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[6to4]]></category>
+		<category><![CDATA[IPv6]]></category>
+		<category><![CDATA[Teredo]]></category>
+		<category><![CDATA[tunneling]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=492</guid>
+		<description><![CDATA[Interesting article to read about IPv6 tunneling and security aspects. The commends are worth reading too. Follow this link.]]></description>
+				<content:encoded><![CDATA[<p>Interesting article to read about IPv6 tunneling and security aspects. The commends are worth reading too.</p>
+<p>Follow <a title="IPv6 tunneling and security" href="http://blog.trendmicro.com/ipv6-tunneling-protocols-good-for-adoption-not-so-hot-for-security/">this link</a>.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

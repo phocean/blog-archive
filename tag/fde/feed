@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>FDE &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/fde/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Cold boot attack, not a threat to Full disk encryption (FDE)</title>
+		<link>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
+		<comments>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
+		<pubDate>Tue, 26 Feb 2008 09:53:02 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cold boot attack]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[FDE]]></category>
+		<category><![CDATA[Hard drive]]></category>
+		<category><![CDATA[TPM]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
+		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption.</p>
+<p>Hardware encryption is provided by a few laptop makers, generally on high-range an business models.</p>
+<p>It has much less performance impact than software encryption, and protect the data independently from your system configuration and its partitions.</p>
+<p>Full disk encryption is the so called hardware encryption technology used by Lenovo on my Thinkpad.</p>
+<p><span id="more-100"></span></p>
+<p>Mine comes with a Hitachi hard drive. Hitachi names its encryption technology <strong><em>&#8220;Bulk Data Encryption&#8221;</em></strong>.</p>
+<p>I know at least Seagate provides the same kind of feature.</p>
+<p>The bulk data encryption is based on the<strong> AES algorithm with a 128 bits key</strong>.</p>
+<p>Actually, the encryption is not done by the laptop itself but by the hard-drive.</p>
+<p>You need both the hard drive and the laptop supporting encryption , for the following reasons :</p>
+<ol>
+<li>your motherboard must have a TPM chip, which is used for the encryption, as a unique source to derivate the encryption keys.</li>
+<li>the BIOS must interface with the hard drive FDE, to set/unset the encryption and to prompt for the password before the real boot (actually, a small OS embedded on the drive take care of this authentication).</li>
+</ol>
+<p>In reality, the encryption is always active and the password to access to the drive is just another security feature. There is no link between these two functions. That&#8217;s why the fact of setting a password is immediate : no reencryption is done because the password has nothing to do with encryption.</p>
+<p>In case of authentication success, the system boots normally.</p>
+<p>In case of failure, and if the maximum number of attempt is reached, the data is erased. Instead of initializing the content with 0, which would take a lot of time and could be interrupted by shutting down the machine, just the keys are destroyed within a few seconds.</p>
+<p>Anyway, the content is supposed to be very hard to retrieve thanks to the effectiveness of the AES algorithm.</p>
+<p>One important thing is that <strong>the key is not a derivate of the password you set</strong>.</p>
+<p>The hard drive password is a feature that does not come necessarily with encryption.</p>
+<p>It is just there to limit the access of the content, but not its confidentiality.</p>
+<p>For instance, you could imagine that if the drive is stolen, someone opens physically the drive, change the ROM to pass over the password and read your data without any pain.</p>
+<p>The con of that is <strong>the encryption keys generation is based on your hardware</strong>. A different hardware can&#8217;t decipher the drive.</p>
+<p>If your motherboard breaks down, you won&#8217;t be able to read your data from another computer ! Make some good backups&#8230;</p>
+<p>To go back to the main topic, <strong>is the cold boot attack a threat for this hardware encryption ?</strong></p>
+<p>No. The encryption algorithm is not in the user land, so no key is stored in RAM.</p>
+<p><strong> The key hashes are stored directly on the disk.</strong></p>
+<p>These documents from Hitachi provide more detailed information :</p>
+<p><a title="Bulk encryption white paper" href="/blog-archive/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
+<p><a title="HowTo guide for bulk data encryption" href="/blog-archive/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
+<p><a title="Hardware encryption" href="http://en.wikipedia.org/wiki/Full_disk_encryption">This Wikipedia article</a>, underlining the main points of hardware encryption,  is also interesting.</p>
+<p>I guess that at some point it would be possible to read some hash on the hard drive electronic board, but this is not going to be easy. You need to be a hardware expert in hard drives and for sure it can&#8217;t be done as quickly as with the RAM chip.</p>
+<p>Of course, even the cold boot attack is extreme. Most of thief won&#8217;t care about your data, or won&#8217;t be the knowledge or the practical possibility to conduct a successful attack.</p>
+<p>If you don&#8217;t have FDE support, you should continue to use an encryption solution like dm-crypt or Truecrypt and maybe consider turning off your computer more often.</p>
+<p>It anyway remains an excellent solution for external disks, as it is normally not all the time attached to your computer.</p>
+<p>Personally, as FDE offers more performance and transparency, I am using it on my laptop but I keep using dm-crypt on all my external drives.</p>
+<p>Now the question is : what good workaround can be found to provide more secure software encryption ?</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

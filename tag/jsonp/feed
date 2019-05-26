@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JSONP &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/jsonp/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>(in)Security of JSONP: CSRF risks</title>
+		<link>/blog-archive/2013/10/13/csrf-with-jsonp.html</link>
+		<comments>/blog-archive/2013/10/13/csrf-with-jsonp.html#comments</comments>
+		<pubDate>Sun, 13 Oct 2013 20:51:49 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[CSRF]]></category>
+		<category><![CDATA[JSON]]></category>
+		<category><![CDATA[JSONP]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[SOP]]></category>
+		<category><![CDATA[web browser]]></category>
+		<category><![CDATA[XMLHttpRequest]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1765</guid>
+		<description><![CDATA[JSONP vs JSON I had an opportunity to experiment exploiting JSONP in real life. Honestly, I had never heard of it before. JSON is a well known method to serialize data, but what is JSONP? Actually, it is nothing new, but rather a specific use of JSON. In AJAX websites, XMLHttpRequest is used in client-side Javascript...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/13/csrf-with-jsonp.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>JSONP vs JSON</h2>
+<p>I had an opportunity to experiment exploiting <em>JSONP</em> in real life. Honestly, I had never heard of it before.</p>
+<p><em>JSON</em> is a well known method to serialize data, but what is <em>JSONP</em><i>?</i> Actually, it is nothing new, but rather a specific use of <em>JSON</em>.</p>
+<p>In <em>AJAX</em> websites, <code>XMLHttpRequest</code> is used in client-side Javascript code to forge <em>HTTP</em> requests, which fetch data from some <em>JSON</em> service.</p>
+<p><strong></strong><span style="line-height: 1.714285714; font-size: 1rem;"> For example, following a GUI event (</span><em style="line-height: 1.714285714; font-size: 1rem;">onclick</em><span style="line-height: 1.714285714; font-size: 1rem;">, </span><em style="line-height: 1.714285714; font-size: 1rem;">mouseover</em><span style="line-height: 1.714285714; font-size: 1rem;">, &#8230;), such </span><em style="line-height: 1.714285714; font-size: 1rem;">XHR</em><span style="line-height: 1.714285714; font-size: 1rem;"> code may be executed:</span></p>
+<pre>var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://example.com/search.php', true);
+xhr.send(null);</pre>
+<p>The requested server may answer with XML data, or JSON like here:</p>
+<pre>{"id": 1, "name": "Foo", "price": 123}</pre>
+<p>However, <em>XHR</em> request is limited to the current domain, due to the <em>SOP</em> (Same Origin Policy) that is enforced on modern browsers. What if it is necessary to retrieve data from another domain?</p>
+<p>Here comes <em>JSONP</em> as one of the possible solutions.</p>
+<pre><span style="color: #ff0000;"><strong>hello(</strong></span>{"id": 1, "name": "Foo", "price": 123}<span style="color: #ff0000;"><strong>);</strong></span></pre>
+<p>As you can see, data is <em>padded</em> (<em>P</em> in <em>JSONP</em>) inside a callback function, which we are going to study.</p>
+<h2>How JSONP works</h2>
+<p>The trick consists in requesting the <em>JSONP</em> service inside <code>&lt;script&gt;</code> tags, which, by design, are out of the <em>SOP</em> scope.</p>
+<p>The call to the <em>JSONP</em> service just defines a <em>callback</em> function name as a parameter. Note that the callback function is included in the same page as the call.</p>
+<p>Then, the <em>JSONP</em> service answers with data encapsulated inside the callback function name.  That way, the browser will execute the callback function and pass data as its parameters.</p>
+<p>It is confusing to explain and I may have lost you in trying to explain. Hopefully this diagram may clarify this stuff:</p>
+<div>
+<dl id="attachment_1774">
+<dt>
+<div id="attachment_1774" style="width: 428px" class="wp-caption aligncenter"><img class="size-full wp-image-1774" alt="XHR vs JSONP" src="/blog-archive/wp-content/uploads/2013/10/jsonp1.png" width="418" height="515" /><p class="wp-caption-text">XHR vs JSONP</p></div>
+</dt>
+</dl>
+</div>
+<p><em>Domain1</em> <em>XHR</em> requests to <em>domain2</em> are not allowed. Therefore, the <em>callback</em> trick ensures that data is fetched from <em>domain2</em> while the corresponding code is processed in the context of <em>domain1</em>.</p>
+<p>All this way around has a unique goal: have the code to be executed in the same context as the originating page. In other words: bypassing the SOP.</p>
+<h2> Security Concerns</h2>
+<p>This is not without any security caveats. Someone outlined some very valid points on <a href="http://security.stackexchange.com/a/23439">Stackexchange</a>, and it is well written, so I will just copy and paste what he said about <em>JSONP</em> security:</p>
+<blockquote>
+<ul>
+<li><strong>Requires excessive trust.</strong> Suppose you have a page hosted on <code>a.com</code> and it uses JSONP to access services provided by <code>b.org</code>. This involves placing 100% trust in <code>b.org</code>. If <code>b.org</code> is malicious or buggy, it can subvert the security of the embedding page and all of the <code>a.com</code> origin. This kind of excess trust is dangerous from a security perspective: it makes your application fragile.<br />
+To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know it&#8217;s a feature, not a bug, but still&#8230;</li>
+<li><strong>CSRF vulnerabilities.</strong> You have to remember to defend against CSRF vulnerabilities, and with JSONP, that gets a bit tricky. Standard advice is to ensure that only POST requests can trigger a side-effect, and to include a CSRF token in all POST requests; but JSONP involves sending a GET request to trigger a side-effect, which ain&#8217;t exactly the cleanest solution you&#8217;ve ever seen. So this means that the host that provides JSONP service needs to remember to check CSRF tokens even on GET requests. Also, it requires a bit of a tricky protocol for the embedding page (<code>a.com</code>) to obtain the proper CSRF token from the JSONP service (<code>b.org</code>). It gets messy.</li>
+<li><strong>Causes mixed-content warnings.</strong> Suppose we have a page hosted on <code>https://a.com</code> and it accesses a JSONP service on <code>http://b.org</code>. Then this will inevitably trigger a scary-looking mixed-content warning (since JSONP involving loading a script from <code>http://b.org</code>).</li>
+<li><strong>User authentication gets ugly.</strong> If <code>b.org</code> wants to authenticate the user, that gets tricky to do when using JSONP. The embedding page (<code>a.com</code>) needs to first somehow give the user an opportunity to log into <code>b.org</code> in advance, before accessing <code>b.org</code>&#8216;s JSONP service. Both sites need to coordinate.</li>
+</ul>
+</blockquote>
+<p>I would just add that, though it is not perfect, it is at least possible to mitigate CSRF on GET requests by checking the <strong><em>HTTP</em></strong> <strong><em>referer</em></strong> (when possible).</p>
+<p>Is this complete? Let me know if you have other suggestions.</p>
+<h2>Simple Exploitation</h2>
+<p>During a pentest, I had to audit a rather complex application which happened to do some requests to another server in <em>JSONP</em>.</p>
+<p>The few following snippets are a simplified representation of the case.</p>
+<p>Exploitation code right below may be uploaded to a server controlled by the attacker (who may need some <em>social engineering</em> to get the visitor to reach his page).</p>
+<pre>&lt;html&gt;
+ &lt;head&gt;
+ <span style="color: #339966;"><strong>&lt;script&gt;
+ hello = function(data) {
+ alert("hello " + data.name);
+ }
+ &lt;/script&gt;</strong></span>
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;h1&gt;JSONP Call&lt;/h1&gt;
+ <span style="color: #ff0000;"><strong>&lt;script src="http://domain.com/jsonp.php?jsonp_callback=hello"&gt;&lt;/script&gt;</strong></span>
+ &lt;/body&gt;
+ &lt;/html&gt;</pre>
+<p>So in <span style="color: #ff0000;"><em>red</em></span>, the call to JSONP with the callback function name indicated. In <span style="color: #339966;"><em>green</em></span>, the callback function itself. It is just displaying an alert box containing the fetched JSONP data, but of course it could have malicious features (like cookie stealing).</p>
+<p>The JSONP service can be simulated by the following code,  hosted on another server (e.g. the attack target):</p>
+<pre>&lt;?php
+ header('Cache-Control: no-cache, must-revalidate');
+ header('Expires: Mon, 1 Jan 2000 01:00:00 GMT');
+ header('Content-type: application/json');
+ $data = '{ "name": "world" }';
+ <strong>echo $_GET['jsonp_callback'] . '(' . $data . ');';</strong>
+?&gt;</pre>
+<p>After receiving the <code>&lt;script&gt;</code> call, the function would just return:</p>
+<pre>hello({ "name": "world" });</pre>
+<p>Which, when received by the browser, would trigger the nice alert box.</p>
+<p>&nbsp;</p>
+<div id="attachment_1793" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1793" alt="JSONP callback execution" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png" width="580" height="416" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21-624x448.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21.png 729w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">JSONP callback execution</p></div>
+<p>The attack sequence may be represented like this:</p>
+<div id="attachment_1784" style="width: 432px" class="wp-caption aligncenter"><img class="size-full wp-image-1784" alt="Example of exploitation process of JSONP" src="/blog-archive/wp-content/uploads/2013/10/jsonp-exploit.png" width="422" height="445" /><p class="wp-caption-text">Example of exploitation process of JSONP</p></div>
+<p>In other words, the user browser is used as a <em>proxy</em> to make <em>CSRF</em> requests, which should be forbidden.</p>
+<h2>So what?</h2>
+<p>Exploitation depends on the target application configuration and the capability of the attacker to inject a Javascript call along with the callback function into the victim&#8217;s browser.</p>
+<p>In the case I experienced, the <em>JSONP</em> host was not checking the <em>referer</em>. On top of that, it was hosted inside the corporate <em>LAN</em>.</p>
+<p>So I was able to have a user visit a page on my server, which would silently make his browser call the <em>JSONP</em> service… and execute the Javascript in turn in the context of my page.</p>
+<p>Impacts:</p>
+<ul>
+<li>hijack of the user session to the server (theft of user cookies),</li>
+<li>access to confidential data,</li>
+<li>bypass of network filtering and <em>SOP</em> (the browser acts as a proxy),</li>
+<li>phishing scenarios (fake forms, redirections, …).</li>
+</ul>
+<p>Even if the target <em>JSONP</em> server had checked the <em>referer</em>, it would still be vulnerable in case the legitimate calling application would suffer from code injection (<em>XSS</em>).</p>
+<h2>Conclusion</h2>
+<p>Once the concept of <em>JSONP</em> is clear, it appears to be very simple and powerful to exploit.</p>
+<p>As I just discovered this and had to craft the exploitation quickly, I would not conclude definitely on the topic.</p>
+<p>Though, it seems that a JSONP service should at least check the <em>referer</em> before processing a call to get to an acceptable security level.</p>
+<p>But I am not sure yet of what else could be done to improve the security further. It may be just crappy by design.</p>
+<p>Please share if you have a more educated opinion on the topic. And as always, comments and constructive criticisms are welcome. Let me know if something is unclear or incorrect.</p>
+<h2>References</h2>
+<ul>
+<li><a title="JSON vs JSONP" href="http://www.mattlunn.me.uk/blog/2011/10/json-vs-jsonp/">www.mattlunn.me.uk</a></li>
+<li><a title="JSONP" href="http://border-labs.fr/?p=21">border-labs.fr</a></li>
+<li><a href="http://security.stackexchange.com/a/23439">security.stackexchange.com</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/10/13/csrf-with-jsonp.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

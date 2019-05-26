@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Network attacks &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/network-attacks/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>My article in the magazine, Hakin9</title>
+		<link>/blog-archive/2008/04/16/104.html</link>
+		<pubDate>Wed, 16 Apr 2008 20:41:03 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Hackin9]]></category>
+		<category><![CDATA[Network attacks]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=104</guid>
+		<description><![CDATA[I am proud that my first article for a computer magazine was published. The magazine, Hakin9, is specialized into Security and Hacking. My article was an overall introduction to network attacks. Some day, I will probably post an english translation around here. It was an interesting and exciting exercise, like writing on this blog. I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/04/16/104.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I am proud that my first article for a computer magazine was published.</p>
+<p>The magazine, <a title="Hakin9 magazine" href="http://www.hakin9.org" target="_blank">Hakin9</a>, is specialized into Security and Hacking. My article was an overall<a title="Introduction to network attacks" href="http://www.hakin9.org/prt/view/nos-numers/issue/793.html"> <strong>introduction to network attacks</strong></a>. Some day, I will probably post an english translation around here.</p>
+<p>It was an interesting and exciting exercise, like writing on this blog. I wish I can afford enough time and do it more often.</p>
+<p style="text-align: center;"><a title="Hakin9 - my article" href="http://www.hakin9.org/prt/view/nos-numers/issue/793.html"><img class="aligncenter" src="http://www.hakin9.org//files/haking/Cover/hakin9_starter_kit_FR.js" /></a></p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,19 @@
+*** Makefile	2008-02-20 15:25:13.000000000 +0100
+--- packETH-1.6/src/Makefile	2009-06-14 13:56:22.040007675 +0200
+***************
+*** 27,33 ****
+  INSTALL_PREFIX = /usr
+  
+  CC = gcc
+! CPPFLAGS =  -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include 
+  LDFLAGS = 
+  CFLAGS = -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations 
+  #LIBS = -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -lglib -lXi -lXext -lX11 -lm -lpthread -lgthread
+--- 27,33 ----
+  INSTALL_PREFIX = /usr
+  
+  CC = gcc
+! CPPFLAGS =  -I/usr/lib/gtk-2.0 -I/usr/include/gtk-2.0 -I/usr/lib64/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/lib64/glib-2.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include
+  LDFLAGS = 
+  CFLAGS = -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations 
+  #LIBS = -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -lglib -lXi -lXext -lX11 -lm -lpthread -lgthread

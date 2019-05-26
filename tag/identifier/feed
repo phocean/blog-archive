@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>identifier &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/identifier/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Consider learning LISP</title>
+		<link>/blog-archive/2010/07/26/consider-learning-lisp.html</link>
+		<pubDate>Sun, 25 Jul 2010 23:54:47 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[BGP]]></category>
+		<category><![CDATA[identifier]]></category>
+		<category><![CDATA[ip]]></category>
+		<category><![CDATA[IPv4]]></category>
+		<category><![CDATA[IPv6]]></category>
+		<category><![CDATA[LISP]]></category>
+		<category><![CDATA[locator]]></category>
+		<category><![CDATA[Routing]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=899</guid>
+		<description><![CDATA[No, not the infamous programming language! But LISP as Location/Identifier Separation Protocol. (I know I am repeating the joke everyone does but I couldn&#8217;t help). But what is it about? It is actually at first difficult to conceive, as we are all so used that IP addresses identify both a person (or a company) and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/26/consider-learning-lisp.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>No, not the infamous programming language! But LISP as Location/Identifier Separation Protocol. (I know I am repeating the joke everyone does but I couldn&#8217;t help).</p>
+<p>But what is it about? It is actually at first difficult to conceive, as we are all so used that <strong>IP addresses identify both a person (or a company) and its location</strong>. It is like this by design because Internet is based on a hierarchical routing model.</p>
+<p>What I wrote below is just a bad summary of this <a href="http://www.1-4-5.net/~dmm/lisp/" target="_blank">article by David Meyer</a>. See it as a memo or as a short introduction if you don&#8217;t want to get deep into LISP. Otherwise, jump immediately to the <a title="LISP" href="http://www.1-4-5.net/~dmm/lisp/">original article</a> or to <a href="http://packetlife.net/blog/2010/jul/15/emerging-terminology-lisp-and-trill/" target="_blank">Packetlife</a> which gives some more links.</p>
+<p>Now, why would we want to change it? Because with the growing lack of IPv4 free blocks, it became very difficult for the network providers to maintain contiguous blocks. So now the routing tables are bigger than they should be and not optimized. Customers want multihomming and mobility, while providers want to limit the routing overload. Two different point of views which can&#8217;t be satisfied with the hierarchical routing of today. BGP partially addresses some of these issues, but it has limits and <a title="BGP blackhole" href="http://arstechnica.com/old/content/2008/02/insecure-routing-redirects-youtube-to-pakistan.ars" target="_blank">misconfigurations</a> with deep impacts (eg blackholes) happen regularly. Note that IPv6 can&#8217;t be of any help in this case.</p>
+<p>But LISP tries. And in a nice way, as it is totally transparent to the end-users. Only the core network of the providers are impacted.</p>
+<p>Basically, the customer IP stack remains untouched during the transit. <strong>With LISP, the customer IP address is only the identifier</strong>,<strong> no more the locator.</strong></p>
+<p>Then, LISP add a new IP stack on routers configured by the provider. These routers, named ITR (Ingress Tunnel Router) and ETR (Egress Tunnel Router) according to the direction of the flow, encapsulate the packets with the new IP stack with their own address as origin. A little bit as a proxy but at a lower level, their purpose is to route the packets on behalf of the customer.</p>
+<p>In short, <strong>the role of an ITR is to find the appropriate ETR for the destination</strong>, to route the packet correctly. LISP comes with <strong>a directory used for the ETR lookup</strong>. The directory is supposed to be &#8220;manually&#8221; maintained by the provider (the overload should be acceptable because we are in a core network, where changes in topology don&#8217;t happen all the time). Now that the ITR knows what the location for the recipient is, it sends out the packet with the E<strong>TR as destination IP</strong>. The way back works just the same.</p>
+<p>Between the ITR and the ETR, of course, there can be a number of different providers and routers, not supporting LISP, the routing part being handled by classic routing protocoles like BGP.</p>
+<p>You should see clearly now the beauty of LISP : if a customer moves with his IP block, for the provider it is just a matter of updating the location within the LISP directory. There are also some great features like support of load balancing in the case of multi-homing . LISP appears to be efficient and straightforward, but n<a title="IETF - LISP" href="https://datatracker.ietf.org/doc/draft-ietf-lisp/" target="_blank">ot yet validated by the IETF</a>. Keep an eye on this work in progress!</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

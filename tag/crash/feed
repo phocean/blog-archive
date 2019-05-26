@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>crash &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/crash/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Corrupted virtual disk with VMware</title>
+		<link>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html</link>
+		<comments>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html#comments</comments>
+		<pubDate>Sun, 16 Jan 2011 17:02:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[crash]]></category>
+		<category><![CDATA[File system]]></category>
+		<category><![CDATA[VMware]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=961</guid>
+		<description><![CDATA[Wow, this article and especially one of its comments saved my day. My computer crashed and one of the VMware machine hosted on it could not start anymore : “Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on. Reason: the specific virtual disk needs repair. Checking on the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Wow, <a title="Repair vmware" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/" target="_blank">this article</a> and especially <a title="virtual disk development" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/?cid=3319" target="_blank">one of its comments</a> saved my day.</p>
+<p>My computer crashed and one of the VMware machine hosted on it could not start anymore :</p>
+<blockquote><p>“Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on.<br />
+Reason: the specific virtual disk needs repair.</p></blockquote>
+<p>Checking on the VMware forums, I quickly found the command that was supposed to help :</p>
+<pre>$ vmware-vdiskmanager -R /path/to/disk.vmdk
+The virtual disk, '/path/to/disk.vmdk', is corrupted but the repair process has failed.</pre>
+<p>Damned ! I almost resigned restoring the last backup and loosing a week of work when, by chance, I found the article mentioned above.</p>
+<p>As recommended, I downloaded the <strong>Virtual Disk Development Kit 1.2</strong> from VMware, untared it and still doubtfully launched :</p>
+<pre>$ ./bin64/vmware-vdiskmanager -R /path/to/disk.vmdk
+The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully repaired.</pre>
+<p>Saved! Thanks so much to the guys. I would have never thought about trying it, I wonder how they could find it.</p>
+<p>But how is it possible that the utility coming with vmware workstation 7.1 suck so much and is not on par with other versions ?</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html/feed</wfw:commentRss>
+		<slash:comments>18</slash:comments>
+		</item>
+	</channel>
+</rss>

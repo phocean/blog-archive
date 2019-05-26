@@ -1,0 +1,230 @@
+/*
+Theme Name: Twenty Twelve Excerpts
+Theme URI: http://wp.me/pIhT9-29u
+Description: A child theme of 2012 default WordPress theme using Excerpts instead of full posts.
+Author: Zeaks
+Author url: http://zeaks.org
+Version: 1.0
+Tags: black, blue, white, fixed-width, custom-header, theme-options
+Template: twentytwelve
+*/
+@import url('../twentytwelve/style.css');
+
+/* continue reading class */
+.continue-reading, .read-more, read-more {
+	color: #627690;
+	font-style: italic;
+	font-size: 85%;
+}
+
+/* post thumbnail classes */
+.excerpt-thumb {
+
+}
+.excerpt-thumb img {
+
+}
+
+/* Fonts */
+@font-face {
+	font-family: 'FluxBold';
+	src: url('/font/fluxbold/fluxb___-webfont.eot');
+	src: url('/font/fluxbold/fluxb___-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/font/fluxbold/fluxb___-webfont.woff') format('woff'),
+	url('/font/fluxbold/fluxb___-webfont.ttf') format('truetype'),
+	url('/font/fluxbold/fluxb___-webfont.svg#FluxBoldRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'fengardo';
+	src: url('/font/fengardo/fengardoneue_regular-webfont.eot');
+	src: url('/font/fengardo/fengardoneue_regular-webfont.woff') format('woff'),
+	url('/font/fengardo/fengardoneue_regular-webfont.ttf') format('truetype'),
+	url('/font/fengardo/fengardoneue_regular-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} 
+
+entry-title, .entry-title, page-tile, .page-title, h1, h2, h3 {
+	font-family: "FluxBold","Open Sans",Helvetica,Arial,sans-serif;
+}
+
+body.custom-font-enabled {
+	font-family: "fengardo", "Open Sans", Helvetica,Arial,sans-serif;
+}
+
+.site-header h1 {
+	text-align: center;
+}
+
+.site-header h2 {
+	text-align: center;
+}
+
+/* Colors */
+
+entry-title, .entry-title, a {
+	color: #627690;
+}
+
+h1, h2, h3, h4 {
+ color: #627690;
+}
+
+a:link {
+	color:#627690;
+}
+
+a:visited {
+	color:#627690;
+}
+
+h1 a:visited {
+color: #627690;
+}
+
+.site-title a:hover {
+	color: #EA7E51 !important;
+}
+
+#main a:hover {
+	color: #EA7E51 !important;
+}
+
+.main-navigation li a:hover {
+color: #EA7E51;
+}
+.main-navigation li a {
+color: #627690;
+}
+.main-navigation li {
+color: #627690;
+}
+.main-navigation .current_page_item > a {
+      color: #627690;
+}
+
+.entry-content li a:visited {
+color: #627690;
+}
+
+page-tile, .page-title {
+	color: #627690;
+}
+
+/* Logo */
+
+#logo {
+background:url(/logo.png) no-repeat top left;
+	 	 width:200px;
+	 	 height:200px;
+
+	 text-indent:-9999px;
+}
+
+/* pas de cesure */
+pre {
+word-break: break-all; /* webkit /
+word-wrap: break-word;
+white-space: pre;
+white-space: -moz-pre-wrap; / fennec /
+white-space: pre-wrap;
+white-space: pre\9; / IE7+ */
+-webkit-hyphens: none;
+-moz-hyphens: none;
+hyphens: none;
+}
+
+/* continue la numerotation de la liste */
+ol.split { list-style-type: none; }
+ol.split li:before
+{
+ counter-increment: mycounter;
+ content: counter(mycounter) ".\00A0\00A0";
+}
+ol.split li
+{
+ text-indent: -1.3em;
+}
+ol.start { counter-reset: mycounter; }
+
+/* Legende Images */
+.wp-caption p.wp-caption-text {
+color: #627690;
+font-size: 13px;
+text-align: center;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 10px;
+margin-top: 0px;
+padding: 0;
+line-height: 2px;
+}
+
+.wp-caption {
+background: none;
+border: none;
+padding: 3px;
+}
+
+.wp-caption img {
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.entry-content img, .comment-content img, .widget img, img.header-image, .author-avatar img, img.wp-post-image {
+    border-radius: none !important;
+    box-shadow: none !important;
+}
+
+/* citation */
+blockquote {
+    /*background:#f9f9f9;*/
+    border: 1px solid rgb(237,237,237);
+    color: #627690;
+    margin:0 30px;
+    padding: 30px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+    font-family: sans;
+    color:#627690;
+    content: open-quote;
+    font-size:4em;
+    float:left;
+    position: relative;
+    top:-40px;
+    text-shadow: 0 1px 1px #909090;
+}
+blockquote:after {
+    font-family: sans;
+    color:#627690;
+    content:close-quote;
+    font-size:4em;
+    float:right;
+    position: relative;
+    top:-30px;
+    text-shadow: 0 1px 1px #909090;
+}
+
+/* Label */
+.label-success {
+    background-color: rgb(70, 136, 71);
+}
+
+.label {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 14px;
+    color: rgb(255, 255, 255);
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgb(153, 153, 153);
+    border-radius: 3px;
+}

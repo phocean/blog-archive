@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../../css/fontello.css">
+<link rel="stylesheet" href="../../../css/animation.css">
+
+<!-- Mirrored from phocean.net/2016/03/20/a-journey-with-btrfs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:24:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>A journey with Btrfs | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Quick tip: harden your ARP table the easy way (Linux)' href='../../../2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html' />
+<link rel='next' title='A few (convenient) dockerfiles' href='../../04/10/a-few-convenient-dockerfiles.html' />
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="a-journey-with-btrfs.html" />
+<link rel='shortlink' href='../../../indexb415.html?p=2064' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embedb294.js" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embed19b3?url=https%3A%2F%2Fphocean.net%2F2016%2F03%2F20%2Fa-journey-with-btrfs.html&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-2064 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../../index.html" >
+			<img class="logo" src="../../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-2064" class="post-2064 post type-post status-publish format-standard hentry category-linux category-administration-systeme category-virtualization tag-btrfs tag-linux tag-snapper tag-virtualbox">
+				<header class="entry-header">
+
+						<h1 class="entry-title">A journey with Btrfs</h1>			
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h1>Why BTRFS ?</h1>
+<p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
+<p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
+<p>As a quick reminder, the goal of this file system is to bring to Linux a fully featured file system similar to zfs. Some of these features promise a lot of awesomeness: snapshots, native RAID, automatic defragmentation and repairs, etc.</p>
+<p>Wouldn&#8217;t it be cool to have such a file system for your data? Among them, snapshotting really is a killer feature. See it as a global git for all your data. You can track any file history, make a diff comparison on them and revert back to a chosen version, anytime and on-line.</p>
+<p>Btrfs has been under development for a while and it is still undergoing. However, the first stable version has finally been released last year.</p>
+<p>Many people warn that it is not production ready yet. It seems obvious for critical production systems, under heavy load or using the most advanced features (e.g. RAID). But what about a simple /home, mainly using snapshots (which have been around for a while)?</p>
+<p>You will see that there are still some issues with virtualization.</p>
+<p><strong><em>Disclaimer 1: this is in no way a review or a benchmark of Btrfs. Consider it simply as some feedback for my specific use case.</em></strong></p>
+<h1>Getting ready</h1>
+<p>This chapter is a summary of procedures found in various resources, along with my feedback.</p>
+<p><em><strong>Disclaimer 2: First of all, make several backup of your entire /home. And make sure that it is operational and complete. Anyway, beware that there is obviously some inherent risk for your data in manipulating your home partition. So, do not come back to insult me if you lose any data.</strong></em></p>
+<p>First, note that there is a conversion utility <em>btrfs-convert</em>, to convert an existing ext4 partition to btrfs. While this sounds cool, it did not work well with my partition, leading to many corrupted inodes.</p>
+<p>So my advice is to just make a good backup of your home:</p>
+<pre>% rsync -av /home /your/backup/</pre>
+<p>Then, log out and format the partition as root:</p>
+<pre># mount | grep home
+/dev/mapper/system-home on /home type ext4 (rw,noatime,data=ordered)
+# umount /home
+# mkfs.btrfs /dev/mapper/system-home</pre>
+<p>Change the file system and its options in /etc/fstab. For example:</p>
+<pre>/dev/system/home     /home     ext4     defaults,noatime     1 1</pre>
+<p>should become (also note the change on the last digit):</p>
+<pre>/dev/system/home   /home    btrfs  defaults,noatime,ssd,space_cache,compress=lzo    1 0</pre>
+<p>Re-mount /home and you are done!</p>
+<h1>Snapper</h1>
+<p>The main purpose for me to test Btrfs was the snapshot feature, in the hope to keep a version history of each file and avoid accidental deletions and changes.</p>
+<p>Of course, one could use the Btrfs commands and implement snapshots manually. But why reinventing the wheel?</p>
+<p>The guys behind <a href="http://snapper.io/">snapper</a>  already made a service especially for that. It is basically a wrapper over Btrfs that will make automatic snapshots in the background, based on your frequency settings, and ease their handling.</p>
+<p>Once installed, it can be enabled with the following command:</p>
+<pre># snapper -c home create-config /home</pre>
+<p>It has the effect of creating a configuration file, where you can adjust the number of snapshots you want to keep per day, week, month, etc. Of course, don&#8217;t keep too much data as it will waste free space, especially if you happen to move large amounts of data. Hourly and daily snapshots are OK, as they would be cleaned up quickly. But monthly or yearly snapshots would consume a lot of space and would be pretty useless for a /home.</p>
+<p>Here is what I used, without consuming much more than 10 GB:</p>
+<pre># subvolume to snapshot
+SUBVOLUME="/home"
+
+# filesystem type
+FSTYPE="btrfs"
+
+# users and groups allowed to work with config
+ALLOW_USERS=""
+ALLOW_GROUPS="
+
+# sync users and groups from ALLOW_USERS and ALLOW_GROUPS to .snapshots
+# directory
+SYNC_ACL="no"
+
+# start comparing pre- and post-snapshot in background after creating
+# post-snapshot
+BACKGROUND_COMPARISON="yes"
+
+# run daily number cleanup
+NUMBER_CLEANUP="yes"
+
+# limit for number cleanup
+NUMBER_MIN_AGE="1800"
+NUMBER_LIMIT="10"
+NUMBER_LIMIT_IMPORTANT="5"
+
+# create hourly snapshots
+TIMELINE_CREATE="yes"
+
+# cleanup hourly snapshots after some time
+TIMELINE_CLEANUP="yes"
+
+# limits for timeline cleanup
+TIMELINE_MIN_AGE="1800"
+<strong>TIMELINE_LIMIT_HOURLY="10"</strong>
+<strong>TIMELINE_LIMIT_DAILY="7"</strong>
+<strong>TIMELINE_LIMIT_WEEKLY="2"</strong>
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+
+# cleanup empty pre-post-pairs
+EMPTY_PRE_POST_CLEANUP="yes"
+
+# limits for empty pre-post-pair cleanup
+EMPTY_PRE_POST_MIN_AGE="1800"</pre>
+<p>Now, let&#8217;s play a little. In the following sequence, we create a file containing &#8220;Hello World!&#8221;, we then create a manual snapshot, change the file and display the differences:</p>
+<pre># vim test.txt
+# snapper -c home create --description "before test"
+# vim test.txt
+# sudo snapper -c home list
+Type   | # | Pre # | Date                     | User | Cleanup  | Description  | Userdata
+-------+---+-------+--------------------------+------+----------+--------------+---------
+single | 0 |       |                          | root |          | current      | 
+single | 1 |       | Sun Mar 13 19:44:21 2016 | root |          | before test  | 
+single | 2 |       | Sun Mar 13 19:45:12 2016 | root |          | created test | 
+single | 3 |       | Sun Mar 13 19:52:39 2016 | root |          | update test  | 
+single | 4 |       | Sun Mar 13 20:00:01 2016 | root | timeline | timeline     | 
+single | 5 |       | Sun Mar 13 21:00:01 2016 | root | timeline | timeline     | 
+single | 6 |       | Sun Mar 13 22:00:01 2016 | root | timeline | timeline     | 
+# snapper -c home status 1..0
+--- "/home/.snapshots/2/snapshot/phocean/test.txt" 2016-03-13 19:44:53.370641373 +0100
++++ "/home/phocean/test.txt" 2016-03-13 19:45:27.226586459 +0100
+@@ -1 +1,2 @@
+Hell World!
++Good bye.
+@@ -0,0 +1,2 @@
++Hell World!
++Good bye</pre>
+<p>Neat, isn&#8217;t it? Now, what if we decide to restore the file to this snapshot:</p>
+<pre>snapper -c home undochange 1..0 /home/phocean/test.txt</pre>
+<p>That&#8217;s it!</p>
+<p>Note that all these operations can be done against the entire partition (no argument needed), a folder or a file.</p>
+<h1>Pros</h1>
+<p>Regarding regular files, I had no issue at all. After a week of intensive use, I already the occasion to enjoy the benefits of having snapshots and being able to restore a file.</p>
+<p>On the performance side, even though I haven&#8217;t done any benchmark, it is a least as fast as ext4. It is said that under some conditions, compression can be a big read rate boost.</p>
+<p>On the compression side, on my partition of 400 GB, it allowed me to reclaim around 20 GB of space. Of course, the gain you can expect is totally related to the sorts of files you have (you won&#8217;t gain much on files that are already compressed or encrypted).</p>
+<h1>Cons</h1>
+<p>As warned on the official wiki itself, you should not use Btrfs as-is with database or virtualization solutions.</p>
+<p>Dixit the official wiki:</p>
+<blockquote><p>Files with a lot of random writes can become heavily fragmented (10000+ extents) causing trashing on HDDs and excessive multi-second spikes of CPU load on systems with an SSD or large amount a RAM.</p></blockquote>
+<p>Indeed, I quickly experienced some issues with Virtualbox. Under heavy I/O operations, and having several machines running at a time, I had the guest file systems corrupted more than once. And so badly that the guest machine was unrecoverable (even with snapshots). Sometimes I got plenty of ext4 errors, or sometimes it just froze, while copying a bunch of file or doing an <em>apt-get upgrade.</em>..</p>
+<p>The <a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">workarounds</a> did not make it for me:</p>
+<ol>
+<li>I even did not test disabling CoW for the whole partition. It kills one of the main advantages of using Btrfs.</li>
+<li>I tried disabling CoW for all the VM folder. While the corruption frequency decreased, it still occurred after a while.</li>
+</ol>
+<p>So, I would simply adivse of not putting any virtual machine on the Btrfs partitions, until this thing definitely get sorted. I use virtual machines intensively at work and need them to be reliable.</p>
+<h1>Conclusion</h1>
+<p>Btrfs is awesome and pretty stable at this time, unless you need to host virtual machines. You could still have a dedicate ext4 partition for you VMs, and enjoy Btrfs for the rest of your home.</p>
+<p>To be honest, I did not bother (not wanting to manage several partitions), and switched back to ext4 for all, in the expectation of better days. I am not sure if this should be addressed on the Btrfs, or the Virtualbox side (or both).</p>
+<h1>References</h1>
+<ul>
+<li><a href="https://en.opensuse.org/openSUSE:Snapper_FAQ">Snapper FAQ</a></li>
+<li><a href="https://fr.opensuse.org/openSUSE:Snapper_Tutorial">Snapper tutorial</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs">Arch Linux Btrfs wiki</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Btrfs">Gentoo Btrfs wiki</a></li>
+<li><a href="http://www.nrtm.org/index.php/2012/03/13/the-joys-of-btrfs-and-opensuse-or-no-space-left-on-device/">The joys of btrfs and opensuse or no space left on device</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">CoW workarounds</a></li>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../../../category/administration-systeme/linux.html" rel="category tag">Linux</a>, <a href="../../../category/administration-systeme.html" rel="category tag">System</a>, <a href="../../../category/administration-systeme/virtualization.html" rel="category tag">Virtualization</a> <i class="icon-tag"></i> <a href="../../../tag/btrfs.html" rel="tag">btrfs</a>, <a href="../../../tag/linux.html" rel="tag">Linux</a>, <a href="../../../tag/snapper.html" rel="tag">snapper</a>, <a href="../../../tag/virtualbox.html" rel="tag">virtualbox</a> <i class="icon-calendar"></i> <a href="a-journey-with-btrfs.html" title="4:35 pm" rel="bookmark"><time class="entry-date" datetime="2016-03-20T16:35:59+00:00">March 20, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../../2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html" rel="prev"><span class="meta-nav">&larr;</span> Quick tip: harden your ARP table the easy way (Linux)</a></span>
+					<span class="nav-next"><a href="../../04/10/a-few-convenient-dockerfiles.html" rel="next">A few (convenient) dockerfiles <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.436 seconds. Made 14 queries to database and 46 cached queries. Memory used - 27.45MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/2016/03/20/a-journey-with-btrfs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:24:36 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.402 seconds. -->

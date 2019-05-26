@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Uncategorized &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/category/uncategorized/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Site going to full TLS</title>
+		<link>/blog-archive/2016/06/03/site-going-to-full-tls.html</link>
+		<pubDate>Fri, 03 Jun 2016 21:08:43 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2112</guid>
+		<description><![CDATA[Hi dear subscribers, Thanks to let&#8217;s encrypt, the site is now going to be accessible only through HTTPS. It also concern the RSS/ATOM feeds. So please update your links and RSS agregators so that you still receive news! Thanks, &#8212; phocean]]></description>
+				<content:encoded><![CDATA[<p>Hi dear subscribers,</p>
+<p>Thanks to <a href="https://letsencrypt.org/">let&#8217;s encrypt</a>, the site is now going to be accessible only through HTTPS.</p>
+<p>It also concern the RSS/ATOM feeds.</p>
+<p>So please update your links and RSS agregators so that you still receive news!</p>
+<p>Thanks,</p>
+<p>&#8212; phocean</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

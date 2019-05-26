@@ -1,0 +1,122 @@
+Microsoft (R) Windows Debugger Version 6.11.0001.404 X86
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Documents and Settings\phocean\Bureau\MEMORY.DMP]
+Kernel Summary Dump File: Only kernel address space is available
+
+Symbol search path is: srv*c:\symbols*http://msdl.microsoft.com/download/symbols
+Executable search path is: 
+Windows XP Kernel Version 2600 (Service Pack 3) UP Free x86 compatible
+Product: WinNt, suite: TerminalServer SingleUserTS
+Built by: 2600.xpsp_sp3_gdr.120504-1619
+Machine Name:
+Kernel base = 0x804d7000 PsLoadedModuleList = 0x805540c0
+Debug session time: Sat Jul 14 14:07:48.955 2012 (GMT+2)
+System Uptime: 0 days 0:02:56.213
+Loading Kernel Symbols
+...............................................................
+...........................................................
+Loading User Symbols
+PEB is paged out (Peb.Ldr = 7ffd600c).  Type ".hh dbgerr001" for details
+Loading unloaded module list
+..............
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+Use !analyze -v to get detailed debugging information.
+
+BugCheck 50, {e1285000, 1, 80637807, 1}
+
+PEB is paged out (Peb.Ldr = 7ffd600c).  Type ".hh dbgerr001" for details
+PEB is paged out (Peb.Ldr = 7ffd600c).  Type ".hh dbgerr001" for details
+Probably caused by : ntkrnlpa.exe ( nt!CmpGetValueKeyFromCache+89 )
+
+Followup: MachineOwner
+---------
+
+kd> !analyze -v
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+PAGE_FAULT_IN_NONPAGED_AREA (50)
+Invalid system memory was referenced.  This cannot be protected by try-except,
+it must be protected by a Probe.  Typically the address is just plain bad or it
+is pointing at freed memory.
+Arguments:
+Arg1: e1285000, memory referenced.
+Arg2: 00000001, value 0 = read operation, 1 = write operation.
+Arg3: 80637807, If non-zero, the instruction address which referenced the bad memory
+	address.
+Arg4: 00000001, (reserved)
+
+Debugging Details:
+------------------
+
+PEB is paged out (Peb.Ldr = 7ffd600c).  Type ".hh dbgerr001" for details
+PEB is paged out (Peb.Ldr = 7ffd600c).  Type ".hh dbgerr001" for details
+
+WRITE_ADDRESS:  e1285000 Paged pool
+
+FAULTING_IP: 
+nt!CmpGetValueKeyFromCache+89
+80637807 f3a5            rep movs dword ptr es:[edi],dword ptr [esi]
+
+MM_INTERNAL_CODE:  1
+
+DEFAULT_BUCKET_ID:  DRIVER_FAULT
+
+BUGCHECK_STR:  0x50
+
+PROCESS_NAME:  regshot.exe
+
+TRAP_FRAME:  f3218bcc -- (.trap 0xfffffffff3218bcc)
+ErrCode = 00000002
+eax=e1113d50 ebx=e1286410 ecx=3ffa3b54 edx=fffffffc esi=e15df2b4 edi=e1285000
+eip=80637807 esp=f3218c40 ebp=f3218c4c iopl=0         ov up ei pl nz na pe nc
+cs=0008  ss=0010  ds=0023  es=0023  fs=0030  gs=0000             efl=00010a06
+nt!CmpGetValueKeyFromCache+0x89:
+80637807 f3a5            rep movs dword ptr es:[edi],dword ptr [esi]
+Resetting default scope
+
+LAST_CONTROL_TRANSFER:  from 8051cc4f to 804f8ca3
+
+STACK_TEXT:  
+f3218b54 8051cc4f 00000050 e1285000 00000001 nt!KeBugCheckEx+0x1b
+f3218bb4 805405f4 00000001 e1285000 00000000 nt!MmAccessFault+0x8e7
+f3218bb4 80637807 00000001 e1285000 00000000 nt!KiTrap0E+0xcc
+f3218c4c 80628901 e1035b60 e128640c 00000001 nt!CmpGetValueKeyFromCache+0x89
+f3218cb4 8061b882 e10898c8 00000001 00000001 nt!CmEnumerateValueKey+0xc1
+f3218d44 8053d6f8 0000006c 00000001 00000001 nt!NtEnumerateValueKey+0x1ea
+f3218d44 7c90e514 0000006c 00000001 00000001 nt!KiFastCallEntry+0xf8
+WARNING: Frame IP not in any known module. Following frames may be wrong.
+0241fa60 00000000 00000000 00000000 00000000 0x7c90e514
+
+
+STACK_COMMAND:  kb
+
+FOLLOWUP_IP: 
+nt!CmpGetValueKeyFromCache+89
+80637807 f3a5            rep movs dword ptr es:[edi],dword ptr [esi]
+
+SYMBOL_STACK_INDEX:  3
+
+SYMBOL_NAME:  nt!CmpGetValueKeyFromCache+89
+
+FOLLOWUP_NAME:  MachineOwner
+
+MODULE_NAME: nt
+
+IMAGE_NAME:  ntkrnlpa.exe
+
+DEBUG_FLR_IMAGE_TIMESTAMP:  4fa3cc44
+
+FAILURE_BUCKET_ID:  0x50_nt!CmpGetValueKeyFromCache+89
+
+BUCKET_ID:  0x50_nt!CmpGetValueKeyFromCache+89

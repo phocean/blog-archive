@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SSH &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/ssh/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>World&#8217;s worst hacker</title>
+		<link>/blog-archive/2011/01/31/worlds-worst-hacker.html</link>
+		<comments>/blog-archive/2011/01/31/worlds-worst-hacker.html#comments</comments>
+		<pubDate>Mon, 31 Jan 2011 18:44:20 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[hacker]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[honeypot]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
+		<description><![CDATA[That was so funny !]]></description>
+				<content:encoded><![CDATA[<p><a title="World's worst hacker" href="http://george.hedfors.com/content/worlds-worst-hacker" target="_blank">That</a> was so funny !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Netios</title>
+		<link>/blog-archive/2009/11/07/netios.html</link>
+		<pubDate>Sat, 07 Nov 2009 15:53:30 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
+		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches :</p>
+<blockquote><p><strong>Netios</strong> is a little tool aimed to help network administrators to administrate a large number of Cisco network devices.<br />
+Providing it with a list of equipments, it connects within SSH to remotly apply IOS commands.</p>
+<p>It can automatically :</p>
+<ul>
+<li> retrieve and export in a CSV file the list of local users</li>
+<li> update the local user, the enable password</li>
+<li> change NTP settings</li>
+<li> execute a file of customed IOS commands</li>
+<li> retrieve configuration files</li>
+</ul>
+<p>It can read the targets from the command line or from a text file.</p></blockquote>
+<p>Its primary goal is to improve the security by making it easier to renew regularly the local password of these equipments, but it can do more convenient things (and I will continue to work to add more of them).</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>SSH/SSL patching and hardening</title>
+		<link>/blog-archive/2008/05/20/sshssl-patching-and-hardening.html</link>
+		<pubDate>Tue, 20 May 2008 21:57:41 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[SSH]]></category>
+		<category><![CDATA[SSL]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=107</guid>
+		<description><![CDATA[My OpenSSL-based daemons are back up ! These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) : $ ssh-keygen -t rsa -b 4096 # openssl genrsa -aes256 -out secret.key 4096 I am the only person to use the server, so I don&#8217;t have any scallability...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/20/sshssl-patching-and-hardening.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>My OpenSSL-based daemons are back up !</p>
+<p>These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) :</p>
+<pre>$ ssh-keygen -t rsa -b 4096
+# openssl genrsa -aes256 -out secret.key 4096</pre>
+<p>I am the only person to use the server, so I don&#8217;t have any scallability issue. :)</p>
+<p>Just to enforce the ssh configuration, I added these two line in sshd_config :</p>
+<pre>Protocol 2
+HostKeyAlgorithms ssh-rsa</pre>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>The SSL/SSH disaster</title>
+		<link>/blog-archive/2008/05/15/the-sslssh-disaster.html</link>
+		<comments>/blog-archive/2008/05/15/the-sslssh-disaster.html#comments</comments>
+		<pubDate>Thu, 15 May 2008 16:23:22 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[SSH]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
+		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses.</p>
+<p>I have had no time so far to check all the keys on my server. I prefer to stay on the safe side, though I have some reason to believe that my keys might not be so vulnerable : I generated them a long time ago, maybe before the Debian maintainer sad mistake.</p>
+<p>It is going to be pretty easy now, for those who are motivated, to get access to the ssh server running keys generated during the 2 last years&#8230;</p>
+<p>I recommend <a title="ssl and ssh weakness" href="http://blog.drinsama.de/erich/en/linux/2008051401-consequences-of-sslssh-weakness.html" target="_blank">this article</a> which summarize pretty well the situation. You may also use <a title="downkd.pl" href="http://security.debian.org/project/extra/dowkd/dowkd.pl.gz">this tool</a>, which checks if your keys are vulnerable :</p>
+<pre>$  perl dowkd.pl file ~/.ssh/*.pub</pre>
+<p>It find it funny to think that I chose to use certificates for security (avoiding brute force attacks).<br />
+What&#8217;s less funny is the pure disaster for the reputation of Debian.</p>
+<p>I already noticed in the past that some companies switched their servers from Debian to Red Hat because of such security problems. They claimed about some security holes being patch much too slowly and about the lack of official support to rely on in such a crisis.<br />
+This kind of news is not going to enforce trust from companies.</p>
+<p>I myself will think twice in the future about what system to use when I design my networks.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>SSH timout</title>
+		<link>/blog-archive/2007/04/21/ssh-timout.html</link>
+		<pubDate>Sat, 21 Apr 2007 18:18:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[OpenBSD]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[DNS]]></category>
+		<category><![CDATA[Pix]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=28</guid>
+		<description><![CDATA[<p>After a fresh set up of your network, don't be surprised that your ssh connections are slow.</p>]]></description>
+				<content:encoded><![CDATA[<p>After a fresh set up of your network, don&#8217;t be surprised that your ssh connections are slow.</p>
+<p><span id="more-28"></span></p>
+<p>Depending on the systems and equipment you use, you might encounter some timeout that make any login impossible.</p>
+<p>I got such timeouts with an OpenBSD machine behind a Pix firewall. With Linux machines, it was very slow but worked.</p>
+<p>This issue is related to the reverse DNS check that SSH makes by default during the login process. This is in order to improve the security. Howerver, this is not so secure as a DNS cache can also be spoofed.<br />
+Considering this, you can disable this check with not much worry with the right option in your <strong>/etc/sshd_config</strong> file :</p>
+<pre>UseDNS no</pre>
+<p>Of course, the best solution will be that you set up a full DNS infrastructure as soon as possible.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

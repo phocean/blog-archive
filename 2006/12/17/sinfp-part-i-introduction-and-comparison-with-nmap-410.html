@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../../css/fontello.css">
+<link rel="stylesheet" href="../../../css/animation.css">
+
+<!-- Mirrored from phocean.net/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:43:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>SinFP, part I : introduction and comparison with Nmap 4.10 | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='OpenVPN and DNS on a linux client' href='../07/openvpn-and-dns-on-a-linux-client.html' />
+<link rel='next' title='SinFP, part II : comparison with Nmap 4.20' href='../24/sinfp-part-ii-comparison-with-nmap-420.html' />
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel="canonical" href="sinfp-part-i-introduction-and-comparison-with-nmap-410.html" />
+<link rel='shortlink' href='../../../index2dc4.html?p=13' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embeda1ac.js" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embed6803?url=https%3A%2F%2Fphocean.net%2F2006%2F12%2F17%2Fsinfp-part-i-introduction-and-comparison-with-nmap-410.html&amp;format=xml" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-13 single-format-standard full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../../index.html" >
+			<img class="logo" src="../../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-13" class="post-13 post type-post status-publish format-standard hentry category-administration-reseau category-security tag-audit tag-footprinting tag-network tag-nmap tag-scan tag-scanner tag-security tag-sinfp">
+				<header class="entry-header">
+
+						<h1 class="entry-title">SinFP, part I : introduction and comparison with Nmap 4.10</h1>			
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p style="margin-bottom: 0cm">Last week, I found out a very interesting program, SinFP (those who are french and read the Misc magazine must already know ;) ).</p>
+<p style="margin-bottom: 0cm">Its goal is to help you detecting what operating system a remote machine is running.<br />
+Well, you will tell me that we already have many programs that does this job, starting from the so famous nmap&#8230; but the approach is quite different this time.</p>
+<p><span id="more-13"></span></p>
+<p style="margin-bottom: 0.5cm">Let me explain in a short, but I hope clear, version.</p>
+<p style="margin-bottom: 0cm">A program like Nmap usually scan all the open ports of a remote IP address. According to the answers it gets back on each port, and using a signature database, nmap can identify the target OS.</p>
+<p style="margin-bottom: 0cm">Sounds good. But actually, SinFP shows there is a better way to do.</p>
+<p style="margin-bottom: 0cm">The author of SinFP got to the conclusion that nowadays, most of the IP addresses are managed by a NAT / PAT equipement (firewall, router). It means that behind a single public IP address, there is not only the firewall itself, but several machines and systems for each open service. For instance, you will have the HTTP port redirected to a Windows IIS machine, the SMTP one to a Linux box, the DNS to a solaris server, and so on.</p>
+<p style="margin-bottom: 0cm">So obviously Nmap just can&#8217;t be so reliable in such a case. How trustful will its detection be if it finds a Postfix service and a IIS service running on the same address ?</p>
+<p style="margin-bottom: 0cm">The solution of SinFP is rather elegant. First, considering the NAT problem, it focuses on one port. So you are practically sure that you are on the final machine, just the proxy case is left.</p>
+<p style="margin-bottom: 0cm">On this port, it tries fingerprinting with its internal signature database. The way it does it makes all the strengh of SinFP.<br />
+It sends 3 requests, similar to any request generated by the system call connect() :</p>
+<pre>P1 = P2 without option
+P2 = TCP SYN with options
+P3 = TCP SYN-ACK</pre>
+<p style="margin-bottom: 0cm" lang="en-US">For your scan, you can also use only P2, for stealthiness.</p>
+<p style="margin-bottom: 0cm" lang="en-US">Then it catches the answers to these requests and generate from them a single signature with some selected patterns.<br />
+Finally, it compares it with the signatures in its database. The mathematic model it uses is far too complex for me to explain, but just now it tries to find the closest signature as possible, accepting some variations due to specific configurations or network conditions.</p>
+<p style="margin-bottom: 0cm" lang="en-US">You will get an answer like that :</p>
+<pre>IPv4: HEURISTIC0/P1P2P3 &lt;detected OS&gt;</pre>
+<p>It means that the signature matched all the requests, P1, P2 and P3. This result is the most reliable.</p>
+<p style="margin-bottom: 0cm" lang="en-US">If you get P1P2, it means that the signature did not fully match the one in the database&#8230; but it is still pretty reliable, as we will see further.</p>
+<p style="margin-bottom: 0cm" lang="en-US">As a final try, if there is still no exact signature, SinFP will try to modify the signature according to a transformation mask to get closer to an existing ones.</p>
+<p style="margin-bottom: 0cm">If you want to have more details on how it works, you should go the website of the author : <a href="http://www.gomor.org/">http://www.gomor.org</a></p>
+<p style="margin-bottom: 0cm">But now, let&#8217;s have a quick and dirty test, comparing this tool with Nmap :</p>
+<p style="margin-bottom: 0cm; text-decoration: underline"><strong>Debian Etch box (2.6 kernel), various open ports with real services</strong></p>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>Nmap</strong></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.230
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:26
+Interesting ports on xxx (192.168.1.230):
+Not shown: 1674 closed ports
+PORT STATE SERVICE
+22/tcp open ssh
+25/tcp open smtp
+53/tcp open domain
+
+80/tcp open http
+443/tcp open https
+Device type: general purpose
+Running: Linux 2.4.X|2.5.X|2.6.X
+OS details: Linux 2.4.7 - 2.6.11</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.230 80
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030302 M1460
+P3: B00000 F0 W0 O0 M0
+IPv4: HEURISTIC0/P1P2: GNU/Linux: Linux: 2.6.x</pre>
+<p style="margin-bottom: 0cm"><strong><em>Conclusion</em></strong> : <strong>SinFP</strong> gives the exact result (Linux 2.6.X) when Nmap is detecting a Linux box, nothing more.</p>
+<p style="margin-bottom: 0cm"><ins><strong>FreeBSD 6.1, no open port</strong></ins></p>
+<p><em><strong>Nmap</strong></em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.115
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:37 CET
+Warning: OS detection will be MUCH less reliable because we did not find at least 1 open and 1 closed TCP port
+All 1679 scanned ports on 192.168.1.115 are closed
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Apple Mac OS X 10.1.X, Apple Mac OS 8.X, FreeBSD 5.X|6.X
+Too many fingerprints match this host to give specific OS details</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.115 80
+
+*** Cannot fingerprint a closed or filtered port</pre>
+<p style="margin-bottom: 0cm"><strong><strong><em>Conclusion</em></strong></strong> : No surprise, SinFP can&#8217;t be tested on this point, since it applies to an open port (I wanted to check that you follow :D ). That is not the goal of SinFP to do differently. However, it was interesting to see that <strong>Nmap</strong> gives a answer. Not precise, but at least it guesses that it is a BSD kernel.</p>
+<p style="margin-bottom: 0cm"><ins><strong>FreeBSD 6.1, open port with NetCat</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>Nmap</em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.115
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:56 CET
+Interesting ports on 192.168.1.115:
+Not shown: 1678 closed ports
+PORT STATE SERVICE
+80/tcp open http
+MAC Address: xx:xx:xx:xx:xx:xx
+No exact OS matches for host &lt;/strong&gt;(If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+
+TCP/IP fingerprint:
+SInfo(V=4.10%P=i686-pc-linux-gnu%D=12/17%Tm=4584DC41%O=80%C=1%M=0012F0)
+TSeq(Class=TR%IPID=I%TS=1000HZ)
+T1(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=MNWNNT)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=FFFF%ACK=S++%Flags=AS%Ops=MNWNNT)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=0%IPLEN=38%RIPTL=148%RID=E%RIPCK=E%UCK=0%ULEN=134%DAT=E)</pre>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>SinFP</em></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.115 80
+
+P1: B11113 F0x12 W65535 O0204ffff M1460
+P2: B11113 F0x12 W65535 O0204ffff010303010101080affffffff4445414404020000 M1460
+P3: B11120 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.0
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 6.1
+IPv4: HEURISTIC0/P1P2P3: BSD: FreeBSD: 7.0</pre>
+<p style="margin-bottom: 0cm"><strong style="font-weight: normal; font-style: italic">Conclusion</strong> : well, I was quite surprised. Nmap is totally lost. Why did it do a better job with no open port at all ? I haven&#8217;t searched yet, so if someone has a clue to explain well this pattern, please tell me. I have a feeling that it is because of the nmap port on FreeBSD, but I am not sure to be right.<br />
+<strong>SinFP</strong> does a pretty good job, all 3 patterns displayed concern FreeBSD from 6.0 to 7.0.</p>
+<p><ins><strong>Debian Sarge (2.4 kernel), various open port, real services</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>Nmap</em></p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.110
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 06:46 CET
+
+Interesting ports on 192.168.1.110:
+Not shown: 1671 closed ports
+PORT STATE SERVICE
+22/tcp open ssh
+25/tcp open smtp
+80/tcp open http
+111/tcp open rpcbind
+113/tcp open auth
+199/tcp open smux
+443/tcp open https
+907/tcp open unknown
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Linux 2.4.X|2.5.X
+OS details: Linux 2.4.0 - 2.5.20
+Uptime 0.354 days (since Sat Dec 16 22:17:30 2006)</pre>
+<p style="margin-bottom: 0cm; font-style: italic"><strong>SinFP</strong></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.110 443
+
+P1: B10113 F0x12 W5840 O0204ffff M1460
+P2: B10113 F0x12 W5792 O0204ffff0402080affffffff4445414401030300 M1460
+P3: B10120 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: GNU/Linux: Linux: 2.4.x</pre>
+<p style="margin-bottom: 0cm"><strong><em>Conclusion</em></strong> : Here I think we can consider that both <strong>Nmap</strong> and <strong>SinFP</strong> give the exact answer. This is a draw here.</p>
+<p style="margin-bottom: 0cm"><ins><strong>Windows 2000 server, various open port, real services</strong></ins></p>
+<p style="margin-bottom: 0cm; font-weight: bold; font-style: italic">Nmap</p>
+<pre>$ nmap -sS -O -PI -PT 192.168.1.20
+
+Starting Nmap 4.10 ( http://www.insecure.org/nmap/ ) at 2006-12-17 07:11 CET
+Interesting ports on moon.int.jcbnet.org (192.168.1.20):
+Not shown: 1656 closed ports
+PORT STATE SERVICE
+21/tcp open ftp
+25/tcp open smtp
+42/tcp open nameserver
+53/tcp open domain
+80/tcp open http
+88/tcp open kerberos-sec
+135/tcp open msrpc
+139/tcp open netbios-ssn
+389/tcp open ldap
+443/tcp open https
+445/tcp open microsoft-ds
+464/tcp open kpasswd5
+593/tcp open http-rpc-epmap
+636/tcp open ldapssl
+1026/tcp open LSA-or-nterm
+1029/tcp open ms-lsa
+1112/tcp open msql
+1723/tcp open pptp
+3268/tcp open globalcatLDAP
+3269/tcp open globalcatLDAPssl
+3372/tcp open msdtc
+5800/tcp open vnc-http
+5900/tcp open vnc
+MAC Address: xx:xx:xx:xx:xx:xx
+Device type: general purpose
+Running: Microsoft Windows 95/98/ME|NT/2K/XP
+OS details: Microsoft Windows Millennium Edition (Me), Windows 2000 Professional or Advanced Server, or Windows XP</pre>
+<p style="margin-bottom: 0cm; font-weight: bold"><em>SinFP</em></p>
+<pre>$ /usr/local/sinfp/bin/sinfp.pl -i 192.168.1.20 5900
+
+P1: B11113 F0x12 W64240 O0204ffff M1460
+P2: B11113 F0x12 W64240 O0204ffff010303000101080a000000000000000001010402 M1460
+P3: B11021 F0x04 W0 O0 M0
+IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
+<p style="margin-bottom: 0cm"><em><strong>Conclusion</strong></em> : SinFP is right and far more precise than Nmap.</p>
+<p style="margin-bottom: 0cm">As you can see, the results of SinFP are just fine for each of my tests. Ok, it was not the perfect test, it was rather quick and dirty, but personnally it is enough for me to be convinced. It will be from now one of my favorite tools.</p>
+<p style="margin-bottom: 0cm" lang="en-US">When it comes to OS fingerprinting, SinFP makes a better job than Nmap. But we should not be hard on Nmap. They are different tools, and we actually should not have compared them directly. Nmap is an excellent port scanner for which OS detection is just an option, while SinFP focusses on it.</p>
+<p style="margin-bottom: 0cm">Its approach is new, ingenious and efficient.</p>
+<p style="margin-bottom: 0cm">I could not test SinFP on more systems for now, but I will update here if I can. You can also comment here if you find a system that could not be detected by SinFP. In that case, contact also the author of SinFP, sending him the new fingerprint.</p>
+<p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
+<p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
+<h3>SinFP : <a hreflang="en" href="http://www.gomor.org/">http://www.gomor.org</a></h3>
+<p><img src="../../../wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../../../category/administration-reseau.html" rel="category tag">Network</a>, <a href="../../../category/security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="../../../tag/audit.html" rel="tag">audit</a>, <a href="../../../tag/footprinting.html" rel="tag">footprinting</a>, <a href="../../../tag/network.html" rel="tag">Network</a>, <a href="../../../tag/nmap.html" rel="tag">Nmap</a>, <a href="../../../tag/scan.html" rel="tag">scan</a>, <a href="../../../tag/scanner.html" rel="tag">scanner</a>, <a href="../../../tag/security.html" rel="tag">Security</a>, <a href="../../../tag/sinfp.html" rel="tag">SinFP</a> <i class="icon-calendar"></i> <a href="sinfp-part-i-introduction-and-comparison-with-nmap-410.html" title="6:59 am" rel="bookmark"><time class="entry-date" datetime="2006-12-17T06:59:00+00:00">December 17, 2006</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../07/openvpn-and-dns-on-a-linux-client.html" rel="prev"><span class="meta-nav">&larr;</span> OpenVPN and DNS on a linux client</a></span>
+					<span class="nav-next"><a href="../24/sinfp-part-ii-comparison-with-nmap-420.html" rel="next">SinFP, part II : comparison with Nmap 4.20 <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.342 seconds. Made 14 queries to database and 46 cached queries. Memory used - 27.46MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:43:43 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.310 seconds. -->

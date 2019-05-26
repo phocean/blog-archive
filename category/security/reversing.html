@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../css/fontello.css">
+<link rel="stylesheet" href="../../css/animation.css">
+
+<!-- Mirrored from phocean.net/category/security/reversing by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:47:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Reversing | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Reversing Category Feed" href="reversing/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="archive category category-reversing category-232 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../index.html" >
+			<img class="logo" src="../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Category Archives: <span>Reversing</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-1394" class="post-1394 post type-post status-publish format-standard hentry category-defense category-reversing category-security category-vulnerabilities tag-application-control tag-asm tag-assembly tag-backtrack tag-buffer-overflow tag-hardening tag-heap tag-mcafee tag-metasploit tag-ollydbg tag-sha-1 tag-solidcore tag-stack tag-windbg">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html" title="Permalink to Review of McAfee Application Control (ex-SolidCore): the ultimate solution to patching?" rel="bookmark">Review of McAfee Application Control (ex-SolidCore): the ultimate solution to patching?</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h1>What is McAfee Application Control</h1>
+<p>I had the opportunity to review this security software, and I want to share here the results of my tests.</p>
+<p>McAfee bought the SolidCore solution and renamed it into <a title="McAfee Application Control" href="http://www.mcafee.com/us/products/application-control.aspx#vt=vtab-Benefits">McAfee Application Control </a>(along with other features). For convenience, we will keep referring the solution as SolidCore.</p>
+<p>In a few words, this tool falls into the category of white-listing defense systems. It hardens a Windows system by fingerprinting all executables files of the disk drive and enforcing access control based on this hash. Somehow a sort of Tripwire but with access control and attack detection.</p>
+<p>The problem is that McAfee claims that the solution will protect unpatched systems. Such a claim is appealing, because in real life it is not always easy to patch systems in production. Beyond technical considerations, there is always business and management constraints. The solution of McAfee is supposed to prevent vulnerabilities to be triggered thanks to the memory protection features. Look on their website, they say it loudly: &#8220;you can delay patching and it protects from buffer overflows&#8221;.</p>
+<div id="attachment_1450" style="width: 594px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore-commercial_sheet.png" rel="lightbox[1394]"><img class="size-large wp-image-1450" title="SolidCore-commercial_sheet" alt="" src="../../wp-content/uploads/2012/12/SolidCore-commercial_sheet-940x929.png" width="584" height="577" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-940x929.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-580x573.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-303x300.png 303w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet-120x120.png 120w, /blog-archive/wp-content/uploads/2012/12/SolidCore-commercial_sheet.png 1106w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">MacAfee Application Control commercial sheet</p></div>
+<p>Really? When you check more thoroughly, you find that the solution operates only in user-mode, leaving all kernel-mode issues on the side. Already, any security specialist should become suspicious and think about the numerous limitations it implies&#8230;</p>
+<p>Anyway, such a statement deserves serious testing. Here we go.</p>
+<h1>Testing Lab</h1>
+<p>The testing environment is composed of:</p>
+<ul>
+<li>a Windows XP SP1 virtual machine (no patch),</li>
+<li>a Windows XP SP1 virtual machine (no patch) with SolidCore installed and enabled,</li>
+<li>a Windows virtual machine running WinDBG for kernel debugging,</li>
+<li>a Linux virtual machine running Metasploit (Backtrack),</li>
+<li>a few vulnerable programs: aurora.html for heap overflows and two executables vulnerable against buffer overflow,</li>
+<li>OllyDbg on both machines to observe the exploitation process.</li>
+</ul>
+<p>The point is simple: test some vulnerabilities against unpatched systems, with and without SolidCore, and compare the results.</p>
+<blockquote><p>The purpose here is only to focus on what SolidCore is doing (though we are not going to attempt to reverse the application). I will not get here into explanations on assembly and memory exploitation, so please refer to the many great tutorials that can be found on the Internet.</p>
+<p>As mentioned, I am myself a noob in reversing and shellcoding so please drop a comment if you see something wrong.</p></blockquote>
+<h1>Installing SolidCore</h1>
+<p>Like Tripwire, SolidCore needs to take an image of the system when it is sane.</p>
+<p>So, basically, after setting it, there are a few commands to type into a command window to scan the whole disk:</p>
+<pre>sadmin so
+sadmin enable</pre>
+<p>It will look for executables (.exe, .dll, etc.) and build a database using SHA-1 hashes.</p>
+<div id="attachment_1406" style="width: 590px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_activation.png" rel="lightbox[1394]"><img class="size-medium wp-image-1406" title="SolidCore_activation" alt="SolidCore Activation" src="../../wp-content/uploads/2012/12/SolidCore_activation-580x413.png" width="580" height="413" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_activation-580x413.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_activation-420x300.png 420w, /blog-archive/wp-content/uploads/2012/12/SolidCore_activation.png 933w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore commands and status after activation</p></div>
+<p>Now, only applications installed before the scan will be allowed. If you drop a new file or move an existing one to a new patch and try to execute it, it will fail like this:</p>
+<div id="attachment_1409" style="width: 590px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_blocking_execution.png" rel="lightbox[1394]"><img class="size-medium wp-image-1409" title="SolidCore_blocking_execution" alt="SolidCore blocking execution of a program" src="../../wp-content/uploads/2012/12/SolidCore_blocking_execution-580x317.png" width="580" height="317" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-580x317.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution-500x273.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore_blocking_execution.png 787w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore blocks the execution of a new executable file</p></div>
+<p>After that, whenever you need to install a new application, you have to go through the &#8220;update mode&#8221;. Just enter:</p>
+<pre>sadmin bu</pre>
+<p>At this moment, the protection is deactivated and you can execute anything. Then, you need to do a new scan and re-enable the protection as done previously.</p>
+<p>Also, not all memory protections are activated by default. This is supposed to enable memory randomization (aka ALSR but McAfee made):</p>
+<pre>sadmin features enable mp-vasr</pre>
+<p>Now, see the enabled features:</p>
+<div id="attachment_1412" style="width: 444px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_features_list.png" rel="lightbox[1394]"><img class="size-full wp-image-1412" title="SolidCore_features_list" alt="SolidCore features list" src="../../wp-content/uploads/2012/12/SolidCore_features_list.png" width="434" height="178" /></a><p class="wp-caption-text">SolidCore features list and memory protection (mp-vasr, mp-casp)</p></div>
+<p>So far so good, now we can play!</p>
+<h1>Let&#8217;s see what is behind the scene&#8230;</h1>
+<p>The first thing to notice is that SolidCore installs a service launched with the LocalSystem account.</p>
+<div id="attachment_1415" style="width: 594px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_service1.png" rel="lightbox[1394]"><img class="size-large wp-image-1415" title="SolidCore_service1" alt="SolidCore service" src="../../wp-content/uploads/2012/12/SolidCore_service1-940x562.png" width="584" height="349" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_service1-940x562.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1-580x346.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1-500x300.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service1.png 983w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore service</p></div>
+<div id="attachment_1416" style="width: 336px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_service2.png" rel="lightbox[1394]"><img class=" wp-image-1416 " title="SolidCore_service2" alt="SolidCore background service process" src="../../wp-content/uploads/2012/12/SolidCore_service2.png" width="326" height="365" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_service2.png 408w, /blog-archive/wp-content/uploads/2012/12/SolidCore_service2-268x300.png 268w" sizes="(max-width: 326px) 100vw, 326px" /></a><p class="wp-caption-text">SolidCore background service process</p></div>
+<p>Let&#8217;s have a look within a kernel debugging session with WinDbg.</p>
+<p>While booting, the target displays a lot of interesting info concerning the McAfee solution:</p>
+<pre>Solidcore log buf: F8418B60, F84415C0
+K.0004.0008: Nov 30 2012:04:49:09.812: SYSTEM: rtinit.c : 1474: McAfee Solidifier driver version 6.0.1-9049
+K.0004.0008: Nov 30 2012:04:49:09.828: SYSTEM: rtinit.c : 1476: DriverEntry @F846E500
+K.0004.0028: Nov 30 2012:04:49:10.093: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\ntdll.dll to \Device\HarddiskVolume1\Solidcore\vasr\ntdll.dll at 0x5cda0000.</strong>
+K.0004.0028: Nov 30 2012:04:49:10.500: SYSTEM: rtinit.c : 129: Booting up with RTEMode = 1
+[...]
+K.0432.0436: Nov 30 2012:04:49:15.671: ERROR: cap_kern.c : 1106: Failed to compute checksum for '\Device\HarddiskVolume1\WINDOWS\system32\autochk.exe'. err = 1099
+K.0432.0436: Nov 30 2012:04:49:15.796: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\kernel32.dll to \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll at 0x65d60000.</strong>
+K.0432.0436: Nov 30 2012:04:49:15.828: SYSTEM: imgp.c : 3114: Starting decoying of \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll (\Device\HarddiskVolume1\Solidcore\k32_c__v.dll)
+K.0432.0436: Nov 30 2012:04:49:15.890: SYSTEM: imgp.c : 3118: Finished decoying of \Device\HarddiskVolume1\Solidcore\vasr\kernel32.dll (\Device\HarddiskVolume1\Solidcore\k32_c__v.dll) with err = 0
+K.0432.0436: Nov 30 2012:04:49:15.953: SYSTEM: imgp_rebase.c: 196: <strong>Rebased \Device\HarddiskVolume1\WINDOWS\system32\user32.dll to \Device\HarddiskVolume1\Solidcore\vasr\user32.dll at 0x48c60000.</strong>
+K.0732.0828: Nov 30 2012:04:49:20.859: SYSTEM: utl.c : 500: Failed to find username, err 0xc000020c, perhaps the service is not running.
+K.1312.1316: Nov 30 2012:04:49:21.281: SYSTEM: pkgc_misc.c : 679: <strong>Rebased \Device\HarddiskVolume1\Solidcore\pkgc\10980000\Device\HarddiskVolume1\WINDOWS\system32\_si.dll to 10980000</strong>
+K.1312.1316: Nov 30 2012:04:49:21.390: ERROR: imgp.c : 3190: 0001 Failed to set branch target 0x10c46740 from 0x00000000 at VA 0x10a56760.
+K.0732.0828: Nov 30 2012:04:49:23.875: SYSTEM: utl.c : 520: Retrying usermode lookup of username [1].
+K.0732.0828: Nov 30 2012:04:49:23.890: SYSTEM: utl.c : 476: Found username as WINXP-MCAFEE\phocean
+K.1904.1932: Nov 30 2012:04:49:27.078: SYSTEM: pkgc_misc.c : 679: <strong>Rebased \Device\HarddiskVolume1\Solidcore\pkgc\20170000\Device\HarddiskVolume1\WINDOWS\system32\_si.dll to 20170000</strong>
+K.1904.1932: Nov 30 2012:04:49:27.453: ERROR: imgp.c : 3190: 0002 Failed to set branch targ et 0x20436740 from 0x00000000 at VA 0x20246760.
+[...]</pre>
+<p>We learn the driver entry point and that it is relocating a few strategic DLL: ntdll, kernel32, user32 and _si.dll. Ntdll, kernel32 and user32 are obviously the main user-mode API of Windows and we can expect that SolidCore is also putting a few hooks inside them. _si.dll is part of SolidCore and appear to be unlinked while the system is running.</p>
+<p>Let&#8217;s look around modules to confirm the position fo the driver:</p>
+<div id="attachment_1418" style="width: 594px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_driver.png" rel="lightbox[1394]"><img class="size-large wp-image-1418" title="SolidCore_driver" alt="SolidCore driver" src="../../wp-content/uploads/2012/12/SolidCore_driver-940x815.png" width="584" height="506" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_driver-940x815.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver-580x503.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver-345x300.png 345w, /blog-archive/wp-content/uploads/2012/12/SolidCore_driver.png 945w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore driver (WinDbg kernel debugging)</p></div>
+<p>So, the McAfee driver is named <em><strong>swin</strong></em>. Quickly looking around, we also find that a DLL is injected in all processes: <strong><em>scinject.dll</em></strong>. Also, see on the screenshot, how <em><strong>kernel32</strong></em> was effectively relocated. So every time the machine will start, the library will be located at a different address (it could be interesting to check the entropy of this randomization, by the way, but this is another topic).</p>
+<div id="attachment_1432" style="width: 466px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png" rel="lightbox[1394]"><img class=" wp-image-1432 " title="McAfee_SolidCore-DLL_injection" alt="McAfee SolidCore, injection of scinject.dll in processes" src="../../wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png" width="456" height="367" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection.png 570w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-DLL_injection-372x300.png 372w" sizes="(max-width: 456px) 100vw, 456px" /></a><p class="wp-caption-text">McAfee SolidCore injects the DLL &#8220;scinject.dll&#8221; in running processes.</p></div>
+<p>Just to make sure, I checked that the dll does not get injected by the registry setting:</p>
+<div id="attachment_1434" style="width: 590px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/McAfee_Solicore-Registry.png" rel="lightbox[1394]"><img class="size-medium wp-image-1434" title="McAfee_Solicore-Registry" alt="McAfee SolidCore AppInit_DLLs" src="../../wp-content/uploads/2012/12/McAfee_Solicore-Registry-580x297.png" width="580" height="297" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-580x297.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry-500x256.png 500w, /blog-archive/wp-content/uploads/2012/12/McAfee_Solicore-Registry.png 753w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">McAfee SolidCore does not use AppInit_DLLs</p></div>
+<p>Nothing there, so it must be done through a hook.</p>
+<h1>First tests: Metasploit</h1>
+<p>I was told that SolidCore was doing good against Metasploit, so one of the first thing I did was to fire up Backtrack and play with it against the SP1 &#8220;solidified&#8221; target.</p>
+<p>And I have to say that I was quickly disapointed.</p>
+<p>Sure, I could not get a Meterpreter session or get a standard payload to work out of the box, whereas it was a piece of cake on the standard SP1.</p>
+<div id="attachment_1437" style="width: 590px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails.png" rel="lightbox[1394]"><img class="size-medium wp-image-1437" title="McAfee_SolidCore-Payload_fails" alt="SolidCore and payload failure" src="../../wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-580x175.png" width="580" height="175" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-580x175.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-940x285.png 940w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails-500x151.png 500w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Payload_fails.png 1009w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore prevents standard Metasploit payloads (including Meterpreter) to run successfully.</p></div>
+<p>But if SolidCore was at least disturbing the exploitation, it did not protect at all against the vulnerability itself. So I got things like this:</p>
+<div id="attachment_1435" style="width: 590px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS.png" rel="lightbox[1394]"><img class="size-medium wp-image-1435" title="McAfee_SolidCore-Metasploit_DoS" alt="SolidCore and Metasploit DoS" src="../../wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-580x433.png" width="580" height="433" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-580x433.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS-401x300.png 401w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Metasploit_DoS.png 801w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Denial of Service during exploitation attempt with Metasploit: SolidCore will not magically &#8220;patch&#8221; vulnerabilities!</p></div>
+<p>A good old denial of service. Note that on the event log, SolidCore itself doesn&#8217;t log the exploitation attempt.</p>
+<p>I did several tests and depending on the vulnerability I got:</p>
+<ul>
+<li>service crash</li>
+<li>system instability</li>
+<li>complete DoS (system shutdown)</li>
+</ul>
+<div>So if a script skiddie will not be able to control the target, he will still obviously be able to cause a lot of damage!</div>
+<p>It was not really a surprise: McAfee will not patch the system! But think twice when you are said the contrary&#8230;</p>
+<h1>More tests, about memory protection: buffer overflows</h1>
+<p>As I was also told that McAfee was protecting user-mode apps against buffer overflows, I was even more excited.</p>
+<p>I prepared various representative tests:</p>
+<ul>
+<li>heap overflow, based on Aurora</li>
+<li>stack overflows (one base on strcpy, the other one on Windows CreateFile)</li>
+</ul>
+<p>But first, one thing I wanted to quickly eliminate was the memory randomization feature, named <strong>mp-vasr</strong>:</p>
+<div id="attachment_1439" style="width: 594px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore_mp-vasr.png" rel="lightbox[1394]"><img class="size-large wp-image-1439" title="SolidCore_mp-vasr" alt="SolidCore mp-vasr" src="../../wp-content/uploads/2012/12/SolidCore_mp-vasr-940x587.png" width="584" height="364" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-940x587.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-580x362.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr-480x300.png 480w, /blog-archive/wp-content/uploads/2012/12/SolidCore_mp-vasr.png 1280w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore mp-vasr IS NOT ALSR</p></div>
+<p><strong>mp-vasr is not ALSR!</strong> The function gets always loaded at the same memory address, so there is not process memory randomization at all&#8230; Another disappointment&#8230;</p>
+<p>Next step was to try to exploit the stack overflow. The first payload I used displays a message box. It calls LoadLibrary and GetProcAddress to dynamically resolve function addresses.</p>
+<p>When we try to exploit the buffer overflow, we get this:</p>
+<div id="attachment_1444" style="width: 590px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11.png" rel="lightbox[1394]"><img class="size-medium wp-image-1444" title="McAfee_SolidCore-Shellcode1" alt="SolidCore blocking a shellcode" src="../../wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-580x405.png" width="580" height="405" srcset="/blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-580x405.png 580w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11-429x300.png 429w, /blog-archive/wp-content/uploads/2012/12/McAfee_SolidCore-Shellcode11.png 668w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">SolidCore causes memory access violation during shellcode injection</p></div>
+<p>We have a memory access violation, because the code is trying the access to the address NULL. Weird, let&#8217;s see it with OllyDbg.</p>
+<p>First, there is something that looks like a hook in ntdll:</p>
+<div id="attachment_1446" style="width: 556px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore-PE.png" rel="lightbox[1394]"><img class="size-full wp-image-1446" title="SolidCore-PE" alt="SolidCore checking against PE signature" src="../../wp-content/uploads/2012/12/SolidCore-PE.png" width="546" height="171" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-PE.png 546w, /blog-archive/wp-content/uploads/2012/12/SolidCore-PE-500x156.png 500w" sizes="(max-width: 546px) 100vw, 546px" /></a><p class="wp-caption-text">SolidCore checking against PE signature</p></div>
+<p>So this thing is checking the code for a PE signature (<em><strong>5A4D</strong></em>). Then, it will go through <em><strong>scinject.dll</strong> </em>(by calling <em><strong>casp_inject_save_addr</strong></em>, wich is the only exported function).</p>
+<p>I could not reverse it (which would require much more time and skills than I have now), but at least we know where it is sitting and how it is triggered.</p>
+<p>If we continue the execution, we can then see that the buffer overflow is happening very well:</p>
+<div id="attachment_1448" style="width: 594px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/12/SolidCore-bof.png" rel="lightbox[1394]"><img class="size-large wp-image-1448" title="SolidCore-bof" alt="SolidCore and buffer overflow" src="../../wp-content/uploads/2012/12/SolidCore-bof-940x587.png" width="584" height="364" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-bof-940x587.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof-580x362.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof-480x300.png 480w, /blog-archive/wp-content/uploads/2012/12/SolidCore-bof.png 1280w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">SolidCore does not prevent stack overflow!</p></div>
+<p>Yes, we have the stack is fully overflowed and we can control EIP! So nothing should prevent us from exploiting it, shouldn&#8217;t it? ;-)</p>
+<p>Here we go:</p>
+<p><iframe src="http://player.vimeo.com/video/55797517?badge=0" height="375" width="500" allowfullscreen="" frameborder="0"></iframe></p>
+<p>This first payload is low-tech, with hardcoded addresses of <em><strong>MessageBoxA</strong></em> and <strong><em>ExitProcess</em></strong>:</p>
+<pre>global _start
+
+_start:
+
+ ;MessageBoxA(windowhandle,msg,title,type)
+ mov ebx, 0xEEEEEEEF
+ add ebx, 0x11111111 ;\0
+ push ebx
+ push 0x293a2064 ;d :)
+ push 0x656e7770 ;pwne
+ mov ecx, esp
+ xor edx,edx
+ push edx ;OK button
+ push ecx ;title
+ push ecx ;message
+ push edx ;NULL window handle
+ mov eax, 0x6a216476 ;MessageBoxA
+ call eax
+ ;exit
+ xor edx,edx ;empty edx out
+ push edx ;move address of MessageBoxA onto stack
+ mov eax, 0x5cdb98fd ;ExitProcess(exitcode);
+ call eax ;exit cleanly so we don't crash parent</pre>
+<p>Let&#8217;s how it looks in OllyDbg:</p>
+<div id="attachment_1452" style="width: 594px" class="wp-caption alignnone"><a href="../../2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html/solidcore-buffer_overflow_exploitation.html" rel="attachment wp-att-1452"><img class="size-large wp-image-1452" alt="Buffer overflow exploitation despite McAfee Application Control" src="../../wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-940x564.png" width="584" height="350" srcset="/blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-940x564.png 940w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-580x348.png 580w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation-500x300.png 500w, /blog-archive/wp-content/uploads/2012/12/SolidCore-Buffer_overflow_exploitation.png 1047w" sizes="(max-width: 584px) 100vw, 584px" /></a><p class="wp-caption-text">Buffer overflow exploitation despite McAfee Application Control</p></div>
+<p>I then tested with another more sophisticated shellcode (sorry, I cannot publish this one as I am not the author), which resolves dynamically the addresses of kernel32 and GetProcAddress. It works as well. The only caveat that I observed is that LoadLibraryA is systemically blocked (after going through some scinject.dll routines, it always returns 0 in EAX, wich means failure).</p>
+<p>In other words, a simple shellcode will work as long as the necessary library are loaded. Though most real life programs will already come with at least kernel32 and user32, it still gives a lot of opportunities.</p>
+<p>And then, with more shellcoding kung-fu, I am sure it is possible to get something even more target independant. The following two articles from Phrack probably give most hints to achieve this:</p>
+<ul>
+<li><a title="Phrack62: Bypassing third-party Windows Buffer Overflow Protection" href="http://www.phrack.org/issues.html?issue=62&amp;id=5">Phrack62: Bypassing third-party Windows Buffer Overflow Protection</a></li>
+<li><a title="Phrack63: NT Shellcodes Prevention demystified" href="http://www.phrack.org/issues.html?issue=63&amp;id=15">Phrack63: NT Shellcodes Prevention demystified</a></li>
+</ul>
+<p>But I need much more knowledge and practice in shellcoding before I can get something to work. I will see it later, and let me know if you could go ahead yourself.</p>
+<h1>Conclusion</h1>
+<p>Clearly, McAfee Application Control aka SolidCore is not an efficient protection against buffer overflows. If you want something much better, update your systems to something like Windows 7 64 bits and use Microsoft EMET to force DEP and ALSR on programs that don&#8217;t support it by default.</p>
+<p>Also, no way to delay patching because you have SolidCore. Full exploitation (shellcode) is just made a little bit more difficult, and that&#8217;s it. The systems will still be exposed to many risks like denial of service unless they are patched. Like always, defense in depth and a proper security policy are the foundations to decide on the patching policy, not a tool or a feature.</p>
+<p>This is a pity that the marketing teams give the wrong message, because McAfee still surely addresses many use cases. It is surely efficient enough to improve the control on workstations, that, for some reason, are difficult to control. For example, SolidCore will probably be enough to prevent the average Joe to mess the system. Why not being honest and keeping focus on this feature?</p>
+<p>On the other hand, if the McAfee guys want to be as ambitious as they claim,  they will have to move SolidCore to the kernel-mode and enhance the memory protections from there.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="defense.html" rel="category tag">Defense</a>, <a href="reversing.html" rel="category tag">Reversing</a>, <a href="../security.html" rel="category tag">Security</a>, <a href="vulnerabilities.html" rel="category tag">Vulnerabilities</a> <i class="icon-tag"></i> <a href="../../tag/application-control.html" rel="tag">Application Control</a>, <a href="../../tag/asm.html" rel="tag">asm</a>, <a href="../../tag/assembly.html" rel="tag">Assembly</a>, <a href="../../tag/backtrack.html" rel="tag">backtrack</a>, <a href="../../tag/buffer-overflow.html" rel="tag">buffer overflow</a>, <a href="../../tag/hardening.html" rel="tag">hardening</a>, <a href="../../tag/heap.html" rel="tag">heap</a>, <a href="../../tag/mcafee.html" rel="tag">McAfee</a>, <a href="../../tag/metasploit.html" rel="tag">Metasploit</a>, <a href="../../tag/ollydbg.html" rel="tag">ollyDbg</a>, <a href="../../tag/sha-1.html" rel="tag">SHA-1</a>, <a href="../../tag/solidcore.html" rel="tag">SolidCore</a>, <a href="../../tag/stack.html" rel="tag">stack</a>, <a href="../../tag/windbg.html" rel="tag">WinDBG</a> <i class="icon-calendar"></i> <a href="../../2012/12/14/review-of-mcafee-application-control-ex-solidcore-the-ultimate-solution-to-patching.html" title="6:55 pm" rel="bookmark"><time class="entry-date" datetime="2012-12-14T18:55:18+00:00">December 14, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-1317" class="post-1317 post type-post status-publish format-standard hentry category-forensic category-mac-os category-reversing category-security category-administration-systeme category-windows tag-assembly tag-bsod tag-crashdump tag-mac-os-x tag-regshot tag-rootkit tag-vmware tag-windbg tag-windows">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2012/07/22/rootkit-in-my-lab-part-iii.html" title="Permalink to Rootkit in my lab? (Part III)" rel="bookmark">Rootkit in my lab? (Part III)</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="../../2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="../../2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
+<p>I decided to analyze one the crash I experienced during registry analysis.<br />
+I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG.</p>
+<p>I had my environment set up with the suspicious VM configured to debug activated on the serial port, which is a simple pipe on Mac OS X.<br />
+Another VM is configured with a serial port as the other end of this pipe, and WinDBG attached to it.<br />
+Another method would be to just configure Windows to create a crashdump file with kernel symbols, that you can later load into WinDBG. Of course, the first method offers more opportunities to check and play with the live system.</p>
+<p>Then, I just boot the target and trigger the crash, simply by starting a scan with Regshot:</p>
+<p style="text-align: center;"><iframe src="http://player.vimeo.com/video/46157626" frameborder="0" width="500" height="281"></iframe></p>
+<p>Windows then crashes, WinDBG catches the exception and stops.</p>
+<p>So what do we have ?</p>
+<p>First, the error type, <em><strong>PAGE_FAULT_IN_NONPAGED_AREA (50)</strong></em>, means that an instruction pointed to an invalid memory address. Let&#8217;s check this.</p>
+<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="../../wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
+<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="../../wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
+<p>It shows the function (nt!CmpGetValueKeyFromCache, offset 0x89) and the memory address where the crash was triggered.</p>
+<p>The instruction at this address is:</p>
+<pre>80637807 f3a5 rep movs dword ptr es:[edi],dword ptr [esi]</pre>
+<p>This instruction is trying to copy 8 bytes at the address pointed by EDI.<br />
+EDI has the value of <strong>0xe1285050</strong> at execution time.</p>
+<p>And what do we have at this memory location ?</p>
+<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="../../wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
+<p>Nothing indeed. Note that this corruption persists at every boot.</p>
+<p>So what can we conclude?<br />
+We can certainly exclude hardware failure, because it is a virtual machine and because the corruption always occur at the same memory region, even after a reboot.<br />
+At least, I can now be sure that something in the kernel is definitely corrupted.</p>
+<p>Could it be a rootkit trick? Still the question remains, but to me it now looks very, very suspicious. Some rootkit code, poorly written, could have sat in this non-paged memory area and been paged out, causing the BSOD. I have not much knowledge about it at this time but I am going to search on this. At least, I now have good starting point to look at.</p>
+<p>That&#8217;s all for today, folks. I wrote it while I am still working on it, so sorry if it looks rough and incomplete. It is sort of live, thoughts are still in process.</p>
+<p>Again, I am looking forward to reading your comments and suggestions. (Hopefully) there will be a part IV!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="forensic.html" rel="category tag">Forensic</a>, <a href="../administration-systeme/mac-os.html" rel="category tag">Mac OS</a>, <a href="reversing.html" rel="category tag">Reversing</a>, <a href="../security.html" rel="category tag">Security</a>, <a href="../administration-systeme.html" rel="category tag">System</a>, <a href="../administration-systeme/windows.html" rel="category tag">Windows</a> <i class="icon-tag"></i> <a href="../../tag/assembly.html" rel="tag">Assembly</a>, <a href="../../tag/bsod.html" rel="tag">BSOD</a>, <a href="../../tag/crashdump.html" rel="tag">crashdump</a>, <a href="../../tag/mac-os-x.html" rel="tag">Mac OS X</a>, <a href="../../tag/regshot.html" rel="tag">Regshot</a>, <a href="../../tag/rootkit.html" rel="tag">Rootkit</a>, <a href="../../tag/vmware.html" rel="tag">VMware</a>, <a href="../../tag/windbg.html" rel="tag">WinDBG</a>, <a href="../../tag/windows.html" rel="tag">Windows</a> <i class="icon-calendar"></i> <a href="../../2012/07/22/rootkit-in-my-lab-part-iii.html" title="9:48 am" rel="bookmark"><time class="entry-date" datetime="2012-07-22T09:48:06+00:00">July 22, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-1294" class="post-1294 post type-post status-publish format-standard hentry category-forensic category-reversing category-security category-virtualization category-windows tag-keylogger tag-rootkit tag-sysinternals tag-vmware tag-volatility tag-windows">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2012/07/11/rootkit-in-my-lab-part-ii.html" title="Permalink to Rootkit in my lab? (part II)" rel="bookmark">Rootkit in my lab? (part II)</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>I finished checking the RAM with Volatility and&#8230; I found nothing. Nada.</p>
+<p>It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills.</p>
+<p>I attach here some of the main outputs of Volatility. As far as I can tell:</p>
+<ul>
+<li>no evidence of injection or kernel hooking</li>
+<li>no suspicious process</li>
+<li>no suspicious driver</li>
+<li>no suspicious registry entry</li>
+<li>etc.</li>
+</ul>
+<p>Based on <a title="Rootkit in my lab?" href="../../2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
+<p>Dear reader, any help or tip is welcomed! Am I missing something obvious? Could it be possibly not a rootkit but some kind of corruption? If so, how to detect it?</p>
+<p>Just drop me an e-mail if you want to have a look on the dump itself.</p>
+<p>Volatility outputs:</p>
+<ul>
+<li><a href="../../wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
+<li><a href="../../wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
+<li><a href="../../wp-content/uploads/2012/07/handles.txt">handles</a></li>
+<li><a href="../../wp-content/uploads/2012/07/idt.txt">idt</a></li>
+<li><a href="../../wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
+<li><a href="../../wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
+<li><a href="../../wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
+<li><a href="../../wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
+<li><a href="../../wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
+<li><a href="../../wp-content/uploads/2012/07/threads1.txt">threads</a></li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="forensic.html" rel="category tag">Forensic</a>, <a href="reversing.html" rel="category tag">Reversing</a>, <a href="../security.html" rel="category tag">Security</a>, <a href="../administration-systeme/virtualization.html" rel="category tag">Virtualization</a>, <a href="../administration-systeme/windows.html" rel="category tag">Windows</a> <i class="icon-tag"></i> <a href="../../tag/keylogger.html" rel="tag">Keylogger</a>, <a href="../../tag/rootkit.html" rel="tag">Rootkit</a>, <a href="../../tag/sysinternals.html" rel="tag">Sysinternals</a>, <a href="../../tag/vmware.html" rel="tag">VMware</a>, <a href="../../tag/volatility.html" rel="tag">Volatility</a>, <a href="../../tag/windows.html" rel="tag">Windows</a> <i class="icon-calendar"></i> <a href="../../2012/07/11/rootkit-in-my-lab-part-ii.html" title="10:18 pm" rel="bookmark"><time class="entry-date" datetime="2012-07-11T22:18:58+00:00">July 11, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-1268" class="post-1268 post type-post status-publish format-standard hentry category-forensic category-reversing category-security category-virtualization category-windows tag-keylogger tag-rootkit tag-sysinternals tag-vmware tag-volatility tag-windows">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2012/06/30/rootkit-in-my-lab.html" title="Permalink to Rootkit in my lab?" rel="bookmark">Rootkit in my lab?</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h2>Context</h2>
+<p>For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on.</p>
+<p>What makes the case really interesting though, is that it occurred on a fresh install of a Windows XP virtual machine. I aimed it to be a clean malware reversing snapshot. I noticed the weired behavior minutes after finishing the system install and setting up a bunch of reversing and live analysis tools.</p>
+<p>So I bet that if I got some malware, it probably comes from one of those. At this time, unfortunately, there are too many and I could not spot the exact time, so I can not start the analysis from this angle.</p>
+<p>This article is almost written in live, so pardon my mistakes. I will update it as soon as I find something new. Of course, I am really expecting your feedback, suggestions and corrections. I see it as a great opportunity to learn, even though this one may not be the easiest&#8230;</p>
+<h2>Symptoms</h2>
+<p>Two things alerted me quickly.</p>
+<p>The first one was, at a point, the permanent failure of going through the full windows update process. Believe me, I have tried all ways.</p>
+<p>The second one was the weird dialog when trying to access to the keyboard layout settings. It says &#8220;<em><strong>Incompatible driver detected</strong></em>&#8220;. To me, this looks like there is a keylogger somewhere&#8230;</p>
+<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="../../wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
+<p>Then, as I started to check around, more odd stuff came out.</p>
+<p>I fired up Process Explorer, and soon realize that it was &#8220;unable to verify&#8221; the signatures of all the running Windows processes. I could not find anything else suspicious, though (no odd process, memory content looks normal, etc.).</p>
+<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="../../wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /blog-archive/wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
+<p>Ok, while I am with the Sysinternal suite, why not scanning with Rootkit Revealer:</p>
+<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="../../wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
+<p>Interesting&#8230; and what about GMER:</p>
+<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="../../wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
+<p>Oops! Now it crashes when it is accessing the registry&#8230;</p>
+<p>For the fun, let&#8217;s see what happens if we try to set up an antivirus (Security Essentials):</p>
+<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="../../wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
+<p>Nice one! Very suspicious! Note that after a full scan, Security Essentials reports me that the system is clean and everything is fine. I am so relieved. :)</p>
+<p>Curious to see how my certificates are, I run <em><strong>certmgr.msc. </strong></em><strong></strong>I compared all Microsoft root certificates with a clean machine and could not see anything different. But again something happened:</p>
+<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="../../wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
+<p>Oh, just one of my last attempts to do live analysis (this the WinPcap setup included with Wireshark):</p>
+<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="../../wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
+<p>Ok, so enough played. The thing seems to be nicely done, and live analysis is going to be way too hard and unreliable.</p>
+<h2>Memory Analysis</h2>
+<p>This is where I am now. I reverted to a snapshot prior to my live analysis attemps, confirmed the strange behaviors are still observable, and suspended the VM to get the vmem file.</p>
+<p>So I have spent the last hours scanning the memory with, of course, <em><strong>Volatility</strong></em>.</p>
+<p>So far, I have to confess that I found NOTHING. But analyzing the memory can be a harsh process when it comes to sophisticated threats, and I may have reached the limits of my skills.</p>
+<p>But, anyway, I could not dream of a greater and more exciting opportunity to learn!</p>
+<p>My discoveries, if there are, will be published in another article.</p>
+<p><strong>UPDATE: I forgot to tell that it is a Windows XP SP3 machine, but not fully updated due to the issues.</strong></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="forensic.html" rel="category tag">Forensic</a>, <a href="reversing.html" rel="category tag">Reversing</a>, <a href="../security.html" rel="category tag">Security</a>, <a href="../administration-systeme/virtualization.html" rel="category tag">Virtualization</a>, <a href="../administration-systeme/windows.html" rel="category tag">Windows</a> <i class="icon-tag"></i> <a href="../../tag/keylogger.html" rel="tag">Keylogger</a>, <a href="../../tag/rootkit.html" rel="tag">Rootkit</a>, <a href="../../tag/sysinternals.html" rel="tag">Sysinternals</a>, <a href="../../tag/vmware.html" rel="tag">VMware</a>, <a href="../../tag/volatility.html" rel="tag">Volatility</a>, <a href="../../tag/windows.html" rel="tag">Windows</a> <i class="icon-calendar"></i> <a href="../../2012/06/30/rootkit-in-my-lab.html" title="7:49 pm" rel="bookmark"><time class="entry-date" datetime="2012-06-30T19:49:49+00:00">June 30, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-1163" class="post-1163 post type-post status-publish format-standard hentry category-reversing category-security tag-assembler tag-buffer-overflow tag-crashme tag-windbg">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2011/11/30/debugging-the-crashme-program.html" title="Permalink to Debugging the CrashMe program" rel="bookmark">Debugging the CrashMe program</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p><a title="CrashMe" href="http://windbg.info/apps/46-crashme.html" target="_blank">CrashMe</a>, from the WinDbg developpers, may be a helpful application for those in the process of learning how to use a debugger or a disassembler.</p>
+<p>It simulates several crash situation that you will be able to easily reproduce and examine within these tools.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="reversing.html" rel="category tag">Reversing</a>, <a href="../security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="../../tag/assembler.html" rel="tag">Assembler</a>, <a href="../../tag/buffer-overflow.html" rel="tag">buffer overflow</a>, <a href="../../tag/crashme.html" rel="tag">CrashMe</a>, <a href="../../tag/windbg.html" rel="tag">WinDBG</a> <i class="icon-calendar"></i> <a href="../../2011/11/30/debugging-the-crashme-program.html" title="11:02 pm" rel="bookmark"><time class="entry-date" datetime="2011-11-30T23:02:47+00:00">November 30, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-980" class="post-980 post type-post status-publish format-standard hentry category-forensic category-reversing category-security tag-assem tag-bochs tag-bootkit tag-debugger tag-forensics tag-ida-pro tag-malware tag-mbr">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html" title="Permalink to Debugging the MBR with IDA Pro and Bochs" rel="bookmark">Debugging the MBR with IDA Pro and Bochs</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more.</p>
+<h2>Prerequisite :</h2>
+<ul>
+<li>IDA Pro (6.0) with the IDA Python plug-in (1.4.3)</li>
+</ul>
+<h2>Steps :</h2>
+<ol>
+<li>Prepare your forensic disk image.<br />
+In general, it is that simple :</p>
+<pre>$ dd if=&lt;source&gt; of=disk.img bs=65536 conv=noerror</pre>
+<p>Or :</p>
+<pre>$ ddrescue -n &lt;source&gt; &lt;dest&gt; file.log</pre>
+<p>Check the disk geometry using :</p>
+<pre>$ fdisk -luc disk.img</pre>
+<p>These values will be useful for step 5.<br />
+However, if you have an exotic disk, it may be much trickier. For example, I got some geometry errors with a flash disk when using Bochs at step 11. Special thanks to Gene Cumm from the bochs-developpers mailing list who gave me the tip to specify the geometry to dd :</p>
+<pre>$ dd if=input of=output bs=2064384 count=507</pre>
+</li>
+<p>Refer to <a title="CHS" href="http://en.wikipedia.org/wiki/Cylinder-head-sector" target="_blank">CHS</a> if you wonder how to get these values.</p>
+<li>Extract the MBR from the disk or from the image you just took.
+<pre>$ dd if=&lt;source&gt; of=mbr.dump bs=512 count=5</pre>
+</li>
+<li>Download and install the <a title="Bochs emulator" href="http://bochs.sourceforge.net/" target="_blank">Bochs x86-64 emulator</a>, which comes with a debugger that will work nicely with IDA.</li>
+<li>Download <a title="MBR Bochs scripts" href="http://hexblog.com/ida_pro/files/mbr_bochs.zip" target="_self">this archive</a> from Hexblog (IDA Pro&#8217;s blog). We will use two files from there : <em>bochrc</em>, wich is the configuration file for Bochs, and <em>mbr.py</em> which a python file helpful from preparing the debugging environment.</li>
+<li> Copy <em>bochrc</em> in your working directory and edit the following line to match your disk image geometry :
+<pre>ata0-master: type=disk, path="sdb.img", mode=flat, cylinders=507, heads=64, spt=63</pre>
+<p>Before going on, you may test that Bochs can use the image with these settings :</p>
+<pre>C:\&gt;"c:\Program Files\Bochs-2.4.5\bochsdbg.exe" -f bochsrc -q</pre>
+</li>
+<li>In the same directory, copy <em>mbr.py</em> and edit the following settings :
+<pre># Some constants
+SECTOR_SIZE = 512
+BOOT_START  = 0x7C00
+BOOT_SIZE   = 0x7C00 + SECTOR_SIZE * 4
+BOOT_END    = BOOT_START + BOOT_SIZE
+SECTOR2     = BOOT_START + SECTOR_SIZE
+MBRNAME    = "mbr.img"
+IMGNAME     = "sdb.img"</pre>
+</li>
+<li>Now open a console and type :
+<pre>C:\&gt; mbr update</pre>
+</li>
+<li>With IDA Pro, open the <em>boshrc</em> file. IDA should recognize the format and set the proper settings.</li>
+<li>From the menu, open <em>File/Script File</em> and select <em>mbr.py</em>. It will close IDA after execution.</li>
+<li>Open again your <em>*.idb</em> file, set a breakpoint at <em>0x7C00</em>.</li>
+<li>Start the debugger.</li>
+</ol>
+<p>You should now be able to go ahead and debug the MBR step by step.</p>
+<p><img class="aligncenter size-full wp-image-996" title="ida-mbr" src="../../wp-content/uploads/2011/01/ida-mbr.png" alt="" width="600" height="546" srcset="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png 600w, /blog-archive/wp-content/uploads/2011/01/ida-mbr-300x273.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<h2>References :</h2>
+<ul>
+<li>Hexblog : <a title="Develop your master boot record and debug it with IDA Pro and the Bochs debugger " href="http://www.hexblog.com/?p=103" target="_blank">Develop your master boot record and debug it with IDA Pro and the Bochs debugger plugin</a></li>
+<li>MISC Magazine #53 : Votre MBR pris en otage ! &#8211; Nicolas Brulez (Kaspersky labs)</li>
+<li>Bochs User Manual : <a title="Bochs tips and techniques" href="http://bochs.sourceforge.net/doc/docbook/user/howto.html#AEN2776" target="_blank">Chapter 8, Tips and Techniques</a></li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="forensic.html" rel="category tag">Forensic</a>, <a href="reversing.html" rel="category tag">Reversing</a>, <a href="../security.html" rel="category tag">Security</a> <i class="icon-tag"></i> <a href="../../tag/assem.html" rel="tag">Assem</a>, <a href="../../tag/bochs.html" rel="tag">Bochs</a>, <a href="../../tag/bootkit.html" rel="tag">Bootkit</a>, <a href="../../tag/debugger.html" rel="tag">Debugger</a>, <a href="../../tag/forensics.html" rel="tag">Forensics</a>, <a href="../../tag/ida-pro.html" rel="tag">IDA Pro</a>, <a href="../../tag/malware.html" rel="tag">malware</a>, <a href="../../tag/mbr.html" rel="tag">MBR</a> <i class="icon-calendar"></i> <a href="../../2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html" title="8:57 pm" rel="bookmark"><time class="entry-date" datetime="2011-01-20T20:57:46+00:00">January 20, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->			<nav id="nav-below" class="navigation" role="navigation">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="reversing/page/2.html" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- .navigation -->
+			
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.790 seconds. Made 17 queries to database and 46 cached queries. Memory used - 27.89MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/category/security/reversing by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:47:11 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.760 seconds. -->

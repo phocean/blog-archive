@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ping &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/ping/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Introduction to network attacks : Network Layer</title>
+		<link>/blog-archive/2008/10/12/introduction-to-network-attacks-network-layer.html</link>
+		<pubDate>Sun, 12 Oct 2008 14:45:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[arp]]></category>
+		<category><![CDATA[cache poisoning]]></category>
+		<category><![CDATA[ettercap]]></category>
+		<category><![CDATA[Hping]]></category>
+		<category><![CDATA[icmp]]></category>
+		<category><![CDATA[ip]]></category>
+		<category><![CDATA[ping]]></category>
+		<category><![CDATA[sing]]></category>
+		<category><![CDATA[spoofing]]></category>
+		<category><![CDATA[tcp]]></category>
+		<category><![CDATA[tcpdump]]></category>
+		<category><![CDATA[udp]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=220</guid>
+		<description><![CDATA[Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done. ARP cache poisoning ARP works basically on broadcast : when a machine connects to the network, it broadcasts its MAC address to the LAN (ethernet...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/12/introduction-to-network-attacks-network-layer.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done.<br />
+<span id="more-220"></span></p>
+<h3>ARP cache poisoning</h3>
+<p>ARP works basically on broadcast :</p>
+<ul>
+<li>when a machine connects to the network, it broadcasts its MAC address to the LAN (ethernet broadcast)</li>
+<li>when a machine needs to find a recipient (for a given IP), it sends a request using broadcast.</li>
+</ul>
+<p>When this learning process is over, the machine keeps the information in its ARP cache, that to save the network resources. The cache is a simple correspondence table of MAC / IP addresses.</p>
+<p>You can have a look to your ARP cache with :</p>
+<pre lang="bash">$ arp -a</pre>
+<p>Beyond its convenience, the big problem with broadcasting is that it does not authentication at all.</p>
+<p>So, you can easily see how easy it is to corrupt an ARP cache with some forged packet. As the MAC address the only way to route date on an ethernet LAN, the potential impact of this attack is huge !</p>
+<p>For best efficiency, the attacker will flood the targets with faked ARP responses at an high rate. That way, it gives little chance to a valid ARP record to survive long, as it will get quickly overwritten in the cache.</p>
+<p>Nowadays, there are many convenient tools to drive this attack, like <a title="Ettercap" href="http://ettercap.sourceforge.net/" target="_blank"><strong>Ettercap</strong></a>.</p>
+<p>You can start it in graphic mode :</p>
+<pre lang="bash">$ ettercap -G</pre>
+<p>Got to the &#8220;<em>Sniff / United sniffing</em>&#8221; menu and select your network interface :</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap1.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-286" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap1.png" alt="" width="399" height="146" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap1.png 399w, /blog-archive/wp-content/uploads/2008/10/ettercap1-300x109.png 300w" sizes="(max-width: 399px) 100vw, 399px" /></a><br />
+&#8220;<em>Hosts / scan for hosts</em>&#8221; menu allow you to quickly visualize the machines of the LAN.<br />
+Then, in the &#8220;<em>Mitm</em>&#8221; (Man In The Middle) menu, choose &#8220;<em>Arp cache poisonning</em>&#8221; :</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap2.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-287" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap2.png" alt="" width="301" height="182" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap2.png 301w, /blog-archive/wp-content/uploads/2008/10/ettercap2-300x181.png 300w" sizes="(max-width: 301px) 100vw, 301px" /></a></p>
+<p>Finally, &#8220;start / start sniffing&#8221; (default is all machines are targeted) :</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap3.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-288" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap3.png" alt="" width="500" height="385" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap3.png 622w, /blog-archive/wp-content/uploads/2008/10/ettercap3-300x231.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+<p>Immediatly, Ettercap starts collecting data. Here some POP credentials can be read :</p>
+<p>Several workaround can be set against this, though none is really satisfying :</p>
+<ol>
+<li>use static ARP entries for the LAN (arp -s 192.168.1.1   11-22-33-44-11-11) ; that is really not convenient, not scalable and unpractical for mobile devices ;</li>
+<li>some switches can detect MAC address changes and deactivate their port (look at switchport port-security on Cisco switches) ;</li>
+<li>there are some tools to be set on a probe ; arpwatch for Linux checks the LAN and send an alert by mail or to syslog in case of maliscious ARP events ;</li>
+<li>more generic IDS / IPS like Snort should also be able to detect this attack ;</li>
+<li>Radius / EAP hardware devices authentication is a more complex solution but the recommended one on large networks.</li>
+</ol>
+<h3>ICMP Attacks</h3>
+<p>ICMP is a protocol that is just over IP in the networking stack, aimed to diagnose links. A standard ping, for instance, is based on this protocol.<br />
+In some cases, it could be used to drive some attacks.</p>
+<h4>Ping of the Death</h4>
+<p>That&#8217;s the historical attack. An ICMP packet is encapsulated inside an IP datagram.<br />
+An ICMP datagram is structured as below :</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/10/icmp.png" rel="lightbox[220]"><img class="size-full wp-image-284" title="ICMP datagram" src="/blog-archive/wp-content/uploads/2008/10/icmp.png" alt="ICMP datagram" width="341" height="115" srcset="/blog-archive/wp-content/uploads/2008/10/icmp.png 341w, /blog-archive/wp-content/uploads/2008/10/icmp-300x101.png 300w" sizes="(max-width: 341px) 100vw, 341px" /></a><br />
+A few ICMP requests types :</p>
+<pre lang="txt">
+0 = echo reply
+8 = echo request
+11 = TTL expired
+12 = option error (wrong header)</pre>
+<p>The maximum size of an IP datagram is 65 535 octets, though each ethernet link has a maximum ethernet packet size that it can support. That is the MTU value (default is 1500 octets).<br />
+When a packet bigger than this size must be sent, it is fragmented in smaller sized packets which are sent one after another. They will be reassembled by the recipient in the right order.<br />
+For instance in the case of an ICMP echo request (ping), the ICMP header has a lenght of 8 octets and the IP header in which it is encapsulated is of 20 octets (without any additional option).<br />
+So :<br />
+65535 &#8211; 20 &#8211; 8 = 65507 octets are left available at most for the data field of the ICMP packet.</p>
+<p>If an ICMP packet bigger than this size is built and sent, it will be send fragmented to the recipient.<br />
+When the recipient reassembles it, it gets an invalid IP datagram with a size bigger than 65 535 octets.</p>
+<p>A sane IP stack would just drop it.<br />
+But in the past, that leaded to a buffer overflow DoS attack.<br />
+with many old IP stacks (Windows 95, NT, Linux 2.0, &#8230;), this caused some unexpected behaviour : networking crash, system freeze, reboot&#8230;<br />
+The IP stack had a buffer for 65 535 octets without exception catching in case of superior sized packet. That caused the memory to be written with the extra bits anywhere, with unpredictable effects.</p>
+<p>Nowadays, all systems must be protected against this well known attack, but unfortunately the same kind of behaviour is regularly found in different protocols or applications.</p>
+<p>If you try to practice this attack, you will see that ping prevents it :</p>
+<pre lang="bash">$ ping  -s 65508 192.168.1.1
+Error: packet size 65508 is too large. Maximum is 65507</pre>
+<p><a href="http://sourceforge.net/projects/sing" target="_blank"><strong>Sing</strong></a> is a nice tool to easily play with ICMP packets. No problem this time :</p>
+<pre lang="bash">$ sing -s 65508 192.168.1.1</pre>
+<p>The capture below shows the packet fragmentation that results :</p>
+<p><a href="/blog-archive/wp-content/uploads/2008/10/pod.png" rel="lightbox[220]"><img class="aligncenter size-medium wp-image-285" title="Sniffing of Ping of death" src="/blog-archive/wp-content/uploads/2008/10/pod-300x216.png" alt="" width="300" height="216" srcset="/blog-archive/wp-content/uploads/2008/10/pod-300x216.png 300w, /blog-archive/wp-content/uploads/2008/10/pod.png 1023w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>How to protect from such issues ? Check regularly vulnerabilities issues and keep your system up to date.<br />
+Many administrators just block all the ICMP protocol on their firewall. It is a kind of overreaction : ICMP is in no way a danger, but is really useful when you need some diagnosis. If you also think that blocking it hides your network topology, you are wrong but that is another subject.<br />
+So update your systems, allow ICMP (and somehow prepare yourself for IPv6 :)).</p>
+<h4>ICMP Flood</h4>
+<p>Another very basic attack. It consists in sending as many and as big as possible ping requests at a high rate.<br />
+The goal is to saturate the target ressources : bandwith and responsiveness as the target network card has to process a lot of data.</p>
+<p>On modern hardware, there are little chances that an isolated attack has any sensible impact.<br />
+Also, a well configured firewall or a good OS should discard high rated requests.</p>
+<p>However, this still can be efficient on weak topologies and when it comes from multiples sources.<br />
+I am of course thinking about botnets, built with infected PC, that can scale from hundreds to thousands of machines.</p>
+<p><strong><a title="Hping" href="http://www.hping.org/">Hping</a></strong> is a famous tool that allow to easily forge all kind of TCP, UDP and ICMP packets with their options.</p>
+<p>It takes just one line to flood a taget :</p>
+<pre lang="bash">$ hping3 --flood -1 192.168.1.1</pre>
+<p>Just to mention that you could have done it as well with Sing :</p>
+<pre lang="bash">$ sing -T 0 192.168.1.1</pre>
+<h4>Pong attack</h4>
+<p>This attack may lay to topology discovery.</p>
+<p>As mentioned above, many administrator block ICMP from their firewall for security purpose. In general, the applied rule filters requests from the outside, but still responses from inside&#8217;s requests are allowed.</p>
+<p>The trick here is to send a response on a target list of IP which are supposed to be find behind the firewall.</p>
+<p>If it goes through the firewall, two cases are possible :</p>
+<ol>
+<li>the packet reaches the target, but this one destroys the packet as it was not waiting for anything. As a result, the attacker does not get any response.</li>
+<li>the packet never reaches its target, because there is no target (the machine is off or the IP is not allocated) ; in that case, the firewall should answer with an ICMP packet &#8220;host unreachable&#8221;.</li>
+</ol>
+<p>By scanning an IP range, we are able that way to guess the network map that is behind the firewall.</p>
+<p>If you just want to try it using ping, you will need something like <a title="Tcpdump" href="http://www.tcpdump.org/"><strong>tcpdump</strong></a> to see the &#8220;host unreachable response&#8221;.</p>
+<p>For instance, on my network, there is not an IP such as 192.168.1.99 :</p>
+<pre lang="bash">$ sing -reply 192.168.1.99</pre>
+<pre lang="txt">$ tcpdump icmp
+tcpdump: WARNING: arptype 65534 not supported by libpcap - falling back to cooked socket
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on tun0, link-type LINUX_SLL (Linux cooked), capture size 96 bytes
+15:21:55.142086 IP 10.8.0.6 > 192.168.1.99: ICMP echo reply, id 58219, seq 0, length 16
+15:21:58.192068 IP 10.8.0.1 > 10.8.0.6: ICMP host 192.168.1.99 unreachable, length 44
+15:22:23.086762 IP 10.8.0.6 > star.int.jcbnet.org: ICMP echo reply, id 64619, seq 0, length 16</pre>
+<p>That&#8217;s confirmed.<br />
+Other uses of this attack can be imagined. Like firing up a flood attack targeting something behind the firewall.<br />
+It shows one of the limit of filtered based firewalling. A well configured IDS/IPS must be set up  to detect all these well known ICMP attacks and block them.</p>
+<h3>IP spoofing</h3>
+<p>The goal of IP spoofing is to take advantage of the network accesses a target may be granted with.<br />
+Nowadays, the fact is that still many applications rely &#8211; sometimes uniquely &#8211; on the IP address as a source of authentication. Not only obsolete services (rsh, login, telnet), but some widely used like DNS or SMTP. Not to mention the firewalling rules.<br />
+Altering an IP packet with an IP address that is not yours is not a difficult thing. It just consists in using a raw socket not to use the system IP stack that would certainly discard such packets. Many tools can do it.<br />
+However, because the IP address is reused the higher layer &#8211; transport layer, the attacker has to consider the UDP and TCP protocol.<br />
+There is nothing much to do concerning UDP, as it is a non-connected protocol. The attacker will be free to send the requests he wants.<br />
+However, because the TCP protocol opens a session, the attacker will have much more work to do.<br />
+The big issue is that he will never receive the answers from the packets he sends &#8211; the real host will. Therefore, it is necessary to blindly guess what is going on, not to loose the session.</p>
+<p>There are several methods :</p>
+<ol>
+<li><strong>Initiating a new session and guessing the TCP sequence number</strong>s :To be established, a TCP session follow a strict order : SYN, SYN-ACK and ACK. Each packet sent through TCP must be aknowledge. To differentiate the packets and send back that way an individual ACK, each packets has its own TCP sequence number. For every new packet, the sequence number is increased by the sender.<br />
+This illustrates better :<br />
+<a href="/blog-archive/wp-content/uploads/2008/10/tcp.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-289" title="TCP sequence" src="/blog-archive/wp-content/uploads/2008/10/tcp.png" alt="" width="344" height="190" srcset="/blog-archive/wp-content/uploads/2008/10/tcp.png 344w, /blog-archive/wp-content/uploads/2008/10/tcp-300x165.png 300w" sizes="(max-width: 344px) 100vw, 344px" /></a><br />
+What the attacker has to do is sending the right ACK at the right moment, with not only the good TCP content but a proper TCP sequence number.<br />
+This technic is somehow historical, as nowadays modern systems generate a random TCP sequence number that is very hard to predict (even using flood).</li>
+<li><strong>Stealing an existing session </strong>:It requires the attacker to be somewhere on the ethernet link between the two targets. It becomes easier to generate proper sequence numbers by sniffing a legitimate conversation.</li>
+<li><strong>Combining several LAN attacks </strong>:If the attacker is on the LAN, he can combine several attacks (ARP, DoS, SNAT) to sniff and block legitimate traffic and replay it.</li>
+</ol>
+<p>As this attack requires pretty much efforts, an alternative driving to the same effect is often used instead : <strong>DNS poisoning</strong>.<br />
+Otherwise, if the goal of IP spoofing is just DoS, the attacker don&#8217;t need to care about all that. This is unfortunately the most frequent use.<br />
+The goal is to hide a bit more the attacker and to make it difficult to build a proper defensive firewalling rule (what IP to use to block the aggressive packets ?).<br />
+All the attacker need to do is to send the forged packets without caring of responses at all.<br />
+A good protection starts by controlling the lower layer attacks (ARP, sniffing, &#8230;).</p>
+<p>Then, firewalls should have a proper rule limiting the rate of SYN packets for any source, to prevent flood attacks trying to catch a valid TCP number.</p>
+<p>Finally, always use up-to-date systems that have a strong randomization algorithm for TCP sequence numbers.<br />
+I would like to add that, as much as possible, weak authenticated application should be suppressed. Unfortunately, it won&#8217;t be an easy thing to work without DNS, SMTP and so on&#8230;</p>
+<h3>Conclusion</h3>
+<p>That&#8217;s it for this quick tour of network layer attacks. It shows how weak many protocols are and the power an attacker can get. Next time, we will quickly talk about transport layer attacks, as this article already started to cover it (TCP).</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

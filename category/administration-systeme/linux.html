@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../../css/fontello.css">
+<link rel="stylesheet" href="../../css/animation.css">
+
+<!-- Mirrored from phocean.net/category/administration-systeme/linux by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:21:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Linux | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Linux Category Feed" href="linux/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="archive category category-linux category-13 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../../index.html" >
+			<img class="logo" src="../../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Category Archives: <span>Linux</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-2148" class="post-2148 post type-post status-publish format-standard hentry category-linux category-administration-systeme tag-gnome tag-gnome-shell tag-topicons-plus">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2016/12/18/topicons-plus-for-gnome-v18.html" title="Permalink to TopIcons-plus for Gnome (v18)" rel="bookmark">TopIcons-plus for Gnome (v18)</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>This is another off-topic post as it is not related to security.</p>
+<p>It has been awhile since I released the <a href="https://github.com/phocean/TopIcons-plus">TopIcons-plus Gnome-Shell extension</a>.</p>
+<p>I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape.</p>
+<h2>How is Topicons-plus useful ?</h2>
+<p>The Gnome developers want to kill system tray icons, which are displayed in what they call the legacy tray.</p>
+<p>Such icons are familiar to everybody: messaging programs like RocketChat or Telegram, e-mail clients like Thunderbird, Dropbox, KeepassX, etc.</p>
+<p>Gnome designers think such a design belongs to past, is flawed in many ways (status or menu?) and should be useless with modern environments with a dock and a powerful notification system.</p>
+<p>I would not comment on that and I actually believe they are right.</p>
+<p>However, the legacy tray they propose is horrible. It is hidden most of the time and you have to click to open it before accessing to your icons. It is very painful, and it is done on purpose, to clearly send a message that it should not be used anymore by application developers.</p>
+<h2>Well, but what about the existing applications ?</h2>
+<p>They are not going away all the sudden. As a user, I still need them.</p>
+<p>And it is open-source, mostly developed on free time: developers are not going to re-implement everything just for the Gnome ecosystem&#8230;</p>
+<p>That is where I think an extension like TopIcons-plus is useful. It removes the hassle of this legacy tray by bringing back the icons to the top bar, so they are always visible.</p>
+<h2>Latest release</h2>
+<p>It comes with extra features, like styling (opacity, desaturation, size) and positioning.</p>
+<p>The <a href="https://github.com/phocean/TopIcons-plus/releases/tag/v18">latest release</a> should be in pretty good shape. If you don&#8217;t want to use the Github code, be patient: it should get validated on the <a href="https://extensions.gnome.org/extension/1031/topicons/">Gnome website</a> within the next days.</p>
+<p>Enjoy!</p>
+<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="../../wp-content/uploads/2016/12/Capture-d%c3%a9cran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="linux.html" rel="category tag">Linux</a>, <a href="../administration-systeme.html" rel="category tag">System</a> <i class="icon-tag"></i> <a href="../../tag/gnome.html" rel="tag">Gnome</a>, <a href="../../tag/gnome-shell.html" rel="tag">gnome-shell</a>, <a href="../../tag/topicons-plus.html" rel="tag">topicons-plus</a> <i class="icon-calendar"></i> <a href="../../2016/12/18/topicons-plus-for-gnome-v18.html" title="6:49 pm" rel="bookmark"><time class="entry-date" datetime="2016-12-18T18:49:11+00:00">December 18, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-2123" class="post-2123 post type-post status-publish format-standard hentry category-linux category-administration-systeme">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2016/10/09/one-more-rant-against-the-linux-intel-driver.html" title="Permalink to One more rant against the Linux Intel graphic driver" rel="bookmark">One more rant against the Linux Intel graphic driver</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>Some quick notes that may help random Linux users looking for similar issues.</p>
+<p>I am, like many, the unfortunate user of a laptop with Intel graphics (Thinkpad T460 to be precise). Why unfortunate? Because the graphic driver provided by Intel sucks.</p>
+<p><em><strong>i915</strong></em>, as it is being called, really has been sucking for years, and it is known for that (just google it, if you don&#8217;t believe me).</p>
+<p>For the sake of completeness, here is the exact model with which I experienced some issues:</p>
+<pre>%  lspci
+00:00.0 Host bridge: Intel Corporation Skylake Host Bridge/DRAM Registers (rev 08)
+00:02.0 VGA compatible controller: Intel Corporation HD Graphics 520 (rev 07)
+...</pre>
+<h2>For performance, remove the X11 Intel driver</h2>
+<p>First, its X11 module is generally under-performing under X11, so I just removed it to have X11 using <em>modsettings. </em>These are the instructions for Fedora (24), but you can virtually do something similar for any distribution:</p>
+<pre>% dnf remove xorg-x11-drv-intel</pre>
+<p>Do not worry, it just remove the X11 part of the driver, not the kernel driver itself.</p>
+<p>Login, logout, job done: you should have less lags with desktop environments like gnome-shell.</p>
+<h2>For stability, disable RC6</h2>
+<p>I experienced frequent, daily freezes of my work session. The display would totally hang or display a blank screen, forcing me to cold reboot the computer.</p>
+<p>Here is an extract of the <em>dmesg</em> kernel traces leading the the crash (it is a bit lengthy, but that may help people to find this post):</p>
+<pre>oct. 06 11:00:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:00:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:01:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:01:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:01:43 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:02:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:02:22 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 11:04:08 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=6364 end=6365) time 287 us, min 954, max 959, scanline start 950, end 967
+oct. 06 11:13:58 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=41777 end=41778) time 340 us, min 954, max 959, scanline start 946, end 967
+oct. 06 11:20:18 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=64583 end=64584) time 284 us, min 954, max 959, scanline start 946, end 964
+oct. 06 11:20:33 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=65517 end=65518) time 284 us, min 1073, max 1079, scanline start 1071, end 1091
+oct. 06 11:28:27 localhost.localdomain kernel: [drm:intel_cpu_fifo_underrun_irq_handler [i915]] *ERROR* CPU pipe B FIFO underrun
+oct. 06 11:31:53 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=106339 end=106340) time 285 us, min 1073, max 1079, scanline start 1066, end 1086
+oct. 06 11:33:58 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=113803 end=113804) time 287 us, min 954, max 959, scanline start 948, end 966
+oct. 06 11:35:13 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=118345 end=118346) time 285 us, min 1073, max 1079, scanline start 1062, end 1081
+oct. 06 11:52:59 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=182278 end=182279) time 282 us, min 1073, max 1079, scanline start 1064, end 1084
+oct. 06 12:01:29 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=212893 end=212894) time 284 us, min 1073, max 1079, scanline start 1068, end 1088
+oct. 06 12:02:44 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=217395 end=217396) time 282 us, min 1073, max 1079, scanline start 1068, end 1088
+oct. 06 12:02:49 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=217642 end=217643) time 247 us, min 954, max 959, scanline start 949, end 964
+oct. 06 12:03:54 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=221597 end=221598) time 281 us, min 1073, max 1079, scanline start 1067, end 1086
+oct. 06 12:05:49 localhost.localdomain kernel: [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe B (start=228446 end=228447) time 290 us, min 954, max 959, scanline start 948, end 966
+oct. 06 12:17:32 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:18:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:18:23 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:18:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:19:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:19:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:19:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:01 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:25 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:44 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in Xorg [2322], reason: Engine(s) hung, action: reset
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] GPU hangs can indicate a bug anywhere in the entire gfx stack, including userspace.
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] Please file a _new_ bug report on bugs.freedesktop.org against DRI -&gt; DRM/Intel
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] drm/i915 developers can then reassign to the right component if it's not a kernel issue.
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] The gpu crash dump is required to analyze gpu hangs, so please always attach it.
+oct. 06 12:20:52 localhost.localdomain kernel: [drm] GPU crash dump saved to /sys/class/drm/card0/error
+oct. 06 12:20:52 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:20:54 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:05 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:05 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in gnome-shell [2532], reason: Engine(s) hung, action: reset
+oct. 06 12:21:05 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:07 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:15 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:15 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in gnome-shell [2532], reason: Engine(s) hung, action: reset
+oct. 06 12:21:15 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:17 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:27 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:27 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in Xorg [2322], reason: Engine(s) hung, action: reset
+oct. 06 12:21:27 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:29 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:37 localhost.localdomain kernel: [drm] stuck on render ring
+oct. 06 12:21:37 localhost.localdomain kernel: [drm] GPU HANG: ecode 9:0:0xfffffffe, in Xorg [2322], reason: Engine(s) hung, action: reset
+oct. 06 12:21:37 localhost.localdomain kernel: drm/i915: Resetting chip after gpu hang
+oct. 06 12:21:39 localhost.localdomain kernel: [drm] RC6 on
+oct. 06 12:21:43 localhost.localdomain kernel: ------------[ cut here ]------------
+oct. 06 12:21:43 localhost.localdomain kernel: WARNING: CPU: 0 PID: 1109 at drivers/gpu/drm/i915/intel_display.c:13533 intel_atomic_commit+0x13b8/0x1470 [i915]
+oct. 06 12:21:43 localhost.localdomain kernel: pipe A vblank wait timed out
+oct. 06 12:21:43 localhost.localdomain kernel: Modules linked in: tun nfnetlink_queue nfnetlink_log uas usb_storage xt_nat veth rfcomm ccm ipt_MASQUERADE nf_nat_masquerade_ipv4 xt_addrtype br_netfilter ip6t_rpfilter ip6t_REJECT nf_reject_ipv6 xt_conntrack dm_thin_pool dm_persistent_data dm_bio_prison loop ip_set nfnetlink ebtable_nat ebtable_broute bridge ip6table_raw ip6table_mangle ip6table_nat nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_ipv6 ip6table_security iptable_raw iptable_mangle iptable_nat nf_conntrack_ipv4 nf_defrag_ipv4 nf_nat_ipv4 nf_nat nf_conntrack iptable_security ebtable_filter ebtables ip6table_filter ip6_tables vmnet(O) ppdev parport_pc parport vboxpci(O) vboxnetadp(O) vboxnetflt(O) fuse vmw_vsock_vmci_transport vsock vmw_vmci vmmon(O) vboxdrv(O) cmac bnep cpufreq_stats vfat fat arc4 iTCO_wdt snd_soc_skl iTCO_vendor_support
+oct. 06 12:21:43 localhost.localdomain kernel:  snd_soc_skl_ipc snd_hda_codec_hdmi snd_soc_sst_ipc intel_rapl snd_soc_sst_dsp x86_pkg_temp_thermal snd_hda_codec_realtek snd_hda_ext_core intel_powerclamp snd_hda_codec_generic coretemp snd_soc_sst_match kvm_intel snd_soc_core kvm snd_compress snd_pcm_dmaengine ac97_bus snd_hda_intel snd_hda_codec iwlmvm snd_hda_core mac80211 irqbypass intel_cstate intel_rapl_perf snd_hwdep snd_seq snd_seq_device btusb snd_pcm btrtl uvcvideo btbcm btintel videobuf2_vmalloc videobuf2_memops joydev bluetooth videobuf2_v4l2 iwlwifi i2c_i801 snd_timer videobuf2_core cfg80211 rtsx_pci_ms videodev memstick media mei_me mei shpchp thinkpad_acpi intel_pch_thermal snd soundcore rfkill wmi tpm_tis tpm nfsd auth_rpcgss nfs_acl lockd grace sunrpc xfs libcrc32c dm_crypt hid_logitech_hidpp hid_logitech_dj 8021q garp
+oct. 06 12:21:43 localhost.localdomain kernel:  stp llc mrp i915 rtsx_pci_sdmmc mmc_core crct10dif_pclmul crc32_pclmul crc32c_intel e1000e i2c_algo_bit drm_kms_helper ghash_clmulni_intel drm serio_raw ptp pps_core rtsx_pci video fjes
+oct. 06 12:21:43 localhost.localdomain kernel: CPU: 0 PID: 1109 Comm: systemd-logind Tainted: G     U  W  O    4.7.5-200.fc24.x86_64 #1
+oct. 06 12:21:43 localhost.localdomain kernel: Hardware name: LENOVO 20FNCTO1WW/20FNCTO1WW, BIOS R06ET42W (1.16 ) 09/20/2016
+oct. 06 12:21:43 localhost.localdomain kernel:  0000000000000286 0000000018e0c148 ffff8800d283b850 ffffffffb63daaaf
+oct. 06 12:21:43 localhost.localdomain kernel:  ffff8800d283b8a0 0000000000000000 ffff8800d283b890 ffffffffb60a0b0b
+oct. 06 12:21:43 localhost.localdomain kernel:  000034dd00000000 ffff88040f607000 0000000000000000 0000000000000000
+oct. 06 12:21:43 localhost.localdomain kernel: Call Trace:
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb63daaaf&gt;] dump_stack+0x63/0x84
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60a0b0b&gt;] __warn+0xcb/0xf0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60a0b8f&gt;] warn_slowpath_fmt+0x5f/0x80
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60e4483&gt;] ? finish_wait+0x53/0x70
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc05046a8&gt;] intel_atomic_commit+0x13b8/0x1470 [i915]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60e46e0&gt;] ? prepare_to_wait_event+0xf0/0xf0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc0380ba7&gt;] drm_atomic_commit+0x37/0x60 [drm]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc03e21e8&gt;] restore_fbdev_mode+0x238/0x260 [drm_kms_helper]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc03e45d4&gt;] drm_fb_helper_restore_fbdev_mode_unlocked+0x34/0x80 [drm_kms_helper]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc03e464d&gt;] drm_fb_helper_set_par+0x2d/0x50 [drm_kms_helper]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffc051ea4a&gt;] intel_fbdev_set_par+0x1a/0x60 [i915]
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb645a6b6&gt;] fb_set_var+0x236/0x460
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60e4004&gt;] ? __wake_up+0x44/0x50
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb67ea562&gt;] ? down_write+0x12/0x40
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64caabb&gt;] ? tty_unthrottle+0x3b/0x60
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb645074f&gt;] fbcon_blank+0x30f/0x350
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64db0b2&gt;] do_unblank_screen+0xd2/0x1a0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64d0ef6&gt;] vt_ioctl+0x4f6/0x1270
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb64c537a&gt;] tty_ioctl+0x35a/0xc50
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb625f909&gt;] ? dput+0xd9/0x260
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb625b4b2&gt;] do_vfs_ioctl+0xa2/0x5d0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb60be9b8&gt;] ? task_work_run+0x88/0xb0
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb625ba59&gt;] SyS_ioctl+0x79/0x90
+oct. 06 12:21:43 localhost.localdomain kernel:  [&lt;ffffffffb67ec572&gt;] entry_SYSCALL_64_fastpath+0x1a/0xa4
+oct. 06 12:21:43 localhost.localdomain kernel: ---[ end trace 9f62268cfd97b6cb ]---</pre>
+<p>As seen above, it would always happen after a while and when the graphic chip goes to the RC6 power saving mode.</p>
+<p>After searching on different forum and wikis, I applied the proposed solution of completly disabling the RC6 mode. Add the part in <span style="color: #ff0000;">red</span> to the kernel options in your grub configuration file:</p>
+<pre>%  cat /etc/default/grub 
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="rd.lvm.lv=fedora/root rd.luks.uuid=luks-a9d14a0e-6c22-4976-919a-d216bd69d563 rd.lvm.lv=fedora/swap resume=/dev/dm-2 quiet splash <span style="color: #ff0000;"><strong>i915.enable_rc6=0</strong></span>"
+GRUB_DISABLE_RECOVERY="true"</pre>
+<p>Then, just rebuild grub and reboot. If you are on a UEFI system (as root):</p>
+<pre class="prettyprint"><code><span class="pln">grub2</span><span class="pun">-</span><span class="pln">mkconfig </span><span class="pun">-</span><span class="pln">o </span><span class="pun">/</span><span class="pln">boot</span><span class="pun">/</span><span class="pln">efi</span><span class="pun">/</span><span class="pln">EFI</span><span class="pun">/</span><span class="pln">fedora</span><span class="pun">/</span><span class="pln">grub</span><span class="pun">.</span><span class="pln">cfg</span></code></pre>
+<p><span style="text-decoration: underline;">Or</span>, for legacy BIOS:</p>
+<pre class="prettyprint"><code><span class="com">grub2-mkconfig -o /boot/grub2/grub.cfg</span></code></pre>
+<p>Finally reboot and you are done.</p>
+<p>There is a caveat however, as it will probably cause some battery drain. With <em>Powertop</em>, I measured a consumption increase of around 6 W (8 to 13W), which caused my battery life to drop from approximately 10h to 5h30.</p>
+<p>Still enough and a acceptable price to pay to work reliably without risking a complete system hang.</p>
+<p>But, if I had to buy a computer personally, I would make sure that it has an nvidia card. Yeah, I know that there proprietary blob has its caveats too, but from what I heard it is probably more stable.</p>
+<p>Graphic drivers have always been a problem for &#8220;Linux on the desktop&#8221;.</p>
+<h2>References</h2>
+<ul>
+<li>https://wiki.archlinux.org/index.php/intel_graphics</li>
+<li>https://wiki.gentoo.org/wiki/Intel</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="linux.html" rel="category tag">Linux</a>, <a href="../administration-systeme.html" rel="category tag">System</a> on <a href="../../2016/10/09/one-more-rant-against-the-linux-intel-driver.html" title="11:21 pm" rel="bookmark"><time class="entry-date" datetime="2016-10-09T23:21:04+00:00">October 9, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-2099" class="post-2099 post type-post status-publish format-standard hentry category-defense category-linux category-security category-administration-systeme category-virtualization tag-docker tag-dockerfile tag-etherpad tag-linux tag-nodejs">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html" title="Permalink to Lessons learned with Docker, Nodejs apps and volumes" rel="bookmark">Lessons learned with Docker, Nodejs apps and volumes</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h2>Context</h2>
+<p>I have kept playing with Docker recently, just for fun and to learn.</p>
+<p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
+<p>Indeed, I had some issues with Etherpad, which is a Nodejs application, and its integration into Docker.</p>
+<p>Initially, I made something quite simple, so my Dockerfile ended like that:</p>
+<pre>USER etherpad
+CMD ["node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>Thus, I simply start the app with a low privileges user.</p>
+<p>It worked, but I had two issues:</p>
+<ol>
+<li>Docker was not able to stop it nicely. Instead, it timed out after 10 sec and finally killed the app and the container altogether.</li>
+<li>No persistence of any kind, of course.</li>
+</ol>
+<p>I decided to tackle these two issues to understand what was going on behind.</p>
+<h2>The PID 1 issue</h2>
+<p>I could not understand immediately the first issue: why was Docker unable to terminate the container properly?</p>
+<p>After wandering a few hours on wrong paths (trying to get through with Nodejs nodemon or supervisor), I finally found some good articles, explaining that Docker misses an init system to catch signals, wich causes some issues with applications started with a PID = 1, which cannot be killed, or with Bash (the shell doesn&#8217;t handle transmitted signals.</p>
+<p>I am not going to repeat poorly what has already been explained very well, so I encourage you to read this two excellent posts:</p>
+<ul>
+<li><a href="https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/">The PID 1 zombie reaping problem</a></li>
+<li><a href="https://medium.com/@gchudnov/trapping-signals-in-docker-containers-7a57fdda7d86#.wqy8msjbk">Trapping signals in Docker containers</a></li>
+</ul>
+<p>You will also find a lot of bug reports in the Docker github about this issue, and a lot of hacky or overkilling solutions.</p>
+<p>In my opinion, the most elegant solution among them is to use a launcher program, very simple and dedicated to catch and handle signal.</p>
+<p>I chose to use <a href="https://github.com/yelp/dumb-init">Dumb-init</a>, as it is well packaged (there are plenty of options) and seems to be well maintained.</p>
+<p>So, after installing Dump-init in the Dockerfile, the CMD line should now look like this:</p>
+<pre>USER etherpad
+CMD ["dumb-init","node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>And indeed, as expected, <em>docker stop</em> now works flawlessly.</p>
+<h2>Volume permissions</h2>
+<p>This is where I had the toughest issue, although it is supposed to be straightforward with volumes.</p>
+<p>Volumes enable to share files or folders between host and containers, or between containers solely. There are plenty of possibilities, nicely illustrated on this blog:</p>
+<ul>
+<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker: storage patterns for persistence</a></li>
+</ul>
+<p>And it works very well&#8230;. as long as you application runs as root.</p>
+<p>In my case, for instance, Etherpad runs with a low privileged user, which is highly recommended. At startup, it creates a sqlite database, etherpad.db,  in its ./var folder.</p>
+<p>Mounting a volume, of any kind, over the ./var folder, would result in a folder with root only permissions. Subsequently, of course, the launch of Etherpad from the CMD command would fail miserably.</p>
+<p>Simple solutions like <em>chown</em> in the Dockerfile don&#8217;t work, because they apply <em>before</em> the mount. The <em>mount</em> occurs at runtime and works like a standard Linux <em>mount:</em> it is created by the docker daemon, with <em>root</em> permissions, over possibly existing data.</p>
+<p>My solution was to completely change the way Etherpad is started. I now use an external script which is started at runtime:</p>
+<ol>
+<li>First, it applies the appropriate permissions to the mounted volume with <em>chown,</em></li>
+<li>Then, it starts Etherpad with a low privileged user thanks to a <em>su</em> hack.</li>
+</ol>
+<p>So now the Dockerfile ends with:</p>
+<pre>VOLUME /opt/etherpad-lite/var
+ADD run-docker.sh ./bin/
+CMD ["./bin/run-docker.sh"]</pre>
+<p>And here is the script:</p>
+<pre>#!/bin/bash
+
+chown -R etherpad:etherpad /opt/etherpad-lite/var
+su etherpad -s /bin/bash -c  "dumb-init node /opt/etherpad-lite/node_modules/ep_etherpad-lite/no
+de/server.js"</pre>
+<p>I use a data volume for persistency, so the run command looks like this:</p>
+<pre>docker run -d --name etherpad -p 80:9001 -v etherpad:/opt/etherpad-lite/var -t debian-etherpad</pre>
+<p>Far from being ideal, but it works. I really hope some features are coming to bring more options in this area, especially in the Dockerfile.</p>
+<h2>Some final thoughts</h2>
+<p>Globally, we can still hope a lot of improvements in security, because when I look at many Dockerfiles around, I see two behaviors:</p>
+<ul>
+<li>A lot of people don&#8217;t care and everything is happily running as root, from unauthenticated third-party images or binaries&#8230;</li>
+<li>Some people do care but end up with dirty hacks, because there is no other way to do so.</li>
+</ul>
+<p>It is scary and so far from the Linux philosophy. Let&#8217;s wait for the enhancements to come.</p>
+<p>You can find the complete <em>updated</em> Dockerfile on <a href="https://github.com/phocean/dockerfile-debian-etherpad/blob/master/Dockerfile">this github page</a>.</p>
+<p>While we are on this topic, have a look to <a href="http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks">this nice post with some nice tips and tricks</a> for Docker.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../security/defense.html" rel="category tag">Defense</a>, <a href="linux.html" rel="category tag">Linux</a>, <a href="../security.html" rel="category tag">Security</a>, <a href="../administration-systeme.html" rel="category tag">System</a>, <a href="virtualization.html" rel="category tag">Virtualization</a> <i class="icon-tag"></i> <a href="../../tag/docker.html" rel="tag">Docker</a>, <a href="../../tag/dockerfile.html" rel="tag">Dockerfile</a>, <a href="../../tag/etherpad.html" rel="tag">Etherpad</a>, <a href="../../tag/linux.html" rel="tag">Linux</a>, <a href="../../tag/nodejs.html" rel="tag">Nodejs</a> <i class="icon-calendar"></i> <a href="../../2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html" title="7:05 pm" rel="bookmark"><time class="entry-date" datetime="2016-05-06T19:05:01+00:00">May 6, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-2064" class="post-2064 post type-post status-publish format-standard hentry category-linux category-administration-systeme category-virtualization tag-btrfs tag-linux tag-snapper tag-virtualbox">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2016/03/20/a-journey-with-btrfs.html" title="Permalink to A journey with Btrfs" rel="bookmark">A journey with Btrfs</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h1>Why BTRFS ?</h1>
+<p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
+<p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
+<p>As a quick reminder, the goal of this file system is to bring to Linux a fully featured file system similar to zfs. Some of these features promise a lot of awesomeness: snapshots, native RAID, automatic defragmentation and repairs, etc.</p>
+<p>Wouldn&#8217;t it be cool to have such a file system for your data? Among them, snapshotting really is a killer feature. See it as a global git for all your data. You can track any file history, make a diff comparison on them and revert back to a chosen version, anytime and on-line.</p>
+<p>Btrfs has been under development for a while and it is still undergoing. However, the first stable version has finally been released last year.</p>
+<p>Many people warn that it is not production ready yet. It seems obvious for critical production systems, under heavy load or using the most advanced features (e.g. RAID). But what about a simple /home, mainly using snapshots (which have been around for a while)?</p>
+<p>You will see that there are still some issues with virtualization.</p>
+<p><strong><em>Disclaimer 1: this is in no way a review or a benchmark of Btrfs. Consider it simply as some feedback for my specific use case.</em></strong></p>
+<h1>Getting ready</h1>
+<p>This chapter is a summary of procedures found in various resources, along with my feedback.</p>
+<p><em><strong>Disclaimer 2: First of all, make several backup of your entire /home. And make sure that it is operational and complete. Anyway, beware that there is obviously some inherent risk for your data in manipulating your home partition. So, do not come back to insult me if you lose any data.</strong></em></p>
+<p>First, note that there is a conversion utility <em>btrfs-convert</em>, to convert an existing ext4 partition to btrfs. While this sounds cool, it did not work well with my partition, leading to many corrupted inodes.</p>
+<p>So my advice is to just make a good backup of your home:</p>
+<pre>% rsync -av /home /your/backup/</pre>
+<p>Then, log out and format the partition as root:</p>
+<pre># mount | grep home
+/dev/mapper/system-home on /home type ext4 (rw,noatime,data=ordered)
+# umount /home
+# mkfs.btrfs /dev/mapper/system-home</pre>
+<p>Change the file system and its options in /etc/fstab. For example:</p>
+<pre>/dev/system/home     /home     ext4     defaults,noatime     1 1</pre>
+<p>should become (also note the change on the last digit):</p>
+<pre>/dev/system/home   /home    btrfs  defaults,noatime,ssd,space_cache,compress=lzo    1 0</pre>
+<p>Re-mount /home and you are done!</p>
+<h1>Snapper</h1>
+<p>The main purpose for me to test Btrfs was the snapshot feature, in the hope to keep a version history of each file and avoid accidental deletions and changes.</p>
+<p>Of course, one could use the Btrfs commands and implement snapshots manually. But why reinventing the wheel?</p>
+<p>The guys behind <a href="http://snapper.io/">snapper</a>  already made a service especially for that. It is basically a wrapper over Btrfs that will make automatic snapshots in the background, based on your frequency settings, and ease their handling.</p>
+<p>Once installed, it can be enabled with the following command:</p>
+<pre># snapper -c home create-config /home</pre>
+<p>It has the effect of creating a configuration file, where you can adjust the number of snapshots you want to keep per day, week, month, etc. Of course, don&#8217;t keep too much data as it will waste free space, especially if you happen to move large amounts of data. Hourly and daily snapshots are OK, as they would be cleaned up quickly. But monthly or yearly snapshots would consume a lot of space and would be pretty useless for a /home.</p>
+<p>Here is what I used, without consuming much more than 10 GB:</p>
+<pre># subvolume to snapshot
+SUBVOLUME="/home"
+
+# filesystem type
+FSTYPE="btrfs"
+
+# users and groups allowed to work with config
+ALLOW_USERS=""
+ALLOW_GROUPS="
+
+# sync users and groups from ALLOW_USERS and ALLOW_GROUPS to .snapshots
+# directory
+SYNC_ACL="no"
+
+# start comparing pre- and post-snapshot in background after creating
+# post-snapshot
+BACKGROUND_COMPARISON="yes"
+
+# run daily number cleanup
+NUMBER_CLEANUP="yes"
+
+# limit for number cleanup
+NUMBER_MIN_AGE="1800"
+NUMBER_LIMIT="10"
+NUMBER_LIMIT_IMPORTANT="5"
+
+# create hourly snapshots
+TIMELINE_CREATE="yes"
+
+# cleanup hourly snapshots after some time
+TIMELINE_CLEANUP="yes"
+
+# limits for timeline cleanup
+TIMELINE_MIN_AGE="1800"
+<strong>TIMELINE_LIMIT_HOURLY="10"</strong>
+<strong>TIMELINE_LIMIT_DAILY="7"</strong>
+<strong>TIMELINE_LIMIT_WEEKLY="2"</strong>
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+
+# cleanup empty pre-post-pairs
+EMPTY_PRE_POST_CLEANUP="yes"
+
+# limits for empty pre-post-pair cleanup
+EMPTY_PRE_POST_MIN_AGE="1800"</pre>
+<p>Now, let&#8217;s play a little. In the following sequence, we create a file containing &#8220;Hello World!&#8221;, we then create a manual snapshot, change the file and display the differences:</p>
+<pre># vim test.txt
+# snapper -c home create --description "before test"
+# vim test.txt
+# sudo snapper -c home list
+Type   | # | Pre # | Date                     | User | Cleanup  | Description  | Userdata
+-------+---+-------+--------------------------+------+----------+--------------+---------
+single | 0 |       |                          | root |          | current      | 
+single | 1 |       | Sun Mar 13 19:44:21 2016 | root |          | before test  | 
+single | 2 |       | Sun Mar 13 19:45:12 2016 | root |          | created test | 
+single | 3 |       | Sun Mar 13 19:52:39 2016 | root |          | update test  | 
+single | 4 |       | Sun Mar 13 20:00:01 2016 | root | timeline | timeline     | 
+single | 5 |       | Sun Mar 13 21:00:01 2016 | root | timeline | timeline     | 
+single | 6 |       | Sun Mar 13 22:00:01 2016 | root | timeline | timeline     | 
+# snapper -c home status 1..0
+--- "/home/.snapshots/2/snapshot/phocean/test.txt" 2016-03-13 19:44:53.370641373 +0100
++++ "/home/phocean/test.txt" 2016-03-13 19:45:27.226586459 +0100
+@@ -1 +1,2 @@
+Hell World!
++Good bye.
+@@ -0,0 +1,2 @@
++Hell World!
++Good bye</pre>
+<p>Neat, isn&#8217;t it? Now, what if we decide to restore the file to this snapshot:</p>
+<pre>snapper -c home undochange 1..0 /home/phocean/test.txt</pre>
+<p>That&#8217;s it!</p>
+<p>Note that all these operations can be done against the entire partition (no argument needed), a folder or a file.</p>
+<h1>Pros</h1>
+<p>Regarding regular files, I had no issue at all. After a week of intensive use, I already the occasion to enjoy the benefits of having snapshots and being able to restore a file.</p>
+<p>On the performance side, even though I haven&#8217;t done any benchmark, it is a least as fast as ext4. It is said that under some conditions, compression can be a big read rate boost.</p>
+<p>On the compression side, on my partition of 400 GB, it allowed me to reclaim around 20 GB of space. Of course, the gain you can expect is totally related to the sorts of files you have (you won&#8217;t gain much on files that are already compressed or encrypted).</p>
+<h1>Cons</h1>
+<p>As warned on the official wiki itself, you should not use Btrfs as-is with database or virtualization solutions.</p>
+<p>Dixit the official wiki:</p>
+<blockquote><p>Files with a lot of random writes can become heavily fragmented (10000+ extents) causing trashing on HDDs and excessive multi-second spikes of CPU load on systems with an SSD or large amount a RAM.</p></blockquote>
+<p>Indeed, I quickly experienced some issues with Virtualbox. Under heavy I/O operations, and having several machines running at a time, I had the guest file systems corrupted more than once. And so badly that the guest machine was unrecoverable (even with snapshots). Sometimes I got plenty of ext4 errors, or sometimes it just froze, while copying a bunch of file or doing an <em>apt-get upgrade.</em>..</p>
+<p>The <a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">workarounds</a> did not make it for me:</p>
+<ol>
+<li>I even did not test disabling CoW for the whole partition. It kills one of the main advantages of using Btrfs.</li>
+<li>I tried disabling CoW for all the VM folder. While the corruption frequency decreased, it still occurred after a while.</li>
+</ol>
+<p>So, I would simply adivse of not putting any virtual machine on the Btrfs partitions, until this thing definitely get sorted. I use virtual machines intensively at work and need them to be reliable.</p>
+<h1>Conclusion</h1>
+<p>Btrfs is awesome and pretty stable at this time, unless you need to host virtual machines. You could still have a dedicate ext4 partition for you VMs, and enjoy Btrfs for the rest of your home.</p>
+<p>To be honest, I did not bother (not wanting to manage several partitions), and switched back to ext4 for all, in the expectation of better days. I am not sure if this should be addressed on the Btrfs, or the Virtualbox side (or both).</p>
+<h1>References</h1>
+<ul>
+<li><a href="https://en.opensuse.org/openSUSE:Snapper_FAQ">Snapper FAQ</a></li>
+<li><a href="https://fr.opensuse.org/openSUSE:Snapper_Tutorial">Snapper tutorial</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs">Arch Linux Btrfs wiki</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Btrfs">Gentoo Btrfs wiki</a></li>
+<li><a href="http://www.nrtm.org/index.php/2012/03/13/the-joys-of-btrfs-and-opensuse-or-no-space-left-on-device/">The joys of btrfs and opensuse or no space left on device</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs#Copy-On-Write_.28CoW.29">CoW workarounds</a></li>
+<li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="linux.html" rel="category tag">Linux</a>, <a href="../administration-systeme.html" rel="category tag">System</a>, <a href="virtualization.html" rel="category tag">Virtualization</a> <i class="icon-tag"></i> <a href="../../tag/btrfs.html" rel="tag">btrfs</a>, <a href="../../tag/linux.html" rel="tag">Linux</a>, <a href="../../tag/snapper.html" rel="tag">snapper</a>, <a href="../../tag/virtualbox.html" rel="tag">virtualbox</a> <i class="icon-calendar"></i> <a href="../../2016/03/20/a-journey-with-btrfs.html" title="4:35 pm" rel="bookmark"><time class="entry-date" datetime="2016-03-20T16:35:59+00:00">March 20, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-1230" class="post-1230 post type-post status-publish format-standard hentry category-defense category-linux category-mac-os category-security category-administration-systeme tag-antivirus tag-apple tag-gnome tag-kde tag-linux tag-mac-os tag-malware tag-sophos">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html" title="Permalink to Misc rants on Linux desktop, Mac OS and Antivirus" rel="bookmark">Misc rants on Linux desktop, Mac OS and Antivirus</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h2>Linux desktop is in bad shape&#8230;</h2>
+<p>The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs.</p>
+<p>Unity? Like many people, I just don&#8217;t get it. It is pretty clumsy and feels unachieved. I also suffered from a lot of performance issues like <a title="Unity lag" href="https://bugs.launchpad.net/bugs/764330" target="_blank">this</a> that are never fixed and make it a pain to use daily.<br />
+Gnome 3? Actually, I liked it. It looks nice, is pretty fast and smooth. What I like the most is the workflow. It really makes use of workspaces logical and optimum. But&#8230; it did not work for me! Instability, <a title="Gnome 3 VMWare hang" href="https://bugs.launchpad.net/bugs/869408" target="_blank">again</a> and <a title="Gnome 3 and ATI" href="http://ati.cchtml.com/show_bug.cgi?id=99" target="_blank">again</a>.<br />
+You will tell me, that I should have stayed with Gnome 2 or go to XFCE / Openbox / etc. I have used all of them. They have qualities, sure, but we are in 2012 and I want something with more features.</p>
+<p><strong>Conclusion</strong>: it is sad that after so many years, Linux is not yet ready for the desktop, because some guys decided to break everything again instead of doing incremental enhancements. Why breaking so suddenly things that work? I don&#8217;t get it. I felt really fustrated with the feeling that I was at the same point as 5 years ago, dealing with the same kind of bugs. I have long been a Linux advocate and I believed I was right a few years back when I told people it was promising and superior to the competition (Windows XP at the time). Now years have passed, and I started to feel I was lying, or hiding the truth that is Linux Desktop failed and went nowhere.<br />
+Yes, I just got tired to fight with the computer to get basic things done. And considering the <a title="Linus Thorvalds on Gnome 3" href="https://plus.google.com/102150693225130002912/posts/UkoAaLDpF4i" target="_blank">Linus post</a> and several reactions into the comments, I am not alone in this case.</p>
+<h2>&#8230; so I gave a try to Apple&#8230;</h2>
+<p>I recently got a Mac Book Pro. The main reason is I wanted a very stable workstation to focus on my work. It was hard to admit after so many years using it, but I came to the conclusion that a Linux desktop could not meet this requirement anymore.</p>
+<p>So I am going to be with Mac OS Lion for a while (though I am certainly not closing the door to the Linux desktop forever). I have to say that it is a nice OS and it is damned stable. It is good to have something that works out of the box, without any frustration or need to customize things to have something suitable.</p>
+<p>And what about the stability of Mac OS? It is very eye candy, but is it stable?</p>
+<p>At first, I actually had some serious troubles. It was freezing almost every day, forcing me to a cold reboot. I started to be seriously doubtful concerning the stability of Mac OS, when I found by chance that the freeze occured every time that Sophos Antivirus started an update&#8230;</p>
+<h2>Antivirus and Mac OS&#8230;</h2>
+<p>Wait, what? Antivirus? On Mac OS? I know it will be the reaction of many Mac users. I do also think that it is useless, but for a different reason than most of them.<br />
+Of course, I don&#8217;t get the &#8220;Mac OS is secure&#8221; marketing. Actually, it has the less secure kernel around, even though it benefits from a robust Unix architecture.<br />
+No, my point is that antivirus all fail anyway. In forensic analysis, we can even not trust an antivirus scan to decide if a machine is sane or not. Instead, we have to use specific tools and memory acquisition to make sure.<br />
+It is simply because signature-based detection can always be worked around by malwares. There are hundreds of ways to achieve it successfully: changing binary headers, code obfuscation, encryption, hooking (see rootkits and bootkits).<br />
+Ok, antivirus vendors claim that they also offer behavioral detection, sandboxes, etc. Yes, that&#8217;s a good move, but they can&#8217;t check all of the system activity and again there are many ways to bypass it. So why bother?</p>
+<p>I mean, I still think it matters to have an antivirus on Windows. Especially for people who are not too techy. At least, it will detect the most basics threats and throw out alarms. There are thousands of such threats on Windows, and on this point antivirus offer a simple way to defeat them (though awareness and education are certainly more important).</p>
+<p>But on Mac Os, and on Linux as well, there are very few threats. Once again, it is not that they are so much secure, but at the time I am writing, it is a fact.</p>
+<p>So to summarize:</p>
+<ul>
+<li>very few threats on Mac OS and Linux</li>
+<li>antivirus still massively rely on signature-based detection</li>
+</ul>
+<p>You see: if there is nothing much to detect, an antivirus is overhead. It will only eat some resources and fail anyway against coming threats.<br />
+Just keeping the system up-to-date is certainly the best thing to do so far.</p>
+<p>Well, so why did I set an antivirus? I was actually using it for my forensic analysis on Windows machines. It was a convenient way for me to have a local scanner that I could started on dumped suspicious processes, without having to connect on Viruscan. It used to be convenient when I was traveling without connection, but I can live without it.</p>
+<h2>About Sophos for Mac OS</h2>
+<p>So moreover this piece of software was crashing my laptop. The update part seems to be executed with root privileges, and for some reason it locks the system (not only mine, <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Version-8-s-AutoUpdate-consistently-CRASHING/td-p/5957o29DA&amp;usg=AFQjCNGa-t6bKUNhGqDIdvtkicGvsdvMmg" target="_blank">look</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Sophos-AV-7-3-8C-Crashed-MacBook-Pro-AGAIN-Unacceptable-Software/td-p/5397" target="_blank">at</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Given-up-temporarily-on-Sophos-for-Mac/td-p/3703" target="_blank">the</a> forums). Not to mention that having such a component may offer more room to malicious code to exploit the kernel&#8230;</p>
+<p>A shame, a pure piece of crap. Now that I removed it, I am enjoying an uptime of about 30 days!</p>
+<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="../../wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
+<h2>Conclusion</h2>
+<p>Sophos Antivirus for Mac OS is pure crap, run to remove it if it happens to be on your computer.</p>
+<p>Anyway, you don&#8217;t need an antivirus on Mac OS. Moreover, it seems that several vendor offer solution that lack of maturity and testing on this platform. So you would actually degrade your system stability and security if you would installed on of these.</p>
+<p>And Mac OS is a nice Unix-based desktop alternative to have the work done, even though sadly it is not open-source.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../security/defense.html" rel="category tag">Defense</a>, <a href="linux.html" rel="category tag">Linux</a>, <a href="mac-os.html" rel="category tag">Mac OS</a>, <a href="../security.html" rel="category tag">Security</a>, <a href="../administration-systeme.html" rel="category tag">System</a> <i class="icon-tag"></i> <a href="../../tag/antivirus.html" rel="tag">Antivirus</a>, <a href="../../tag/apple.html" rel="tag">Apple</a>, <a href="../../tag/gnome.html" rel="tag">Gnome</a>, <a href="../../tag/kde.html" rel="tag">kde</a>, <a href="../../tag/linux.html" rel="tag">Linux</a>, <a href="../../tag/mac-os.html" rel="tag">Mac OS</a>, <a href="../../tag/malware.html" rel="tag">malware</a>, <a href="../../tag/sophos.html" rel="tag">Sophos</a> <i class="icon-calendar"></i> <a href="../../2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html" title="11:29 pm" rel="bookmark"><time class="entry-date" datetime="2012-06-05T23:29:27+00:00">June 5, 2012</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+	<article id="post-448" class="post-448 post type-post status-publish format-standard hentry category-linux">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../../2011/09/30/opensuse-and-windows-samba-share.html" title="Permalink to openSUSE and Windows samba share" rel="bookmark">openSUSE and Windows samba share</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<p>By default, access from openSUSE or any Linux box,to a Windows Vista CIFS share is broken.<br />
+The cause is that Samba speaks NTLM while Vista speaks only NTLMv2.</p>
+<p><a title="Vista and Samba share" href="http://forum.soft32.com/windows/Connecting-Linux-samba-share-Vista-ftopict345337.html">Googling</a> provided the solution, but it does not seems well known yet.</p>
+<p>A workaround is to make Vista more flexible on client acceptation.</p>
+<p>If you are running the Ultimate or Buisness version of Vista :</p>
+<ul>
+<li>Run secpol.msc</li>
+<li>Go to <em>Local Policies / Security Options</em></li>
+<li>Find <em>Network Security : LAN Manager authentication level</em></li>
+<li>Change the setting from <em>Send NTLMv2 response only</em> to <em>Send LM &amp; NTLM &#8211; use NTLMv2 session security if negotiated</em></li>
+</ul>
+<p>If you are running the Home version, you will have to edit the registry manually :</p>
+<p><em>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\LMCompatibilityLevel</em></p>
+<p>If it doesn&#8217;t already exist, create a <em>DWORD</em> value named <em>LmCompatibilityLevel</em> and set its value to 1.</p>
+<p>Or in smb.conf :<br />
+<code>client ntlmv2 auth = yes</code></p>
+<p>More ressources <a title="NTLM" href="http://davenport.sourceforge.net/ntlm.html#theNtlm2SessionResponse" target="_blank">there</a>.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="linux.html" rel="category tag">Linux</a> on <a href="../../2011/09/30/opensuse-and-windows-samba-share.html" title="2:46 pm" rel="bookmark"><time class="entry-date" datetime="2011-09-30T14:46:53+00:00">September 30, 2011</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->			<nav id="nav-below" class="navigation" role="navigation">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="linux/page/2.html" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- .navigation -->
+			
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.546 seconds. Made 13 queries to database and 46 cached queries. Memory used - 27.61MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/category/administration-systeme/linux by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:22:10 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.517 seconds. -->

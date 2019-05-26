@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Unity &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/unity/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>VMWare Workstation 6.5</title>
+		<link>/blog-archive/2008/10/05/vmware-workstation-65.html</link>
+		<comments>/blog-archive/2008/10/05/vmware-workstation-65.html#comments</comments>
+		<pubDate>Sun, 05 Oct 2008 16:46:40 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Debian]]></category>
+		<category><![CDATA[Gnome]]></category>
+		<category><![CDATA[kernel 2.6.26]]></category>
+		<category><![CDATA[Unity]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[vmware-any-any]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
+		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p style="text-align: left;">I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features.</p>
+<p style="text-align: left;">The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file.</p>
+<p style="text-align: left;">After downloading, as root, just make it executable or start it with sh :</p>
+<pre>% sh VMware-Workstation-6.5.0-118166.x86_64.bundle</pre>
+<p style="text-align: left;">It now starts a graphic installer, that takes care of everything. All the compilation process is now hidden to the user.</p>
+<p style="text-align: left;">I was expecting the compilation to fail and that I would have to look for a patch to run on my edge Linux kernel. Indeed, I just compiled 2.6.26 kernel (64 bits) a few days ago.</p>
+<p style="text-align: left;">But nothing like that. the process went smoothly.</p>
+<p style="text-align: left;">However, I was still prudent. Even after a compiling, previous versions almost always required some patch to get full networking to work.</p>
+<p style="text-align: left;">So I gave a try and launch one of my virtual machines. Surprise : all worked out of the box !</p>
+<p style="text-align: left;">For the first time, I even did not need any vmware-any-any patch or any network patched vmmon and vmnet modules to get wifi networking operational.</p>
+<p style="text-align: left;">I also quickly noticed some very nice and fancy features :</p>
+<ul style="text-align: left;">
+<li><strong>3D graphics support</strong></li>
+<li><strong>more</strong> <strong>devices supported</strong> : fingerprint reader device, audio driver for Vista, &#8230;</li>
+<li>a <strong>graphical virtual network settings</strong> editor : this utility had been for ages on the Windows version and finally will make your easier on Linux</li>
+</ul>
+<p style="text-align: left;">At last, but not least, the <strong>Unity</strong> display mode.</p>
+<p style="text-align: left;">Though I am not a Mac user, I believe this can be compared to VMWare Fusion. Anyway, it allows you to display the virtual machines programs within your X session.</p>
+<p style="text-align: left;">Look at this screenshot :</p>
+<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /blog-archive/wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="text-align: left;">The result is quite spectacular. On my Gnome desktop, I am now able to display some windows from Windows XP and Windows Vista.</p>
+<p style="text-align: left;">Well, this is not yet perfectly smooth or artifact free, but this is already really usable and responsive enough to be used intensively.</p>
+<p style="text-align: left;">Another limit is the operating system support. So far, among my virtual machines, I was able to do it with Windows systems but not Open Solaris for instance.</p>
+<p style="text-align: left;">There must have been more improvements, more or less visible, that I am not aware of. I won&#8217;t go for a full review.</p>
+<p style="text-align: left;">I just wanted to insist that if you are a VMWare user,  you really should consider to upgrade for the <strong>complete support of the latest kernel</strong> and the <strong>Unity</strong> feature.</p>
+<p style="text-align: left;">It seems that VMWare has listened to the Linux users, or at least is taking it more seriously. Not that they are nice, but the competitors are close (Virtual box, KVM, Xen&#8230;) !</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

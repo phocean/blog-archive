@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>cloud &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/cloud/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Cloud in the security sky or should I see a psychologist?</title>
+		<link>/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html</link>
+		<pubDate>Sat, 05 Feb 2011 18:22:45 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[CSRF]]></category>
+		<category><![CDATA[SSL]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1010</guid>
+		<description><![CDATA[The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later. Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later.</p>
+<p>Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can count on the salesmen to get a great picture of it again and again, its cons are silenced.</p>
+<p>Too bad, a major disadvantage is security. But guess what? The other day an &#8220;analyst&#8221; presenting his study about cloud computing just cleared out the issue in 3 words :</p>
+<blockquote><p>&#8220;Concerning the people who doubt of the security in the cloud, it is a typical psychological issue of theses persons fearing change or something new . There is really nothing concrete to worry about cloud security.&#8221;</p></blockquote>
+<p>Well, not sure I am going to see a psychologist. Of course the guy did not give any solid argument, so here we go.</p>
+<p>In short, cloud computing expose to the Internet services that were, in normal conditions, always kept inside an internal network and behind peripheral protections.</p>
+<p>Of course, these services offer authentication, but basically almost every traditional web attacks will work as usual. After all, we are talking about the same web portal, the same users, the same browsers, etc.</p>
+<p>Let quickly summarize the potential threats: CSRF, XSS, phishing, SSL attacks (MiTM, certificate spoofing),  browser exploits and many more.</p>
+<p>So really, it is not a question of being crazy, paranoid or reluctant to change. There are just many issues that don&#8217;t make the cloud useless but should incite to caution.</p>
+<p>Cloud computing can be used for what it is good at (flexibility, convenience) but not to replace a datacenter. It should not be used if security is a concern.</p>
+<p>Don&#8217;t listen to the salesman only, read what some specialists are saying. Here is a compilation of some interesting articles I found :</p>
+<ul>
+<li>Black Hat 2009 presentation : <a title="BackHat 2009 and cloud computing" href="http://www.isecpartners.com/storage/docs/presentations/Cloud-BlackHat-2009-iSEC.pdf">pdf</a> and <a title="black hat could models" href="http://www.cupfighter.net/index.php/2009/07/blackhat-talk-cloud-computing-models-and-vulnerabilities-raining-on-the-trendy-new-paradise-by-alex-stamos-andrew-becherer-nathan-wilcox/">summary</a></li>
+<li>Owasp presentation (<a title="Owasp and cloud computing security" href="http://www.owasp.org/images/1/12/Cloudy_with_a_chance_of_0_day_-_Jon_Rose-Tom_Leavey.pdf">pdf</a>)</li>
+<li><a title="dangers in the cloud" href="http://www.webvivant.com/dangers-in-the-cloud.html">Dangers in the cloud </a></li>
+<li><a title="Browsers vulnerabilities" href="http://lcamtuf.blogspot.com/2011/02/so-you-think-your-capability-model-is.html" target="_self">So you think *your* capability model is bad?</a> (browser&#8217;s weak design)</li>
+</ul>
+<p>And last but not least, in case our favorite salesman keeps pushy:</p>
+<ul>
+<li><a title="Amazon EC2 vulnerabilities" href="http://cloudsecurity.org/blog/2008/12/18/whats-new-in-the-amazon-cloud-security-vulnerability-in-amazon-ec2-and-simpledb-fixed-75-months-after-notification.html">Amazon EC2 vulnerabilities</a></li>
+<li><a title="Salesforce phishing incident" href="http://www.ebizq.net/blogs/security_insider/2007/11/implications_of_salesforce_phi.php">Salesforce phishing incident</a></li>
+</ul>
+<p>But that&#8217;s not all. The same goes with &#8220;virtualization everywhere&#8221;, but that will be another topic&#8230;</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

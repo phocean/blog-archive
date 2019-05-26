@@ -1,0 +1,269 @@
+Record       Order    Pid      Name             DisplayName                              Type                           State                Path
+0x381e90     0x1      -------- 'Abiosdsk'       'Abiosdsk'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x381f20     0x2      -------- 'abp480n5'       'abp480n5'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x381fb0     0x3      -------- 'ac97intc'       'Intel(r) 82801 Audio Driver Install Service (WDM)' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382040     0x4      -------- 'ACPI'           'Microsoft ACPI Driver'                  SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\ACPI
+0x3820c8     0x5      -------- 'ACPIEC'         'ACPIEC'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382158     0x6      -------- 'adpu160m'       'adpu160m'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3821e8     0x7      -------- 'aec'            'Microsoft Kernel Acoustic Echo Canceller' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382270     0x8      -------- 'AFD'            'AFD'                                    SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\AFD
+0x3822f8     0x9      -------- 'agp440'         'Intel AGP Bus Filter'                   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\agp440
+0x382388     0xa      -------- 'Aha154x'        'Aha154x'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382418     0xb      -------- 'aic78u2'        'aic78u2'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3824a8     0xc      -------- 'aic78xx'        'aic78xx'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382538     0xd      -------- 'Alerter'        'Alerter'                                SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x3825c8     0xe      420      'ALG'            'Application Layer Gateway Service'      SERVICE_WIN32_OWN_PROCESS      SERVICE_RUNNING      C:\WINDOWS\System32\alg.exe
+0x382650     0xf      -------- 'AliIde'         'AliIde'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3826e0     0x10     -------- 'amsint'         'amsint'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382770     0x11     -------- 'AppMgmt'        'Application Management'                 SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x382800     0x12     -------- 'asc'            'asc'                                    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382888     0x13     -------- 'asc3350p'       'asc3350p'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382918     0x14     -------- 'asc3550'        'asc3550'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3829a8     0x15     -------- 'aspnet_state'   'ASP.NET State Service'                  SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x382a40     0x16     -------- 'AsyncMac'       'RAS Asynchronous Media Driver'          SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382ad0     0x17     -------- 'atapi'          'Standard IDE/ESDI Hard Disk Controller' SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\atapi
+0x382b58     0x18     -------- 'Atdisk'         'Atdisk'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382be8     0x19     -------- 'Atmarpc'        'ATM ARP Client Protocol'                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382c78     0x1a     1124     'AudioSrv'       'Windows Audio'                          SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x382d08     0x1b     -------- 'audstub'        'Audio Stub Driver'                      SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382d98     0x1c     -------- 'Beep'           'Beep'                                   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Beep
+0x382e20     0x1d     1124     'BITS'           'Background Intelligent Transfer Service' SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x382ea8     0x1e     -------- 'Browser'        'Computer Browser'                       SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x382f38     0x1f     -------- 'BthEnum'        'Bluetooth Request Block Driver'         SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x382fc8     0x20     -------- 'BthPan'         'Bluetooth Device (Personal Area Network)' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383058     0x21     -------- 'BTHPORT'        'Bluetooth Port Driver'                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3830e8     0x22     336      'BthServ'        'Bluetooth Support Service'              SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost.exe -k bthsvcs
+0x383178     0x23     -------- 'BTHUSB'         'Bluetooth Radio USB Driver'             SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383208     0x24     -------- 'cbidf2k'        'cbidf2k'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383298     0x25     -------- 'cd20xrnt'       'cd20xrnt'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383328     0x26     -------- 'Cdaudio'        'Cdaudio'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3833b8     0x27     -------- 'Cdfs'           'Cdfs'                                   SERVICE_FILE_SYSTEM_DRIVER     SERVICE_STOPPED      --------
+0x383440     0x28     -------- 'Cdrom'          'CD-ROM Driver'                          SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Cdrom
+0x3834c8     0x29     -------- 'Changer'        'Changer'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383558     0x2a     -------- 'CiSvc'          'Indexing Service'                       SERVICE_WIN32_SHARE_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_STOPPED      --------
+0x3835e0     0x2b     -------- 'ClipSrv'        'ClipBook'                               SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x383670     0x2c     -------- 'clr_optimization_v2.0.50727_32' '.NET Runtime Optimization Service v2.0.50727_X86' SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x383730     0x2d     -------- 'CmBatt'         'Microsoft AC Adapter Driver'            SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3837c0     0x2e     -------- 'CmdIde'         'CmdIde'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383850     0x2f     -------- 'Compbatt'       'Microsoft Composite Battery Driver'     SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Compbatt
+0x3838e0     0x30     -------- 'COMSysApp'      'COM+ System Application'                SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x383970     0x31     -------- 'Cpqarray'       'Cpqarray'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383a00     0x32     1124     'CryptSvc'       'Cryptographic Services'                 SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x383a90     0x33     -------- 'dac960nt'       'dac960nt'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383b20     0x34     916      'DcomLaunch'     'DCOM Server Process Launcher'           SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost -k DcomLaunch
+0x383bb8     0x35     1124     'Dhcp'           'DHCP Client'                            SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x383c40     0x36     -------- 'Disk'           'Disk Driver'                            SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Disk
+0x383cc8     0x37     -------- 'dmadmin'        'Logical Disk Manager Administrative Service' SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x383d58     0x38     -------- 'dmboot'         'dmboot'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x383de8     0x39     -------- 'dmio'           'Logical Disk Manager Driver'            SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\dmio
+0x383e70     0x3a     -------- 'dmload'         'dmload'                                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\dmload
+0x383f00     0x3b     1124     'dmserver'       'Logical Disk Manager'                   SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x383f90     0x3c     -------- 'DMusic'         'Microsoft Kernel DLS Syntheiszer'       SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384020     0x3d     1168     'Dnscache'       'DNS Client'                             SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost.exe -k NetworkService
+0x3840b0     0x3e     -------- 'Dot3svc'        'Wired AutoConfig'                       SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x384140     0x3f     -------- 'dpti2o'         'dpti2o'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3841d0     0x40     -------- 'drmkaud'        'Microsoft Kernel DRM Audio Descrambler' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384260     0x41     -------- 'EapHost'        'Extensible Authentication Protocol Service' SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x3842f0     0x42     1124     'ERSvc'          'Error Reporting Service'                SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x384378     0x43     -------- 'es1371'         'Creative AudioPCI (ES1371,ES1373) (WDM)' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384408     0x44     728      'Eventlog'       'Event Log'                              SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\services.exe
+0x384498     0x45     1124     'EventSystem'    'COM+ Event System'                      SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x384530     0x46     -------- 'Fastfat'        'Fastfat'                                SERVICE_FILE_SYSTEM_DRIVER     SERVICE_STOPPED      --------
+0x3845c0     0x47     1124     'FastUserSwitchingCompatibility' 'Fast User Switching Compatibility'      SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x384680     0x48     -------- 'Fdc'            'Floppy Disk Controller Driver'          SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384708     0x49     -------- 'Fips'           'Fips'                                   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Fips
+0x384790     0x4a     -------- 'Flpydisk'       'Floppy Disk Driver'                     SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384820     0x4b     -------- 'FltMgr'         'FltMgr'                                 SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\FltMgr
+0x3848b0     0x4c     -------- 'FontCache3.0.0.0' 'Windows Presentation Foundation Font Cache 3.0.0.0' SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x384950     0x4d     -------- 'Ftdisk'         'Volume Manager Driver'                  SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Ftdisk
+0x3849e0     0x4e     -------- 'gameenum'       'Game Port Enumerator'                   SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384a70     0x4f     -------- 'Gpc'            'Generic Packet Classifier'              SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384af8     0x50     1124     'helpsvc'        'Help and Support'                       SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x384b88     0x51     -------- 'HidServ'        'Human Interface Device Access'          SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x384c18     0x52     -------- 'hidusb'         'Microsoft HID Class Driver'             SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384ca8     0x53     -------- 'hkmsvc'         'Health Key and Certificate Management Service' SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x384d38     0x54     -------- 'hpn'            'hpn'                                    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384dc0     0x55     -------- 'HTTP'           'HTTP'                                   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\HTTP
+0x384e48     0x56     -------- 'HTTPFilter'     'HTTP SSL'                               SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x384ee0     0x57     -------- 'i2omgmt'        'i2omgmt'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384f70     0x58     -------- 'i2omp'          'i2omp'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x384ff8     0x59     -------- 'i8042prt'       'i8042 Keyboard and PS/2 Mouse Port Driver' SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\i8042prt
+0x385088     0x5a     -------- 'idsvc'          'Windows CardSpace'                      SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x385110     0x5b     -------- 'Imapi'          'CD-Burning Filter Driver'               SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Imapi
+0x385198     0x5c     -------- 'ImapiService'   'IMAPI CD-Burning COM Service'           SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x385230     0x5d     -------- 'ini910u'        'ini910u'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3852c0     0x5e     -------- 'IntelIde'       'IntelIde'                               SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\IntelIde
+0x385350     0x5f     -------- 'intelppm'       'Intel Processor Driver'                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\intelppm
+0x3853e0     0x60     -------- 'Ip6Fw'          'IPv6 Windows Firewall Driver'           SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385468     0x61     -------- 'IpFilterDriver' 'IP Traffic Filter Driver'               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385508     0x62     -------- 'IpInIp'         'IP in IP Tunnel Driver'                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385598     0x63     -------- 'IpNat'          'IP Network Address Translator'          SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\IpNat
+0x385620     0x64     -------- 'IPSec'          'IPSEC driver'                           SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\IPSec
+0x3856a8     0x65     -------- 'IRENUM'         'IR Enumerator Service'                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385738     0x66     -------- 'isapnp'         'PnP ISA/EISA Bus Driver'                SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\isapnp
+0x3857c8     0x67     -------- 'Kbdclass'       'Keyboard Class Driver'                  SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Kbdclass
+0x385858     0x68     -------- 'kmixer'         'Microsoft Kernel Wave Audio Mixer'      SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3858e8     0x69     -------- 'KSecDD'         'KSecDD'                                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\KSecDD
+0x385978     0x6a     1124     'lanmanserver'   'Server'                                 SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x385a10     0x6b     1124     'lanmanworkstation' 'Workstation'                            SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x385ab0     0x6c     -------- 'lbrtfdc'        'lbrtfdc'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385b40     0x6d     1208     'LmHosts'        'TCP/IP NetBIOS Helper'                  SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost.exe -k LocalService
+0x385bd0     0x6e     -------- 'Messenger'      'Messenger'                              SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x385c60     0x6f     -------- 'mnmdd'          'mnmdd'                                  SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\mnmdd
+0x385ce8     0x70     -------- 'mnmsrvc'        'NetMeeting Remote Desktop Sharing'      SERVICE_WIN32_OWN_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_STOPPED      --------
+0x385d78     0x71     -------- 'Modem'          'Modem'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385e00     0x72     -------- 'Mouclass'       'Mouse Class Driver'                     SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Mouclass
+0x385e90     0x73     -------- 'mouhid'         'Mouse HID Driver'                       SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x385f20     0x74     -------- 'MountMgr'       'Mount Point Manager'                    SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\MountMgr
+0x385fb0     0x75     -------- 'mraid35x'       'mraid35x'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386040     0x76     -------- 'MRxDAV'         'WebDav Client Redirector'               SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\MRxDAV
+0x3860d0     0x77     -------- 'MRxSmb'         'MRxSmb'                                 SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\MRxSmb
+0x386160     0x78     -------- 'MSDTC'          'Distributed Transaction Coordinator'    SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x3861e8     0x79     -------- 'Msfs'           'Msfs'                                   SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\Msfs
+0x386270     0x7a     -------- 'MSIServer'      'Windows Installer'                      SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386300     0x7b     -------- 'MSKSSRV'        'Microsoft Streaming Service Proxy'      SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386390     0x7c     -------- 'MSPCLOCK'       'Microsoft Streaming Clock Proxy'        SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386420     0x7d     -------- 'MSPQM'          'Microsoft Streaming Quality Manager Proxy' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3864a8     0x7e     -------- 'mssmbios'       'Microsoft System Management BIOS Driver' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386538     0x7f     -------- 'Mup'            'Mup'                                    SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\Mup
+0x3865c0     0x80     -------- 'napagent'       'Network Access Protection Agent'        SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386650     0x81     -------- 'NDIS'           'NDIS System Driver'                     SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\NDIS
+0x3866d8     0x82     -------- 'NdisTapi'       'Remote Access NDIS TAPI Driver'         SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386768     0x83     -------- 'Ndisuio'        'NDIS Usermode I/O Protocol'             SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Ndisuio
+0x3867f8     0x84     -------- 'NdisWan'        'Remote Access NDIS WAN Driver'          SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386888     0x85     -------- 'NDProxy'        'NDIS Proxy'                             SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x386918     0x86     -------- 'NetBIOS'        'NetBIOS Interface'                      SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\NetBIOS
+0x3869a8     0x87     -------- 'NetBT'          'NetBios over Tcpip'                     SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\NetBT
+0x386a30     0x88     -------- 'NetDDE'         'Network DDE'                            SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386ac0     0x89     -------- 'NetDDEdsdm'     'Network DDE DSDM'                       SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386b58     0x8a     -------- 'Netlogon'       'Net Logon'                              SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386be8     0x8b     1124     'Netman'         'Network Connections'                    SERVICE_WIN32_SHARE_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x386c78     0x8c     -------- 'NetTcpPortSharing' 'Net.Tcp Port Sharing Service'           SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386d18     0x8d     1124     'Nla'            'Network Location Awareness (NLA)'       SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x386da0     0x8e     -------- 'Npfs'           'Npfs'                                   SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\Npfs
+0x386e28     0x8f     -------- 'Ntfs'           'Ntfs'                                   SERVICE_FILE_SYSTEM_DRIVER     SERVICE_STOPPED      --------
+0x386eb0     0x90     -------- 'NtLmSsp'        'NT LM Security Support Provider'        SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386f40     0x91     -------- 'NtmsSvc'        'Removable Storage'                      SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x386fd0     0x92     -------- 'Null'           'Null'                                   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Null
+0x387058     0x93     -------- 'NwlnkFlt'       'IPX Traffic Filter Driver'              SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3870e8     0x94     -------- 'NwlnkFwd'       'IPX Traffic Forwarder Driver'           SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387178     0x95     -------- 'Parport'        'Parallel port driver'                   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Parport
+0x387208     0x96     -------- 'PartMgr'        'Partition Manager'                      SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\PartMgr
+0x387298     0x97     -------- 'ParVdm'         'ParVdm'                                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\ParVdm
+0x387328     0x98     -------- 'PCI'            'PCI Bus Driver'                         SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\PCI
+0x3873b0     0x99     -------- 'PCIDump'        'PCIDump'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387440     0x9a     -------- 'PCIIde'         'PCIIde'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3874d0     0x9b     -------- 'Pcmcia'         'Pcmcia'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387560     0x9c     -------- 'PCnet'          'AMD PCNET Compatable Adapter Driver'    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3875e8     0x9d     -------- 'PDCOMP'         'PDCOMP'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387678     0x9e     -------- 'PDFRAME'        'PDFRAME'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387708     0x9f     -------- 'PDRELI'         'PDRELI'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387798     0xa0     -------- 'PDRFRAME'       'PDRFRAME'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387828     0xa1     -------- 'perc2'          'perc2'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3878b0     0xa2     -------- 'perc2hib'       'perc2hib'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387940     0xa3     728      'PlugPlay'       'Plug and Play'                          SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\services.exe
+0x3879d0     0xa4     740      'PolicyAgent'    'IPSEC Services'                         SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\lsass.exe
+0x387a68     0xa5     -------- 'PptpMiniport'   'WAN Miniport (PPTP)'                    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387b00     0xa6     740      'ProtectedStorage' 'Protected Storage'                      SERVICE_WIN32_SHARE_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_RUNNING      C:\WINDOWS\system32\lsass.exe
+0x387ba0     0xa7     -------- 'PSched'         'QoS Packet Scheduler'                   SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387c30     0xa8     -------- 'Ptilink'        'Direct Parallel Link Driver'            SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387cc0     0xa9     -------- 'ql1080'         'ql1080'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387d50     0xaa     -------- 'Ql10wnt'        'Ql10wnt'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387de0     0xab     -------- 'ql12160'        'ql12160'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387e70     0xac     -------- 'ql1240'         'ql1240'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387f00     0xad     -------- 'ql1280'         'ql1280'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x387f90     0xae     -------- 'RasAcd'         'Remote Access Auto Connection Driver'   SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\RasAcd
+0x388020     0xaf     -------- 'RasAuto'        'Remote Access Auto Connection Manager'  SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x3880b0     0xb0     -------- 'Rasl2tp'        'WAN Miniport (L2TP)'                    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388140     0xb1     -------- 'RasMan'         'Remote Access Connection Manager'       SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x3881d0     0xb2     -------- 'RasPppoe'       'Remote Access PPPOE Driver'             SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388260     0xb3     -------- 'Raspti'         'Direct Parallel'                        SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3882f0     0xb4     -------- 'Rdbss'          'Rdbss'                                  SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\Rdbss
+0x388378     0xb5     -------- 'RDPCDD'         'RDPCDD'                                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\RDPCDD
+0x388408     0xb6     -------- 'rdpdr'          'Terminal Server Device Redirector Driver' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388490     0xb7     -------- 'RDPWD'          'RDPWD'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388518     0xb8     -------- 'RDSessMgr'      'Remote Desktop Help Session Manager'    SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x3885a8     0xb9     -------- 'redbook'        'Digital CD Audio Playback Filter Driver' SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\redbook
+0x388638     0xba     -------- 'RemoteAccess'   'Routing and Remote Access'              SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x3886d0     0xbb     1208     'RemoteRegistry' 'Remote Registry'                        SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost.exe -k LocalService
+0x388770     0xbc     -------- 'RFCOMM'         'Bluetooth Device (RFCOMM Protocol TDI)' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388800     0xbd     -------- 'RpcLocator'     'Remote Procedure Call (RPC) Locator'    SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x388898     0xbe     980      'RpcSs'          'Remote Procedure Call (RPC)'            SERVICE_WIN32_OWN_PROCESS      SERVICE_RUNNING      C:\WINDOWS\system32\svchost -k rpcss
+0x388920     0xbf     -------- 'RSVP'           'QoS RSVP'                               SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x3889a8     0xc0     740      'SamSs'          'Security Accounts Manager'              SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\lsass.exe
+0x388a30     0xc1     -------- 'SCardSvr'       'Smart Card'                             SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x388ac0     0xc2     1124     'Schedule'       'Task Scheduler'                         SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x388b50     0xc3     -------- 'Secdrv'         'Secdrv'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388be0     0xc4     1124     'seclogon'       'Secondary Logon'                        SERVICE_WIN32_SHARE_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x388c70     0xc5     1124     'SENS'           'System Event Notification'              SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x388cf8     0xc6     -------- 'serenum'        'Serenum Filter Driver'                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388d88     0xc7     -------- 'Serial'         'Serial port driver'                     SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Serial
+0x388e18     0xc8     -------- 'Sfloppy'        'Sfloppy'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x388ea8     0xc9     1124     'SharedAccess'   'Windows Firewall/Internet Connection Sharing (ICS)' SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x388f40     0xca     1124     'ShellHWDetection' 'Shell Hardware Detection'               SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x388fe0     0xcb     -------- 'Simbad'         'Simbad'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389070     0xcc     -------- 'Sparrow'        'Sparrow'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389100     0xcd     -------- 'splitter'       'Microsoft Kernel Audio Splitter'        SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389190     0xce     1736     'Spooler'        'Print Spooler'                          SERVICE_WIN32_OWN_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_RUNNING      C:\WINDOWS\system32\spoolsv.exe
+0x389220     0xcf     -------- 'sr'             'System Restore Filter Driver'           SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\sr
+0x3892a8     0xd0     1124     'srservice'      'System Restore Service'                 SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x389338     0xd1     -------- 'Srv'            'Srv'                                    SERVICE_FILE_SYSTEM_DRIVER     SERVICE_STOPPED      --------
+0x3893c0     0xd2     1208     'SSDPSRV'        'SSDP Discovery Service'                 SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost.exe -k LocalService
+0x389450     0xd3     -------- 'stisvc'         'Windows Image Acquisition (WIA)'        SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x3894e0     0xd4     -------- 'swenum'         'Software Bus Driver'                    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389570     0xd5     -------- 'swmidi'         'Microsoft Kernel GS Wavetable Synthesizer' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389600     0xd6     -------- 'SwPrv'          'MS Software Shadow Copy Provider'       SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x389688     0xd7     -------- 'symc810'        'symc810'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389718     0xd8     -------- 'symc8xx'        'symc8xx'                                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3897a8     0xd9     -------- 'sym_hi'         'sym_hi'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389838     0xda     -------- 'sym_u3'         'sym_u3'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x3898c8     0xdb     -------- 'sysaudio'       'Microsoft Kernel System Audio Device'   SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389958     0xdc     -------- 'SysmonLog'      'Performance Logs and Alerts'            SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x3899e8     0xdd     -------- 'TapiSrv'        'Telephony'                              SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x389a78     0xde     -------- 'Tcpip'          'TCP/IP Protocol Driver'                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\Tcpip
+0x389b00     0xdf     -------- 'TDPIPE'         'TDPIPE'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389b90     0xe0     -------- 'TDTCP'          'TDTCP'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389c18     0xe1     -------- 'TermDD'         'Terminal Device Driver'                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\TermDD
+0x389ca8     0xe2     916      'TermService'    'Terminal Services'                      SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\system32\svchost -k DcomLaunch
+0x389d40     0xe3     1124     'Themes'         'Themes'                                 SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x389dd0     0xe4     -------- 'TlntSvr'        'Telnet'                                 SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x389e60     0xe5     -------- 'TosIde'         'TosIde'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x389ef0     0xe6     -------- 'TPAutoConnSvc'  'TP AutoConnect Service'                 SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x389f88     0xe7     -------- 'TPVCGateway'    'TP VC Gateway Service'                  SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x38a020     0xe8     1124     'TrkWks'         'Distributed Link Tracking Client'       SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x38a0b0     0xe9     -------- 'Udfs'           'Udfs'                                   SERVICE_FILE_SYSTEM_DRIVER     SERVICE_STOPPED      --------
+0x38a138     0xea     -------- 'ultra'          'ultra'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a1c0     0xeb     -------- 'Update'         'Microcode Update Driver'                SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a250     0xec     -------- 'upnphost'       'Universal Plug and Play Device Host'    SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x38a2e0     0xed     -------- 'UPS'            'Uninterruptible Power Supply'           SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x38a368     0xee     -------- 'usbccgp'        'Microsoft USB Generic Parent Driver'    SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a3f8     0xef     -------- 'usbehci'        'Microsoft USB 2.0 Enhanced Host Controller Miniport Driver' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a488     0xf0     -------- 'usbhub'         'Microsoft USB Standard Hub Driver'      SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a518     0xf1     -------- 'usbohci'        'Microsoft USB Open Host Controller Miniport Driver' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a5a8     0xf2     -------- 'usbuhci'        'Microsoft USB Universal Host Controller Miniport Driver' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a638     0xf3     -------- 'VgaSave'        'VGA Display Controller.'                SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\VgaSave
+0x38a6c8     0xf4     -------- 'ViaIde'         'ViaIde'                                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a758     0xf5     -------- 'vmci'           'VMware VMCI Bus Driver'                 SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\vmci
+0x38a7e0     0xf6     -------- 'vmhgfs'         'vmhgfs'                                 SERVICE_FILE_SYSTEM_DRIVER     SERVICE_RUNNING      \FileSystem\vmhgfs
+0x38a870     0xf7     -------- 'VMMEMCTL'       'Pilote de commande de m\xe9moire'       SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\VMMEMCTL
+0x38a900     0xf8     -------- 'vmmouse'        'VMware Pointing Device'                 SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38a990     0xf9     528      'VMTools'        'VMware Tools'                           SERVICE_WIN32_OWN_PROCESS|SERVICE_INTERACTIVE_PROCESS SERVICE_RUNNING      "C:\Program Files\VMware\VMware Tools\vmtoolsd.exe"
+0x38aa20     0xfa     904      'VMware Physical Disk Helper Service' "Service d'aide du disque physique VMware" SERVICE_WIN32_OWN_PROCESS      SERVICE_RUNNING      "C:\Program Files\VMware\VMware Tools\vmacthlp.exe"
+0x38aae8     0xfb     -------- 'vmxnet'         'VMware Ethernet Adapter Driver'         SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38ab78     0xfc     -------- 'vmx_svga'       'vmx_svga'                               SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38ac08     0xfd     -------- 'VolSnap'        'VolSnap'                                SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\VolSnap
+0x38ac98     0xfe     -------- 'VSS'            'Volume Shadow Copy'                     SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x38ad20     0xff     1124     'W32Time'        'Windows Time'                           SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x38adb0     0x100    -------- 'Wanarp'         'Remote Access IP ARP Driver'            SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38ae40     0x101    -------- 'WDICA'          'WDICA'                                  SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38aec8     0x102    -------- 'wdmaud'         'Microsoft WINMM WDM Audio Compatibility Driver' SERVICE_KERNEL_DRIVER          SERVICE_STOPPED      --------
+0x38af58     0x103    268      'WebClient'      'WebClient'                              SERVICE_WIN32_OWN_PROCESS      SERVICE_RUNNING      C:\WINDOWS\system32\svchost.exe -k LocalService
+0x38afe8     0x104    1124     'winmgmt'        'Windows Management Instrumentation'     SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x38b078     0x105    -------- 'WmdmPmSN'       'Portable Media Serial Number Service'   SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x38b108     0x106    -------- 'Wmi'            'Windows Management Instrumentation Driver Extensions' SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------
+0x38b190     0x107    -------- 'WmiApSrv'       'WMI Performance Adapter'                SERVICE_WIN32_OWN_PROCESS      SERVICE_STOPPED      --------
+0x38b220     0x108    -------- 'WS2IFSL'        'Windows Socket 2.0 Non-IFS Service Provider Support Environment' SERVICE_KERNEL_DRIVER          SERVICE_RUNNING      \Driver\WS2IFSL
+0x38b2b0     0x109    1124     'wscsvc'         'Security Center'                        SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x38b340     0x10a    1124     'wuauserv'       'Automatic Updates'                      SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x38b3d0     0x10b    1124     'WZCSVC'         'Wireless Zero Configuration'            SERVICE_WIN32_SHARE_PROCESS    SERVICE_RUNNING      C:\WINDOWS\System32\svchost.exe -k netsvcs
+0x38b460     0x10c    -------- 'xmlprov'        'Network Provisioning Service'           SERVICE_WIN32_SHARE_PROCESS    SERVICE_STOPPED      --------

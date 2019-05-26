@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>nexus &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/nexus/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Network virtualization and the DMZ paradigm</title>
+		<link>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
+		<comments>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
+		<pubDate>Sat, 30 Apr 2011 19:15:53 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[DMZ]]></category>
+		<category><![CDATA[nexus]]></category>
+		<category><![CDATA[vdc]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[vswitch]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
+		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>The virtualization buzz</h2>
+<p>I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier.</p>
+<p>But what about the security? Convenience and security rarely come together, right? Oh, wait&#8230; we are in 2011, so lessons must have been learned. After all, Mr Salesman swear that it is more secure than ever. Convenience and security packed together, he says&#8230; it sounds promising. Let&#8217;s dig a little to find out what they won&#8217;t tell you&#8230;</p>
+<p>I will focus on what really changes with virtualization : the architecture. One of the main goals of the technology is to reduce the number of physical devices to cut the costs, save space and energy. Of course, it goes with a simplification of the <strong>physical </strong>architecture. Therefore, some features previously handled by dedicated physical devices are now handled <strong>logically by a unique piece of hardware</strong>.</p>
+<p>This obviously goes against the security best practices about designing network architectures with various degrees of exposure. But has the technology evolved so much that we should reconsider these recommendations?</p>
+<h2>VMware Vswitches or Nexus 1000V</h2>
+<p>These technologies are similar in the sense that they are designed to work directly inside the VMware platform. Vswitches are integrated with the solution of VMware, while Nexus benefits from the experience of Cisco and bring more layer 2 control (more settings, more protocols).</p>
+<p>As well on the architecture documents of VMware as within the administration interface of Vcenter, it appears so easy to create segregated switches and build this way in a few clicks a DMZ architecture:</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/blog-archive/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
+<p>But it is slightly different in reality, as <strong>Brad Hedlund</strong> from Cisco shows in an interesting article: <a title="the vswitch illusion and DMZ virtualization" href="http://bradhedlund.com/2010/02/10/vswitch-illusion-dmz-virtualization/" target="_blank">the vswitch illusion and DMZ virtualization</a>. In short, whether you are using VMware Vswitches or Nexus 1000V, a single threaded program runs all the configured virtual switches. In clear, all the virtual switches share the same memory space. So, any vulnerability in the code would compromise all the switches, in other words: the entire network. And, not a surprise here, there have been many vulnerabilities. Just browse a <a title="CVE database" href="http://cve.mitre.org/cve/" target="_blank">CVE database</a> if you want to check.</p>
+<p>So you don&#8217;t want to rely on such a design for your datacenter, right?</p>
+<h2>Nexus 7000</h2>
+<p>In the case of the Nexus 7000, it is a little bit different because most   of the switching work is handled by specific hardware, which have a   much smaller attack surface than the vswitches stuff. But is it really   safe?</p>
+<p>The Nexus family is quite new and from what I could witness, they are  quite pushy selling that. Because it is new, there is still neither much  info surrounding the technologies used, nor user feedback, nor security  research. Anyway, below is a quick sum-up of what I could find.</p>
+<h3>A few words about the architecture</h3>
+<p>In a layer 3 Nexus architecture, Nexus 2000, 5000 and 7000 are designed to work together. Nexus 2000 are basically top-of-the-rack port panels, with no intelligence. Nexus 5000 takes care of most of the layer 2 switching, while Nexus 7000 adds layer 2 functionalities and layer 3 support. Nexus 2000 and 5000 can work without the 7000, but in that case there is not so much difference with a classic layer 2 switch in terms of security (but it has the advantage to be more flexible to integrate in a datacenter). <a title="Difference between Nexus 7000 and Nexus 5000" href="http://www.netcraftsmen.net/resources/technical-articles/348.html" target="_blank">This</a> and <a title="Nexus 7000 architecture" href="http://www.scribd.com/doc/33217473/RST-3009-Cisco-Nexus-7000-Switch-Architecture" target="_blank">this</a> may help you to visualize the differences.</p>
+<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/blog-archive/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
+<p>So we will focus on the Nexus 7000 architecture, which bring VDC as a way to handle DMZ architectures. VDC are somehow similar to VLANs. But whereas VLANs virtualized LANs on a switch, VDC virtualize switches. So, on the same Nexus 5000 device, VDC will add the capacity to have multiple virtual switches which are in theory properly isolated.</p>
+<p>This is a very basic sum-up for what we are interested in, but if you want to learn more, I encourage you to read the <a title="Cisco VDC" href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/White_Paper_Tech_Overview_Virtual_Device_Contexts.html" target="_blank">Cisco whitepaper about VDCs</a>.</p>
+<h3>The flaws</h3>
+<p>Now that the presentations are made, the downside&#8230;</p>
+<p><strong>George Hedfors</strong> is the only researcher that worked notably on this platform, as far as I am aware. He made some really great findings, that you can discover within <a title="NX OS Speech, George Hedfors" href="http://george.hedfors.com/content/slides-my-nx-os-speech-t2-helsinki" target="_blank">his slides</a>.<br />
+At the time of his work &#8211; 2010, it appeared that the NX-OS consisted of a Linux Kernel 2.6.10 (released in 2004!). We can imagine that the OS has been signifiantly customized and hardened by Cisco. They may have include NX-bit support  (included since 2.6.8 and later improved). However, there is probably no ALSR support (2.6.12), no MAC system (SELinux or Tomoyo). Of course, I may be wrong but I haven&#8217;t found any documentation about that and my Cisco contact did not provide me with any consistent detail.</p>
+<p>Anyway, he found a bunch of design flaws:</p>
+<ul>
+<li><strong>Poor CLI design</strong>: there are 686 hidden commands (system, debugging) that can be launched as root (sudo without password). One of these command is gdb, which can start a network daemon as root. The attacker can then connect to the socket to attach to any process on the system to elevate his privileges. Of course, it requires some shell access, so the exposure is limited. However, it is very instructive of how the system was designed!</li>
+<li><strong>Insecure daemon configuration</strong>: Daemon are not chrooted and run with the root user.</li>
+<li><strong>Embarassing CDP vulnerability</strong> : a vulnerability from 2001 was reintroduced in the code handling CDP. So it is possible to crash a daemon running as root. What if another vulnerability on a layer 2 daemon (vtp, hsrp, stp&#8230;) was discovered and allowed to rewrite the stack? Game over, the attacker is root.</li>
+<li><strong>Strange hidden account</strong> : there is a ftpuser hidden account with a dumb password (nbv123). Secret backdoor? I don&#8217;t know, but anyway it is not serious at all and should have been revealed by any consistent audit.</li>
+<li><strong>Shell design flaw</strong>: the VSH shell accepts a parameter (-a) that allow to spawn any command over the security roles normaly in place.</li>
+<li>You can also get a root shell by simply spawning <strong><em>ssh `/bin/bash`</em></strong> from the CLI.</li>
+</ul>
+<p>To any serious security guy or unix administrator, these should look like amateurism. And what&#8217;s the hell are all the security audits for?</p>
+<p>So concerning the Nexus 7000, it is obvious that at best it is not specifically designed to be secure, at worst it was simply as poorly designed (or released too quickly) as most stuff.</p>
+<h2>Conclusion</h2>
+<p>In conclusion, one thing we can tell for sure is that none of the virtualized networking solutions are designed to be secure. Of course, all these flaws are hopefully already or will be soon fixed. But, despite what Cisco may claim, the facts are here: there is no VDC miracle. The Nexus platform is certainly great, but not more bug-free, flaw-free than any other piece of code.<br />
+No virtualized architecture can give the same degree of protection than physical segregation.</p>
+<p>In the case of Vswitches or Nexus 1000, the attack surface is just too high to use it for DMZ segregation if you are serious about security. The vulnerabilities are already here and it will be feasible for a skillful and motivated attacker to own your datacenter.</p>
+<p>Concerning the Nexus 7000 and its VDC, the attack surface is considerably reduced because there is less code and fewer protocols at layer 2. However, it is undoubtly less secure than physical segregation. Any zero-day vulnerability would potentially expose the datacenter (and we all know that some zero-day sometimes take years before coming to the public, which is a lot of time for the criminals or the government agencies to exploit it). You can&#8217;t take it lightly when it comes to the whole datacenter integrity and it doesn&#8217;t make sense if you have expensive (in cash or in labor hours) security at upper layers.</p>
+<p>But, of course, it may depend on what you have to protect. If your datacenter hosts sensitive data for your company&#8217;s buisiness, then you should think twice on how you deploy virtualization or use the cloud.</p>
+<p>Don&#8217;t get me wrong. These technologies are great and very useful. In many areas, there are an improvement. Simply, they must be used with as much care as always. Concerning the DMZ topic, as far as I am concerned, I will not rely on virtualization and keep physical segregation between zones, supported by different  devices from different makers.</p>
+<p>One thing I keep an eye on, though, is the development of virtualized firewalls, IPS, etc. In a few years, if these technologies should became really mature (enforcing segregation on all OSI layers) and the hosting OS security should really improved, most of the concerns here would be addressed.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

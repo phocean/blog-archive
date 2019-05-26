@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>topicons-plus &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/topicons-plus/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>TopIcons-plus for Gnome (v18)</title>
+		<link>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html</link>
+		<comments>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html#comments</comments>
+		<pubDate>Sun, 18 Dec 2016 17:49:11 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Gnome]]></category>
+		<category><![CDATA[gnome-shell]]></category>
+		<category><![CDATA[topicons-plus]]></category>
+
+		<guid isPermaLink="false">http://phocean.net/?p=2148</guid>
+		<description><![CDATA[This is another off-topic post as it is not related to security. It has been awhile since I released the TopIcons-plus Gnome-Shell extension. I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape. How is Topicons-plus useful ? The Gnome developers want to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This is another off-topic post as it is not related to security.</p>
+<p>It has been awhile since I released the <a href="https://github.com/phocean/TopIcons-plus">TopIcons-plus Gnome-Shell extension</a>.</p>
+<p>I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape.</p>
+<h2>How is Topicons-plus useful ?</h2>
+<p>The Gnome developers want to kill system tray icons, which are displayed in what they call the legacy tray.</p>
+<p>Such icons are familiar to everybody: messaging programs like RocketChat or Telegram, e-mail clients like Thunderbird, Dropbox, KeepassX, etc.</p>
+<p>Gnome designers think such a design belongs to past, is flawed in many ways (status or menu?) and should be useless with modern environments with a dock and a powerful notification system.</p>
+<p>I would not comment on that and I actually believe they are right.</p>
+<p>However, the legacy tray they propose is horrible. It is hidden most of the time and you have to click to open it before accessing to your icons. It is very painful, and it is done on purpose, to clearly send a message that it should not be used anymore by application developers.</p>
+<h2>Well, but what about the existing applications ?</h2>
+<p>They are not going away all the sudden. As a user, I still need them.</p>
+<p>And it is open-source, mostly developed on free time: developers are not going to re-implement everything just for the Gnome ecosystem&#8230;</p>
+<p>That is where I think an extension like TopIcons-plus is useful. It removes the hassle of this legacy tray by bringing back the icons to the top bar, so they are always visible.</p>
+<h2>Latest release</h2>
+<p>It comes with extra features, like styling (opacity, desaturation, size) and positioning.</p>
+<p>The <a href="https://github.com/phocean/TopIcons-plus/releases/tag/v18">latest release</a> should be in pretty good shape. If you don&#8217;t want to use the Github code, be patient: it should get validated on the <a href="https://extensions.gnome.org/extension/1031/topicons/">Gnome website</a> within the next days.</p>
+<p>Enjoy!</p>
+<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

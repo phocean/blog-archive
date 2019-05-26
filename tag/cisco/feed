@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Cisco &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/cisco/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Pentest of a Wi-Fi network with Cisco NCS</title>
+		<link>/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html</link>
+		<pubDate>Fri, 04 Oct 2013 12:46:56 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Pentesting]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[Oracle]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[WCS]]></category>
+		<category><![CDATA[XSS]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1750</guid>
+		<description><![CDATA[I had a chance to audit this device during a Wi-Fi pentest. Cisco Prime Network Control System is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc. I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I had a chance to audit this device during a Wi-Fi pentest. <em>Cisco Prime Network Control System </em>is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc.</p>
+<p>I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course, Cisco published a patch… however how many network teams would have applied the patch ? Routers, switches, Wi-Fi controllers, especially when they are not part of the core infrastructure, are often dropped and forgotten for years&#8230;</p>
+<p>Here is the vendor <a href="http://tools.cisco.com/security/center/mcontent/CiscoSecurityAdvisory/cisco-sa-20130410-ncs">advisory</a>, which is about &#8220;unspecified&#8221; default credentials. With a little of ninja googling, I managed to glue the pieces.</p>
+<p>It was not that easy to find the credentials in questions, but the guys from Tenable Security managed to get the <a href="http://tenablenetworksecurity.info/plugins/index.php?view=single&amp;id=66861">info</a>: <code>wcsdba / wcs123</code>.</p>
+<p>Now, you will think, &#8220;ok, but we need to find a way to reach the database&#8230;&#8217;. Piece of cake! By default, the device exposes an Oracle listener on port <code>1522</code>.</p>
+<p>Then, we would need to know the Oracle instance… Don&#8217;t think too much, don&#8217;t even look up at your wordlists, this is just: <code>WCS</code>.</p>
+<p>Of course, as you should guess now, the account has <em>DBA</em> privileges. :-)</p>
+<p>So, in summary:</p>
+<pre>Oracle listener on port <strong>TCP 1522</strong>
+Instance: <strong>WCS</strong>
+Account: <strong>wcsdba</strong>
+Password: <strong>wcs123</strong>
+Privileges: <strong>DBA</strong></pre>
+<p><span style="line-height: 1.714285714; font-size: 1rem;">Now you can do pretty much every thing: control network settings, grab and crack password hashes, etc.</span></p>
+<p>Besides, there is also an XSS on a login page&#8230;</p>
+<p>Well done Cisco, for not hardening anything.  :-/</p>
+<p>Have fun!</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Network virtualization and the DMZ paradigm</title>
+		<link>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
+		<comments>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
+		<pubDate>Sat, 30 Apr 2011 19:15:53 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Virtualization]]></category>
+		<category><![CDATA[architecture]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[DMZ]]></category>
+		<category><![CDATA[nexus]]></category>
+		<category><![CDATA[vdc]]></category>
+		<category><![CDATA[VMware]]></category>
+		<category><![CDATA[vswitch]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
+		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<h2>The virtualization buzz</h2>
+<p>I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier.</p>
+<p>But what about the security? Convenience and security rarely come together, right? Oh, wait&#8230; we are in 2011, so lessons must have been learned. After all, Mr Salesman swear that it is more secure than ever. Convenience and security packed together, he says&#8230; it sounds promising. Let&#8217;s dig a little to find out what they won&#8217;t tell you&#8230;</p>
+<p>I will focus on what really changes with virtualization : the architecture. One of the main goals of the technology is to reduce the number of physical devices to cut the costs, save space and energy. Of course, it goes with a simplification of the <strong>physical </strong>architecture. Therefore, some features previously handled by dedicated physical devices are now handled <strong>logically by a unique piece of hardware</strong>.</p>
+<p>This obviously goes against the security best practices about designing network architectures with various degrees of exposure. But has the technology evolved so much that we should reconsider these recommendations?</p>
+<h2>VMware Vswitches or Nexus 1000V</h2>
+<p>These technologies are similar in the sense that they are designed to work directly inside the VMware platform. Vswitches are integrated with the solution of VMware, while Nexus benefits from the experience of Cisco and bring more layer 2 control (more settings, more protocols).</p>
+<p>As well on the architecture documents of VMware as within the administration interface of Vcenter, it appears so easy to create segregated switches and build this way in a few clicks a DMZ architecture:</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/blog-archive/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
+<p>But it is slightly different in reality, as <strong>Brad Hedlund</strong> from Cisco shows in an interesting article: <a title="the vswitch illusion and DMZ virtualization" href="http://bradhedlund.com/2010/02/10/vswitch-illusion-dmz-virtualization/" target="_blank">the vswitch illusion and DMZ virtualization</a>. In short, whether you are using VMware Vswitches or Nexus 1000V, a single threaded program runs all the configured virtual switches. In clear, all the virtual switches share the same memory space. So, any vulnerability in the code would compromise all the switches, in other words: the entire network. And, not a surprise here, there have been many vulnerabilities. Just browse a <a title="CVE database" href="http://cve.mitre.org/cve/" target="_blank">CVE database</a> if you want to check.</p>
+<p>So you don&#8217;t want to rely on such a design for your datacenter, right?</p>
+<h2>Nexus 7000</h2>
+<p>In the case of the Nexus 7000, it is a little bit different because most   of the switching work is handled by specific hardware, which have a   much smaller attack surface than the vswitches stuff. But is it really   safe?</p>
+<p>The Nexus family is quite new and from what I could witness, they are  quite pushy selling that. Because it is new, there is still neither much  info surrounding the technologies used, nor user feedback, nor security  research. Anyway, below is a quick sum-up of what I could find.</p>
+<h3>A few words about the architecture</h3>
+<p>In a layer 3 Nexus architecture, Nexus 2000, 5000 and 7000 are designed to work together. Nexus 2000 are basically top-of-the-rack port panels, with no intelligence. Nexus 5000 takes care of most of the layer 2 switching, while Nexus 7000 adds layer 2 functionalities and layer 3 support. Nexus 2000 and 5000 can work without the 7000, but in that case there is not so much difference with a classic layer 2 switch in terms of security (but it has the advantage to be more flexible to integrate in a datacenter). <a title="Difference between Nexus 7000 and Nexus 5000" href="http://www.netcraftsmen.net/resources/technical-articles/348.html" target="_blank">This</a> and <a title="Nexus 7000 architecture" href="http://www.scribd.com/doc/33217473/RST-3009-Cisco-Nexus-7000-Switch-Architecture" target="_blank">this</a> may help you to visualize the differences.</p>
+<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/blog-archive/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
+<p>So we will focus on the Nexus 7000 architecture, which bring VDC as a way to handle DMZ architectures. VDC are somehow similar to VLANs. But whereas VLANs virtualized LANs on a switch, VDC virtualize switches. So, on the same Nexus 5000 device, VDC will add the capacity to have multiple virtual switches which are in theory properly isolated.</p>
+<p>This is a very basic sum-up for what we are interested in, but if you want to learn more, I encourage you to read the <a title="Cisco VDC" href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/White_Paper_Tech_Overview_Virtual_Device_Contexts.html" target="_blank">Cisco whitepaper about VDCs</a>.</p>
+<h3>The flaws</h3>
+<p>Now that the presentations are made, the downside&#8230;</p>
+<p><strong>George Hedfors</strong> is the only researcher that worked notably on this platform, as far as I am aware. He made some really great findings, that you can discover within <a title="NX OS Speech, George Hedfors" href="http://george.hedfors.com/content/slides-my-nx-os-speech-t2-helsinki" target="_blank">his slides</a>.<br />
+At the time of his work &#8211; 2010, it appeared that the NX-OS consisted of a Linux Kernel 2.6.10 (released in 2004!). We can imagine that the OS has been signifiantly customized and hardened by Cisco. They may have include NX-bit support  (included since 2.6.8 and later improved). However, there is probably no ALSR support (2.6.12), no MAC system (SELinux or Tomoyo). Of course, I may be wrong but I haven&#8217;t found any documentation about that and my Cisco contact did not provide me with any consistent detail.</p>
+<p>Anyway, he found a bunch of design flaws:</p>
+<ul>
+<li><strong>Poor CLI design</strong>: there are 686 hidden commands (system, debugging) that can be launched as root (sudo without password). One of these command is gdb, which can start a network daemon as root. The attacker can then connect to the socket to attach to any process on the system to elevate his privileges. Of course, it requires some shell access, so the exposure is limited. However, it is very instructive of how the system was designed!</li>
+<li><strong>Insecure daemon configuration</strong>: Daemon are not chrooted and run with the root user.</li>
+<li><strong>Embarassing CDP vulnerability</strong> : a vulnerability from 2001 was reintroduced in the code handling CDP. So it is possible to crash a daemon running as root. What if another vulnerability on a layer 2 daemon (vtp, hsrp, stp&#8230;) was discovered and allowed to rewrite the stack? Game over, the attacker is root.</li>
+<li><strong>Strange hidden account</strong> : there is a ftpuser hidden account with a dumb password (nbv123). Secret backdoor? I don&#8217;t know, but anyway it is not serious at all and should have been revealed by any consistent audit.</li>
+<li><strong>Shell design flaw</strong>: the VSH shell accepts a parameter (-a) that allow to spawn any command over the security roles normaly in place.</li>
+<li>You can also get a root shell by simply spawning <strong><em>ssh `/bin/bash`</em></strong> from the CLI.</li>
+</ul>
+<p>To any serious security guy or unix administrator, these should look like amateurism. And what&#8217;s the hell are all the security audits for?</p>
+<p>So concerning the Nexus 7000, it is obvious that at best it is not specifically designed to be secure, at worst it was simply as poorly designed (or released too quickly) as most stuff.</p>
+<h2>Conclusion</h2>
+<p>In conclusion, one thing we can tell for sure is that none of the virtualized networking solutions are designed to be secure. Of course, all these flaws are hopefully already or will be soon fixed. But, despite what Cisco may claim, the facts are here: there is no VDC miracle. The Nexus platform is certainly great, but not more bug-free, flaw-free than any other piece of code.<br />
+No virtualized architecture can give the same degree of protection than physical segregation.</p>
+<p>In the case of Vswitches or Nexus 1000, the attack surface is just too high to use it for DMZ segregation if you are serious about security. The vulnerabilities are already here and it will be feasible for a skillful and motivated attacker to own your datacenter.</p>
+<p>Concerning the Nexus 7000 and its VDC, the attack surface is considerably reduced because there is less code and fewer protocols at layer 2. However, it is undoubtly less secure than physical segregation. Any zero-day vulnerability would potentially expose the datacenter (and we all know that some zero-day sometimes take years before coming to the public, which is a lot of time for the criminals or the government agencies to exploit it). You can&#8217;t take it lightly when it comes to the whole datacenter integrity and it doesn&#8217;t make sense if you have expensive (in cash or in labor hours) security at upper layers.</p>
+<p>But, of course, it may depend on what you have to protect. If your datacenter hosts sensitive data for your company&#8217;s buisiness, then you should think twice on how you deploy virtualization or use the cloud.</p>
+<p>Don&#8217;t get me wrong. These technologies are great and very useful. In many areas, there are an improvement. Simply, they must be used with as much care as always. Concerning the DMZ topic, as far as I am concerned, I will not rely on virtualization and keep physical segregation between zones, supported by different  devices from different makers.</p>
+<p>One thing I keep an eye on, though, is the development of virtualized firewalls, IPS, etc. In a few years, if these technologies should became really mature (enforcing segregation on all OSI layers) and the hosting OS security should really improved, most of the concerns here would be addressed.</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Packetlife.net</title>
+		<link>/blog-archive/2010/02/20/packetlife-net.html</link>
+		<pubDate>Sat, 20 Feb 2010 08:54:19 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Cisco]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=725</guid>
+		<description><![CDATA[I added a new link to Packetlife.net, which is a really amazing website about networking, with focus on Cisco stuff. The work that the author made is truly impressive : blog, cheat sheets, gentle forum and even a lab (I haven&#8217;t test because I don&#8217;t need it, but if you are a student, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/02/20/packetlife-net.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I added a new link to <a title="Packetlife" href="http://packetlife.net/" target="_blank">Packetlife.net</a>, which is a really amazing website about networking, with focus on Cisco stuff.</p>
+<p>The work that the author made is truly impressive : blog, cheat sheets, gentle forum and even a lab (I haven&#8217;t test because I don&#8217;t need it, but if you are a student, it is great for students and so far I have never seen any other website offering it), all integrated with a quality level that is rare to find even on professional website.</p>
+<p>This is one the best website I have never seen in all categories and certainly the best about Cisco networking. If you are interested in this topic, visit there right now.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.73</title>
+		<link>/blog-archive/2010/02/10/netios-0-73.html</link>
+		<pubDate>Wed, 10 Feb 2010 14:51:59 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
+				<content:encoded><![CDATA[<p>Netios 0.73 fixes some bugs and</p>
+<p>Complete changelog :</p>
+<blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
+<p>* remove useless options<br />
+* fix various bugs</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.72</title>
+		<link>/blog-archive/2010/01/15/netios-0-72.html</link>
+		<pubDate>Fri, 15 Jan 2010 10:20:55 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now.</p>
+<p>Complete changelog :</p>
+<blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
+<p>* ciscoclass.py : forgot to remove a debug print<br />
+* ciscoclass.py : finish and fix a bunch of bugs in the show run function, format the config file properly<br />
+* ciscoclass.py : fix the prompt regex</p></blockquote>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios 0.71</title>
+		<link>/blog-archive/2009/12/20/netios-0-71.html</link>
+		<pubDate>Sun, 20 Dec 2009 16:34:37 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[System]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
+		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I release a new version of Netios : 0.71.</p>
+<p>There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing.</p>
+<p>It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up.</p>
+<p>A downside is that it now requires at least Python 2.6, as multiprocessing started to be supported with this version only. Most Linux distributions now include Python 2.6, but still not all. Anyway it will be more and more the case. If you can&#8217;t uprade your distribution, you can stick with 0.60 which still do most of the work fine.</p>
+<p>It is also now able to fetch a configuration file remotly, but it requires more testing before I feel confident in the way it works.</p>
+<p>The complete changelog :</p>
+<blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
+<p>* ciscoclass.py : handle correctly the cisco pager &#8212; More &#8212; so that &#8220;show run&#8221; mode should work even with large config files<br />
+* sshclass.py : allow to override terminal size system settings (make use of the cisco pager to avoid filling the buffer)</p>
+<p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
+<p>* implement multiprocessing<br />
+* improve code documentation<br />
+* clean up UI<br />
+* reduce useless logging<br />
+* netios.py : bug : missing startTime parameter in f_skip_error and f_command functions</p></blockquote>
+<p>I cross my fingers so that there are not too many bugs, but if so, please don&#8217;t forget to report it to me.</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Netios</title>
+		<link>/blog-archive/2009/11/07/netios.html</link>
+		<pubDate>Sat, 07 Nov 2009 15:53:30 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Defense]]></category>
+		<category><![CDATA[Dev]]></category>
+		<category><![CDATA[Network]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[netios]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[SSH]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
+		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches :</p>
+<blockquote><p><strong>Netios</strong> is a little tool aimed to help network administrators to administrate a large number of Cisco network devices.<br />
+Providing it with a list of equipments, it connects within SSH to remotly apply IOS commands.</p>
+<p>It can automatically :</p>
+<ul>
+<li> retrieve and export in a CSV file the list of local users</li>
+<li> update the local user, the enable password</li>
+<li> change NTP settings</li>
+<li> execute a file of customed IOS commands</li>
+<li> retrieve configuration files</li>
+</ul>
+<p>It can read the targets from the command line or from a text file.</p></blockquote>
+<p>Its primary goal is to improve the security by making it easier to renew regularly the local password of these equipments, but it can do more convenient things (and I will continue to work to add more of them).</p>
+<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Cisco configuration buffer full</title>
+		<link>/blog-archive/2009/09/26/cisco-configuration-buffer-full.html</link>
+		<comments>/blog-archive/2009/09/26/cisco-configuration-buffer-full.html#comments</comments>
+		<pubDate>Sat, 26 Sep 2009 03:30:08 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=394</guid>
+		<description><![CDATA[I got this weired message while trying to save a configuration : #wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue? [no]: no % Configuration buffer full, can't add command: ************************************************************************ Looks scary at first, but normally it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/26/cisco-configuration-buffer-full.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I got this weired message while trying to save a configuration :<br />
+<code></p>
+<pre>#wr mem
+Building configuration...
+% Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram.
+Continue? [no]: no
+% Configuration buffer full, can't add command:
+************************************************************************</pre>
+<p></code></p>
+<p>Looks scary at first, but normally it should be solved with a single command :<br />
+<code></p>
+<pre># configure terminal
+(config-ter)# service compress-config
+(config-ter)# end
+# write mem</pre>
+<p></code></p>
+<p>I guess that there are little chances the issue remains after that, but if so, well, you may be in trouble&#8230;</p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/09/26/cisco-configuration-buffer-full.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Netflow on MLS switches</title>
+		<link>/blog-archive/2009/09/23/netflow-on-mls-switches.html</link>
+		<comments>/blog-archive/2009/09/23/netflow-on-mls-switches.html#comments</comments>
+		<pubDate>Wed, 23 Sep 2009 20:12:50 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[CEF]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[MLS]]></category>
+		<category><![CDATA[Monitoring]]></category>
+		<category><![CDATA[NDE]]></category>
+		<category><![CDATA[Netflow]]></category>
+		<category><![CDATA[Switch]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=443</guid>
+		<description><![CDATA[I had some trouble today at office with monitoring flows going through a MLS switch. The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch. The traffic reported was way below the real one. After some research,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/23/netflow-on-mls-switches.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I had some trouble today at office with monitoring flows going through a MLS switch.</p>
+<p>The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch.</p>
+<p>The traffic reported was way below the real one.</p>
+<p>After some research, what I suspected was confirmed by <a title="Netflow on 6500" href="http://www.cisco.com/en/US/tech/tk812/technologies_tech_note09186a008015efaa.shtml" target="_blank">this documentation</a> from Cisco.</p>
+<p>Some more steps are required to make Netflow report flow processed by the switching module.</p>
+<p>Otherwise, as only the first packet is routed and the following ones are switched by CEF, Netflow will only see the first packet at layer 3.</p>
+<p>That explains why the reported traffic was ridicoulously small.</p>
+<p>So, where on routers the following commands are enough :</p>
+<pre>(config)# ip cef
+(config)# ip flow-export version 5
+(config)# ip flow-export destination 192.168.1.1 1234
+(config)# interface fa 1
+(config-if)# ip route-cache flow</pre>
+<p>On MLS switches (like 6500 or 7200), add :</p>
+<pre>(config)# mls netflow
+(config)# mls nde sender
+(config)# mls aging long 64
+(config)# mls flow ip full</pre>
+<p>The commands are described <a href="http://www.cisco.com/en/US/docs/switches/lan/catalyst6500/ios/12.1E/native/configuration/guide/nde.html">there</a>. Unfortunately, as often with Cisco, they may vary depending on the IOS version your are running.<br />
+<a href="/blog-archive/wp-content/uploads/2009/09/cisco_6500_switches.js" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/09/23/netflow-on-mls-switches.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>IOS : Configuration buffer full, can&#8217;t add command</title>
+		<link>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html</link>
+		<comments>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html#comments</comments>
+		<pubDate>Fri, 29 May 2009 15:19:21 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Network]]></category>
+		<category><![CDATA[buffer]]></category>
+		<category><![CDATA[Cisco]]></category>
+		<category><![CDATA[ios]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=366</guid>
+		<description><![CDATA[This error message suddenly showed up on one of my router when I tried to save its running configuration. service compress-config allowed me to workaround this buffer problem : router#wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue?...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>This error message suddenly showed up on one of my router when I tried to save its running configuration.</p>
+<p><strong>service compress-config</strong> allowed me to workaround this buffer problem :</p>
+<pre>router#wr mem
+Building configuration...
+
+% Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram.
+Continue? [no]: no
+% Configuration buffer full, can't add command:
+************************************************************************
+
+%Aborting Save. Compress the config.[OK]
+router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#service compress-config
+router(config)#exit
+router#wr mem
+Building configuration...
+Compressed configuration from 21787 bytes to 7991 bytes[OK]</pre>
+]]></content:encoded>
+			<wfw:commentRss>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html/feed</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

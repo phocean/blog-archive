@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>performance &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/performance/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>Measure the access time of your Hard Disk&#8230;</title>
+		<link>/blog-archive/2007/05/17/measure-the-access-time-of-your-hard-disk.html</link>
+		<pubDate>Thu, 17 May 2007 18:32:00 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Hard drive]]></category>
+		<category><![CDATA[performance]]></category>
+
+		<guid isPermaLink="false">http://192.168.1.10/wordpress/?p=31</guid>
+		<description><![CDATA[<p><a hreflang="en" href="http://blog.wompom.org/index.php/2007/05/17/timing-random-disk-seeks/">There is a nice script to measure the access time of your disk</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p><a hreflang="en" href="http://blog.wompom.org/index.php/2007/05/17/timing-random-disk-seeks/">There is a nice script to measure the access time of your disk</a>.</p>
+<p><span id="more-31"></span><br />
+Just copy the lines from the link in your terminal (you are supposed to run Perl and don&#8217;t forget, as I did first, to adjust the path to your disk ;) ) :</p>
+<h3>Laptop with Hitachi 100 Mb, 7200 rpm (OpenSuse 10.2) :</h3>
+<p>Took 24.57s for 1500 seeks of /dev/hda (93 GB)<br />
+Mean: 16.4ms; Median: 14-15ms; Std dev: 10.6ms</p>
+<p>real    0m27.479s<br />
+user    0m0.120s<br />
+sys     0m0.050s</p>
+<h3>Server with Hitachi 80 Gb and 120 Gb, 7200 rpm, 8 Mb of cache (Debian 4.0) :</h3>
+<p>Took 20.15s for 1500 seeks of /dev/hda (76 GB)<br />
+Mean: 13.4ms; Median: 12-13ms; Std dev: 5.64ms</p>
+<p>real    0m20.184s<br />
+user    0m0.040s<br />
+sys     0m0.092s</p>
+<p>Took 19.5s for 1500 seeks of /dev/hdb (115 GB)</p>
+<p>Mean: 13ms; Median: 11-12ms; Std dev: 3.77ms</p>
+<p>real    0m19.534s<br />
+user    0m0.044s<br />
+sys     0m0.076s</p>
+<p>Conclusion : I am pretty satisfied by the performances of my laptop disk.</p>
+<p>Thanks to the author for this nice script.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

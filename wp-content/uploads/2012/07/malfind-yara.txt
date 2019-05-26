@@ -1,0 +1,475 @@
+Name                 Pid    Start      End        Tag      Hits   Protect
+vmtoolsd.exe         1972   0x00540000 0x647fff00 Vad      1      PAGE_EXECUTE_WRITECOPY
+Dumped to: out/vmtoolsd.exe.1f62da0.00540000-00647fff.dmp
+YARA rule: irc
+Description: Indicates use of IRC
+Hit: quit
+0x0060dfe0   71 75 69 74 00 67 5f 6d 61 69 6e 5f 6c 6f 6f 70    quit.g_main_loop
+0x0060dff0   5f 72 65 66 00 67 5f 6d 61 69 6e 5f 6c 6f 6f 70    _ref.g_main_loop
+0x0060e000   5f 72 75 6e 00 67 5f 6d 61 69 6e 5f 6c 6f 6f 70    _run.g_main_loop
+0x0060e010   5f 75 6e 72 65 66 00 67 5f 6d 61 6c 6c 6f 63 00    _unref.g_malloc.
+0x0060e020   67 5f 6d 61 6c 6c 6f 63 30 00 67 5f 6d 61 70 70    g_malloc0.g_mapp
+0x0060e030   65 64 5f 66 69 6c 65 5f 66 72 65 65 00 67 5f 6d    ed_file_free.g_m
+0x0060e040   61 70 70 65 64 5f 66 69 6c 65 5f 67 65 74 5f 63    apped_file_get_c
+0x0060e050   6f 6e 74 65 6e 74 73 00 67 5f 6d 61 70 70 65 64    ontents.g_mapped
+
+Hit: msg
+0x0061071d   6d 73 67 5f 66 72 65 65 00 67 5f 74 65 73 74 5f    msg_free.g_test_
+0x0061072d   6c 6f 67 5f 73 65 74 5f 66 61 74 61 6c 5f 68 61    log_set_fatal_ha
+0x0061073d   6e 64 6c 65 72 00 67 5f 74 65 73 74 5f 6c 6f 67    ndler.g_test_log
+0x0061074d   5f 74 79 70 65 5f 6e 61 6d 65 00 67 5f 74 65 73    _type_name.g_tes
+0x0061075d   74 5f 6d 61 78 69 6d 69 7a 65 64 5f 72 65 73 75    t_maximized_resu
+0x0061076d   6c 74 00 67 5f 74 65 73 74 5f 6d 65 73 73 61 67    lt.g_test_messag
+0x0061077d   65 00 67 5f 74 65 73 74 5f 6d 69 6e 69 6d 69 7a    e.g_test_minimiz
+0x0061078d   65 64 5f 72 65 73 75 6c 74 00 67 5f 74 65 73 74    ed_result.g_test
+
+Hit: join
+0x00610998   6a 6f 69 6e 00 67 5f 74 68 72 65 61 64 5f 70 6f    join.g_thread_po
+0x006109a8   6f 6c 5f 66 72 65 65 00 67 5f 74 68 72 65 61 64    ol_free.g_thread
+0x006109b8   5f 70 6f 6f 6c 5f 67 65 74 5f 6d 61 78 5f 69 64    _pool_get_max_id
+0x006109c8   6c 65 5f 74 69 6d 65 00 67 5f 74 68 72 65 61 64    le_time.g_thread
+0x006109d8   5f 70 6f 6f 6c 5f 67 65 74 5f 6d 61 78 5f 74 68    _pool_get_max_th
+0x006109e8   72 65 61 64 73 00 67 5f 74 68 72 65 61 64 5f 70    reads.g_thread_p
+0x006109f8   6f 6f 6c 5f 67 65 74 5f 6d 61 78 5f 75 6e 75 73    ool_get_max_unus
+0x00610a08   65 64 5f 74 68 72 65 61 64 73 00 67 5f 74 68 72    ed_threads.g_thr
+
+Hit: msg
+0x0061501c   6d 73 67 20 21 3d 20 4e 55 4c 4c 00 3f 3f 3f 00    msg != NULL.???.
+0x0061502c   2e 2e 5c 2e 2e 5c 2e 2e 5c 67 6c 69 62 5c 67 74    .........glib.gt
+0x0061503c   65 73 74 75 74 69 6c 73 2e 63 00 00 47 6c 69 62    estutils.c..Glib
+0x0061504c   00 00 00 00 6c 62 75 66 66 65 72 2d 3e 64 61 74    ....lbuffer->dat
+0x0061505c   61 2d 3e 6c 65 6e 20 3d 3d 20 30 00 3f 3f 3f 00    a->len == 0.???.
+0x0061506c   2e 2e 5c 2e 2e 5c 2e 2e 5c 67 6c 69 62 5c 67 74    .........glib.gt
+0x0061507c   65 73 74 75 74 69 6c 73 2e 63 00 00 47 6c 69 62    estutils.c..Glib
+0x0061508c   00 00 00 00 7b 2a 4c 4f 47 28 25 73 29 00 00 00    ....{*LOG(%s)...
+
+Hit: MSG
+0x0061512d   4d 53 47 3a 20 25 73 29 0a 00 00 47 54 65 73 74    MSG: %s)...GTest
+0x0061513d   3a 20 72 75 6e 3a 20 25 73 0a 00 25 73 3a 20 00    : run: %s..%s: .
+0x0061514d   00 00 00 2d 2d 67 2d 66 61 74 61 6c 2d 77 61 72    ...--g-fatal-war
+0x0061515d   6e 69 6e 67 73 00 00 2d 2d 6b 65 65 70 2d 67 6f    nings..--keep-go
+0x0061516d   69 6e 67 00 00 00 00 2d 6b 00 00 2d 2d 64 65 62    ing....-k..--deb
+0x0061517d   75 67 2d 6c 6f 67 00 2d 2d 47 54 65 73 74 4c 6f    ug-log.--GTestLo
+0x0061518d   67 46 44 00 00 00 00 2d 2d 47 54 65 73 74 4c 6f    gFD....--GTestLo
+0x0061519d   67 46 44 3d 00 00 00 2d 2d 47 54 65 73 74 53 6b    gFD=...--GTestSk
+
+Hit: part
+0x00620e1e   70 61 72 74 20 6f 66 20 74 68 69 73 20 47 4f 70    part of this GOp
+0x00620e2e   74 69 6f 6e 43 6f 6e 74 65 78 74 00 00 00 47 6c    tionContext...Gl
+0x00620e3e   69 62 00 00 00 00 63 6f 6e 74 65 78 74 20 21 3d    ib....context !=
+0x00620e4e   20 4e 55 4c 4c 00 2e 2e 5c 2e 2e 5c 2e 2e 5c 67     NULL..........g
+0x00620e5e   6c 69 62 5c 67 6f 70 74 69 6f 6e 2e 63 00 66 69    lib.goption.c.fi
+0x00620e6e   6c 65 20 25 73 3a 20 6c 69 6e 65 20 25 64 3a 20    le %s: line %d: 
+0x00620e7e   61 73 73 65 72 74 69 6f 6e 20 60 25 73 27 20 66    assertion `%s' f
+0x00620e8e   61 69 6c 65 64 00 47 6c 69 62 00 00 00 00 67 72    ailed.Glib....gr
+
+Hit: MSG
+0x0062aba9   4d 53 47 00 00 00 00 20 43 4f 4e 00 00 00 00 20    MSG.... CON.... 
+0x0062abb9   46 44 20 74 68 72 65 61 64 3d 25 23 78 20 62 75    FD thread=%#x bu
+0x0062abc9   66 66 65 72 5f 63 6f 6e 64 69 74 69 6f 6e 3a 7b    ffer_condition:{
+0x0062abd9   25 73 7d 0a 20 20 77 61 74 63 68 2d 3e 70 6f 6c    %s}.  watch->pol
+0x0062abe9   6c 66 64 2e 65 76 65 6e 74 73 3a 7b 25 73 7d 20    lfd.events:{%s} 
+0x0062abf9   77 61 74 63 68 2d 3e 70 6f 6c 6c 66 64 2e 72 65    watch->pollfd.re
+0x0062ac09   76 65 6e 74 73 3a 7b 25 73 7d 20 63 68 61 6e 6e    vents:{%s} chann
+0x0062ac19   65 6c 2d 3e 72 65 76 65 6e 74 73 3a 7b 25 73 7d    el->revents:{%s}
+
+Hit: MSG
+0x0062ad11   4d 53 47 0a 00 00 00 20 46 44 20 74 68 72 65 61    MSG.... FD threa
+0x0062ad21   64 3d 25 23 78 20 62 75 66 66 65 72 5f 63 6f 6e    d=%#x buffer_con
+0x0062ad31   64 69 74 69 6f 6e 3d 25 73 0a 20 20 77 61 74 63    dition=%s.  watc
+0x0062ad41   68 2d 3e 70 6f 6c 6c 66 64 2e 65 76 65 6e 74 73    h->pollfd.events
+0x0062ad51   3d 7b 25 73 7d 20 77 61 74 63 68 2d 3e 70 6f 6c    ={%s} watch->pol
+0x0062ad61   6c 66 64 2e 72 65 76 65 6e 74 73 3d 7b 25 73 7d    lfd.revents={%s}
+0x0062ad71   20 63 68 61 6e 6e 65 6c 2d 3e 72 65 76 65 6e 74     channel->revent
+0x0062ad81   73 3d 7b 25 73 7d 0a 00 00 00 00 20 43 4f 4e 0a    s={%s}..... CON.
+
+Hit: MSG
+0x0062af4d   4d 53 47 00 00 00 00 20 43 4f 4e 00 00 00 00 20    MSG.... CON.... 
+0x0062af5d   46 44 20 74 68 72 65 61 64 3d 25 23 78 00 00 20    FD thread=%#x.. 
+0x0062af6d   53 4f 43 4b 20 73 6f 63 6b 3d 25 64 00 00 00 3f    SOCK sock=%d...?
+0x0062af7d   3f 3f 00 2e 2e 5c 2e 2e 5c 2e 2e 5c 67 6c 69 62    ??..........glib
+0x0062af8d   5c 67 69 6f 77 69 6e 33 32 2e 63 00 00 00 00 47    .giowin32.c....G
+0x0062af9d   6c 69 62 00 00 00 00 0a 00 00 00 b0 db 58 00 10    lib..........X..
+0x0062afad   d7 58 00 10 e5 58 00 30 ed 58 00 00 00 00 00 00    .X...X.0.X......
+0x0062afbd   00 00 00 49 6e 63 6f 72 72 65 63 74 20 6d 65 73    ...Incorrect mes
+
+Hit: msg
+0x0062afe3   6d 73 67 5f 72 65 61 64 3a 20 63 68 61 6e 6e 65    msg_read: channe
+0x0062aff3   6c 3d 25 70 20 68 77 6e 64 3d 25 70 0a 00 00 00    l=%p hwnd=%p....
+0x0062b003   00 49 6e 63 6f 72 72 65 63 74 20 6d 65 73 73 61    .Incorrect messa
+0x0062b013   67 65 20 73 69 7a 65 00 00 67 5f 69 6f 5f 77 69    ge size..g_io_wi
+0x0062b023   6e 33 32 5f 66 72 65 65 20 63 68 61 6e 6e 65 6c    n32_free channel
+0x0062b033   3d 25 70 20 66 64 3d 25 64 0a 00 00 00 20 20 43    =%p fd=%d....  C
+0x0062b043   6c 6f 73 65 48 61 6e 64 6c 65 28 25 70 29 20 66    loseHandle(%p) f
+0x0062b053   61 69 6c 65 64 3a 20 25 73 0a 00 00 00 20 20 43    ailed: %s....  C
+
+
+vmtoolsd.exe         1972   0x01050000 0x10b3fff0 Vad      1      PAGE_EXECUTE_WRITECOPY
+Dumped to: out/vmtoolsd.exe.1f62da0.01050000-010b3fff.dmp
+YARA rule: encoding
+Description: Indicates encryption/compression
+Hit: deflate
+0x01095b49   64 65 66 6c 61 74 65 20 31 2e 32 2e 33 20 43 6f    deflate 1.2.3 Co
+0x01095b59   70 79 72 69 67 68 74 20 31 39 39 35 2d 32 30 30    pyright 1995-200
+0x01095b69   35 20 4a 65 61 6e 2d 6c 6f 75 70 20 47 61 69 6c    5 Jean-loup Gail
+0x01095b79   6c 79 20 00 00 00 00 00 00 00 00 00 00 00 00 80    ly .............
+0x01095b89   71 08 01 04 00 04 00 08 00 04 00 b0 72 08 01 04    q...........r...
+0x01095b99   00 05 00 10 00 08 00 b0 72 08 01 04 00 06 00 20    ........r...... 
+0x01095ba9   00 20 00 b0 72 08 01 04 00 04 00 10 00 10 00 d0    . ..r...........
+0x01095bb9   75 08 01 08 00 10 00 20 00 20 00 d0 75 08 01 08    u...... . ..u...
+
+Hit: Jean-loup Gailly
+0x01095b6b   4a 65 61 6e 2d 6c 6f 75 70 20 47 61 69 6c 6c 79    Jean-loup Gailly
+0x01095b7b   20 00 00 00 00 00 00 00 00 00 00 00 00 80 71 08     .............q.
+0x01095b8b   01 04 00 04 00 08 00 04 00 b0 72 08 01 04 00 05    ..........r.....
+0x01095b9b   00 10 00 08 00 b0 72 08 01 04 00 06 00 20 00 20    ......r...... . 
+0x01095bab   00 b0 72 08 01 04 00 04 00 10 00 10 00 d0 75 08    ..r...........u.
+0x01095bbb   01 08 00 10 00 20 00 20 00 d0 75 08 01 08 00 10    ..... . ..u.....
+0x01095bcb   00 80 00 80 00 d0 75 08 01 08 00 20 00 80 00 00    ......u.... ....
+0x01095bdb   01 d0 75 08 01 20 00 80 00 02 01 00 04 d0 75 08    ..u.. ........u.
+
+Hit: inflate
+0x01095ca9   69 6e 66 6c 61 74 65 20 31 2e 32 2e 33 20 43 6f    inflate 1.2.3 Co
+0x01095cb9   70 79 72 69 67 68 74 20 31 39 39 35 2d 32 30 30    pyright 1995-200
+0x01095cc9   35 20 4d 61 72 6b 20 41 64 6c 65 72 20 00 00 03    5 Mark Adler ...
+0x01095cd9   00 04 00 05 00 06 00 07 00 08 00 09 00 0a 00 0b    ................
+0x01095ce9   00 0d 00 0f 00 11 00 13 00 17 00 1b 00 1f 00 23    ...............#
+0x01095cf9   00 2b 00 33 00 3b 00 43 00 53 00 63 00 73 00 83    .+.3.;.C.S.c.s..
+0x01095d09   00 a3 00 c3 00 e3 00 02 01 00 00 00 00 00 00 10    ................
+0x01095d19   00 10 00 10 00 10 00 10 00 10 00 10 00 10 00 11    ................
+
+Hit: Mark Adler
+0x01095ccb   4d 61 72 6b 20 41 64 6c 65 72 20 00 00 03 00 04    Mark Adler .....
+0x01095cdb   00 05 00 06 00 07 00 08 00 09 00 0a 00 0b 00 0d    ................
+0x01095ceb   00 0f 00 11 00 13 00 17 00 1b 00 1f 00 23 00 2b    .............#.+
+0x01095cfb   00 33 00 3b 00 43 00 53 00 63 00 73 00 83 00 a3    .3.;.C.S.c.s....
+0x01095d0b   00 c3 00 e3 00 02 01 00 00 00 00 00 00 10 00 10    ................
+0x01095d1b   00 10 00 10 00 10 00 10 00 10 00 10 00 11 00 11    ................
+0x01095d2b   00 11 00 11 00 12 00 12 00 12 00 12 00 13 00 13    ................
+0x01095d3b   00 13 00 13 00 14 00 14 00 14 00 14 00 15 00 15    ................
+
+
+vmtoolsd.exe         1972   0x01280000 0x140efff0 Vad      3      PAGE_EXECUTE_WRITECOPY
+Dumped to: out/vmtoolsd.exe.1f62da0.01280000-0140efff.dmp
+YARA rule: encoding
+Description: Indicates encryption/compression
+Hit: deflate
+0x013c8be9   64 65 66 6c 61 74 65 20 31 2e 32 2e 33 20 43 6f    deflate 1.2.3 Co
+0x013c8bf9   70 79 72 69 67 68 74 20 31 39 39 35 2d 32 30 30    pyright 1995-200
+0x013c8c09   35 20 4a 65 61 6e 2d 6c 6f 75 70 20 47 61 69 6c    5 Jean-loup Gail
+0x013c8c19   6c 79 20 00 00 00 00 00 00 00 00 00 00 00 00 40    ly ............@
+0x013c8c29   32 38 01 04 00 04 00 08 00 04 00 70 33 38 01 04    28.........p38..
+0x013c8c39   00 05 00 10 00 08 00 70 33 38 01 04 00 06 00 20    .......p38..... 
+0x013c8c49   00 20 00 70 33 38 01 04 00 04 00 10 00 10 00 90    . .p38..........
+0x013c8c59   36 38 01 08 00 10 00 20 00 20 00 90 36 38 01 08    68..... . ..68..
+
+Hit: Jean-loup Gailly
+0x013c8c0b   4a 65 61 6e 2d 6c 6f 75 70 20 47 61 69 6c 6c 79    Jean-loup Gailly
+0x013c8c1b   20 00 00 00 00 00 00 00 00 00 00 00 00 40 32 38     ............@28
+0x013c8c2b   01 04 00 04 00 08 00 04 00 70 33 38 01 04 00 05    .........p38....
+0x013c8c3b   00 10 00 08 00 70 33 38 01 04 00 06 00 20 00 20    .....p38..... . 
+0x013c8c4b   00 70 33 38 01 04 00 04 00 10 00 10 00 90 36 38    .p38..........68
+0x013c8c5b   01 08 00 10 00 20 00 20 00 90 36 38 01 08 00 10    ..... . ..68....
+0x013c8c6b   00 80 00 80 00 90 36 38 01 08 00 20 00 80 00 00    ......68... ....
+0x013c8c7b   01 90 36 38 01 20 00 80 00 02 01 00 04 90 36 38    ..68. ........68
+
+Hit: inflate
+0x013c8d49   69 6e 66 6c 61 74 65 20 31 2e 32 2e 33 20 43 6f    inflate 1.2.3 Co
+0x013c8d59   70 79 72 69 67 68 74 20 31 39 39 35 2d 32 30 30    pyright 1995-200
+0x013c8d69   35 20 4d 61 72 6b 20 41 64 6c 65 72 20 00 00 03    5 Mark Adler ...
+0x013c8d79   00 04 00 05 00 06 00 07 00 08 00 09 00 0a 00 0b    ................
+0x013c8d89   00 0d 00 0f 00 11 00 13 00 17 00 1b 00 1f 00 23    ...............#
+0x013c8d99   00 2b 00 33 00 3b 00 43 00 53 00 63 00 73 00 83    .+.3.;.C.S.c.s..
+0x013c8da9   00 a3 00 c3 00 e3 00 02 01 00 00 00 00 00 00 10    ................
+0x013c8db9   00 10 00 10 00 10 00 10 00 10 00 10 00 10 00 11    ................
+
+Hit: Mark Adler
+0x013c8d6b   4d 61 72 6b 20 41 64 6c 65 72 20 00 00 03 00 04    Mark Adler .....
+0x013c8d7b   00 05 00 06 00 07 00 08 00 09 00 0a 00 0b 00 0d    ................
+0x013c8d8b   00 0f 00 11 00 13 00 17 00 1b 00 1f 00 23 00 2b    .............#.+
+0x013c8d9b   00 33 00 3b 00 43 00 53 00 63 00 73 00 83 00 a3    .3.;.C.S.c.s....
+0x013c8dab   00 c3 00 e3 00 02 01 00 00 00 00 00 00 10 00 10    ................
+0x013c8dbb   00 10 00 10 00 10 00 10 00 10 00 10 00 11 00 11    ................
+0x013c8dcb   00 11 00 11 00 12 00 12 00 12 00 12 00 13 00 13    ................
+0x013c8ddb   00 13 00 13 00 14 00 14 00 14 00 14 00 15 00 15    ................
+
+YARA rule: injection
+Description: Indicates attempt to inject code
+Hit: injector
+0x013e5b91   69 6e 6a 65 63 74 6f 72 40 56 62 61 64 5f 6c 65    injector@Vbad_le
+0x013e5ba1   78 69 63 61 6c 5f 63 61 73 74 40 62 6f 6f 73 74    xical_cast@boost
+0x013e5bb1   40 40 40 65 78 63 65 70 74 69 6f 6e 5f 64 65 74    @@@exception_det
+0x013e5bc1   61 69 6c 40 62 6f 6f 73 74 40 40 00 00 00 00 f0    ail@boost@@.....
+0x013e5bd1   d1 3a 01 00 00 00 00 2e 3f 41 56 3f 24 63 6c 6f    .:......?AV?$clo
+0x013e5be1   6e 65 5f 69 6d 70 6c 40 55 3f 24 65 72 72 6f 72    ne_impl@U?$error
+0x013e5bf1   5f 69 6e 66 6f 5f 69 6e 6a 65 63 74 6f 72 40 56    _info_injector@V
+0x013e5c01   62 61 64 5f 6c 65 78 69 63 61 6c 5f 63 61 73 74    bad_lexical_cast
+
+Hit: injector
+0x013e5bf7   69 6e 6a 65 63 74 6f 72 40 56 62 61 64 5f 6c 65    injector@Vbad_le
+0x013e5c07   78 69 63 61 6c 5f 63 61 73 74 40 62 6f 6f 73 74    xical_cast@boost
+0x013e5c17   40 40 40 65 78 63 65 70 74 69 6f 6e 5f 64 65 74    @@@exception_det
+0x013e5c27   61 69 6c 40 62 6f 6f 73 74 40 40 40 65 78 63 65    ail@boost@@@exce
+0x013e5c37   70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62 6f 6f    ption_detail@boo
+0x013e5c47   73 74 40 40 00 f0 d1 3a 01 00 00 00 00 2e 50 42    st@@...:......PB
+0x013e5c57   44 00 00 00 00 f0 d1 3a 01 00 00 00 00 2e 4b 00    D......:......K.
+0x013e5c67   00 9c 7b 39 01 0a 00 00 00 9c 7b 39 01 9c 7b 39    ..{9......{9..{9
+
+Hit: injector
+0x013efb99   69 6e 6a 65 63 74 6f 72 40 56 69 6e 76 61 6c 69    injector@Vinvali
+0x013efba9   64 5f 61 72 67 75 6d 65 6e 74 40 73 74 64 40 40    d_argument@std@@
+0x013efbb9   40 65 78 63 65 70 74 69 6f 6e 5f 64 65 74 61 69    @exception_detai
+0x013efbc9   6c 40 62 6f 6f 73 74 40 40 00 00 00 00 00 00 f0    l@boost@@.......
+0x013efbd9   d1 3a 01 00 00 00 00 2e 3f 41 55 3f 24 65 72 72    .:......?AU?$err
+0x013efbe9   6f 72 5f 69 6e 66 6f 5f 69 6e 6a 65 63 74 6f 72    or_info_injector
+0x013efbf9   40 56 72 75 6e 74 69 6d 65 5f 65 72 72 6f 72 40    @Vruntime_error@
+0x013efc09   73 74 64 40 40 40 65 78 63 65 70 74 69 6f 6e 5f    std@@@exception_
+
+Hit: injector
+0x013efbf1   69 6e 6a 65 63 74 6f 72 40 56 72 75 6e 74 69 6d    injector@Vruntim
+0x013efc01   65 5f 65 72 72 6f 72 40 73 74 64 40 40 40 65 78    e_error@std@@@ex
+0x013efc11   63 65 70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62    ception_detail@b
+0x013efc21   6f 6f 73 74 40 40 00 f0 d1 3a 01 00 00 00 00 2e    oost@@...:......
+0x013efc31   3f 41 56 3f 24 63 6c 6f 6e 65 5f 69 6d 70 6c 40    ?AV?$clone_impl@
+0x013efc41   55 3f 24 65 72 72 6f 72 5f 69 6e 66 6f 5f 69 6e    U?$error_info_in
+0x013efc51   6a 65 63 74 6f 72 40 56 69 6e 76 61 6c 69 64 5f    jector@Vinvalid_
+0x013efc61   61 72 67 75 6d 65 6e 74 40 73 74 64 40 40 40 65    argument@std@@@e
+
+Hit: injector
+0x013efc4f   69 6e 6a 65 63 74 6f 72 40 56 69 6e 76 61 6c 69    injector@Vinvali
+0x013efc5f   64 5f 61 72 67 75 6d 65 6e 74 40 73 74 64 40 40    d_argument@std@@
+0x013efc6f   40 65 78 63 65 70 74 69 6f 6e 5f 64 65 74 61 69    @exception_detai
+0x013efc7f   6c 40 62 6f 6f 73 74 40 40 40 65 78 63 65 70 74    l@boost@@@except
+0x013efc8f   69 6f 6e 5f 64 65 74 61 69 6c 40 62 6f 6f 73 74    ion_detail@boost
+0x013efc9f   40 40 00 00 00 00 00 00 00 f0 d1 3a 01 00 00 00    @@.........:....
+0x013efcaf   00 2e 3f 41 56 3f 24 63 6c 6f 6e 65 5f 69 6d 70    ..?AV?$clone_imp
+0x013efcbf   6c 40 55 3f 24 65 72 72 6f 72 5f 69 6e 66 6f 5f    l@U?$error_info_
+
+Hit: injector
+0x013efccf   69 6e 6a 65 63 74 6f 72 40 56 72 75 6e 74 69 6d    injector@Vruntim
+0x013efcdf   65 5f 65 72 72 6f 72 40 73 74 64 40 40 40 65 78    e_error@std@@@ex
+0x013efcef   63 65 70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62    ception_detail@b
+0x013efcff   6f 6f 73 74 40 40 40 65 78 63 65 70 74 69 6f 6e    oost@@@exception
+0x013efd0f   5f 64 65 74 61 69 6c 40 62 6f 6f 73 74 40 40 00    _detail@boost@@.
+0x013efd1f   00 60 eb 3b 01 f8 eb 3b 01 10 be 35 01 40 fc 34    .`.;...;...5.@.4
+0x013efd2f   01 a0 0e 35 01 90 fc 34 01 10 fd 34 01 80 fd 34    ...5...4...4...4
+0x013efd3f   01 80 9d 35 01 00 0f 35 01 80 0f 35 01 f0 0f 35    ...5...5...5...5
+
+Hit: injector
+0x013f0049   69 6e 6a 65 63 74 6f 72 40 56 72 65 67 65 78 5f    injector@Vregex_
+0x013f0059   65 72 72 6f 72 40 62 6f 6f 73 74 40 40 40 65 78    error@boost@@@ex
+0x013f0069   63 65 70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62    ception_detail@b
+0x013f0079   6f 6f 73 74 40 40 00 f0 d1 3a 01 00 00 00 00 2e    oost@@...:......
+0x013f0089   3f 41 55 3f 24 65 72 72 6f 72 5f 69 6e 66 6f 5f    ?AU?$error_info_
+0x013f0099   69 6e 6a 65 63 74 6f 72 40 56 6c 6f 67 69 63 5f    injector@Vlogic_
+0x013f00a9   65 72 72 6f 72 40 73 74 64 40 40 40 65 78 63 65    error@std@@@exce
+0x013f00b9   70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62 6f 6f    ption_detail@boo
+
+Hit: injector
+0x013f0099   69 6e 6a 65 63 74 6f 72 40 56 6c 6f 67 69 63 5f    injector@Vlogic_
+0x013f00a9   65 72 72 6f 72 40 73 74 64 40 40 40 65 78 63 65    error@std@@@exce
+0x013f00b9   70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62 6f 6f    ption_detail@boo
+0x013f00c9   73 74 40 40 00 00 00 f0 d1 3a 01 00 00 00 00 2e    st@@.....:......
+0x013f00d9   3f 41 56 3f 24 63 6c 6f 6e 65 5f 69 6d 70 6c 40    ?AV?$clone_impl@
+0x013f00e9   55 3f 24 65 72 72 6f 72 5f 69 6e 66 6f 5f 69 6e    U?$error_info_in
+0x013f00f9   6a 65 63 74 6f 72 40 56 72 65 67 65 78 5f 65 72    jector@Vregex_er
+0x013f0109   72 6f 72 40 62 6f 6f 73 74 40 40 40 65 78 63 65    ror@boost@@@exce
+
+Hit: injector
+0x013f00f7   69 6e 6a 65 63 74 6f 72 40 56 72 65 67 65 78 5f    injector@Vregex_
+0x013f0107   65 72 72 6f 72 40 62 6f 6f 73 74 40 40 40 65 78    error@boost@@@ex
+0x013f0117   63 65 70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62    ception_detail@b
+0x013f0127   6f 6f 73 74 40 40 40 65 78 63 65 70 74 69 6f 6e    oost@@@exception
+0x013f0137   5f 64 65 74 61 69 6c 40 62 6f 6f 73 74 40 40 00    _detail@boost@@.
+0x013f0147   00 f0 d1 3a 01 00 00 00 00 2e 3f 41 56 3f 24 63    ...:......?AV?$c
+0x013f0157   6c 6f 6e 65 5f 69 6d 70 6c 40 55 3f 24 65 72 72    lone_impl@U?$err
+0x013f0167   6f 72 5f 69 6e 66 6f 5f 69 6e 6a 65 63 74 6f 72    or_info_injector
+
+Hit: injector
+0x013f016f   69 6e 6a 65 63 74 6f 72 40 56 6c 6f 67 69 63 5f    injector@Vlogic_
+0x013f017f   65 72 72 6f 72 40 73 74 64 40 40 40 65 78 63 65    error@std@@@exce
+0x013f018f   70 74 69 6f 6e 5f 64 65 74 61 69 6c 40 62 6f 6f    ption_detail@boo
+0x013f019f   73 74 40 40 40 65 78 63 65 70 74 69 6f 6e 5f 64    st@@@exception_d
+0x013f01af   65 74 61 69 6c 40 62 6f 6f 73 74 40 40 00 00 00    etail@boost@@...
+0x013f01bf   00 9c 7b 39 01 00 00 00 00 f0 d1 3a 01 00 00 00    ..{9.......:....
+0x013f01cf   00 2e 3f 41 56 3f 24 73 70 5f 63 6f 75 6e 74 65    ..?AV?$sp_counte
+0x013f01df   64 5f 69 6d 70 6c 5f 70 64 40 50 41 55 48 49 4e    d_impl_pd@PAUHIN
+
+YARA rule: browsers
+Description: Indicates attempt to modify browser behavior
+Hit: Firefox
+0x013bedb8   46 69 72 65 66 6f 78 55 52 4c 00 00 53 61 66 61    FirefoxURL..Safa
+0x013bedc8   72 69 55 52 4c 00 00 00 41 70 70 6c 69 63 61 74    riURL...Applicat
+0x013bedd8   69 6f 6e 73 5c 4f 70 65 72 61 2e 65 78 65 00 00    ions.Opera.exe..
+0x013bede8   41 70 70 6c 69 63 61 74 69 6f 6e 73 5c 69 65 78    Applications.iex
+0x013bedf8   70 6c 6f 72 65 2e 65 78 65 00 00 00 43 68 72 6f    plore.exe...Chro
+0x013bee08   6d 65 48 54 4d 4c 00 00 25 73 5c 55 52 4c 41 73    meHTML..%s.URLAs
+0x013bee18   73 6f 63 69 61 74 69 6f 6e 73 00 00 25 73 5c 46    sociations..%s.F
+0x013bee28   69 6c 65 41 73 73 6f 63 69 61 74 69 6f 6e 73 00    ileAssociations.
+
+Hit: Safari
+0x013bedc4   53 61 66 61 72 69 55 52 4c 00 00 00 41 70 70 6c    SafariURL...Appl
+0x013bedd4   69 63 61 74 69 6f 6e 73 5c 4f 70 65 72 61 2e 65    ications.Opera.e
+0x013bede4   78 65 00 00 41 70 70 6c 69 63 61 74 69 6f 6e 73    xe..Applications
+0x013bedf4   5c 69 65 78 70 6c 6f 72 65 2e 65 78 65 00 00 00    .iexplore.exe...
+0x013bee04   43 68 72 6f 6d 65 48 54 4d 4c 00 00 25 73 5c 55    ChromeHTML..%s.U
+0x013bee14   52 4c 41 73 73 6f 63 69 61 74 69 6f 6e 73 00 00    RLAssociations..
+0x013bee24   25 73 5c 46 69 6c 65 41 73 73 6f 63 69 61 74 69    %s.FileAssociati
+0x013bee34   6f 6e 73 00 41 64 64 41 70 70 6c 69 63 61 74 69    ons.AddApplicati
+
+Hit: Opera
+0x013beddd   4f 70 65 72 61 2e 65 78 65 00 00 41 70 70 6c 69    Opera.exe..Appli
+0x013beded   63 61 74 69 6f 6e 73 5c 69 65 78 70 6c 6f 72 65    cations.iexplore
+0x013bedfd   2e 65 78 65 00 00 00 43 68 72 6f 6d 65 48 54 4d    .exe...ChromeHTM
+0x013bee0d   4c 00 00 25 73 5c 55 52 4c 41 73 73 6f 63 69 61    L..%s.URLAssocia
+0x013bee1d   74 69 6f 6e 73 00 00 25 73 5c 46 69 6c 65 41 73    tions..%s.FileAs
+0x013bee2d   73 6f 63 69 61 74 69 6f 6e 73 00 41 64 64 41 70    sociations.AddAp
+0x013bee3d   70 6c 69 63 61 74 69 6f 6e 73 46 72 6f 6d 43 61    plicationsFromCa
+0x013bee4d   70 61 62 69 6c 69 74 69 65 73 41 73 73 6f 63 69    pabilitiesAssoci
+
+Hit: Chrome
+0x013bee04   43 68 72 6f 6d 65 48 54 4d 4c 00 00 25 73 5c 55    ChromeHTML..%s.U
+0x013bee14   52 4c 41 73 73 6f 63 69 61 74 69 6f 6e 73 00 00    RLAssociations..
+0x013bee24   25 73 5c 46 69 6c 65 41 73 73 6f 63 69 61 74 69    %s.FileAssociati
+0x013bee34   6f 6e 73 00 41 64 64 41 70 70 6c 69 63 61 74 69    ons.AddApplicati
+0x013bee44   6f 6e 73 46 72 6f 6d 43 61 70 61 62 69 6c 69 74    onsFromCapabilit
+0x013bee54   69 65 73 41 73 73 6f 63 69 61 74 69 6f 6e 73 4c    iesAssociationsL
+0x013bee64   69 73 74 43 42 00 00 00 53 6f 66 74 77 61 72 65    istCB...Software
+0x013bee74   5c 43 6c 69 65 6e 74 73 5c 4d 61 69 6c 00 00 00    .Clients.Mail...
+
+
+svchost.exe          268    0x3d930000 0x3da15fff Vad      1      PAGE_EXECUTE_WRITECOPY
+Dumped to: out/svchost.exe.23a7da0.3d930000-3da15fff.dmp
+YARA rule: bankers
+Description: Indicates banker / passwd stealer
+Hit: 490045005f0063006f006f006b00690065007300
+0x3d99bc54   49 00 45 00 5f 00 63 00 6f 00 6f 00 6b 00 69 00    I.E._.c.o.o.k.i.
+0x3d99bc64   65 00 73 00 5f 00 66 00 61 00 71 00 2e 00 68 00    e.s._.f.a.q...h.
+0x3d99bc74   74 00 6d 00 00 00 90 90 90 90 90 90 6d 00 73 00    t.m.........m.s.
+0x3d99bc84   68 00 65 00 6c 00 70 00 3a 00 2f 00 2f 00 77 00    h.e.l.p.:././.w.
+0x3d99bc94   69 00 6e 00 64 00 6f 00 77 00 73 00 2f 00 3f 00    i.n.d.o.w.s./.?.
+0x3d99bca4   69 00 64 00 3d 00 38 00 35 00 64 00 31 00 61 00    i.d.=.8.5.d.1.a.
+0x3d99bcb4   36 00 35 00 38 00 2d 00 32 00 37 00 63 00 64 00    6.5.8.-.2.7.c.d.
+0x3d99bcc4   2d 00 34 00 37 00 34 00 39 00 2d 00 61 00 34 00    -.4.7.4.9.-.a.4.
+
+
+wmiprvse.exe         1452   0x1d1d0000 0x1d1d3fff VadS     0      PAGE_EXECUTE_READWRITE
+Dumped to: out/wmiprvse.exe.2065c10.1d1d0000-1d1d3fff.dmp
+0x1d1d0000   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x1d1d0010   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x1d1d0020   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x1d1d0030   00 00 00 00 28 00 28 00 01 00 00 00 00 00 00 00    ....(.(.........
+0x1d1d0040   00 00 00 00 48 e0 09 61 48 e0 44 00 00 00 00 00    ....H..aH.D.....
+0x1d1d0050   37 38 d1 10 d9 d9 1b 14 c8 e0 09 61 b2 e0 09 61    78.........a...a
+0x1d1d0060   ed 8b 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x1d1d0070   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+
+Disassembly:
+1d1d0000: 0000                             ADD [EAX], AL
+1d1d0002: 0000                             ADD [EAX], AL
+1d1d0004: 0000                             ADD [EAX], AL
+1d1d0006: 0000                             ADD [EAX], AL
+1d1d0008: 0000                             ADD [EAX], AL
+1d1d000a: 0000                             ADD [EAX], AL
+1d1d000c: 0000                             ADD [EAX], AL
+1d1d000e: 0000                             ADD [EAX], AL
+1d1d0010: 0000                             ADD [EAX], AL
+1d1d0012: 0000                             ADD [EAX], AL
+
+
+wmiprvse.exe         1452   0x01ee0000 0x1ee3fff0 VadS     0      PAGE_EXECUTE_READWRITE
+Dumped to: out/wmiprvse.exe.2065c10.01ee0000-01ee3fff.dmp
+0x01ee0000   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x01ee0010   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x01ee0020   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x01ee0030   00 00 00 00 25 00 25 00 01 00 00 00 00 00 00 00    ....%.%.........
+0x01ee0040   c4 1f 00 00 88 cb 09 61 88 cb 44 00 00 00 00 00    .......a..D.....
+0x01ee0050   b9 d6 0b 38 4f 41 6d 92 f0 cb 09 61 da cb 09 61    ...8OAm....a...a
+0x01ee0060   15 8c 00 00 03 00 00 00 00 00 00 00 00 00 00 00    ................
+0x01ee0070   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+
+Disassembly:
+01ee0000: 0000                             ADD [EAX], AL
+01ee0002: 0000                             ADD [EAX], AL
+01ee0004: 0000                             ADD [EAX], AL
+01ee0006: 0000                             ADD [EAX], AL
+01ee0008: 0000                             ADD [EAX], AL
+01ee000a: 0000                             ADD [EAX], AL
+01ee000c: 0000                             ADD [EAX], AL
+01ee000e: 0000                             ADD [EAX], AL
+01ee0010: 0000                             ADD [EAX], AL
+01ee0012: 0000                             ADD [EAX], AL
+
+
+wmiprvse.exe         1452   0x49170000 0x49173fff VadS     0      PAGE_EXECUTE_READWRITE
+Dumped to: out/wmiprvse.exe.2065c10.49170000-49173fff.dmp
+0x49170000   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x49170010   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x49170020   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x49170030   00 00 00 00 27 00 27 00 01 00 00 00 00 00 00 00    ....'.'.........
+0x49170040   00 00 00 00 78 79 08 61 78 79 43 00 00 00 00 00    ....xy.axyC.....
+0x49170050   89 6b b3 13 5f 27 ea 1d b8 79 08 61 a2 79 08 61    .k.._'...y.a.y.a
+0x49170060   ed 8b 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x49170070   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+
+Disassembly:
+49170000: 0000                             ADD [EAX], AL
+49170002: 0000                             ADD [EAX], AL
+49170004: 0000                             ADD [EAX], AL
+49170006: 0000                             ADD [EAX], AL
+49170008: 0000                             ADD [EAX], AL
+4917000a: 0000                             ADD [EAX], AL
+4917000c: 0000                             ADD [EAX], AL
+4917000e: 0000                             ADD [EAX], AL
+49170010: 0000                             ADD [EAX], AL
+49170012: 0000                             ADD [EAX], AL
+
+
+wmiprvse.exe         1452   0x4bf10000 0x4bf13fff VadS     0      PAGE_EXECUTE_READWRITE
+Dumped to: out/wmiprvse.exe.2065c10.4bf10000-4bf13fff.dmp
+0x4bf10000   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x4bf10010   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x4bf10020   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x4bf10030   00 00 00 00 24 00 24 00 01 00 00 00 00 00 00 00    ....$.$.........
+0x4bf10040   00 00 00 00 70 9c 06 61 70 9c 41 00 00 00 00 00    ....p..ap.A.....
+0x4bf10050   7f 96 eb b6 2d 35 f9 2a b0 9c 06 61 9a 9c 06 61    ....-5.*...a...a
+0x4bf10060   ed 8b 00 00 02 00 00 00 00 00 00 00 00 00 00 00    ................
+0x4bf10070   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+
+Disassembly:
+4bf10000: 0000                             ADD [EAX], AL
+4bf10002: 0000                             ADD [EAX], AL
+4bf10004: 0000                             ADD [EAX], AL
+4bf10006: 0000                             ADD [EAX], AL
+4bf10008: 0000                             ADD [EAX], AL
+4bf1000a: 0000                             ADD [EAX], AL
+4bf1000c: 0000                             ADD [EAX], AL
+4bf1000e: 0000                             ADD [EAX], AL
+4bf10010: 0000                             ADD [EAX], AL
+4bf10012: 0000                             ADD [EAX], AL
+
+
+wmiprvse.exe         1452   0x6d7a0000 0x6d7a3fff VadS     0      PAGE_EXECUTE_READWRITE
+Dumped to: out/wmiprvse.exe.2065c10.6d7a0000-6d7a3fff.dmp
+0x6d7a0000   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x6d7a0010   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x6d7a0020   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+0x6d7a0030   00 00 00 00 2e 00 2e 00 01 00 00 00 00 00 00 00    ................
+0x6d7a0040   00 00 00 00 48 d6 09 61 48 d6 44 00 00 00 00 00    ....H..aH.D.....
+0x6d7a0050   13 91 cd 1c f5 65 5d bf 28 d7 09 61 12 d7 09 61    .....e].(..a...a
+0x6d7a0060   ed 8b 00 00 01 00 00 00 00 00 00 00 00 00 00 00    ................
+0x6d7a0070   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+
+Disassembly:
+6d7a0000: 0000                             ADD [EAX], AL
+6d7a0002: 0000                             ADD [EAX], AL
+6d7a0004: 0000                             ADD [EAX], AL
+6d7a0006: 0000                             ADD [EAX], AL
+6d7a0008: 0000                             ADD [EAX], AL
+6d7a000a: 0000                             ADD [EAX], AL
+6d7a000c: 0000                             ADD [EAX], AL
+6d7a000e: 0000                             ADD [EAX], AL
+6d7a0010: 0000                             ADD [EAX], AL
+6d7a0012: 0000                             ADD [EAX], AL
+
+

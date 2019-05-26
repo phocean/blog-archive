@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<link rel="stylesheet" href="../css/fontello.css">
+<link rel="stylesheet" href="../css/animation.css">
+
+<!-- Mirrored from phocean.net/tag/nodejs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:45:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Nodejs | Phocean.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/blog-archive/wp-content/themes/twentytwelve/js/html5.js"></script>
+<![endif]-->
+
+	  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Feed" href="/blog-archive/feed" />
+<link rel="alternate" type="application/rss+xml" title="Phocean.net &raquo; Nodejs Tag Feed" href="nodejs/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phocean.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='/blog-archive/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/blog-archive/wp-content/themes/twentytwelve-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/blog-archive/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/blog-archive/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #627690;
+		}
+		</style>
+	</head>
+
+<body class="archive tag tag-nodejs tag-432 full-width custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+                        <div style="float:left">
+
+			<a href="../index.html" >
+			<img class="logo" src="../logo.svg" width="119" height="77" onerror="this.removeAttribute('onerror'); this.src='../logo.html'" />
+			</a>
+
+                        <!--<img src="/blog-archive/wp-content/themes/twentytwelve-child/logo.png" style="vertical-align:middle;"/>-->
+
+                        </div>
+                        <div style="float:left">
+                        <h1 class="site-title">
+                      <span><a href="../index.html" title="Phocean.net" rel="home">
+                        Phocean.net</a></span></h1>
+			<h2 class="site-description">Computer Security Blog</h2>
+                </div>
+		<div style="float:right;overflow:hidden;word-wrap: break-word;">
+			<form role="search" method="get" id="searchform" class="searchform" action="/blog-archive/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>		</div>
+		</hgroup>
+
+                <div style="clear:both"></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1527"><a href="../index.html"><i class="icon-home"></i> Blog</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="../archives.html"><i class="icon-archive"></i> Archives</a></li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1525"><a href="../tools.html"><i class="icon-beaker"></i> Code</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="../docs.html"><i class="icon-doc"></i> Docs</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="../about.html"><i class="icon-user"></i> About</a></li>
+<li id="menu-item-1809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"><a href="http://twitter.com/_phocean"><i class="icon-twitter-1"></i> Twitter</a></li>
+<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"><a href="../indexcc4d.html?feed=rss"><i class="icon-rss"></i> RSS</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Tag Archives: <span>Nodejs</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-2099" class="post-2099 post type-post status-publish format-standard hentry category-defense category-linux category-security category-administration-systeme category-virtualization tag-docker tag-dockerfile tag-etherpad tag-linux tag-nodejs">
+				<header class="entry-header">
+
+						<h1 class="entry-title">
+				<a href="../2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html" title="Permalink to Lessons learned with Docker, Nodejs apps and volumes" rel="bookmark">Lessons learned with Docker, Nodejs apps and volumes</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<!-- Adds 140x140 featured image to single post view -->
+			<div class="excerpt-thumb">
+							</div>
+			<h2>Context</h2>
+<p>I have kept playing with Docker recently, just for fun and to learn.</p>
+<p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
+<p>Indeed, I had some issues with Etherpad, which is a Nodejs application, and its integration into Docker.</p>
+<p>Initially, I made something quite simple, so my Dockerfile ended like that:</p>
+<pre>USER etherpad
+CMD ["node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>Thus, I simply start the app with a low privileges user.</p>
+<p>It worked, but I had two issues:</p>
+<ol>
+<li>Docker was not able to stop it nicely. Instead, it timed out after 10 sec and finally killed the app and the container altogether.</li>
+<li>No persistence of any kind, of course.</li>
+</ol>
+<p>I decided to tackle these two issues to understand what was going on behind.</p>
+<h2>The PID 1 issue</h2>
+<p>I could not understand immediately the first issue: why was Docker unable to terminate the container properly?</p>
+<p>After wandering a few hours on wrong paths (trying to get through with Nodejs nodemon or supervisor), I finally found some good articles, explaining that Docker misses an init system to catch signals, wich causes some issues with applications started with a PID = 1, which cannot be killed, or with Bash (the shell doesn&#8217;t handle transmitted signals.</p>
+<p>I am not going to repeat poorly what has already been explained very well, so I encourage you to read this two excellent posts:</p>
+<ul>
+<li><a href="https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/">The PID 1 zombie reaping problem</a></li>
+<li><a href="https://medium.com/@gchudnov/trapping-signals-in-docker-containers-7a57fdda7d86#.wqy8msjbk">Trapping signals in Docker containers</a></li>
+</ul>
+<p>You will also find a lot of bug reports in the Docker github about this issue, and a lot of hacky or overkilling solutions.</p>
+<p>In my opinion, the most elegant solution among them is to use a launcher program, very simple and dedicated to catch and handle signal.</p>
+<p>I chose to use <a href="https://github.com/yelp/dumb-init">Dumb-init</a>, as it is well packaged (there are plenty of options) and seems to be well maintained.</p>
+<p>So, after installing Dump-init in the Dockerfile, the CMD line should now look like this:</p>
+<pre>USER etherpad
+CMD ["dumb-init","node","/opt/etherpad-lite/node_modules/ep_etherpad-lite/node/server.js"]</pre>
+<p>And indeed, as expected, <em>docker stop</em> now works flawlessly.</p>
+<h2>Volume permissions</h2>
+<p>This is where I had the toughest issue, although it is supposed to be straightforward with volumes.</p>
+<p>Volumes enable to share files or folders between host and containers, or between containers solely. There are plenty of possibilities, nicely illustrated on this blog:</p>
+<ul>
+<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker: storage patterns for persistence</a></li>
+</ul>
+<p>And it works very well&#8230;. as long as you application runs as root.</p>
+<p>In my case, for instance, Etherpad runs with a low privileged user, which is highly recommended. At startup, it creates a sqlite database, etherpad.db,  in its ./var folder.</p>
+<p>Mounting a volume, of any kind, over the ./var folder, would result in a folder with root only permissions. Subsequently, of course, the launch of Etherpad from the CMD command would fail miserably.</p>
+<p>Simple solutions like <em>chown</em> in the Dockerfile don&#8217;t work, because they apply <em>before</em> the mount. The <em>mount</em> occurs at runtime and works like a standard Linux <em>mount:</em> it is created by the docker daemon, with <em>root</em> permissions, over possibly existing data.</p>
+<p>My solution was to completely change the way Etherpad is started. I now use an external script which is started at runtime:</p>
+<ol>
+<li>First, it applies the appropriate permissions to the mounted volume with <em>chown,</em></li>
+<li>Then, it starts Etherpad with a low privileged user thanks to a <em>su</em> hack.</li>
+</ol>
+<p>So now the Dockerfile ends with:</p>
+<pre>VOLUME /opt/etherpad-lite/var
+ADD run-docker.sh ./bin/
+CMD ["./bin/run-docker.sh"]</pre>
+<p>And here is the script:</p>
+<pre>#!/bin/bash
+
+chown -R etherpad:etherpad /opt/etherpad-lite/var
+su etherpad -s /bin/bash -c  "dumb-init node /opt/etherpad-lite/node_modules/ep_etherpad-lite/no
+de/server.js"</pre>
+<p>I use a data volume for persistency, so the run command looks like this:</p>
+<pre>docker run -d --name etherpad -p 80:9001 -v etherpad:/opt/etherpad-lite/var -t debian-etherpad</pre>
+<p>Far from being ideal, but it works. I really hope some features are coming to bring more options in this area, especially in the Dockerfile.</p>
+<h2>Some final thoughts</h2>
+<p>Globally, we can still hope a lot of improvements in security, because when I look at many Dockerfiles around, I see two behaviors:</p>
+<ul>
+<li>A lot of people don&#8217;t care and everything is happily running as root, from unauthenticated third-party images or binaries&#8230;</li>
+<li>Some people do care but end up with dirty hacks, because there is no other way to do so.</li>
+</ul>
+<p>It is scary and so far from the Linux philosophy. Let&#8217;s wait for the enhancements to come.</p>
+<p>You can find the complete <em>updated</em> Dockerfile on <a href="https://github.com/phocean/dockerfile-debian-etherpad/blob/master/Dockerfile">this github page</a>.</p>
+<p>While we are on this topic, have a look to <a href="http://blog.labianchin.me/2016/02/15/docker-tips-and-tricks">this nice post with some nice tips and tricks</a> for Docker.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<i class="icon-folder-open-empty"></i> <a href="../category/security/defense.html" rel="category tag">Defense</a>, <a href="../category/administration-systeme/linux.html" rel="category tag">Linux</a>, <a href="../category/security.html" rel="category tag">Security</a>, <a href="../category/administration-systeme.html" rel="category tag">System</a>, <a href="../category/administration-systeme/virtualization.html" rel="category tag">Virtualization</a> <i class="icon-tag"></i> <a href="docker.html" rel="tag">Docker</a>, <a href="dockerfile.html" rel="tag">Dockerfile</a>, <a href="etherpad.html" rel="tag">Etherpad</a>, <a href="linux.html" rel="tag">Linux</a>, <a href="nodejs.html" rel="tag">Nodejs</a> <i class="icon-calendar"></i> <a href="../2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html" title="7:05 pm" rel="bookmark"><time class="entry-date" datetime="2016-05-06T19:05:01+00:00">May 6, 2016</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../author/jc.html" title="View all posts by phocean" rel="author">phocean</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"5","linkTarget":"_self","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/phocean.net\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/blog-archive/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-content/themes/twentytwelve/js/navigation.js'></script>
+<script type='text/javascript' src='/blog-archive/wp-includes/js/wp-embed.min.js'></script>
+<!-- Generated in 1.363 seconds. Made 9 queries to database and 45 cached queries. Memory used - 27.37MB -->
+<!-- Cached by DB Cache Reloaded Fix -->
+</body>
+
+<!-- Mirrored from phocean.net/tag/nodejs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2019 07:45:08 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.332 seconds. -->

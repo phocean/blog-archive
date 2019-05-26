@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>scammer &#8211; Phocean.net</title>
+	<atom:link href="/blog-archive/tag/scammer/feed" rel="self" type="application/rss+xml" />
+	<link>/blog-archive</link>
+	<description>Computer Security Blog</description>
+	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.10</generator>
+	<item>
+		<title>A relative got hacked for scamming activities</title>
+		<link>/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
+		<pubDate>Sun, 20 Jan 2013 16:40:03 +0000</pubDate>
+		<dc:creator><![CDATA[phocean]]></dc:creator>
+				<category><![CDATA[Forensic]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[Forensics]]></category>
+		<category><![CDATA[Hacking]]></category>
+		<category><![CDATA[scam]]></category>
+		<category><![CDATA[scammer]]></category>
+		<category><![CDATA[scamming]]></category>
+		<category><![CDATA[sqlite]]></category>
+
+		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
+		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>One of my relative got hacked.</p>
+<p>After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to say that his knowledge on computers is low.<br />
+I immediately started to investigate.</p>
+<h2>How the computer was hacked</h2>
+<p>The computer is running Ubuntu . I suspected a vulnerability, but I soon realized that it was much simpler than that: by mistake, a VNC session was left opened!</p>
+<p><em><strong>x11vnc</strong></em> with <strong><em>no authentication</em></strong> and <em><strong>no logging</strong></em>&#8230; Damned!</p>
+<h2>What the attacker did</h2>
+<p>What he tried first was to create a user to maintain access. But the scammer was probably low tech and soon abandonned.</p>
+<p>Here is his sequence in the shell history:</p>
+<pre>261 adduser -u 0 -o -g 0 -G 0,1,2,3,4,6,10 -M xxxcx
+262 useradd -d /home/xxxcx -m nokia00
+263 passwd xxxcx</pre>
+<p>Command <strong>#261</strong> failed, because of unproper syntax. I guess he meant useradd, as adduser on Debian/Ubuntu has totally different options. Note that what he was trying to do is create a new root user named xxxcx (with no home directory).</p>
+<p>He probably did not realize his mistake, but yet tried this time useradd with fewer options in command <strong>#262</strong>. This time, he would create the home directory and name the user nokia00&#8230; Why not. Alas, the command can&#8217;t work as a standard user!</p>
+<p>Then, command <strong>#263</strong>: he tried to change the current password, but again he failed as it is required to know it before updating it&#8230;</p>
+<p>And that&#8217;s it. Pretty lame, isn&#8217;t it? He got quickly discouraged and started to use exclusively <em><strong>Firefox</strong></em>.</p>
+<h2>On-line shopping</h2>
+<p>With support of <a title="forensicswiki.org" href="http://www.forensicswiki.org/wiki/Mozilla_Firefox">forensicswiki.org</a>, I dumped the full Firefox profile on my computer and started to analyze it with the <a title="Sqlite Manager" href="https://addons.mozilla.org/fr/firefox/addon/sqlite-manager/">Sqlite Manager</a> extension.</p>
+<blockquote><p>Sorry but I will be hiding private info and sensitive data that could be used for a legal action.</p></blockquote>
+<p>I got most info from the files <em><strong>cookies.sqlite</strong></em> and <em><strong>places.sqlite</strong></em>.</p>
+<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/cookies-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/cookies-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
+<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/blog-archive/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/places-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/places-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/places-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
+<p>The guy didn&#8217;t loose time, he knew precisely what he wanted and what to do.</p>
+<ol>
+<li>He first visited two websites to localize the computer: <a title="ip2location.com" href="http://ip2location.com">ip2location.com</a> and <a title="ip-tracker.org" href="http://www.ip-tracker.org">ip-tracker.org</a>. You may think that it is a strange first move, but I will come back on that later as I have a theory.</li>
+<li>Now that he knew in what country he was (country XXX), he started to do online shopping.</li>
+</ol>
+<p>It is interesting that his online shopping was all linked to web hosting:</p>
+<ul>
+<li>templates from dreamtemplates.com</li>
+<li>a .net domain name (with however part of the prefix being localized accordingly to the country suffix).</li>
+<li>hosting at netfirms.com and mg1host.com</li>
+</ul>
+<p>Note that the criminal used a online payment platform that I never heard about before: 2checkout.com aka 2co.com.</p>
+<p>Unfortunately, when I investigated, all cookies were expired so I could not connect to the criminal&#8217;s account.</p>
+<p>Yet, it still had some valuable info. The most interesting info I found was from a cookie from dreamtemplates.com. I got all the billing info used by the attacker:</p>
+<ul>
+<li>attacker&#8217;s gmail address (probably compromised or anonymous)</li>
+<li>Name and address for the billing, that sounded real&#8230;</li>
+</ul>
+<p>Also, GET parameters in URLs were very interesting.</p>
+<p>In some of them, you can guess the amount of the purchase he did. He for sure bought stuff for at least a total of 500$. But it is without counting the stuff that I cannot guess from URLs, so it is probably sensibly much more in reality.</p>
+<p>But, even better, some had order ids. Hey, wait! Let&#8217;s have a look on the 2co website:</p>
+<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /blog-archive/wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /blog-archive/wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
+<p>Hmmm&#8230; we have the email address and the order number&#8230; bingo!</p>
+<p><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/blog-archive/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/blog-archive/wp-content/uploads/2013/01/order-580x911.png 580w, /blog-archive/wp-content/uploads/2013/01/order-190x300.png 190w, /blog-archive/wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
+<p>Now, we have at least all info of the credit card owner, certainly the biggest victim in this mess.</p>
+<h2>Conclusion</h2>
+<p>That&#8217;s it for now. We are still in the process of transmitting the info to the police and alerting the victim.</p>
+<p>Here are a few thoughts by the way:</p>
+<ul>
+<li>Logging, always logging! It is a pity that we know literally nothing about the scammer source ip address. All his actions were made from within a VNC session and it leaves no trace. He may have came from another proxy, but who knows&#8230; I still have a little hope that under legal request, the Internet provider of my relative will be able to provide some logs.</li>
+</ul>
+<ul>
+<li>Nowadays, it is still difficult to report such a case to the police and to help the victim. The local police is at loss and does not really know what to do. The cyber section is slow to answer, probably crawling under requests (mostly spam stuff?).</li>
+</ul>
+<ul>
+<li>Not every one has a computer specialist among friends or relatives. It must be a terrible experience to see the police coming to you for a fraud one hasn&#8217;t committed directly. Few people, even sometimes among IT professionals, understand that.</li>
+</ul>
+<ul>
+<li>The criminal seemed low tech, but very organized at the same time.<br />
+Here is my theory: he probably has a precise goal and is not loosing time.<br />
+He follows a process: geo-localize the victim or target a country and choose accordingly financial data in his database.<br />
+Then, he purchases stuff from a list of items he needs or he is requested.<br />
+Finally, if he could not find a way to maintain access in seconds, he leaves. Mission done: this scammer is probably doing it full time, as a professional activity. Lame but efficient for the crime industry.</li>
+</ul>
+<ul>
+<li>The credit card info was accompanied with private info: real name and address. We all know that but it is always shocking to think how it can easily obtained: compromised computer, hacked online shop or database, dishonest employee (e.g. at the hotel), etc.</li>
+</ul>
+<ul>
+<li>The websites  will probably be used for more scamming and illegal activities. I am going to monitor the domain I got for a while.</li>
+</ul>
+<p>Keep wired for updates.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>
