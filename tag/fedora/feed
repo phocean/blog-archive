@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Fedora &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/fedora/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/fedora/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Installation of Metasploit on Fedora 21 / 22</title>
-		<link>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html</link>
-		<comments>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html#comments</comments>
+		<link>/2015/02/10/installation-of-metasploit-on-fedora-21.html</link>
+		<comments>/2015/02/10/installation-of-metasploit-on-fedora-21.html#comments</comments>
 		<pubDate>Tue, 10 Feb 2015 19:38:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -30,9 +30,10 @@
 		<category><![CDATA[Metasploit]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2021</guid>
-		<description><![CDATA[Update 2015/08/04: Works on Fedora 22 too. I recently applied the exact same procedure with success. A quick update from a previous post for setting Metasploit on Fedora 21, the latest version. It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2021</guid>
+		<description><![CDATA[Update 2015/08/04: Works on Fedora 22 too. I recently applied the exact same procedure with success. A quick update from a previous post for setting Metasploit on Fedora 21, the latest version. It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2015/02/10/installation-of-metasploit-on-fedora-21.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;"><span style="text-decoration: underline;">Update 2015/08/04</span>: Works on Fedora 22 too. I recently applied the exact same procedure with success.</span></em></p>
-<p>A quick update from a previous <a href="/blog-archive/2014/02/23/metasploit-on-fedora-20.html">post</a> for setting Metasploit on Fedora 21, the latest version.</p>
+<p>A quick update from a previous <a href="/2014/02/23/metasploit-on-fedora-20.html">post</a> for setting Metasploit on Fedora 21, the latest version.</p>
 <p>It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that Metasploit was recently ported to Ruby 2.x, so we don&#8217;t need anymore the <em>rvm</em> stuff anymore, which makes the process much simpler.</p>
 <h1>Preparing Postgresql</h1>
 <p>Install:</p>
@@ -89,13 +90,13 @@ db_status</pre>
 <pre># msfupdate every 2 hours
 0 */2 * * * root /opt/msf/msfupdate 2&gt;&amp;1</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2015/02/10/installation-of-metasploit-on-fedora-21.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 		<item>
 		<title>The joy of dependencies: Metasploit on Fedora 20</title>
-		<link>/blog-archive/2014/02/23/metasploit-on-fedora-20.html</link>
-		<comments>/blog-archive/2014/02/23/metasploit-on-fedora-20.html#comments</comments>
+		<link>/2014/02/23/metasploit-on-fedora-20.html</link>
+		<comments>/2014/02/23/metasploit-on-fedora-20.html#comments</comments>
 		<pubDate>Sun, 23 Feb 2014 21:56:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -106,9 +107,10 @@ db_status</pre>
 		<category><![CDATA[ruby]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1934</guid>
-		<description><![CDATA[UPDATE 02/2015 : see there for the procedure on Fedora 21 As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all security features enabled, I had the bad surprise to get similar issues to those on OS X. Again, we will have to face the joy of dependencies! Fedora...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/02/23/metasploit-on-fedora-20.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;">UPDATE 02/2015 : see <a href="/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html">there</a> for the procedure on Fedora 21</span></em></p>
-<p>As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all <a href="http://https://fedoraproject.org/wiki/Security_Features?rd=Security/Features">security features enabled</a>, I had the bad surprise to get similar issues to <a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">those on OS X</a>.<br />
+		<guid isPermaLink="false">http://www.phocean.net/?p=1934</guid>
+		<description><![CDATA[UPDATE 02/2015 : see there for the procedure on Fedora 21 As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all security features enabled, I had the bad surprise to get similar issues to those on OS X. Again, we will have to face the joy of dependencies! Fedora...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2014/02/23/metasploit-on-fedora-20.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;">UPDATE 02/2015 : see <a href="/2015/02/10/installation-of-metasploit-on-fedora-21.html">there</a> for the procedure on Fedora 21</span></em></p>
+<p>As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all <a href="http://https://fedoraproject.org/wiki/Security_Features?rd=Security/Features">security features enabled</a>, I had the bad surprise to get similar issues to <a href="/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">those on OS X</a>.<br />
 Again, we will have to face the joy of dependencies! Fedora provides Ruby 2.0 by default, so firing <code>msfconsole</code> would fail with many openssl warnings, ending with:</p>
 <p><span id="more-1934"></span></p>
 <pre>/usr/share/ruby/openssl/cipher.rb:61:in `': superclass mismatch for class Cipher (TypeError)
@@ -184,13 +186,13 @@ db_status</pre>
 <pre># msfupdate every 2 hours
 0 */2 * * * root /opt/msf/msfupdate 2&gt;&amp;1</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2014/02/23/metasploit-on-fedora-20.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2014/02/23/metasploit-on-fedora-20.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 		<item>
 		<title>openSUSE 11.1 and /boot on RAID 1</title>
-		<link>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
-		<comments>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
+		<link>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
+		<comments>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
 		<pubDate>Wed, 21 Oct 2009 18:06:27 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -202,7 +204,8 @@ db_status</pre>
 		<category><![CDATA[RAID]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
-		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
+		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I tried yesterday to set up a home server with two disks in a RAID 1 array.</p>
 <p>My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one.<br />
 That&#8217;s the way I think it should work anyway, despite the number of tutorials or forum posts advising not to do so.</p>
@@ -223,7 +226,7 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 <p>I haven&#8217;t tested <strong>openSUSE 11.2</strong> yet because the purpose of this machine is to be a server, so I care about stability.</p>
 <p>But I will, and I wish it can support this feature also, or that it will be the case some day.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 	</channel>

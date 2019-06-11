@@ -9,8 +9,8 @@
 
 <channel>
 	<title>benchmark &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/benchmark/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/benchmark/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,13 +19,14 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Linux vs Windows benchmark</title>
-		<link>/blog-archive/2009/02/05/linux-vs-windows-benchmark.html</link>
+		<link>/2009/02/05/linux-vs-windows-benchmark.html</link>
 		<pubDate>Thu, 05 Feb 2009 20:12:43 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
 		<category><![CDATA[benchmark]]></category>
 		<category><![CDATA[Windows]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=331</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=331</guid>
 		<description><![CDATA[I found this benchmark, comparing the performance of Ubuntu, Windows Vista and 7 worth reading. Our Linux kernel does a great job !]]></description>
 				<content:encoded><![CDATA[<p>I found this <a href="http://www.tuxradar.com/node/33">benchmark</a>, comparing the performance of Ubuntu, Windows Vista and 7 worth reading.<br />

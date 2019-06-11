@@ -9,8 +9,8 @@
 
 <channel>
 	<title>MSSQL &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mssql/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mssql/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Restoring a MSSQL 2000/2005 database while in production</title>
-		<link>/blog-archive/2007/03/03/restoring-a-mssql-20002005-database-while-in-production.html</link>
+		<link>/2007/03/03/restoring-a-mssql-20002005-database-while-in-production.html</link>
 		<pubDate>Sat, 03 Mar 2007 19:02:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[System]]></category>
@@ -43,7 +43,7 @@ backup database $your_database to disk = 'C:\$your_database.bak' with init,Name 
 restore database $your_database from disk = 'C:\path\to\your\DB\$your_new_database.bak' with replace,file=1,recovery
 alter database Datasharing_Translation set multi_user with rollback immediate;</pre>
 <p>It switches the database to the single user mode, make a backup of it (for safety), make the restoring operation, and finally switches it back to the multi user mode.</p>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/public/mssql_query_tool.png" alt="" width="320" height="229" /><br />
+<p><img src="/wp-content/uploads/2007/05/public/mssql_query_tool.png" alt="" width="320" height="229" /><br />
 Once again the day is saved by a command line tool !  ;)</p>
 ]]></content:encoded>
 			</item>

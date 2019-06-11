@@ -9,8 +9,8 @@
 
 <channel>
 	<title>mod-security &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mod-security/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mod-security/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>New book about ModSecurity</title>
-		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<link>/2009/11/15/new-book-about-modsecurity.html</link>
 		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,9 +31,10 @@
 		<category><![CDATA[ModSecurity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
-		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>ModSecurity is essential when it comes to secure any web site.</p>
 <p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
 However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
@@ -43,7 +44,7 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 			</item>
 		<item>
 		<title>How-to : Mod-security 2 set-up for Apache 2</title>
-		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<link>/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
 		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -54,7 +55,8 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 		<category><![CDATA[regxp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
-		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
 <p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
 <span id="more-114"></span></p>
@@ -161,6 +163,7 @@ Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
 <pre lang="text">[Fri Jul 11 19:33:08 2008] [error] [client 192.168.222.21] ModSecurity: Access
 denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
 \\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 mG38AAAEAACa@AVUAAAAA"]</pre>
 <p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>

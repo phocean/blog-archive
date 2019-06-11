@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Cryptography &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/security/cryptography/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/security/cryptography/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>ESFS, new perspectives for stenography ?</title>
-		<link>/blog-archive/2011/01/14/esfs-new-perspectives-for-stenography.html</link>
+		<link>/2011/01/14/esfs-new-perspectives-for-stenography.html</link>
 		<pubDate>Fri, 14 Jan 2011 21:43:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[stenography]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=952</guid>
-		<description><![CDATA[Tomas Touceda advertised a new project on Full Disclosure. The idea sounds good, so I will keep an eye on this very interesting project. Though I would like to know more about the methods that were used for encryption and stenography. Code and explanations are on the ESFS project homepage. Beyond the pratical usage, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/14/esfs-new-perspectives-for-stenography.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=952</guid>
+		<description><![CDATA[Tomas Touceda advertised a new project on Full Disclosure. The idea sounds good, so I will keep an eye on this very interesting project. Though I would like to know more about the methods that were used for encryption and stenography. Code and explanations are on the ESFS project homepage. Beyond the pratical usage, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/01/14/esfs-new-perspectives-for-stenography.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Tomas Touceda advertised a new project on Full Disclosure.<br />
 The idea sounds good, so I will keep an eye on this very interesting project.<br />
 Though I would like to know more about the methods that were used for encryption and stenography.</p>
@@ -44,7 +45,7 @@ to know where you actually have data, and if you really do.</p></blockquote>
 			</item>
 		<item>
 		<title>Ravan, password cracking using Javascript!</title>
-		<link>/blog-archive/2010/12/18/ravan-password-cracking-using-javascript.html</link>
+		<link>/2010/12/18/ravan-password-cracking-using-javascript.html</link>
 		<pubDate>Sat, 18 Dec 2010 22:53:22 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -57,7 +58,8 @@ to know where you actually have data, and if you really do.</p></blockquote>
 		<category><![CDATA[password]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=940</guid>
-		<description><![CDATA[Ravan is a new password cracking tool based on Javascript. Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/12/18/ravan-password-cracking-using-javascript.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=940</guid>
+		<description><![CDATA[Ravan is a new password cracking tool based on Javascript. Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/12/18/ravan-password-cracking-using-javascript.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Ravan" href="http://www.andlabs.org/tools/ravan.html" target="_blank">Ravan</a> is a new password cracking tool based on Javascript.</p>
 <p>Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page executing the script).</p>
 <p>Combine it with several computers connecting to the same page executing a password cracking script and you get easily quite a powerful distributed password cracker.</p>
@@ -66,7 +68,7 @@ to know where you actually have data, and if you really do.</p></blockquote>
 			</item>
 		<item>
 		<title>Yet OpenSSL renegociation not fully fixed</title>
-		<link>/blog-archive/2010/10/16/yet-openssl-renegociation-not-fully-fixed.html</link>
+		<link>/2010/10/16/yet-openssl-renegociation-not-fully-fixed.html</link>
 		<pubDate>Sat, 16 Oct 2010 07:35:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -80,14 +82,15 @@ to know where you actually have data, and if you really do.</p></blockquote>
 		<category><![CDATA[renegociation]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=924</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=924</guid>
 		<description><![CDATA[How the hell is it possible that after so many months, the fix for OpenSSL renegociation has not been yet included in either Chrome (6.0.4) or Opera (10.61)? I haven&#8217;t tested other browsers though, except Firefox which at least has fixed the issue since several months.]]></description>
-				<content:encoded><![CDATA[<p>How the hell is it possible that after so many months, <a title="OpenSSL renegociation issue" href="/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html" target="_self">the fix for OpenSSL renegociation</a> has not been yet included in either Chrome (6.0.4) or Opera (10.61)? I haven&#8217;t tested other browsers though, except Firefox which at least has fixed the issue since several months.</p>
+				<content:encoded><![CDATA[<p>How the hell is it possible that after so many months, <a title="OpenSSL renegociation issue" href="/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html" target="_self">the fix for OpenSSL renegociation</a> has not been yet included in either Chrome (6.0.4) or Opera (10.61)? I haven&#8217;t tested other browsers though, except Firefox which at least has fixed the issue since several months.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Beware of source code (even from your favorite portal/forum/&#8230;)</title>
-		<link>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
-		<comments>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
+		<link>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
+		<comments>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
 		<pubDate>Sat, 24 Apr 2010 12:14:04 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -106,7 +109,8 @@ to know where you actually have data, and if you really do.</p></blockquote>
 		<category><![CDATA[social engineering]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
-		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
+		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The other day I stumbed upon a weired piece of software on <a title="Howtoforge.com" href="http://howtoforge.com" target="_blank">howtoforge.com</a> : <a title="dns-add" href="http://www.howtoforge.com/adding-dns-servers-in-one-step-with-dns-add" target="_blank">dns-add</a> (code <a title="Sourceforge dns-add" href="http://sourceforge.net/projects/isp-fw/files/DNS-add/" target="_blank">on sourceforge.net</a>).</p>
 <p>Actually, the purpose of dns-add was very intriguing : update your DNS in one command !</p>
 <p>The output should look like this:</p>
@@ -308,15 +312,15 @@ If you really have to use code from an untrusted source, check it, or wait for t
 <p><strong><span style="color: #ff0000;"><em><span style="color: #ff0000;">* Update *</span></em></span></strong></p>
 <p><em><span style="color: #993300;">I did contact the author and didn't get any answer.<br />
 I reported the issue to Sourceforge, which deleted the account hosting dns-add, as it violated the website policies.</span></em></p>
-<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/blog-archive/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
+<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Updates on OpenSSL CVE-2009-3555 (client renegociation)</title>
-		<link>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html</link>
-		<comments>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html#comments</comments>
+		<link>/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html</link>
+		<comments>/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html#comments</comments>
 		<pubDate>Mon, 05 Apr 2010 08:40:44 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -331,22 +335,23 @@ I reported the issue to Sourceforge, which deleted the account hosting dns-add, 
 		<category><![CDATA[mod-ssl]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=773</guid>
-		<description><![CDATA[So there are some news from the front of OpenSSL CVE-2009-3555 (see this and this for the history). Now the latest version of Apache mod_ssl (2.2) embeds an option to reactivate old way client renegociation : SSLInsecureRenegotiation on Check the official doc for more details. With this option activated, you can now safely upgrade openSSL...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>So there are some news from the front of OpenSSL CVE-2009-3555 (see <a title="SSL client authenticate breakage" href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" target="_self">this</a> and <a title="SSL/TLS RFC updated against CVE-2009-3555" href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html" target="_self">this</a> for the history).</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=773</guid>
+		<description><![CDATA[So there are some news from the front of OpenSSL CVE-2009-3555 (see this and this for the history). Now the latest version of Apache mod_ssl (2.2) embeds an option to reactivate old way client renegociation : SSLInsecureRenegotiation on Check the official doc for more details. With this option activated, you can now safely upgrade openSSL...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>So there are some news from the front of OpenSSL CVE-2009-3555 (see <a title="SSL client authenticate breakage" href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" target="_self">this</a> and <a title="SSL/TLS RFC updated against CVE-2009-3555" href="/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html" target="_self">this</a> for the history).</p>
 <p>Now the latest version of Apache mod_ssl (2.2) embeds an <a title="mod_ssl client renegociation" href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslinsecurerenegotiation" target="_blank">option to reactivate old way client renegociation</a> :</p>
 <pre>SSLInsecureRenegotiation on</pre>
 <p>Check the official doc for more details. With this option activated, you can now safely upgrade openSSL and mod_ssl without breaking your clients. They should have done it from the begining, shouldn&#8217;t they ?</p>
 <p>The next step will be to move on to the new protocol definitely, to solve for good the CVE-2009-3555 vulnerability. For that we have to wait for the browsers to support it.</p>
 <p>Firefox has started to <a title="Firefox and CVE-2009-3555" href="https://wiki.mozilla.org/Security:Renegotiation" target="_blank">work seriously on it</a> and we can expect some support in the next releases (some settings will be possible through about:config).</p>
 <p>They even created a <a title="CVE-2009-3555 test page" href="https://ssltls.de/" target="_blank">test site</a>. This screenshot was taken from Google Chrome (5.0.366.2, <a title="openSUSE repos" href="http://en.opensuse.org/Additional_package_repositories" target="_blank">openSUSE repo</a>) which already has support for the SSL protocol :</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2010/04/chrome-ssl.png" rel="lightbox[773]"><img class="aligncenter size-full wp-image-776" title="chrome-ssl" src="/blog-archive/wp-content/uploads/2010/04/chrome-ssl.png" alt="" width="455" height="473" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/04/chrome-ssl.png" rel="lightbox[773]"><img class="aligncenter size-full wp-image-776" title="chrome-ssl" src="/wp-content/uploads/2010/04/chrome-ssl.png" alt="" width="455" height="473" /></a></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Possible use of SSL rogue certificates for spying purposes</title>
-		<link>/blog-archive/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html</link>
+		<link>/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html</link>
 		<pubDate>Sun, 04 Apr 2010 20:48:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -357,7 +362,8 @@ I reported the issue to Sourceforge, which deleted the account hosting dns-add, 
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=763</guid>
-		<description><![CDATA[Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be. But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this paper alerts us on a more serious and stealth threat....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=763</guid>
+		<description><![CDATA[Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be. But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this paper alerts us on a more serious and stealth threat....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/04/possible-use-of-ssl-rogue-certificate-for-spying-purpose.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Recent work of security researchers on SSL MiTM attacks have shown how fragile the whole Internet security design could be.</p>
 <p>But whereas some of these attacks concerns CA with insufficient security policies (md5 collisions) or some level of social engineering against the user (sslsniff), this <strong><a title="defeating ssl mitm" href="http://files.cloudprivacy.net/ssl-mitm.pdf" target="_blank">paper</a></strong> alerts us on a more serious and stealth threat.</p>
 <p>It explains brilliantly, providing us with real case scenarios, how a CA (probably under the authority of a government agency or a similar powerful organisation) can create a rogue certificate that will be silently trusted by our browsers.</p>
@@ -367,14 +373,14 @@ I reported the issue to Sourceforge, which deleted the account hosting dns-add, 
 <p>In such a case, no browser will ever send an alert, so even the most experienced and most paranoid users would be easily cheated. It makes it very easy for an agency to conduct a man-in-the-middle attack, sniffing all of the user activity.<br />
 So here is a need for an add-on.</p>
 <p>As a Firefox user, I am using <strong><a title="Certificate Patrol" href="https://addons.mozilla.org/fr/firefox/addon/6415" target="_blank">Certificate Patrol</a></strong>. It basically alerts the user whenever the certificate of a site changes. The inconvenience is that it requires a long learning period and it also generates quite a lot of false positive (when a certificate is renewed, for instance).</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2010/04/certpatrol.png" rel="lightbox[763]"><img class="aligncenter size-full wp-image-764" title="Certificate Patrol add-on" src="/blog-archive/wp-content/uploads/2010/04/certpatrol.png" alt="" width="394" height="409" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/04/certpatrol.png" rel="lightbox[763]"><img class="aligncenter size-full wp-image-764" title="Certificate Patrol add-on" src="/wp-content/uploads/2010/04/certpatrol.png" alt="" width="394" height="409" /></a></p>
 <p><strong>Adi Shamir</strong> and <strong>Phil Zimmerman</strong>, the author of the paper above, plan to publish a new add-on, <strong>Certlock</strong>. It will check carefully all the chain of trust for a certicate and send out an alert whenever a detail is incoherent, for instance when the country of the parent&#8217;s certificate is different from the country the rogue certificate is pretending to be.</p>
 <p>I really hope Certlock is coming soon.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>SSL/TLS RFC updated against CVE-2009-3555</title>
-		<link>/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
+		<link>/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
 		<pubDate>Sat, 09 Jan 2010 11:23:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -389,8 +395,9 @@ So here is a need for an add-on.</p>
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
-		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
+		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
 <p>At least, the IETF agreed on a fix as <a title="SSL/TLS fix" href="http://extendedsubset.com/?p=14" target="_blank">Marsh Ray</a> informs us, though it will still take some weeks for the whole validation process to complete.</p>
 <p>Moreover, as it requires both the servers and the clients to be patched, it will take months before the patches can be applied and one can have a working client authentification architecture. The longest will be the client side, of course, so I feel sorry for those who have a large park to manage.</p>
 <p>As far as I am concerned, fortunately, I will just have a few browsers that I manage directly to update. Anyway, still more patience is needed !</p>
@@ -398,8 +405,8 @@ So here is a need for an add-on.</p>
 			</item>
 		<item>
 		<title>OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</title>
-		<link>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
-		<comments>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
+		<link>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
+		<comments>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
 		<pubDate>Sat, 28 Nov 2009 16:08:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -413,7 +420,8 @@ So here is a need for an add-on.</p>
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
-		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
+		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
 <p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
 <p>A proof of concept of an attack against Twitter was made.</p>
@@ -442,12 +450,12 @@ If anyone reading it knows a version that does it, please let me know.</p>
 <p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
 <p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>SHA-1 vulnerable : consider SHA-2</title>
-		<link>/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
+		<link>/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
 		<pubDate>Sun, 10 May 2009 07:58:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -461,8 +469,9 @@ If anyone reading it knows a version that does it, please let me know.</p>
 		<category><![CDATA[SHA-3]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
-		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
+		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
 <p>Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211; and so the integrity &#8211; of the hashed object.</p>
 <p>There are a few ressources :</p>
 <ul>
@@ -471,13 +480,13 @@ If anyone reading it knows a version that does it, please let me know.</p>
 </ul>
 <p>This is the natural evolution of cryptography. Stronger cryptography is required against stronger CPU power. In this race, it is now suggested to migrate to SHA-2 whose digest lenghts range from 224 to 512 bits (instead of 160 bits for SHA-1). And until next time, where we will be urged to migrate to <a title="SHA-3" href="http://csrc.nist.gov/groups/ST/hash/sha-3/index.html" target="_blank">SHA-3</a> ;)</p>
 <p>Debian, whose infrastructure was based on SHA-1 (package management, development) is quickly migrating all its keys right now. The <a title="Debian pgp upgrade procedure" href="http://www.debian-administration.org/users/dkg/weblog/48" target="_blank">procedure</a> the Debian people should follow implies a transition period, where the new key will be signed with the former key, until the latter is revoked. Thus until all peers are updated too, to avoid breaking all the signing infrastruture.</p>
-<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/blog-archive/pgp_key.txt">my new key</a> here or linked from the <a href="/blog-archive/contact-me" target="_self">contact page</a>.</p>
+<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/pgp_key.txt">my new key</a> here or linked from the <a href="/contact-me" target="_self">contact page</a>.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>MD5 in your SSL certificate ? No need to panic !</title>
-		<link>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html</link>
-		<comments>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html#comments</comments>
+		<link>/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html</link>
+		<comments>/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html#comments</comments>
 		<pubDate>Fri, 02 Jan 2009 19:58:52 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -488,7 +497,8 @@ If anyone reading it knows a version that does it, please let me know.</p>
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=316</guid>
-		<description><![CDATA[MD5 was found vulnerable a few years ago. Recently, a team succeeded in producing a fake CA SSL certificate. MD5 or SHA-1 is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a MiM attack. But too much noise has...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=316</guid>
+		<description><![CDATA[MD5 was found vulnerable a few years ago. Recently, a team succeeded in producing a fake CA SSL certificate. MD5 or SHA-1 is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a MiM attack. But too much noise has...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><strong>MD5</strong> was found vulnerable a few years ago. Recently, <a title="MD5 : fake CA SSL cert" href="http://www.secuobs.com/news/31122008-md5_pki_cluster_ps3_25c3_certificat.shtml" target="_blank">a team succeeded in producing a fake CA SSL certificate</a>.</p>
 <p><strong>MD5</strong> or <strong>SHA-1</strong> is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a <strong>MiM</strong> attack.</p>
 <p>But too much noise has been made about it. There is <a title="MD5" href="http://broadcast.oreilly.com/2009/01/new-pki-problem-resolved.html" target="_blank">a nice reaction</a>.</p>
@@ -497,7 +507,7 @@ If anyone reading it knows a version that does it, please let me know.</p>
 <p>Security has always been a compromise between usuability and risk. Today, the risk concerning MD5 is still low enough to stop this wind of panic.</p>
 <p>Let&#8217;s begin the migration to SHA-1 quietly.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Spam &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/spam/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/spam/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Dovecot LDA vs Procmail</title>
-		<link>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html</link>
-		<comments>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
+		<link>/2009/12/09/dovecot-lda-vs-procmail.html</link>
+		<comments>/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
 		<pubDate>Wed, 09 Dec 2009 01:10:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -37,7 +37,8 @@
 		<category><![CDATA[umask]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
-		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
+		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I have a mail server configuration based on <strong>Postfix</strong> for the smtp, <strong>Dovecot</strong> for the imap and virtual users receiving e-mails in maildir boxes.</p>
 <p>I am also using <strong>Amavis</strong> and <strong>Spamassassin</strong> for content filtering.</p>
 <p>I am not going now to describe this configuration, I think there are already a lot of very good tutorials about it all over the web. Moreover, the openSUSE maintainers made such a configuration quite easy : a sensible part of the work just consists in commenting out some line in the configuration files.</p>
@@ -104,18 +105,19 @@ Restart Postfix and Dovecot, check the log to ensure that everything works fine.
 Now all new mails should come out in the maildir folder with permissions set to 660.</p>
 <p>Definitely, in my opinion, Dovecot LDA is the way to go : simple and extensible. Good bye Procmail and your cluttered configuration file.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Ryan Farmer is a spammer</title>
-		<link>/blog-archive/2008/08/15/ryan-farmer-is-a-spammer.html</link>
+		<link>/2008/08/15/ryan-farmer-is-a-spammer.html</link>
 		<pubDate>Fri, 15 Aug 2008 14:23:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
 		<category><![CDATA[Ryan Farmer]]></category>
 		<category><![CDATA[Spam]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=233</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=233</guid>
 		<description><![CDATA[For those who still don&#8217;t know, Ryan Farmer would be a spammer and a liar. Quite embarassing to be caught like that. Maybe all this is a lot of noise, but such people deserve a good lesson of living in society. Really.]]></description>
 				<content:encoded><![CDATA[<p>For those who still don&#8217;t know, <a title="Ryan Farmer is a spammer" href="http://www.fooishbar.org/blog/tech/ryan-farmer-2008-08-14-21-24.html" target="_blank">Ryan Farmer would be a spammer and a liar</a>.</p>
@@ -124,8 +126,8 @@ Now all new mails should come out in the maildir folder with permissions set to 
 			</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -141,7 +143,8 @@ Now all new mails should come out in the maildir folder with permissions set to 
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -344,7 +347,7 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

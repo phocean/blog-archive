@@ -9,8 +9,8 @@
 
 <channel>
 	<title>KVM &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/kvm/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/kvm/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,13 +19,14 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Xen vs KVM</title>
-		<link>/blog-archive/2008/05/03/xen-vs-kvm.html</link>
+		<link>/2008/05/03/xen-vs-kvm.html</link>
 		<pubDate>Sat, 03 May 2008 21:38:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Virtualization]]></category>
 		<category><![CDATA[KVM]]></category>
 		<category><![CDATA[Xen]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=105</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=105</guid>
 		<description><![CDATA[I was planning to give a try to Xen for my future virtual servers. This blog made me think twice. I think I am going to check KVM first.]]></description>
 				<content:encoded><![CDATA[<p>I was planning to give a try to Xen for my future virtual servers.</p>

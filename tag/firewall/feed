@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Firewall &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/firewall/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/firewall/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Opensvp</title>
-		<link>/blog-archive/2012/06/15/opensvp.html</link>
+		<link>/2012/06/15/opensvp.html</link>
 		<pubDate>Fri, 15 Jun 2012 21:32:44 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[pentest]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1252</guid>
-		<description><![CDATA[I have yet to test it, but I was impressed by the demo: Opensvp is a security tool implementing attacks to be able to the resistance of firewall to protocol level attack. It implements classic attacks as well as some new kind of attacks against application layer gateway (called helper in the Netfilter world). Download...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/15/opensvp.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1252</guid>
+		<description><![CDATA[I have yet to test it, but I was impressed by the demo: Opensvp is a security tool implementing attacks to be able to the resistance of firewall to protocol level attack. It implements classic attacks as well as some new kind of attacks against application layer gateway (called helper in the Netfilter world). Download...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/15/opensvp.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I have yet to test it, but I was impressed by the demo:</p>
 <blockquote><p>Opensvp is a security tool implementing attacks to be able to the resistance of firewall to protocol level attack. It implements classic attacks as well as some new kind of attacks against application layer gateway (called helper in the Netfilter world).</p></blockquote>
 <p>Download and more <a title="Opensvp" href="https://home.regit.org/software/opensvp/">there</a>.</p>
@@ -39,7 +40,7 @@
 			</item>
 		<item>
 		<title>ModSecurity 2.5 review</title>
-		<link>/blog-archive/2009/12/10/modsecurity-2-5-review.html</link>
+		<link>/2009/12/10/modsecurity-2-5-review.html</link>
 		<pubDate>Thu, 10 Dec 2009 14:12:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -53,9 +54,10 @@
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
-		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
+		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished reading the <strong>ModSecurity 2.5</strong> book, written by <strong>Magnus Mischell</strong> and published by <strong>Packt Publishing</strong>.</p>
-<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should.<br />
 I was actually using it partially. It is not trivial to secure a web application, and the rule engine of ModSecurity is very powerful but it is also quite complex.</p>
 <p>So this book was a good opportunity for me to dig into it further.</p>
@@ -71,7 +73,7 @@ It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;
 			</item>
 		<item>
 		<title>New book about ModSecurity</title>
-		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<link>/2009/11/15/new-book-about-modsecurity.html</link>
 		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -83,9 +85,10 @@ It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;
 		<category><![CDATA[ModSecurity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
-		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>ModSecurity is essential when it comes to secure any web site.</p>
 <p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
 However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
@@ -95,7 +98,7 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 			</item>
 		<item>
 		<title>Postfix : TLS not working outside my network</title>
-		<link>/blog-archive/2008/06/11/postfix-tls-not-working-outside-my-network.html</link>
+		<link>/2008/06/11/postfix-tls-not-working-outside-my-network.html</link>
 		<pubDate>Tue, 10 Jun 2008 23:37:28 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -107,15 +110,21 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=110</guid>
-		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=110</guid>
+		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
+		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network.</p>
 <p>What I got from my lan :</p>
 <pre>$ telnet mars 25
 Trying 192.168.222.10...
 Connected to phocean.net.
+Connected to phocean.net.
 Escape character is '^]'.
 220 phocean.net ESMTP Postfix (Debian/GNU)
+220 phocean.net ESMTP Postfix (Debian/GNU)
 ehlo phocean.net
+ehlo phocean.net
+250-phocean.net
 250-phocean.net
 250-PIPELINING
 250-SIZE 200000000
@@ -129,10 +138,13 @@ ehlo phocean.net
 <p>I shows well that the TLS handshake is initiated.</p>
 <p>But from this outside, I just got this weired thing :</p>
 <pre>$ telnet phocean.net 25
+<pre>$ telnet phocean.net 25
 Trying 81.64.194.119...
+Connected to phocean.net.
 Connected to phocean.net.
 Escape character is '^]'.
 220 **********************************************
+ehlo phocean.net
 ehlo phocean.net
 502 5.5.2 Error: command not recognized</pre>
 <p>Of course, the firewall, a Cisco Pix one, was properly set to redirect port 25 UDP/TCP to my server.</p>

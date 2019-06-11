@@ -9,8 +9,8 @@
 
 <channel>
 	<title>unicef &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/unicef/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/unicef/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Donation to Unicef</title>
-		<link>/blog-archive/2008/10/11/donation-to-unicef.html</link>
+		<link>/2008/10/11/donation-to-unicef.html</link>
 		<pubDate>Sat, 11 Oct 2008 19:54:52 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
@@ -27,9 +27,10 @@
 		<category><![CDATA[unicef]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=264</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=264</guid>
 		<description><![CDATA[I chose to donate the last Google Adsense income of the blog to Unicef. If you can donate, please make a tour there :]]></description>
 				<content:encoded><![CDATA[<p>I chose to donate the last Google Adsense income of the blog to Unicef. If you can donate, please make a tour there :</p>
-<p style="text-align: center"><a title="Unicef" rel="attachment wp-att-62" href="/blog-archive/?attachment_id=62"><img src="/blog-archive/wp-content/uploads/2007/06/unicef.png" alt="Unicef" /></a></p>
+<p style="text-align: center"><a title="Unicef" rel="attachment wp-att-62" href="/?attachment_id=62"><img src="/wp-content/uploads/2007/06/unicef.png" alt="Unicef" /></a></p>
 ]]></content:encoded>
 			</item>
 	</channel>

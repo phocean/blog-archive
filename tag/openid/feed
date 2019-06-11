@@ -9,8 +9,8 @@
 
 <channel>
 	<title>OpenID &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/openid/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/openid/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>OpenID rants</title>
-		<link>/blog-archive/2010/07/23/openid-rants.html</link>
+		<link>/2010/07/23/openid-rants.html</link>
 		<pubDate>Fri, 23 Jul 2010 03:44:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
-		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
+		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>After I tried to set this blog as my own OpenID provider using the <a title="OpenID WordPress Plugin" href="http://wordpress.org/extend/plugins/openid/" target="_blank">OpenID WordPress plugin</a>, I got a weired error message:</p>
 <p><em>&#8220;This is an OpenID Server, Nothing to See Here&#8230; Move  Along&#8221;</em></p>
 <p>I could not find what as wrong, as all prerequisites were fulfilled, until I find this <a title="openID server" href="http://patchlog.com/wordpress/openid-server-on-php-5-3/" target="_blank">nice post</a>. The patch there works very well, thanks to the author (it is a shame that it wasn&#8217;t yet included in the trunk).</p>
@@ -40,8 +41,8 @@
 			</item>
 		<item>
 		<title>OpenID is gaining popularity</title>
-		<link>/blog-archive/2008/01/17/openid-is-gaining-popularity.html</link>
-		<comments>/blog-archive/2008/01/17/openid-is-gaining-popularity.html#comments</comments>
+		<link>/2008/01/17/openid-is-gaining-popularity.html</link>
+		<comments>/2008/01/17/openid-is-gaining-popularity.html#comments</comments>
 		<pubDate>Thu, 17 Jan 2008 16:33:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -51,14 +52,15 @@
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=95</guid>
-		<description><![CDATA[Yahoo just announced that it will support OpenID. OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly. You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/01/17/openid-is-gaining-popularity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=95</guid>
+		<description><![CDATA[Yahoo just announced that it will support OpenID. OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly. You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/01/17/openid-is-gaining-popularity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Yahoo supports OpenID" href="http://www.zdnet.fr/actualites/internet/0,39020774,39377529,00.htm?xtor=RSS-1">Yahoo</a> just announced that it will support OpenID.</p>
 <p>OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly.</p>
 <p>You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name.</p>
 <p>I will soon write an complete post about it, but now you can already check <a title="OpenID.net" href="http://openid.net/">the official OpenID site</a>.</p>
 <p>Note that this blog already supports OpenID !<noscript></noscript><noscript></noscript></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/01/17/openid-is-gaining-popularity.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/01/17/openid-is-gaining-popularity.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

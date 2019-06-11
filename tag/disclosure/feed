@@ -9,8 +9,8 @@
 
 <channel>
 	<title>disclosure &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/disclosure/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/disclosure/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Vulnerabilities in software from Schneider Electric</title>
-		<link>/blog-archive/2011/06/23/vulnerabilities-in-software-from-schneider-electric.html</link>
+		<link>/2011/06/23/vulnerabilities-in-software-from-schneider-electric.html</link>
 		<pubDate>Thu, 23 Jun 2011 18:25:19 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -28,6 +28,7 @@
 		<category><![CDATA[schneider]]></category>
 		<category><![CDATA[Vulnerability]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=1093</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=1093</guid>
 		<description><![CDATA[I found multiple vulnerabilities in software from Schneider Electric, used to monitor industrial monitoring devices. It reveals a very poor security design. The editor was informed and I am waiting for its acknowledgement. I will disclose more details once the issues are patched.]]></description>
 				<content:encoded><![CDATA[<p>I found multiple vulnerabilities in software from Schneider Electric, used to monitor industrial monitoring devices. It reveals a very poor security design.</p>

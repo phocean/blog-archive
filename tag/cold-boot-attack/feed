@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Cold boot attack &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/cold-boot-attack/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/cold-boot-attack/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Cold boot attack, not a threat to Full disk encryption (FDE)</title>
-		<link>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
-		<comments>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
+		<link>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
+		<comments>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
 		<pubDate>Tue, 26 Feb 2008 09:53:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -35,7 +35,8 @@
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
-		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
+		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption.</p>
 <p>Hardware encryption is provided by a few laptop makers, generally on high-range an business models.</p>
 <p>It has much less performance impact than software encryption, and protect the data independently from your system configuration and its partitions.</p>
@@ -64,8 +65,8 @@
 <p>No. The encryption algorithm is not in the user land, so no key is stored in RAM.</p>
 <p><strong> The key hashes are stored directly on the disk.</strong></p>
 <p>These documents from Hitachi provide more detailed information :</p>
-<p><a title="Bulk encryption white paper" href="/blog-archive/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
-<p><a title="HowTo guide for bulk data encryption" href="/blog-archive/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
+<p><a title="Bulk encryption white paper" href="/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
+<p><a title="HowTo guide for bulk data encryption" href="/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
 <p><a title="Hardware encryption" href="http://en.wikipedia.org/wiki/Full_disk_encryption">This Wikipedia article</a>, underlining the main points of hardware encryption,  is also interesting.</p>
 <p>I guess that at some point it would be possible to read some hash on the hard drive electronic board, but this is not going to be easy. You need to be a hardware expert in hard drives and for sure it can&#8217;t be done as quickly as with the RAM chip.</p>
 <p>Of course, even the cold boot attack is extreme. Most of thief won&#8217;t care about your data, or won&#8217;t be the knowledge or the practical possibility to conduct a successful attack.</p>
@@ -74,12 +75,12 @@
 <p>Personally, as FDE offers more performance and transparency, I am using it on my laptop but I keep using dm-crypt on all my external drives.</p>
 <p>Now the question is : what good workaround can be found to provide more secure software encryption ?</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Disk encryption methods : hacked !</title>
-		<link>/blog-archive/2008/02/25/disk-encryption-methods-hacked.html</link>
+		<link>/2008/02/25/disk-encryption-methods-hacked.html</link>
 		<pubDate>Mon, 25 Feb 2008 21:25:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -90,8 +91,10 @@
 		<category><![CDATA[Hard drive]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=99</guid>
-		<description><![CDATA[Damned ! A team of researchers found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I previously described on this blog. All systems are actually concerned, because the attack is low level. It is based on the RAM chips properties. After shutdown, and therefore no more...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/25/disk-encryption-methods-hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=99</guid>
+		<description><![CDATA[Damned ! A team of researchers found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I previously described on this blog. All systems are actually concerned, because the attack is low level. It is based on the RAM chips properties. After shutdown, and therefore no more...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/25/disk-encryption-methods-hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Damned !</p>
+<p><a title="disk encryption hackers" href="http://citp.princeton.edu/memory">A team of researchers</a> found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I <a title="dm-crypt tutorial" href="http://http//www.phocean.net/?p=85">previously described</a> on this blog.</p>
 <p><a title="disk encryption hackers" href="http://citp.princeton.edu/memory">A team of researchers</a> found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I <a title="dm-crypt tutorial" href="http://http//www.phocean.net/?p=85">previously described</a> on this blog.</p>
 <p>All systems are actually concerned, because the attack is low level. It is based on the RAM chips properties. After shutdown, and therefore no more electricity powering, a chip will still contain some readable information during a few seconds.</p>
 <p>The data contained is deteriorating, but for example if you cool the chip enough, for example with a computer dry air dust cleaner, you can keep the data several minutes !</p>
@@ -100,7 +103,7 @@
 <p>But as many users, including me, use heavily suspend-to-ram with their laptop, this issue is rather problematic&#8230;</p>
 <p>The team provides a rather impressive video :</p>
 <p style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="355" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="wmode" value="transparent" /><param name="src" value="http://www.youtube.com/v/JDaicPIgn9U&amp;rel=1" /><embed type="application/x-shockwave-flash" width="425" height="355" src="http://www.youtube.com/v/JDaicPIgn9U&amp;rel=1" wmode="transparent"></embed></object></p>
-<p>I no longer use dm-crypt since my <a title="my thinkpad T61" href="/blog-archive/?p=97">Thinkpad</a> provides hardware encryption, but I wonder now where the key is stored in my case. I don&#8217;t think it is in RAM, but I have to check it to make sure.I will do it tomorrow, since I need to rest now.</p>
+<p>I no longer use dm-crypt since my <a title="my thinkpad T61" href="/?p=97">Thinkpad</a> provides hardware encryption, but I wonder now where the key is stored in my case. I don&#8217;t think it is in RAM, but I have to check it to make sure.I will do it tomorrow, since I need to rest now.</p>
 ]]></content:encoded>
 			</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>patch &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/patch/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/patch/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>openSUSE kernel sources : patching against sock_sendpage() NULL Pointer Dereference vulnerability</title>
-		<link>/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html</link>
-		<comments>/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html#comments</comments>
+		<link>/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html</link>
+		<comments>/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html#comments</comments>
 		<pubDate>Mon, 17 Aug 2009 12:47:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -33,21 +33,22 @@
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=405</guid>
-		<description><![CDATA[I am using the 2.6.30 kernel sources from Kernel:linux-next and noticed that it has not yet been patched against the ’sock_sendpage()’ NULL Pointer Dereference vulnerability. The threat is serious as it could allow a local user to gain root privileges. Those who compile their own 2.6.x kernel should apply this patch (from Linus, check there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=405</guid>
+		<description><![CDATA[I am using the 2.6.30 kernel sources from Kernel:linux-next and noticed that it has not yet been patched against the ’sock_sendpage()’ NULL Pointer Dereference vulnerability. The threat is serious as it could allow a local user to gain root privileges. Those who compile their own 2.6.x kernel should apply this patch (from Linus, check there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I am using the 2.6.30 kernel sources from Kernel:linux-next and noticed that it has not yet been patched against the <a title="Null pointer deference" href="http://www.securitytracker.com/alerts/2009/Aug/1022732.html" target="_blank"><strong>’sock_sendpage()’ NULL Pointer Dereference</strong></a> vulnerability.</p>
 <p>The threat is serious as it could allow a local user to gain root privileges.</p>
-<p>Those who compile their own <strong>2.6.x kernel</strong> should apply <a href="/blog-archive/wp-content/uploads/2009/08/sock_sendpage.patch">this patch</a> (from Linus, check <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98">there</a> for more info) .</p>
+<p>Those who compile their own <strong>2.6.x kernel</strong> should apply <a href="/wp-content/uploads/2009/08/sock_sendpage.patch">this patch</a> (from Linus, check <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98">there</a> for more info) .</p>
 <p>Within your kernel source folder :</p>
 <pre>$ patch -u -p0 &lt; sock_sendpage.patch</pre>
 <p>I hope an official patch will be released soon for all kernels. I did not check if the 11.1 kernel has already been patched or not.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Yersinia : patch to compile under openSUSE (11.1)</title>
-		<link>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html</link>
-		<comments>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html#comments</comments>
+		<link>/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html</link>
+		<comments>/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html#comments</comments>
 		<pubDate>Sun, 14 Jun 2009 19:25:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -60,11 +61,12 @@
 		<category><![CDATA[yersinia]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=391</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=391</guid>
 		<description><![CDATA[Yet another post in the series of compilation failures due to unexpected libraries paths. This time, it is about Yersinia and the ncurses library. I made the following yersinia-opensuse11.1 patch which should work for openSUSE 11.1 and maybe other versions or distros.]]></description>
 				<content:encoded><![CDATA[<p>Yet another post in the series of compilation failures due to unexpected libraries paths.</p>
-<p>This time, it is about <a title="Yersinia" href="http://www.yersinia.net/" target="_blank">Yersinia</a> and the ncurses library. I made the following <a href="/blog-archive/wp-content/uploads/2009/06/yersinia-opensuse11.1.patch">yersinia-opensuse11.1 patch</a> which should work for openSUSE 11.1 and maybe other versions or distros.</p>
+<p>This time, it is about <a title="Yersinia" href="http://www.yersinia.net/" target="_blank">Yersinia</a> and the ncurses library. I made the following <a href="/wp-content/uploads/2009/06/yersinia-opensuse11.1.patch">yersinia-opensuse11.1 patch</a> which should work for openSUSE 11.1 and maybe other versions or distros.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

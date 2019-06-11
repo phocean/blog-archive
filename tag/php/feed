@@ -9,8 +9,8 @@
 
 <channel>
 	<title>PHP &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/php/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/php/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>File upload vulnerabilities : appending PHP code to an image</title>
-		<link>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html</link>
-		<comments>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html#comments</comments>
+		<link>/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html</link>
+		<comments>/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html#comments</comments>
 		<pubDate>Sun, 29 Sep 2013 21:03:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -32,10 +32,11 @@
 		<category><![CDATA[web]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1666</guid>
-		<description><![CDATA[Several ways may be used to protect a file upload functionality on a website. A first method is content-type checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand text/php) and then forwards the content to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1666</guid>
+		<description><![CDATA[Several ways may be used to protect a file upload functionality on a website. A first method is content-type checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand text/php) and then forwards the content to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Several ways may be used to protect a file upload functionality on a website.</p>
 <p>A first method is <strong>content-type </strong>checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand <code>text/php</code>) and then forwards the content to the server:</p>
-<div id="attachment_1667" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1667" alt="HTTP POST content-type tampering" src="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png" width="580" height="313" srcset="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png 580w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13-624x337.png 624w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13.png 902w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">HTTP POST content-type tampering</p></div>
+<div id="attachment_1667" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1667" alt="HTTP POST content-type tampering" src="/wp-content/uploads/2013/09/CapturFiles_13-580x313.png" width="580" height="313" srcset="/wp-content/uploads/2013/09/CapturFiles_13-580x313.png 580w, /wp-content/uploads/2013/09/CapturFiles_13-624x337.png 624w, /wp-content/uploads/2013/09/CapturFiles_13.png 902w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">HTTP POST content-type tampering</p></div>
 <p>Thus, the content-type filtering is bypassed.</p>
 <p>Another method consists in checking the file name <strong>extension</strong>. If simple bypasses like playing with lowercase (<code>.PHP</code> instead of <code>.php</code>), using multiple extension (<code>.php.foo</code>) or triggering the NULL byte (<code>.php%00.jpg</code>) do not work, there is a last chance by uploading a crafted image.</p>
 <p>JPEG files are convenient for code injection: they support EXIF metadata, which include a <em>comment</em> field where anything can be written, as long as it is on a single line.</p>
@@ -61,12 +62,12 @@
 </ol>
 <p>Note this <a title="php image upload security how not to do it" href="http://nullcandy.com/php-image-upload-security-how-not-to-do-it/">nice article</a> as a reference on the topic, and the solution that is suggested to fix such a vulnerability: disabling one way or another script execution on the upload directory and use random server-side file renaming.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html/feed</wfw:commentRss>
 		<slash:comments>6</slash:comments>
 		</item>
 		<item>
 		<title>How-to : Mod-security 2 set-up for Apache 2</title>
-		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<link>/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
 		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -77,7 +78,8 @@
 		<category><![CDATA[regxp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
-		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
 <p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
 <span id="more-114"></span></p>
@@ -185,6 +187,7 @@ Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
 denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
 \\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
 col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 mG38AAAEAACa@AVUAAAAA"]</pre>
 <p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>
 <pre lang="bash">$ grep 340000 /etc/apache2/modsecurity</pre>
@@ -193,8 +196,8 @@ mG38AAAEAACa@AVUAAAAA"]</pre>
 			</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -210,7 +213,8 @@ mG38AAAEAACa@AVUAAAAA"]</pre>
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -413,7 +417,7 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

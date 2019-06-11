@@ -9,8 +9,8 @@
 
 <channel>
 	<title>web browser &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/web-browser/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/web-browser/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>(in)Security of JSONP: CSRF risks</title>
-		<link>/blog-archive/2013/10/13/csrf-with-jsonp.html</link>
-		<comments>/blog-archive/2013/10/13/csrf-with-jsonp.html#comments</comments>
+		<link>/2013/10/13/csrf-with-jsonp.html</link>
+		<comments>/2013/10/13/csrf-with-jsonp.html#comments</comments>
 		<pubDate>Sun, 13 Oct 2013 20:51:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -35,7 +35,8 @@
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1765</guid>
-		<description><![CDATA[JSONP vs JSON I had an opportunity to experiment exploiting JSONP in real life. Honestly, I had never heard of it before. JSON is a well known method to serialize data, but what is JSONP? Actually, it is nothing new, but rather a specific use of JSON. In AJAX websites, XMLHttpRequest is used in client-side Javascript...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/13/csrf-with-jsonp.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1765</guid>
+		<description><![CDATA[JSONP vs JSON I had an opportunity to experiment exploiting JSONP in real life. Honestly, I had never heard of it before. JSON is a well known method to serialize data, but what is JSONP? Actually, it is nothing new, but rather a specific use of JSON. In AJAX websites, XMLHttpRequest is used in client-side Javascript...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/10/13/csrf-with-jsonp.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>JSONP vs JSON</h2>
 <p>I had an opportunity to experiment exploiting <em>JSONP</em> in real life. Honestly, I had never heard of it before.</p>
 <p><em>JSON</em> is a well known method to serialize data, but what is <em>JSONP</em><i>?</i> Actually, it is nothing new, but rather a specific use of <em>JSON</em>.</p>
@@ -63,7 +64,7 @@ xhr.send(null);</pre>
 <div>
 <dl id="attachment_1774">
 <dt>
-<div id="attachment_1774" style="width: 428px" class="wp-caption aligncenter"><img class="size-full wp-image-1774" alt="XHR vs JSONP" src="/blog-archive/wp-content/uploads/2013/10/jsonp1.png" width="418" height="515" /><p class="wp-caption-text">XHR vs JSONP</p></div>
+<div id="attachment_1774" style="width: 428px" class="wp-caption aligncenter"><img class="size-full wp-image-1774" alt="XHR vs JSONP" src="/wp-content/uploads/2013/10/jsonp1.png" width="418" height="515" /><p class="wp-caption-text">XHR vs JSONP</p></div>
 </dt>
 </dl>
 </div>
@@ -112,9 +113,9 @@ To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know 
 <pre>hello({ "name": "world" });</pre>
 <p>Which, when received by the browser, would trigger the nice alert box.</p>
 <p>&nbsp;</p>
-<div id="attachment_1793" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1793" alt="JSONP callback execution" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png" width="580" height="416" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21-624x448.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21.png 729w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">JSONP callback execution</p></div>
+<div id="attachment_1793" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1793" alt="JSONP callback execution" src="/wp-content/uploads/2013/10/CapturFiles_21-580x416.png" width="580" height="416" srcset="/wp-content/uploads/2013/10/CapturFiles_21-580x416.png 580w, /wp-content/uploads/2013/10/CapturFiles_21-624x448.png 624w, /wp-content/uploads/2013/10/CapturFiles_21.png 729w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">JSONP callback execution</p></div>
 <p>The attack sequence may be represented like this:</p>
-<div id="attachment_1784" style="width: 432px" class="wp-caption aligncenter"><img class="size-full wp-image-1784" alt="Example of exploitation process of JSONP" src="/blog-archive/wp-content/uploads/2013/10/jsonp-exploit.png" width="422" height="445" /><p class="wp-caption-text">Example of exploitation process of JSONP</p></div>
+<div id="attachment_1784" style="width: 432px" class="wp-caption aligncenter"><img class="size-full wp-image-1784" alt="Example of exploitation process of JSONP" src="/wp-content/uploads/2013/10/jsonp-exploit.png" width="422" height="445" /><p class="wp-caption-text">Example of exploitation process of JSONP</p></div>
 <p>In other words, the user browser is used as a <em>proxy</em> to make <em>CSRF</em> requests, which should be forbidden.</p>
 <h2>So what?</h2>
 <p>Exploitation depends on the target application configuration and the capability of the attacker to inject a Javascript call along with the callback function into the victim&#8217;s browser.</p>
@@ -141,12 +142,12 @@ To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know 
 <li><a href="http://security.stackexchange.com/a/23439">security.stackexchange.com</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/10/13/csrf-with-jsonp.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/10/13/csrf-with-jsonp.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>FFFjacking</title>
-		<link>/blog-archive/2011/06/03/fffjacking.html</link>
+		<link>/2011/06/03/fffjacking.html</link>
 		<pubDate>Fri, 03 Jun 2011 17:39:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -160,6 +161,7 @@ To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know 
 		<category><![CDATA[social engineering]]></category>
 		<category><![CDATA[web browser]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=1085</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=1085</guid>
 		<description><![CDATA[FFFjacking is new web browser hacking technique discovered by  Roman Kümmel (aka .cCuMiNn.). Even though it requires a little of social engineering, it is quite dangerous. Yet another string to add to the bow.]]></description>
 				<content:encoded><![CDATA[<p><a title="FFFjacking" href="http://www.soom.cz/index.php?name=articles/show&amp;aid=550" target="_blank">FFFjacking</a> is new web browser hacking technique discovered by  Roman Kümmel (aka .cCuMiNn.).</p>

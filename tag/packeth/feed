@@ -9,8 +9,8 @@
 
 <channel>
 	<title>packETH &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/packeth/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/packeth/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Compilation of PackETH on openSUSE</title>
-		<link>/blog-archive/2009/06/14/compilation-of-packeteth-on-opensuse.html</link>
+		<link>/2009/06/14/compilation-of-packeteth-on-opensuse.html</link>
 		<pubDate>Sun, 14 Jun 2009 12:08:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -32,9 +32,10 @@
 		<category><![CDATA[packETH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=387</guid>
-		<description><![CDATA[PackETH is a nice gkt tool to play with Ethernet packet. I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the packETH-opensuse patch to compile correctly. If you are on a 32 bits system, all you will have to do is editing the CPPFLAGS line...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/14/compilation-of-packeteth-on-opensuse.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=387</guid>
+		<description><![CDATA[PackETH is a nice gkt tool to play with Ethernet packet. I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the packETH-opensuse patch to compile correctly. If you are on a 32 bits system, all you will have to do is editing the CPPFLAGS line...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/06/14/compilation-of-packeteth-on-opensuse.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="PackETH" href="http://packeth.sourceforge.net/" target="_blank">PackETH</a> is a nice gkt tool to play with Ethernet packet.</p>
-<p>I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the <a href="/blog-archive/wp-content/uploads/2009/06/packETH-opensuse.patch">packETH-opensuse patch</a> to compile correctly.</p>
+<p>I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the <a href="/wp-content/uploads/2009/06/packETH-opensuse.patch">packETH-opensuse patch</a> to compile correctly.</p>
 <p>If you are on a 32 bits system, all you will have to do is editing the <em>CPPFLAGS</em> line and replace all <em>lib64</em> occurences with<em> lib</em>.</p>
 <p>I hope one will find it useful.</p>
 ]]></content:encoded>

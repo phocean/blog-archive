@@ -9,8 +9,8 @@
 
 <channel>
 	<title>kde &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/kde/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/kde/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Misc rants on Linux desktop, Mac OS and Antivirus</title>
-		<link>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html</link>
-		<comments>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html#comments</comments>
+		<link>/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html</link>
+		<comments>/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html#comments</comments>
 		<pubDate>Tue, 05 Jun 2012 21:29:27 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -36,7 +36,8 @@
 		<category><![CDATA[Sophos]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1230</guid>
-		<description><![CDATA[Linux desktop is in bad shape&#8230; The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs. Unity? Like many people, I just don&#8217;t get it....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1230</guid>
+		<description><![CDATA[Linux desktop is in bad shape&#8230; The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs. Unity? Like many people, I just don&#8217;t get it....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Linux desktop is in bad shape&#8230;</h2>
 <p>The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs.</p>
 <p>Unity? Like many people, I just don&#8217;t get it. It is pretty clumsy and feels unachieved. I also suffered from a lot of performance issues like <a title="Unity lag" href="https://bugs.launchpad.net/bugs/764330" target="_blank">this</a> that are never fixed and make it a pain to use daily.<br />
@@ -68,19 +69,19 @@ Just keeping the system up-to-date is certainly the best thing to do so far.</p>
 <h2>About Sophos for Mac OS</h2>
 <p>So moreover this piece of software was crashing my laptop. The update part seems to be executed with root privileges, and for some reason it locks the system (not only mine, <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Version-8-s-AutoUpdate-consistently-CRASHING/td-p/5957o29DA&amp;usg=AFQjCNGa-t6bKUNhGqDIdvtkicGvsdvMmg" target="_blank">look</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Sophos-AV-7-3-8C-Crashed-MacBook-Pro-AGAIN-Unacceptable-Software/td-p/5397" target="_blank">at</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Given-up-temporarily-on-Sophos-for-Mac/td-p/3703" target="_blank">the</a> forums). Not to mention that having such a component may offer more room to malicious code to exploit the kernel&#8230;</p>
 <p>A shame, a pure piece of crap. Now that I removed it, I am enjoying an uptime of about 30 days!</p>
-<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="/blog-archive/wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
+<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="/wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
 <h2>Conclusion</h2>
 <p>Sophos Antivirus for Mac OS is pure crap, run to remove it if it happens to be on your computer.</p>
 <p>Anyway, you don&#8217;t need an antivirus on Mac OS. Moreover, it seems that several vendor offer solution that lack of maturity and testing on this platform. So you would actually degrade your system stability and security if you would installed on of these.</p>
 <p>And Mac OS is a nice Unix-based desktop alternative to have the work done, even though sadly it is not open-source.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>openSUSE : default desktop going to be KDE, but&#8230;</title>
-		<link>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html</link>
-		<comments>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html#comments</comments>
+		<link>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html</link>
+		<comments>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html#comments</comments>
 		<pubDate>Thu, 20 Aug 2009 19:03:03 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -90,7 +91,8 @@ Just keeping the system up-to-date is certainly the best thing to do so far.</p>
 		<category><![CDATA[openSUSE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=411</guid>
-		<description><![CDATA[What is this ? It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid. On that point, and also as a Gnome user, I agree. In that case, why would you change anything ? No one is going to be satisfied...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=411</guid>
+		<description><![CDATA[What is this ? It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid. On that point, and also as a Gnome user, I agree. In that case, why would you change anything ? No one is going to be satisfied...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>What is <a href="http://www.kdedevelopers.org/node/4052" target="_blank">this</a> ?</p>
 <p>It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid.<br />
 On that point, and also as a Gnome user, I agree.</p>
@@ -99,7 +101,7 @@ On that point, and also as a Gnome user, I agree.</p>
 KDE users will be disappointed and Gnome users will feel marginalized.</p>
 <p>The only thing that would have made sense were either following the request and focussing on KDE integration, or clearly reject it and leave things as they are.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html/feed</wfw:commentRss>
 		<slash:comments>8</slash:comments>
 		</item>
 	</channel>

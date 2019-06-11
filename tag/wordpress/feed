@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Wordpress &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/wordpress/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/wordpress/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>OpenID rants</title>
-		<link>/blog-archive/2010/07/23/openid-rants.html</link>
+		<link>/2010/07/23/openid-rants.html</link>
 		<pubDate>Fri, 23 Jul 2010 03:44:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
-		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=877</guid>
+		<description><![CDATA[After I tried to set this blog as my own OpenID provider using the OpenID WordPress plugin, I got a weired error message: &#8220;This is an OpenID Server, Nothing to See Here&#8230; Move Along&#8221; I could not find what as wrong, as all prerequisites were fulfilled, until I find this nice post. The patch there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/07/23/openid-rants.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>After I tried to set this blog as my own OpenID provider using the <a title="OpenID WordPress Plugin" href="http://wordpress.org/extend/plugins/openid/" target="_blank">OpenID WordPress plugin</a>, I got a weired error message:</p>
 <p><em>&#8220;This is an OpenID Server, Nothing to See Here&#8230; Move  Along&#8221;</em></p>
 <p>I could not find what as wrong, as all prerequisites were fulfilled, until I find this <a title="openID server" href="http://patchlog.com/wordpress/openid-server-on-php-5-3/" target="_blank">nice post</a>. The patch there works very well, thanks to the author (it is a shame that it wasn&#8217;t yet included in the trunk).</p>
@@ -40,8 +41,8 @@
 			</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -57,7 +58,8 @@
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -260,13 +262,13 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>OpenID is gaining popularity</title>
-		<link>/blog-archive/2008/01/17/openid-is-gaining-popularity.html</link>
-		<comments>/blog-archive/2008/01/17/openid-is-gaining-popularity.html#comments</comments>
+		<link>/2008/01/17/openid-is-gaining-popularity.html</link>
+		<comments>/2008/01/17/openid-is-gaining-popularity.html#comments</comments>
 		<pubDate>Thu, 17 Jan 2008 16:33:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -276,20 +278,21 @@ testdata('end');
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=95</guid>
-		<description><![CDATA[Yahoo just announced that it will support OpenID. OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly. You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/01/17/openid-is-gaining-popularity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=95</guid>
+		<description><![CDATA[Yahoo just announced that it will support OpenID. OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly. You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/01/17/openid-is-gaining-popularity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Yahoo supports OpenID" href="http://www.zdnet.fr/actualites/internet/0,39020774,39377529,00.htm?xtor=RSS-1">Yahoo</a> just announced that it will support OpenID.</p>
 <p>OpenID is an interesting initiative to provide single-sign-on to user. It is both secure and simple, so it will be probably spread out quickly.</p>
 <p>You can get your own OpenID by suscribing to a provider or setting up your own server if you got a domain name.</p>
 <p>I will soon write an complete post about it, but now you can already check <a title="OpenID.net" href="http://openid.net/">the official OpenID site</a>.</p>
 <p>Note that this blog already supports OpenID !<noscript></noscript><noscript></noscript></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/01/17/openid-is-gaining-popularity.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/01/17/openid-is-gaining-popularity.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>md5 hash googling &#8211; and WordPress password weakness</title>
-		<link>/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html</link>
-		<comments>/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html#comments</comments>
+		<link>/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html</link>
+		<comments>/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html#comments</comments>
 		<pubDate>Mon, 26 Nov 2007 07:38:16 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -300,7 +303,8 @@ testdata('end');
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=86</guid>
-		<description><![CDATA[Some Md5 password implementation &#8211; without a salt, become more insecure than ever. There is an issue right now with WordPress, I hope they will fix it soon ! Check this interesting article. No need to take out your rainbow tables anymore, just google your hash ! I hope your password is strong enough&#8230; You...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=86</guid>
+		<description><![CDATA[Some Md5 password implementation &#8211; without a salt, become more insecure than ever. There is an issue right now with WordPress, I hope they will fix it soon ! Check this interesting article. No need to take out your rainbow tables anymore, just google your hash ! I hope your password is strong enough&#8230; You...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Some Md5 password implementation &#8211; without a salt, become more insecure than ever. There is an issue right now with WordPress, I hope they will fix it soon !</p>
 <p><a title="Lightbluetouchpaper - md5" href="http://www.lightbluetouchpaper.org/" target="_blank">Check this interesting article</a>.</p>
 <p>No need to take out your rainbow tables anymore, just google your hash ! I hope your password is strong enough&#8230;</p>
@@ -308,18 +312,19 @@ testdata('end');
 <p><a title="md5 rednoize" href="http://md5.rednoize.com/" target="_blank">http://md5.rednoize.com</a></p>
 <p><a title="md5 cryptobitch" href="http://md5.cryptobitch.de" target="_blank">http://md5.cryptobitch.de </a></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/26/md5-hash-googling-and-wordpress-password-weakness.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Dotclear 2 to WordPress migration</title>
-		<link>/blog-archive/2007/05/19/dotclear-2-to-wordpress-migration.html</link>
+		<link>/2007/05/19/dotclear-2-to-wordpress-migration.html</link>
 		<pubDate>Sat, 19 May 2007 08:29:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
 		<category><![CDATA[Dotclear]]></category>
 		<category><![CDATA[Wordpress]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=32</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=32</guid>
 		<description><![CDATA[Dotclear 2 has been bêta for too long and I thought it was time to go over the limitations of a bêta version.
 
@@ -328,7 +333,7 @@ It seems that many people around have done that way and Wordpress is so popular 
 <p>It seems that many people around have done that way and WordPress is so popular that I should consider to give a try to it.<span id="more-32"></span></p>
 <p>For the migration, under Dotclear 2, I exported all the content into a flat text file.</p>
 <p>Then, I installed WordPress : an extremely easy thing ! I have seen many php software easy to set up, but here it is just impressive. Great work&#8230;</p>
-<p>Then I put the <a title="flatimport" href="/blog-archive/wp-content/uploads/2007/05/flatimport.txt">flatimport</a> plug-in into the <strong>wp-admin/import </strong>folder, renaming it with a .php extension.</p>
+<p>Then I put the <a title="flatimport" href="/wp-content/uploads/2007/05/flatimport.txt">flatimport</a> plug-in into the <strong>wp-admin/import </strong>folder, renaming it with a .php extension.</p>
 <p>Finally, just go to the plug-in management interface of WordPress and import it ! That went smoothly for me, but still, as expected, the images were missing in my articles.</p>
 <p>As both blogs and all my pictures were on the same server, I just needed to move the public directory of Dotclear (containing all images) to the wp-content/uploads folder.</p>
 <p>If your pictures have miscellanous origins, don&#8217;t worry, there is a nice plug-in that very easely fetch all the image links of your blog and put the corresponding pictures into the WordPress folder. Look at <a title="Images to WordPress import" href="http://www.bloggingexpertise.com/plugins/cache-images/" target="_blank">there</a>.</p>

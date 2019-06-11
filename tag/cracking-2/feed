@@ -9,8 +9,8 @@
 
 <channel>
 	<title>cracking &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/cracking-2/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/cracking-2/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Ravan, password cracking using Javascript!</title>
-		<link>/blog-archive/2010/12/18/ravan-password-cracking-using-javascript.html</link>
+		<link>/2010/12/18/ravan-password-cracking-using-javascript.html</link>
 		<pubDate>Sat, 18 Dec 2010 22:53:22 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[password]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=940</guid>
-		<description><![CDATA[Ravan is a new password cracking tool based on Javascript. Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/12/18/ravan-password-cracking-using-javascript.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=940</guid>
+		<description><![CDATA[Ravan is a new password cracking tool based on Javascript. Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/12/18/ravan-password-cracking-using-javascript.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Ravan" href="http://www.andlabs.org/tools/ravan.html" target="_blank">Ravan</a> is a new password cracking tool based on Javascript.</p>
 <p>Wait, what ? Javascript ? Yes, as the author explains, modern Javascript engines are not so slow anymore, and in addition HTML 5 brings a new &#8220;feature&#8221; with webworkers which allow the browser to run Javascript in the background (e.g without waiting on the page executing the script).</p>
 <p>Combine it with several computers connecting to the same page executing a password cracking script and you get easily quite a powerful distributed password cracker.</p>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>yast &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/yast/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/yast/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>openSUSE 11.1</title>
-		<link>/blog-archive/2008/12/21/opensuse-111.html</link>
-		<comments>/blog-archive/2008/12/21/opensuse-111.html#comments</comments>
+		<link>/2008/12/21/opensuse-111.html</link>
+		<comments>/2008/12/21/opensuse-111.html#comments</comments>
 		<pubDate>Sun, 21 Dec 2008 16:31:15 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -29,13 +29,14 @@
 		<category><![CDATA[yast]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=308</guid>
-		<description><![CDATA[openSUSE 11.1 is out and already on all my desktop PC. This distribution is, by far, the best Linux environment for a desktop PC : very stable, up to date, polished, professional&#8230; I also appreciate the huges improvements made on Yast and the package management system. Despite being an advanced user that like to use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/12/21/opensuse-111.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=308</guid>
+		<description><![CDATA[openSUSE 11.1 is out and already on all my desktop PC. This distribution is, by far, the best Linux environment for a desktop PC : very stable, up to date, polished, professional&#8230; I also appreciate the huges improvements made on Yast and the package management system. Despite being an advanced user that like to use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/12/21/opensuse-111.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>openSUSE 11.1 is <a title="Download openSUSE 11.1" href="http://en.opensuse.org/OpenSUSE_11.1" target="_blank">out</a> and already on all my desktop PC.</p>
 <p>This distribution is, by far, the best Linux environment for a desktop PC : very stable, up to date, polished, professional&#8230;</p>
 <p>I also appreciate the huges improvements made on Yast and the package management system. Despite being an advanced user that like to use the command line, I reallly appreciate sometimes to have a nice graphical frontend that just do what I want easely and quickly.</p>
 <p>openSUSE 11.1 deserves its increasing popularity. Really, give it a try !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/12/21/opensuse-111.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/12/21/opensuse-111.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Mailbox &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mailbox/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mailbox/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Postfix : &#8220;error writing message: File too large&#8221;</title>
-		<link>/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html</link>
-		<comments>/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html#comments</comments>
+		<link>/2008/06/01/postfix-error-writing-message-file-too-large.html</link>
+		<comments>/2008/06/01/postfix-error-writing-message-file-too-large.html#comments</comments>
 		<pubDate>Sun, 01 Jun 2008 21:13:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[System]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[SMTP]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=108</guid>
-		<description><![CDATA[I suddenly started to received some undelivered mail notifications while I was trying to send some messages to a mailbox hosted on my Postfix server. The cause described in the notification was : error writing message: File too large The first thing I did was checking my configuration file, main.cf. It seemed all right :...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=108</guid>
+		<description><![CDATA[I suddenly started to received some undelivered mail notifications while I was trying to send some messages to a mailbox hosted on my Postfix server. The cause described in the notification was : error writing message: File too large The first thing I did was checking my configuration file, main.cf. It seemed all right :...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/01/postfix-error-writing-message-file-too-large.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I suddenly started to received some undelivered mail notifications while I was trying to send some messages to a mailbox hosted on my Postfix server.</p>
 <p>The cause described in the notification was :</p>
 <pre>error writing message: File too large</pre>
@@ -47,7 +48,7 @@ I tried different values without success.</p>
 <pre>virtual_mailbox_limit = 0</pre>
 <p>Indeed, I use virtual users as mail account ! I just never imagined there was a differtent setting for virtual users (which can be a convenient setting in some case).</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/01/postfix-error-writing-message-file-too-large.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

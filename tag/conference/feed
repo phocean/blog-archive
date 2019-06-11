@@ -9,8 +9,8 @@
 
 <channel>
 	<title>conference &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/conference/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/conference/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>SSTIC 2012</title>
-		<link>/blog-archive/2012/06/10/sstic-2012.html</link>
+		<link>/2012/06/10/sstic-2012.html</link>
 		<pubDate>Sun, 10 Jun 2012 05:40:41 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
@@ -31,15 +31,16 @@
 		<category><![CDATA[SSTIC]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1246</guid>
-		<description><![CDATA[I came back from the 2012 edition of SSTIC, where despite the concerns, there were still some nice conferences. Until slides and papers are published, you can find some nice reports (all in French). But the most impressive will remain the challenge: look at the solution! What a hell! Just reading and trying to understand...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/sstic-2012.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1246</guid>
+		<description><![CDATA[I came back from the 2012 edition of SSTIC, where despite the concerns, there were still some nice conferences. Until slides and papers are published, you can find some nice reports (all in French). But the most impressive will remain the challenge: look at the solution! What a hell! Just reading and trying to understand...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/10/sstic-2012.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I came back from the 2012 edition of <a title="SSTIC" href="https://www.sstic.org">SSTIC</a>, where despite the concerns, there were still some nice conferences.</p>
-<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
+<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="/2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="/2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
 <p>Big respect for the guys who have the talent of going over so many tricks.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>HES 2012</title>
-		<link>/blog-archive/2012/04/14/hes-2012.html</link>
+		<link>/2012/04/14/hes-2012.html</link>
 		<pubDate>Sat, 14 Apr 2012 17:48:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -50,7 +51,8 @@
 		<category><![CDATA[HES]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1173</guid>
-		<description><![CDATA[It has been a long long time since my last post&#8230; I have been very busy, but hopefully I am coming back in the coming months. Just a quick note to tell that I just come back from the Hackito Ergo Sum 2012 (HES). And that was great. All conferences were interesting and the level...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/04/14/hes-2012.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1173</guid>
+		<description><![CDATA[It has been a long long time since my last post&#8230; I have been very busy, but hopefully I am coming back in the coming months. Just a quick note to tell that I just come back from the Hackito Ergo Sum 2012 (HES). And that was great. All conferences were interesting and the level...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/04/14/hes-2012.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>It has been a long long time since my last post&#8230; I have been very busy, but hopefully I am coming back in the coming months.</p>
 <p>Just a quick note to tell that I just come back from the <a title="HES 2012" href="http://2012.hackitoergosum.org/blog/schedule/schedule">Hackito Ergo Sum 2012</a> (HES).</p>
 <p>And that was great. All conferences were interesting and the level was very high. We could enjoy a lot of new stuff that is going to be discussed in the community during the next months. On top of that, it was really well organized.</p>

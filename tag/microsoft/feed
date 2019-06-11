@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Microsoft &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/microsoft/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/microsoft/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Microsoft&#8217;s Zozzle, Javascript malware detector</title>
-		<link>/blog-archive/2011/02/01/microsofts-zozzle-javascript-malware-detector.html</link>
+		<link>/2011/02/01/microsofts-zozzle-javascript-malware-detector.html</link>
 		<pubDate>Tue, 01 Feb 2011 00:07:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -30,15 +30,16 @@
 		<category><![CDATA[Microsoft]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1006</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1006</guid>
 		<description><![CDATA[In an effort to detect malicious Javascript code, Microsoft is developing a tool named Zozzle, aimed to be embedded into the Javascript engine of a browser. The authors claim that it is both fast and efficient with a very low rate of false positive. Here is the report for more details.]]></description>
 				<content:encoded><![CDATA[<p>In an effort to detect malicious Javascript code, Microsoft is developing a tool named Zozzle, aimed to be embedded into the Javascript engine of a browser.<br />
 The authors claim that it is both fast and efficient with a very low rate of false positive.</p>
-<p><a href="/blog-archive/wp-content/uploads/2011/02/zozzle.pdf">Here</a> is the report for more details.</p>
+<p><a href="/wp-content/uploads/2011/02/zozzle.pdf">Here</a> is the report for more details.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>&#8220;Why Mono doesn&#8217;t suck&#8221;</title>
-		<link>/blog-archive/2009/06/12/why-mono-doesnt-suck.html</link>
+		<link>/2009/06/12/why-mono-doesnt-suck.html</link>
 		<pubDate>Fri, 12 Jun 2009 15:27:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -49,6 +50,7 @@ The authors claim that it is both fast and efficient with a very low rate of fal
 		<category><![CDATA[Novell]]></category>
 		<category><![CDATA[openSUSE]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=385</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=385</guid>
 		<description><![CDATA[For the sake, a nice post which I hope will contribute to stop the FUD against Mono.]]></description>
 				<content:encoded><![CDATA[<p>For the sake, <a title="Why Mono is not a threat" href="http://www2.apebox.org/wordpress/rants/124/" target="_blank">a nice post</a> which I hope will contribute to stop the FUD against Mono.</p>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Nmap &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/nmap/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/nmap/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>BNAT</title>
-		<link>/blog-archive/2011/09/13/bnat.html</link>
+		<link>/2011/09/13/bnat.html</link>
 		<pubDate>Tue, 13 Sep 2011 19:34:58 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -33,22 +33,23 @@
 		<category><![CDATA[Nmap]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1155</guid>
-		<description><![CDATA[BNAT stands for &#8220;Broken NAT&#8220;. In the scope of Jonathan Claudius work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to. It happens with bad implementations where the DNAT (destination NAT) and the SNAT (source NAT) use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/09/13/bnat.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1155</guid>
+		<description><![CDATA[BNAT stands for &#8220;Broken NAT&#8220;. In the scope of Jonathan Claudius work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to. It happens with bad implementations where the DNAT (destination NAT) and the SNAT (source NAT) use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/09/13/bnat.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><strong>BNAT</strong> stands for &#8220;<strong><em>Broken NAT</em></strong>&#8220;. In the scope of <em><strong>Jonathan Claudius</strong></em> work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to.</p>
 <p>It happens with bad implementations where the <em>DNAT</em> (destination NAT) and the <em>SNAT</em> (source NAT) use a different IP because of a wrong rule or because the outbound and inbound interfaces are separated.</p>
 <p>As a result, the operating system of the client will discard right away such a reply (with a<em> TCP RST</em>), because it does not match an existing TCP session.</p>
-<p><img class="aligncenter size-full wp-image-1157" title="bnat" src="/blog-archive/wp-content/uploads/2011/08/bnat.png" alt="" width="532" height="165" /></p>
+<p><img class="aligncenter size-full wp-image-1157" title="bnat" src="/wp-content/uploads/2011/08/bnat.png" alt="" width="532" height="165" /></p>
 <p>The idea is that a pentester auditing such an infrastructure with a classic scanner will miss some entry points. A typical scanner relies on the network stack of the system : it will not receive the reply and will consider the port as filtered.</p>
 <p>So Jonathan came with a proof-of-concept to illustrate his purpose.</p>
 <p>It is composed of a B-Router and a client. The B-Router will intercept the reply and maintain the session by sending an ACK. This way, it handles an asymetric routing scheme for the client. Just add a filtering rule to block your system&#8217;s <em>RST</em> (<em>iptables -A OUTPUT -p tcp &#8211;tcp-flags RST RST -j DROP</em> ), and you are good to go.</p>
 <p>Simple but brilliant, isn&#8217;t it ? The great thing is that the code has now been <a title="BNAT in Metasploit" href="https://community.rapid7.com/community/metasploit/blog/2011/08/26/a-tale-from-defcon-and-the-fun-of-bnat" target="_blank">included in Metasploit</a>, so it is even more straightforward.</p>
 <p>Check the <a title="BNAT slides" href="http://www.slideshare.net/claudijd/dc-skytalk-bnat-hijacking-repairing-broken-communication-channels " target="_blank">slides of Jonathan at DEFCON</a> for more info. You can download the source <a title="BNAT source" href="https://github.com/claudijd/BNAT-Suite" target="_blank">there</a> (or just update your Metasploit and look for it in auxiliaries).<br />
-<img class="aligncenter size-full wp-image-1158" title="bnat architecture" src="/blog-archive/wp-content/uploads/2011/08/bnat-archi.png" alt="" width="579" height="347" /></p>
+<img class="aligncenter size-full wp-image-1158" title="bnat architecture" src="/wp-content/uploads/2011/08/bnat-archi.png" alt="" width="579" height="347" /></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Nmap 5.0 is out</title>
-		<link>/blog-archive/2009/07/17/nmap-5-0-is-out.html</link>
+		<link>/2009/07/17/nmap-5-0-is-out.html</link>
 		<pubDate>Fri, 17 Jul 2009 08:41:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -58,13 +59,14 @@
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=395</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=395</guid>
 		<description><![CDATA[Nmap 5.0 has been released, with a bunch of improvments : look at the changelog.]]></description>
 				<content:encoded><![CDATA[<p><a title="Nmap 5.0 download" href="http://nmap.org/dist/nmap-5.00.tar.bz2" target="_blank">Nmap 5.0</a> has been released, with a bunch of improvments : look at the <a title="Nmap 5.0 change" href="http://nmap.org/changelog.html" target="_blank">changelog</a>.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>SinFP, part II : comparison with Nmap 4.20</title>
-		<link>/blog-archive/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
+		<link>/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
 		<pubDate>Sun, 24 Dec 2006 14:53:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -295,8 +297,8 @@ Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nma
 			</item>
 		<item>
 		<title>SinFP, part I : introduction and comparison with Nmap 4.10</title>
-		<link>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
-		<comments>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
+		<link>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
+		<comments>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
 		<pubDate>Sun, 17 Dec 2006 06:59:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -490,9 +492,9 @@ IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
 <p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
 <p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
 <h3>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a></h3>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+<p><img src="/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

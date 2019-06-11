@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Google &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/google/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/google/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>So much noise from Google about the attacks in China !?</title>
-		<link>/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html</link>
-		<comments>/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html#comments</comments>
+		<link>/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html</link>
+		<comments>/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html#comments</comments>
 		<pubDate>Fri, 15 Jan 2010 08:42:41 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
@@ -31,19 +31,20 @@
 		<category><![CDATA[Trojan]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=677</guid>
-		<description><![CDATA[And Google is making so much noise about that ? If what is said is true, it nothing else but a trojan. A good one, but nothing new otherwise. I would also say that the most targeted company was Microsoft. After all, it was an Internet Explorer 0-days breach that was exploited. Once the computer...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=677</guid>
+		<description><![CDATA[And Google is making so much noise about that ? If what is said is true, it nothing else but a trojan. A good one, but nothing new otherwise. I would also say that the most targeted company was Microsoft. After all, it was an Internet Explorer 0-days breach that was exploited. Once the computer...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>And Google is making so much noise about <a title="Google vs China" href="http://www.wired.com/threatlevel/2010/01/operation-aurora/">that</a> ?</p>
 <p>If what is said is true, it nothing else but a trojan. A good one, but nothing new otherwise.</p>
 <p>I would also say that the most targeted company was Microsoft. After all, it was an Internet Explorer 0-days breach that was exploited. Once the computer was infected, I bet that the trojan was doing much more than just targeting Gmail. To maximise the chance of an attack to succeed, a good trojan comes with a bunch of functionalities and harvest as many things as possible on the computer. Thus I doubt the target was only Google.</p>
 <p>As <a title="Ballmer about Google and China" href="http://www.osnews.com/comments/22738">Steve Ballmer</a> said (hey, I didn&#8217;t think I would ever quote him here ! :D ), it happens every day. And it must not be something new in a country like China. And suddenly, Google cares ? Whereas they quietly applied censorship in China until then ? I always become suspicious when a multinational company claims it cares about human rights to the detriment of its business.</p>
 <p>Maybe Google is just really wanting to get out of China for some reason (not so popular there with the competition of <a title="Baidu" href="http://www.baidu.com/">Baidu</a>?) and is looking for an excuse. More details will certainly be coming so time will tell&#8230;</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/01/15/so-much-noise-from-google-about-the-attacks-in-china.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Donating our Google Adsense income</title>
-		<link>/blog-archive/2007/06/28/donating-our-google-adsense-income.html</link>
+		<link>/2007/06/28/donating-our-google-adsense-income.html</link>
 		<pubDate>Thu, 28 Jun 2007 20:49:19 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
@@ -51,18 +52,19 @@
 		<category><![CDATA[Google]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=63</guid>
-		<description><![CDATA[We received our first income for our website from the Google Adsense program. Well, if later we may keep some money for the websites fees, we wanted to do something special for the occasion : we made some donation to Unicef and WWF (tree adoption program). We hope this will be helpful. If ever you...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/06/28/donating-our-google-adsense-income.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=63</guid>
+		<description><![CDATA[We received our first income for our website from the Google Adsense program. Well, if later we may keep some money for the websites fees, we wanted to do something special for the occasion : we made some donation to Unicef and WWF (tree adoption program). We hope this will be helpful. If ever you...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/06/28/donating-our-google-adsense-income.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>We received our first income for our website from the Google Adsense program.</p>
 <p>Well, if later we may keep some money for the websites fees, we wanted to do something special for the occasion : we made some donation to Unicef and WWF (tree adoption program).</p>
 <p>We hope this will be helpful. If ever you can, please also consider donating to better our whole world.</p>
-<p align="center"><a title="WWF" rel="attachment wp-att-61" href="/blog-archive/?attachment_id=61"><img src="/blog-archive/wp-content/uploads/2007/06/wwf.png" alt="WWF" /></a></p>
-<p><a title="Unicef" rel="attachment wp-att-62" href="/blog-archive/?attachment_id=62"></a></p>
-<p style="text-align: center"><a title="Unicef" rel="attachment wp-att-62" href="/blog-archive/?attachment_id=62"><img src="/blog-archive/wp-content/uploads/2007/06/unicef.png" alt="Unicef" /></a></p>
+<p align="center"><a title="WWF" rel="attachment wp-att-61" href="/?attachment_id=61"><img src="/wp-content/uploads/2007/06/wwf.png" alt="WWF" /></a></p>
+<p><a title="Unicef" rel="attachment wp-att-62" href="/?attachment_id=62"></a></p>
+<p style="text-align: center"><a title="Unicef" rel="attachment wp-att-62" href="/?attachment_id=62"><img src="/wp-content/uploads/2007/06/unicef.png" alt="Unicef" /></a></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Google desktop for Linux</title>
-		<link>/blog-archive/2007/06/28/google-desktop-for-linux.html</link>
+		<link>/2007/06/28/google-desktop-for-linux.html</link>
 		<pubDate>Thu, 28 Jun 2007 06:36:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -70,7 +72,8 @@
 		<category><![CDATA[Google]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=59</guid>
-		<description><![CDATA[Google desktop is available for Linux : http://desktop.google.com/fr/linux/download.html I will give it a try, but I think that I won&#8217;t leave Beagle. The main reasons would be that it is not open source and that the data is saved remotely by Google. Even if I have nothing to hide, I don&#8217;t want to share such...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/06/28/google-desktop-for-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=59</guid>
+		<description><![CDATA[Google desktop is available for Linux : http://desktop.google.com/fr/linux/download.html I will give it a try, but I think that I won&#8217;t leave Beagle. The main reasons would be that it is not open source and that the data is saved remotely by Google. Even if I have nothing to hide, I don&#8217;t want to share such...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/06/28/google-desktop-for-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Google desktop is available for Linux :</p>
 <p><a href="http://desktop.google.com/fr/linux/download.html" target="_blank">http://desktop.google.com/fr/linux/download.html</a></p>
 <p>I will give it a try, but I think that I won&#8217;t leave Beagle. The main reasons would be that it is not open source and that the data is saved remotely by Google. Even if I have nothing to hide, I don&#8217;t want to share such info.</p>

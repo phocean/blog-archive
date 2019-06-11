@@ -9,8 +9,8 @@
 
 <channel>
 	<title>nessus &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/nessus/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/nessus/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Nessus 4.2</title>
-		<link>/blog-archive/2009/12/01/nessus-4-2.html</link>
+		<link>/2009/12/01/nessus-4-2.html</link>
 		<pubDate>Tue, 01 Dec 2009 20:21:23 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -30,7 +30,8 @@
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=534</guid>
-		<description><![CDATA[Nessus 4.2 is out. I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/01/nessus-4-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=534</guid>
+		<description><![CDATA[Nessus 4.2 is out. I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/01/nessus-4-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Nessus 4.2" href="http://www.nessus.org/download/" target="_blank">Nessus 4.2</a> is out.</p>
 <p>I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be, they come to you in the right order.</p>
 <p>I also appreciate that the server and the client set-up are now unified thanks to the web interface (you can access it from localhost or from the network indifferently).</p>
@@ -41,8 +42,8 @@
 			</item>
 		<item>
 		<title>No Nessus gui client and limited support of the server for openSUSE</title>
-		<link>/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html</link>
-		<comments>/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html#comments</comments>
+		<link>/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html</link>
+		<comments>/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html#comments</comments>
 		<pubDate>Wed, 02 Sep 2009 13:27:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -53,7 +54,8 @@
 		<category><![CDATA[openSUSE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=416</guid>
-		<description><![CDATA[As I work on security, I used to use Nessus on my openSUSE system. But it seems that Tenable Network Security dropped support for the client on our favorite distribution. At least, for some reason, they stopped making an universal statically linked binary (though they keep doing it for the server part) and it hasn&#8217;t...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=416</guid>
+		<description><![CDATA[As I work on security, I used to use Nessus on my openSUSE system. But it seems that Tenable Network Security dropped support for the client on our favorite distribution. At least, for some reason, they stopped making an universal statically linked binary (though they keep doing it for the server part) and it hasn&#8217;t...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As I work on security, I used to use Nessus on my openSUSE system.</p>
 <p>But it seems that <a href="https://discussions.nessus.org/message/2011#2011" target="_blank">Tenable Network Security dropped support for the client on our favorite distribution</a>.</p>
 <p>At least, for some reason, they stopped making an universal statically linked binary (though they keep doing it for the server part) and it hasn&#8217;t changed since april.</p>
@@ -63,7 +65,7 @@
 <p>So far, it seems that not many people are affected, because there are not many voices on the forum. I can live without it, but however, this is often a nice and useful tool.</p>
 <p>Does anyone use it here ? Or did you get it to work somehow ? If you feel concerned, please let it know to Tenable !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

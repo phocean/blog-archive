@@ -9,8 +9,8 @@
 
 <channel>
 	<title>MiM &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mim/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mim/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>MD5 in your SSL certificate ? No need to panic !</title>
-		<link>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html</link>
-		<comments>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html#comments</comments>
+		<link>/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html</link>
+		<comments>/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html#comments</comments>
 		<pubDate>Fri, 02 Jan 2009 19:58:52 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=316</guid>
-		<description><![CDATA[MD5 was found vulnerable a few years ago. Recently, a team succeeded in producing a fake CA SSL certificate. MD5 or SHA-1 is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a MiM attack. But too much noise has...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=316</guid>
+		<description><![CDATA[MD5 was found vulnerable a few years ago. Recently, a team succeeded in producing a fake CA SSL certificate. MD5 or SHA-1 is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a MiM attack. But too much noise has...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><strong>MD5</strong> was found vulnerable a few years ago. Recently, <a title="MD5 : fake CA SSL cert" href="http://www.secuobs.com/news/31122008-md5_pki_cluster_ps3_25c3_certificat.shtml" target="_blank">a team succeeded in producing a fake CA SSL certificate</a>.</p>
 <p><strong>MD5</strong> or <strong>SHA-1</strong> is the algorithm used to authenticate the peer in SSL messages. If it gets compromised, and using various combined technics, it becomes possible to do a <strong>MiM</strong> attack.</p>
 <p>But too much noise has been made about it. There is <a title="MD5" href="http://broadcast.oreilly.com/2009/01/new-pki-problem-resolved.html" target="_blank">a nice reaction</a>.</p>
@@ -40,7 +41,7 @@
 <p>Security has always been a compromise between usuability and risk. Today, the risk concerning MD5 is still low enough to stop this wind of panic.</p>
 <p>Let&#8217;s begin the migration to SHA-1 quietly.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

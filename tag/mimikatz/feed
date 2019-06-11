@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Mimikatz &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mimikatz/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mimikatz/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Mimikatz offline, as a Volatility plugin!</title>
-		<link>/blog-archive/2014/04/19/mimikatz-offline-as-a-volatility-plugin.html</link>
+		<link>/2014/04/19/mimikatz-offline-as-a-volatility-plugin.html</link>
 		<pubDate>Sat, 19 Apr 2014 10:42:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -30,9 +30,10 @@
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1962</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1962</guid>
 		<description><![CDATA[I just tested the Mimikatz plugin for Volatility and it worked very well on a Windows 7 dump: Good job ;-)]]></description>
 				<content:encoded><![CDATA[<p>I just tested the <a href="http://blog.digital-forensics.it/2014/03/et-voila-le-mimikatz-offline.html">Mimikatz plugin for Volatility</a> and it worked very well on a Windows 7 dump:</p>
-<div id="attachment_1963" style="width: 599px" class="wp-caption aligncenter"><img class="size-full wp-image-1963" src="/blog-archive/wp-content/uploads/2014/04/vol-mimikatz.png" alt="Output of the Mimikatz plugin for Volatility" width="589" height="111" srcset="/blog-archive/wp-content/uploads/2014/04/vol-mimikatz.png 589w, /blog-archive/wp-content/uploads/2014/04/vol-mimikatz-580x109.png 580w" sizes="(max-width: 589px) 100vw, 589px" /><p class="wp-caption-text">Output of the Mimikatz plugin for Volatility</p></div>
+<div id="attachment_1963" style="width: 599px" class="wp-caption aligncenter"><img class="size-full wp-image-1963" src="/wp-content/uploads/2014/04/vol-mimikatz.png" alt="Output of the Mimikatz plugin for Volatility" width="589" height="111" srcset="/wp-content/uploads/2014/04/vol-mimikatz.png 589w, /wp-content/uploads/2014/04/vol-mimikatz-580x109.png 580w" sizes="(max-width: 589px) 100vw, 589px" /><p class="wp-caption-text">Output of the Mimikatz plugin for Volatility</p></div>
 <p>Good job ;-)</p>
 ]]></content:encoded>
 			</item>

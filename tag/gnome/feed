@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Gnome &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/gnome/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/gnome/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>TopIcons-plus for Gnome (v18)</title>
-		<link>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html</link>
-		<comments>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html#comments</comments>
+		<link>/2016/12/18/topicons-plus-for-gnome-v18.html</link>
+		<comments>/2016/12/18/topicons-plus-for-gnome-v18.html#comments</comments>
 		<pubDate>Sun, 18 Dec 2016 17:49:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -30,7 +30,8 @@
 		<category><![CDATA[topicons-plus]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2148</guid>
-		<description><![CDATA[This is another off-topic post as it is not related to security. It has been awhile since I released the TopIcons-plus Gnome-Shell extension. I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape. How is Topicons-plus useful ? The Gnome developers want to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2148</guid>
+		<description><![CDATA[This is another off-topic post as it is not related to security. It has been awhile since I released the TopIcons-plus Gnome-Shell extension. I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape. How is Topicons-plus useful ? The Gnome developers want to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/12/18/topicons-plus-for-gnome-v18.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This is another off-topic post as it is not related to security.</p>
 <p>It has been awhile since I released the <a href="https://github.com/phocean/TopIcons-plus">TopIcons-plus Gnome-Shell extension</a>.</p>
 <p>I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape.</p>
@@ -48,15 +49,16 @@
 <p>It comes with extra features, like styling (opacity, desaturation, size) and positioning.</p>
 <p>The <a href="https://github.com/phocean/TopIcons-plus/releases/tag/v18">latest release</a> should be in pretty good shape. If you don&#8217;t want to use the Github code, be patient: it should get validated on the <a href="https://extensions.gnome.org/extension/1031/topicons/">Gnome website</a> within the next days.</p>
 <p>Enjoy!</p>
-<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
+<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
+<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/12/18/topicons-plus-for-gnome-v18.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Misc rants on Linux desktop, Mac OS and Antivirus</title>
-		<link>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html</link>
-		<comments>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html#comments</comments>
+		<link>/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html</link>
+		<comments>/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html#comments</comments>
 		<pubDate>Tue, 05 Jun 2012 21:29:27 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -72,7 +74,8 @@
 		<category><![CDATA[Sophos]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1230</guid>
-		<description><![CDATA[Linux desktop is in bad shape&#8230; The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs. Unity? Like many people, I just don&#8217;t get it....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1230</guid>
+		<description><![CDATA[Linux desktop is in bad shape&#8230; The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs. Unity? Like many people, I just don&#8217;t get it....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Linux desktop is in bad shape&#8230;</h2>
 <p>The culprits? Unity and Gnome 3. I am not talking about KDE, as I never felt good with it. I had tried KDE 4 and it did not change my opinion, not to mention that I suffered from several bugs.</p>
 <p>Unity? Like many people, I just don&#8217;t get it. It is pretty clumsy and feels unachieved. I also suffered from a lot of performance issues like <a title="Unity lag" href="https://bugs.launchpad.net/bugs/764330" target="_blank">this</a> that are never fixed and make it a pain to use daily.<br />
@@ -104,18 +107,18 @@ Just keeping the system up-to-date is certainly the best thing to do so far.</p>
 <h2>About Sophos for Mac OS</h2>
 <p>So moreover this piece of software was crashing my laptop. The update part seems to be executed with root privileges, and for some reason it locks the system (not only mine, <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Version-8-s-AutoUpdate-consistently-CRASHING/td-p/5957o29DA&amp;usg=AFQjCNGa-t6bKUNhGqDIdvtkicGvsdvMmg" target="_blank">look</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Sophos-AV-7-3-8C-Crashed-MacBook-Pro-AGAIN-Unacceptable-Software/td-p/5397" target="_blank">at</a> <a href="http://openforum.sophos.com/t5/Sophos-Anti-Virus-for-Mac-Home/Given-up-temporarily-on-Sophos-for-Mac/td-p/3703" target="_blank">the</a> forums). Not to mention that having such a component may offer more room to malicious code to exploit the kernel&#8230;</p>
 <p>A shame, a pure piece of crap. Now that I removed it, I am enjoying an uptime of about 30 days!</p>
-<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="/blog-archive/wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
+<p><img class="aligncenter size-full wp-image-1235" title="Sophos Antivirus for Mac OS: a piece of crap" src="/wp-content/uploads/2012/06/1086d0317ba5fbde3728edad856d5744.js" /></p>
 <h2>Conclusion</h2>
 <p>Sophos Antivirus for Mac OS is pure crap, run to remove it if it happens to be on your computer.</p>
 <p>Anyway, you don&#8217;t need an antivirus on Mac OS. Moreover, it seems that several vendor offer solution that lack of maturity and testing on this platform. So you would actually degrade your system stability and security if you would installed on of these.</p>
 <p>And Mac OS is a nice Unix-based desktop alternative to have the work done, even though sadly it is not open-source.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/06/05/misc-rants-on-linux-desktop-mac-os-and-antivirus.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Use Gnome-terminal with GNS3</title>
-		<link>/blog-archive/2009/10/01/use-gnome-terminal-with-gns3.html</link>
+		<link>/2009/10/01/use-gnome-terminal-with-gns3.html</link>
 		<pubDate>Thu, 01 Oct 2009 15:28:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -123,18 +126,19 @@ Just keeping the system up-to-date is certainly the best thing to do so far.</p>
 		<category><![CDATA[gns3]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=473</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=473</guid>
 		<description><![CDATA[GNS3 is configure to use Xterm by default. If you are on Gnome, you may want to use the Gnome terminal. The proper command to set is : gnome-terminal -t %d -e 'telnet %h %p' &#62; /dev/null 2&#62;&#38;1 &#38;]]></description>
 				<content:encoded><![CDATA[<p>GNS3 is configure to use Xterm by default.</p>
 <p>If you are on Gnome, you may want to use the Gnome terminal.</p>
 <p>The proper command to set is :</p>
 <pre>gnome-terminal -t %d -e 'telnet %h %p' &gt; /dev/null 2&gt;&amp;1 &amp;</pre>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/10/Capture-Préférences1.png" rel="lightbox[473]"><img class="aligncenter size-full wp-image-475" title="Capture-Préférences" src="/blog-archive/wp-content/uploads/2009/10/Capture-Préférences1.png" alt="Capture-Préférences" width="532" height="443" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2009/10/Capture-Préférences1.png" rel="lightbox[473]"><img class="aligncenter size-full wp-image-475" title="Capture-Préférences" src="/wp-content/uploads/2009/10/Capture-Préférences1.png" alt="Capture-Préférences" width="532" height="443" /></a></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>openSUSE : default desktop going to be KDE, but&#8230;</title>
-		<link>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html</link>
-		<comments>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html#comments</comments>
+		<link>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html</link>
+		<comments>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html#comments</comments>
 		<pubDate>Thu, 20 Aug 2009 19:03:03 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -144,7 +148,8 @@ Just keeping the system up-to-date is certainly the best thing to do so far.</p>
 		<category><![CDATA[openSUSE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=411</guid>
-		<description><![CDATA[What is this ? It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid. On that point, and also as a Gnome user, I agree. In that case, why would you change anything ? No one is going to be satisfied...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=411</guid>
+		<description><![CDATA[What is this ? It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid. On that point, and also as a Gnome user, I agree. In that case, why would you change anything ? No one is going to be satisfied...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>What is <a href="http://www.kdedevelopers.org/node/4052" target="_blank">this</a> ?</p>
 <p>It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid.<br />
 On that point, and also as a Gnome user, I agree.</p>
@@ -153,13 +158,13 @@ On that point, and also as a Gnome user, I agree.</p>
 KDE users will be disappointed and Gnome users will feel marginalized.</p>
 <p>The only thing that would have made sense were either following the request and focussing on KDE integration, or clearly reject it and leave things as they are.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html/feed</wfw:commentRss>
 		<slash:comments>8</slash:comments>
 		</item>
 		<item>
 		<title>VMWare Workstation 6.5</title>
-		<link>/blog-archive/2008/10/05/vmware-workstation-65.html</link>
-		<comments>/blog-archive/2008/10/05/vmware-workstation-65.html#comments</comments>
+		<link>/2008/10/05/vmware-workstation-65.html</link>
+		<comments>/2008/10/05/vmware-workstation-65.html#comments</comments>
 		<pubDate>Sun, 05 Oct 2008 16:46:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -174,7 +179,8 @@ KDE users will be disappointed and Gnome users will feel marginalized.</p>
 		<category><![CDATA[vmware-any-any]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
-		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
+		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p style="text-align: left;">I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features.</p>
 <p style="text-align: left;">The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file.</p>
 <p style="text-align: left;">After downloading, as root, just make it executable or start it with sh :</p>
@@ -194,7 +200,7 @@ KDE users will be disappointed and Gnome users will feel marginalized.</p>
 <p style="text-align: left;">At last, but not least, the <strong>Unity</strong> display mode.</p>
 <p style="text-align: left;">Though I am not a Mac user, I believe this can be compared to VMWare Fusion. Anyway, it allows you to display the virtual machines programs within your X session.</p>
 <p style="text-align: left;">Look at this screenshot :</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /blog-archive/wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p style="text-align: left;">The result is quite spectacular. On my Gnome desktop, I am now able to display some windows from Windows XP and Windows Vista.</p>
 <p style="text-align: left;">Well, this is not yet perfectly smooth or artifact free, but this is already really usable and responsive enough to be used intensively.</p>
 <p style="text-align: left;">Another limit is the operating system support. So far, among my virtual machines, I was able to do it with Windows systems but not Open Solaris for instance.</p>
@@ -202,7 +208,7 @@ KDE users will be disappointed and Gnome users will feel marginalized.</p>
 <p style="text-align: left;">I just wanted to insist that if you are a VMWare user,  you really should consider to upgrade for the <strong>complete support of the latest kernel</strong> and the <strong>Unity</strong> feature.</p>
 <p style="text-align: left;">It seems that VMWare has listened to the Linux users, or at least is taking it more seriously. Not that they are nice, but the competitors are close (Virtual box, KVM, Xen&#8230;) !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

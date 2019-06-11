@@ -9,8 +9,8 @@
 
 <channel>
 	<title>mpg123 &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mpg123/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mpg123/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>How to activate music preview in Nautilus</title>
-		<link>/blog-archive/2009/09/26/how-to-activate-music-preview-in-nautilus.html</link>
+		<link>/2009/09/26/how-to-activate-music-preview-in-nautilus.html</link>
 		<pubDate>Sat, 26 Sep 2009 03:21:32 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -28,6 +28,7 @@
 		<category><![CDATA[openSUSE]]></category>
 		<category><![CDATA[zypper]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=418</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=418</guid>
 		<description><![CDATA[It allows to play a music file by letting the cursor over it, without opening a player. Very easy to set up : $ zypper install mpg123 and it should work immediatly.]]></description>
 				<content:encoded><![CDATA[<p>It allows to play a music file by letting the cursor over it, without opening a player.</p>

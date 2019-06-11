@@ -9,8 +9,8 @@
 
 <channel>
 	<title>OpenVPN &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/openvpn/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/openvpn/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>The SSL/SSH disaster</title>
-		<link>/blog-archive/2008/05/15/the-sslssh-disaster.html</link>
-		<comments>/blog-archive/2008/05/15/the-sslssh-disaster.html#comments</comments>
+		<link>/2008/05/15/the-sslssh-disaster.html</link>
+		<comments>/2008/05/15/the-sslssh-disaster.html#comments</comments>
 		<pubDate>Thu, 15 May 2008 16:23:22 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
-		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
+		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses.</p>
 <p>I have had no time so far to check all the keys on my server. I prefer to stay on the safe side, though I have some reason to believe that my keys might not be so vulnerable : I generated them a long time ago, maybe before the Debian maintainer sad mistake.</p>
 <p>It is going to be pretty easy now, for those who are motivated, to get access to the ssh server running keys generated during the 2 last years&#8230;</p>
@@ -44,13 +45,13 @@ What&#8217;s less funny is the pure disaster for the reputation of Debian.</p>
 This kind of news is not going to enforce trust from companies.</p>
 <p>I myself will think twice in the future about what system to use when I design my networks.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>OpenVPN and DNS on a linux client</title>
-		<link>/blog-archive/2006/12/07/openvpn-and-dns-on-a-linux-client.html</link>
-		<comments>/blog-archive/2006/12/07/openvpn-and-dns-on-a-linux-client.html#comments</comments>
+		<link>/2006/12/07/openvpn-and-dns-on-a-linux-client.html</link>
+		<comments>/2006/12/07/openvpn-and-dns-on-a-linux-client.html#comments</comments>
 		<pubDate>Thu, 07 Dec 2006 16:42:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -147,7 +148,7 @@ down)
 esac
 </pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/07/openvpn-and-dns-on-a-linux-client.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/07/openvpn-and-dns-on-a-linux-client.html/feed</wfw:commentRss>
 		<slash:comments>13</slash:comments>
 		</item>
 	</channel>

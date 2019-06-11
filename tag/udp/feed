@@ -9,8 +9,8 @@
 
 <channel>
 	<title>udp &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/udp/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/udp/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Introduction to network attacks : Network Layer</title>
-		<link>/blog-archive/2008/10/12/introduction-to-network-attacks-network-layer.html</link>
+		<link>/2008/10/12/introduction-to-network-attacks-network-layer.html</link>
 		<pubDate>Sun, 12 Oct 2008 14:45:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -39,7 +39,8 @@
 		<category><![CDATA[udp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=220</guid>
-		<description><![CDATA[Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done. ARP cache poisoning ARP works basically on broadcast : when a machine connects to the network, it broadcasts its MAC address to the LAN (ethernet...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/12/introduction-to-network-attacks-network-layer.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=220</guid>
+		<description><![CDATA[Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done. ARP cache poisoning ARP works basically on broadcast : when a machine connects to the network, it broadcasts its MAC address to the LAN (ethernet...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/10/12/introduction-to-network-attacks-network-layer.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done.<br />
 <span id="more-220"></span></p>
 <h3>ARP cache poisoning</h3>
@@ -58,12 +59,12 @@
 <p>You can start it in graphic mode :</p>
 <pre lang="bash">$ ettercap -G</pre>
 <p>Got to the &#8220;<em>Sniff / United sniffing</em>&#8221; menu and select your network interface :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap1.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-286" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap1.png" alt="" width="399" height="146" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap1.png 399w, /blog-archive/wp-content/uploads/2008/10/ettercap1-300x109.png 300w" sizes="(max-width: 399px) 100vw, 399px" /></a><br />
+<p><a href="/wp-content/uploads/2008/10/ettercap1.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-286" title="Ettercap" src="/wp-content/uploads/2008/10/ettercap1.png" alt="" width="399" height="146" srcset="/wp-content/uploads/2008/10/ettercap1.png 399w, /wp-content/uploads/2008/10/ettercap1-300x109.png 300w" sizes="(max-width: 399px) 100vw, 399px" /></a><br />
 &#8220;<em>Hosts / scan for hosts</em>&#8221; menu allow you to quickly visualize the machines of the LAN.<br />
 Then, in the &#8220;<em>Mitm</em>&#8221; (Man In The Middle) menu, choose &#8220;<em>Arp cache poisonning</em>&#8221; :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap2.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-287" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap2.png" alt="" width="301" height="182" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap2.png 301w, /blog-archive/wp-content/uploads/2008/10/ettercap2-300x181.png 300w" sizes="(max-width: 301px) 100vw, 301px" /></a></p>
+<p><a href="/wp-content/uploads/2008/10/ettercap2.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-287" title="Ettercap" src="/wp-content/uploads/2008/10/ettercap2.png" alt="" width="301" height="182" srcset="/wp-content/uploads/2008/10/ettercap2.png 301w, /wp-content/uploads/2008/10/ettercap2-300x181.png 300w" sizes="(max-width: 301px) 100vw, 301px" /></a></p>
 <p>Finally, &#8220;start / start sniffing&#8221; (default is all machines are targeted) :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap3.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-288" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap3.png" alt="" width="500" height="385" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap3.png 622w, /blog-archive/wp-content/uploads/2008/10/ettercap3-300x231.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+<p><a href="/wp-content/uploads/2008/10/ettercap3.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-288" title="Ettercap" src="/wp-content/uploads/2008/10/ettercap3.png" alt="" width="500" height="385" srcset="/wp-content/uploads/2008/10/ettercap3.png 622w, /wp-content/uploads/2008/10/ettercap3-300x231.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
 <p>Immediatly, Ettercap starts collecting data. Here some POP credentials can be read :</p>
 <p>Several workaround can be set against this, though none is really satisfying :</p>
 <ol>
@@ -79,7 +80,7 @@ In some cases, it could be used to drive some attacks.</p>
 <h4>Ping of the Death</h4>
 <p>That&#8217;s the historical attack. An ICMP packet is encapsulated inside an IP datagram.<br />
 An ICMP datagram is structured as below :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/icmp.png" rel="lightbox[220]"><img class="size-full wp-image-284" title="ICMP datagram" src="/blog-archive/wp-content/uploads/2008/10/icmp.png" alt="ICMP datagram" width="341" height="115" srcset="/blog-archive/wp-content/uploads/2008/10/icmp.png 341w, /blog-archive/wp-content/uploads/2008/10/icmp-300x101.png 300w" sizes="(max-width: 341px) 100vw, 341px" /></a><br />
+<p><a href="/wp-content/uploads/2008/10/icmp.png" rel="lightbox[220]"><img class="size-full wp-image-284" title="ICMP datagram" src="/wp-content/uploads/2008/10/icmp.png" alt="ICMP datagram" width="341" height="115" srcset="/wp-content/uploads/2008/10/icmp.png 341w, /wp-content/uploads/2008/10/icmp-300x101.png 300w" sizes="(max-width: 341px) 100vw, 341px" /></a><br />
 A few ICMP requests types :</p>
 <pre lang="txt">
 0 = echo reply
@@ -104,7 +105,7 @@ Error: packet size 65508 is too large. Maximum is 65507</pre>
 <p><a href="http://sourceforge.net/projects/sing" target="_blank"><strong>Sing</strong></a> is a nice tool to easily play with ICMP packets. No problem this time :</p>
 <pre lang="bash">$ sing -s 65508 192.168.1.1</pre>
 <p>The capture below shows the packet fragmentation that results :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/pod.png" rel="lightbox[220]"><img class="aligncenter size-medium wp-image-285" title="Sniffing of Ping of death" src="/blog-archive/wp-content/uploads/2008/10/pod-300x216.png" alt="" width="300" height="216" srcset="/blog-archive/wp-content/uploads/2008/10/pod-300x216.png 300w, /blog-archive/wp-content/uploads/2008/10/pod.png 1023w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/10/pod.png" rel="lightbox[220]"><img class="aligncenter size-medium wp-image-285" title="Sniffing of Ping of death" src="/wp-content/uploads/2008/10/pod-300x216.png" alt="" width="300" height="216" srcset="/wp-content/uploads/2008/10/pod-300x216.png 300w, /wp-content/uploads/2008/10/pod.png 1023w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>How to protect from such issues ? Check regularly vulnerabilities issues and keep your system up to date.<br />
 Many administrators just block all the ICMP protocol on their firewall. It is a kind of overreaction : ICMP is in no way a danger, but is really useful when you need some diagnosis. If you also think that blocking it hides your network topology, you are wrong but that is another subject.<br />
 So update your systems, allow ICMP (and somehow prepare yourself for IPv6 :)).</p>
@@ -155,7 +156,7 @@ The big issue is that he will never receive the answers from the packets he send
 <ol>
 <li><strong>Initiating a new session and guessing the TCP sequence number</strong>s :To be established, a TCP session follow a strict order : SYN, SYN-ACK and ACK. Each packet sent through TCP must be aknowledge. To differentiate the packets and send back that way an individual ACK, each packets has its own TCP sequence number. For every new packet, the sequence number is increased by the sender.<br />
 This illustrates better :<br />
-<a href="/blog-archive/wp-content/uploads/2008/10/tcp.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-289" title="TCP sequence" src="/blog-archive/wp-content/uploads/2008/10/tcp.png" alt="" width="344" height="190" srcset="/blog-archive/wp-content/uploads/2008/10/tcp.png 344w, /blog-archive/wp-content/uploads/2008/10/tcp-300x165.png 300w" sizes="(max-width: 344px) 100vw, 344px" /></a><br />
+<a href="/wp-content/uploads/2008/10/tcp.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-289" title="TCP sequence" src="/wp-content/uploads/2008/10/tcp.png" alt="" width="344" height="190" srcset="/wp-content/uploads/2008/10/tcp.png 344w, /wp-content/uploads/2008/10/tcp-300x165.png 300w" sizes="(max-width: 344px) 100vw, 344px" /></a><br />
 What the attacker has to do is sending the right ACK at the right moment, with not only the good TCP content but a proper TCP sequence number.<br />
 This technic is somehow historical, as nowadays modern systems generate a random TCP sequence number that is very hard to predict (even using flood).</li>
 <li><strong>Stealing an existing session </strong>:It requires the attacker to be somewhere on the ethernet link between the two targets. It becomes easier to generate proper sequence numbers by sniffing a legitimate conversation.</li>

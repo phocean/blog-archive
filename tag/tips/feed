@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Tips &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/tips/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/tips/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Getting colors in the terminal</title>
-		<link>/blog-archive/2006/12/05/getting-colors-in-the-terminal.html</link>
+		<link>/2006/12/05/getting-colors-in-the-terminal.html</link>
 		<pubDate>Tue, 05 Dec 2006 11:21:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>

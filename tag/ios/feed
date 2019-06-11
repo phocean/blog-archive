@@ -9,8 +9,8 @@
 
 <channel>
 	<title>ios &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ios/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ios/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Netios 0.73</title>
-		<link>/blog-archive/2010/02/10/netios-0-73.html</link>
+		<link>/2010/02/10/netios-0-73.html</link>
 		<pubDate>Wed, 10 Feb 2010 14:51:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -32,18 +32,21 @@
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
 		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.73 fixes some bugs and</p>
 <p>Complete changelog :</p>
 <blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
+<blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
 <p>* remove useless options<br />
 * fix various bugs</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.72</title>
-		<link>/blog-archive/2010/01/15/netios-0-72.html</link>
+		<link>/2010/01/15/netios-0-72.html</link>
 		<pubDate>Fri, 15 Jan 2010 10:20:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -56,19 +59,22 @@
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
-		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now.</p>
 <p>Complete changelog :</p>
+<blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
 <blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
 <p>* ciscoclass.py : forgot to remove a debug print<br />
 * ciscoclass.py : finish and fix a bunch of bugs in the show run function, format the config file properly<br />
 * ciscoclass.py : fix the prompt regex</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.71</title>
-		<link>/blog-archive/2009/12/20/netios-0-71.html</link>
+		<link>/2009/12/20/netios-0-71.html</link>
 		<pubDate>Sun, 20 Dec 2009 16:34:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -84,7 +90,8 @@
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
-		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
+		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I release a new version of Netios : 0.71.</p>
 <p>There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing.</p>
 <p>It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up.</p>
@@ -92,8 +99,10 @@
 <p>It is also now able to fetch a configuration file remotly, but it requires more testing before I feel confident in the way it works.</p>
 <p>The complete changelog :</p>
 <blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
+<blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
 <p>* ciscoclass.py : handle correctly the cisco pager &#8212; More &#8212; so that &#8220;show run&#8221; mode should work even with large config files<br />
 * sshclass.py : allow to override terminal size system settings (make use of the cisco pager to avoid filling the buffer)</p>
+<p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
 <p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
 <p>* implement multiprocessing<br />
 * improve code documentation<br />
@@ -101,12 +110,12 @@
 * reduce useless logging<br />
 * netios.py : bug : missing startTime parameter in f_skip_error and f_command functions</p></blockquote>
 <p>I cross my fingers so that there are not too many bugs, but if so, please don&#8217;t forget to report it to me.</p>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios</title>
-		<link>/blog-archive/2009/11/07/netios.html</link>
+		<link>/2009/11/07/netios.html</link>
 		<pubDate>Sat, 07 Nov 2009 15:53:30 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -120,7 +129,8 @@
 		<category><![CDATA[SSH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
-		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
+		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches :</p>
 <blockquote><p><strong>Netios</strong> is a little tool aimed to help network administrators to administrate a large number of Cisco network devices.<br />
 Providing it with a list of equipments, it connects within SSH to remotly apply IOS commands.</p>
@@ -134,13 +144,13 @@ Providing it with a list of equipments, it connects within SSH to remotly apply 
 </ul>
 <p>It can read the targets from the command line or from a text file.</p></blockquote>
 <p>Its primary goal is to improve the security by making it easier to renew regularly the local password of these equipments, but it can do more convenient things (and I will continue to work to add more of them).</p>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Cisco configuration buffer full</title>
-		<link>/blog-archive/2009/09/26/cisco-configuration-buffer-full.html</link>
-		<comments>/blog-archive/2009/09/26/cisco-configuration-buffer-full.html#comments</comments>
+		<link>/2009/09/26/cisco-configuration-buffer-full.html</link>
+		<comments>/2009/09/26/cisco-configuration-buffer-full.html#comments</comments>
 		<pubDate>Sat, 26 Sep 2009 03:30:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -148,7 +158,8 @@ Providing it with a list of equipments, it connects within SSH to remotly apply 
 		<category><![CDATA[ios]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=394</guid>
-		<description><![CDATA[I got this weired message while trying to save a configuration : #wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue? [no]: no % Configuration buffer full, can't add command: ************************************************************************ Looks scary at first, but normally it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/26/cisco-configuration-buffer-full.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=394</guid>
+		<description><![CDATA[I got this weired message while trying to save a configuration : #wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue? [no]: no % Configuration buffer full, can't add command: ************************************************************************ Looks scary at first, but normally it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/26/cisco-configuration-buffer-full.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I got this weired message while trying to save a configuration :<br />
 <code></p>
 <pre>#wr mem
@@ -167,13 +178,13 @@ Continue? [no]: no
 <p></code></p>
 <p>I guess that there are little chances the issue remains after that, but if so, well, you may be in trouble&#8230;</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/26/cisco-configuration-buffer-full.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/26/cisco-configuration-buffer-full.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>IOS : Configuration buffer full, can&#8217;t add command</title>
-		<link>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html</link>
-		<comments>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html#comments</comments>
+		<link>/2009/05/29/ios-configuration-buffer-full-cant-add-command.html</link>
+		<comments>/2009/05/29/ios-configuration-buffer-full-cant-add-command.html#comments</comments>
 		<pubDate>Fri, 29 May 2009 15:19:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -182,7 +193,8 @@ Continue? [no]: no
 		<category><![CDATA[ios]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=366</guid>
-		<description><![CDATA[This error message suddenly showed up on one of my router when I tried to save its running configuration. service compress-config allowed me to workaround this buffer problem : router#wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue?...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=366</guid>
+		<description><![CDATA[This error message suddenly showed up on one of my router when I tried to save its running configuration. service compress-config allowed me to workaround this buffer problem : router#wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue?...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/29/ios-configuration-buffer-full-cant-add-command.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This error message suddenly showed up on one of my router when I tried to save its running configuration.</p>
 <p><strong>service compress-config</strong> allowed me to workaround this buffer problem :</p>
 <pre>router#wr mem
@@ -202,12 +214,12 @@ router#wr mem
 Building configuration...
 Compressed configuration from 21787 bytes to 7991 bytes[OK]</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/05/29/ios-configuration-buffer-full-cant-add-command.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Practicing Cisco networking with GNS3 and Dynamips</title>
-		<link>/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html</link>
+		<link>/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html</link>
 		<pubDate>Tue, 19 Aug 2008 08:07:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -220,7 +232,8 @@ Compressed configuration from 21787 bytes to 7991 bytes[OK]</pre>
 		<category><![CDATA[router]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=195</guid>
-		<description><![CDATA[GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers. I sometimes use Boson Netsim, which is not only non-free but not...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=195</guid>
+		<description><![CDATA[GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers. I sometimes use Boson Netsim, which is not only non-free but not...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers.</p>
 <p>I sometimes use <a href="http://www.boson.com/AboutNetSim.html">Boson Netsim</a>, which is not only non-free but not so reliable.</p>
 <p>However, as I just started to use GNS3 and Dynamips, I don&#8217;t know it so well yet and won&#8217;t compare any further the two solutions.</p>
@@ -240,13 +253,13 @@ $ mv dynamips-0.2.8-RC2-amd64.bin /opt</pre>
 <pre>$ /opt/GNS3-0.5-src/gns3</pre>
 <p>In the <strong>edit</strong> menu, select <strong>preferences</strong> and go the <strong>dynamips</strong> section.</p>
 <p>Just browse to the dynamips binary you dowloaded, to fill the value of the <strong>executable path</strong> field.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-preferences.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-198" title="GNS3 preferences settings" src="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png" alt="" width="300" height="264" srcset="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-preferences.png 694w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-preferences.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-198" title="GNS3 preferences settings" src="/wp-content/uploads/2008/08/capture-preferences-300x264.png" alt="" width="300" height="264" srcset="/wp-content/uploads/2008/08/capture-preferences-300x264.png 300w, /wp-content/uploads/2008/08/capture-preferences.png 694w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>Still from the <strong>edit</strong> menu, select <strong>IOS images and hypervisors</strong>. There, you have to add all the IOS images you want to use, one after another. Normally, the default settings for each file loaded are suitable.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-202" title="GNS3 ios-images-and-hypervisors" src="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png" alt="" width="300" height="184" srcset="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png 881w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-202" title="GNS3 ios-images-and-hypervisors" src="/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png" alt="" width="300" height="184" srcset="/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png 300w, /wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png 881w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>Back to the main window, you can drag and drop routers and link them, creating the topology you wish.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-gns3.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-197" title="GNS3" src="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png" alt="" width="300" height="190" srcset="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-gns3.png 1182w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-gns3.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-197" title="GNS3" src="/wp-content/uploads/2008/08/capture-gns3-300x190.png" alt="" width="300" height="190" srcset="/wp-content/uploads/2008/08/capture-gns3-300x190.png 300w, /wp-content/uploads/2008/08/capture-gns3.png 1182w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>For now, just add one router. Right click on it and select <strong>start</strong> to start it up. Right click again and select <strong>console</strong>.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-r01.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-200" title="GNS3 console" src="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png" alt="" width="300" height="181" srcset="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-r01.png 580w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-r01.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-200" title="GNS3 console" src="/wp-content/uploads/2008/08/capture-r01-300x181.png" alt="" width="300" height="181" srcset="/wp-content/uploads/2008/08/capture-r01-300x181.png 300w, /wp-content/uploads/2008/08/capture-r01.png 580w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>Enjoy ! Of course, I strongly recommand that you start reading further from <a href="http://www.gns3.net/documentation" target="_blank">this page</a>.</p>
 <p><strong>Resources</strong> :</p>
 <p><a href="http://www.ipflow.utc.fr/blog/" target="_blank">http://www.ipflow.utc.fr/blog/</a><br />

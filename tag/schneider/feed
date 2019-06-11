@@ -9,8 +9,8 @@
 
 <channel>
 	<title>schneider &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/schneider/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/schneider/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>The evolution of ICS security</title>
-		<link>/blog-archive/2013/02/03/the-evolution-of-ics-security.html</link>
+		<link>/2013/02/03/the-evolution-of-ics-security.html</link>
 		<pubDate>Sun, 03 Feb 2013 12:35:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[WinCC]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1529</guid>
-		<description><![CDATA[This article, which comes with nice screencasts, is an interesting state of art on industrial system &#8211; or rather lack of &#8211; security. These systems are popularly known as SCADA systems, but SCADA systems are just a subpart of ICS (Industrial Control Systems). Well, there is no surprise that they have been highly insecure from their...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/02/03/the-evolution-of-ics-security.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1529</guid>
+		<description><![CDATA[This article, which comes with nice screencasts, is an interesting state of art on industrial system &#8211; or rather lack of &#8211; security. These systems are popularly known as SCADA systems, but SCADA systems are just a subpart of ICS (Industrial Control Systems). Well, there is no surprise that they have been highly insecure from their...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/02/03/the-evolution-of-ics-security.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This <a href="http://blog.ptsecurity.com/2013/01/ics-security-analysis-new-pentest-tools.html">article</a>, which comes with nice screencasts, is an interesting state of art on industrial system &#8211; or rather lack of &#8211; security. These systems are popularly known as <strong>SCADA</strong> systems, but SCADA systems are just a subpart of <strong>ICS</strong> (<strong>I</strong>ndustrial <strong>C</strong>ontrol <strong>S</strong>ystems).</p>
 <p>Well, there is no surprise that they have been highly insecure from their conception, and that many are exposed on the Internet.</p>
 <p>What is interesting is to note the recent evolution:</p>
@@ -46,7 +47,7 @@
 			</item>
 		<item>
 		<title>Vulnerabilities in software from Schneider Electric</title>
-		<link>/blog-archive/2011/06/23/vulnerabilities-in-software-from-schneider-electric.html</link>
+		<link>/2011/06/23/vulnerabilities-in-software-from-schneider-electric.html</link>
 		<pubDate>Thu, 23 Jun 2011 18:25:19 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -55,6 +56,7 @@
 		<category><![CDATA[schneider]]></category>
 		<category><![CDATA[Vulnerability]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=1093</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=1093</guid>
 		<description><![CDATA[I found multiple vulnerabilities in software from Schneider Electric, used to monitor industrial monitoring devices. It reveals a very poor security design. The editor was informed and I am waiting for its acknowledgement. I will disclose more details once the issues are patched.]]></description>
 				<content:encoded><![CDATA[<p>I found multiple vulnerabilities in software from Schneider Electric, used to monitor industrial monitoring devices. It reveals a very poor security design.</p>

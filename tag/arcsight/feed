@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Arcsight &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/arcsight/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/arcsight/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Acquisitions among SIEM actors</title>
-		<link>/blog-archive/2011/10/04/acquisitions-among-siem-actors.html</link>
+		<link>/2011/10/04/acquisitions-among-siem-actors.html</link>
 		<pubDate>Tue, 04 Oct 2011 17:14:13 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[SIEM]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1167</guid>
-		<description><![CDATA[The SIEM planet has recently gone crazy. Following the acquisition of the leader, Arcsight, by HP last year, IBM just acquired Q1 Labs&#8230; and Mc Afee, Nitrosecurity ! With RSA and Norton having their own solutions, we know have 5 big players in the arena (see Gartner 2011). This is a good proof that the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/10/04/acquisitions-among-siem-actors.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1167</guid>
+		<description><![CDATA[The SIEM planet has recently gone crazy. Following the acquisition of the leader, Arcsight, by HP last year, IBM just acquired Q1 Labs&#8230; and Mc Afee, Nitrosecurity ! With RSA and Norton having their own solutions, we know have 5 big players in the arena (see Gartner 2011). This is a good proof that the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/10/04/acquisitions-among-siem-actors.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The <strong>SIEM</strong> planet has recently gone crazy. Following the acquisition of the leader, <a title="HP to acquire" href="http://www.hp.com/hpinfo/newsroom/press/2010/100913xa.html" target="_blank">Arcsight, by HP</a> last year, <a title="IBM to acquire Q1 Labs" href="http://www.net-security.org/secworld.php?id=11729" target="_blank">IBM just acquired Q1 Labs</a>&#8230; and <a title="Mc Afee to acquire Nitrosecurity" href="http://www.net-security.org/secworld.php?id=11727" target="_blank">Mc Afee, Nitrosecurity</a> !</p>
 <p>With RSA and Norton having their own solutions, we know have 5 big players in the arena (see <a title="Gartner Magic Quadrant 2011" href="http://www.arcsight.com/collateral/whitepapers/Gartner_Magic_Quadrant_2011.pdf">Gartner 2011</a>). This is a good proof that the correlation market is growing and that the solutions are getting mature.</p>
 ]]></content:encoded>

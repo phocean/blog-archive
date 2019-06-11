@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Privacy &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/security/privacy-security/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/security/privacy-security/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>A few (convenient) dockerfiles</title>
-		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<link>/2016/04/10/a-few-convenient-dockerfiles.html</link>
 		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -33,7 +33,8 @@
 		<category><![CDATA[Tor]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
-		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
 <p>Here they are:</p>
 <ul>
@@ -60,7 +61,7 @@
 			</item>
 		<item>
 		<title>A relative got hacked for scamming activities</title>
-		<link>/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
+		<link>/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
 		<pubDate>Sun, 20 Jan 2013 16:40:03 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -76,7 +77,8 @@
 		<category><![CDATA[sqlite]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
-		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
+		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>One of my relative got hacked.</p>
 <p>After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to say that his knowledge on computers is low.<br />
 I immediately started to investigate.</p>
@@ -97,8 +99,8 @@ I immediately started to investigate.</p>
 <p>With support of <a title="forensicswiki.org" href="http://www.forensicswiki.org/wiki/Mozilla_Firefox">forensicswiki.org</a>, I dumped the full Firefox profile on my computer and started to analyze it with the <a title="Sqlite Manager" href="https://addons.mozilla.org/fr/firefox/addon/sqlite-manager/">Sqlite Manager</a> extension.</p>
 <blockquote><p>Sorry but I will be hiding private info and sensitive data that could be used for a legal action.</p></blockquote>
 <p>I got most info from the files <em><strong>cookies.sqlite</strong></em> and <em><strong>places.sqlite</strong></em>.</p>
-<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/cookies-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/cookies-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
-<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/blog-archive/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/places-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/places-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/places-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
+<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/wp-content/uploads/2013/01/cookies-580x345.png 580w, /wp-content/uploads/2013/01/cookies-940x560.png 940w, /wp-content/uploads/2013/01/cookies-500x298.png 500w, /wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
+<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/wp-content/uploads/2013/01/places-580x345.png 580w, /wp-content/uploads/2013/01/places-940x560.png 940w, /wp-content/uploads/2013/01/places-500x298.png 500w, /wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
 <p>The guy didn&#8217;t loose time, he knew precisely what he wanted and what to do.</p>
 <ol>
 <li>He first visited two websites to localize the computer: <a title="ip2location.com" href="http://ip2location.com">ip2location.com</a> and <a title="ip-tracker.org" href="http://www.ip-tracker.org">ip-tracker.org</a>. You may think that it is a strange first move, but I will come back on that later as I have a theory.</li>
@@ -120,9 +122,9 @@ I immediately started to investigate.</p>
 <p>Also, GET parameters in URLs were very interesting.</p>
 <p>In some of them, you can guess the amount of the purchase he did. He for sure bought stuff for at least a total of 500$. But it is without counting the stuff that I cannot guess from URLs, so it is probably sensibly much more in reality.</p>
 <p>But, even better, some had order ids. Hey, wait! Let&#8217;s have a look on the 2co website:</p>
-<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /blog-archive/wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /blog-archive/wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
+<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
 <p>Hmmm&#8230; we have the email address and the order number&#8230; bingo!</p>
-<p><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/blog-archive/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/blog-archive/wp-content/uploads/2013/01/order-580x911.png 580w, /blog-archive/wp-content/uploads/2013/01/order-190x300.png 190w, /blog-archive/wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
+<p><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/wp-content/uploads/2013/01/order-580x911.png 580w, /wp-content/uploads/2013/01/order-190x300.png 190w, /wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
 <p>Now, we have at least all info of the credit card owner, certainly the biggest victim in this mess.</p>
 <h2>Conclusion</h2>
 <p>That&#8217;s it for now. We are still in the process of transmitting the info to the police and alerting the victim.</p>
@@ -154,7 +156,7 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 			</item>
 		<item>
 		<title>Disk wiping : Myth broken</title>
-		<link>/blog-archive/2011/03/06/disk-wiping-myth-broken.html</link>
+		<link>/2011/03/06/disk-wiping-myth-broken.html</link>
 		<pubDate>Sun, 06 Mar 2011 18:58:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -167,7 +169,8 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 		<category><![CDATA[wiping]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1024</guid>
-		<description><![CDATA[There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;. At least until I found this very instructive article, &#8220;Disk Wiping &#8211; One pass is enough&#8220;. Don&#8217;t miss the second part which clarifies some points...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/03/06/disk-wiping-myth-broken.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1024</guid>
+		<description><![CDATA[There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;. At least until I found this very instructive article, &#8220;Disk Wiping &#8211; One pass is enough&#8220;. Don&#8217;t miss the second part which clarifies some points...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/03/06/disk-wiping-myth-broken.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;.</p>
 <p>At least until I found this very instructive article, &#8220;<a title="Disk Wiping - one pass is enough" href="http://www.anti-forensics.com/disk-wiping-one-pass-is-enough" target="_blank">Disk Wiping &#8211; One pass is enough</a>&#8220;. Don&#8217;t miss <a title="Disk Wiping - one pas is enought - part 2" href="http://www.anti-forensics.com/disk-wiping-one-pass-is-enough-part-2-this-time-with-screenshots" target="_blank">the second part</a> which clarifies some points and gives more details.</p>
 <p>In short, after one pass, every bit of the disk is filled with zero and there is simply no way to find out what the previous value was. Even the best tools out there have no clue to do it.</p>
@@ -181,7 +184,7 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 			</item>
 		<item>
 		<title>Books review</title>
-		<link>/blog-archive/2010/05/16/books-review.html</link>
+		<link>/2010/05/16/books-review.html</link>
 		<pubDate>Sun, 16 May 2010 16:16:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -193,17 +196,18 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 		<category><![CDATA[Review]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
-		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
+		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them.</p>
 <h4>Hacking: the next generation</h4>
-<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/blog-archive/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
+<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
 <p>The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc.<br />
 It was easy to read : the authors are straight to the point and their sentences are clear.</p>
 <p>I especially appreciated their state of art about XSS and CSRF attacks. It is certainly the best I have read so far, greatly illustrated with exciting and real case studies.</p>
 <p>On the other hand,  I quickly passed over the networking stuff (both wired and wireless). It was too basic and didn&#8217;t show anything new &#8211; maybe it is because I specialize in those fields.</p>
 <p>Anyway, globally, I strongly recommend this book. It is worth while your money if you want to know more on web attacks or to have a good overview of modern threats.</p>
 <h4>Beautiful Security</h4>
-<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/blog-archive/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
+<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
 <p>This is a collection of essays by some of the best security experts and hackers.</p>
 <p>Well, I won&#8217;t go around, I have been quite disappointed by this book. The overall lacks coherence and after a while you start wondering what this book is trying to demonstrate. At the end, there is a crual lack of connection between the essays and it globally makes it appear very confusing.</p>
 <p>It also sometimes lacks technical references and the writing style is too verbose, too literal for a technical book to be attractive.</p>
@@ -213,26 +217,27 @@ It was easy to read : the authors are straight to the point and their sentences 
 			</item>
 		<item>
 		<title>Deleteyouraccount.com to easily get rid off social networking</title>
-		<link>/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html</link>
-		<comments>/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html#comments</comments>
+		<link>/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html</link>
+		<comments>/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html#comments</comments>
 		<pubDate>Sun, 04 Apr 2010 17:31:28 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Privacy]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=761</guid>
-		<description><![CDATA[Deleteyouraccount.com is a very convenient website if you consider deleting your account from one of these social networking sites that are everywhere now. Of course, they all do their best to make it difficult, trying to hide it and discourage you. Here Deleteyouraccount comes to help. I will still take a few days of thoughts,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=761</guid>
+		<description><![CDATA[Deleteyouraccount.com is a very convenient website if you consider deleting your account from one of these social networking sites that are everywhere now. Of course, they all do their best to make it difficult, trying to hide it and discourage you. Here Deleteyouraccount comes to help. I will still take a few days of thoughts,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Deleteyouraccount.com" href="http://deleteyouraccount.com/" target="_blank">Deleteyouraccount.com</a> is a very convenient website if you consider deleting your account from one of these social networking sites that are everywhere now. Of course, they all do their best to make it difficult, trying to hide it and discourage you. Here Deleteyouraccount comes to help.</p>
 <p>I will still take a few days of thoughts, but I am seriously considering deleting my Linkedin account. I once got invited to it and got trapped.</p>
 <p>My private data are certainly useful to Linkedin, but all this stuff has been totally useless to me so far. One of the things I really hate is that it tends to  increase the number of contacts artificially even though the relationship is not sincere.</p>
 <p>I have a number of &#8220;contacts&#8221; that I barely know or keep in touch with, whereas I don&#8217;t need Linkedin to communicate with the people I truly appreciate.</p>
 <p>Less social networking, more human reliationship, more freedom, more privacy : sounds good.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/04/deleteyouraccount-com-to-easily-get-rid-off-social-networking.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>bugmenot.com</title>
-		<link>/blog-archive/2010/03/08/bugmenot-com.html</link>
+		<link>/2010/03/08/bugmenot-com.html</link>
 		<pubDate>Mon, 08 Mar 2010 19:34:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Privacy]]></category>
@@ -240,7 +245,8 @@ It was easy to read : the authors are straight to the point and their sentences 
 		<category><![CDATA[Identity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=731</guid>
-		<description><![CDATA[I just discovered the BugMeNot service today. It offers a database of logins shared by the community to login to free websites that require free registration. This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/03/08/bugmenot-com.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=731</guid>
+		<description><![CDATA[I just discovered the BugMeNot service today. It offers a database of logins shared by the community to login to free websites that require free registration. This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/03/08/bugmenot-com.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just discovered the <a title="BugMeNot" href="http://www.bugmenot.com/" target="_blank">BugMeNot</a> service today.</p>
 <p>It offers a database of logins shared by the community to login to free websites that require free registration.</p>
 <p>This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins.</p>

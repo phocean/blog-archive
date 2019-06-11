@@ -9,8 +9,8 @@
 
 <channel>
 	<title>CrashMe &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/crashme/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/crashme/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Debugging the CrashMe program</title>
-		<link>/blog-archive/2011/11/30/debugging-the-crashme-program.html</link>
+		<link>/2011/11/30/debugging-the-crashme-program.html</link>
 		<pubDate>Wed, 30 Nov 2011 22:02:47 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Reversing]]></category>
@@ -29,6 +29,7 @@
 		<category><![CDATA[CrashMe]]></category>
 		<category><![CDATA[WinDBG]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=1163</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=1163</guid>
 		<description><![CDATA[CrashMe, from the WinDbg developpers, may be a helpful application for those in the process of learning how to use a debugger or a disassembler. It simulates several crash situation that you will be able to easily reproduce and examine within these tools.]]></description>
 				<content:encoded><![CDATA[<p><a title="CrashMe" href="http://windbg.info/apps/46-crashme.html" target="_blank">CrashMe</a>, from the WinDbg developpers, may be a helpful application for those in the process of learning how to use a debugger or a disassembler.</p>

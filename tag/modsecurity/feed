@@ -9,8 +9,8 @@
 
 <channel>
 	<title>ModSecurity &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/modsecurity/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/modsecurity/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Mitigating Slow HTTP DoS Attacks</title>
-		<link>/blog-archive/2010/11/24/mitigating-slow-http-dos-attacks.html</link>
+		<link>/2010/11/24/mitigating-slow-http-dos-attacks.html</link>
 		<pubDate>Wed, 24 Nov 2010 22:54:29 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -32,6 +32,7 @@
 		<category><![CDATA[Slowloris]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=928</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=928</guid>
 		<description><![CDATA[Interesting article on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks. The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.]]></description>
 				<content:encoded><![CDATA[<p><a title="HTTP DoS attacks" href="http://blog.spiderlabs.com/2010/11/advanced-topic-of-the-week-mitigating-slow-http-dos-attacks.html" target="_blank">Interesting article</a> on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks.</p>
 <p>The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.</p>
@@ -39,7 +40,7 @@
 			</item>
 		<item>
 		<title>waf00f</title>
-		<link>/blog-archive/2009/12/16/waf00f.html</link>
+		<link>/2009/12/16/waf00f.html</link>
 		<pubDate>Wed, 16 Dec 2009 22:40:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -53,6 +54,7 @@
 		<category><![CDATA[waf00f]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
 		<description><![CDATA[waf00f is another nice fingerprinting tool. It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls. Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out. Check it there.]]></description>
 				<content:encoded><![CDATA[<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
 It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
@@ -62,7 +64,7 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 			</item>
 		<item>
 		<title>ModSecurity 2.5 review</title>
-		<link>/blog-archive/2009/12/10/modsecurity-2-5-review.html</link>
+		<link>/2009/12/10/modsecurity-2-5-review.html</link>
 		<pubDate>Thu, 10 Dec 2009 14:12:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -76,9 +78,10 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
-		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
+		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished reading the <strong>ModSecurity 2.5</strong> book, written by <strong>Magnus Mischell</strong> and published by <strong>Packt Publishing</strong>.</p>
-<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should.<br />
 I was actually using it partially. It is not trivial to secure a web application, and the rule engine of ModSecurity is very powerful but it is also quite complex.</p>
 <p>So this book was a good opportunity for me to dig into it further.</p>
@@ -94,7 +97,7 @@ It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;
 			</item>
 		<item>
 		<title>New book about ModSecurity</title>
-		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<link>/2009/11/15/new-book-about-modsecurity.html</link>
 		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -106,9 +109,10 @@ It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;
 		<category><![CDATA[ModSecurity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
-		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>ModSecurity is essential when it comes to secure any web site.</p>
 <p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
 However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>

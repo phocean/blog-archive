@@ -9,8 +9,8 @@
 
 <channel>
 	<title>REMnux &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/remnux/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/remnux/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Msf docker image now in REMnux!</title>
-		<link>/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html</link>
+		<link>/2016/05/12/msf-docker-image-now-in-remnux.html</link>
 		<pubDate>Thu, 12 May 2016 17:50:14 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[REMnux]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
-		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
+		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Just a quick note to say that I am very happy about this <a href="https://github.com/phocean/dockerfile-debian-metasploit">Metasploit docker image</a> being useful to some people, according to the feedback I got.</p>
 <p>And <a href="https://twitter.com/lennyzeltser">Lenny</a> was kind enough to integrate it into his Linux distro, <a href="https://remnux.org/">REMnux</a>, well known among reversing people. He also came up with very good suggestions and helped me to bring some improvements, so many thanks to him.</p>
 <p>Don&#8217;t miss reading his blog article on how to use the image in REMnux : <a href="https://zeltser.com/metasploit-framework-docker-container/"><em>&#8220;Run Metasploit Framework as a Docker Container Without Installation Pains&#8221;</em></a>.<br />

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Hardware &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/hardware/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/hardware/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>RF fun with a SDR</title>
-		<link>/blog-archive/2014/04/24/rf-fun-with-a-sdr.html</link>
+		<link>/2014/04/24/rf-fun-with-a-sdr.html</link>
 		<pubDate>Thu, 24 Apr 2014 20:24:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -30,14 +30,15 @@
 		<category><![CDATA[SDR]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1967</guid>
-		<description><![CDATA[So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own. I just received my RTL-SDR to play with radio frequencies. This one is based on a RTL2832U chipset and a R820T tuner. My choice was in part influenced by this review. Note that this kind of device isa receiver, so it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/04/24/rf-fun-with-a-sdr.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1967</guid>
+		<description><![CDATA[So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own. I just received my RTL-SDR to play with radio frequencies. This one is based on a RTL2832U chipset and a R820T tuner. My choice was in part influenced by this review. Note that this kind of device isa receiver, so it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2014/04/24/rf-fun-with-a-sdr.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>So this post will be the first of a series on fun &#8220;hacking&#8221; hardware that I own.</p>
 <p>I just received my RTL-SDR to play with radio frequencies.</p>
 <p>This one is based on a RTL2832U chipset and a R820T tuner. My <a href="http://www.amazon.fr/gp/product/B00DFYRA8S/ref=oh_details_o03_s00_i00?ie=UTF8&amp;psc=1">choice</a> was in part influenced by <a href="http://www.hamradioscience.com/rtl2832u-r820t-vs-rtl2832u-e4000/">this review</a>. Note that this kind of device isa receiver, so it will not be able to transmit anything.</p>
-<div id="attachment_1968" style="width: 650px" class="wp-caption aligncenter"><img class="size-full wp-image-1968" src="/blog-archive/wp-content/uploads/2014/04/P1030301-2.js">Keedox RTL-SDR (RTL2832U with R820T tuner)</p></div>
+<div id="attachment_1968" style="width: 650px" class="wp-caption aligncenter"><img class="size-full wp-image-1968" src="/wp-content/uploads/2014/04/P1030301-2.js">Keedox RTL-SDR (RTL2832U with R820T tuner)</p></div>
 <p>This model has the advantage of being really small, but maybe at the costing of heating. I noticed the USB connector becomes painfully hot during long sessions. Nothing serious, but a negative point though.</p>
 <p>Of course, it is fully compatible with Linux and <a href="http://gqrx.dk/download">Gqrx</a> even maintain a package for Ubuntu, so getting it to work consists simply in one <code>apt-get</code> command.</p>
-<div id="attachment_1971" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1971" src="/blog-archive/wp-content/uploads/2014/04/Gqrx-580x461.png" alt="Gqrx" width="580" height="461" srcset="/blog-archive/wp-content/uploads/2014/04/Gqrx-580x461.png 580w, /blog-archive/wp-content/uploads/2014/04/Gqrx-624x497.png 624w, /blog-archive/wp-content/uploads/2014/04/Gqrx.png 919w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Gqrx</p></div>
+<div id="attachment_1971" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1971" src="/wp-content/uploads/2014/04/Gqrx-580x461.png" alt="Gqrx" width="580" height="461" srcset="/wp-content/uploads/2014/04/Gqrx-580x461.png 580w, /wp-content/uploads/2014/04/Gqrx-624x497.png 624w, /wp-content/uploads/2014/04/Gqrx.png 919w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Gqrx</p></div>
 <p>I already intercepted a few conversations on the AM 430Hz range, and a lot of weird signals (many are probably car or parking doors) all over that I recorded and will look at later.</p>
 <p>Well, it is fun! Thanks to @virtualabs for bringing it up to my interest.</p>
 <p>&nbsp;</p>
@@ -45,7 +46,7 @@
 			</item>
 		<item>
 		<title>Downtimes: a hardware problem</title>
-		<link>/blog-archive/2010/04/07/downtimes-a-hardware-problem.html</link>
+		<link>/2010/04/07/downtimes-a-hardware-problem.html</link>
 		<pubDate>Wed, 07 Apr 2010 18:07:24 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -54,7 +55,8 @@
 		<category><![CDATA[System]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=784</guid>
-		<description><![CDATA[You may have noticed that the site had a lot of downtimes recently. I was having a daily kernel panic and weired file system corruptions, which I first tought were coming from the successive crashes and reboots. However, while it happened again and again and I could not find any good reason for that, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/07/downtimes-a-hardware-problem.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=784</guid>
+		<description><![CDATA[You may have noticed that the site had a lot of downtimes recently. I was having a daily kernel panic and weired file system corruptions, which I first tought were coming from the successive crashes and reboots. However, while it happened again and again and I could not find any good reason for that, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/07/downtimes-a-hardware-problem.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>You may have noticed that the site had a lot of downtimes recently.</p>
 <p>I was having a daily kernel panic and weired file system corruptions, which I first tought were coming from the successive crashes and reboots.</p>
 <p>However, while it happened again and again and I could not find any good reason for that, I became more doubtful about my hardware and finally found the culprit.<br />
@@ -64,7 +66,7 @@ I booted on Memtest, installed with zypper from the repo, which immediately disp
 			</item>
 		<item>
 		<title>Tested the Lenovo support&#8230;</title>
-		<link>/blog-archive/2008/09/21/tested-the-lenovo-support.html</link>
+		<link>/2008/09/21/tested-the-lenovo-support.html</link>
 		<pubDate>Sat, 20 Sep 2008 23:38:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -73,7 +75,8 @@ I booted on Memtest, installed with zypper from the repo, which immediately disp
 		<category><![CDATA[Thinkpad]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
-		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
+		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>&#8230; and was quite impressed.</p>
 <p><strong>Wednesday evening</strong>, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months.</p>
 <p><strong>Thursday morning</strong>, I am recalled by someone from the technical service. They first say that the battery is no more under warranty &#8211; 1 year long. I guess they say so after checking when the battery was made or sold the retailer. That does not concern the end-consumer like me : the warranty only started when I purchased the laptop, and I still have 4 months of warranty ahead.</p>
@@ -84,14 +87,15 @@ I booted on Memtest, installed with zypper from the repo, which immediately disp
 			</item>
 		<item>
 		<title>Note to myself</title>
-		<link>/blog-archive/2008/09/06/note-to-myself.html</link>
+		<link>/2008/09/06/note-to-myself.html</link>
 		<pubDate>Sat, 06 Sep 2008 15:38:35 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
 		<category><![CDATA[System]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=243</guid>
-		<description><![CDATA[When you want to do such a thing as upgrading the BIOS of your Thinkpad, read the instructions that come with the bootable CD flash utility. If you think you did, read it again &#8211;  and do not interpret them. It would avoid loosing time with a boot error like : CDR101: not ready reading...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/06/note-to-myself.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=243</guid>
+		<description><![CDATA[When you want to do such a thing as upgrading the BIOS of your Thinkpad, read the instructions that come with the bootable CD flash utility. If you think you did, read it again &#8211;  and do not interpret them. It would avoid loosing time with a boot error like : CDR101: not ready reading...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/09/06/note-to-myself.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>When you want to do such a thing as upgrading the BIOS of your Thinkpad, read the instructions that come with the bootable CD flash utility.</p>
 <p>If you think you did, read it again &#8211;  and do not interpret them.</p>
 <p>It would avoid loosing time with a boot error like :</p>
@@ -102,7 +106,7 @@ I booted on Memtest, installed with zypper from the repo, which immediately disp
 			</item>
 		<item>
 		<title>Practicing Cisco networking with GNS3 and Dynamips</title>
-		<link>/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html</link>
+		<link>/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html</link>
 		<pubDate>Tue, 19 Aug 2008 08:07:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -115,7 +119,8 @@ I booted on Memtest, installed with zypper from the repo, which immediately disp
 		<category><![CDATA[router]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=195</guid>
-		<description><![CDATA[GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers. I sometimes use Boson Netsim, which is not only non-free but not...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=195</guid>
+		<description><![CDATA[GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers. I sometimes use Boson Netsim, which is not only non-free but not...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/08/19/practicing-cisco-networking-with-gns3-and-dynamips.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>GNS3 and Dynamips put together give a nice open-source and free alternative to emulate a network with IOS routers. Dynampis is an emulator of Cisco 7200 router, while GNS3 provides a nice graphical environment to design your network and use the virtual routers.</p>
 <p>I sometimes use <a href="http://www.boson.com/AboutNetSim.html">Boson Netsim</a>, which is not only non-free but not so reliable.</p>
 <p>However, as I just started to use GNS3 and Dynamips, I don&#8217;t know it so well yet and won&#8217;t compare any further the two solutions.</p>
@@ -135,13 +140,13 @@ $ mv dynamips-0.2.8-RC2-amd64.bin /opt</pre>
 <pre>$ /opt/GNS3-0.5-src/gns3</pre>
 <p>In the <strong>edit</strong> menu, select <strong>preferences</strong> and go the <strong>dynamips</strong> section.</p>
 <p>Just browse to the dynamips binary you dowloaded, to fill the value of the <strong>executable path</strong> field.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-preferences.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-198" title="GNS3 preferences settings" src="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png" alt="" width="300" height="264" srcset="/blog-archive/wp-content/uploads/2008/08/capture-preferences-300x264.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-preferences.png 694w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-preferences.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-198" title="GNS3 preferences settings" src="/wp-content/uploads/2008/08/capture-preferences-300x264.png" alt="" width="300" height="264" srcset="/wp-content/uploads/2008/08/capture-preferences-300x264.png 300w, /wp-content/uploads/2008/08/capture-preferences.png 694w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>Still from the <strong>edit</strong> menu, select <strong>IOS images and hypervisors</strong>. There, you have to add all the IOS images you want to use, one after another. Normally, the default settings for each file loaded are suitable.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-202" title="GNS3 ios-images-and-hypervisors" src="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png" alt="" width="300" height="184" srcset="/blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png 881w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-202" title="GNS3 ios-images-and-hypervisors" src="/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png" alt="" width="300" height="184" srcset="/wp-content/uploads/2008/08/capture-ios-images-and-hypervisors-300x184.png 300w, /wp-content/uploads/2008/08/capture-ios-images-and-hypervisors.png 881w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>Back to the main window, you can drag and drop routers and link them, creating the topology you wish.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-gns3.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-197" title="GNS3" src="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png" alt="" width="300" height="190" srcset="/blog-archive/wp-content/uploads/2008/08/capture-gns3-300x190.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-gns3.png 1182w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-gns3.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-197" title="GNS3" src="/wp-content/uploads/2008/08/capture-gns3-300x190.png" alt="" width="300" height="190" srcset="/wp-content/uploads/2008/08/capture-gns3-300x190.png 300w, /wp-content/uploads/2008/08/capture-gns3.png 1182w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>For now, just add one router. Right click on it and select <strong>start</strong> to start it up. Right click again and select <strong>console</strong>.</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/08/capture-r01.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-200" title="GNS3 console" src="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png" alt="" width="300" height="181" srcset="/blog-archive/wp-content/uploads/2008/08/capture-r01-300x181.png 300w, /blog-archive/wp-content/uploads/2008/08/capture-r01.png 580w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/08/capture-r01.png" rel="lightbox[195]"><img class="aligncenter size-medium wp-image-200" title="GNS3 console" src="/wp-content/uploads/2008/08/capture-r01-300x181.png" alt="" width="300" height="181" srcset="/wp-content/uploads/2008/08/capture-r01-300x181.png 300w, /wp-content/uploads/2008/08/capture-r01.png 580w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>Enjoy ! Of course, I strongly recommand that you start reading further from <a href="http://www.gns3.net/documentation" target="_blank">this page</a>.</p>
 <p><strong>Resources</strong> :</p>
 <p><a href="http://www.ipflow.utc.fr/blog/" target="_blank">http://www.ipflow.utc.fr/blog/</a><br />
@@ -151,8 +156,8 @@ $ mv dynamips-0.2.8-RC2-amd64.bin /opt</pre>
 			</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -168,7 +173,8 @@ $ mv dynamips-0.2.8-RC2-amd64.bin /opt</pre>
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -371,13 +377,13 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Cold boot attack, not a threat to Full disk encryption (FDE)</title>
-		<link>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
-		<comments>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
+		<link>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
+		<comments>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
 		<pubDate>Tue, 26 Feb 2008 09:53:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -392,7 +398,8 @@ testdata('end');
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
-		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
+		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption.</p>
 <p>Hardware encryption is provided by a few laptop makers, generally on high-range an business models.</p>
 <p>It has much less performance impact than software encryption, and protect the data independently from your system configuration and its partitions.</p>
@@ -421,8 +428,8 @@ testdata('end');
 <p>No. The encryption algorithm is not in the user land, so no key is stored in RAM.</p>
 <p><strong> The key hashes are stored directly on the disk.</strong></p>
 <p>These documents from Hitachi provide more detailed information :</p>
-<p><a title="Bulk encryption white paper" href="/blog-archive/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
-<p><a title="HowTo guide for bulk data encryption" href="/blog-archive/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
+<p><a title="Bulk encryption white paper" href="/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
+<p><a title="HowTo guide for bulk data encryption" href="/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
 <p><a title="Hardware encryption" href="http://en.wikipedia.org/wiki/Full_disk_encryption">This Wikipedia article</a>, underlining the main points of hardware encryption,  is also interesting.</p>
 <p>I guess that at some point it would be possible to read some hash on the hard drive electronic board, but this is not going to be easy. You need to be a hardware expert in hard drives and for sure it can&#8217;t be done as quickly as with the RAM chip.</p>
 <p>Of course, even the cold boot attack is extreme. Most of thief won&#8217;t care about your data, or won&#8217;t be the knowledge or the practical possibility to conduct a successful attack.</p>
@@ -431,13 +438,13 @@ testdata('end');
 <p>Personally, as FDE offers more performance and transparency, I am using it on my laptop but I keep using dm-crypt on all my external drives.</p>
 <p>Now the question is : what good workaround can be found to provide more secure software encryption ?</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>My new toy : Thinkpad T61</title>
-		<link>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html</link>
-		<comments>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
+		<link>/2008/02/21/my-new-toy-thinkpad-t61.html</link>
+		<comments>/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
 		<pubDate>Thu, 21 Feb 2008 12:22:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -446,10 +453,11 @@ testdata('end');
 		<category><![CDATA[Thinkpad]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
-		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
+		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61.</p>
-<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"></a></p>
-<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"><img src="/blog-archive/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
+<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/?attachment_id=98"></a></p>
+<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/?attachment_id=98"><img src="/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
 <p>About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am looking for.<br />
 <span id="more-97"></span><br />
 So this time I am giving a try to Lenovo. What really decided me is its old fashion screen, I mean a non-bright one. My eyes are really getting tired with all these new bright laptop screens. Plus, its resolution is impressive : 1440 x 900.</p>
@@ -552,13 +560,13 @@ CONFIG_OUT_OF_LINE_PFN_TO_PAGE=y
 <p>At the end, I just have hibernation not working : it is nice to see how good the support of Debian Lenny is, thought the hardware is pretty recent. Things are really improving quickly.</p>
 <p>If you have some issue installing Linux on your Thinpad,  post your problem here. I will be happy to help you as much as I can.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>How to connect to a Cisco device using the serial port on Linux</title>
-		<link>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
-		<comments>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
+		<link>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
+		<comments>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
 		<pubDate>Tue, 13 Nov 2007 11:41:35 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -572,7 +580,8 @@ CONFIG_OUT_OF_LINE_PFN_TO_PAGE=y
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
-		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
+		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230;</p>
 <p>Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port.  Not a problem, there are many cheap serial-usb converters <a href="http://www.usbgear.com/USB-1S1PQ.html" target="_blank">like this</a>.</p>
 <p>As an alternative to the Hyperterminal of Microsoft, there is Minicom on Linux.</p>
@@ -593,17 +602,18 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 <pre>$ minicom cisco</pre>
 <p>That&#8217;s it !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Hardware database for Linux</title>
-		<link>/blog-archive/2007/07/24/hardware-database-for-linux.html</link>
+		<link>/2007/07/24/hardware-database-for-linux.html</link>
 		<pubDate>Tue, 24 Jul 2007 15:50:44 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
 		<category><![CDATA[Linux]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=71</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=71</guid>
 		<description><![CDATA[A nice website : http://hardware4linux.info/ Whith the provided script, you can upload your hardware information there and quickly rate your experience with it (for each equipment it detected). I just did it for my laptop and will go on with my other machines. It will probably become an interesting database.]]></description>
 				<content:encoded><![CDATA[<p>A nice website :</p>

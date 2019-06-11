@@ -9,8 +9,8 @@
 
 <channel>
 	<title>MLS &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mls/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mls/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Netflow on MLS switches</title>
-		<link>/blog-archive/2009/09/23/netflow-on-mls-switches.html</link>
-		<comments>/blog-archive/2009/09/23/netflow-on-mls-switches.html#comments</comments>
+		<link>/2009/09/23/netflow-on-mls-switches.html</link>
+		<comments>/2009/09/23/netflow-on-mls-switches.html#comments</comments>
 		<pubDate>Wed, 23 Sep 2009 20:12:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -33,7 +33,8 @@
 		<category><![CDATA[Switch]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=443</guid>
-		<description><![CDATA[I had some trouble today at office with monitoring flows going through a MLS switch. The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch. The traffic reported was way below the real one. After some research,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/23/netflow-on-mls-switches.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=443</guid>
+		<description><![CDATA[I had some trouble today at office with monitoring flows going through a MLS switch. The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch. The traffic reported was way below the real one. After some research,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/23/netflow-on-mls-switches.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I had some trouble today at office with monitoring flows going through a MLS switch.</p>
 <p>The Nfsen collector was working well for our routers, but I came to realize there were something definitely wrong with the traffic going through a Cisco 6500 switch.</p>
 <p>The traffic reported was way below the real one.</p>
@@ -53,9 +54,9 @@
 (config)# mls aging long 64
 (config)# mls flow ip full</pre>
 <p>The commands are described <a href="http://www.cisco.com/en/US/docs/switches/lan/catalyst6500/ios/12.1E/native/configuration/guide/nde.html">there</a>. Unfortunately, as often with Cisco, they may vary depending on the IOS version your are running.<br />
-<a href="/blog-archive/wp-content/uploads/2009/09/cisco_6500_switches.js" /></a></p>
+<a href="/wp-content/uploads/2009/09/cisco_6500_switches.js" /></a></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/23/netflow-on-mls-switches.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/23/netflow-on-mls-switches.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

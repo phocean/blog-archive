@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Network &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/administration-reseau/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/administration-reseau/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>BNAT</title>
-		<link>/blog-archive/2011/09/13/bnat.html</link>
+		<link>/2011/09/13/bnat.html</link>
 		<pubDate>Tue, 13 Sep 2011 19:34:58 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -33,23 +33,24 @@
 		<category><![CDATA[Nmap]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1155</guid>
-		<description><![CDATA[BNAT stands for &#8220;Broken NAT&#8220;. In the scope of Jonathan Claudius work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to. It happens with bad implementations where the DNAT (destination NAT) and the SNAT (source NAT) use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/09/13/bnat.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1155</guid>
+		<description><![CDATA[BNAT stands for &#8220;Broken NAT&#8220;. In the scope of Jonathan Claudius work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to. It happens with bad implementations where the DNAT (destination NAT) and the SNAT (source NAT) use...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/09/13/bnat.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><strong>BNAT</strong> stands for &#8220;<strong><em>Broken NAT</em></strong>&#8220;. In the scope of <em><strong>Jonathan Claudius</strong></em> work, a NAT is considered broken when the client receives a reply from a server behind a NAT with a different IP than the one it sent the request to.</p>
 <p>It happens with bad implementations where the <em>DNAT</em> (destination NAT) and the <em>SNAT</em> (source NAT) use a different IP because of a wrong rule or because the outbound and inbound interfaces are separated.</p>
 <p>As a result, the operating system of the client will discard right away such a reply (with a<em> TCP RST</em>), because it does not match an existing TCP session.</p>
-<p><img class="aligncenter size-full wp-image-1157" title="bnat" src="/blog-archive/wp-content/uploads/2011/08/bnat.png" alt="" width="532" height="165" /></p>
+<p><img class="aligncenter size-full wp-image-1157" title="bnat" src="/wp-content/uploads/2011/08/bnat.png" alt="" width="532" height="165" /></p>
 <p>The idea is that a pentester auditing such an infrastructure with a classic scanner will miss some entry points. A typical scanner relies on the network stack of the system : it will not receive the reply and will consider the port as filtered.</p>
 <p>So Jonathan came with a proof-of-concept to illustrate his purpose.</p>
 <p>It is composed of a B-Router and a client. The B-Router will intercept the reply and maintain the session by sending an ACK. This way, it handles an asymetric routing scheme for the client. Just add a filtering rule to block your system&#8217;s <em>RST</em> (<em>iptables -A OUTPUT -p tcp &#8211;tcp-flags RST RST -j DROP</em> ), and you are good to go.</p>
 <p>Simple but brilliant, isn&#8217;t it ? The great thing is that the code has now been <a title="BNAT in Metasploit" href="https://community.rapid7.com/community/metasploit/blog/2011/08/26/a-tale-from-defcon-and-the-fun-of-bnat" target="_blank">included in Metasploit</a>, so it is even more straightforward.</p>
 <p>Check the <a title="BNAT slides" href="http://www.slideshare.net/claudijd/dc-skytalk-bnat-hijacking-repairing-broken-communication-channels " target="_blank">slides of Jonathan at DEFCON</a> for more info. You can download the source <a title="BNAT source" href="https://github.com/claudijd/BNAT-Suite" target="_blank">there</a> (or just update your Metasploit and look for it in auxiliaries).<br />
-<img class="aligncenter size-full wp-image-1158" title="bnat architecture" src="/blog-archive/wp-content/uploads/2011/08/bnat-archi.png" alt="" width="579" height="347" /></p>
+<img class="aligncenter size-full wp-image-1158" title="bnat architecture" src="/wp-content/uploads/2011/08/bnat-archi.png" alt="" width="579" height="347" /></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Network virtualization and the DMZ paradigm</title>
-		<link>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
-		<comments>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
+		<link>/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
+		<comments>/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
 		<pubDate>Sat, 30 Apr 2011 19:15:53 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -65,7 +66,8 @@
 		<category><![CDATA[vswitch]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
-		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
+		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>The virtualization buzz</h2>
 <p>I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier.</p>
 <p>But what about the security? Convenience and security rarely come together, right? Oh, wait&#8230; we are in 2011, so lessons must have been learned. After all, Mr Salesman swear that it is more secure than ever. Convenience and security packed together, he says&#8230; it sounds promising. Let&#8217;s dig a little to find out what they won&#8217;t tell you&#8230;</p>
@@ -74,7 +76,7 @@
 <h2>VMware Vswitches or Nexus 1000V</h2>
 <p>These technologies are similar in the sense that they are designed to work directly inside the VMware platform. Vswitches are integrated with the solution of VMware, while Nexus benefits from the experience of Cisco and bring more layer 2 control (more settings, more protocols).</p>
 <p>As well on the architecture documents of VMware as within the administration interface of Vcenter, it appears so easy to create segregated switches and build this way in a few clicks a DMZ architecture:</p>
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/blog-archive/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
 <p>But it is slightly different in reality, as <strong>Brad Hedlund</strong> from Cisco shows in an interesting article: <a title="the vswitch illusion and DMZ virtualization" href="http://bradhedlund.com/2010/02/10/vswitch-illusion-dmz-virtualization/" target="_blank">the vswitch illusion and DMZ virtualization</a>. In short, whether you are using VMware Vswitches or Nexus 1000V, a single threaded program runs all the configured virtual switches. In clear, all the virtual switches share the same memory space. So, any vulnerability in the code would compromise all the switches, in other words: the entire network. And, not a surprise here, there have been many vulnerabilities. Just browse a <a title="CVE database" href="http://cve.mitre.org/cve/" target="_blank">CVE database</a> if you want to check.</p>
 <p>So you don&#8217;t want to rely on such a design for your datacenter, right?</p>
 <h2>Nexus 7000</h2>
@@ -82,7 +84,7 @@
 <p>The Nexus family is quite new and from what I could witness, they are  quite pushy selling that. Because it is new, there is still neither much  info surrounding the technologies used, nor user feedback, nor security  research. Anyway, below is a quick sum-up of what I could find.</p>
 <h3>A few words about the architecture</h3>
 <p>In a layer 3 Nexus architecture, Nexus 2000, 5000 and 7000 are designed to work together. Nexus 2000 are basically top-of-the-rack port panels, with no intelligence. Nexus 5000 takes care of most of the layer 2 switching, while Nexus 7000 adds layer 2 functionalities and layer 3 support. Nexus 2000 and 5000 can work without the 7000, but in that case there is not so much difference with a classic layer 2 switch in terms of security (but it has the advantage to be more flexible to integrate in a datacenter). <a title="Difference between Nexus 7000 and Nexus 5000" href="http://www.netcraftsmen.net/resources/technical-articles/348.html" target="_blank">This</a> and <a title="Nexus 7000 architecture" href="http://www.scribd.com/doc/33217473/RST-3009-Cisco-Nexus-7000-Switch-Architecture" target="_blank">this</a> may help you to visualize the differences.</p>
-<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/blog-archive/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
+<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
 <p>So we will focus on the Nexus 7000 architecture, which bring VDC as a way to handle DMZ architectures. VDC are somehow similar to VLANs. But whereas VLANs virtualized LANs on a switch, VDC virtualize switches. So, on the same Nexus 5000 device, VDC will add the capacity to have multiple virtual switches which are in theory properly isolated.</p>
 <p>This is a very basic sum-up for what we are interested in, but if you want to learn more, I encourage you to read the <a title="Cisco VDC" href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/White_Paper_Tech_Overview_Virtual_Device_Contexts.html" target="_blank">Cisco whitepaper about VDCs</a>.</p>
 <h3>The flaws</h3>
@@ -109,12 +111,12 @@ No virtualized architecture can give the same degree of protection than physical
 <p>Don&#8217;t get me wrong. These technologies are great and very useful. In many areas, there are an improvement. Simply, they must be used with as much care as always. Concerning the DMZ topic, as far as I am concerned, I will not rely on virtualization and keep physical segregation between zones, supported by different  devices from different makers.</p>
 <p>One thing I keep an eye on, though, is the development of virtualized firewalls, IPS, etc. In a few years, if these technologies should became really mature (enforcing segregation on all OSI layers) and the hosting OS security should really improved, most of the concerns here would be addressed.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Consider learning LISP</title>
-		<link>/blog-archive/2010/07/26/consider-learning-lisp.html</link>
+		<link>/2010/07/26/consider-learning-lisp.html</link>
 		<pubDate>Sun, 25 Jul 2010 23:54:47 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -128,7 +130,8 @@ No virtualized architecture can give the same degree of protection than physical
 		<category><![CDATA[Routing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=899</guid>
-		<description><![CDATA[No, not the infamous programming language! But LISP as Location/Identifier Separation Protocol. (I know I am repeating the joke everyone does but I couldn&#8217;t help). But what is it about? It is actually at first difficult to conceive, as we are all so used that IP addresses identify both a person (or a company) and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/07/26/consider-learning-lisp.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=899</guid>
+		<description><![CDATA[No, not the infamous programming language! But LISP as Location/Identifier Separation Protocol. (I know I am repeating the joke everyone does but I couldn&#8217;t help). But what is it about? It is actually at first difficult to conceive, as we are all so used that IP addresses identify both a person (or a company) and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/07/26/consider-learning-lisp.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>No, not the infamous programming language! But LISP as Location/Identifier Separation Protocol. (I know I am repeating the joke everyone does but I couldn&#8217;t help).</p>
 <p>But what is it about? It is actually at first difficult to conceive, as we are all so used that <strong>IP addresses identify both a person (or a company) and its location</strong>. It is like this by design because Internet is based on a hierarchical routing model.</p>
 <p>What I wrote below is just a bad summary of this <a href="http://www.1-4-5.net/~dmm/lisp/" target="_blank">article by David Meyer</a>. See it as a memo or as a short introduction if you don&#8217;t want to get deep into LISP. Otherwise, jump immediately to the <a title="LISP" href="http://www.1-4-5.net/~dmm/lisp/">original article</a> or to <a href="http://packetlife.net/blog/2010/jul/15/emerging-terminology-lisp-and-trill/" target="_blank">Packetlife</a> which gives some more links.</p>
@@ -143,12 +146,13 @@ No virtualized architecture can give the same degree of protection than physical
 			</item>
 		<item>
 		<title>Netios 0.76</title>
-		<link>/blog-archive/2010/07/13/netios-0-76.html</link>
+		<link>/2010/07/13/netios-0-76.html</link>
 		<pubDate>Tue, 13 Jul 2010 17:48:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
 		<category><![CDATA[Network]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=874</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=874</guid>
 		<description><![CDATA[Netios 0.76 is out! Complete changelog : * fix prompt for enable issue * fix issue with log directory * add timeout option * remove fail check for password mode (source of confusion and not so useful on second thought) Check there for more details and a download link.]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.76 is out!</p>
@@ -157,60 +161,67 @@ No virtualized architecture can give the same degree of protection than physical
 * fix issue with log directory<br />
 * add timeout option<br />
 * remove fail check for password mode (source of confusion and not so useful on second thought)</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.75</title>
-		<link>/blog-archive/2010/04/24/netios-0-75.html</link>
+		<link>/2010/04/24/netios-0-75.html</link>
 		<pubDate>Sat, 24 Apr 2010 17:06:51 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
 		<category><![CDATA[Network]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=822</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=822</guid>
+		<description><![CDATA[Netios 0.75 is out. Complete changelog : 2010-04-24  (0.75) Phocean &#60;jc@phocean.net&#62; * always force to specify the user to update and remove useless options concerning tacacs and newuser mode Check there for more details and a download link.]]></description>
 		<description><![CDATA[Netios 0.75 is out. Complete changelog : 2010-04-24  (0.75) Phocean &#60;jc@phocean.net&#62; * always force to specify the user to update and remove useless options concerning tacacs and newuser mode Check there for more details and a download link.]]></description>
 				<content:encoded><![CDATA[<div>
 <div>
 <p>Netios 0.75 is out.</p>
 <p>Complete changelog :</p>
 <blockquote><p>2010-04-24  (0.75) Phocean &lt;jc@phocean.net&gt;</p>
+<blockquote><p>2010-04-24  (0.75) Phocean &lt;jc@phocean.net&gt;</p>
 <p>* always force to specify the user to update and remove useless options concerning tacacs and newuser mode</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> for more details and a download link.</p>
 </div>
 </div>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.74</title>
-		<link>/blog-archive/2010/04/18/netios-0-74.html</link>
+		<link>/2010/04/18/netios-0-74.html</link>
 		<pubDate>Sun, 18 Apr 2010 17:07:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
 		<category><![CDATA[Network]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=787</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=787</guid>
+		<description><![CDATA[Netios 0.74 is out. Complete changelog : 2010-04-08  (0.74) phocean &#60;jc@phocean.net&#62; * improve logging and  error handling * clean up some crapy code Check there for more details and a download link.]]></description>
 		<description><![CDATA[Netios 0.74 is out. Complete changelog : 2010-04-08  (0.74) phocean &#60;jc@phocean.net&#62; * improve logging and  error handling * clean up some crapy code Check there for more details and a download link.]]></description>
 				<content:encoded><![CDATA[<div>
 <p>Netios 0.74 is out.</p>
 <p>Complete changelog :</p>
 <blockquote><p>2010-04-08  (0.74) phocean &lt;jc@phocean.net&gt;</p>
+<blockquote><p>2010-04-08  (0.74) phocean &lt;jc@phocean.net&gt;</p>
 <p>* improve logging and  error handling<br />
 * clean up some crapy code</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> for more details and a download link.</p>
 </div>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Packetlife.net</title>
-		<link>/blog-archive/2010/02/20/packetlife-net.html</link>
+		<link>/2010/02/20/packetlife-net.html</link>
 		<pubDate>Sat, 20 Feb 2010 08:54:19 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
 		<category><![CDATA[Cisco]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=725</guid>
-		<description><![CDATA[I added a new link to Packetlife.net, which is a really amazing website about networking, with focus on Cisco stuff. The work that the author made is truly impressive : blog, cheat sheets, gentle forum and even a lab (I haven&#8217;t test because I don&#8217;t need it, but if you are a student, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/02/20/packetlife-net.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=725</guid>
+		<description><![CDATA[I added a new link to Packetlife.net, which is a really amazing website about networking, with focus on Cisco stuff. The work that the author made is truly impressive : blog, cheat sheets, gentle forum and even a lab (I haven&#8217;t test because I don&#8217;t need it, but if you are a student, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/02/20/packetlife-net.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I added a new link to <a title="Packetlife" href="http://packetlife.net/" target="_blank">Packetlife.net</a>, which is a really amazing website about networking, with focus on Cisco stuff.</p>
 <p>The work that the author made is truly impressive : blog, cheat sheets, gentle forum and even a lab (I haven&#8217;t test because I don&#8217;t need it, but if you are a student, it is great for students and so far I have never seen any other website offering it), all integrated with a quality level that is rare to find even on professional website.</p>
 <p>This is one the best website I have never seen in all categories and certainly the best about Cisco networking. If you are interested in this topic, visit there right now.</p>
@@ -218,7 +229,7 @@ No virtualized architecture can give the same degree of protection than physical
 			</item>
 		<item>
 		<title>Netios 0.73</title>
-		<link>/blog-archive/2010/02/10/netios-0-73.html</link>
+		<link>/2010/02/10/netios-0-73.html</link>
 		<pubDate>Wed, 10 Feb 2010 14:51:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -231,18 +242,21 @@ No virtualized architecture can give the same degree of protection than physical
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
 		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.73 fixes some bugs and</p>
 <p>Complete changelog :</p>
 <blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
+<blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
 <p>* remove useless options<br />
 * fix various bugs</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Hostcheck</title>
-		<link>/blog-archive/2010/01/15/hostcheck.html</link>
+		<link>/2010/01/15/hostcheck.html</link>
 		<pubDate>Fri, 15 Jan 2010 12:44:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -253,20 +267,21 @@ No virtualized architecture can give the same degree of protection than physical
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
-		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
+		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I continue to publish some my coding.</p>
 <p>Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up.<br />
 It just read a host file and check if the host are available doing a ping test or trying to open a socket.</p>
 <p>Nothing great, but it may help to quickly check that most of things are right after a network change, for instance.<br />
 Because we want to test many hosts, and not to scan, the pace is fast so it may not be 100% reliable. The idea is to see roughly is the connectivity is correct or if your whole LAN is down.<br />
 It uses colors and is easy to read, so it might be good to show to your manager ! :)</p>
-<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/blog-archive/tools/hostcheck">there</a>.</p>
-<p><a href="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
+<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/tools/hostcheck">there</a>.</p>
+<p><a href="/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.72</title>
-		<link>/blog-archive/2010/01/15/netios-0-72.html</link>
+		<link>/2010/01/15/netios-0-72.html</link>
 		<pubDate>Fri, 15 Jan 2010 10:20:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -279,14 +294,17 @@ It uses colors and is easy to read, so it might be good to show to your manager 
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
-		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now.</p>
 <p>Complete changelog :</p>
+<blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
 <blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
 <p>* ciscoclass.py : forgot to remove a debug print<br />
 * ciscoclass.py : finish and fix a bunch of bugs in the show run function, format the config file properly<br />
 * ciscoclass.py : fix the prompt regex</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 	</channel>

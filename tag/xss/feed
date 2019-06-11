@@ -9,8 +9,8 @@
 
 <channel>
 	<title>XSS &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/xss/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/xss/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>BeEF Docker</title>
-		<link>/blog-archive/2017/02/24/beef-docker.html</link>
+		<link>/2017/02/24/beef-docker.html</link>
 		<pubDate>Fri, 24 Feb 2017 21:17:51 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -32,6 +32,7 @@
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
+		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
 		<description><![CDATA[Just a quick update to tell about a new Docker based on the phocean/msf image. https://hub.docker.com/r/phocean/beef/ https://github.com/phocean/dockerfile-beef It provides an image for the BeEF framework for XSS browser exploitation (http://beefproject.com/). Enjoy it!]]></description>
 				<content:encoded><![CDATA[<p>Just a quick update to tell about a new Docker based on the phocean/msf image.</p>
 <p><a href="https://hub.docker.com/r/phocean/beef/">https://hub.docker.com/r/phocean/beef/</a></p>
@@ -42,8 +43,8 @@
 			</item>
 		<item>
 		<title>(in)Security of JSONP: CSRF risks</title>
-		<link>/blog-archive/2013/10/13/csrf-with-jsonp.html</link>
-		<comments>/blog-archive/2013/10/13/csrf-with-jsonp.html#comments</comments>
+		<link>/2013/10/13/csrf-with-jsonp.html</link>
+		<comments>/2013/10/13/csrf-with-jsonp.html#comments</comments>
 		<pubDate>Sun, 13 Oct 2013 20:51:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -58,7 +59,8 @@
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1765</guid>
-		<description><![CDATA[JSONP vs JSON I had an opportunity to experiment exploiting JSONP in real life. Honestly, I had never heard of it before. JSON is a well known method to serialize data, but what is JSONP? Actually, it is nothing new, but rather a specific use of JSON. In AJAX websites, XMLHttpRequest is used in client-side Javascript...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/13/csrf-with-jsonp.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1765</guid>
+		<description><![CDATA[JSONP vs JSON I had an opportunity to experiment exploiting JSONP in real life. Honestly, I had never heard of it before. JSON is a well known method to serialize data, but what is JSONP? Actually, it is nothing new, but rather a specific use of JSON. In AJAX websites, XMLHttpRequest is used in client-side Javascript...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/10/13/csrf-with-jsonp.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>JSONP vs JSON</h2>
 <p>I had an opportunity to experiment exploiting <em>JSONP</em> in real life. Honestly, I had never heard of it before.</p>
 <p><em>JSON</em> is a well known method to serialize data, but what is <em>JSONP</em><i>?</i> Actually, it is nothing new, but rather a specific use of <em>JSON</em>.</p>
@@ -86,7 +88,7 @@ xhr.send(null);</pre>
 <div>
 <dl id="attachment_1774">
 <dt>
-<div id="attachment_1774" style="width: 428px" class="wp-caption aligncenter"><img class="size-full wp-image-1774" alt="XHR vs JSONP" src="/blog-archive/wp-content/uploads/2013/10/jsonp1.png" width="418" height="515" /><p class="wp-caption-text">XHR vs JSONP</p></div>
+<div id="attachment_1774" style="width: 428px" class="wp-caption aligncenter"><img class="size-full wp-image-1774" alt="XHR vs JSONP" src="/wp-content/uploads/2013/10/jsonp1.png" width="418" height="515" /><p class="wp-caption-text">XHR vs JSONP</p></div>
 </dt>
 </dl>
 </div>
@@ -135,9 +137,9 @@ To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know 
 <pre>hello({ "name": "world" });</pre>
 <p>Which, when received by the browser, would trigger the nice alert box.</p>
 <p>&nbsp;</p>
-<div id="attachment_1793" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1793" alt="JSONP callback execution" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png" width="580" height="416" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_21-580x416.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21-624x448.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_21.png 729w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">JSONP callback execution</p></div>
+<div id="attachment_1793" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1793" alt="JSONP callback execution" src="/wp-content/uploads/2013/10/CapturFiles_21-580x416.png" width="580" height="416" srcset="/wp-content/uploads/2013/10/CapturFiles_21-580x416.png 580w, /wp-content/uploads/2013/10/CapturFiles_21-624x448.png 624w, /wp-content/uploads/2013/10/CapturFiles_21.png 729w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">JSONP callback execution</p></div>
 <p>The attack sequence may be represented like this:</p>
-<div id="attachment_1784" style="width: 432px" class="wp-caption aligncenter"><img class="size-full wp-image-1784" alt="Example of exploitation process of JSONP" src="/blog-archive/wp-content/uploads/2013/10/jsonp-exploit.png" width="422" height="445" /><p class="wp-caption-text">Example of exploitation process of JSONP</p></div>
+<div id="attachment_1784" style="width: 432px" class="wp-caption aligncenter"><img class="size-full wp-image-1784" alt="Example of exploitation process of JSONP" src="/wp-content/uploads/2013/10/jsonp-exploit.png" width="422" height="445" /><p class="wp-caption-text">Example of exploitation process of JSONP</p></div>
 <p>In other words, the user browser is used as a <em>proxy</em> to make <em>CSRF</em> requests, which should be forbidden.</p>
 <h2>So what?</h2>
 <p>Exploitation depends on the target application configuration and the capability of the attacker to inject a Javascript call along with the callback function into the victim&#8217;s browser.</p>
@@ -164,12 +166,12 @@ To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know 
 <li><a href="http://security.stackexchange.com/a/23439">security.stackexchange.com</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/10/13/csrf-with-jsonp.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/10/13/csrf-with-jsonp.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Pentest of a Wi-Fi network with Cisco NCS</title>
-		<link>/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html</link>
+		<link>/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html</link>
 		<pubDate>Fri, 04 Oct 2013 12:46:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -181,7 +183,8 @@ To put it another way: JSONP is basically a self-inflicted XSS. Yes, OK, I know 
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1750</guid>
-		<description><![CDATA[I had a chance to audit this device during a Wi-Fi pentest. Cisco Prime Network Control System is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc. I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1750</guid>
+		<description><![CDATA[I had a chance to audit this device during a Wi-Fi pentest. Cisco Prime Network Control System is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc. I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/10/04/pentest-of-a-wi-fi-network-with-cisco-ncs.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I had a chance to audit this device during a Wi-Fi pentest. <em>Cisco Prime Network Control System </em>is a Wi-Fi controller that allows to manage multiple access points and centralize their configuration: Wi-Fi settings, access control, security, etc.</p>
 <p>I was surprised how easy it was to compromise this equipment, thanks to default credentials. Of course, Cisco published a patch… however how many network teams would have applied the patch ? Routers, switches, Wi-Fi controllers, especially when they are not part of the core infrastructure, are often dropped and forgotten for years&#8230;</p>
 <p>Here is the vendor <a href="http://tools.cisco.com/security/center/mcontent/CiscoSecurityAdvisory/cisco-sa-20130410-ncs">advisory</a>, which is about &#8220;unspecified&#8221; default credentials. With a little of ninja googling, I managed to glue the pieces.</p>
@@ -203,7 +206,7 @@ Privileges: <strong>DBA</strong></pre>
 			</item>
 		<item>
 		<title>Cloud in the security sky or should I see a psychologist?</title>
-		<link>/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html</link>
+		<link>/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html</link>
 		<pubDate>Sat, 05 Feb 2011 18:22:45 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -215,7 +218,8 @@ Privileges: <strong>DBA</strong></pre>
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1010</guid>
-		<description><![CDATA[The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later. Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1010</guid>
+		<description><![CDATA[The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later. Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/02/05/cloud-in-the-security-sky-or-should-i-see-a-psychologist.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The &#8220;cloud&#8221; is a buzz word that has been around for months. The marketing guys are pushing it so hard that every IT guy will hear of that at work soon or later.</p>
 <p>Taking a decision whether to use it or not requires some deep knowledge, because if its pros are clear &#8211; you can count on the salesmen to get a great picture of it again and again, its cons are silenced.</p>
 <p>Too bad, a major disadvantage is security. But guess what? The other day an &#8220;analyst&#8221; presenting his study about cloud computing just cleared out the issue in 3 words :</p>
@@ -243,7 +247,7 @@ Privileges: <strong>DBA</strong></pre>
 			</item>
 		<item>
 		<title>ModSecurity 2.5 review</title>
-		<link>/blog-archive/2009/12/10/modsecurity-2-5-review.html</link>
+		<link>/2009/12/10/modsecurity-2-5-review.html</link>
 		<pubDate>Thu, 10 Dec 2009 14:12:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -257,9 +261,10 @@ Privileges: <strong>DBA</strong></pre>
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
-		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
+		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished reading the <strong>ModSecurity 2.5</strong> book, written by <strong>Magnus Mischell</strong> and published by <strong>Packt Publishing</strong>.</p>
-<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should.<br />
 I was actually using it partially. It is not trivial to secure a web application, and the rule engine of ModSecurity is very powerful but it is also quite complex.</p>
 <p>So this book was a good opportunity for me to dig into it further.</p>

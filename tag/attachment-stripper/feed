@@ -9,8 +9,8 @@
 
 <channel>
 	<title>attachment-stripper &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/attachment-stripper/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/attachment-stripper/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>How to strip the attachment from an IMAP mail</title>
-		<link>/blog-archive/2007/06/03/how-to-strip-the-attachment-from-an-imap-mail.html</link>
-		<comments>/blog-archive/2007/06/03/how-to-strip-the-attachment-from-an-imap-mail.html#comments</comments>
+		<link>/2007/06/03/how-to-strip-the-attachment-from-an-imap-mail.html</link>
+		<comments>/2007/06/03/how-to-strip-the-attachment-from-an-imap-mail.html#comments</comments>
 		<pubDate>Sun, 03 Jun 2007 16:09:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -28,6 +28,7 @@
 		<category><![CDATA[IMAP]]></category>
 		<category><![CDATA[Perl]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=53</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=53</guid>
 		<description><![CDATA[While trying hard long and long hours to write a perl script that can extract attachments from pieces of e-mail, I realized that there were no clear info on the web on how to do, and that if I successed, I would publish that script.
 
@@ -38,10 +39,10 @@ Finally I succeded. That is actually very easy and that is probably why nothing 
 <p>It is based on the Mail::IMAPTalk module to establish the IMAP connection and on the MIME::Parser module to parse the mail as a MIME object (given by the first module).</p>
 <p>I know there is a dedicated CPAN module to strip attachment : Mail::Attachment::Stripper, but, I could never get it to work and the author did not answer to my e-mail.</p>
 <p>You will find the script here with some comments that should explain well :</p>
-<p><a title="attachment-stripper.zip" href="/blog-archive/wp-content/uploads/2007/06/attachment-stripper.zip">attachment-stripper.zip</a><a title="attachment stripper.pl" rel="attachment wp-att-54" href="/blog-archive/?attachment_id="> </a></p>
+<p><a title="attachment-stripper.zip" href="/wp-content/uploads/2007/06/attachment-stripper.zip">attachment-stripper.zip</a><a title="attachment stripper.pl" rel="attachment wp-att-54" href="/?attachment_id="> </a></p>
 <p>Of course, that is just a quick and dirty base : it is up to you to improve / correct / extend it to fit your needs. If so, be nice to update me here. ;)<!--more--></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/06/03/how-to-strip-the-attachment-from-an-imap-mail.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/06/03/how-to-strip-the-attachment-from-an-imap-mail.html/feed</wfw:commentRss>
 		<slash:comments>14</slash:comments>
 		</item>
 	</channel>

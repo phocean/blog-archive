@@ -9,8 +9,8 @@
 
 <channel>
 	<title>memory injection &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/memory-injection/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/memory-injection/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Windows Vista memory protection : defeated ?</title>
-		<link>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html</link>
-		<comments>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
+		<link>/2008/08/08/windows-vista-memory-protection-defeated.html</link>
+		<comments>/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
 		<pubDate>Fri, 08 Aug 2008 15:44:45 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -30,12 +30,13 @@
 		<category><![CDATA[memory injection]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
-		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
+		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>It seems, at least according to <a href="http://taossa.com/index.php/2008/08/07/impressing-girls-with-vista-memory-protection-bypasses/" target="_blank">some researchers showed it at the Black Hat conference</a>.</p>
 <p>Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk.</p>
 <p>Especially, <a href="http://taossa.com/archive/bh08sotirovdowd.pdf" target="_blank">this paper</a> will be an interesting reading, even if it is not as simple as they say &#8211; at least for me.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

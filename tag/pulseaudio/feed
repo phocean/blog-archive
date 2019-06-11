@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Pulseaudio &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/pulseaudio/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/pulseaudio/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Microphone issue with openSUSE 11.1</title>
-		<link>/blog-archive/2009/05/09/microphone-issue-with-opensuse-111.html</link>
+		<link>/2009/05/09/microphone-issue-with-opensuse-111.html</link>
 		<pubDate>Sat, 09 May 2009 17:42:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -28,14 +28,15 @@
 		<category><![CDATA[Pulseaudio]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=354</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=354</guid>
 		<description><![CDATA[Nice post that also solved my microphone issue with openSUSE 11.1 and Pulseaudio. Now every thing works well with Skype.]]></description>
 				<content:encoded><![CDATA[<p><a href="http://www.blog.arun-prabha.com/2008/05/23/skype-microphone-problem-and-complete-pulse-audio-setup-in-ubuntu/">Nice post</a> that also solved my microphone issue with openSUSE 11.1 and Pulseaudio. Now every thing works well with Skype.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>PulseAudio on Debian Testing</title>
-		<link>/blog-archive/2007/11/11/pulseaudio-on-debian-testing.html</link>
-		<comments>/blog-archive/2007/11/11/pulseaudio-on-debian-testing.html#comments</comments>
+		<link>/2007/11/11/pulseaudio-on-debian-testing.html</link>
+		<comments>/2007/11/11/pulseaudio-on-debian-testing.html#comments</comments>
 		<pubDate>Sun, 11 Nov 2007 01:36:43 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -44,7 +45,8 @@
 		<category><![CDATA[Sound]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=83</guid>
-		<description><![CDATA[I just replaced ESD by the new sound server Pulseaudio. Pulseaudio brings up some great improvements and is already chipped by Fedora 8. Getting it to work on my Debian Testing was very easy : $ aptitude install pulseaudio pulseaudio-esound-compat pulseaudio-module-gconf pulseaudio-module-hal pulseaudio-module-jack pulseaudio-module-x11 pulseaudio-module-zeroconf pulseaudio-utils libasound2-plugins However there were two issues to face :...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/11/pulseaudio-on-debian-testing.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=83</guid>
+		<description><![CDATA[I just replaced ESD by the new sound server Pulseaudio. Pulseaudio brings up some great improvements and is already chipped by Fedora 8. Getting it to work on my Debian Testing was very easy : $ aptitude install pulseaudio pulseaudio-esound-compat pulseaudio-module-gconf pulseaudio-module-hal pulseaudio-module-jack pulseaudio-module-x11 pulseaudio-module-zeroconf pulseaudio-utils libasound2-plugins However there were two issues to face :...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/11/pulseaudio-on-debian-testing.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just replaced ESD by the new sound server <a title="PulseAudio" href="http://pulseaudio.org/" target="_blank">Pulseaudio</a>.</p>
 <p>Pulseaudio brings up some great improvements and is already chipped by Fedora 8.</p>
 <p>Getting it to work on my Debian Testing was very easy :</p>
@@ -89,7 +91,7 @@ slave.pcm &quot;skype&quot;
 <pre>$ /etc/init.d/alsa-utils restart</pre>
 <p>Finally, just select &#8220;skype&#8221; as sound device in the Skype preferences and it should work.  I hope it will help !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/11/pulseaudio-on-debian-testing.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/11/pulseaudio-on-debian-testing.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

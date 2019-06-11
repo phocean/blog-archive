@@ -9,8 +9,8 @@
 
 <channel>
 	<title>mode-ssl &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mode-ssl/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mode-ssl/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>How to stop Firefox from prompting for the client certificate</title>
-		<link>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html</link>
-		<comments>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html#comments</comments>
+		<link>/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html</link>
+		<comments>/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html#comments</comments>
 		<pubDate>Sun, 16 Nov 2008 22:46:33 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -31,16 +31,17 @@
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=303</guid>
-		<description><![CDATA[I am using a client certificate to authenticate against some Apache HTTPS website. By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file. I quickly realized that there is not setting in the preference tab to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=303</guid>
+		<description><![CDATA[I am using a client certificate to authenticate against some Apache HTTPS website. By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file. I quickly realized that there is not setting in the preference tab to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I am using a client certificate to authenticate against some Apache HTTPS website.</p>
 <p>By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file.</p>
 <p>I quickly realized that there is not setting in the preference tab to change this behavior. That sucks, really !</p>
 <p>Fortunately, it is possible to tweak it within the <strong>about:config</strong> page. Set the <strong>security.default_personal_cert entry</strong> with <em><strong>Select Automatically</strong></em> instead of <em><strong>Ask Every Time</strong></em>.</p>
 <p>But what a dumb behavior !</p>
 <p>It is like the alert page that Firefox displays every time a self-signed certificate is used. I am now wondering if the developers really understood well what a certificate is !</p>
-<div id="attachment_304" style="width: 310px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2008/11/capture-1.png" rel="lightbox[303]"><img class="size-medium wp-image-304" title="Setting Firefox properly for Client certificate" src="/blog-archive/wp-content/uploads/2008/11/capture-1.png" alt="Setting Firefox properly for Client certificate" width="300" height="187" /></a><p class="wp-caption-text">Setting Firefox properly for Client certificate</p></div>
+<div id="attachment_304" style="width: 310px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2008/11/capture-1.png" rel="lightbox[303]"><img class="size-medium wp-image-304" title="Setting Firefox properly for Client certificate" src="/wp-content/uploads/2008/11/capture-1.png" alt="Setting Firefox properly for Client certificate" width="300" height="187" /></a><p class="wp-caption-text">Setting Firefox properly for Client certificate</p></div>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html/feed</wfw:commentRss>
 		<slash:comments>6</slash:comments>
 		</item>
 	</channel>

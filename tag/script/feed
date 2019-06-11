@@ -9,8 +9,8 @@
 
 <channel>
 	<title>script &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/script/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/script/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Automatic backup when inserting a drive</title>
-		<link>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
-		<comments>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
+		<link>/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
+		<comments>/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
 		<pubDate>Mon, 28 Sep 2009 09:34:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -33,7 +33,8 @@
 		<category><![CDATA[udev]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
-		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
+		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work.</p>
 <p>Being lazy, it happened that I did not backup my data. Yes, it is a shame, but inserting a drive and launching the commands to rsync the discs was preventing me from this best practice.</p>
 <p>So, I decided to make it automatic. The goal was that the only thing I would have to do would be to insert the drive, and then remove it when it is done.</p>
@@ -114,7 +115,7 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 <p>That&#8217;s all for today folks. Let me know if there are some things not clear or that can be optimized.</p>
 <p>Next time, we will see how to run the same script from <strong>Hal</strong> instead. We will also use Zenity to get a nice GUI prompt when the disk is inserted.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

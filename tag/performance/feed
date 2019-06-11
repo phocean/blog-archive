@@ -9,8 +9,8 @@
 
 <channel>
 	<title>performance &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/performance/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/performance/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Measure the access time of your Hard Disk&#8230;</title>
-		<link>/blog-archive/2007/05/17/measure-the-access-time-of-your-hard-disk.html</link>
+		<link>/2007/05/17/measure-the-access-time-of-your-hard-disk.html</link>
 		<pubDate>Thu, 17 May 2007 18:32:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>

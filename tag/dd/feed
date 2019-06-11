@@ -9,8 +9,8 @@
 
 <channel>
 	<title>dd &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/dd/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/dd/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Disk wiping : Myth broken</title>
-		<link>/blog-archive/2011/03/06/disk-wiping-myth-broken.html</link>
+		<link>/2011/03/06/disk-wiping-myth-broken.html</link>
 		<pubDate>Sun, 06 Mar 2011 18:58:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[wiping]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1024</guid>
-		<description><![CDATA[There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;. At least until I found this very instructive article, &#8220;Disk Wiping &#8211; One pass is enough&#8220;. Don&#8217;t miss the second part which clarifies some points...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/03/06/disk-wiping-myth-broken.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1024</guid>
+		<description><![CDATA[There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;. At least until I found this very instructive article, &#8220;Disk Wiping &#8211; One pass is enough&#8220;. Don&#8217;t miss the second part which clarifies some points...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/03/06/disk-wiping-myth-broken.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;.</p>
 <p>At least until I found this very instructive article, &#8220;<a title="Disk Wiping - one pass is enough" href="http://www.anti-forensics.com/disk-wiping-one-pass-is-enough" target="_blank">Disk Wiping &#8211; One pass is enough</a>&#8220;. Don&#8217;t miss <a title="Disk Wiping - one pas is enought - part 2" href="http://www.anti-forensics.com/disk-wiping-one-pass-is-enough-part-2-this-time-with-screenshots" target="_blank">the second part</a> which clarifies some points and gives more details.</p>
 <p>In short, after one pass, every bit of the disk is filled with zero and there is simply no way to find out what the previous value was. Even the best tools out there have no clue to do it.</p>

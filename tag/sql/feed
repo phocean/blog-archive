@@ -9,8 +9,8 @@
 
 <channel>
 	<title>SQL &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/sql/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/sql/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -36,7 +36,8 @@
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -239,12 +240,12 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Restoring a MSSQL 2000/2005 database while in production</title>
-		<link>/blog-archive/2007/03/03/restoring-a-mssql-20002005-database-while-in-production.html</link>
+		<link>/2007/03/03/restoring-a-mssql-20002005-database-while-in-production.html</link>
 		<pubDate>Sat, 03 Mar 2007 19:02:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[System]]></category>
@@ -268,7 +269,7 @@ backup database $your_database to disk = 'C:\$your_database.bak' with init,Name 
 restore database $your_database from disk = 'C:\path\to\your\DB\$your_new_database.bak' with replace,file=1,recovery
 alter database Datasharing_Translation set multi_user with rollback immediate;</pre>
 <p>It switches the database to the single user mode, make a backup of it (for safety), make the restoring operation, and finally switches it back to the multi user mode.</p>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/public/mssql_query_tool.png" alt="" width="320" height="229" /><br />
+<p><img src="/wp-content/uploads/2007/05/public/mssql_query_tool.png" alt="" width="320" height="229" /><br />
 Once again the day is saved by a command line tool !  ;)</p>
 ]]></content:encoded>
 			</item>

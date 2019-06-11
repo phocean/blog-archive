@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Safari &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/safari/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/safari/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>CVE-2009-3555: Safari, fix reached Mountain Lion&#8230;</title>
-		<link>/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html</link>
+		<link>/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html</link>
 		<pubDate>Mon, 13 Aug 2012 17:53:15 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Mac OS]]></category>
@@ -32,16 +32,17 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1348</guid>
-		<description><![CDATA[I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation. Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;. Note that Safari 6.0 on Lion did not (at least on my...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1348</guid>
+		<description><![CDATA[I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation. Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;. Note that Safari 6.0 on Lion did not (at least on my...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation.</p>
 <p>Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;.</p>
-<p>Note that Safari 6.0 on Lion <a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">did not</a> (at least on my computer, if someone could confirm)&#8230; so same browser version, different OS, the system SSL library must have been &#8211; silently &#8211; updated.</p>
+<p>Note that Safari 6.0 on Lion <a href="/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">did not</a> (at least on my computer, if someone could confirm)&#8230; so same browser version, different OS, the system SSL library must have been &#8211; silently &#8211; updated.</p>
 <p>Anyway, good move finally.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>CVE-2009-3555: Safari not yet patched ???</title>
-		<link>/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html</link>
+		<link>/2012/06/10/cve-2009-3555-safari-not-yet-patched.html</link>
 		<pubDate>Sun, 10 Jun 2012 18:17:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Mac OS]]></category>
@@ -59,11 +60,12 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1249</guid>
-		<description><![CDATA[The other day I was shocked to find this entry in my Apache logs: [error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page. So it seems...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1249</guid>
+		<description><![CDATA[The other day I was shocked to find this entry in my Apache logs: [error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page. So it seems...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The other day I was shocked to find this entry in my Apache logs:</p>
 <pre>[error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled</pre>
 <p>It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page.</p>
-<p>So it seems that Safari is the last browser which was not patched against <a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">CVE-2009-3555</a> !</p>
+<p>So it seems that Safari is the last browser which was not patched against <a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">CVE-2009-3555</a> !</p>
 <p>2009 !! At least, I quickly checked the other browsers I had around and they were fine: IE, Firefox, Chrome&#8230; I am having an issue with Opera also, but although I have not identified the problem yet, it seems unrelated (and does not throw the same error).</p>
 <p>Note that I reported the issue to Apple, but I did not receive any answer. Silence on the wire.</p>
 ]]></content:encoded>

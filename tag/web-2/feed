@@ -9,8 +9,8 @@
 
 <channel>
 	<title>web &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/web-2/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/web-2/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>File upload vulnerabilities : appending PHP code to an image</title>
-		<link>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html</link>
-		<comments>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html#comments</comments>
+		<link>/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html</link>
+		<comments>/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html#comments</comments>
 		<pubDate>Sun, 29 Sep 2013 21:03:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -32,10 +32,11 @@
 		<category><![CDATA[web]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1666</guid>
-		<description><![CDATA[Several ways may be used to protect a file upload functionality on a website. A first method is content-type checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand text/php) and then forwards the content to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1666</guid>
+		<description><![CDATA[Several ways may be used to protect a file upload functionality on a website. A first method is content-type checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand text/php) and then forwards the content to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Several ways may be used to protect a file upload functionality on a website.</p>
 <p>A first method is <strong>content-type </strong>checking, which can be easily bypassed with a intercepting proxy (tampering the MIME type). The screenshot below shows an intercepted request where the attacker modifies the content-type (beforehand <code>text/php</code>) and then forwards the content to the server:</p>
-<div id="attachment_1667" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1667" alt="HTTP POST content-type tampering" src="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png" width="580" height="313" srcset="/blog-archive/wp-content/uploads/2013/09/CapturFiles_13-580x313.png 580w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13-624x337.png 624w, /blog-archive/wp-content/uploads/2013/09/CapturFiles_13.png 902w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">HTTP POST content-type tampering</p></div>
+<div id="attachment_1667" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1667" alt="HTTP POST content-type tampering" src="/wp-content/uploads/2013/09/CapturFiles_13-580x313.png" width="580" height="313" srcset="/wp-content/uploads/2013/09/CapturFiles_13-580x313.png 580w, /wp-content/uploads/2013/09/CapturFiles_13-624x337.png 624w, /wp-content/uploads/2013/09/CapturFiles_13.png 902w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">HTTP POST content-type tampering</p></div>
 <p>Thus, the content-type filtering is bypassed.</p>
 <p>Another method consists in checking the file name <strong>extension</strong>. If simple bypasses like playing with lowercase (<code>.PHP</code> instead of <code>.php</code>), using multiple extension (<code>.php.foo</code>) or triggering the NULL byte (<code>.php%00.jpg</code>) do not work, there is a last chance by uploading a crafted image.</p>
 <p>JPEG files are convenient for code injection: they support EXIF metadata, which include a <em>comment</em> field where anything can be written, as long as it is on a single line.</p>
@@ -61,12 +62,12 @@
 </ol>
 <p>Note this <a title="php image upload security how not to do it" href="http://nullcandy.com/php-image-upload-security-how-not-to-do-it/">nice article</a> as a reference on the topic, and the solution that is suggested to fix such a vulnerability: disabling one way or another script execution on the upload directory and use random server-side file renaming.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/09/29/file-upload-vulnerabilities-appending-php-code-to-an-image.html/feed</wfw:commentRss>
 		<slash:comments>6</slash:comments>
 		</item>
 		<item>
 		<title>Tabnabbing</title>
-		<link>/blog-archive/2011/07/04/tabnabbing.html</link>
+		<link>/2011/07/04/tabnabbing.html</link>
 		<pubDate>Mon, 04 Jul 2011 21:08:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -76,6 +77,7 @@
 		<category><![CDATA[Tabnabbing]]></category>
 		<category><![CDATA[web]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=1147</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=1147</guid>
 		<description><![CDATA[On his website, Aza Raskin calls it Tabnabbing. Don&#8217;t miss the video there and the test web page. It is so simple and probably efficient with most users. Certainly another dangerous phishing attack.]]></description>
 				<content:encoded><![CDATA[<p>On his website, Aza Raskin calls it <a title="Tabnabbing" href="http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/" target="_blank">Tabnabbing</a>. Don&#8217;t miss the video there and the test web page. It is so simple and probably efficient with most users. Certainly another dangerous phishing attack.</p>

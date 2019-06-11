@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Nvidia &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/nvidia/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/nvidia/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Totem : black screen issue affecting all your XVideo output</title>
-		<link>/blog-archive/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html</link>
+		<link>/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html</link>
 		<pubDate>Wed, 13 Feb 2008 12:05:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -30,8 +30,9 @@
 		<category><![CDATA[Video]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=96</guid>
-		<description><![CDATA[I confirm the black screen issue with Totem. Actually it changes the contrast for all the environment, and of course using Mplayer or the gstreamer test program just after also gave back a black screen. Therefore I had been convinced it was a driver issue (reporting a bug to Nvidia and posting on this forum),...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>I confirm <a title="black screen issue with Totem" href="/blog-archive/openID/phocean">the black screen issue with Totem</a>.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=96</guid>
+		<description><![CDATA[I confirm the black screen issue with Totem. Actually it changes the contrast for all the environment, and of course using Mplayer or the gstreamer test program just after also gave back a black screen. Therefore I had been convinced it was a driver issue (reporting a bug to Nvidia and posting on this forum),...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I confirm <a title="black screen issue with Totem" href="/openID/phocean">the black screen issue with Totem</a>.</p>
 <p>Actually it changes the contrast for all the environment, and of course using Mplayer or the gstreamer test program just after also gave back a black screen.</p>
 <p>Therefore I had been convinced it was a driver issue (reporting a bug to Nvidia and <a href="http://www.nvnews.net/vbulletin/showthread.php?t=107830&amp;highlight=totem">posting on this forum</a>), until I find the contrast setting of Totem was the cause of all that mess.</p>
 <p>Note that I am right now using Debian Lenny.</p>

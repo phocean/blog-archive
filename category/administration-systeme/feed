@@ -9,8 +9,8 @@
 
 <channel>
 	<title>System &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/administration-systeme/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/administration-systeme/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>TopIcons-plus for Gnome (v18)</title>
-		<link>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html</link>
-		<comments>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html#comments</comments>
+		<link>/2016/12/18/topicons-plus-for-gnome-v18.html</link>
+		<comments>/2016/12/18/topicons-plus-for-gnome-v18.html#comments</comments>
 		<pubDate>Sun, 18 Dec 2016 17:49:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -30,7 +30,8 @@
 		<category><![CDATA[topicons-plus]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2148</guid>
-		<description><![CDATA[This is another off-topic post as it is not related to security. It has been awhile since I released the TopIcons-plus Gnome-Shell extension. I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape. How is Topicons-plus useful ? The Gnome developers want to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2148</guid>
+		<description><![CDATA[This is another off-topic post as it is not related to security. It has been awhile since I released the TopIcons-plus Gnome-Shell extension. I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape. How is Topicons-plus useful ? The Gnome developers want to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/12/18/topicons-plus-for-gnome-v18.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This is another off-topic post as it is not related to security.</p>
 <p>It has been awhile since I released the <a href="https://github.com/phocean/TopIcons-plus">TopIcons-plus Gnome-Shell extension</a>.</p>
 <p>I had not advertised it here because it was not really ready or stable, but now I believe it is taking shape.</p>
@@ -48,21 +49,23 @@
 <p>It comes with extra features, like styling (opacity, desaturation, size) and positioning.</p>
 <p>The <a href="https://github.com/phocean/TopIcons-plus/releases/tag/v18">latest release</a> should be in pretty good shape. If you don&#8217;t want to use the Github code, be patient: it should get validated on the <a href="https://extensions.gnome.org/extension/1031/topicons/">Gnome website</a> within the next days.</p>
 <p>Enjoy!</p>
-<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /blog-archive/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
+<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
+<div id="attachment_2149" style="width: 1930px" class="wp-caption aligncenter"><img class="wp-image-2149 size-full" src="http://phocean.net/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png" width="1920" height="157" srcset="/wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20.png 1920w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-580x47.png 580w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-768x63.png 768w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-940x77.png 940w, /wp-content/uploads/2016/12/Capture-décran-de-2016-12-18-14-35-20-624x51.png 624w" sizes="(max-width: 1920px) 100vw, 1920px" /><p class="wp-caption-text">TopIcons-Plus v18, tray icons centered</p></div>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/12/18/topicons-plus-for-gnome-v18.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/12/18/topicons-plus-for-gnome-v18.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>One more rant against the Linux Intel graphic driver</title>
-		<link>/blog-archive/2016/10/09/one-more-rant-against-the-linux-intel-driver.html</link>
+		<link>/2016/10/09/one-more-rant-against-the-linux-intel-driver.html</link>
 		<pubDate>Sun, 09 Oct 2016 21:21:04 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
 		<category><![CDATA[System]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2123</guid>
-		<description><![CDATA[Some quick notes that may help random Linux users looking for similar issues. I am, like many, the unfortunate user of a laptop with Intel graphics (Thinkpad T460 to be precise). Why unfortunate? Because the graphic driver provided by Intel sucks. i915, as it is being called, really has been sucking for years, and it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/10/09/one-more-rant-against-the-linux-intel-driver.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2123</guid>
+		<description><![CDATA[Some quick notes that may help random Linux users looking for similar issues. I am, like many, the unfortunate user of a laptop with Intel graphics (Thinkpad T460 to be precise). Why unfortunate? Because the graphic driver provided by Intel sucks. i915, as it is being called, really has been sucking for years, and it...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/10/09/one-more-rant-against-the-linux-intel-driver.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Some quick notes that may help random Linux users looking for similar issues.</p>
 <p>I am, like many, the unfortunate user of a laptop with Intel graphics (Thinkpad T460 to be precise). Why unfortunate? Because the graphic driver provided by Intel sucks.</p>
 <p><em><strong>i915</strong></em>, as it is being called, really has been sucking for years, and it is known for that (just google it, if you don&#8217;t believe me).</p>
@@ -200,7 +203,7 @@ GRUB_DISABLE_RECOVERY="true"</pre>
 			</item>
 		<item>
 		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
-		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<link>/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
 		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -214,7 +217,8 @@ GRUB_DISABLE_RECOVERY="true"</pre>
 		<category><![CDATA[Nodejs]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
-		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>I have kept playing with Docker recently, just for fun and to learn.</p>
 <p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
@@ -285,7 +289,7 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>A few (convenient) dockerfiles</title>
-		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<link>/2016/04/10/a-few-convenient-dockerfiles.html</link>
 		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -299,7 +303,8 @@ de/server.js"</pre>
 		<category><![CDATA[Tor]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
-		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
 <p>Here they are:</p>
 <ul>
@@ -326,8 +331,8 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>A journey with Btrfs</title>
-		<link>/blog-archive/2016/03/20/a-journey-with-btrfs.html</link>
-		<comments>/blog-archive/2016/03/20/a-journey-with-btrfs.html#comments</comments>
+		<link>/2016/03/20/a-journey-with-btrfs.html</link>
+		<comments>/2016/03/20/a-journey-with-btrfs.html#comments</comments>
 		<pubDate>Sun, 20 Mar 2016 15:35:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -338,7 +343,8 @@ de/server.js"</pre>
 		<category><![CDATA[virtualbox]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
-		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
+		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h1>Why BTRFS ?</h1>
 <p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
 <p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
@@ -473,13 +479,13 @@ Hell World!
 <li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 		<item>
 		<title>Password stealing using a password filter</title>
-		<link>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html</link>
-		<comments>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html#comments</comments>
+		<link>/2013/10/02/password-stealing-using-a-password-filter.html</link>
+		<comments>/2013/10/02/password-stealing-using-a-password-filter.html#comments</comments>
 		<pubDate>Wed, 02 Oct 2013 09:12:31 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -495,13 +501,14 @@ Hell World!
 		<category><![CDATA[visual studio]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1736</guid>
-		<description><![CDATA[Nice stuff from @mubix: the technic consists in injecting a DLL to lsass.exe, using the password filter feature of Windows. The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity. Microsoft...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1736</guid>
+		<description><![CDATA[Nice stuff from @mubix: the technic consists in injecting a DLL to lsass.exe, using the password filter feature of Windows. The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity. Microsoft...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/10/02/password-stealing-using-a-password-filter.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a href="http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html">Nice stuff</a> from <a href="https://twitter.com/mubix">@mubix</a>: the technic consists in injecting a DLL to <code>lsass.exe</code>, using the <em>password filter</em> feature of Windows.</p>
 <p>The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity.</p>
 <p>Microsoft opened the API so that users can extend the functionality with their own filters.</p>
 <p>Mubix diverted this API by developing a password logger: the DLL just logs the password both on the disk and a remote server,  and does nothing else.</p>
 <p>A perfect way to maintain a persistent access… I tested it:</p>
-<div id="attachment_1738" style="width: 635px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14.png" rel="lightbox[1736]"><img class="size-large wp-image-1738" alt="Evilpassfilter exploitation process" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14-940x587.png" width="625" height="390" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14-940x587.png 940w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_14-580x362.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_14-624x389.png 624w" sizes="(max-width: 625px) 100vw, 625px" /></a><p class="wp-caption-text">Evilpassfilter exploitation process</p></div>
+<div id="attachment_1738" style="width: 635px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_14.png" rel="lightbox[1736]"><img class="size-large wp-image-1738" alt="Evilpassfilter exploitation process" src="/wp-content/uploads/2013/10/CapturFiles_14-940x587.png" width="625" height="390" srcset="/wp-content/uploads/2013/10/CapturFiles_14-940x587.png 940w, /wp-content/uploads/2013/10/CapturFiles_14-580x362.png 580w, /wp-content/uploads/2013/10/CapturFiles_14-624x389.png 624w" sizes="(max-width: 625px) 100vw, 625px" /></a><p class="wp-caption-text">Evilpassfilter exploitation process</p></div>
 <ol>
 <li><code>Evilpassfilter.dll</code> is loaded into <code>lsass.exe</code></li>
 <li>A user updates his password</li>
@@ -521,26 +528,26 @@ EXPORTS
    PasswordChangeNotify</pre>
 </li>
 <li>In the project properties, make sure to select the appropriate architecture, matching with the one of your target.
-<p><div id="attachment_1745" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18.png" rel="lightbox[1736]"><img class="size-medium wp-image-1745" alt="Selecting the compilation target architecture (win32/x64)" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18-580x133.png" width="580" height="133" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18-580x133.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_18-624x143.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_18.png 725w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Selecting the compilation target architecture (win32/x64)</p></div></li>
+<p><div id="attachment_1745" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_18.png" rel="lightbox[1736]"><img class="size-medium wp-image-1745" alt="Selecting the compilation target architecture (win32/x64)" src="/wp-content/uploads/2013/10/CapturFiles_18-580x133.png" width="580" height="133" srcset="/wp-content/uploads/2013/10/CapturFiles_18-580x133.png 580w, /wp-content/uploads/2013/10/CapturFiles_18-624x143.png 624w, /wp-content/uploads/2013/10/CapturFiles_18.png 725w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Selecting the compilation target architecture (win32/x64)</p></div></li>
 <li>In the input settings of the link editor, add wininet.lib as additional dependancy.</li>
 <li>Also add <code>Evilpassfilter.def</code> as module definition file.
-<p><div id="attachment_1743" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16.png" rel="lightbox[1736]"><img class="size-medium wp-image-1743" alt="Evilpassfilter Visual Studio settings" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16-580x413.png" width="580" height="413" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16-580x413.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_16-624x444.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_16.png 859w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Evilpassfilter Visual Studio settings</p></div></li>
+<p><div id="attachment_1743" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_16.png" rel="lightbox[1736]"><img class="size-medium wp-image-1743" alt="Evilpassfilter Visual Studio settings" src="/wp-content/uploads/2013/10/CapturFiles_16-580x413.png" width="580" height="413" srcset="/wp-content/uploads/2013/10/CapturFiles_16-580x413.png 580w, /wp-content/uploads/2013/10/CapturFiles_16-624x444.png 624w, /wp-content/uploads/2013/10/CapturFiles_16.png 859w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Evilpassfilter Visual Studio settings</p></div></li>
 <li>In the source code, fix line 72: <code>return;</code> &#8211;&gt; <code>return 1;</code></li>
 <li>Now you should be able to compile the library. You may want to make sure that the DLL is valid and integrated the exports (open it with IDA or a PE tool):
-<p><div id="attachment_1741" style="width: 913px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png" rel="lightbox[1736]"><img class="size-full wp-image-1741" alt="Evilpassfilter.dll exports seen in IDA" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png" width="903" height="226" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png 903w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_19-580x145.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_19-624x156.png 624w" sizes="(max-width: 903px) 100vw, 903px" /></a><p class="wp-caption-text">Evilpassfilter.dll exports seen in IDA</p></div></li>
+<p><div id="attachment_1741" style="width: 913px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_19.png" rel="lightbox[1736]"><img class="size-full wp-image-1741" alt="Evilpassfilter.dll exports seen in IDA" src="/wp-content/uploads/2013/10/CapturFiles_19.png" width="903" height="226" srcset="/wp-content/uploads/2013/10/CapturFiles_19.png 903w, /wp-content/uploads/2013/10/CapturFiles_19-580x145.png 580w, /wp-content/uploads/2013/10/CapturFiles_19-624x156.png 624w" sizes="(max-width: 903px) 100vw, 903px" /></a><p class="wp-caption-text">Evilpassfilter.dll exports seen in IDA</p></div></li>
 <li>Copy the resulting DLL to the <code>system32</code> folder.</li>
 <li>Open regedit <code>HKLM\System\CurrentControlSet\Control\Lsa</code><br />
 and add <code>Evilpassfilter</code> to the <code>Notification Packages</code></li>
 </ul>
 <p>Reboot and… now you should know what to do next :-)</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/10/02/password-stealing-using-a-password-filter.html/feed</wfw:commentRss>
 		<slash:comments>18</slash:comments>
 		</item>
 		<item>
 		<title>My goodness, I got mainframed!</title>
-		<link>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html</link>
-		<comments>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
+		<link>/2013/05/28/my-goodness-i-got-mainframed.html</link>
+		<comments>/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
 		<pubDate>Tue, 28 May 2013 12:20:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -561,7 +568,8 @@ and add <code>Evilpassfilter</code> to the <code>Notification Packages</code></l
 		<category><![CDATA[z/os]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
-		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
+		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mainframes are not dead, why not pentesting it?</p>
 <p>I just watched the presentation of <strong>Phil Young</strong> at <a href="https://www.shmoocon.org/shmoocon_2013" target="_blank">Shmoocon 2013</a>: &#8220;<a href="https://www.shmoocon.org/2013/videos/Shmoocon%202013%20-%20Mainframed%20The%20Secrets%20Inside%20that%20Black%20Box.mp4" target="_blank">Mainframed: the secrets inside that black box</a>&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they have some Unix interface, and that there is a emulator for x86. Where it was less of a surprise is that their security is pretty low :-)</p>
 <p>Anyway, don&#8217;t miss watching the video. <a href="http://mainframed767.tumblr.com" target="_blank">Phil&#8217;s blog, &#8220;Soldier of Fortran&#8221;</a>, is also a gold mine, he wrote many tips, tutos and tools.</p>
@@ -616,16 +624,16 @@ herc =====&gt; devlist
 HHC02279I 0:0E20 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open
 HHC02279I 0:0E21 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open</pre>
 <p>Open <strong>tn3270</strong> and connect with default settings on localhost:</p>
-<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/blog-archive/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
+<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
 <p>And then in the hercules terminal, enter <code>ipl a80</code></p>
-<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /blog-archive/wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /blog-archive/wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
+<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
 <p><strong>It is very long to boot, don&#8217;t worry. You will actually have to use 2 terminals</strong>, so open the second one, which will show the logon screen (see screenshot below) after booting is done. It will be used for &#8220;userland&#8221; aka TSO commands.</p>
 <p>The first terminal shall be kept open as the master console, which receive system logs and can be used for &#8220;system-level&#8221;* commands (e.g root level).</p>
-<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
+<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
 <ol class="split">
 <li>At the prompt, enter <code>TSO</code>, then <code>IBMUSER</code> as the login, and <code>SYS1</code> as the password. It will automatically launch the ISPF menu:</li>
 </ol>
-<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/ispf-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
+<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/wp-content/uploads/2013/05/ispf-580x462.png 580w, /wp-content/uploads/2013/05/ispf-624x498.png 624w, /wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
 <ol class="split">
 <li>Now, you are good to go ahead with Z/OS commands&#8230;</li>
 </ol>
@@ -725,7 +733,7 @@ XCF.     
 <ul>
 <li><a href="http://mainframed767.tumblr.com/post/27787457789/hercules-3-08-on-mac-os-x-lion" target="_blank">Hercules 3.08 on Mac OS X Lion</a></li>
 <li><a href="http://mainframed767.tumblr.com/post/40836059586/instructions-to-installing-z-os-in-hercules" target="_blank">Instructions to installing z/OS in Hercules</a></li>
-<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/blog-archive/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
+<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
 <li><a href="http://kat.ph/ibm-z-os-emulation-files-t5780374.html" target="_blank">Z/OS files</a></li>
 <li><a href="http://patata.homeip.net/blog/hercules-and-zos-tcp-ip-networking-for-adcd-versions" target="_blank">Hercules and Z/OS TCP/IP networking for ADCD versions</a></li>
 <li><a href="http://mainframed.wordpress.com/2012/06/17/changing-the-logon-screen-on-the-mainframe-zos-vtam-in-adcd/" target="_blank">Changing the logon screen on the mainframe</a></li>
@@ -735,13 +743,13 @@ XCF.     
 <li><a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">IBM online documentation</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Installing Metasploit on Mac OS X [Mountain Lion]</title>
-		<link>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html</link>
-		<comments>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html#comments</comments>
+		<link>/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html</link>
+		<comments>/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html#comments</comments>
 		<pubDate>Sun, 05 May 2013 17:08:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Mac OS]]></category>
@@ -754,7 +762,8 @@ XCF.     
 		<category><![CDATA[zsh]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1571</guid>
-		<description><![CDATA[It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few good tutorials already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences. Getting Metasploit First, let&#8217;s fetch Metasploit. Adjust...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1571</guid>
+		<description><![CDATA[It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few good tutorials already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences. Getting Metasploit First, let&#8217;s fetch Metasploit. Adjust...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><!--StartFragment-->It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few <a href="http://www.darkoperator.com/installing-metasploit-in-ubunt/">good</a> <a href="http://briancanfixit.blogspot.fr/2011/12/setting-up-metasploit-and-armitage-on.html">tutorials</a> already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences.</p>
 <h1>Getting Metasploit</h1>
 <p>First, let&#8217;s fetch Metasploit. Adjust the last two lines by replacing <code>.zshrc</code> (I am using Zsh) with <code>.bash_profile</code> if you are using Bash, for instance.</p>
@@ -851,12 +860,12 @@ ruby extconf.rb &amp;&amp; make &amp;&amp; make install</pre>
 </ul>
 <p><!--EndFragment--></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html/feed</wfw:commentRss>
 		<slash:comments>15</slash:comments>
 		</item>
 		<item>
 		<title>CVE-2009-3555: Safari, fix reached Mountain Lion&#8230;</title>
-		<link>/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html</link>
+		<link>/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html</link>
 		<pubDate>Mon, 13 Aug 2012 17:53:15 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Mac OS]]></category>
@@ -869,17 +878,18 @@ ruby extconf.rb &amp;&amp; make &amp;&amp; make install</pre>
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1348</guid>
-		<description><![CDATA[I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation. Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;. Note that Safari 6.0 on Lion did not (at least on my...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1348</guid>
+		<description><![CDATA[I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation. Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;. Note that Safari 6.0 on Lion did not (at least on my...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/08/13/cve-2009-3555-safari-fix-reached-mountain-lion.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I haven&#8217;t investigated much (and I will not more), but since my upgrade to Mac OS 10.8 (Mountain Lion), Safari supports safe renegociation.</p>
 <p>Meanwhile, I had received a laconic answer from Apple to my bug report saying that they &#8220;are aware of this issue&#8221;.</p>
-<p>Note that Safari 6.0 on Lion <a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">did not</a> (at least on my computer, if someone could confirm)&#8230; so same browser version, different OS, the system SSL library must have been &#8211; silently &#8211; updated.</p>
+<p>Note that Safari 6.0 on Lion <a href="/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">did not</a> (at least on my computer, if someone could confirm)&#8230; so same browser version, different OS, the system SSL library must have been &#8211; silently &#8211; updated.</p>
 <p>Anyway, good move finally.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Rootkit in my lab? (Part III)</title>
-		<link>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
-		<comments>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
+		<link>/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
+		<comments>/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
 		<pubDate>Sun, 22 Jul 2012 07:48:06 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -898,8 +908,9 @@ ruby extconf.rb &amp;&amp; make &amp;&amp; make install</pre>
 		<category><![CDATA[WinDBG]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
-		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
+		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
 <p>I decided to analyze one the crash I experienced during registry analysis.<br />
 I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG.</p>
 <p>I had my environment set up with the suspicious VM configured to debug activated on the serial port, which is a simple pipe on Mac OS X.<br />
@@ -910,15 +921,15 @@ Another method would be to just configure Windows to create a crashdump file wit
 <p>Windows then crashes, WinDBG catches the exception and stops.</p>
 <p>So what do we have ?</p>
 <p>First, the error type, <em><strong>PAGE_FAULT_IN_NONPAGED_AREA (50)</strong></em>, means that an instruction pointed to an invalid memory address. Let&#8217;s check this.</p>
-<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/blog-archive/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
-<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
+<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
+<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
 <p>It shows the function (nt!CmpGetValueKeyFromCache, offset 0x89) and the memory address where the crash was triggered.</p>
 <p>The instruction at this address is:</p>
 <pre>80637807 f3a5 rep movs dword ptr es:[edi],dword ptr [esi]</pre>
 <p>This instruction is trying to copy 8 bytes at the address pointed by EDI.<br />
 EDI has the value of <strong>0xe1285050</strong> at execution time.</p>
 <p>And what do we have at this memory location ?</p>
-<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
+<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
 <p>Nothing indeed. Note that this corruption persists at every boot.</p>
 <p>So what can we conclude?<br />
 We can certainly exclude hardware failure, because it is a virtual machine and because the corruption always occur at the same memory region, even after a reboot.<br />
@@ -927,7 +938,7 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>That&#8217;s all for today, folks. I wrote it while I am still working on it, so sorry if it looks rough and incomplete. It is sort of live, thoughts are still in process.</p>
 <p>Again, I am looking forward to reading your comments and suggestions. (Hopefully) there will be a part IV!</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

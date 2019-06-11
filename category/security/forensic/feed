@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Forensic &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/security/forensic/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/security/forensic/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Mimikatz offline, as a Volatility plugin!</title>
-		<link>/blog-archive/2014/04/19/mimikatz-offline-as-a-volatility-plugin.html</link>
+		<link>/2014/04/19/mimikatz-offline-as-a-volatility-plugin.html</link>
 		<pubDate>Sat, 19 Apr 2014 10:42:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -30,15 +30,16 @@
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1962</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1962</guid>
 		<description><![CDATA[I just tested the Mimikatz plugin for Volatility and it worked very well on a Windows 7 dump: Good job ;-)]]></description>
 				<content:encoded><![CDATA[<p>I just tested the <a href="http://blog.digital-forensics.it/2014/03/et-voila-le-mimikatz-offline.html">Mimikatz plugin for Volatility</a> and it worked very well on a Windows 7 dump:</p>
-<div id="attachment_1963" style="width: 599px" class="wp-caption aligncenter"><img class="size-full wp-image-1963" src="/blog-archive/wp-content/uploads/2014/04/vol-mimikatz.png" alt="Output of the Mimikatz plugin for Volatility" width="589" height="111" srcset="/blog-archive/wp-content/uploads/2014/04/vol-mimikatz.png 589w, /blog-archive/wp-content/uploads/2014/04/vol-mimikatz-580x109.png 580w" sizes="(max-width: 589px) 100vw, 589px" /><p class="wp-caption-text">Output of the Mimikatz plugin for Volatility</p></div>
+<div id="attachment_1963" style="width: 599px" class="wp-caption aligncenter"><img class="size-full wp-image-1963" src="/wp-content/uploads/2014/04/vol-mimikatz.png" alt="Output of the Mimikatz plugin for Volatility" width="589" height="111" srcset="/wp-content/uploads/2014/04/vol-mimikatz.png 589w, /wp-content/uploads/2014/04/vol-mimikatz-580x109.png 580w" sizes="(max-width: 589px) 100vw, 589px" /><p class="wp-caption-text">Output of the Mimikatz plugin for Volatility</p></div>
 <p>Good job ;-)</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>A relative got hacked for scamming activities</title>
-		<link>/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
+		<link>/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
 		<pubDate>Sun, 20 Jan 2013 16:40:03 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -54,7 +55,8 @@
 		<category><![CDATA[sqlite]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
-		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
+		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>One of my relative got hacked.</p>
 <p>After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to say that his knowledge on computers is low.<br />
 I immediately started to investigate.</p>
@@ -75,8 +77,8 @@ I immediately started to investigate.</p>
 <p>With support of <a title="forensicswiki.org" href="http://www.forensicswiki.org/wiki/Mozilla_Firefox">forensicswiki.org</a>, I dumped the full Firefox profile on my computer and started to analyze it with the <a title="Sqlite Manager" href="https://addons.mozilla.org/fr/firefox/addon/sqlite-manager/">Sqlite Manager</a> extension.</p>
 <blockquote><p>Sorry but I will be hiding private info and sensitive data that could be used for a legal action.</p></blockquote>
 <p>I got most info from the files <em><strong>cookies.sqlite</strong></em> and <em><strong>places.sqlite</strong></em>.</p>
-<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/cookies-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/cookies-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
-<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/blog-archive/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/places-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/places-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/places-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
+<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/wp-content/uploads/2013/01/cookies-580x345.png 580w, /wp-content/uploads/2013/01/cookies-940x560.png 940w, /wp-content/uploads/2013/01/cookies-500x298.png 500w, /wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
+<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/wp-content/uploads/2013/01/places-580x345.png 580w, /wp-content/uploads/2013/01/places-940x560.png 940w, /wp-content/uploads/2013/01/places-500x298.png 500w, /wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
 <p>The guy didn&#8217;t loose time, he knew precisely what he wanted and what to do.</p>
 <ol>
 <li>He first visited two websites to localize the computer: <a title="ip2location.com" href="http://ip2location.com">ip2location.com</a> and <a title="ip-tracker.org" href="http://www.ip-tracker.org">ip-tracker.org</a>. You may think that it is a strange first move, but I will come back on that later as I have a theory.</li>
@@ -98,9 +100,9 @@ I immediately started to investigate.</p>
 <p>Also, GET parameters in URLs were very interesting.</p>
 <p>In some of them, you can guess the amount of the purchase he did. He for sure bought stuff for at least a total of 500$. But it is without counting the stuff that I cannot guess from URLs, so it is probably sensibly much more in reality.</p>
 <p>But, even better, some had order ids. Hey, wait! Let&#8217;s have a look on the 2co website:</p>
-<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /blog-archive/wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /blog-archive/wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
+<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
 <p>Hmmm&#8230; we have the email address and the order number&#8230; bingo!</p>
-<p><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/blog-archive/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/blog-archive/wp-content/uploads/2013/01/order-580x911.png 580w, /blog-archive/wp-content/uploads/2013/01/order-190x300.png 190w, /blog-archive/wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
+<p><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/wp-content/uploads/2013/01/order-580x911.png 580w, /wp-content/uploads/2013/01/order-190x300.png 190w, /wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
 <p>Now, we have at least all info of the credit card owner, certainly the biggest victim in this mess.</p>
 <h2>Conclusion</h2>
 <p>That&#8217;s it for now. We are still in the process of transmitting the info to the police and alerting the victim.</p>
@@ -132,8 +134,8 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 			</item>
 		<item>
 		<title>Rootkit in my lab? (Part III)</title>
-		<link>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
-		<comments>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
+		<link>/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
+		<comments>/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
 		<pubDate>Sun, 22 Jul 2012 07:48:06 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -152,8 +154,9 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 		<category><![CDATA[WinDBG]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
-		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
+		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
 <p>I decided to analyze one the crash I experienced during registry analysis.<br />
 I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG.</p>
 <p>I had my environment set up with the suspicious VM configured to debug activated on the serial port, which is a simple pipe on Mac OS X.<br />
@@ -164,15 +167,15 @@ Another method would be to just configure Windows to create a crashdump file wit
 <p>Windows then crashes, WinDBG catches the exception and stops.</p>
 <p>So what do we have ?</p>
 <p>First, the error type, <em><strong>PAGE_FAULT_IN_NONPAGED_AREA (50)</strong></em>, means that an instruction pointed to an invalid memory address. Let&#8217;s check this.</p>
-<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/blog-archive/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
-<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
+<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
+<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
 <p>It shows the function (nt!CmpGetValueKeyFromCache, offset 0x89) and the memory address where the crash was triggered.</p>
 <p>The instruction at this address is:</p>
 <pre>80637807 f3a5 rep movs dword ptr es:[edi],dword ptr [esi]</pre>
 <p>This instruction is trying to copy 8 bytes at the address pointed by EDI.<br />
 EDI has the value of <strong>0xe1285050</strong> at execution time.</p>
 <p>And what do we have at this memory location ?</p>
-<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
+<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
 <p>Nothing indeed. Note that this corruption persists at every boot.</p>
 <p>So what can we conclude?<br />
 We can certainly exclude hardware failure, because it is a virtual machine and because the corruption always occur at the same memory region, even after a reboot.<br />
@@ -181,13 +184,13 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>That&#8217;s all for today, folks. I wrote it while I am still working on it, so sorry if it looks rough and incomplete. It is sort of live, thoughts are still in process.</p>
 <p>Again, I am looking forward to reading your comments and suggestions. (Hopefully) there will be a part IV!</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab? (part II)</title>
-		<link>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
-		<comments>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
+		<link>/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
+		<comments>/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
 		<pubDate>Wed, 11 Jul 2012 20:18:58 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -202,7 +205,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
-		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
+		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished checking the RAM with Volatility and&#8230; I found nothing. Nada.</p>
 <p>It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills.</p>
 <p>I attach here some of the main outputs of Volatility. As far as I can tell:</p>
@@ -213,30 +217,30 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <li>no suspicious registry entry</li>
 <li>etc.</li>
 </ul>
-<p>Based on <a title="Rootkit in my lab?" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
+<p>Based on <a title="Rootkit in my lab?" href="/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
 <p>Dear reader, any help or tip is welcomed! Am I missing something obvious? Could it be possibly not a rootkit but some kind of corruption? If so, how to detect it?</p>
 <p>Just drop me an e-mail if you want to have a look on the dump itself.</p>
 <p>Volatility outputs:</p>
 <ul>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/handles.txt">handles</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/idt.txt">idt</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
+<li><a href="/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
+<li><a href="/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
+<li><a href="/wp-content/uploads/2012/07/handles.txt">handles</a></li>
+<li><a href="/wp-content/uploads/2012/07/idt.txt">idt</a></li>
+<li><a href="/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
+<li><a href="/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
+<li><a href="/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
+<li><a href="/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
+<li><a href="/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
+<li><a href="/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
 		<slash:comments>8</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab?</title>
-		<link>/blog-archive/2012/06/30/rootkit-in-my-lab.html</link>
-		<comments>/blog-archive/2012/06/30/rootkit-in-my-lab.html#comments</comments>
+		<link>/2012/06/30/rootkit-in-my-lab.html</link>
+		<comments>/2012/06/30/rootkit-in-my-lab.html#comments</comments>
 		<pubDate>Sat, 30 Jun 2012 17:49:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -251,7 +255,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
-		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
+		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on.</p>
 <p>What makes the case really interesting though, is that it occurred on a fresh install of a Windows XP virtual machine. I aimed it to be a clean malware reversing snapshot. I noticed the weired behavior minutes after finishing the system install and setting up a bunch of reversing and live analysis tools.</p>
@@ -261,22 +266,22 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>Two things alerted me quickly.</p>
 <p>The first one was, at a point, the permanent failure of going through the full windows update process. Believe me, I have tried all ways.</p>
 <p>The second one was the weird dialog when trying to access to the keyboard layout settings. It says &#8220;<em><strong>Incompatible driver detected</strong></em>&#8220;. To me, this looks like there is a keylogger somewhere&#8230;</p>
-<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
+<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
 <p>Then, as I started to check around, more odd stuff came out.</p>
 <p>I fired up Process Explorer, and soon realize that it was &#8220;unable to verify&#8221; the signatures of all the running Windows processes. I could not find anything else suspicious, though (no odd process, memory content looks normal, etc.).</p>
-<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /blog-archive/wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
+<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
 <p>Ok, while I am with the Sysinternal suite, why not scanning with Rootkit Revealer:</p>
-<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
+<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
 <p>Interesting&#8230; and what about GMER:</p>
-<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
+<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
 <p>Oops! Now it crashes when it is accessing the registry&#8230;</p>
 <p>For the fun, let&#8217;s see what happens if we try to set up an antivirus (Security Essentials):</p>
-<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
+<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
 <p>Nice one! Very suspicious! Note that after a full scan, Security Essentials reports me that the system is clean and everything is fine. I am so relieved. :)</p>
 <p>Curious to see how my certificates are, I run <em><strong>certmgr.msc. </strong></em><strong></strong>I compared all Microsoft root certificates with a clean machine and could not see anything different. But again something happened:</p>
-<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
+<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
 <p>Oh, just one of my last attempts to do live analysis (this the WinPcap setup included with Wireshark):</p>
-<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
+<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
 <p>Ok, so enough played. The thing seems to be nicely done, and live analysis is going to be way too hard and unreliable.</p>
 <h2>Memory Analysis</h2>
 <p>This is where I am now. I reverted to a snapshot prior to my live analysis attemps, confirmed the strange behaviors are still observable, and suspended the VM to get the vmem file.</p>
@@ -286,12 +291,12 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>My discoveries, if there are, will be published in another article.</p>
 <p><strong>UPDATE: I forgot to tell that it is a Windows XP SP3 machine, but not fully updated due to the issues.</strong></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 		<item>
 		<title>Soktspy</title>
-		<link>/blog-archive/2012/06/20/soktspy.html</link>
+		<link>/2012/06/20/soktspy.html</link>
 		<pubDate>Wed, 20 Jun 2012 20:45:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -305,7 +310,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[Soktpy]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
-		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
+		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Soktspy is a small script that may be helpful for some investigation.</p>
 <p>Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets.</p>
 <p>But sometimes, the behavior may be very sneaky, consisting of one or two packets, at rare and random intervals. Unless you spend all the day before the screen, it may be very difficult to trace.</p>
@@ -313,9 +319,9 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>So here is the Soktspy, a python script that easily build into a portable and standalone executable to deploy on the target machine.</p>
 <p>Once launched, it just loops in the background and log sockets that are created for some given peers (the IP addresses you found involved in the suspicious network activity).</p>
 <p>Maybe, some other tool exist, but I could not find anything similar. Let me know if you have any suggestion. Anyway, it was a nice exercise to do :)</p>
-<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/blog-archive/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy01.png 668w, /blog-archive/wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
+<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/wp-content/uploads/2012/06/soktspy01.png 668w, /wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
 <p><strong>Download</strong></p>
-<p><a href="/blog-archive/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
+<p><a href="/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
 <p><strong>Pre-requisites</strong></p>
 <ul>
 <li>Install Visual C++ Runtime libraries with v<strong>credist_x86.exe </strong>(not necessary if the target machine happens to have Python already installed)</li>
@@ -333,7 +339,7 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <li>Start <strong>soktSpy.exe</strong>.</li>
 </ul>
 <p>Then, as soon as the sneaky process will send out a packet toward the monitored IP, a log record will be triggered:</p>
-<p><a href="/blog-archive/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /blog-archive/wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /blog-archive/wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p><a href="/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
 <p>The log file contains the following info, in that order:</p>
 <ul>
 <li>Detection time (based on the system local time)</li>
@@ -353,8 +359,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 			</item>
 		<item>
 		<title>Debugging the MBR with IDA Pro and Bochs</title>
-		<link>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html</link>
-		<comments>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html#comments</comments>
+		<link>/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html</link>
+		<comments>/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html#comments</comments>
 		<pubDate>Thu, 20 Jan 2011 19:57:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -370,7 +376,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[MBR]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=980</guid>
-		<description><![CDATA[Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more. Prerequisite : IDA Pro (6.0) with the IDA Python plug-in (1.4.3) Steps : Prepare...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=980</guid>
+		<description><![CDATA[Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more. Prerequisite : IDA Pro (6.0) with the IDA Python plug-in (1.4.3) Steps : Prepare...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more.</p>
 <h2>Prerequisite :</h2>
 <ul>
@@ -419,7 +426,7 @@ IMGNAME     = "sdb.img"</pre>
 <li>Start the debugger.</li>
 </ol>
 <p>You should now be able to go ahead and debug the MBR step by step.</p>
-<p><img class="aligncenter size-full wp-image-996" title="ida-mbr" src="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png" alt="" width="600" height="546" srcset="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png 600w, /blog-archive/wp-content/uploads/2011/01/ida-mbr-300x273.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p><img class="aligncenter size-full wp-image-996" title="ida-mbr" src="/wp-content/uploads/2011/01/ida-mbr.png" alt="" width="600" height="546" srcset="/wp-content/uploads/2011/01/ida-mbr.png 600w, /wp-content/uploads/2011/01/ida-mbr-300x273.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
 <h2>References :</h2>
 <ul>
 <li>Hexblog : <a title="Develop your master boot record and debug it with IDA Pro and the Bochs debugger " href="http://www.hexblog.com/?p=103" target="_blank">Develop your master boot record and debug it with IDA Pro and the Bochs debugger plugin</a></li>
@@ -427,12 +434,12 @@ IMGNAME     = "sdb.img"</pre>
 <li>Bochs User Manual : <a title="Bochs tips and techniques" href="http://bochs.sourceforge.net/doc/docbook/user/howto.html#AEN2776" target="_blank">Chapter 8, Tips and Techniques</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html/feed</wfw:commentRss>
 		<slash:comments>6</slash:comments>
 		</item>
 		<item>
 		<title>A link between Stuxnet and the OpenBSD IPSEC backdoor rumor ?</title>
-		<link>/blog-archive/2011/01/16/a-link-between-stuxnet-and-the-openbsd-ipsec-backdoor-rumor.html</link>
+		<link>/2011/01/16/a-link-between-stuxnet-and-the-openbsd-ipsec-backdoor-rumor.html</link>
 		<pubDate>Sun, 16 Jan 2011 22:12:53 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -445,14 +452,15 @@ IMGNAME     = "sdb.img"</pre>
 		<category><![CDATA[worm]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=967</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=967</guid>
 		<description><![CDATA[Found on Full Disclosure, a weired but troubling connection of two security affairs : the OpenBSD backdoor rumor and the stuxnet worm.]]></description>
 				<content:encoded><![CDATA[<p>Found on Full Disclosure, a weired but troubling connection of two security affairs : <a title="OpenBSD backdoor and stuxnet" href="http://extendedsubset.com/?p=43" target="_blank">the OpenBSD backdoor rumor and the stuxnet worm</a>.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Beware of source code (even from your favorite portal/forum/&#8230;)</title>
-		<link>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
-		<comments>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
+		<link>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
+		<comments>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
 		<pubDate>Sat, 24 Apr 2010 12:14:04 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -471,7 +479,8 @@ IMGNAME     = "sdb.img"</pre>
 		<category><![CDATA[social engineering]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
-		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
+		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The other day I stumbed upon a weired piece of software on <a title="Howtoforge.com" href="http://howtoforge.com" target="_blank">howtoforge.com</a> : <a title="dns-add" href="http://www.howtoforge.com/adding-dns-servers-in-one-step-with-dns-add" target="_blank">dns-add</a> (code <a title="Sourceforge dns-add" href="http://sourceforge.net/projects/isp-fw/files/DNS-add/" target="_blank">on sourceforge.net</a>).</p>
 <p>Actually, the purpose of dns-add was very intriguing : update your DNS in one command !</p>
 <p>The output should look like this:</p>
@@ -673,15 +682,15 @@ If you really have to use code from an untrusted source, check it, or wait for t
 <p><strong><span style="color: #ff0000;"><em><span style="color: #ff0000;">* Update *</span></em></span></strong></p>
 <p><em><span style="color: #993300;">I did contact the author and didn't get any answer.<br />
 I reported the issue to Sourceforge, which deleted the account hosting dns-add, as it violated the website policies.</span></em></p>
-<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/blog-archive/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
+<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -697,7 +706,8 @@ I reported the issue to Sourceforge, which deleted the account hosting dns-add, 
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -900,7 +910,7 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

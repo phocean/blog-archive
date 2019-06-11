@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Minicom &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/minicom/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/minicom/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>How to connect to a Cisco device using the serial port on Linux</title>
-		<link>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
-		<comments>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
+		<link>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
+		<comments>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
 		<pubDate>Tue, 13 Nov 2007 11:41:35 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -34,7 +34,8 @@
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
-		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
+		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230;</p>
 <p>Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port.  Not a problem, there are many cheap serial-usb converters <a href="http://www.usbgear.com/USB-1S1PQ.html" target="_blank">like this</a>.</p>
 <p>As an alternative to the Hyperterminal of Microsoft, there is Minicom on Linux.</p>
@@ -55,7 +56,7 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 <pre>$ minicom cisco</pre>
 <p>That&#8217;s it !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

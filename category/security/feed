@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Security &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/security/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/security/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>BeEF Docker</title>
-		<link>/blog-archive/2017/02/24/beef-docker.html</link>
+		<link>/2017/02/24/beef-docker.html</link>
 		<pubDate>Fri, 24 Feb 2017 21:17:51 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -32,6 +32,7 @@
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
+		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
 		<description><![CDATA[Just a quick update to tell about a new Docker based on the phocean/msf image. https://hub.docker.com/r/phocean/beef/ https://github.com/phocean/dockerfile-beef It provides an image for the BeEF framework for XSS browser exploitation (http://beefproject.com/). Enjoy it!]]></description>
 				<content:encoded><![CDATA[<p>Just a quick update to tell about a new Docker based on the phocean/msf image.</p>
 <p><a href="https://hub.docker.com/r/phocean/beef/">https://hub.docker.com/r/phocean/beef/</a></p>
@@ -42,7 +43,7 @@
 			</item>
 		<item>
 		<title>Reducing the friction™ with social medias thanks to Netvibes</title>
-		<link>/blog-archive/2016/11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html</link>
+		<link>/2016/11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html</link>
 		<pubDate>Sun, 27 Nov 2016 12:31:20 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -50,7 +51,8 @@
 		<category><![CDATA[technology watch]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2134</guid>
-		<description><![CDATA[I have been a big fan of the &#8220;Reducing the friction&#8221; series of article published by Scott Lowe a while back. These articles consist in tips to automate or improve the smoothness of repeated professional tasks. If you haven&#8217;t, I recommend you to read them. Some are specific to the Mac OS X environments, but...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2134</guid>
+		<description><![CDATA[I have been a big fan of the &#8220;Reducing the friction&#8221; series of article published by Scott Lowe a while back. These articles consist in tips to automate or improve the smoothness of repeated professional tasks. If you haven&#8217;t, I recommend you to read them. Some are specific to the Mac OS X environments, but...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/11/27/reducing-the-friction-with-social-media-thanks-to-netvibes.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I have been a big fan of the &#8220;<a href="http://blog.scottlowe.org/archives/">Reducing the friction</a>&#8221; series of article published by <a href="https://twitter.com/scott_lowe">Scott Lowe</a> a while back.</p>
 <p>These articles consist in tips to automate or improve the smoothness of repeated professional tasks. If you haven&#8217;t, I recommend you to read them.</p>
 <p>Some are specific to the Mac OS X environments, but most of time it is easy to find alternative stuff for Linux. By the way, I am thinking of sharing my own tips for Linux some day.</p>
@@ -76,13 +78,16 @@
 <li>Facebook</li>
 </ul>
 <p>After adding some sources (they call them <em>applications</em>), you can get a classic feed view like below:</p>
-<div id="attachment_2138" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2138" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png" alt="Feed view on Netvibes" width="580" height="106" srcset="/blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png 580w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-768x141.png 768w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-940x173.png 940w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-624x115.png 624w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Feed view on Netvibes</p></div>
+<div id="attachment_2138" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2138" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png" alt="Feed view on Netvibes" width="580" height="106" srcset="/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png 580w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-768x141.png 768w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-940x173.png 940w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-624x115.png 624w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Feed view on Netvibes</p></div>
+<div id="attachment_2138" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2138" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png" alt="Feed view on Netvibes" width="580" height="106" srcset="/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-580x106.png 580w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-768x141.png 768w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-940x173.png 940w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-07-48-624x115.png 624w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Feed view on Netvibes</p></div>
 <p>Nice! We now have a lot of stuff in one place and you can easily distinct what you have read or not (which is not easy to achieve in Twitter, for instance).</p>
 <p>Then, similar to what <a href="https://ifttt.com">IFTT</a> offers, you can create automated actions easily.</p>
 <p>Here are some of the supported triggers:</p>
-<div id="attachment_2137" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2137" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png" alt="Services supported by Netvibes" width="580" height="256" srcset="/blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png 580w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-768x340.png 768w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-940x416.png 940w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-624x276.png 624w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59.png 1192w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Services supported by Netvibes</p></div>
+<div id="attachment_2137" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2137" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png" alt="Services supported by Netvibes" width="580" height="256" srcset="/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png 580w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-768x340.png 768w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-940x416.png 940w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-624x276.png 624w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59.png 1192w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Services supported by Netvibes</p></div>
+<div id="attachment_2137" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2137" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png" alt="Services supported by Netvibes" width="580" height="256" srcset="/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-580x256.png 580w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-768x340.png 768w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-940x416.png 940w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59-624x276.png 624w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-10-57-59.png 1192w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Services supported by Netvibes</p></div>
 <p>Based on a trigger like <em>marking</em> an article from within Netvibes, I can decide to send that article to Pocket or by e-mail for offline reading:</p>
-<div id="attachment_2139" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2139" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png" alt="Netvibes action" width="580" height="263" srcset="/blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png 580w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-768x348.png 768w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-940x427.png 940w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-624x283.png 624w, /blog-archive/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11.png 1503w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Netvibes action</p></div>
+<div id="attachment_2139" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2139" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png" alt="Netvibes action" width="580" height="263" srcset="/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png 580w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-768x348.png 768w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-940x427.png 940w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-624x283.png 624w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11.png 1503w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Netvibes action</p></div>
+<div id="attachment_2139" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-2139" src="http://phocean.net/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png" alt="Netvibes action" width="580" height="263" srcset="/wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-580x263.png 580w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-768x348.png 768w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-940x427.png 940w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11-624x283.png 624w, /wp-content/uploads/2016/11/Capture-décran-de-2016-11-27-09-08-11.png 1503w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Netvibes action</p></div>
 <p>I have also another action: when a new post appears on a subreddit, I also send it to Pocket.</p>
 <p>The possibilities, while not yet infinite, are huge.</p>
 <p>You can do a lot with the free version, but for 2€ a month, you get content indexing to quickly find back some items in your feeds. I took this option, as it is useful but also as it is a way to support this project.</p>
@@ -96,7 +101,7 @@
 			</item>
 		<item>
 		<title>Metasploit framework docker image now published on Docker Hub</title>
-		<link>/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html</link>
+		<link>/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html</link>
 		<pubDate>Tue, 28 Jun 2016 20:56:32 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -106,7 +111,8 @@
 		<category><![CDATA[Metasploit]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2117</guid>
-		<description><![CDATA[I pushed the image on Docker Hub, so that deploying it is now as easy as: docker pull phocean/msf It is an automatic build based on the Github repository. It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2117</guid>
+		<description><![CDATA[I pushed the image on Docker Hub, so that deploying it is now as easy as: docker pull phocean/msf It is an automatic build based on the Github repository. It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I pushed the image on <a href="https://hub.docker.com/r/phocean/msf/">Docker Hub</a>, so that deploying it is now as easy as:</p>
 <pre>docker pull phocean/msf</pre>
 <p>It is an automatic build based on the <a href="https://github.com/phocean/dockerfile-debian-metasploit">Github repository</a>.</p>
@@ -117,7 +123,7 @@
 			</item>
 		<item>
 		<title>Msf docker image now in REMnux!</title>
-		<link>/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html</link>
+		<link>/2016/05/12/msf-docker-image-now-in-remnux.html</link>
 		<pubDate>Thu, 12 May 2016 17:50:14 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -127,7 +133,8 @@
 		<category><![CDATA[REMnux]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
-		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
+		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Just a quick note to say that I am very happy about this <a href="https://github.com/phocean/dockerfile-debian-metasploit">Metasploit docker image</a> being useful to some people, according to the feedback I got.</p>
 <p>And <a href="https://twitter.com/lennyzeltser">Lenny</a> was kind enough to integrate it into his Linux distro, <a href="https://remnux.org/">REMnux</a>, well known among reversing people. He also came up with very good suggestions and helped me to bring some improvements, so many thanks to him.</p>
 <p>Don&#8217;t miss reading his blog article on how to use the image in REMnux : <a href="https://zeltser.com/metasploit-framework-docker-container/"><em>&#8220;Run Metasploit Framework as a Docker Container Without Installation Pains&#8221;</em></a>.<br />
@@ -136,7 +143,7 @@ Stay tuned ;-)</p>
 			</item>
 		<item>
 		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
-		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<link>/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
 		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -150,7 +157,8 @@ Stay tuned ;-)</p>
 		<category><![CDATA[Nodejs]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
-		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>I have kept playing with Docker recently, just for fun and to learn.</p>
 <p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
@@ -221,7 +229,7 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>Small improvements to the Metasploit-framework Dockerfile</title>
-		<link>/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html</link>
+		<link>/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html</link>
 		<pubDate>Tue, 03 May 2016 20:36:38 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -231,8 +239,9 @@ de/server.js"</pre>
 		<category><![CDATA[Metasploit]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2094</guid>
-		<description><![CDATA[I made a few improvements (at least, I think they are) to the metasploit-frameword Dockerfile : A volume from the container /root/.msf4 to $HOME/.msf4, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>I made a few improvements (at least, I think they are) to the <a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">metasploit-frameword Dockerfile</a> :</p>
+		<guid isPermaLink="false">http://phocean.net/?p=2094</guid>
+		<description><![CDATA[I made a few improvements (at least, I think they are) to the metasploit-frameword Dockerfile : A volume from the container /root/.msf4 to $HOME/.msf4, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I made a few improvements (at least, I think they are) to the <a href="/2016/04/27/metasploit-dockerfile.html">metasploit-frameword Dockerfile</a> :</p>
 <ul>
 <li>A <a href="https://docs.docker.com/engine/userguide/containers/dockervolumes/">volume</a> from the container <em>/root/.msf4</em> to <em>$HOME/.msf4</em>, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be readily available to the <em>msf</em> container.</li>
 <li>A volume from the container <em>/tmp/data</em> to the host <em>/tmp/msf</em>, so that you can get access to dump files and stuff like that.</li>
@@ -246,8 +255,8 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>Metasploit Dockerfile</title>
-		<link>/blog-archive/2016/04/27/metasploit-dockerfile.html</link>
-		<comments>/blog-archive/2016/04/27/metasploit-dockerfile.html#comments</comments>
+		<link>/2016/04/27/metasploit-dockerfile.html</link>
+		<comments>/2016/04/27/metasploit-dockerfile.html#comments</comments>
 		<pubDate>Wed, 27 Apr 2016 18:26:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -259,7 +268,8 @@ de/server.js"</pre>
 		<category><![CDATA[pentest]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
-		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
+		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Hey,</p>
 <p>Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive.</p>
 <p>Instead of keeping reproducing boring installation steps every <em>x</em> months, I decided to build a <em>Dockerfile</em> for once.</p>
@@ -277,14 +287,15 @@ de/server.js"</pre>
 </ul>
 <p>You can find it on <a href="https://github.com/phocean/dockerfile-debian-metasploit">my github</a>.</p>
 <p>If you have any trouble or suggestion on how to improve it, please let me know. Enjoy it and go ahead if you want to fork it!</p>
-<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/blog-archive/wp-content/uploads/2016/04/msf-580x320.png 580w, /blog-archive/wp-content/uploads/2016/04/msf-624x344.png 624w, /blog-archive/wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/wp-content/uploads/2016/04/msf-580x320.png 580w, /wp-content/uploads/2016/04/msf-624x344.png 624w, /wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/wp-content/uploads/2016/04/msf-580x320.png 580w, /wp-content/uploads/2016/04/msf-624x344.png 624w, /wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>A few (convenient) dockerfiles</title>
-		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<link>/2016/04/10/a-few-convenient-dockerfiles.html</link>
 		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -298,7 +309,8 @@ de/server.js"</pre>
 		<category><![CDATA[Tor]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
-		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
 <p>Here they are:</p>
 <ul>
@@ -325,8 +337,8 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>Quick tip: harden your ARP table the easy way (Linux)</title>
-		<link>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
-		<comments>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
+		<link>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
+		<comments>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
 		<pubDate>Fri, 14 Aug 2015 20:52:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -337,7 +349,8 @@ de/server.js"</pre>
 		<category><![CDATA[NetworkManager]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
-		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
+		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc.</p>
 <p>Yet, most networks do not have port security and ARP inspect on their switches to mitigate such attacks. So you have to count on yourself.</p>
 <p>Most people know how to protect a client , e.g. by maintaining a static mapping of MAC / IP addresses on the operating systems. But almost no one does it, because it would be a pain to manage&#8230;</p>
@@ -367,13 +380,13 @@ de/server.js"</pre>
 <p>But, let me stress it out once more, to be sure you don&#8217;t get me wrong :</p>
 <p><strong><span style="color: #ff0000;">Despite an enhancement, this is no a sufficient protection and you may still get pwned ! Authentication and encryption MUST also come into the play, so use only TLS enabled services, HTTPS sites and, ideally, a good IPSEC / SSH / TLS tunnel to carry ALL of your traffic !</span></strong></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Installation of Metasploit on Fedora 21 / 22</title>
-		<link>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html</link>
-		<comments>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html#comments</comments>
+		<link>/2015/02/10/installation-of-metasploit-on-fedora-21.html</link>
+		<comments>/2015/02/10/installation-of-metasploit-on-fedora-21.html#comments</comments>
 		<pubDate>Tue, 10 Feb 2015 19:38:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -383,9 +396,10 @@ de/server.js"</pre>
 		<category><![CDATA[Metasploit]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2021</guid>
-		<description><![CDATA[Update 2015/08/04: Works on Fedora 22 too. I recently applied the exact same procedure with success. A quick update from a previous post for setting Metasploit on Fedora 21, the latest version. It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2021</guid>
+		<description><![CDATA[Update 2015/08/04: Works on Fedora 22 too. I recently applied the exact same procedure with success. A quick update from a previous post for setting Metasploit on Fedora 21, the latest version. It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2015/02/10/installation-of-metasploit-on-fedora-21.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;"><span style="text-decoration: underline;">Update 2015/08/04</span>: Works on Fedora 22 too. I recently applied the exact same procedure with success.</span></em></p>
-<p>A quick update from a previous <a href="/blog-archive/2014/02/23/metasploit-on-fedora-20.html">post</a> for setting Metasploit on Fedora 21, the latest version.</p>
+<p>A quick update from a previous <a href="/2014/02/23/metasploit-on-fedora-20.html">post</a> for setting Metasploit on Fedora 21, the latest version.</p>
 <p>It is mainly a copy and paste, except for a few typo fixes and some changes on the Ruby part. The good news is that Metasploit was recently ported to Ruby 2.x, so we don&#8217;t need anymore the <em>rvm</em> stuff anymore, which makes the process much simpler.</p>
 <h1>Preparing Postgresql</h1>
 <p>Install:</p>
@@ -442,7 +456,7 @@ db_status</pre>
 <pre># msfupdate every 2 hours
 0 */2 * * * root /opt/msf/msfupdate 2&gt;&amp;1</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2015/02/10/installation-of-metasploit-on-fedora-21.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>SSH &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ssh/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ssh/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>World&#8217;s worst hacker</title>
-		<link>/blog-archive/2011/01/31/worlds-worst-hacker.html</link>
-		<comments>/blog-archive/2011/01/31/worlds-worst-hacker.html#comments</comments>
+		<link>/2011/01/31/worlds-worst-hacker.html</link>
+		<comments>/2011/01/31/worlds-worst-hacker.html#comments</comments>
 		<pubDate>Mon, 31 Jan 2011 18:44:20 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -33,15 +33,16 @@
 		<category><![CDATA[SSH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
 		<description><![CDATA[That was so funny !]]></description>
 				<content:encoded><![CDATA[<p><a title="World's worst hacker" href="http://george.hedfors.com/content/worlds-worst-hacker" target="_blank">That</a> was so funny !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Netios</title>
-		<link>/blog-archive/2009/11/07/netios.html</link>
+		<link>/2009/11/07/netios.html</link>
 		<pubDate>Sat, 07 Nov 2009 15:53:30 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -55,7 +56,8 @@
 		<category><![CDATA[SSH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
-		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=516</guid>
+		<description><![CDATA[I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches : Netios is a little tool aimed to help network administrators to administrate a large number of Cisco network devices. Providing it with a list of equipments, it connects within SSH...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/07/netios.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just released an alpha release of a little tool that may help network administrators with a large park of Cisco routers or switches :</p>
 <blockquote><p><strong>Netios</strong> is a little tool aimed to help network administrators to administrate a large number of Cisco network devices.<br />
 Providing it with a list of equipments, it connects within SSH to remotly apply IOS commands.</p>
@@ -69,12 +71,12 @@ Providing it with a list of equipments, it connects within SSH to remotly apply 
 </ul>
 <p>It can read the targets from the command line or from a text file.</p></blockquote>
 <p>Its primary goal is to improve the security by making it easier to renew regularly the local password of these equipments, but it can do more convenient things (and I will continue to work to add more of them).</p>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>SSH/SSL patching and hardening</title>
-		<link>/blog-archive/2008/05/20/sshssl-patching-and-hardening.html</link>
+		<link>/2008/05/20/sshssl-patching-and-hardening.html</link>
 		<pubDate>Tue, 20 May 2008 21:57:41 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -82,7 +84,8 @@ Providing it with a list of equipments, it connects within SSH to remotly apply 
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=107</guid>
-		<description><![CDATA[My OpenSSL-based daemons are back up ! These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) : $ ssh-keygen -t rsa -b 4096 # openssl genrsa -aes256 -out secret.key 4096 I am the only person to use the server, so I don&#8217;t have any scallability...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/20/sshssl-patching-and-hardening.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=107</guid>
+		<description><![CDATA[My OpenSSL-based daemons are back up ! These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) : $ ssh-keygen -t rsa -b 4096 # openssl genrsa -aes256 -out secret.key 4096 I am the only person to use the server, so I don&#8217;t have any scallability...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/05/20/sshssl-patching-and-hardening.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>My OpenSSL-based daemons are back up !</p>
 <p>These commands should provide quite a good security level for a while (at least again non super-power governmental organizations) :</p>
 <pre>$ ssh-keygen -t rsa -b 4096
@@ -95,8 +98,8 @@ HostKeyAlgorithms ssh-rsa</pre>
 			</item>
 		<item>
 		<title>The SSL/SSH disaster</title>
-		<link>/blog-archive/2008/05/15/the-sslssh-disaster.html</link>
-		<comments>/blog-archive/2008/05/15/the-sslssh-disaster.html#comments</comments>
+		<link>/2008/05/15/the-sslssh-disaster.html</link>
+		<comments>/2008/05/15/the-sslssh-disaster.html#comments</comments>
 		<pubDate>Thu, 15 May 2008 16:23:22 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -108,7 +111,8 @@ HostKeyAlgorithms ssh-rsa</pre>
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
-		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
+		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses.</p>
 <p>I have had no time so far to check all the keys on my server. I prefer to stay on the safe side, though I have some reason to believe that my keys might not be so vulnerable : I generated them a long time ago, maybe before the Debian maintainer sad mistake.</p>
 <p>It is going to be pretty easy now, for those who are motivated, to get access to the ssh server running keys generated during the 2 last years&#8230;</p>
@@ -120,12 +124,12 @@ What&#8217;s less funny is the pure disaster for the reputation of Debian.</p>
 This kind of news is not going to enforce trust from companies.</p>
 <p>I myself will think twice in the future about what system to use when I design my networks.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>SSH timout</title>
-		<link>/blog-archive/2007/04/21/ssh-timout.html</link>
+		<link>/2007/04/21/ssh-timout.html</link>
 		<pubDate>Sat, 21 Apr 2007 18:18:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>

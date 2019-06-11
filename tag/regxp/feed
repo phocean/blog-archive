@@ -9,8 +9,8 @@
 
 <channel>
 	<title>regxp &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/regxp/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/regxp/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>How-to : Mod-security 2 set-up for Apache 2</title>
-		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<link>/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
 		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -30,7 +30,8 @@
 		<category><![CDATA[regxp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
-		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
 <p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
 <span id="more-114"></span></p>
@@ -137,6 +138,7 @@ Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
 <pre lang="text">[Fri Jul 11 19:33:08 2008] [error] [client 192.168.222.21] ModSecurity: Access
 denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
 \\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 mG38AAAEAACa@AVUAAAAA"]</pre>
 <p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>

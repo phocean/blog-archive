@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Network &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/network/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/network/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>My goodness, I got mainframed!</title>
-		<link>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html</link>
-		<comments>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
+		<link>/2013/05/28/my-goodness-i-got-mainframed.html</link>
+		<comments>/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
 		<pubDate>Tue, 28 May 2013 12:20:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -41,7 +41,8 @@
 		<category><![CDATA[z/os]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
-		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
+		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mainframes are not dead, why not pentesting it?</p>
 <p>I just watched the presentation of <strong>Phil Young</strong> at <a href="https://www.shmoocon.org/shmoocon_2013" target="_blank">Shmoocon 2013</a>: &#8220;<a href="https://www.shmoocon.org/2013/videos/Shmoocon%202013%20-%20Mainframed%20The%20Secrets%20Inside%20that%20Black%20Box.mp4" target="_blank">Mainframed: the secrets inside that black box</a>&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they have some Unix interface, and that there is a emulator for x86. Where it was less of a surprise is that their security is pretty low :-)</p>
 <p>Anyway, don&#8217;t miss watching the video. <a href="http://mainframed767.tumblr.com" target="_blank">Phil&#8217;s blog, &#8220;Soldier of Fortran&#8221;</a>, is also a gold mine, he wrote many tips, tutos and tools.</p>
@@ -96,16 +97,16 @@ herc =====&gt; devlist
 HHC02279I 0:0E20 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open
 HHC02279I 0:0E21 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open</pre>
 <p>Open <strong>tn3270</strong> and connect with default settings on localhost:</p>
-<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/blog-archive/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
+<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
 <p>And then in the hercules terminal, enter <code>ipl a80</code></p>
-<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /blog-archive/wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /blog-archive/wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
+<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
 <p><strong>It is very long to boot, don&#8217;t worry. You will actually have to use 2 terminals</strong>, so open the second one, which will show the logon screen (see screenshot below) after booting is done. It will be used for &#8220;userland&#8221; aka TSO commands.</p>
 <p>The first terminal shall be kept open as the master console, which receive system logs and can be used for &#8220;system-level&#8221;* commands (e.g root level).</p>
-<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
+<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
 <ol class="split">
 <li>At the prompt, enter <code>TSO</code>, then <code>IBMUSER</code> as the login, and <code>SYS1</code> as the password. It will automatically launch the ISPF menu:</li>
 </ol>
-<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/ispf-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
+<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/wp-content/uploads/2013/05/ispf-580x462.png 580w, /wp-content/uploads/2013/05/ispf-624x498.png 624w, /wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
 <ol class="split">
 <li>Now, you are good to go ahead with Z/OS commands&#8230;</li>
 </ol>
@@ -205,7 +206,7 @@ XCF.     
 <ul>
 <li><a href="http://mainframed767.tumblr.com/post/27787457789/hercules-3-08-on-mac-os-x-lion" target="_blank">Hercules 3.08 on Mac OS X Lion</a></li>
 <li><a href="http://mainframed767.tumblr.com/post/40836059586/instructions-to-installing-z-os-in-hercules" target="_blank">Instructions to installing z/OS in Hercules</a></li>
-<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/blog-archive/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
+<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
 <li><a href="http://kat.ph/ibm-z-os-emulation-files-t5780374.html" target="_blank">Z/OS files</a></li>
 <li><a href="http://patata.homeip.net/blog/hercules-and-zos-tcp-ip-networking-for-adcd-versions" target="_blank">Hercules and Z/OS TCP/IP networking for ADCD versions</a></li>
 <li><a href="http://mainframed.wordpress.com/2012/06/17/changing-the-logon-screen-on-the-mainframe-zos-vtam-in-adcd/" target="_blank">Changing the logon screen on the mainframe</a></li>
@@ -215,12 +216,12 @@ XCF.     
 <li><a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">IBM online documentation</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Ethernet duplex issues</title>
-		<link>/blog-archive/2007/03/31/ethernet-duplex-issues.html</link>
+		<link>/2007/03/31/ethernet-duplex-issues.html</link>
 		<pubDate>Sat, 31 Mar 2007 18:45:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -270,7 +271,7 @@ $ copy run start</pre>
 			</item>
 		<item>
 		<title>SinFP, part II : comparison with Nmap 4.20</title>
-		<link>/blog-archive/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
+		<link>/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
 		<pubDate>Sun, 24 Dec 2006 14:53:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -501,8 +502,8 @@ Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nma
 			</item>
 		<item>
 		<title>SinFP, part I : introduction and comparison with Nmap 4.10</title>
-		<link>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
-		<comments>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
+		<link>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
+		<comments>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
 		<pubDate>Sun, 17 Dec 2006 06:59:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -696,9 +697,9 @@ IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
 <p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
 <p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
 <h3>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a></h3>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+<p><img src="/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

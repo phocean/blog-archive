@@ -9,8 +9,8 @@
 
 <channel>
 	<title>battery &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/battery/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/battery/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Tested the Lenovo support&#8230;</title>
-		<link>/blog-archive/2008/09/21/tested-the-lenovo-support.html</link>
+		<link>/2008/09/21/tested-the-lenovo-support.html</link>
 		<pubDate>Sat, 20 Sep 2008 23:38:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -28,7 +28,8 @@
 		<category><![CDATA[Thinkpad]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
-		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
+		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>&#8230; and was quite impressed.</p>
 <p><strong>Wednesday evening</strong>, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months.</p>
 <p><strong>Thursday morning</strong>, I am recalled by someone from the technical service. They first say that the battery is no more under warranty &#8211; 1 year long. I guess they say so after checking when the battery was made or sold the retailer. That does not concern the end-consumer like me : the warranty only started when I purchased the laptop, and I still have 4 months of warranty ahead.</p>

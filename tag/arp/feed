@@ -9,8 +9,8 @@
 
 <channel>
 	<title>arp &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/arp/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/arp/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Quick tip: harden your ARP table the easy way (Linux)</title>
-		<link>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
-		<comments>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
+		<link>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
+		<comments>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
 		<pubDate>Fri, 14 Aug 2015 20:52:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[NetworkManager]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
-		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
+		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc.</p>
 <p>Yet, most networks do not have port security and ARP inspect on their switches to mitigate such attacks. So you have to count on yourself.</p>
 <p>Most people know how to protect a client , e.g. by maintaining a static mapping of MAC / IP addresses on the operating systems. But almost no one does it, because it would be a pain to manage&#8230;</p>
@@ -61,12 +62,12 @@
 <p>But, let me stress it out once more, to be sure you don&#8217;t get me wrong :</p>
 <p><strong><span style="color: #ff0000;">Despite an enhancement, this is no a sufficient protection and you may still get pwned ! Authentication and encryption MUST also come into the play, so use only TLS enabled services, HTTPS sites and, ideally, a good IPSEC / SSH / TLS tunnel to carry ALL of your traffic !</span></strong></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>ARPFreeze</title>
-		<link>/blog-archive/2009/06/08/arpfreeze.html</link>
+		<link>/2009/06/08/arpfreeze.html</link>
 		<pubDate>Mon, 08 Jun 2009 06:32:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -77,6 +78,7 @@
 		<category><![CDATA[flooding]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=381</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=381</guid>
 		<description><![CDATA[ARPFreeze is a nice GUI for Windows that allows to configure static ARP entries very easily, and makes these changes persistent after reboot. Thus does it protect the client machine against ARP flooding. It works for both Windows Vista and prior versions (support of arp -s and netsh).]]></description>
 				<content:encoded><![CDATA[<p><a title="ARPFreeze" href="http://www.irongeek.com/i.php?page=security/arpfreeze-static-arp-poisoning" target="_blank">ARPFreeze</a> is a nice GUI for Windows that allows to configure static ARP entries very easily, and makes these changes persistent after reboot.<br />
 Thus does it protect the client machine against ARP flooding.</p>
@@ -85,7 +87,7 @@ Thus does it protect the client machine against ARP flooding.</p>
 			</item>
 		<item>
 		<title>Promiscuous mode detection</title>
-		<link>/blog-archive/2009/06/01/promiscuous-mode-detection.html</link>
+		<link>/2009/06/01/promiscuous-mode-detection.html</link>
 		<pubDate>Mon, 01 Jun 2009 18:46:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -100,7 +102,8 @@ Thus does it protect the client machine against ARP flooding.</p>
 		<category><![CDATA[Sniffing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
-		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
+		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Detectpromisc" href="http://detectpromisc.sourceforge.net/index.html" target="_blank">Detectpromisc</a> is a python script based on Scapy, that allows to detect if a computer is sniffing the network.</p>
 <p>By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself.</p>
 <p>There are however several methods that make the detection possible.</p>
@@ -130,7 +133,7 @@ probably: Windows 2k/NT4</pre>
 			</item>
 		<item>
 		<title>Introduction to network attacks : Network Layer</title>
-		<link>/blog-archive/2008/10/12/introduction-to-network-attacks-network-layer.html</link>
+		<link>/2008/10/12/introduction-to-network-attacks-network-layer.html</link>
 		<pubDate>Sun, 12 Oct 2008 14:45:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -150,7 +153,8 @@ probably: Windows 2k/NT4</pre>
 		<category><![CDATA[udp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=220</guid>
-		<description><![CDATA[Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done. ARP cache poisoning ARP works basically on broadcast : when a machine connects to the network, it broadcasts its MAC address to the LAN (ethernet...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/12/introduction-to-network-attacks-network-layer.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=220</guid>
+		<description><![CDATA[Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done. ARP cache poisoning ARP works basically on broadcast : when a machine connects to the network, it broadcasts its MAC address to the LAN (ethernet...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/10/12/introduction-to-network-attacks-network-layer.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Let&#8217;s continue our small review of network attacks, by checking this time some typical attacks on the network layer. There are the most known examples of what can be done.<br />
 <span id="more-220"></span></p>
 <h3>ARP cache poisoning</h3>
@@ -169,12 +173,12 @@ probably: Windows 2k/NT4</pre>
 <p>You can start it in graphic mode :</p>
 <pre lang="bash">$ ettercap -G</pre>
 <p>Got to the &#8220;<em>Sniff / United sniffing</em>&#8221; menu and select your network interface :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap1.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-286" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap1.png" alt="" width="399" height="146" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap1.png 399w, /blog-archive/wp-content/uploads/2008/10/ettercap1-300x109.png 300w" sizes="(max-width: 399px) 100vw, 399px" /></a><br />
+<p><a href="/wp-content/uploads/2008/10/ettercap1.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-286" title="Ettercap" src="/wp-content/uploads/2008/10/ettercap1.png" alt="" width="399" height="146" srcset="/wp-content/uploads/2008/10/ettercap1.png 399w, /wp-content/uploads/2008/10/ettercap1-300x109.png 300w" sizes="(max-width: 399px) 100vw, 399px" /></a><br />
 &#8220;<em>Hosts / scan for hosts</em>&#8221; menu allow you to quickly visualize the machines of the LAN.<br />
 Then, in the &#8220;<em>Mitm</em>&#8221; (Man In The Middle) menu, choose &#8220;<em>Arp cache poisonning</em>&#8221; :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap2.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-287" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap2.png" alt="" width="301" height="182" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap2.png 301w, /blog-archive/wp-content/uploads/2008/10/ettercap2-300x181.png 300w" sizes="(max-width: 301px) 100vw, 301px" /></a></p>
+<p><a href="/wp-content/uploads/2008/10/ettercap2.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-287" title="Ettercap" src="/wp-content/uploads/2008/10/ettercap2.png" alt="" width="301" height="182" srcset="/wp-content/uploads/2008/10/ettercap2.png 301w, /wp-content/uploads/2008/10/ettercap2-300x181.png 300w" sizes="(max-width: 301px) 100vw, 301px" /></a></p>
 <p>Finally, &#8220;start / start sniffing&#8221; (default is all machines are targeted) :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/ettercap3.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-288" title="Ettercap" src="/blog-archive/wp-content/uploads/2008/10/ettercap3.png" alt="" width="500" height="385" srcset="/blog-archive/wp-content/uploads/2008/10/ettercap3.png 622w, /blog-archive/wp-content/uploads/2008/10/ettercap3-300x231.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+<p><a href="/wp-content/uploads/2008/10/ettercap3.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-288" title="Ettercap" src="/wp-content/uploads/2008/10/ettercap3.png" alt="" width="500" height="385" srcset="/wp-content/uploads/2008/10/ettercap3.png 622w, /wp-content/uploads/2008/10/ettercap3-300x231.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
 <p>Immediatly, Ettercap starts collecting data. Here some POP credentials can be read :</p>
 <p>Several workaround can be set against this, though none is really satisfying :</p>
 <ol>
@@ -190,7 +194,7 @@ In some cases, it could be used to drive some attacks.</p>
 <h4>Ping of the Death</h4>
 <p>That&#8217;s the historical attack. An ICMP packet is encapsulated inside an IP datagram.<br />
 An ICMP datagram is structured as below :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/icmp.png" rel="lightbox[220]"><img class="size-full wp-image-284" title="ICMP datagram" src="/blog-archive/wp-content/uploads/2008/10/icmp.png" alt="ICMP datagram" width="341" height="115" srcset="/blog-archive/wp-content/uploads/2008/10/icmp.png 341w, /blog-archive/wp-content/uploads/2008/10/icmp-300x101.png 300w" sizes="(max-width: 341px) 100vw, 341px" /></a><br />
+<p><a href="/wp-content/uploads/2008/10/icmp.png" rel="lightbox[220]"><img class="size-full wp-image-284" title="ICMP datagram" src="/wp-content/uploads/2008/10/icmp.png" alt="ICMP datagram" width="341" height="115" srcset="/wp-content/uploads/2008/10/icmp.png 341w, /wp-content/uploads/2008/10/icmp-300x101.png 300w" sizes="(max-width: 341px) 100vw, 341px" /></a><br />
 A few ICMP requests types :</p>
 <pre lang="txt">
 0 = echo reply
@@ -215,7 +219,7 @@ Error: packet size 65508 is too large. Maximum is 65507</pre>
 <p><a href="http://sourceforge.net/projects/sing" target="_blank"><strong>Sing</strong></a> is a nice tool to easily play with ICMP packets. No problem this time :</p>
 <pre lang="bash">$ sing -s 65508 192.168.1.1</pre>
 <p>The capture below shows the packet fragmentation that results :</p>
-<p><a href="/blog-archive/wp-content/uploads/2008/10/pod.png" rel="lightbox[220]"><img class="aligncenter size-medium wp-image-285" title="Sniffing of Ping of death" src="/blog-archive/wp-content/uploads/2008/10/pod-300x216.png" alt="" width="300" height="216" srcset="/blog-archive/wp-content/uploads/2008/10/pod-300x216.png 300w, /blog-archive/wp-content/uploads/2008/10/pod.png 1023w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2008/10/pod.png" rel="lightbox[220]"><img class="aligncenter size-medium wp-image-285" title="Sniffing of Ping of death" src="/wp-content/uploads/2008/10/pod-300x216.png" alt="" width="300" height="216" srcset="/wp-content/uploads/2008/10/pod-300x216.png 300w, /wp-content/uploads/2008/10/pod.png 1023w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>How to protect from such issues ? Check regularly vulnerabilities issues and keep your system up to date.<br />
 Many administrators just block all the ICMP protocol on their firewall. It is a kind of overreaction : ICMP is in no way a danger, but is really useful when you need some diagnosis. If you also think that blocking it hides your network topology, you are wrong but that is another subject.<br />
 So update your systems, allow ICMP (and somehow prepare yourself for IPv6 :)).</p>
@@ -266,7 +270,7 @@ The big issue is that he will never receive the answers from the packets he send
 <ol>
 <li><strong>Initiating a new session and guessing the TCP sequence number</strong>s :To be established, a TCP session follow a strict order : SYN, SYN-ACK and ACK. Each packet sent through TCP must be aknowledge. To differentiate the packets and send back that way an individual ACK, each packets has its own TCP sequence number. For every new packet, the sequence number is increased by the sender.<br />
 This illustrates better :<br />
-<a href="/blog-archive/wp-content/uploads/2008/10/tcp.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-289" title="TCP sequence" src="/blog-archive/wp-content/uploads/2008/10/tcp.png" alt="" width="344" height="190" srcset="/blog-archive/wp-content/uploads/2008/10/tcp.png 344w, /blog-archive/wp-content/uploads/2008/10/tcp-300x165.png 300w" sizes="(max-width: 344px) 100vw, 344px" /></a><br />
+<a href="/wp-content/uploads/2008/10/tcp.png" rel="lightbox[220]"><img class="aligncenter size-full wp-image-289" title="TCP sequence" src="/wp-content/uploads/2008/10/tcp.png" alt="" width="344" height="190" srcset="/wp-content/uploads/2008/10/tcp.png 344w, /wp-content/uploads/2008/10/tcp-300x165.png 300w" sizes="(max-width: 344px) 100vw, 344px" /></a><br />
 What the attacker has to do is sending the right ACK at the right moment, with not only the good TCP content but a proper TCP sequence number.<br />
 This technic is somehow historical, as nowadays modern systems generate a random TCP sequence number that is very hard to predict (even using flood).</li>
 <li><strong>Stealing an existing session </strong>:It requires the attacker to be somewhere on the ethernet link between the two targets. It becomes easier to generate proper sequence numbers by sniffing a legitimate conversation.</li>
@@ -286,7 +290,7 @@ I would like to add that, as much as possible, weak authenticated application sh
 			</item>
 		<item>
 		<title>DecaffenatID : a little ARP IDS for Windows</title>
-		<link>/blog-archive/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
+		<link>/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
 		<pubDate>Wed, 27 Aug 2008 12:49:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -298,13 +302,14 @@ I would like to add that, as much as possible, weak authenticated application sh
 		<category><![CDATA[spoofing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
 		<description><![CDATA[DecaffeinatID is a tool for Windows that can be very useful against ARP attacks.]]></description>
 				<content:encoded><![CDATA[<p><a title="DecaffeinatID" href="http://www.irongeek.com/i.php?page=security/decaffeinatid-simple-ids-arpwatch-for-windows">DecaffeinatID</a> is a tool for Windows that can be very useful against ARP attacks.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Introduction to network attacks : Physical Layer</title>
-		<link>/blog-archive/2008/08/24/introduction-to-network-attacks-physical-layer.html</link>
+		<link>/2008/08/24/introduction-to-network-attacks-physical-layer.html</link>
 		<pubDate>Sun, 24 Aug 2008 12:36:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -316,7 +321,8 @@ I would like to add that, as much as possible, weak authenticated application sh
 		<category><![CDATA[spoofing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=207</guid>
-		<description><![CDATA[That will be a short article, mainly because of two things. First, some methods are beyond my knowledge, involving electronics or hardware manipulation. Second, such methods are not efficient compare to higher level ones, and so rarely used. The mere concept of a physical attack implies that you have a direct physical access to your...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/24/introduction-to-network-attacks-physical-layer.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=207</guid>
+		<description><![CDATA[That will be a short article, mainly because of two things. First, some methods are beyond my knowledge, involving electronics or hardware manipulation. Second, such methods are not efficient compare to higher level ones, and so rarely used. The mere concept of a physical attack implies that you have a direct physical access to your...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/08/24/introduction-to-network-attacks-physical-layer.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>That will be a short article, mainly because of two things. First, some methods are beyond my knowledge, involving electronics or hardware manipulation. Second, such methods are not efficient compare to higher level ones, and so rarely used.</p>
 <p>The mere concept of a physical attack implies that you have a direct physical access to your target, giving you the ability to modify it as you wish.<br />
 This is an ideal situation for an attacker, not quite common. And in that case, there is nothing much to be done on the defensive side.</p>
@@ -330,7 +336,7 @@ Check at the man of <a href="http://www.aircrack-ng.org/doku.php" target="_blank
 <p>The MAC address is the &#8220;physical&#8221; way to identify a machine on the network. This address, supposedly unique world-wide, is set by the network card maker.<br />
 It is coded with 48 bits, generally on a read-only chip (ROM) to ensure that it can&#8217;t be modified. In reality, all operating systems allow to override this value at a logical level (as seen by the network stack of the system).</p>
 <p>On Windows XP, changing the MAC address of a network card is as easy as going in the advanced properties of the network card driver, changing the value and deactivating / reactivating the network card.</p>
-<div id="attachment_211" style="width: 449px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2008/08/windows-mac.png" rel="lightbox[207]"><img class="size-full wp-image-211" title="windows-mac" src="/blog-archive/wp-content/uploads/2008/08/windows-mac.png" alt="Changing the MAC address on Windows" width="439" height="458" srcset="/blog-archive/wp-content/uploads/2008/08/windows-mac.png 439w, /blog-archive/wp-content/uploads/2008/08/windows-mac-287x300.png 287w" sizes="(max-width: 439px) 100vw, 439px" /></a><p class="wp-caption-text">Changing the MAC address on Windows</p></div>
+<div id="attachment_211" style="width: 449px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2008/08/windows-mac.png" rel="lightbox[207]"><img class="size-full wp-image-211" title="windows-mac" src="/wp-content/uploads/2008/08/windows-mac.png" alt="Changing the MAC address on Windows" width="439" height="458" srcset="/wp-content/uploads/2008/08/windows-mac.png 439w, /wp-content/uploads/2008/08/windows-mac-287x300.png 287w" sizes="(max-width: 439px) 100vw, 439px" /></a><p class="wp-caption-text">Changing the MAC address on Windows</p></div>
 <p>In case it does not work (it depends on the driver), there is a free specific tool : <a title="Macshift" href="http://devices.natetrue.com/macshift/" target="_blank">Macshift</a>.</p>
 <p>On GNU/Linux, it is even easier. Just fire up these two commands :</p>
 <pre lang="bash">$ ifconfig eth1 down hw ether 00:00:00:00:00:01

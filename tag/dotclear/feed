@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Dotclear &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/dotclear/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/dotclear/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,13 +19,14 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Dotclear 2 to WordPress migration</title>
-		<link>/blog-archive/2007/05/19/dotclear-2-to-wordpress-migration.html</link>
+		<link>/2007/05/19/dotclear-2-to-wordpress-migration.html</link>
 		<pubDate>Sat, 19 May 2007 08:29:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
 		<category><![CDATA[Dotclear]]></category>
 		<category><![CDATA[Wordpress]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=32</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=32</guid>
 		<description><![CDATA[Dotclear 2 has been bêta for too long and I thought it was time to go over the limitations of a bêta version.
 
@@ -34,7 +35,7 @@ It seems that many people around have done that way and Wordpress is so popular 
 <p>It seems that many people around have done that way and WordPress is so popular that I should consider to give a try to it.<span id="more-32"></span></p>
 <p>For the migration, under Dotclear 2, I exported all the content into a flat text file.</p>
 <p>Then, I installed WordPress : an extremely easy thing ! I have seen many php software easy to set up, but here it is just impressive. Great work&#8230;</p>
-<p>Then I put the <a title="flatimport" href="/blog-archive/wp-content/uploads/2007/05/flatimport.txt">flatimport</a> plug-in into the <strong>wp-admin/import </strong>folder, renaming it with a .php extension.</p>
+<p>Then I put the <a title="flatimport" href="/wp-content/uploads/2007/05/flatimport.txt">flatimport</a> plug-in into the <strong>wp-admin/import </strong>folder, renaming it with a .php extension.</p>
 <p>Finally, just go to the plug-in management interface of WordPress and import it ! That went smoothly for me, but still, as expected, the images were missing in my articles.</p>
 <p>As both blogs and all my pictures were on the same server, I just needed to move the public directory of Dotclear (containing all images) to the wp-content/uploads folder.</p>
 <p>If your pictures have miscellanous origins, don&#8217;t worry, there is a nice plug-in that very easely fetch all the image links of your blog and put the corresponding pictures into the WordPress folder. Look at <a title="Images to WordPress import" href="http://www.bloggingexpertise.com/plugins/cache-images/" target="_blank">there</a>.</p>

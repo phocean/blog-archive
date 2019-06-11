@@ -9,8 +9,8 @@
 
 <channel>
 	<title>flooding &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/flooding/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/flooding/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>ARPFreeze</title>
-		<link>/blog-archive/2009/06/08/arpfreeze.html</link>
+		<link>/2009/06/08/arpfreeze.html</link>
 		<pubDate>Mon, 08 Jun 2009 06:32:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -29,6 +29,7 @@
 		<category><![CDATA[arp]]></category>
 		<category><![CDATA[flooding]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=381</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=381</guid>
 		<description><![CDATA[ARPFreeze is a nice GUI for Windows that allows to configure static ARP entries very easily, and makes these changes persistent after reboot. Thus does it protect the client machine against ARP flooding. It works for both Windows Vista and prior versions (support of arp -s and netsh).]]></description>
 				<content:encoded><![CDATA[<p><a title="ARPFreeze" href="http://www.irongeek.com/i.php?page=security/arpfreeze-static-arp-poisoning" target="_blank">ARPFreeze</a> is a nice GUI for Windows that allows to configure static ARP entries very easily, and makes these changes persistent after reboot.<br />

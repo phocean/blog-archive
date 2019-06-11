@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Ubuntu &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ubuntu/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ubuntu/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>How to connect to a Cisco device using the serial port on Linux</title>
-		<link>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
-		<comments>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
+		<link>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
+		<comments>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
 		<pubDate>Tue, 13 Nov 2007 11:41:35 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -34,7 +34,8 @@
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
-		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
+		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230;</p>
 <p>Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port.  Not a problem, there are many cheap serial-usb converters <a href="http://www.usbgear.com/USB-1S1PQ.html" target="_blank">like this</a>.</p>
 <p>As an alternative to the Hyperterminal of Microsoft, there is Minicom on Linux.</p>
@@ -55,13 +56,13 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 <pre>$ minicom cisco</pre>
 <p>That&#8217;s it !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Launchpad.net bug report #154274 : Website does not reference Debian visibly</title>
-		<link>/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html</link>
-		<comments>/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html#comments</comments>
+		<link>/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html</link>
+		<comments>/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html#comments</comments>
 		<pubDate>Fri, 19 Oct 2007 17:12:43 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -69,19 +70,20 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=79</guid>
-		<description><![CDATA[This bug report, created by a Debian developper, reproaches that the Ubuntu website is not refering enough to Debian. I am both using Debian and Ubuntu and loves each other. However, on this point, I am defending the Debian side. Ubuntu should definitely refers more to the Debian community on their website and, in general,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=79</guid>
+		<description><![CDATA[This bug report, created by a Debian developper, reproaches that the Ubuntu website is not refering enough to Debian. I am both using Debian and Ubuntu and loves each other. However, on this point, I am defending the Debian side. Ubuntu should definitely refers more to the Debian community on their website and, in general,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a href="https://bugs.launchpad.net/ubuntu-website/+bug/154274">This bug report</a>, created by a Debian developper, reproaches that the Ubuntu website is not refering enough to Debian.</p>
 <p>I am both using Debian and Ubuntu and loves each other.</p>
 <p>However, on this point, I am defending the Debian side.</p>
 <p>Ubuntu should definitely refers more to the Debian community on their website and, in general, be more cooperative &#8211; though on the latter, according to some recent news, it is improving.</p>
 <p>Ubuntu is doing a great work, but they should not forget that most of its packages come from Debian, and not being graceful for that is, at least, a serious lack of respect.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/10/19/launchpadnet-bug-report-154274-website-does-not-reference-debian-visibly.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>pm-utils instead of acpi-support ?</title>
-		<link>/blog-archive/2007/10/05/pm-utils-instead-of-acpi-support.html</link>
+		<link>/2007/10/05/pm-utils-instead-of-acpi-support.html</link>
 		<pubDate>Fri, 05 Oct 2007 14:32:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -90,7 +92,8 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=78</guid>
-		<description><![CDATA[I had several issues with gnome-power-manager and acpi-support. Both are base on the acpid daemon for power management. Acpi-support is a convenient package of scripts to configure the power management. It is bundled in many distributions, including Ubuntu and Debian. The problem is that it does not cooperate very well with gnome-power-manager. As a result,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/10/05/pm-utils-instead-of-acpi-support.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=78</guid>
+		<description><![CDATA[I had several issues with gnome-power-manager and acpi-support. Both are base on the acpid daemon for power management. Acpi-support is a convenient package of scripts to configure the power management. It is bundled in many distributions, including Ubuntu and Debian. The problem is that it does not cooperate very well with gnome-power-manager. As a result,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/10/05/pm-utils-instead-of-acpi-support.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I had several issues with <strong>gnome-power-manager</strong> and <strong>acpi-support</strong>.</p>
 <p>Both are base on the <strong>acpid</strong> daemon for power management. Acpi-support is a convenient package of scripts to configure the power management.</p>
 <p>It is bundled in many distributions, including Ubuntu and Debian.</p>
@@ -110,7 +113,7 @@ $ aptitude install pm-utils</pre>
 			</item>
 		<item>
 		<title>Easy search on Planet Debian and Planet Ubuntu</title>
-		<link>/blog-archive/2007/09/22/easy-search-on-planet-debian-and-planet-ubuntu.html</link>
+		<link>/2007/09/22/easy-search-on-planet-debian-and-planet-ubuntu.html</link>
 		<pubDate>Sat, 22 Sep 2007 08:46:06 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -118,7 +121,8 @@ $ aptitude install pm-utils</pre>
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=76</guid>
-		<description><![CDATA[Russel Coker, a famous Debian developper, took a really interesting initiative. He used the Google Custom search to create 2 Google search engines : one to search on Planet Debian one to search on Planet Ubuntu These blogs beeing a big source of information, these engines will be extremely convenient. The links are available on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/09/22/easy-search-on-planet-debian-and-planet-ubuntu.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=76</guid>
+		<description><![CDATA[Russel Coker, a famous Debian developper, took a really interesting initiative. He used the Google Custom search to create 2 Google search engines : one to search on Planet Debian one to search on Planet Ubuntu These blogs beeing a big source of information, these engines will be extremely convenient. The links are available on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/09/22/easy-search-on-planet-debian-and-planet-ubuntu.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Russel Coker, a famous Debian developper, took a really interesting initiative.</p>
 <p>He used the Google Custom search to create 2 Google search engines :</p>
 <ul>
@@ -133,7 +137,7 @@ $ aptitude install pm-utils</pre>
 			</item>
 		<item>
 		<title>Solved : network-manager issue with ACPI hibernation</title>
-		<link>/blog-archive/2007/08/03/solved-network-manager-issue-with-acpi-hibernation.html</link>
+		<link>/2007/08/03/solved-network-manager-issue-with-acpi-hibernation.html</link>
 		<pubDate>Fri, 03 Aug 2007 13:04:26 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -142,6 +146,7 @@ $ aptitude install pm-utils</pre>
 		<category><![CDATA[Network-manager]]></category>
 		<category><![CDATA[Ubuntu]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=74</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=74</guid>
 		<description><![CDATA[If you have a laptop, Network-Manager running and use ACPI to hibernate, look at this bug report and its nice tip : Editing /etc/default/acpi-support with this line : STOP_SERVICES=&#8221;networking&#8221; solved an old issue I used to have (and for which I wrote a dirty script with modprobe, dhclient, etc.]]></description>
 				<content:encoded><![CDATA[<p>If you have a laptop, Network-Manager running and use ACPI to hibernate, look at <a href="http://https://bugs.launchpad.net/ubuntu/+bug/69426">this bug report</a> and its nice tip :</p>
@@ -152,8 +157,8 @@ $ aptitude install pm-utils</pre>
 			</item>
 		<item>
 		<title>How to dupplicate your packages selection</title>
-		<link>/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html</link>
-		<comments>/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html#comments</comments>
+		<link>/2007/07/29/how-to-dupplicate-your-packages-selection.html</link>
+		<comments>/2007/07/29/how-to-dupplicate-your-packages-selection.html#comments</comments>
 		<pubDate>Sun, 29 Jul 2007 10:16:16 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -161,7 +166,8 @@ $ aptitude install pm-utils</pre>
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=73</guid>
-		<description><![CDATA[You may want to save your selection of packages, in order to reinstall all your softs later without having to look for and manually install them one after another. It is a convenient way to move a server to a new machine. On Debian / Ubuntu, this is quite easy. A while ago the solution...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=73</guid>
+		<description><![CDATA[You may want to save your selection of packages, in order to reinstall all your softs later without having to look for and manually install them one after another. It is a convenient way to move a server to a new machine. On Debian / Ubuntu, this is quite easy. A while ago the solution...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/07/29/how-to-dupplicate-your-packages-selection.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>You may want to save your selection of packages, in order to reinstall all your softs later without having to look for and manually install them one after another. It is a convenient way to move a server to a new machine.</p>
 <p>On Debian / Ubuntu, this is quite easy.</p>
 <p>A while ago the solution used to be :</p>
@@ -177,13 +183,13 @@ $ apt-get upgrade</pre>
 <pre>$ cat liste-apt.txt | xargs apt-get install -y</pre>
 <p>So far, it worked very well on my servers ! APT is a great tool.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/07/29/how-to-dupplicate-your-packages-selection.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/07/29/how-to-dupplicate-your-packages-selection.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Compiz Fusion : Debian / Ubuntu repositories</title>
-		<link>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html</link>
-		<comments>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html#comments</comments>
+		<link>/2007/07/27/compiz-fusion-debian-repositories.html</link>
+		<comments>/2007/07/27/compiz-fusion-debian-repositories.html#comments</comments>
 		<pubDate>Fri, 27 Jul 2007 18:21:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -192,6 +198,7 @@ $ apt-get upgrade</pre>
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=72</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=72</guid>
 		<description><![CDATA[Edit your source.list file with the following repositories : deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git Add the corresponding key with : $ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- &#124; sudo apt-key add - Compiz Fusion is really great and &#8211; so far &#8211; stable enough !]]></description>
 				<content:encoded><![CDATA[<p>Edit your source.list file with the following repositories :</p>
 <pre>deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git</pre>
@@ -199,13 +206,13 @@ $ apt-get upgrade</pre>
 <pre>$ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- | sudo apt-key add -</pre>
 <p>Compiz Fusion is really great and &#8211; so far &#8211;  stable enough !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/07/27/compiz-fusion-debian-repositories.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Switching from Ubuntu to OpenSuse</title>
-		<link>/blog-archive/2007/05/14/switching-from-ubuntu-to-opensuse.html</link>
-		<comments>/blog-archive/2007/05/14/switching-from-ubuntu-to-opensuse.html#comments</comments>
+		<link>/2007/05/14/switching-from-ubuntu-to-opensuse.html</link>
+		<comments>/2007/05/14/switching-from-ubuntu-to-opensuse.html#comments</comments>
 		<pubDate>Mon, 14 May 2007 19:50:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -268,15 +275,15 @@ On the other hand, I never tried Gentoo. I am sure that this is a great distribu
 <p style="margin-bottom: 0cm">So, globally, I am extremely satisfied with this OpenSuse and will certainly keep it for a while.</p>
 <p style="margin-bottom: 0cm">It is polished, light and fast. You feel you have a professional and user friendly OS, compared to Ubuntu where you need to spend more time for tweaking.</p>
 <p style="margin-bottom: 0cm">I recommand you to give it a try ! OpenSuse deserves to become as popular as Ubuntu for desktops and laptops.</p>
-<p style="margin-bottom: 0cm"><a hreflang="en" href="http://www.opensuse.org"><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/Opensuse_1.gif" alt="" width="110" height="32" /></a></p>
+<p style="margin-bottom: 0cm"><a hreflang="en" href="http://www.opensuse.org"><img style="margin: 0pt auto; display: block" src="/wp-content/uploads/2007/05/public/Opensuse_1.gif" alt="" width="110" height="32" /></a></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/05/14/switching-from-ubuntu-to-opensuse.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/05/14/switching-from-ubuntu-to-opensuse.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Slow performance in VMWARE using Ubuntu ?</title>
-		<link>/blog-archive/2006/12/06/slow-performance-in-vmware-using-ubuntu.html</link>
-		<comments>/blog-archive/2006/12/06/slow-performance-in-vmware-using-ubuntu.html#comments</comments>
+		<link>/2006/12/06/slow-performance-in-vmware-using-ubuntu.html</link>
+		<comments>/2006/12/06/slow-performance-in-vmware-using-ubuntu.html#comments</comments>
 		<pubDate>Wed, 06 Dec 2006 13:03:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -304,7 +311,7 @@ $ echo 3 &gt; /sys/module/processor/parameters/max_cstate</pre>
 <p>I found out the solution thanks to <a hreflang="en" href="http://www.thinkwiki.org/wiki/Problem_with_high_pitch_noises">this article</a>. Go there for more info or alternative solutions (including for different systems).</p>
 <p>I hope this will be helpful.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/06/slow-performance-in-vmware-using-ubuntu.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/06/slow-performance-in-vmware-using-ubuntu.html/feed</wfw:commentRss>
 		<slash:comments>19</slash:comments>
 		</item>
 	</channel>

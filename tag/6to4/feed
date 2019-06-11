@@ -9,8 +9,8 @@
 
 <channel>
 	<title>6to4 &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/6to4/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/6to4/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>IPv6 tunneling and security</title>
-		<link>/blog-archive/2009/11/04/ipv6-tunneling-and-security.html</link>
+		<link>/2009/11/04/ipv6-tunneling-and-security.html</link>
 		<pubDate>Wed, 04 Nov 2009 10:11:41 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -30,6 +30,7 @@
 		<category><![CDATA[Teredo]]></category>
 		<category><![CDATA[tunneling]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=492</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=492</guid>
 		<description><![CDATA[Interesting article to read about IPv6 tunneling and security aspects. The commends are worth reading too. Follow this link.]]></description>
 				<content:encoded><![CDATA[<p>Interesting article to read about IPv6 tunneling and security aspects. The commends are worth reading too.</p>

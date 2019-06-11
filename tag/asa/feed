@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Asa &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/asa/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/asa/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>FTP configuration issues</title>
-		<link>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html</link>
-		<comments>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html#comments</comments>
+		<link>/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html</link>
+		<comments>/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html#comments</comments>
 		<pubDate>Fri, 02 Nov 2007 16:10:28 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -33,7 +33,8 @@
 		<category><![CDATA[Pix]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=80</guid>
-		<description><![CDATA[I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0). The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server. static...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=80</guid>
+		<description><![CDATA[I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0). The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server. static...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0).</p>
 <p>The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server.</p>
 <pre>static (dmz,outside) &lt;public IP&gt; &lt;private_IP&gt; netmask 255.255.255.255</pre>
@@ -115,11 +116,11 @@ The active mode works, but it is thanks to the behaviour of VSFTP.</p>
 <p>This Gnome FTP client behave like the ftp command line client in passive mode : it falls into timeout.</p>
 <p>It doesn&#8217;t try by default to fail over active mode.</p>
 <p>You can configure either active mode or ignoring the passive command IP in the options :</p>
-<p><em><a title="gftp - ftp connexion parameters" href="/blog-archive/wp-content/uploads/2007/11/gftp-pasv.png" rel="lightbox[80]"><img src="/blog-archive/wp-content/uploads/2007/11/gftp-pasv.thumbnail.png" alt="gftp - ftp connexion parameters" /></a></em></p>
+<p><em><a title="gftp - ftp connexion parameters" href="/wp-content/uploads/2007/11/gftp-pasv.png" rel="lightbox[80]"><img src="/wp-content/uploads/2007/11/gftp-pasv.thumbnail.png" alt="gftp - ftp connexion parameters" /></a></em></p>
 <p><em><em><strong>Filezilla</strong></em></em></p>
 <p>Filezilla has the most interesting behaviour. When the standard passive mode fails, it is able to fail over by using active mode or using the public IP seen from the server.</p>
 <p>This can be configured in the connexion options :</p>
-<p><em><a title="filezilla connexion parameters" href="/blog-archive/wp-content/uploads/2007/11/filezilla.png" rel="lightbox[80]"><img src="/blog-archive/wp-content/uploads/2007/11/filezilla.thumbnail.png" alt="filezilla connexion parameters" /></a></em></p>
+<p><em><a title="filezilla connexion parameters" href="/wp-content/uploads/2007/11/filezilla.png" rel="lightbox[80]"><img src="/wp-content/uploads/2007/11/filezilla.thumbnail.png" alt="filezilla connexion parameters" /></a></em></p>
 <p>When Filezilla uses the public IP address instead of the transmitted one :</p>
 <pre> PASV
 227 Entering Passive Mode (10,1,1,1,15,209)
@@ -140,7 +141,7 @@ LIST
 <p>If anyone has some better ideas, or see I fooled somewhere before my conclusion, please let me know.</p>
 <p>But anyway, really, FTP sucks. It is anoying that the use of this protocol is still required by some companies.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>mtab &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mtab/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mtab/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>/etc/mtab~ issue at startup</title>
-		<link>/blog-archive/2009/02/01/etcmtab-issue-at-startup.html</link>
-		<comments>/blog-archive/2009/02/01/etcmtab-issue-at-startup.html#comments</comments>
+		<link>/2009/02/01/etcmtab-issue-at-startup.html</link>
+		<comments>/2009/02/01/etcmtab-issue-at-startup.html#comments</comments>
 		<pubDate>Sun, 01 Feb 2009 18:20:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[mtab]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=321</guid>
-		<description><![CDATA[I don&#8217;t know how it really happened &#8211; probably a VMWare crash that locked my file system, but after a reboot I got this message at startup : Cannot create link /etc/mtab~ Perhaps there is a stale lock file? As a result, some of the partitions were not mounted and the system was pretty much...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/02/01/etcmtab-issue-at-startup.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=321</guid>
+		<description><![CDATA[I don&#8217;t know how it really happened &#8211; probably a VMWare crash that locked my file system, but after a reboot I got this message at startup : Cannot create link /etc/mtab~ Perhaps there is a stale lock file? As a result, some of the partitions were not mounted and the system was pretty much...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/02/01/etcmtab-issue-at-startup.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I don&#8217;t know how it really happened &#8211; probably a VMWare crash that locked my file system, but after a reboot I got this message at startup :</p>
 <pre>Cannot create link /etc/mtab~
 Perhaps there is a stale lock file?</pre>
@@ -40,7 +41,7 @@ Perhaps there is a stale lock file?</pre>
 <pre>$ mount -a</pre>
 <p>If it is alright, reboot and it should be fine.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/02/01/etcmtab-issue-at-startup.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/02/01/etcmtab-issue-at-startup.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

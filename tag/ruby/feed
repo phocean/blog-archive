@@ -9,8 +9,8 @@
 
 <channel>
 	<title>ruby &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ruby/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ruby/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>The joy of dependencies: Metasploit on Fedora 20</title>
-		<link>/blog-archive/2014/02/23/metasploit-on-fedora-20.html</link>
-		<comments>/blog-archive/2014/02/23/metasploit-on-fedora-20.html#comments</comments>
+		<link>/2014/02/23/metasploit-on-fedora-20.html</link>
+		<comments>/2014/02/23/metasploit-on-fedora-20.html#comments</comments>
 		<pubDate>Sun, 23 Feb 2014 21:56:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -31,9 +31,10 @@
 		<category><![CDATA[ruby]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1934</guid>
-		<description><![CDATA[UPDATE 02/2015 : see there for the procedure on Fedora 21 As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all security features enabled, I had the bad surprise to get similar issues to those on OS X. Again, we will have to face the joy of dependencies! Fedora...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/02/23/metasploit-on-fedora-20.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;">UPDATE 02/2015 : see <a href="/blog-archive/2015/02/10/installation-of-metasploit-on-fedora-21.html">there</a> for the procedure on Fedora 21</span></em></p>
-<p>As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all <a href="http://https://fedoraproject.org/wiki/Security_Features?rd=Security/Features">security features enabled</a>, I had the bad surprise to get similar issues to <a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">those on OS X</a>.<br />
+		<guid isPermaLink="false">http://www.phocean.net/?p=1934</guid>
+		<description><![CDATA[UPDATE 02/2015 : see there for the procedure on Fedora 21 As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all security features enabled, I had the bad surprise to get similar issues to those on OS X. Again, we will have to face the joy of dependencies! Fedora...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2014/02/23/metasploit-on-fedora-20.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p><em><span style="color: #ff0000;">UPDATE 02/2015 : see <a href="/2015/02/10/installation-of-metasploit-on-fedora-21.html">there</a> for the procedure on Fedora 21</span></em></p>
+<p>As I started to use Fedora 20 at work &#8211; by the way, a solid distro with all <a href="http://https://fedoraproject.org/wiki/Security_Features?rd=Security/Features">security features enabled</a>, I had the bad surprise to get similar issues to <a href="/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">those on OS X</a>.<br />
 Again, we will have to face the joy of dependencies! Fedora provides Ruby 2.0 by default, so firing <code>msfconsole</code> would fail with many openssl warnings, ending with:</p>
 <p><span id="more-1934"></span></p>
 <pre>/usr/share/ruby/openssl/cipher.rb:61:in `': superclass mismatch for class Cipher (TypeError)
@@ -109,13 +110,13 @@ db_status</pre>
 <pre># msfupdate every 2 hours
 0 */2 * * * root /opt/msf/msfupdate 2&gt;&amp;1</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2014/02/23/metasploit-on-fedora-20.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2014/02/23/metasploit-on-fedora-20.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 		<item>
 		<title>Installing Metasploit on Mac OS X [Mountain Lion]</title>
-		<link>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html</link>
-		<comments>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html#comments</comments>
+		<link>/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html</link>
+		<comments>/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html#comments</comments>
 		<pubDate>Sun, 05 May 2013 17:08:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Mac OS]]></category>
@@ -128,7 +129,8 @@ db_status</pre>
 		<category><![CDATA[zsh]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1571</guid>
-		<description><![CDATA[It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few good tutorials already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences. Getting Metasploit First, let&#8217;s fetch Metasploit. Adjust...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1571</guid>
+		<description><![CDATA[It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few good tutorials already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences. Getting Metasploit First, let&#8217;s fetch Metasploit. Adjust...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><!--StartFragment-->It happened to me a little more complex than expected, so I thought it would deserve a post. There are a few <a href="http://www.darkoperator.com/installing-metasploit-in-ubunt/">good</a> <a href="http://briancanfixit.blogspot.fr/2011/12/setting-up-metasploit-and-armitage-on.html">tutorials</a> already, but they actually did not work flawlessly for me. So while this post is mostly based on them, there are some slight differences.</p>
 <h1>Getting Metasploit</h1>
 <p>First, let&#8217;s fetch Metasploit. Adjust the last two lines by replacing <code>.zshrc</code> (I am using Zsh) with <code>.bash_profile</code> if you are using Bash, for instance.</p>
@@ -225,7 +227,7 @@ ruby extconf.rb &amp;&amp; make &amp;&amp; make install</pre>
 </ul>
 <p><!--EndFragment--></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/05/05/installing-metasploit-on-os-x-mountain-lion.html/feed</wfw:commentRss>
 		<slash:comments>15</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>mac address &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mac-address/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mac-address/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Quick tip: harden your ARP table the easy way (Linux)</title>
-		<link>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
-		<comments>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
+		<link>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html</link>
+		<comments>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html#comments</comments>
 		<pubDate>Fri, 14 Aug 2015 20:52:05 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[NetworkManager]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
-		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2041</guid>
+		<description><![CDATA[ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc. Yet, most networks do not have port security and ARP inspect on...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>ARP spoofing is a good old attack on LAN and still a devastating one, leading to trafic interception (MiTM). You may want to make sure that nobody is tricking on you at office, at a security conference, at you local coffee shop, etc.</p>
 <p>Yet, most networks do not have port security and ARP inspect on their switches to mitigate such attacks. So you have to count on yourself.</p>
 <p>Most people know how to protect a client , e.g. by maintaining a static mapping of MAC / IP addresses on the operating systems. But almost no one does it, because it would be a pain to manage&#8230;</p>
@@ -61,7 +62,7 @@
 <p>But, let me stress it out once more, to be sure you don&#8217;t get me wrong :</p>
 <p><strong><span style="color: #ff0000;">Despite an enhancement, this is no a sufficient protection and you may still get pwned ! Authentication and encryption MUST also come into the play, so use only TLS enabled services, HTTPS sites and, ideally, a good IPSEC / SSH / TLS tunnel to carry ALL of your traffic !</span></strong></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

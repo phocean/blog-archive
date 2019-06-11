@@ -9,8 +9,8 @@
 
 <channel>
 	<title>hal &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/hal/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/hal/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>get rid off ConsoleKit / Dbus / Hal stuff on a server</title>
-		<link>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html</link>
-		<comments>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html#comments</comments>
+		<link>/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html</link>
+		<comments>/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html#comments</comments>
 		<pubDate>Mon, 04 Oct 2010 20:41:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[service]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=915</guid>
-		<description><![CDATA[Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing. Unfortunately, they are settled with the default...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=915</guid>
+		<description><![CDATA[Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing. Unfortunately, they are settled with the default...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Console-Kit spawns 35 threads on my system, which is a waste considering that I use at most 7 vty. But it is definitely useless on a server (you don&#8217;t need fast switching stuff). Dbus and Hal are also not useful on a server and consuming resources for nothing.</p>
 <p>Unfortunately, they are settled with the default basic installation and they have some dependencies (e.g the kernel and zypper) that make them impossible to simply uninstall .</p>
 <p>Here is a way to at least deactivate these services at startup on openSUSE 11.2 (it might also work with 11.3).</p>
@@ -72,13 +73,13 @@
 <p>Bingo! I didn&#8217;t monitor the memory precisely, but I believe I saved around 50 MB, which is always welcomed on a small server.</p>
 <p>I don&#8217;t know if it is the best way &#8211; I may have missed something &#8211; however I am pretty happy as it now works as I wanted. Please let me know if you have a better tip.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/10/04/get-rid-off-consolekit-dbus-hal-stuff-on-a-server.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Automatic backup when inserting a drive</title>
-		<link>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
-		<comments>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
+		<link>/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
+		<comments>/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
 		<pubDate>Mon, 28 Sep 2009 09:34:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -91,7 +92,8 @@
 		<category><![CDATA[udev]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
-		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
+		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work.</p>
 <p>Being lazy, it happened that I did not backup my data. Yes, it is a shame, but inserting a drive and launching the commands to rsync the discs was preventing me from this best practice.</p>
 <p>So, I decided to make it automatic. The goal was that the only thing I would have to do would be to insert the drive, and then remove it when it is done.</p>
@@ -172,7 +174,7 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 <p>That&#8217;s all for today folks. Let me know if there are some things not clear or that can be optimized.</p>
 <p>Next time, we will see how to run the same script from <strong>Hal</strong> instead. We will also use Zenity to get a nice GUI prompt when the disk is inserted.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

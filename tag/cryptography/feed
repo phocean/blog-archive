@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Cryptography &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/cryptography/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/cryptography/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>ESFS, new perspectives for stenography ?</title>
-		<link>/blog-archive/2011/01/14/esfs-new-perspectives-for-stenography.html</link>
+		<link>/2011/01/14/esfs-new-perspectives-for-stenography.html</link>
 		<pubDate>Fri, 14 Jan 2011 21:43:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[stenography]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=952</guid>
-		<description><![CDATA[Tomas Touceda advertised a new project on Full Disclosure. The idea sounds good, so I will keep an eye on this very interesting project. Though I would like to know more about the methods that were used for encryption and stenography. Code and explanations are on the ESFS project homepage. Beyond the pratical usage, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/14/esfs-new-perspectives-for-stenography.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=952</guid>
+		<description><![CDATA[Tomas Touceda advertised a new project on Full Disclosure. The idea sounds good, so I will keep an eye on this very interesting project. Though I would like to know more about the methods that were used for encryption and stenography. Code and explanations are on the ESFS project homepage. Beyond the pratical usage, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/01/14/esfs-new-perspectives-for-stenography.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Tomas Touceda advertised a new project on Full Disclosure.<br />
 The idea sounds good, so I will keep an eye on this very interesting project.<br />
 Though I would like to know more about the methods that were used for encryption and stenography.</p>
@@ -44,8 +45,8 @@ to know where you actually have data, and if you really do.</p></blockquote>
 			</item>
 		<item>
 		<title>Beware of source code (even from your favorite portal/forum/&#8230;)</title>
-		<link>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
-		<comments>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
+		<link>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
+		<comments>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
 		<pubDate>Sat, 24 Apr 2010 12:14:04 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -64,7 +65,8 @@ to know where you actually have data, and if you really do.</p></blockquote>
 		<category><![CDATA[social engineering]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
-		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
+		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The other day I stumbed upon a weired piece of software on <a title="Howtoforge.com" href="http://howtoforge.com" target="_blank">howtoforge.com</a> : <a title="dns-add" href="http://www.howtoforge.com/adding-dns-servers-in-one-step-with-dns-add" target="_blank">dns-add</a> (code <a title="Sourceforge dns-add" href="http://sourceforge.net/projects/isp-fw/files/DNS-add/" target="_blank">on sourceforge.net</a>).</p>
 <p>Actually, the purpose of dns-add was very intriguing : update your DNS in one command !</p>
 <p>The output should look like this:</p>
@@ -266,14 +268,14 @@ If you really have to use code from an untrusted source, check it, or wait for t
 <p><strong><span style="color: #ff0000;"><em><span style="color: #ff0000;">* Update *</span></em></span></strong></p>
 <p><em><span style="color: #993300;">I did contact the author and didn't get any answer.<br />
 I reported the issue to Sourceforge, which deleted the account hosting dns-add, as it violated the website policies.</span></em></p>
-<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/blog-archive/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
+<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>SHA-1 vulnerable : consider SHA-2</title>
-		<link>/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
+		<link>/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
 		<pubDate>Sun, 10 May 2009 07:58:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -287,8 +289,9 @@ I reported the issue to Sourceforge, which deleted the account hosting dns-add, 
 		<category><![CDATA[SHA-3]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
-		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
+		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
 <p>Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211; and so the integrity &#8211; of the hashed object.</p>
 <p>There are a few ressources :</p>
 <ul>
@@ -297,7 +300,7 @@ I reported the issue to Sourceforge, which deleted the account hosting dns-add, 
 </ul>
 <p>This is the natural evolution of cryptography. Stronger cryptography is required against stronger CPU power. In this race, it is now suggested to migrate to SHA-2 whose digest lenghts range from 224 to 512 bits (instead of 160 bits for SHA-1). And until next time, where we will be urged to migrate to <a title="SHA-3" href="http://csrc.nist.gov/groups/ST/hash/sha-3/index.html" target="_blank">SHA-3</a> ;)</p>
 <p>Debian, whose infrastructure was based on SHA-1 (package management, development) is quickly migrating all its keys right now. The <a title="Debian pgp upgrade procedure" href="http://www.debian-administration.org/users/dkg/weblog/48" target="_blank">procedure</a> the Debian people should follow implies a transition period, where the new key will be signed with the former key, until the latter is revoked. Thus until all peers are updated too, to avoid breaking all the signing infrastruture.</p>
-<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/blog-archive/pgp_key.txt">my new key</a> here or linked from the <a href="/blog-archive/contact-me" target="_self">contact page</a>.</p>
+<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/pgp_key.txt">my new key</a> here or linked from the <a href="/contact-me" target="_self">contact page</a>.</p>
 ]]></content:encoded>
 			</item>
 	</channel>

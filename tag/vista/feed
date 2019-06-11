@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Vista &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/vista/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/vista/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Solutions Linux 2007 : Tux vs Vista Car</title>
-		<link>/blog-archive/2007/02/01/solutions-linux-2007-tux-vs-vista-car.html</link>
+		<link>/2007/02/01/solutions-linux-2007-tux-vs-vista-car.html</link>
 		<pubDate>Thu, 01 Feb 2007 11:28:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -32,10 +32,10 @@
 				<content:encoded><![CDATA[<p>I couldn&#8217;t have much free time this year, but I quickly stopped by the Solution Linux show of Paris, La Defense. It was the first time for me.</p>
 <p><span id="more-19"></span></p>
 <p>Unfortunately, I could not attend any conference, but I had a quick and nice view of the exhibition.  All the major actors were there and I had a good time talking with some people about the trends.</p>
-<p><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/solution%20linux/P1300004.JPG" alt="" width="240" height="320" /></p>
+<p><img style="margin: 0pt auto; display: block" src="/wp-content/uploads/2007/05/public/solution%20linux/P1300004.JPG" alt="" width="240" height="320" /></p>
 <p>It was fun to see that Microsoft was there in small stand. But more fun was that there were turning around in small cars, just in front of the building of Linux Solutions.</p>
 <p>Here are the Vista vehicules :</p>
-<p><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/solution%20linux/P1300003.JPG" alt="" width="320" height="240" /></p>
+<p><img style="margin: 0pt auto; display: block" src="/wp-content/uploads/2007/05/public/solution%20linux/P1300003.JPG" alt="" width="320" height="240" /></p>
 <p>Beside that, it was great to learn the news that a french car makers, Peugeot, will swith 20 000 of its PC and 2500 of its server to the Novell Linux solution.</p>
 <p>It seems that times are changing&#8230; and I am sure that shiny marketing won&#8217;t change anything !</p>
 ]]></content:encoded>

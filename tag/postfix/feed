@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Postfix &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/postfix/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/postfix/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Postfix : TLS not working outside my network</title>
-		<link>/blog-archive/2008/06/11/postfix-tls-not-working-outside-my-network.html</link>
+		<link>/2008/06/11/postfix-tls-not-working-outside-my-network.html</link>
 		<pubDate>Tue, 10 Jun 2008 23:37:28 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,15 +31,21 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=110</guid>
-		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=110</guid>
+		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
+		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network.</p>
 <p>What I got from my lan :</p>
 <pre>$ telnet mars 25
 Trying 192.168.222.10...
 Connected to phocean.net.
+Connected to phocean.net.
 Escape character is '^]'.
 220 phocean.net ESMTP Postfix (Debian/GNU)
+220 phocean.net ESMTP Postfix (Debian/GNU)
 ehlo phocean.net
+ehlo phocean.net
+250-phocean.net
 250-phocean.net
 250-PIPELINING
 250-SIZE 200000000
@@ -53,10 +59,13 @@ ehlo phocean.net
 <p>I shows well that the TLS handshake is initiated.</p>
 <p>But from this outside, I just got this weired thing :</p>
 <pre>$ telnet phocean.net 25
+<pre>$ telnet phocean.net 25
 Trying 81.64.194.119...
+Connected to phocean.net.
 Connected to phocean.net.
 Escape character is '^]'.
 220 **********************************************
+ehlo phocean.net
 ehlo phocean.net
 502 5.5.2 Error: command not recognized</pre>
 <p>Of course, the firewall, a Cisco Pix one, was properly set to redirect port 25 UDP/TCP to my server.</p>
@@ -75,8 +84,8 @@ fixup protocol smtp 25
 			</item>
 		<item>
 		<title>Postfix : &#8220;error writing message: File too large&#8221;</title>
-		<link>/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html</link>
-		<comments>/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html#comments</comments>
+		<link>/2008/06/01/postfix-error-writing-message-file-too-large.html</link>
+		<comments>/2008/06/01/postfix-error-writing-message-file-too-large.html#comments</comments>
 		<pubDate>Sun, 01 Jun 2008 21:13:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[System]]></category>
@@ -85,7 +94,8 @@ fixup protocol smtp 25
 		<category><![CDATA[SMTP]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=108</guid>
-		<description><![CDATA[I suddenly started to received some undelivered mail notifications while I was trying to send some messages to a mailbox hosted on my Postfix server. The cause described in the notification was : error writing message: File too large The first thing I did was checking my configuration file, main.cf. It seemed all right :...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=108</guid>
+		<description><![CDATA[I suddenly started to received some undelivered mail notifications while I was trying to send some messages to a mailbox hosted on my Postfix server. The cause described in the notification was : error writing message: File too large The first thing I did was checking my configuration file, main.cf. It seemed all right :...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/01/postfix-error-writing-message-file-too-large.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I suddenly started to received some undelivered mail notifications while I was trying to send some messages to a mailbox hosted on my Postfix server.</p>
 <p>The cause described in the notification was :</p>
 <pre>error writing message: File too large</pre>
@@ -103,12 +113,12 @@ I tried different values without success.</p>
 <pre>virtual_mailbox_limit = 0</pre>
 <p>Indeed, I use virtual users as mail account ! I just never imagined there was a differtent setting for virtual users (which can be a convenient setting in some case).</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/01/postfix-error-writing-message-file-too-large.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/01/postfix-error-writing-message-file-too-large.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Hostname issue with Postfix Webmin module</title>
-		<link>/blog-archive/2007/01/12/hostname-issue-with-postfix-webmin-module.html</link>
+		<link>/2007/01/12/hostname-issue-with-postfix-webmin-module.html</link>
 		<pubDate>Fri, 12 Jan 2007 18:38:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -133,6 +143,7 @@ There are several possibilities.</p>
 <p><span lang="EN-GB">If so, check that <strong>/etc/mailname</strong> contains your machine name, as /etc/hosts do.</span></p>
 <p>Finally, also check that in <span lang="EN-GB"><strong>/etc/postfix/main.cf</strong>, the <strong>myhostname</strong> field is correct :<br />
 </span></p>
+<pre>myhostname = mail.phocean.net</pre>
 <pre>myhostname = mail.phocean.net</pre>
 <p>If you made any change in main.cf, restart postfix and that should be fine !</p>
 ]]></content:encoded>

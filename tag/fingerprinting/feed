@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Fingerprinting &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/fingerprinting/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/fingerprinting/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>waf00f</title>
-		<link>/blog-archive/2009/12/16/waf00f.html</link>
+		<link>/2009/12/16/waf00f.html</link>
 		<pubDate>Wed, 16 Dec 2009 22:40:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -33,6 +33,7 @@
 		<category><![CDATA[waf00f]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
 		<description><![CDATA[waf00f is another nice fingerprinting tool. It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls. Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out. Check it there.]]></description>
 				<content:encoded><![CDATA[<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
 It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
@@ -42,7 +43,7 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 			</item>
 		<item>
 		<title>Promiscuous mode detection</title>
-		<link>/blog-archive/2009/06/01/promiscuous-mode-detection.html</link>
+		<link>/2009/06/01/promiscuous-mode-detection.html</link>
 		<pubDate>Mon, 01 Jun 2009 18:46:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -57,7 +58,8 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 		<category><![CDATA[Sniffing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
-		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
+		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Detectpromisc" href="http://detectpromisc.sourceforge.net/index.html" target="_blank">Detectpromisc</a> is a python script based on Scapy, that allows to detect if a computer is sniffing the network.</p>
 <p>By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself.</p>
 <p>There are however several methods that make the detection possible.</p>
@@ -87,8 +89,8 @@ probably: Windows 2k/NT4</pre>
 			</item>
 		<item>
 		<title>Prads &#8211; a new passive scanner !</title>
-		<link>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html</link>
-		<comments>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html#comments</comments>
+		<link>/2009/05/31/prads-a-new-passive-scanner.html</link>
+		<comments>/2009/05/31/prads-a-new-passive-scanner.html#comments</comments>
 		<pubDate>Sun, 31 May 2009 21:19:47 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -98,7 +100,8 @@ probably: Windows 2k/NT4</pre>
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=369</guid>
-		<description><![CDATA[Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called Prads. Prads is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out. Prads operates differently from Nmap or SinFP that I already...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/31/prads-a-new-passive-scanner.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=369</guid>
+		<description><![CDATA[Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called Prads. Prads is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out. Prads operates differently from Nmap or SinFP that I already...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/31/prads-a-new-passive-scanner.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called <strong>Prads</strong>.</p>
 <p><a title="Prads" href="http://gamelinux.github.com/prads/" target="_blank">Prads</a> is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out.</p>
 <p>Prads operates differently from Nmap or SinFP that I already introduced on this blog. It works passively, meaning that it aims to scan systems without sending out a single packet. It does this by capturing the traffic silently though an interface in promiscuous mode.<br />
@@ -142,7 +145,7 @@ Finally, there is a little incoherence between the distance shown for the DNS se
 <p>As it is in its early stage, it is very promising and I am looking forward to Prads and its signature database improving. Please keep up the good job !</p>
 <p>That&#8217;s all for today. This tour was short but I will write again about this tool, as I will be using it. The next post will probably introduce the way the signature database is built and how it can be extended. So keep wired and don&#8217;t forget to check the <a href="http://gamelinux.github.com/prads/">Prads homepage</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/05/31/prads-a-new-passive-scanner.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Identity &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/identity/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/identity/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>bugmenot.com</title>
-		<link>/blog-archive/2010/03/08/bugmenot-com.html</link>
+		<link>/2010/03/08/bugmenot-com.html</link>
 		<pubDate>Mon, 08 Mar 2010 19:34:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Privacy]]></category>
@@ -27,7 +27,8 @@
 		<category><![CDATA[Identity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=731</guid>
-		<description><![CDATA[I just discovered the BugMeNot service today. It offers a database of logins shared by the community to login to free websites that require free registration. This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/03/08/bugmenot-com.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=731</guid>
+		<description><![CDATA[I just discovered the BugMeNot service today. It offers a database of logins shared by the community to login to free websites that require free registration. This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/03/08/bugmenot-com.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just discovered the <a title="BugMeNot" href="http://www.bugmenot.com/" target="_blank">BugMeNot</a> service today.</p>
 <p>It offers a database of logins shared by the community to login to free websites that require free registration.</p>
 <p>This is usually annoying to subscribe to such a website just to download a freeware or read an article, and it often makes people choose unsecured or random logins.</p>

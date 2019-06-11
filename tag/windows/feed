@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Windows &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/windows/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/windows/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Password stealing using a password filter</title>
-		<link>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html</link>
-		<comments>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html#comments</comments>
+		<link>/2013/10/02/password-stealing-using-a-password-filter.html</link>
+		<comments>/2013/10/02/password-stealing-using-a-password-filter.html#comments</comments>
 		<pubDate>Wed, 02 Oct 2013 09:12:31 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -36,13 +36,14 @@
 		<category><![CDATA[visual studio]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1736</guid>
-		<description><![CDATA[Nice stuff from @mubix: the technic consists in injecting a DLL to lsass.exe, using the password filter feature of Windows. The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity. Microsoft...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1736</guid>
+		<description><![CDATA[Nice stuff from @mubix: the technic consists in injecting a DLL to lsass.exe, using the password filter feature of Windows. The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity. Microsoft...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/10/02/password-stealing-using-a-password-filter.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a href="http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html">Nice stuff</a> from <a href="https://twitter.com/mubix">@mubix</a>: the technic consists in injecting a DLL to <code>lsass.exe</code>, using the <em>password filter</em> feature of Windows.</p>
 <p>The password filter architecture is useful to check that a password is compliant with the system security policy. It will typically check that when a user changes his password, it follows the required complexity.</p>
 <p>Microsoft opened the API so that users can extend the functionality with their own filters.</p>
 <p>Mubix diverted this API by developing a password logger: the DLL just logs the password both on the disk and a remote server,  and does nothing else.</p>
 <p>A perfect way to maintain a persistent access… I tested it:</p>
-<div id="attachment_1738" style="width: 635px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14.png" rel="lightbox[1736]"><img class="size-large wp-image-1738" alt="Evilpassfilter exploitation process" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14-940x587.png" width="625" height="390" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_14-940x587.png 940w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_14-580x362.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_14-624x389.png 624w" sizes="(max-width: 625px) 100vw, 625px" /></a><p class="wp-caption-text">Evilpassfilter exploitation process</p></div>
+<div id="attachment_1738" style="width: 635px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_14.png" rel="lightbox[1736]"><img class="size-large wp-image-1738" alt="Evilpassfilter exploitation process" src="/wp-content/uploads/2013/10/CapturFiles_14-940x587.png" width="625" height="390" srcset="/wp-content/uploads/2013/10/CapturFiles_14-940x587.png 940w, /wp-content/uploads/2013/10/CapturFiles_14-580x362.png 580w, /wp-content/uploads/2013/10/CapturFiles_14-624x389.png 624w" sizes="(max-width: 625px) 100vw, 625px" /></a><p class="wp-caption-text">Evilpassfilter exploitation process</p></div>
 <ol>
 <li><code>Evilpassfilter.dll</code> is loaded into <code>lsass.exe</code></li>
 <li>A user updates his password</li>
@@ -62,26 +63,26 @@ EXPORTS
    PasswordChangeNotify</pre>
 </li>
 <li>In the project properties, make sure to select the appropriate architecture, matching with the one of your target.
-<p><div id="attachment_1745" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18.png" rel="lightbox[1736]"><img class="size-medium wp-image-1745" alt="Selecting the compilation target architecture (win32/x64)" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18-580x133.png" width="580" height="133" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_18-580x133.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_18-624x143.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_18.png 725w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Selecting the compilation target architecture (win32/x64)</p></div></li>
+<p><div id="attachment_1745" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_18.png" rel="lightbox[1736]"><img class="size-medium wp-image-1745" alt="Selecting the compilation target architecture (win32/x64)" src="/wp-content/uploads/2013/10/CapturFiles_18-580x133.png" width="580" height="133" srcset="/wp-content/uploads/2013/10/CapturFiles_18-580x133.png 580w, /wp-content/uploads/2013/10/CapturFiles_18-624x143.png 624w, /wp-content/uploads/2013/10/CapturFiles_18.png 725w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Selecting the compilation target architecture (win32/x64)</p></div></li>
 <li>In the input settings of the link editor, add wininet.lib as additional dependancy.</li>
 <li>Also add <code>Evilpassfilter.def</code> as module definition file.
-<p><div id="attachment_1743" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16.png" rel="lightbox[1736]"><img class="size-medium wp-image-1743" alt="Evilpassfilter Visual Studio settings" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16-580x413.png" width="580" height="413" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_16-580x413.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_16-624x444.png 624w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_16.png 859w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Evilpassfilter Visual Studio settings</p></div></li>
+<p><div id="attachment_1743" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_16.png" rel="lightbox[1736]"><img class="size-medium wp-image-1743" alt="Evilpassfilter Visual Studio settings" src="/wp-content/uploads/2013/10/CapturFiles_16-580x413.png" width="580" height="413" srcset="/wp-content/uploads/2013/10/CapturFiles_16-580x413.png 580w, /wp-content/uploads/2013/10/CapturFiles_16-624x444.png 624w, /wp-content/uploads/2013/10/CapturFiles_16.png 859w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Evilpassfilter Visual Studio settings</p></div></li>
 <li>In the source code, fix line 72: <code>return;</code> &#8211;&gt; <code>return 1;</code></li>
 <li>Now you should be able to compile the library. You may want to make sure that the DLL is valid and integrated the exports (open it with IDA or a PE tool):
-<p><div id="attachment_1741" style="width: 913px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png" rel="lightbox[1736]"><img class="size-full wp-image-1741" alt="Evilpassfilter.dll exports seen in IDA" src="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png" width="903" height="226" srcset="/blog-archive/wp-content/uploads/2013/10/CapturFiles_19.png 903w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_19-580x145.png 580w, /blog-archive/wp-content/uploads/2013/10/CapturFiles_19-624x156.png 624w" sizes="(max-width: 903px) 100vw, 903px" /></a><p class="wp-caption-text">Evilpassfilter.dll exports seen in IDA</p></div></li>
+<p><div id="attachment_1741" style="width: 913px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/10/CapturFiles_19.png" rel="lightbox[1736]"><img class="size-full wp-image-1741" alt="Evilpassfilter.dll exports seen in IDA" src="/wp-content/uploads/2013/10/CapturFiles_19.png" width="903" height="226" srcset="/wp-content/uploads/2013/10/CapturFiles_19.png 903w, /wp-content/uploads/2013/10/CapturFiles_19-580x145.png 580w, /wp-content/uploads/2013/10/CapturFiles_19-624x156.png 624w" sizes="(max-width: 903px) 100vw, 903px" /></a><p class="wp-caption-text">Evilpassfilter.dll exports seen in IDA</p></div></li>
 <li>Copy the resulting DLL to the <code>system32</code> folder.</li>
 <li>Open regedit <code>HKLM\System\CurrentControlSet\Control\Lsa</code><br />
 and add <code>Evilpassfilter</code> to the <code>Notification Packages</code></li>
 </ul>
 <p>Reboot and… now you should know what to do next :-)</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/10/02/password-stealing-using-a-password-filter.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/10/02/password-stealing-using-a-password-filter.html/feed</wfw:commentRss>
 		<slash:comments>18</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab? (Part III)</title>
-		<link>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
-		<comments>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
+		<link>/2012/07/22/rootkit-in-my-lab-part-iii.html</link>
+		<comments>/2012/07/22/rootkit-in-my-lab-part-iii.html#comments</comments>
 		<pubDate>Sun, 22 Jul 2012 07:48:06 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -100,8 +101,9 @@ and add <code>Evilpassfilter</code> to the <code>Notification Packages</code></l
 		<category><![CDATA[WinDBG]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
-		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1317</guid>
+		<description><![CDATA[First, thanks for all the comments in the previous articles (Part I and Part II). I decided to analyze one the crash I experienced during registry analysis. I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG. I had my environment set up...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/07/22/rootkit-in-my-lab-part-iii.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>First, thanks for all the comments in the previous articles (<a title="Rootkit in my lab ? (part I)" href="/2012/06/30/rootkit-in-my-lab.html">Part I</a> and <a title="Rootkit in my lab ? (part II)" href="/2012/07/11/rootkit-in-my-lab-part-ii.html">Part II</a>).</p>
 <p>I decided to analyze one the crash I experienced during registry analysis.<br />
 I could reproduce all the time a BSOD with Regshot. I thought it would be nice to see what I could get with WinDBG.</p>
 <p>I had my environment set up with the suspicious VM configured to debug activated on the serial port, which is a simple pipe on Mac OS X.<br />
@@ -112,15 +114,15 @@ Another method would be to just configure Windows to create a crashdump file wit
 <p>Windows then crashes, WinDBG catches the exception and stops.</p>
 <p>So what do we have ?</p>
 <p>First, the error type, <em><strong>PAGE_FAULT_IN_NONPAGED_AREA (50)</strong></em>, means that an instruction pointed to an invalid memory address. Let&#8217;s check this.</p>
-<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/blog-archive/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
-<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
+<p>With <em><strong>!analyse -v</strong></em>, you get the <a href="/wp-content/uploads/2012/07/regshot-BSOD.txt">full error dump</a>.</p>
+<div id="attachment_1331" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/07/WinXP-ReversingBox-2.png" rel="lightbox[1317]"><img class=" wp-image-1331 " title="Crashing Instruction" src="/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png" alt="" width="717" height="390" srcset="/wp-content/uploads/2012/07/WinXP-ReversingBox-2-1024x557.png 1024w, /wp-content/uploads/2012/07/WinXP-ReversingBox-2-300x163.png 300w, /wp-content/uploads/2012/07/WinXP-ReversingBox-2.png 1206w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">Crashing Instruction</p></div>
 <p>It shows the function (nt!CmpGetValueKeyFromCache, offset 0x89) and the memory address where the crash was triggered.</p>
 <p>The instruction at this address is:</p>
 <pre>80637807 f3a5 rep movs dword ptr es:[edi],dword ptr [esi]</pre>
 <p>This instruction is trying to copy 8 bytes at the address pointed by EDI.<br />
 EDI has the value of <strong>0xe1285050</strong> at execution time.</p>
 <p>And what do we have at this memory location ?</p>
-<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /blog-archive/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
+<div id="attachment_1333" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/07/WinXP-ReversingBox-3.png" rel="lightbox[1317]"><img class=" wp-image-1333 " title="EDI pointing to invalid memory section" src="/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png" alt="" width="717" height="470" srcset="/wp-content/uploads/2012/07/WinXP-ReversingBox-3-1024x671.png 1024w, /wp-content/uploads/2012/07/WinXP-ReversingBox-3-300x196.png 300w, /wp-content/uploads/2012/07/WinXP-ReversingBox-3.png 1394w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">EDI pointing to invalid memory section</p></div>
 <p>Nothing indeed. Note that this corruption persists at every boot.</p>
 <p>So what can we conclude?<br />
 We can certainly exclude hardware failure, because it is a virtual machine and because the corruption always occur at the same memory region, even after a reboot.<br />
@@ -129,13 +131,13 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>That&#8217;s all for today, folks. I wrote it while I am still working on it, so sorry if it looks rough and incomplete. It is sort of live, thoughts are still in process.</p>
 <p>Again, I am looking forward to reading your comments and suggestions. (Hopefully) there will be a part IV!</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/07/22/rootkit-in-my-lab-part-iii.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab? (part II)</title>
-		<link>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
-		<comments>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
+		<link>/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
+		<comments>/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
 		<pubDate>Wed, 11 Jul 2012 20:18:58 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -150,7 +152,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
-		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
+		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished checking the RAM with Volatility and&#8230; I found nothing. Nada.</p>
 <p>It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills.</p>
 <p>I attach here some of the main outputs of Volatility. As far as I can tell:</p>
@@ -161,30 +164,30 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <li>no suspicious registry entry</li>
 <li>etc.</li>
 </ul>
-<p>Based on <a title="Rootkit in my lab?" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
+<p>Based on <a title="Rootkit in my lab?" href="/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
 <p>Dear reader, any help or tip is welcomed! Am I missing something obvious? Could it be possibly not a rootkit but some kind of corruption? If so, how to detect it?</p>
 <p>Just drop me an e-mail if you want to have a look on the dump itself.</p>
 <p>Volatility outputs:</p>
 <ul>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/handles.txt">handles</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/idt.txt">idt</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
+<li><a href="/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
+<li><a href="/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
+<li><a href="/wp-content/uploads/2012/07/handles.txt">handles</a></li>
+<li><a href="/wp-content/uploads/2012/07/idt.txt">idt</a></li>
+<li><a href="/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
+<li><a href="/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
+<li><a href="/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
+<li><a href="/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
+<li><a href="/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
+<li><a href="/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
 		<slash:comments>8</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab?</title>
-		<link>/blog-archive/2012/06/30/rootkit-in-my-lab.html</link>
-		<comments>/blog-archive/2012/06/30/rootkit-in-my-lab.html#comments</comments>
+		<link>/2012/06/30/rootkit-in-my-lab.html</link>
+		<comments>/2012/06/30/rootkit-in-my-lab.html#comments</comments>
 		<pubDate>Sat, 30 Jun 2012 17:49:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -199,7 +202,8 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
-		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
+		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on.</p>
 <p>What makes the case really interesting though, is that it occurred on a fresh install of a Windows XP virtual machine. I aimed it to be a clean malware reversing snapshot. I noticed the weired behavior minutes after finishing the system install and setting up a bunch of reversing and live analysis tools.</p>
@@ -209,22 +213,22 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>Two things alerted me quickly.</p>
 <p>The first one was, at a point, the permanent failure of going through the full windows update process. Believe me, I have tried all ways.</p>
 <p>The second one was the weird dialog when trying to access to the keyboard layout settings. It says &#8220;<em><strong>Incompatible driver detected</strong></em>&#8220;. To me, this looks like there is a keylogger somewhere&#8230;</p>
-<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
+<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
 <p>Then, as I started to check around, more odd stuff came out.</p>
 <p>I fired up Process Explorer, and soon realize that it was &#8220;unable to verify&#8221; the signatures of all the running Windows processes. I could not find anything else suspicious, though (no odd process, memory content looks normal, etc.).</p>
-<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /blog-archive/wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
+<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
 <p>Ok, while I am with the Sysinternal suite, why not scanning with Rootkit Revealer:</p>
-<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
+<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
 <p>Interesting&#8230; and what about GMER:</p>
-<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
+<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
 <p>Oops! Now it crashes when it is accessing the registry&#8230;</p>
 <p>For the fun, let&#8217;s see what happens if we try to set up an antivirus (Security Essentials):</p>
-<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
+<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
 <p>Nice one! Very suspicious! Note that after a full scan, Security Essentials reports me that the system is clean and everything is fine. I am so relieved. :)</p>
 <p>Curious to see how my certificates are, I run <em><strong>certmgr.msc. </strong></em><strong></strong>I compared all Microsoft root certificates with a clean machine and could not see anything different. But again something happened:</p>
-<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
+<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
 <p>Oh, just one of my last attempts to do live analysis (this the WinPcap setup included with Wireshark):</p>
-<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
+<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
 <p>Ok, so enough played. The thing seems to be nicely done, and live analysis is going to be way too hard and unreliable.</p>
 <h2>Memory Analysis</h2>
 <p>This is where I am now. I reverted to a snapshot prior to my live analysis attemps, confirmed the strange behaviors are still observable, and suspended the VM to get the vmem file.</p>
@@ -234,12 +238,12 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 <p>My discoveries, if there are, will be published in another article.</p>
 <p><strong>UPDATE: I forgot to tell that it is a Windows XP SP3 machine, but not fully updated due to the issues.</strong></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 		<item>
 		<title>EMET: configure memory protection on Windows</title>
-		<link>/blog-archive/2010/09/25/emet-configure-memory-protection-on-windows.html</link>
+		<link>/2010/09/25/emet-configure-memory-protection-on-windows.html</link>
 		<pubDate>Sat, 25 Sep 2010 15:56:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -252,15 +256,16 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[SEHOP]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=911</guid>
-		<description><![CDATA[Microsoft published a nice tool named EMET (Enhanced Mitigation Experience Toolkit) whose purpose is to check and enforce the memory security policies such as ALSR and DEP. It shows and allows to configure the global settings, but also, and this is the most interesting part, indicated for each process running if it supports those security...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/09/25/emet-configure-memory-protection-on-windows.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=911</guid>
+		<description><![CDATA[Microsoft published a nice tool named EMET (Enhanced Mitigation Experience Toolkit) whose purpose is to check and enforce the memory security policies such as ALSR and DEP. It shows and allows to configure the global settings, but also, and this is the most interesting part, indicated for each process running if it supports those security...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/09/25/emet-configure-memory-protection-on-windows.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Microsoft published a nice tool named <a title="EMET" href="http://www.microsoft.com/downloads/en/confirmation.aspx?FamilyID=c6f0a6ee-05ac-4eb6-acd0-362559fd2f04" target="_blank">EMET</a> (Enhanced Mitigation Experience Toolkit) whose purpose is to check and enforce the memory security policies such as ALSR and DEP.</p>
 <p>It shows and allows to configure the global settings, but also, and this is the most interesting part, indicated for each process running if it supports those security measures. It is even able to enforce the protections for each application which would not support it natively (i.e. not set at compilation time).</p>
-<p style="text-align: center;"><img class="aligncenter" title="EMET" src="/blog-archive/wp-content/uploads/2010/09/EMET.png" alt="" width="640" height="360" /></p>
+<p style="text-align: center;"><img class="aligncenter" title="EMET" src="/wp-content/uploads/2010/09/EMET.png" alt="" width="640" height="360" /></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>ARPFreeze</title>
-		<link>/blog-archive/2009/06/08/arpfreeze.html</link>
+		<link>/2009/06/08/arpfreeze.html</link>
 		<pubDate>Mon, 08 Jun 2009 06:32:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -271,6 +276,7 @@ At least, I can now be sure that something in the kernel is definitely corrupted
 		<category><![CDATA[flooding]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=381</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=381</guid>
 		<description><![CDATA[ARPFreeze is a nice GUI for Windows that allows to configure static ARP entries very easily, and makes these changes persistent after reboot. Thus does it protect the client machine against ARP flooding. It works for both Windows Vista and prior versions (support of arp -s and netsh).]]></description>
 				<content:encoded><![CDATA[<p><a title="ARPFreeze" href="http://www.irongeek.com/i.php?page=security/arpfreeze-static-arp-poisoning" target="_blank">ARPFreeze</a> is a nice GUI for Windows that allows to configure static ARP entries very easily, and makes these changes persistent after reboot.<br />
 Thus does it protect the client machine against ARP flooding.</p>
@@ -279,8 +285,8 @@ Thus does it protect the client machine against ARP flooding.</p>
 			</item>
 		<item>
 		<title>Windows 7 UAC security design flaw</title>
-		<link>/blog-archive/2009/05/15/363.html</link>
-		<comments>/blog-archive/2009/05/15/363.html#comments</comments>
+		<link>/2009/05/15/363.html</link>
+		<comments>/2009/05/15/363.html#comments</comments>
 		<pubDate>Fri, 15 May 2009 14:48:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -292,24 +298,26 @@ Thus does it protect the client machine against ARP flooding.</p>
 		<category><![CDATA[Windows 7]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=363</guid>
-		<description><![CDATA[Video of a dummy vulnerability on Windows 7 . More info there. It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe). Also, I can&#8217;t imagine that no...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/15/363.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=363</guid>
+		<description><![CDATA[Video of a dummy vulnerability on Windows 7 . More info there. It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe). Also, I can&#8217;t imagine that no...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/15/363.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="WIndows 7 vulnerability" href="http://leo.lss.com.au/W7E_VID_INT/W7E_VID_INT.htm">Video of a dummy vulnerability</a> on Windows 7 . More <a title="Windows 7 UAC vulnerability" href="http://www.pretentiousname.com/misc/win7_uac_whitelist2.html" target="_blank">info there</a>.</p>
 <p>It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe).</p>
 <p>Also, I can&#8217;t imagine that no one could detect it in their teams during the quality process and security audit.</p>
 <p>What the hell are they doing ?</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/05/15/363.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/05/15/363.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Linux vs Windows benchmark</title>
-		<link>/blog-archive/2009/02/05/linux-vs-windows-benchmark.html</link>
+		<link>/2009/02/05/linux-vs-windows-benchmark.html</link>
 		<pubDate>Thu, 05 Feb 2009 20:12:43 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
 		<category><![CDATA[benchmark]]></category>
 		<category><![CDATA[Windows]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=331</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=331</guid>
 		<description><![CDATA[I found this benchmark, comparing the performance of Ubuntu, Windows Vista and 7 worth reading. Our Linux kernel does a great job !]]></description>
 				<content:encoded><![CDATA[<p>I found this <a href="http://www.tuxradar.com/node/33">benchmark</a>, comparing the performance of Ubuntu, Windows Vista and 7 worth reading.<br />
@@ -318,7 +326,7 @@ Our Linux kernel does a great job !</p>
 			</item>
 		<item>
 		<title>DecaffenatID : a little ARP IDS for Windows</title>
-		<link>/blog-archive/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
+		<link>/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
 		<pubDate>Wed, 27 Aug 2008 12:49:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -330,14 +338,15 @@ Our Linux kernel does a great job !</p>
 		<category><![CDATA[spoofing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
 		<description><![CDATA[DecaffeinatID is a tool for Windows that can be very useful against ARP attacks.]]></description>
 				<content:encoded><![CDATA[<p><a title="DecaffeinatID" href="http://www.irongeek.com/i.php?page=security/decaffeinatid-simple-ids-arpwatch-for-windows">DecaffeinatID</a> is a tool for Windows that can be very useful against ARP attacks.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Windows Vista memory protection : defeated ?</title>
-		<link>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html</link>
-		<comments>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
+		<link>/2008/08/08/windows-vista-memory-protection-defeated.html</link>
+		<comments>/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
 		<pubDate>Fri, 08 Aug 2008 15:44:45 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -347,12 +356,13 @@ Our Linux kernel does a great job !</p>
 		<category><![CDATA[memory injection]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
-		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
+		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>It seems, at least according to <a href="http://taossa.com/index.php/2008/08/07/impressing-girls-with-vista-memory-protection-bypasses/" target="_blank">some researchers showed it at the Black Hat conference</a>.</p>
 <p>Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk.</p>
 <p>Especially, <a href="http://taossa.com/archive/bh08sotirovdowd.pdf" target="_blank">this paper</a> will be an interesting reading, even if it is not as simple as they say &#8211; at least for me.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Book &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/book/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/book/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Books review</title>
-		<link>/blog-archive/2010/05/16/books-review.html</link>
+		<link>/2010/05/16/books-review.html</link>
 		<pubDate>Sun, 16 May 2010 16:16:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,17 +31,18 @@
 		<category><![CDATA[Review]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
-		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
+		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them.</p>
 <h4>Hacking: the next generation</h4>
-<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/blog-archive/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
+<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
 <p>The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc.<br />
 It was easy to read : the authors are straight to the point and their sentences are clear.</p>
 <p>I especially appreciated their state of art about XSS and CSRF attacks. It is certainly the best I have read so far, greatly illustrated with exciting and real case studies.</p>
 <p>On the other hand,  I quickly passed over the networking stuff (both wired and wireless). It was too basic and didn&#8217;t show anything new &#8211; maybe it is because I specialize in those fields.</p>
 <p>Anyway, globally, I strongly recommend this book. It is worth while your money if you want to know more on web attacks or to have a good overview of modern threats.</p>
 <h4>Beautiful Security</h4>
-<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/blog-archive/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
+<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
 <p>This is a collection of essays by some of the best security experts and hackers.</p>
 <p>Well, I won&#8217;t go around, I have been quite disappointed by this book. The overall lacks coherence and after a while you start wondering what this book is trying to demonstrate. At the end, there is a crual lack of connection between the essays and it globally makes it appear very confusing.</p>
 <p>It also sometimes lacks technical references and the writing style is too verbose, too literal for a technical book to be attractive.</p>

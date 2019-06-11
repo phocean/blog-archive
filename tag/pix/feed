@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Pix &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/pix/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/pix/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Postfix : TLS not working outside my network</title>
-		<link>/blog-archive/2008/06/11/postfix-tls-not-working-outside-my-network.html</link>
+		<link>/2008/06/11/postfix-tls-not-working-outside-my-network.html</link>
 		<pubDate>Tue, 10 Jun 2008 23:37:28 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,15 +31,21 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=110</guid>
-		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=110</guid>
+		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
+		<description><![CDATA[As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network. What I got from my lan : $ telnet mars 25 Trying 192.168.222.10... Connected to phocean.net. Escape character is '^]'. 220 phocean.net ESMTP Postfix (Debian/GNU) ehlo phocean.net 250-phocean.net...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/11/postfix-tls-not-working-outside-my-network.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As I just finished setting TLS and SASL to secure the access to my Postfix server, I realized that it was working only from inside my network.</p>
 <p>What I got from my lan :</p>
 <pre>$ telnet mars 25
 Trying 192.168.222.10...
 Connected to phocean.net.
+Connected to phocean.net.
 Escape character is '^]'.
 220 phocean.net ESMTP Postfix (Debian/GNU)
+220 phocean.net ESMTP Postfix (Debian/GNU)
 ehlo phocean.net
+ehlo phocean.net
+250-phocean.net
 250-phocean.net
 250-PIPELINING
 250-SIZE 200000000
@@ -53,10 +59,13 @@ ehlo phocean.net
 <p>I shows well that the TLS handshake is initiated.</p>
 <p>But from this outside, I just got this weired thing :</p>
 <pre>$ telnet phocean.net 25
+<pre>$ telnet phocean.net 25
 Trying 81.64.194.119...
+Connected to phocean.net.
 Connected to phocean.net.
 Escape character is '^]'.
 220 **********************************************
+ehlo phocean.net
 ehlo phocean.net
 502 5.5.2 Error: command not recognized</pre>
 <p>Of course, the firewall, a Cisco Pix one, was properly set to redirect port 25 UDP/TCP to my server.</p>
@@ -75,8 +84,8 @@ fixup protocol smtp 25
 			</item>
 		<item>
 		<title>How to connect to a Cisco device using the serial port on Linux</title>
-		<link>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
-		<comments>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
+		<link>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html</link>
+		<comments>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html#comments</comments>
 		<pubDate>Tue, 13 Nov 2007 11:41:35 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -90,7 +99,8 @@ fixup protocol smtp 25
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
-		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=84</guid>
+		<description><![CDATA[Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230; Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port. Not a problem, there are many cheap serial-usb converters like this. As an alternative to the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Using the serial port is still necessary to manage some devices, when it is reseted to factory defaults. It could be also a security choice&#8230;</p>
 <p>Nowadays many computers &#8211; and especially laptops don&#8217;t have anymore a built-in serial port.  Not a problem, there are many cheap serial-usb converters <a href="http://www.usbgear.com/USB-1S1PQ.html" target="_blank">like this</a>.</p>
 <p>As an alternative to the Hyperterminal of Microsoft, there is Minicom on Linux.</p>
@@ -111,13 +121,13 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 <pre>$ minicom cisco</pre>
 <p>That&#8217;s it !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/13/how-to-connect-to-a-cisco-device-using-the-serial-port-on-linux.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>FTP configuration issues</title>
-		<link>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html</link>
-		<comments>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html#comments</comments>
+		<link>/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html</link>
+		<comments>/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html#comments</comments>
 		<pubDate>Fri, 02 Nov 2007 16:10:28 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -130,7 +140,8 @@ Checking the <strong>dmesg</strong> output while you plug the device will give y
 		<category><![CDATA[Pix]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=80</guid>
-		<description><![CDATA[I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0). The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server. static...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=80</guid>
+		<description><![CDATA[I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0). The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server. static...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I found that it was a real mess to set up a FTP server in a DMZ, behind a firewall Cisco Asa (501 model with IOS version 7.0).</p>
 <p>The FTP server is on the DMZ area, and therefore I natted a public IP to the private IP in the DMZ subnet of this server.</p>
 <pre>static (dmz,outside) &lt;public IP&gt; &lt;private_IP&gt; netmask 255.255.255.255</pre>
@@ -212,11 +223,11 @@ The active mode works, but it is thanks to the behaviour of VSFTP.</p>
 <p>This Gnome FTP client behave like the ftp command line client in passive mode : it falls into timeout.</p>
 <p>It doesn&#8217;t try by default to fail over active mode.</p>
 <p>You can configure either active mode or ignoring the passive command IP in the options :</p>
-<p><em><a title="gftp - ftp connexion parameters" href="/blog-archive/wp-content/uploads/2007/11/gftp-pasv.png" rel="lightbox[80]"><img src="/blog-archive/wp-content/uploads/2007/11/gftp-pasv.thumbnail.png" alt="gftp - ftp connexion parameters" /></a></em></p>
+<p><em><a title="gftp - ftp connexion parameters" href="/wp-content/uploads/2007/11/gftp-pasv.png" rel="lightbox[80]"><img src="/wp-content/uploads/2007/11/gftp-pasv.thumbnail.png" alt="gftp - ftp connexion parameters" /></a></em></p>
 <p><em><em><strong>Filezilla</strong></em></em></p>
 <p>Filezilla has the most interesting behaviour. When the standard passive mode fails, it is able to fail over by using active mode or using the public IP seen from the server.</p>
 <p>This can be configured in the connexion options :</p>
-<p><em><a title="filezilla connexion parameters" href="/blog-archive/wp-content/uploads/2007/11/filezilla.png" rel="lightbox[80]"><img src="/blog-archive/wp-content/uploads/2007/11/filezilla.thumbnail.png" alt="filezilla connexion parameters" /></a></em></p>
+<p><em><a title="filezilla connexion parameters" href="/wp-content/uploads/2007/11/filezilla.png" rel="lightbox[80]"><img src="/wp-content/uploads/2007/11/filezilla.thumbnail.png" alt="filezilla connexion parameters" /></a></em></p>
 <p>When Filezilla uses the public IP address instead of the transmitted one :</p>
 <pre> PASV
 227 Entering Passive Mode (10,1,1,1,15,209)
@@ -237,12 +248,12 @@ LIST
 <p>If anyone has some better ideas, or see I fooled somewhere before my conclusion, please let me know.</p>
 <p>But anyway, really, FTP sucks. It is anoying that the use of this protocol is still required by some companies.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/02/the-horror-of-ftp-and-cisco-firewall.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 		<item>
 		<title>SSH timout</title>
-		<link>/blog-archive/2007/04/21/ssh-timout.html</link>
+		<link>/2007/04/21/ssh-timout.html</link>
 		<pubDate>Sat, 21 Apr 2007 18:18:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Debian &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/debian/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/debian/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Metasploit Dockerfile</title>
-		<link>/blog-archive/2016/04/27/metasploit-dockerfile.html</link>
-		<comments>/blog-archive/2016/04/27/metasploit-dockerfile.html#comments</comments>
+		<link>/2016/04/27/metasploit-dockerfile.html</link>
+		<comments>/2016/04/27/metasploit-dockerfile.html#comments</comments>
 		<pubDate>Wed, 27 Apr 2016 18:26:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[pentest]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
-		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
+		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Hey,</p>
 <p>Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive.</p>
 <p>Instead of keeping reproducing boring installation steps every <em>x</em> months, I decided to build a <em>Dockerfile</em> for once.</p>
@@ -50,14 +51,15 @@
 </ul>
 <p>You can find it on <a href="https://github.com/phocean/dockerfile-debian-metasploit">my github</a>.</p>
 <p>If you have any trouble or suggestion on how to improve it, please let me know. Enjoy it and go ahead if you want to fork it!</p>
-<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/blog-archive/wp-content/uploads/2016/04/msf-580x320.png 580w, /blog-archive/wp-content/uploads/2016/04/msf-624x344.png 624w, /blog-archive/wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/wp-content/uploads/2016/04/msf-580x320.png 580w, /wp-content/uploads/2016/04/msf-624x344.png 624w, /wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/wp-content/uploads/2016/04/msf-580x320.png 580w, /wp-content/uploads/2016/04/msf-624x344.png 624w, /wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Testing Heartbleed vulnerability</title>
-		<link>/blog-archive/2014/07/14/testing-heartbleed-vulnerability.html</link>
+		<link>/2014/07/14/testing-heartbleed-vulnerability.html</link>
 		<pubDate>Mon, 14 Jul 2014 21:48:23 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -68,7 +70,8 @@
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1995</guid>
-		<description><![CDATA[No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time. I used the following quick setup: Debian 7.0 virtual machine as a vulnerable host Heartleech tool. There are many other tools around, but this one was suggested to me by a coworker, who used it successfully during a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2014/07/14/testing-heartbleed-vulnerability.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1995</guid>
+		<description><![CDATA[No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time. I used the following quick setup: Debian 7.0 virtual machine as a vulnerable host Heartleech tool. There are many other tools around, but this one was suggested to me by a coworker, who used it successfully during a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2014/07/14/testing-heartbleed-vulnerability.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>No fresh news, but I had been wanting to test the Heartbleed vulnerability for a while and just missed time.</p>
 <p>I used the following quick setup:</p>
 <ol>
@@ -131,8 +134,8 @@ k0aoHJV/D73j2hW3mGaC9JsnUMfZ3AkoDhfojZzqp2jOlaFNWZr80NDERekJrRTT
 			</item>
 		<item>
 		<title>OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</title>
-		<link>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
-		<comments>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
+		<link>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
+		<comments>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
 		<pubDate>Sat, 28 Nov 2009 16:08:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -146,7 +149,8 @@ k0aoHJV/D73j2hW3mGaC9JsnUMfZ3AkoDhfojZzqp2jOlaFNWZr80NDERekJrRTT
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
-		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
+		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
 <p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
 <p>A proof of concept of an attack against Twitter was made.</p>
@@ -175,13 +179,13 @@ If anyone reading it knows a version that does it, please let me know.</p>
 <p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
 <p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>openSUSE 11.1 and /boot on RAID 1</title>
-		<link>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
-		<comments>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
+		<link>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
+		<comments>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
 		<pubDate>Wed, 21 Oct 2009 18:06:27 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -193,7 +197,8 @@ If anyone reading it knows a version that does it, please let me know.</p>
 		<category><![CDATA[RAID]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
-		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
+		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I tried yesterday to set up a home server with two disks in a RAID 1 array.</p>
 <p>My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one.<br />
 That&#8217;s the way I think it should work anyway, despite the number of tutorials or forum posts advising not to do so.</p>
@@ -214,12 +219,12 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 <p>I haven&#8217;t tested <strong>openSUSE 11.2</strong> yet because the purpose of this machine is to be a server, so I care about stability.</p>
 <p>But I will, and I wish it can support this feature also, or that it will be the case some day.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 		<item>
 		<title>SHA-1 vulnerable : consider SHA-2</title>
-		<link>/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
+		<link>/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
 		<pubDate>Sun, 10 May 2009 07:58:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -233,8 +238,9 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 		<category><![CDATA[SHA-3]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
-		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
+		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
 <p>Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211; and so the integrity &#8211; of the hashed object.</p>
 <p>There are a few ressources :</p>
 <ul>
@@ -243,13 +249,13 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 </ul>
 <p>This is the natural evolution of cryptography. Stronger cryptography is required against stronger CPU power. In this race, it is now suggested to migrate to SHA-2 whose digest lenghts range from 224 to 512 bits (instead of 160 bits for SHA-1). And until next time, where we will be urged to migrate to <a title="SHA-3" href="http://csrc.nist.gov/groups/ST/hash/sha-3/index.html" target="_blank">SHA-3</a> ;)</p>
 <p>Debian, whose infrastructure was based on SHA-1 (package management, development) is quickly migrating all its keys right now. The <a title="Debian pgp upgrade procedure" href="http://www.debian-administration.org/users/dkg/weblog/48" target="_blank">procedure</a> the Debian people should follow implies a transition period, where the new key will be signed with the former key, until the latter is revoked. Thus until all peers are updated too, to avoid breaking all the signing infrastruture.</p>
-<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/blog-archive/pgp_key.txt">my new key</a> here or linked from the <a href="/blog-archive/contact-me" target="_self">contact page</a>.</p>
+<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/pgp_key.txt">my new key</a> here or linked from the <a href="/contact-me" target="_self">contact page</a>.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Connecting your GNS3 labs to the real network</title>
-		<link>/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html</link>
-		<comments>/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html#comments</comments>
+		<link>/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html</link>
+		<comments>/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html#comments</comments>
 		<pubDate>Sun, 01 Mar 2009 02:02:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -262,7 +268,8 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 		<category><![CDATA[openSUSE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=334</guid>
-		<description><![CDATA[There is a nice video tutorial to get your GNS3 lab connected to your physical network. However, it requires you to use a real network card with a fixed IP for doing that. This is not really handy if, llike me, you use GNS3 on a laptop whose connectivity is frequently switching between cable and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=334</guid>
+		<description><![CDATA[There is a nice video tutorial to get your GNS3 lab connected to your physical network. However, it requires you to use a real network card with a fixed IP for doing that. This is not really handy if, llike me, you use GNS3 on a laptop whose connectivity is frequently switching between cable and...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There is a <a title="GNS3 bridge to the physical network" href="http://www.blindhog.net/linux-bridging-for-gns3-lan-communications/" target="_blank">nice video tutorial</a> to get your GNS3 lab connected to your physical network.</p>
 <p>However, it requires you to use a real network card with a fixed IP for doing that. This is not really handy if, llike me, you use GNS3 on a laptop whose connectivity is frequently switching between cable and wireless, and on different subnets.</p>
 <p>I started to look for something more convenient like a virtual interface.</p>
@@ -319,13 +326,13 @@ brctl delif br0 eth0
 brctl delbr br0
 tunctl -d tap0</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/03/01/connecting-your-gns3-labs-to-the-real-network.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>VMWare Workstation 6.5</title>
-		<link>/blog-archive/2008/10/05/vmware-workstation-65.html</link>
-		<comments>/blog-archive/2008/10/05/vmware-workstation-65.html#comments</comments>
+		<link>/2008/10/05/vmware-workstation-65.html</link>
+		<comments>/2008/10/05/vmware-workstation-65.html#comments</comments>
 		<pubDate>Sun, 05 Oct 2008 16:46:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -340,7 +347,8 @@ tunctl -d tap0</pre>
 		<category><![CDATA[vmware-any-any]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
-		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
+		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p style="text-align: left;">I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features.</p>
 <p style="text-align: left;">The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file.</p>
 <p style="text-align: left;">After downloading, as root, just make it executable or start it with sh :</p>
@@ -360,7 +368,7 @@ tunctl -d tap0</pre>
 <p style="text-align: left;">At last, but not least, the <strong>Unity</strong> display mode.</p>
 <p style="text-align: left;">Though I am not a Mac user, I believe this can be compared to VMWare Fusion. Anyway, it allows you to display the virtual machines programs within your X session.</p>
 <p style="text-align: left;">Look at this screenshot :</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /blog-archive/wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p style="text-align: left;">The result is quite spectacular. On my Gnome desktop, I am now able to display some windows from Windows XP and Windows Vista.</p>
 <p style="text-align: left;">Well, this is not yet perfectly smooth or artifact free, but this is already really usable and responsive enough to be used intensively.</p>
 <p style="text-align: left;">Another limit is the operating system support. So far, among my virtual machines, I was able to do it with Windows systems but not Open Solaris for instance.</p>
@@ -368,12 +376,12 @@ tunctl -d tap0</pre>
 <p style="text-align: left;">I just wanted to insist that if you are a VMWare user,  you really should consider to upgrade for the <strong>complete support of the latest kernel</strong> and the <strong>Unity</strong> feature.</p>
 <p style="text-align: left;">It seems that VMWare has listened to the Linux users, or at least is taking it more seriously. Not that they are nice, but the competitors are close (Virtual box, KVM, Xen&#8230;) !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>How-to : Mod-security 2 set-up for Apache 2</title>
-		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<link>/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
 		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -384,7 +392,8 @@ tunctl -d tap0</pre>
 		<category><![CDATA[regxp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
-		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
 <p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
 <span id="more-114"></span></p>
@@ -492,6 +501,7 @@ Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
 denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
 \\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
 col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 mG38AAAEAACa@AVUAAAAA"]</pre>
 <p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>
 <pre lang="bash">$ grep 340000 /etc/apache2/modsecurity</pre>
@@ -500,8 +510,8 @@ mG38AAAEAACa@AVUAAAAA"]</pre>
 			</item>
 		<item>
 		<title>The SSL/SSH disaster</title>
-		<link>/blog-archive/2008/05/15/the-sslssh-disaster.html</link>
-		<comments>/blog-archive/2008/05/15/the-sslssh-disaster.html#comments</comments>
+		<link>/2008/05/15/the-sslssh-disaster.html</link>
+		<comments>/2008/05/15/the-sslssh-disaster.html#comments</comments>
 		<pubDate>Thu, 15 May 2008 16:23:22 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -513,7 +523,8 @@ mG38AAAEAACa@AVUAAAAA"]</pre>
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
-		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=106</guid>
+		<description><![CDATA[Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses. I have had no time so far to check all the keys on my server. I prefer to stay on the safe...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/05/15/the-sslssh-disaster.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Due to the recent security hole discovered in Debian, which has also concerned various distributions &#8211; of course including Ubuntu &#8211; for 2 years, I simply closed all my SSH and OpenVPN accesses.</p>
 <p>I have had no time so far to check all the keys on my server. I prefer to stay on the safe side, though I have some reason to believe that my keys might not be so vulnerable : I generated them a long time ago, maybe before the Debian maintainer sad mistake.</p>
 <p>It is going to be pretty easy now, for those who are motivated, to get access to the ssh server running keys generated during the 2 last years&#8230;</p>
@@ -525,12 +536,12 @@ What&#8217;s less funny is the pure disaster for the reputation of Debian.</p>
 This kind of news is not going to enforce trust from companies.</p>
 <p>I myself will think twice in the future about what system to use when I design my networks.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/05/15/the-sslssh-disaster.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Totem : black screen issue affecting all your XVideo output</title>
-		<link>/blog-archive/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html</link>
+		<link>/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html</link>
 		<pubDate>Wed, 13 Feb 2008 12:05:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -541,8 +552,9 @@ This kind of news is not going to enforce trust from companies.</p>
 		<category><![CDATA[Video]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=96</guid>
-		<description><![CDATA[I confirm the black screen issue with Totem. Actually it changes the contrast for all the environment, and of course using Mplayer or the gstreamer test program just after also gave back a black screen. Therefore I had been convinced it was a driver issue (reporting a bug to Nvidia and posting on this forum),...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>I confirm <a title="black screen issue with Totem" href="/blog-archive/openID/phocean">the black screen issue with Totem</a>.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=96</guid>
+		<description><![CDATA[I confirm the black screen issue with Totem. Actually it changes the contrast for all the environment, and of course using Mplayer or the gstreamer test program just after also gave back a black screen. Therefore I had been convinced it was a driver issue (reporting a bug to Nvidia and posting on this forum),...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/13/totem-black-screen-issue-affecting-all-your-xvideo-output.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I confirm <a title="black screen issue with Totem" href="/openID/phocean">the black screen issue with Totem</a>.</p>
 <p>Actually it changes the contrast for all the environment, and of course using Mplayer or the gstreamer test program just after also gave back a black screen.</p>
 <p>Therefore I had been convinced it was a driver issue (reporting a bug to Nvidia and <a href="http://www.nvnews.net/vbulletin/showthread.php?t=107830&amp;highlight=totem">posting on this forum</a>), until I find the contrast setting of Totem was the cause of all that mess.</p>
 <p>Note that I am right now using Debian Lenny.</p>

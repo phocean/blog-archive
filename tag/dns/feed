@@ -9,8 +9,8 @@
 
 <channel>
 	<title>DNS &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/dns/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/dns/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>SSH timout</title>
-		<link>/blog-archive/2007/04/21/ssh-timout.html</link>
+		<link>/2007/04/21/ssh-timout.html</link>
 		<pubDate>Sat, 21 Apr 2007 18:18:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -44,8 +44,8 @@ Considering this, you can disable this check with not much worry with the right 
 			</item>
 		<item>
 		<title>OpenVPN and DNS on a linux client</title>
-		<link>/blog-archive/2006/12/07/openvpn-and-dns-on-a-linux-client.html</link>
-		<comments>/blog-archive/2006/12/07/openvpn-and-dns-on-a-linux-client.html#comments</comments>
+		<link>/2006/12/07/openvpn-and-dns-on-a-linux-client.html</link>
+		<comments>/2006/12/07/openvpn-and-dns-on-a-linux-client.html#comments</comments>
 		<pubDate>Thu, 07 Dec 2006 16:42:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -142,7 +142,7 @@ down)
 esac
 </pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/07/openvpn-and-dns-on-a-linux-client.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/07/openvpn-and-dns-on-a-linux-client.html/feed</wfw:commentRss>
 		<slash:comments>13</slash:comments>
 		</item>
 	</channel>

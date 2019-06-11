@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Compiz &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/compiz/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/compiz/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Compiz Fusion : Debian / Ubuntu repositories</title>
-		<link>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html</link>
-		<comments>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html#comments</comments>
+		<link>/2007/07/27/compiz-fusion-debian-repositories.html</link>
+		<comments>/2007/07/27/compiz-fusion-debian-repositories.html#comments</comments>
 		<pubDate>Fri, 27 Jul 2007 18:21:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -29,6 +29,7 @@
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=72</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=72</guid>
 		<description><![CDATA[Edit your source.list file with the following repositories : deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git Add the corresponding key with : $ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- &#124; sudo apt-key add - Compiz Fusion is really great and &#8211; so far &#8211; stable enough !]]></description>
 				<content:encoded><![CDATA[<p>Edit your source.list file with the following repositories :</p>
 <pre>deb http://download.tuxfamily.org/osrdebian/ unstable compiz-fusion-git</pre>
@@ -36,12 +37,12 @@
 <pre>$ wget http://download.tuxfamily.org/syzygy42/8434D43A.gpg -O- | sudo apt-key add -</pre>
 <p>Compiz Fusion is really great and &#8211; so far &#8211;  stable enough !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/07/27/compiz-fusion-debian-repositories.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/07/27/compiz-fusion-debian-repositories.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Battery power and Compiz</title>
-		<link>/blog-archive/2007/05/20/battery-power-and-compiz.html</link>
+		<link>/2007/05/20/battery-power-and-compiz.html</link>
 		<pubDate>Sun, 20 May 2007 12:57:16 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -49,6 +50,7 @@
 		<category><![CDATA[Compiz]]></category>
 		<category><![CDATA[Intel]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=51</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=51</guid>
 		<description><![CDATA[I decided to drop Compiz since I found out (thanks to the Powertop utility by Intel) that it was power monger. Result : Compiz : 3h30 Metacity : 5h00]]></description>
 				<content:encoded><![CDATA[<p>I decided to drop Compiz since I found out (thanks to the <a href="http://www.linuxpowertop.org/" target="_blank">Powertop</a> utility by Intel) that it was power monger.</p>
@@ -59,7 +61,7 @@
 			</item>
 		<item>
 		<title>Screenlets : widgets for Compiz or Beryl</title>
-		<link>/blog-archive/2007/03/17/screenlets-widgets-for-compiz-or-beryl.html</link>
+		<link>/2007/03/17/screenlets-widgets-for-compiz-or-beryl.html</link>
 		<pubDate>Sat, 17 Mar 2007 11:21:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -86,13 +88,13 @@ I don&#8217;t want to start a flame war here, but I am convinced that Beryl is n
 The same icon (the one at the left side of the screenshot below, representing a computer) will show off near the clock.</p>
 <p><img src="http://192.168.1.10/wordpress/wp-content/uploads/2007/05/public/screenlets/screenlets-tray-icon.png" alt="screenlets tray icon" /></p>
 <p>Right click on it and choose settings to get this screen :</p>
-<p><img title="screenlets control panel" src="/blog-archive/wp-content/uploads/2007/05/public/screenlets/Screenlets-Control_Panel.png" alt="screenlets control panel" width="337" height="570" /></p>
+<p><img title="screenlets control panel" src="/wp-content/uploads/2007/05/public/screenlets/Screenlets-Control_Panel.png" alt="screenlets control panel" width="337" height="570" /></p>
 <p>As you can see, it shows the widgets that are available currently.</p>
 <p>To add one to your desktop, just double click on it. According to the widget, you can get more configuration options by right clicking individually on each.</p>
 <p>Now you can play with it and dig for more tricks ! :)<br />
 For more info, don&#8217;t forget check <a hreflang="en" href="http://www.go-compiz.org/index.php?title=Desktop_Screenlets">the official web site</a>.</p>
 <p>Here is screenlets as it runs on my desktop :</p>
-<p><img title="screenlets" src="/blog-archive/wp-content/uploads/2007/05/public/screenlets/screenlets.png" alt="screenlets" width="252" height="322" /></p>
+<p><img title="screenlets" src="/wp-content/uploads/2007/05/public/screenlets/screenlets.png" alt="screenlets" width="252" height="322" /></p>
 <p>There are the 3 most useful widgets that I found and there work very well. I am now looking forward to seeing more and more widgets and options. :)</p>
 <p>Oh and don&#8217;t be affraid that it slows down your computer : it takes 6 Mb of memory on mine, and has no measurable impact on the CPU (and my laptop has a modest Celeron processor).</p>
 <p>Have fun !</p>
@@ -100,8 +102,8 @@ For more info, don&#8217;t forget check <a hreflang="en" href="http://www.go-com
 			</item>
 		<item>
 		<title>Switched back from Beryl to Compiz</title>
-		<link>/blog-archive/2007/03/01/switched-back-from-beryl-to-compiz.html</link>
-		<comments>/blog-archive/2007/03/01/switched-back-from-beryl-to-compiz.html#comments</comments>
+		<link>/2007/03/01/switched-back-from-beryl-to-compiz.html</link>
+		<comments>/2007/03/01/switched-back-from-beryl-to-compiz.html#comments</comments>
 		<pubDate>Thu, 01 Mar 2007 16:42:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -138,9 +140,9 @@ They also fixed the hibernating bug I had a long time ago. On this point, it is 
 <p>I definitely recommend you to give it a try, despite the major trend for Beryl that is on the forums.<br />
 Compiz, for now, is cleaner and more &#8220;professional&#8221; in its approach.</p>
 <p>Below is my desktop :</p>
-<p><img style="display: block" src="/blog-archive/wp-content/uploads/2007/05/public/compiz.png" alt="" align="bottom" /></p>
+<p><img style="display: block" src="/wp-content/uploads/2007/05/public/compiz.png" alt="" align="bottom" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/03/01/switched-back-from-beryl-to-compiz.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/03/01/switched-back-from-beryl-to-compiz.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

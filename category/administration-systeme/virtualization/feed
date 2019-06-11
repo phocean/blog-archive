@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Virtualization &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/category/administration-systeme/virtualization/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/category/administration-systeme/virtualization/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
-		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<link>/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
 		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -33,7 +33,8 @@
 		<category><![CDATA[Nodejs]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
-		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>I have kept playing with Docker recently, just for fun and to learn.</p>
 <p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
@@ -104,7 +105,7 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>A few (convenient) dockerfiles</title>
-		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<link>/2016/04/10/a-few-convenient-dockerfiles.html</link>
 		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -118,7 +119,8 @@ de/server.js"</pre>
 		<category><![CDATA[Tor]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
-		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
 <p>Here they are:</p>
 <ul>
@@ -145,8 +147,8 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>A journey with Btrfs</title>
-		<link>/blog-archive/2016/03/20/a-journey-with-btrfs.html</link>
-		<comments>/blog-archive/2016/03/20/a-journey-with-btrfs.html#comments</comments>
+		<link>/2016/03/20/a-journey-with-btrfs.html</link>
+		<comments>/2016/03/20/a-journey-with-btrfs.html#comments</comments>
 		<pubDate>Sun, 20 Mar 2016 15:35:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -157,7 +159,8 @@ de/server.js"</pre>
 		<category><![CDATA[virtualbox]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
-		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
+		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h1>Why BTRFS ?</h1>
 <p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
 <p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
@@ -292,13 +295,13 @@ Hell World!
 <li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 		<item>
 		<title>My goodness, I got mainframed!</title>
-		<link>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html</link>
-		<comments>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
+		<link>/2013/05/28/my-goodness-i-got-mainframed.html</link>
+		<comments>/2013/05/28/my-goodness-i-got-mainframed.html#comments</comments>
 		<pubDate>Tue, 28 May 2013 12:20:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -319,7 +322,8 @@ Hell World!
 		<category><![CDATA[z/os]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
-		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1587</guid>
+		<description><![CDATA[Mainframes are not dead, why not pentesting it? I just watched the presentation of Phil Young at Shmoocon 2013: &#8220;Mainframed: the secrets inside that black box&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/05/28/my-goodness-i-got-mainframed.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mainframes are not dead, why not pentesting it?</p>
 <p>I just watched the presentation of <strong>Phil Young</strong> at <a href="https://www.shmoocon.org/shmoocon_2013" target="_blank">Shmoocon 2013</a>: &#8220;<a href="https://www.shmoocon.org/2013/videos/Shmoocon%202013%20-%20Mainframed%20The%20Secrets%20Inside%20that%20Black%20Box.mp4" target="_blank">Mainframed: the secrets inside that black box</a>&#8220;. I truly loved it. I thought mainframes where disappearing, but I was surprised to see that it still alive. I was even more surprised to find out that they have some Unix interface, and that there is a emulator for x86. Where it was less of a surprise is that their security is pretty low :-)</p>
 <p>Anyway, don&#8217;t miss watching the video. <a href="http://mainframed767.tumblr.com" target="_blank">Phil&#8217;s blog, &#8220;Soldier of Fortran&#8221;</a>, is also a gold mine, he wrote many tips, tutos and tools.</p>
@@ -374,16 +378,16 @@ herc =====&gt; devlist
 HHC02279I 0:0E20 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open
 HHC02279I 0:0E21 3088 CTCI 10.10.10.11/10.10.10.12 (tun0) IO[0] open</pre>
 <p>Open <strong>tn3270</strong> and connect with default settings on localhost:</p>
-<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/blog-archive/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
+<p><img class="size-full wp-image-1601 aligncenter" alt="tn3270 connection" src="/wp-content/uploads/2013/05/tn3270-connection.png" width="423" height="219" /></p>
 <p>And then in the hercules terminal, enter <code>ipl a80</code></p>
-<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/blog-archive/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /blog-archive/wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /blog-archive/wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
+<div id="attachment_1602" style="width: 590px" class="wp-caption aligncenter"><img class="size-medium wp-image-1602 " alt="boot zos" src="/wp-content/uploads/2013/05/boot-zos-580x474.png" width="580" height="474" srcset="/wp-content/uploads/2013/05/boot-zos-580x474.png 580w, /wp-content/uploads/2013/05/boot-zos-624x510.png 624w, /wp-content/uploads/2013/05/boot-zos.png 775w" sizes="(max-width: 580px) 100vw, 580px" /><p class="wp-caption-text">Hercules390 console: booting Z/OS</p></div>
 <p><strong>It is very long to boot, don&#8217;t worry. You will actually have to use 2 terminals</strong>, so open the second one, which will show the logon screen (see screenshot below) after booting is done. It will be used for &#8220;userland&#8221; aka TSO commands.</p>
 <p>The first terminal shall be kept open as the master console, which receive system logs and can be used for &#8220;system-level&#8221;* commands (e.g root level).</p>
-<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
+<div id="attachment_1620" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/05/logon-screen.png" rel="lightbox[1587]"><img class="size-medium wp-image-1620" alt="Z/OS &quot;Duza&quot; logon screen" src="/wp-content/uploads/2013/05/logon-screen-580x462.png" width="580" height="462" srcset="/wp-content/uploads/2013/05/logon-screen-580x462.png 580w, /wp-content/uploads/2013/05/logon-screen-624x498.png 624w, /wp-content/uploads/2013/05/logon-screen.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">Z/OS &#8220;Duza&#8221; logon screen</p></div>
 <ol class="split">
 <li>At the prompt, enter <code>TSO</code>, then <code>IBMUSER</code> as the login, and <code>SYS1</code> as the password. It will automatically launch the ISPF menu:</li>
 </ol>
-<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/blog-archive/wp-content/uploads/2013/05/ispf-580x462.png 580w, /blog-archive/wp-content/uploads/2013/05/ispf-624x498.png 624w, /blog-archive/wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
+<div id="attachment_1619" style="width: 590px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2013/05/ispf.png" rel="lightbox[1587]"><img class="size-medium wp-image-1619" alt="ISPF menu" src="/wp-content/uploads/2013/05/ispf-580x462.png" width="580" height="462" srcset="/wp-content/uploads/2013/05/ispf-580x462.png 580w, /wp-content/uploads/2013/05/ispf-624x498.png 624w, /wp-content/uploads/2013/05/ispf.png 684w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">ISPF menu</p></div>
 <ol class="split">
 <li>Now, you are good to go ahead with Z/OS commands&#8230;</li>
 </ol>
@@ -483,7 +487,7 @@ XCF.     
 <ul>
 <li><a href="http://mainframed767.tumblr.com/post/27787457789/hercules-3-08-on-mac-os-x-lion" target="_blank">Hercules 3.08 on Mac OS X Lion</a></li>
 <li><a href="http://mainframed767.tumblr.com/post/40836059586/instructions-to-installing-z-os-in-hercules" target="_blank">Instructions to installing z/OS in Hercules</a></li>
-<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/blog-archive/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
+<li><a href="http://pastebin.com/raw.php?i=PHiT8jmE" target="_blank">Installin&#8217; that sweet sweet big iron on your Linux laptop or server</a> (<a href="/wp-content/uploads/2013/05/install_zOS_in_Hercules.txt">local mirror</a>)</li>
 <li><a href="http://kat.ph/ibm-z-os-emulation-files-t5780374.html" target="_blank">Z/OS files</a></li>
 <li><a href="http://patata.homeip.net/blog/hercules-and-zos-tcp-ip-networking-for-adcd-versions" target="_blank">Hercules and Z/OS TCP/IP networking for ADCD versions</a></li>
 <li><a href="http://mainframed.wordpress.com/2012/06/17/changing-the-logon-screen-on-the-mainframe-zos-vtam-in-adcd/" target="_blank">Changing the logon screen on the mainframe</a></li>
@@ -493,13 +497,13 @@ XCF.     
 <li><a href="http://publib.boulder.ibm.com/infocenter/zos/basics/index.js">IBM online documentation</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2013/05/28/my-goodness-i-got-mainframed.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab? (part II)</title>
-		<link>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
-		<comments>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
+		<link>/2012/07/11/rootkit-in-my-lab-part-ii.html</link>
+		<comments>/2012/07/11/rootkit-in-my-lab-part-ii.html#comments</comments>
 		<pubDate>Wed, 11 Jul 2012 20:18:58 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -514,7 +518,8 @@ XCF.     
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
-		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1294</guid>
+		<description><![CDATA[I finished checking the RAM with Volatility and&#8230; I found nothing. Nada. It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills. I attach here some of the main outputs of Volatility. As far as I can tell: no evidence of injection or kernel hooking...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/07/11/rootkit-in-my-lab-part-ii.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished checking the RAM with Volatility and&#8230; I found nothing. Nada.</p>
 <p>It&#8217;s a lot of fustration. There must be something just there, but my findings are certainly limited by my skills.</p>
 <p>I attach here some of the main outputs of Volatility. As far as I can tell:</p>
@@ -525,30 +530,30 @@ XCF.     
 <li>no suspicious registry entry</li>
 <li>etc.</li>
 </ul>
-<p>Based on <a title="Rootkit in my lab?" href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
+<p>Based on <a title="Rootkit in my lab?" href="/2012/06/30/rootkit-in-my-lab.html">my observations</a>, I first tried to narrow my investigations (drivers and hooks) but as I could not find anything, I ended dumping most of Volatility outputs in hope to see something unusual. I also compared them with a fresh Windows XP SP3 install. I extracted keyboard related drivers (keyboard.sys, kbdclass.sys, i8042prt.sys), hashed them, scanned them: there were native. I am less sure on how to deal with the software certificate system, but I did checked all Microsoft and root certificates in the bank along with their signature with a clean system: nothing wrong.</p>
 <p>Dear reader, any help or tip is welcomed! Am I missing something obvious? Could it be possibly not a rootkit but some kind of corruption? If so, how to detect it?</p>
 <p>Just drop me an e-mail if you want to have a look on the dump itself.</p>
 <p>Volatility outputs:</p>
 <ul>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/handles.txt">handles</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/idt.txt">idt</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
-<li><a href="/blog-archive/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
+<li><a href="/wp-content/uploads/2012/07/apihooks.txt">apihooks</a></li>
+<li><a href="/wp-content/uploads/2012/07/driverscan.txt">driverscan</a></li>
+<li><a href="/wp-content/uploads/2012/07/handles.txt">handles</a></li>
+<li><a href="/wp-content/uploads/2012/07/idt.txt">idt</a></li>
+<li><a href="/wp-content/uploads/2012/07/ldrmodules.txt">ldrmodules</a></li>
+<li><a href="/wp-content/uploads/2012/07/malfind-yara.txt">malfind-yara</a></li>
+<li><a href="/wp-content/uploads/2012/07/malfind.txt">malfind</a></li>
+<li><a href="/wp-content/uploads/2012/07/ssdt.txt">ssdt</a></li>
+<li><a href="/wp-content/uploads/2012/07/svcscan.txt">svcscan</a></li>
+<li><a href="/wp-content/uploads/2012/07/threads1.txt">threads</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/07/11/rootkit-in-my-lab-part-ii.html/feed</wfw:commentRss>
 		<slash:comments>8</slash:comments>
 		</item>
 		<item>
 		<title>Rootkit in my lab?</title>
-		<link>/blog-archive/2012/06/30/rootkit-in-my-lab.html</link>
-		<comments>/blog-archive/2012/06/30/rootkit-in-my-lab.html#comments</comments>
+		<link>/2012/06/30/rootkit-in-my-lab.html</link>
+		<comments>/2012/06/30/rootkit-in-my-lab.html#comments</comments>
 		<pubDate>Sat, 30 Jun 2012 17:49:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -563,7 +568,8 @@ XCF.     
 		<category><![CDATA[Volatility]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
-		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1268</guid>
+		<description><![CDATA[Context For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on. What makes the case really interesting though, is that it occurred on a fresh...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/30/rootkit-in-my-lab.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>For now, I can&#8217;t tell much about the context, mainly because it may &#8211; or may not &#8211; involve other people. The only thing I am interested in is to spot the issue and understand precisely what is going on.</p>
 <p>What makes the case really interesting though, is that it occurred on a fresh install of a Windows XP virtual machine. I aimed it to be a clean malware reversing snapshot. I noticed the weired behavior minutes after finishing the system install and setting up a bunch of reversing and live analysis tools.</p>
@@ -573,22 +579,22 @@ XCF.     
 <p>Two things alerted me quickly.</p>
 <p>The first one was, at a point, the permanent failure of going through the full windows update process. Believe me, I have tried all ways.</p>
 <p>The second one was the weird dialog when trying to access to the keyboard layout settings. It says &#8220;<em><strong>Incompatible driver detected</strong></em>&#8220;. To me, this looks like there is a keylogger somewhere&#8230;</p>
-<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
+<div id="attachment_1269" style="width: 648px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/WinXP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1269 " title="WinXP-Reversing" src="/wp-content/uploads/2012/06/WinXP-Reversing.png" alt="" width="638" height="577" srcset="/wp-content/uploads/2012/06/WinXP-Reversing.png 1064w, /wp-content/uploads/2012/06/WinXP-Reversing-300x270.png 300w, /wp-content/uploads/2012/06/WinXP-Reversing-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Suspicious activities: the keyboard driver and windows update seem to be messed</p></div>
 <p>Then, as I started to check around, more odd stuff came out.</p>
 <p>I fired up Process Explorer, and soon realize that it was &#8220;unable to verify&#8221; the signatures of all the running Windows processes. I could not find anything else suspicious, though (no odd process, memory content looks normal, etc.).</p>
-<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/blog-archive/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /blog-archive/wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
+<div id="attachment_1275" style="width: 727px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/VMware-Fusion.png" rel="lightbox[1268]"><img class=" wp-image-1275 " title="Process Explorer validating processes" src="/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png" alt="" width="717" height="386" srcset="/wp-content/uploads/2012/06/VMware-Fusion-1024x552.png 1024w, /wp-content/uploads/2012/06/VMware-Fusion-300x162.png 300w" sizes="(max-width: 717px) 100vw, 717px" /></a><p class="wp-caption-text">On the left, Process Explorer fails to validate any Windows process.<br />On the right, expected behavior on a clean system.</p></div>
 <p>Ok, while I am with the Sysinternal suite, why not scanning with Rootkit Revealer:</p>
-<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
+<div id="attachment_1279" style="width: 379px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing.png" rel="lightbox[1268]"><img class=" wp-image-1279 " title="Rootkit Revealer" src="/wp-content/uploads/2012/06/Windows-XP-Reversing.png" alt="" width="369" height="257" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing.png 615w, /wp-content/uploads/2012/06/Windows-XP-Reversing-300x209.png 300w" sizes="(max-width: 369px) 100vw, 369px" /></a><p class="wp-caption-text">Rootkit Revealer cannot access to the SYSTEM hive of the registry</p></div>
 <p>Interesting&#8230; and what about GMER:</p>
-<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
+<div id="attachment_1282" style="width: 452px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" rel="lightbox[1268]"><img class=" wp-image-1282 " title="GMER" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png" alt="" width="442" height="339" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-2.png 736w, /wp-content/uploads/2012/06/Windows-XP-Reversing-2-300x230.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></a><p class="wp-caption-text">GMER crashes when accessing the registry&#8230;</p></div>
 <p>Oops! Now it crashes when it is accessing the registry&#8230;</p>
 <p>For the fun, let&#8217;s see what happens if we try to set up an antivirus (Security Essentials):</p>
-<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
+<div id="attachment_1283" style="width: 648px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" rel="lightbox[1268]"><img class=" wp-image-1283 " title="Installation of Microsoft Security Essentials" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png" alt="" width="638" height="577" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-3.png 1064w, /wp-content/uploads/2012/06/Windows-XP-Reversing-3-300x270.png 300w, /wp-content/uploads/2012/06/Windows-XP-Reversing-3-1024x924.png 1024w" sizes="(max-width: 638px) 100vw, 638px" /></a><p class="wp-caption-text">Windows certificate warning when installing&#8230; Microsoft Security Essentials!!!</p></div>
 <p>Nice one! Very suspicious! Note that after a full scan, Security Essentials reports me that the system is clean and everything is fine. I am so relieved. :)</p>
 <p>Curious to see how my certificates are, I run <em><strong>certmgr.msc. </strong></em><strong></strong>I compared all Microsoft root certificates with a clean machine and could not see anything different. But again something happened:</p>
-<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
+<div id="attachment_1285" style="width: 360px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" rel="lightbox[1268]"><img class=" wp-image-1285 " title="certmgr.msc" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png" alt="" width="350" height="193" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-5.png 500w, /wp-content/uploads/2012/06/Windows-XP-Reversing-5-300x165.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><p class="wp-caption-text">certmgr.msc crashes</p></div>
 <p>Oh, just one of my last attempts to do live analysis (this the WinPcap setup included with Wireshark):</p>
-<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /blog-archive/wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
+<div id="attachment_1288" style="width: 391px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" rel="lightbox[1268]"><img class=" wp-image-1288 " title="WinPCAP installation" src="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png" alt="" width="381" height="305" srcset="/wp-content/uploads/2012/06/Windows-XP-Reversing-6.png 544w, /wp-content/uploads/2012/06/Windows-XP-Reversing-6-300x239.png 300w" sizes="(max-width: 381px) 100vw, 381px" /></a><p class="wp-caption-text">WinPCAP installation also fails</p></div>
 <p>Ok, so enough played. The thing seems to be nicely done, and live analysis is going to be way too hard and unreliable.</p>
 <h2>Memory Analysis</h2>
 <p>This is where I am now. I reverted to a snapshot prior to my live analysis attemps, confirmed the strange behaviors are still observable, and suspended the VM to get the vmem file.</p>
@@ -598,13 +604,13 @@ XCF.     
 <p>My discoveries, if there are, will be published in another article.</p>
 <p><strong>UPDATE: I forgot to tell that it is a Windows XP SP3 machine, but not fully updated due to the issues.</strong></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2012/06/30/rootkit-in-my-lab.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 		<item>
 		<title>Network virtualization and the DMZ paradigm</title>
-		<link>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
-		<comments>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
+		<link>/2011/04/30/network-virtualization-and-the-dmz-paradigm.html</link>
+		<comments>/2011/04/30/network-virtualization-and-the-dmz-paradigm.html#comments</comments>
 		<pubDate>Sat, 30 Apr 2011 19:15:53 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -620,7 +626,8 @@ XCF.     
 		<category><![CDATA[vswitch]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
-		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1016</guid>
+		<description><![CDATA[The virtualization buzz I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier. But what about the security? Convenience...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/04/30/network-virtualization-and-the-dmz-paradigm.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>The virtualization buzz</h2>
 <p>I have recently worked on network virtualization. Many people, especially the network guys, have been recently excited with the VMware Vswitch or Cisco Nexus stuff.  It is something that I understand because virtualization is cool. It brings many convenient features that truly make the life easier.</p>
 <p>But what about the security? Convenience and security rarely come together, right? Oh, wait&#8230; we are in 2011, so lessons must have been learned. After all, Mr Salesman swear that it is more secure than ever. Convenience and security packed together, he says&#8230; it sounds promising. Let&#8217;s dig a little to find out what they won&#8217;t tell you&#8230;</p>
@@ -629,7 +636,7 @@ XCF.     
 <h2>VMware Vswitches or Nexus 1000V</h2>
 <p>These technologies are similar in the sense that they are designed to work directly inside the VMware platform. Vswitches are integrated with the solution of VMware, while Nexus benefits from the experience of Cisco and bring more layer 2 control (more settings, more protocols).</p>
 <p>As well on the architecture documents of VMware as within the administration interface of Vcenter, it appears so easy to create segregated switches and build this way in a few clicks a DMZ architecture:</p>
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/blog-archive/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-1069" title="Vswitch" src="/wp-content/uploads/2011/04/Sélection_002.resized.png" alt="" width="318" height="240" /></p>
 <p>But it is slightly different in reality, as <strong>Brad Hedlund</strong> from Cisco shows in an interesting article: <a title="the vswitch illusion and DMZ virtualization" href="http://bradhedlund.com/2010/02/10/vswitch-illusion-dmz-virtualization/" target="_blank">the vswitch illusion and DMZ virtualization</a>. In short, whether you are using VMware Vswitches or Nexus 1000V, a single threaded program runs all the configured virtual switches. In clear, all the virtual switches share the same memory space. So, any vulnerability in the code would compromise all the switches, in other words: the entire network. And, not a surprise here, there have been many vulnerabilities. Just browse a <a title="CVE database" href="http://cve.mitre.org/cve/" target="_blank">CVE database</a> if you want to check.</p>
 <p>So you don&#8217;t want to rely on such a design for your datacenter, right?</p>
 <h2>Nexus 7000</h2>
@@ -637,7 +644,7 @@ XCF.     
 <p>The Nexus family is quite new and from what I could witness, they are  quite pushy selling that. Because it is new, there is still neither much  info surrounding the technologies used, nor user feedback, nor security  research. Anyway, below is a quick sum-up of what I could find.</p>
 <h3>A few words about the architecture</h3>
 <p>In a layer 3 Nexus architecture, Nexus 2000, 5000 and 7000 are designed to work together. Nexus 2000 are basically top-of-the-rack port panels, with no intelligence. Nexus 5000 takes care of most of the layer 2 switching, while Nexus 7000 adds layer 2 functionalities and layer 3 support. Nexus 2000 and 5000 can work without the 7000, but in that case there is not so much difference with a classic layer 2 switch in terms of security (but it has the advantage to be more flexible to integrate in a datacenter). <a title="Difference between Nexus 7000 and Nexus 5000" href="http://www.netcraftsmen.net/resources/technical-articles/348.html" target="_blank">This</a> and <a title="Nexus 7000 architecture" href="http://www.scribd.com/doc/33217473/RST-3009-Cisco-Nexus-7000-Switch-Architecture" target="_blank">this</a> may help you to visualize the differences.</p>
-<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/blog-archive/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
+<p><img class="aligncenter size-full wp-image-1070" title="Nexus Architecture" src="/wp-content/uploads/2011/04/nexus-architecture.resized.js" /></p>
 <p>So we will focus on the Nexus 7000 architecture, which bring VDC as a way to handle DMZ architectures. VDC are somehow similar to VLANs. But whereas VLANs virtualized LANs on a switch, VDC virtualize switches. So, on the same Nexus 5000 device, VDC will add the capacity to have multiple virtual switches which are in theory properly isolated.</p>
 <p>This is a very basic sum-up for what we are interested in, but if you want to learn more, I encourage you to read the <a title="Cisco VDC" href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/White_Paper_Tech_Overview_Virtual_Device_Contexts.html" target="_blank">Cisco whitepaper about VDCs</a>.</p>
 <h3>The flaws</h3>
@@ -664,13 +671,13 @@ No virtualized architecture can give the same degree of protection than physical
 <p>Don&#8217;t get me wrong. These technologies are great and very useful. In many areas, there are an improvement. Simply, they must be used with as much care as always. Concerning the DMZ topic, as far as I am concerned, I will not rely on virtualization and keep physical segregation between zones, supported by different  devices from different makers.</p>
 <p>One thing I keep an eye on, though, is the development of virtualized firewalls, IPS, etc. In a few years, if these technologies should became really mature (enforcing segregation on all OSI layers) and the hosting OS security should really improved, most of the concerns here would be addressed.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/04/30/network-virtualization-and-the-dmz-paradigm.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Corrupted virtual disk with VMware</title>
-		<link>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html</link>
-		<comments>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html#comments</comments>
+		<link>/2011/01/16/corrupted-virtual-disk-with-vmware.html</link>
+		<comments>/2011/01/16/corrupted-virtual-disk-with-vmware.html#comments</comments>
 		<pubDate>Sun, 16 Jan 2011 17:02:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -681,7 +688,8 @@ No virtualized architecture can give the same degree of protection than physical
 		<category><![CDATA[VMware]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=961</guid>
-		<description><![CDATA[Wow, this article and especially one of its comments saved my day. My computer crashed and one of the VMware machine hosted on it could not start anymore : “Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on. Reason: the specific virtual disk needs repair. Checking on the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=961</guid>
+		<description><![CDATA[Wow, this article and especially one of its comments saved my day. My computer crashed and one of the VMware machine hosted on it could not start anymore : “Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on. Reason: the specific virtual disk needs repair. Checking on the...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/01/16/corrupted-virtual-disk-with-vmware.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Wow, <a title="Repair vmware" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/" target="_blank">this article</a> and especially <a title="virtual disk development" href="http://www.smoothblog.co.uk/2010/07/15/how-to-fix-vmware-the-specific-virtual-disk-needs-repair/?cid=3319" target="_blank">one of its comments</a> saved my day.</p>
 <p>My computer crashed and one of the VMware machine hosted on it could not start anymore :</p>
 <blockquote><p>“Cannot open the disk ‘path of vmdk’ or one of the snapshot disks it depends on.<br />
@@ -696,13 +704,13 @@ The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully
 <p>Saved! Thanks so much to the guys. I would have never thought about trying it, I wonder how they could find it.</p>
 <p>But how is it possible that the utility coming with vmware workstation 7.1 suck so much and is not on par with other versions ?</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/01/16/corrupted-virtual-disk-with-vmware.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/01/16/corrupted-virtual-disk-with-vmware.html/feed</wfw:commentRss>
 		<slash:comments>18</slash:comments>
 		</item>
 		<item>
 		<title>VMWare Workstation 6.5</title>
-		<link>/blog-archive/2008/10/05/vmware-workstation-65.html</link>
-		<comments>/blog-archive/2008/10/05/vmware-workstation-65.html#comments</comments>
+		<link>/2008/10/05/vmware-workstation-65.html</link>
+		<comments>/2008/10/05/vmware-workstation-65.html#comments</comments>
 		<pubDate>Sun, 05 Oct 2008 16:46:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -717,7 +725,8 @@ The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully
 		<category><![CDATA[vmware-any-any]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
-		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=249</guid>
+		<description><![CDATA[I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features. The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file. After downloading, as root, just make it executable or start it with...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/10/05/vmware-workstation-65.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p style="text-align: left;">I have just upgraded WMWare from version 6.04 to 6.5, and I have to say that it has very nice new features.</p>
 <p style="text-align: left;">The first surprising thing was the file I downloaded. It is now not anymore a tar.gz archive but a .bundle file.</p>
 <p style="text-align: left;">After downloading, as root, just make it executable or start it with sh :</p>
@@ -737,7 +746,7 @@ The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully
 <p style="text-align: left;">At last, but not least, the <strong>Unity</strong> display mode.</p>
 <p style="text-align: left;">Though I am not a Mac user, I believe this can be compared to VMWare Fusion. Anyway, it allows you to display the virtual machines programs within your X session.</p>
 <p style="text-align: left;">Look at this screenshot :</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/blog-archive/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /blog-archive/wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/10/capture-11.png" rel="lightbox[249]"><img class="size-medium wp-image-255" title="VMWare Workstation 6.5 and Unity" src="/wp-content/uploads/2008/10/capture-11-300x187.png" alt="VMWare Workstation 6.5 and Unity" width="300" height="187" srcset="/wp-content/uploads/2008/10/capture-11-300x187.png 300w, /wp-content/uploads/2008/10/capture-11.png 1440w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p style="text-align: left;">The result is quite spectacular. On my Gnome desktop, I am now able to display some windows from Windows XP and Windows Vista.</p>
 <p style="text-align: left;">Well, this is not yet perfectly smooth or artifact free, but this is already really usable and responsive enough to be used intensively.</p>
 <p style="text-align: left;">Another limit is the operating system support. So far, among my virtual machines, I was able to do it with Windows systems but not Open Solaris for instance.</p>
@@ -745,18 +754,19 @@ The virtual disk, '/path/to/disk.vmdk', was corrupted and has been  successfully
 <p style="text-align: left;">I just wanted to insist that if you are a VMWare user,  you really should consider to upgrade for the <strong>complete support of the latest kernel</strong> and the <strong>Unity</strong> feature.</p>
 <p style="text-align: left;">It seems that VMWare has listened to the Linux users, or at least is taking it more seriously. Not that they are nice, but the competitors are close (Virtual box, KVM, Xen&#8230;) !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/10/05/vmware-workstation-65.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Xen vs KVM</title>
-		<link>/blog-archive/2008/05/03/xen-vs-kvm.html</link>
+		<link>/2008/05/03/xen-vs-kvm.html</link>
 		<pubDate>Sat, 03 May 2008 21:38:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Virtualization]]></category>
 		<category><![CDATA[KVM]]></category>
 		<category><![CDATA[Xen]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=105</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=105</guid>
 		<description><![CDATA[I was planning to give a try to Xen for my future virtual servers. This blog made me think twice. I think I am going to check KVM first.]]></description>
 				<content:encoded><![CDATA[<p>I was planning to give a try to Xen for my future virtual servers.</p>

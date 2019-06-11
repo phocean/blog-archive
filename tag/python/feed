@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Python &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/python/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/python/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Soktspy</title>
-		<link>/blog-archive/2012/06/20/soktspy.html</link>
+		<link>/2012/06/20/soktspy.html</link>
 		<pubDate>Wed, 20 Jun 2012 20:45:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -33,7 +33,8 @@
 		<category><![CDATA[Soktpy]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
-		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1254</guid>
+		<description><![CDATA[Soktspy is a small script that may be helpful for some investigation. Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets. But sometimes, the behavior...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/20/soktspy.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Soktspy is a small script that may be helpful for some investigation.</p>
 <p>Sometimes, you may detect that some suspicious network traffic coming out from a machine. In general, it is easy to spot the process from which the packets originate. You somehow connect to the PC and look for open sockets.</p>
 <p>But sometimes, the behavior may be very sneaky, consisting of one or two packets, at rare and random intervals. Unless you spend all the day before the screen, it may be very difficult to trace.</p>
@@ -41,9 +42,9 @@
 <p>So here is the Soktspy, a python script that easily build into a portable and standalone executable to deploy on the target machine.</p>
 <p>Once launched, it just loops in the background and log sockets that are created for some given peers (the IP addresses you found involved in the suspicious network activity).</p>
 <p>Maybe, some other tool exist, but I could not find anything similar. Let me know if you have any suggestion. Anyway, it was a nice exercise to do :)</p>
-<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/blog-archive/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy01.png 668w, /blog-archive/wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
+<p><img class="aligncenter size-full wp-image-1257" title="soktspy01" src="/wp-content/uploads/2012/06/soktspy01.png" alt="" width="668" height="427" srcset="/wp-content/uploads/2012/06/soktspy01.png 668w, /wp-content/uploads/2012/06/soktspy01-300x191.png 300w" sizes="(max-width: 668px) 100vw, 668px" /></p>
 <p><strong>Download</strong></p>
-<p><a href="/blog-archive/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
+<p><a href="/wp-content/uploads/2012/06/soktSpy-v1.2.zip">soktSpy v1.2</a></p>
 <p><strong>Pre-requisites</strong></p>
 <ul>
 <li>Install Visual C++ Runtime libraries with v<strong>credist_x86.exe </strong>(not necessary if the target machine happens to have Python already installed)</li>
@@ -61,7 +62,7 @@
 <li>Start <strong>soktSpy.exe</strong>.</li>
 </ul>
 <p>Then, as soon as the sneaky process will send out a packet toward the monitored IP, a log record will be triggered:</p>
-<p><a href="/blog-archive/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/blog-archive/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /blog-archive/wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /blog-archive/wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p><a href="/wp-content/uploads/2012/06/soktspy02.png" rel="lightbox[1254]"><img class="aligncenter size-large wp-image-1255" title="soktspy02" src="/wp-content/uploads/2012/06/soktspy02-1024x327.png" alt="" width="1024" height="327" srcset="/wp-content/uploads/2012/06/soktspy02-1024x327.png 1024w, /wp-content/uploads/2012/06/soktspy02-300x96.png 300w, /wp-content/uploads/2012/06/soktspy02.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
 <p>The log file contains the following info, in that order:</p>
 <ul>
 <li>Detection time (based on the system local time)</li>
@@ -81,7 +82,7 @@
 			</item>
 		<item>
 		<title>Netios 0.73</title>
-		<link>/blog-archive/2010/02/10/netios-0-73.html</link>
+		<link>/2010/02/10/netios-0-73.html</link>
 		<pubDate>Wed, 10 Feb 2010 14:51:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -94,18 +95,21 @@
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=710</guid>
+		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
 		<description><![CDATA[Netios 0.73 fixes some bugs and Complete changelog : 2010-02-10  (0.73) phocean &#60;jc@phocean.net&#62; * remove useless options * fix various bugs Check there (tools page) for more details and a download link.]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.73 fixes some bugs and</p>
 <p>Complete changelog :</p>
 <blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
+<blockquote><p>2010-02-10  (0.73) phocean &lt;jc@phocean.net&gt;</p>
 <p>* remove useless options<br />
 * fix various bugs</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools  page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.72</title>
-		<link>/blog-archive/2010/01/15/netios-0-72.html</link>
+		<link>/2010/01/15/netios-0-72.html</link>
 		<pubDate>Fri, 15 Jan 2010 10:20:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -118,19 +122,22 @@
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
-		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=683</guid>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
+		<description><![CDATA[Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now. Complete changelog : 2010-01-14  (0.72) phocean &#60;jc@phocean.net&#62; * ciscoclass.py : forgot to remove a debug print * ciscoclass.py : finish and fix a bunch of bugs in...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/netios-0-72.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Netios 0.72 fixes some bugs with the show_run mode and large config files. I also found some issues concerning the prompt detection, so it should be fixed now.</p>
 <p>Complete changelog :</p>
+<blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
 <blockquote><p>2010-01-14  (0.72) phocean &lt;jc@phocean.net&gt;</p>
 <p>* ciscoclass.py : forgot to remove a debug print<br />
 * ciscoclass.py : finish and fix a bunch of bugs in the show run function, format the config file properly<br />
 * ciscoclass.py : fix the prompt regex</p></blockquote>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Netios 0.71</title>
-		<link>/blog-archive/2009/12/20/netios-0-71.html</link>
+		<link>/2009/12/20/netios-0-71.html</link>
 		<pubDate>Sun, 20 Dec 2009 16:34:37 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -146,7 +153,8 @@
 		<category><![CDATA[Python]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
-		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=578</guid>
+		<description><![CDATA[I release a new version of Netios : 0.71. There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing. It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up. A...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/20/netios-0-71.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I release a new version of Netios : 0.71.</p>
 <p>There are a lot of changes, starting with cosmetics, but the biggest one is the support of multiprocessing.</p>
 <p>It is now able to process several routers at the same time, so using it on a large list of machines results in a big speed up.</p>
@@ -154,8 +162,10 @@
 <p>It is also now able to fetch a configuration file remotly, but it requires more testing before I feel confident in the way it works.</p>
 <p>The complete changelog :</p>
 <blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
+<blockquote><p>2009-12-20  (0.71) phocean <jc@phocean.net>;</p>
 <p>* ciscoclass.py : handle correctly the cisco pager &#8212; More &#8212; so that &#8220;show run&#8221; mode should work even with large config files<br />
 * sshclass.py : allow to override terminal size system settings (make use of the cisco pager to avoid filling the buffer)</p>
+<p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
 <p>2009-11-16  (0.70) phocean <jc@phocean.net> (private release)</p>
 <p>* implement multiprocessing<br />
 * improve code documentation<br />
@@ -163,7 +173,7 @@
 * reduce useless logging<br />
 * netios.py : bug : missing startTime parameter in f_skip_error and f_command functions</p></blockquote>
 <p>I cross my fingers so that there are not too many bugs, but if so, please don&#8217;t forget to report it to me.</p>
-<p><a title="Netios" href="/blog-archive/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
+<p><a title="Netios" href="/tools/netios">Check there</a> (tools page) for more details and a download link.</p>
 ]]></content:encoded>
 			</item>
 	</channel>

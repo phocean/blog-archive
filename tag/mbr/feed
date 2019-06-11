@@ -9,8 +9,8 @@
 
 <channel>
 	<title>MBR &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/mbr/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/mbr/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Debugging the MBR with IDA Pro and Bochs</title>
-		<link>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html</link>
-		<comments>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html#comments</comments>
+		<link>/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html</link>
+		<comments>/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html#comments</comments>
 		<pubDate>Thu, 20 Jan 2011 19:57:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -36,7 +36,8 @@
 		<category><![CDATA[MBR]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=980</guid>
-		<description><![CDATA[Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more. Prerequisite : IDA Pro (6.0) with the IDA Python plug-in (1.4.3) Steps : Prepare...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=980</guid>
+		<description><![CDATA[Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more. Prerequisite : IDA Pro (6.0) with the IDA Python plug-in (1.4.3) Steps : Prepare...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Analyzing the MBR is sometimes required during a forensic process, if you suspect a malicious activity that is not detected on-line. With static analysis, you may see if an obvious corruption happened, but you will need to debug to learn more.</p>
 <h2>Prerequisite :</h2>
 <ul>
@@ -85,7 +86,7 @@ IMGNAME     = "sdb.img"</pre>
 <li>Start the debugger.</li>
 </ol>
 <p>You should now be able to go ahead and debug the MBR step by step.</p>
-<p><img class="aligncenter size-full wp-image-996" title="ida-mbr" src="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png" alt="" width="600" height="546" srcset="/blog-archive/wp-content/uploads/2011/01/ida-mbr.png 600w, /blog-archive/wp-content/uploads/2011/01/ida-mbr-300x273.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p><img class="aligncenter size-full wp-image-996" title="ida-mbr" src="/wp-content/uploads/2011/01/ida-mbr.png" alt="" width="600" height="546" srcset="/wp-content/uploads/2011/01/ida-mbr.png 600w, /wp-content/uploads/2011/01/ida-mbr-300x273.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
 <h2>References :</h2>
 <ul>
 <li>Hexblog : <a title="Develop your master boot record and debug it with IDA Pro and the Bochs debugger " href="http://www.hexblog.com/?p=103" target="_blank">Develop your master boot record and debug it with IDA Pro and the Bochs debugger plugin</a></li>
@@ -93,7 +94,7 @@ IMGNAME     = "sdb.img"</pre>
 <li>Bochs User Manual : <a title="Bochs tips and techniques" href="http://bochs.sourceforge.net/doc/docbook/user/howto.html#AEN2776" target="_blank">Chapter 8, Tips and Techniques</a></li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/01/20/debugging-the-mbr-with-ida-pro-and-bochs.html/feed</wfw:commentRss>
 		<slash:comments>6</slash:comments>
 		</item>
 	</channel>

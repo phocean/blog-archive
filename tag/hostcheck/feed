@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Hostcheck &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/hostcheck/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/hostcheck/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Hostcheck</title>
-		<link>/blog-archive/2010/01/15/hostcheck.html</link>
+		<link>/2010/01/15/hostcheck.html</link>
 		<pubDate>Fri, 15 Jan 2010 12:44:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -30,15 +30,16 @@
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
-		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
+		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I continue to publish some my coding.</p>
 <p>Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up.<br />
 It just read a host file and check if the host are available doing a ping test or trying to open a socket.</p>
 <p>Nothing great, but it may help to quickly check that most of things are right after a network change, for instance.<br />
 Because we want to test many hosts, and not to scan, the pace is fast so it may not be 100% reliable. The idea is to see roughly is the connectivity is correct or if your whole LAN is down.<br />
 It uses colors and is easy to read, so it might be good to show to your manager ! :)</p>
-<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/blog-archive/tools/hostcheck">there</a>.</p>
-<p><a href="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
+<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/tools/hostcheck">there</a>.</p>
+<p><a href="/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
 ]]></content:encoded>
 			</item>
 	</channel>

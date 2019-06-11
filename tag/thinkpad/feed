@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Thinkpad &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/thinkpad/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/thinkpad/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Tested the Lenovo support&#8230;</title>
-		<link>/blog-archive/2008/09/21/tested-the-lenovo-support.html</link>
+		<link>/2008/09/21/tested-the-lenovo-support.html</link>
 		<pubDate>Sat, 20 Sep 2008 23:38:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -28,7 +28,8 @@
 		<category><![CDATA[Thinkpad]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
-		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=247</guid>
+		<description><![CDATA[&#8230; and was quite impressed. Wednesday evening, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months. Thursday morning, I am recalled by someone from the technical service. They first say that the battery is no more under warranty...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/09/21/tested-the-lenovo-support.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>&#8230; and was quite impressed.</p>
 <p><strong>Wednesday evening</strong>, I called the support to report that I was not satified with my battery. I had lost 25% of its capacity over less than 8 months.</p>
 <p><strong>Thursday morning</strong>, I am recalled by someone from the technical service. They first say that the battery is no more under warranty &#8211; 1 year long. I guess they say so after checking when the battery was made or sold the retailer. That does not concern the end-consumer like me : the warranty only started when I purchased the laptop, and I still have 4 months of warranty ahead.</p>
@@ -39,8 +40,8 @@
 			</item>
 		<item>
 		<title>My new toy : Thinkpad T61</title>
-		<link>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html</link>
-		<comments>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
+		<link>/2008/02/21/my-new-toy-thinkpad-t61.html</link>
+		<comments>/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
 		<pubDate>Thu, 21 Feb 2008 12:22:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -49,10 +50,11 @@
 		<category><![CDATA[Thinkpad]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
-		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
+		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61.</p>
-<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"></a></p>
-<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"><img src="/blog-archive/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
+<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/?attachment_id=98"></a></p>
+<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/?attachment_id=98"><img src="/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
 <p>About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am looking for.<br />
 <span id="more-97"></span><br />
 So this time I am giving a try to Lenovo. What really decided me is its old fashion screen, I mean a non-bright one. My eyes are really getting tired with all these new bright laptop screens. Plus, its resolution is impressive : 1440 x 900.</p>
@@ -155,7 +157,7 @@ CONFIG_OUT_OF_LINE_PFN_TO_PAGE=y
 <p>At the end, I just have hibernation not working : it is nice to see how good the support of Debian Lenny is, thought the hardware is pretty recent. Things are really improving quickly.</p>
 <p>If you have some issue installing Linux on your Thinpad,  post your problem here. I will be happy to help you as much as I can.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

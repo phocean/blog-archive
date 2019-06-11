@@ -9,8 +9,8 @@
 
 <channel>
 	<title>scanner &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/scanner/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/scanner/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Hostcheck</title>
-		<link>/blog-archive/2010/01/15/hostcheck.html</link>
+		<link>/2010/01/15/hostcheck.html</link>
 		<pubDate>Fri, 15 Jan 2010 12:44:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -30,20 +30,21 @@
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
-		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=696</guid>
+		<description><![CDATA[I continue to publish some my coding. Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up. It just read a host file and check if the host are available doing a ping test or trying to open a socket. Nothing great, but it may...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/15/hostcheck.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I continue to publish some my coding.</p>
 <p>Hostcheck is a simple Perl script that can be useful to quickly check if a list of host is up.<br />
 It just read a host file and check if the host are available doing a ping test or trying to open a socket.</p>
 <p>Nothing great, but it may help to quickly check that most of things are right after a network change, for instance.<br />
 Because we want to test many hosts, and not to scan, the pace is fast so it may not be 100% reliable. The idea is to see roughly is the connectivity is correct or if your whole LAN is down.<br />
 It uses colors and is easy to read, so it might be good to show to your manager ! :)</p>
-<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/blog-archive/tools/hostcheck">there</a>.</p>
-<p><a href="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/blog-archive/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
+<p>I hope it will be useful. More info and download link are <a title="Hostcheck" href="/tools/hostcheck">there</a>.</p>
+<p><a href="/wp-content/uploads/2010/01/hostcheck.png" rel="lightbox[696]"><img class="aligncenter size-full wp-image-700" title="hostcheck" src="/wp-content/uploads/2010/01/hostcheck.png" alt="" width="651" height="401" /></a></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>waf00f</title>
-		<link>/blog-archive/2009/12/16/waf00f.html</link>
+		<link>/2009/12/16/waf00f.html</link>
 		<pubDate>Wed, 16 Dec 2009 22:40:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -57,6 +58,7 @@ It uses colors and is easy to read, so it might be good to show to your manager 
 		<category><![CDATA[waf00f]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
 		<description><![CDATA[waf00f is another nice fingerprinting tool. It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls. Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out. Check it there.]]></description>
 				<content:encoded><![CDATA[<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
 It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
@@ -66,7 +68,7 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 			</item>
 		<item>
 		<title>Nessus 4.2</title>
-		<link>/blog-archive/2009/12/01/nessus-4-2.html</link>
+		<link>/2009/12/01/nessus-4-2.html</link>
 		<pubDate>Tue, 01 Dec 2009 20:21:23 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -77,7 +79,8 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=534</guid>
-		<description><![CDATA[Nessus 4.2 is out. I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/01/nessus-4-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=534</guid>
+		<description><![CDATA[Nessus 4.2 is out. I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/01/nessus-4-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Nessus 4.2" href="http://www.nessus.org/download/" target="_blank">Nessus 4.2</a> is out.</p>
 <p>I tried it out and I must say that the new UI is great. I am not a big fan of Flash and I regret this choice. However, the design is excellent, all options are accessible in a logical way. Instead of spreading over the options like it used to be, they come to you in the right order.</p>
 <p>I also appreciate that the server and the client set-up are now unified thanks to the web interface (you can access it from localhost or from the network indifferently).</p>
@@ -88,7 +91,7 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 			</item>
 		<item>
 		<title>Nmap 5.0 is out</title>
-		<link>/blog-archive/2009/07/17/nmap-5-0-is-out.html</link>
+		<link>/2009/07/17/nmap-5-0-is-out.html</link>
 		<pubDate>Fri, 17 Jul 2009 08:41:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -98,14 +101,15 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=395</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=395</guid>
 		<description><![CDATA[Nmap 5.0 has been released, with a bunch of improvments : look at the changelog.]]></description>
 				<content:encoded><![CDATA[<p><a title="Nmap 5.0 download" href="http://nmap.org/dist/nmap-5.00.tar.bz2" target="_blank">Nmap 5.0</a> has been released, with a bunch of improvments : look at the <a title="Nmap 5.0 change" href="http://nmap.org/changelog.html" target="_blank">changelog</a>.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Prads &#8211; a new passive scanner !</title>
-		<link>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html</link>
-		<comments>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html#comments</comments>
+		<link>/2009/05/31/prads-a-new-passive-scanner.html</link>
+		<comments>/2009/05/31/prads-a-new-passive-scanner.html#comments</comments>
 		<pubDate>Sun, 31 May 2009 21:19:47 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -115,7 +119,8 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 		<category><![CDATA[scanner]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=369</guid>
-		<description><![CDATA[Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called Prads. Prads is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out. Prads operates differently from Nmap or SinFP that I already...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/31/prads-a-new-passive-scanner.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=369</guid>
+		<description><![CDATA[Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called Prads. Prads is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out. Prads operates differently from Nmap or SinFP that I already...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/31/prads-a-new-passive-scanner.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Edward Bjarte Fjellskål contacted me to let me know about a new program he, Kacper Wysocki and Jan Henning Thorsen made, called <strong>Prads</strong>.</p>
 <p><a title="Prads" href="http://gamelinux.github.com/prads/" target="_blank">Prads</a> is a fingerprinting scanner, coded in Perl. I am fond of this kind of tool, so I enjoyed checking it out.</p>
 <p>Prads operates differently from Nmap or SinFP that I already introduced on this blog. It works passively, meaning that it aims to scan systems without sending out a single packet. It does this by capturing the traffic silently though an interface in promiscuous mode.<br />
@@ -159,12 +164,12 @@ Finally, there is a little incoherence between the distance shown for the DNS se
 <p>As it is in its early stage, it is very promising and I am looking forward to Prads and its signature database improving. Please keep up the good job !</p>
 <p>That&#8217;s all for today. This tour was short but I will write again about this tool, as I will be using it. The next post will probably introduce the way the signature database is built and how it can be extended. So keep wired and don&#8217;t forget to check the <a href="http://gamelinux.github.com/prads/">Prads homepage</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/05/31/prads-a-new-passive-scanner.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/05/31/prads-a-new-passive-scanner.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>SinFP, part II : comparison with Nmap 4.20</title>
-		<link>/blog-archive/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
+		<link>/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
 		<pubDate>Sun, 24 Dec 2006 14:53:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -395,8 +400,8 @@ Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nma
 			</item>
 		<item>
 		<title>SinFP, part I : introduction and comparison with Nmap 4.10</title>
-		<link>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
-		<comments>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
+		<link>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
+		<comments>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
 		<pubDate>Sun, 17 Dec 2006 06:59:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -590,9 +595,9 @@ IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
 <p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
 <p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
 <h3>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a></h3>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+<p><img src="/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>ACPI &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/acpi/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/acpi/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>pm-utils instead of acpi-support ?</title>
-		<link>/blog-archive/2007/10/05/pm-utils-instead-of-acpi-support.html</link>
+		<link>/2007/10/05/pm-utils-instead-of-acpi-support.html</link>
 		<pubDate>Fri, 05 Oct 2007 14:32:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -28,7 +28,8 @@
 		<category><![CDATA[Ubuntu]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=78</guid>
-		<description><![CDATA[I had several issues with gnome-power-manager and acpi-support. Both are base on the acpid daemon for power management. Acpi-support is a convenient package of scripts to configure the power management. It is bundled in many distributions, including Ubuntu and Debian. The problem is that it does not cooperate very well with gnome-power-manager. As a result,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2007/10/05/pm-utils-instead-of-acpi-support.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=78</guid>
+		<description><![CDATA[I had several issues with gnome-power-manager and acpi-support. Both are base on the acpid daemon for power management. Acpi-support is a convenient package of scripts to configure the power management. It is bundled in many distributions, including Ubuntu and Debian. The problem is that it does not cooperate very well with gnome-power-manager. As a result,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2007/10/05/pm-utils-instead-of-acpi-support.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I had several issues with <strong>gnome-power-manager</strong> and <strong>acpi-support</strong>.</p>
 <p>Both are base on the <strong>acpid</strong> daemon for power management. Acpi-support is a convenient package of scripts to configure the power management.</p>
 <p>It is bundled in many distributions, including Ubuntu and Debian.</p>
@@ -48,7 +49,7 @@ $ aptitude install pm-utils</pre>
 			</item>
 		<item>
 		<title>Solved : network-manager issue with ACPI hibernation</title>
-		<link>/blog-archive/2007/08/03/solved-network-manager-issue-with-acpi-hibernation.html</link>
+		<link>/2007/08/03/solved-network-manager-issue-with-acpi-hibernation.html</link>
 		<pubDate>Fri, 03 Aug 2007 13:04:26 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -57,6 +58,7 @@ $ aptitude install pm-utils</pre>
 		<category><![CDATA[Network-manager]]></category>
 		<category><![CDATA[Ubuntu]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=74</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=74</guid>
 		<description><![CDATA[If you have a laptop, Network-Manager running and use ACPI to hibernate, look at this bug report and its nice tip : Editing /etc/default/acpi-support with this line : STOP_SERVICES=&#8221;networking&#8221; solved an old issue I used to have (and for which I wrote a dirty script with modprobe, dhclient, etc.]]></description>
 				<content:encoded><![CDATA[<p>If you have a laptop, Network-Manager running and use ACPI to hibernate, look at <a href="http://https://bugs.launchpad.net/ubuntu/+bug/69426">this bug report</a> and its nice tip :</p>
@@ -67,7 +69,7 @@ $ aptitude install pm-utils</pre>
 			</item>
 		<item>
 		<title>Battery power and Compiz</title>
-		<link>/blog-archive/2007/05/20/battery-power-and-compiz.html</link>
+		<link>/2007/05/20/battery-power-and-compiz.html</link>
 		<pubDate>Sun, 20 May 2007 12:57:16 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -75,6 +77,7 @@ $ aptitude install pm-utils</pre>
 		<category><![CDATA[Compiz]]></category>
 		<category><![CDATA[Intel]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=51</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=51</guid>
 		<description><![CDATA[I decided to drop Compiz since I found out (thanks to the Powertop utility by Intel) that it was power monger. Result : Compiz : 3h30 Metacity : 5h00]]></description>
 				<content:encoded><![CDATA[<p>I decided to drop Compiz since I found out (thanks to the <a href="http://www.linuxpowertop.org/" target="_blank">Powertop</a> utility by Intel) that it was power monger.</p>

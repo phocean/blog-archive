@@ -9,8 +9,8 @@
 
 <channel>
 	<title>stenography &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/stenography/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/stenography/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>ESFS, new perspectives for stenography ?</title>
-		<link>/blog-archive/2011/01/14/esfs-new-perspectives-for-stenography.html</link>
+		<link>/2011/01/14/esfs-new-perspectives-for-stenography.html</link>
 		<pubDate>Fri, 14 Jan 2011 21:43:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[stenography]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=952</guid>
-		<description><![CDATA[Tomas Touceda advertised a new project on Full Disclosure. The idea sounds good, so I will keep an eye on this very interesting project. Though I would like to know more about the methods that were used for encryption and stenography. Code and explanations are on the ESFS project homepage. Beyond the pratical usage, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/01/14/esfs-new-perspectives-for-stenography.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=952</guid>
+		<description><![CDATA[Tomas Touceda advertised a new project on Full Disclosure. The idea sounds good, so I will keep an eye on this very interesting project. Though I would like to know more about the methods that were used for encryption and stenography. Code and explanations are on the ESFS project homepage. Beyond the pratical usage, I...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/01/14/esfs-new-perspectives-for-stenography.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Tomas Touceda advertised a new project on Full Disclosure.<br />
 The idea sounds good, so I will keep an eye on this very interesting project.<br />
 Though I would like to know more about the methods that were used for encryption and stenography.</p>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>IPSEC &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ipsec/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ipsec/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>A link between Stuxnet and the OpenBSD IPSEC backdoor rumor ?</title>
-		<link>/blog-archive/2011/01/16/a-link-between-stuxnet-and-the-openbsd-ipsec-backdoor-rumor.html</link>
+		<link>/2011/01/16/a-link-between-stuxnet-and-the-openbsd-ipsec-backdoor-rumor.html</link>
 		<pubDate>Sun, 16 Jan 2011 22:12:53 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -32,13 +32,14 @@
 		<category><![CDATA[worm]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=967</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=967</guid>
 		<description><![CDATA[Found on Full Disclosure, a weired but troubling connection of two security affairs : the OpenBSD backdoor rumor and the stuxnet worm.]]></description>
 				<content:encoded><![CDATA[<p>Found on Full Disclosure, a weired but troubling connection of two security affairs : <a title="OpenBSD backdoor and stuxnet" href="http://extendedsubset.com/?p=43" target="_blank">the OpenBSD backdoor rumor and the stuxnet worm</a>.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Perl : how to monitor a service remotely using sockets</title>
-		<link>/blog-archive/2007/07/15/perl-how-to-monitor-a-service-remotely-using-sockets.html</link>
+		<link>/2007/07/15/perl-how-to-monitor-a-service-remotely-using-sockets.html</link>
 		<pubDate>Sun, 15 Jul 2007 17:59:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -49,6 +50,7 @@
 		<category><![CDATA[Perl]]></category>
 		<category><![CDATA[Protocols]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=64</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=64</guid>
 		<description><![CDATA[I came to program my first Perl script based on sockets, after setting an IPSEC tunnel.
 
@@ -74,12 +76,12 @@ That why I came to develop a script that listen on a socket and allow that peer 
 <p>In other words, the Isakmp service has to be restarted every time we need the tunnel to be up.</p>
 <p>Of course, it is not the purpose of Isakmp to have such a mechanism and what we want is to start the tunnel from the local peer, every time it needs to do some transfer.</p>
 <p>The graph below summarizes the situation :</p>
-<p style="text-align: center;"><img src="/blog-archive/wp-content/uploads/2007/07/ipsec-tunnel.png" alt="IPSEC tunnel with OpenBSD as a VPN gateway" /></p>
+<p style="text-align: center;"><img src="/wp-content/uploads/2007/07/ipsec-tunnel.png" alt="IPSEC tunnel with OpenBSD as a VPN gateway" /></p>
 <p>That is why I came to develop a script that opens a socket and allows the peer to remotely restart the Isakmp service.</p>
 <p><span id="more-64"></span></p>
 <p>Perl is once again the perfect language for someone like me, who is not a developer. My script uses mainly 2 CPAN modules : <a title="NetServer::generic" href="http://http://search.cpan.org/~chstross/NetServer-Generic-1.03/Generic.pm" target="_blank">NetServer::Generic</a> to manage the socket and <a title="Proc::ProcessTable" href="http://search.cpan.org/~durist/Proc-ProcessTable-0.41/ProcessTable.pm" target="_blank">Proc::ProcessTable</a> to get the PID of a running process.</p>
-<p>You can dowload it here : <strong><a title="IsakmpdMon" href="/blog-archive/wp-content/uploads/2007/07/isakmpdmon.zip">IsakmpdMon</a></strong>.</p>
-<p>And here is the documentation on how to use it : <a title="IsakmpdMon Synopsys" href="/blog-archive/wp-content/uploads/2007/07/isakmpdmon.html"><strong>IsakmpdMon Synopsys</strong>.</a></p>
+<p>You can dowload it here : <strong><a title="IsakmpdMon" href="/wp-content/uploads/2007/07/isakmpdmon.zip">IsakmpdMon</a></strong>.</p>
+<p>And here is the documentation on how to use it : <a title="IsakmpdMon Synopsys" href="/wp-content/uploads/2007/07/isakmpdmon.html"><strong>IsakmpdMon Synopsys</strong>.</a></p>
 <p><strong>ATTENTION</strong> : for security reason, only trusted IPs should be allowed to send the commands.</p>
 <p>To have your commands accepted, edit the line :</p>
 <pre>my ($allowed) = ['10\.80\.1\.2'];</pre>

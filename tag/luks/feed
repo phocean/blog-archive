@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Luks &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/luks/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/luks/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Disk Encryption on Linux</title>
-		<link>/blog-archive/2007/11/18/disk-encryption-on-linux.html</link>
-		<comments>/blog-archive/2007/11/18/disk-encryption-on-linux.html#comments</comments>
+		<link>/2007/11/18/disk-encryption-on-linux.html</link>
+		<comments>/2007/11/18/disk-encryption-on-linux.html#comments</comments>
 		<pubDate>Sun, 18 Nov 2007 17:56:47 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -34,6 +34,7 @@
 		<category><![CDATA[Luks]]></category>
 		<category><![CDATA[swap]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=85</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=85</guid>
 		<description><![CDATA[I finally encrypted some partitions of my hard drive.
 
@@ -107,7 +108,7 @@ auth    optional        pam_mount.so use_first_pass</pre>
 <p>However I think it really must become more user-friendly for the masses. Most of people will still be scared to open a terminal and type the commands above, so I am looking forward to seeing some graphical front-end to manage all that. Sure there are coming, and if you already know some project, please let me know.</p>
 <p>About performance, if encryption must have a resource cost, I could not notice any slow down on a pretty modest hardware (celeron M 1,5 Ghz).</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/18/disk-encryption-on-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/18/disk-encryption-on-linux.html/feed</wfw:commentRss>
 		<slash:comments>11</slash:comments>
 		</item>
 	</channel>

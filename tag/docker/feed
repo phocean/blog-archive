@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Docker &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/docker/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/docker/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>BeEF Docker</title>
-		<link>/blog-archive/2017/02/24/beef-docker.html</link>
+		<link>/2017/02/24/beef-docker.html</link>
 		<pubDate>Fri, 24 Feb 2017 21:17:51 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -32,6 +32,7 @@
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
+		<guid isPermaLink="false">http://phocean.net/?p=2154</guid>
 		<description><![CDATA[Just a quick update to tell about a new Docker based on the phocean/msf image. https://hub.docker.com/r/phocean/beef/ https://github.com/phocean/dockerfile-beef It provides an image for the BeEF framework for XSS browser exploitation (http://beefproject.com/). Enjoy it!]]></description>
 				<content:encoded><![CDATA[<p>Just a quick update to tell about a new Docker based on the phocean/msf image.</p>
 <p><a href="https://hub.docker.com/r/phocean/beef/">https://hub.docker.com/r/phocean/beef/</a></p>
@@ -42,7 +43,7 @@
 			</item>
 		<item>
 		<title>Metasploit framework docker image now published on Docker Hub</title>
-		<link>/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html</link>
+		<link>/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html</link>
 		<pubDate>Tue, 28 Jun 2016 20:56:32 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -52,7 +53,8 @@
 		<category><![CDATA[Metasploit]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2117</guid>
-		<description><![CDATA[I pushed the image on Docker Hub, so that deploying it is now as easy as: docker pull phocean/msf It is an automatic build based on the Github repository. It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2117</guid>
+		<description><![CDATA[I pushed the image on Docker Hub, so that deploying it is now as easy as: docker pull phocean/msf It is an automatic build based on the Github repository. It means that the image is built by Docker, not by me. For this task, they simply have a read access to the Dockerfile on Github....<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/06/28/metasploit-framework-docker-image-now-published-on-docker-hub.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I pushed the image on <a href="https://hub.docker.com/r/phocean/msf/">Docker Hub</a>, so that deploying it is now as easy as:</p>
 <pre>docker pull phocean/msf</pre>
 <p>It is an automatic build based on the <a href="https://github.com/phocean/dockerfile-debian-metasploit">Github repository</a>.</p>
@@ -63,7 +65,7 @@
 			</item>
 		<item>
 		<title>Msf docker image now in REMnux!</title>
-		<link>/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html</link>
+		<link>/2016/05/12/msf-docker-image-now-in-remnux.html</link>
 		<pubDate>Thu, 12 May 2016 17:50:14 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -73,7 +75,8 @@
 		<category><![CDATA[REMnux]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
-		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2108</guid>
+		<description><![CDATA[Just a quick note to say that I am very happy about this Metasploit docker image being useful to some people, according to the feedback I got. And Lenny was kind enough to integrate it into his Linux distro, REMnux, well known among reversing people. He also came up with very good suggestions and helped...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/12/msf-docker-image-now-in-remnux.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Just a quick note to say that I am very happy about this <a href="https://github.com/phocean/dockerfile-debian-metasploit">Metasploit docker image</a> being useful to some people, according to the feedback I got.</p>
 <p>And <a href="https://twitter.com/lennyzeltser">Lenny</a> was kind enough to integrate it into his Linux distro, <a href="https://remnux.org/">REMnux</a>, well known among reversing people. He also came up with very good suggestions and helped me to bring some improvements, so many thanks to him.</p>
 <p>Don&#8217;t miss reading his blog article on how to use the image in REMnux : <a href="https://zeltser.com/metasploit-framework-docker-container/"><em>&#8220;Run Metasploit Framework as a Docker Container Without Installation Pains&#8221;</em></a>.<br />
@@ -82,7 +85,7 @@ Stay tuned ;-)</p>
 			</item>
 		<item>
 		<title>Lessons learned with Docker, Nodejs apps and volumes</title>
-		<link>/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
+		<link>/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html</link>
 		<pubDate>Fri, 06 May 2016 17:05:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -96,7 +99,8 @@ Stay tuned ;-)</p>
 		<category><![CDATA[Nodejs]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
-		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2099</guid>
+		<description><![CDATA[Context I have kept playing with Docker recently, just for fun and to learn. It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky. Indeed, I had some issues with Etherpad, which is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/06/the-quest-for-a-secure-nodejs-app-docker-container.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h2>Context</h2>
 <p>I have kept playing with Docker recently, just for fun and to learn.</p>
 <p>It is very powerful, but still young. It quickly shows some limit when it comes to security or persistence. There are some workarounds, yet more or less complex, more or less hacky.</p>
@@ -167,7 +171,7 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>Small improvements to the Metasploit-framework Dockerfile</title>
-		<link>/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html</link>
+		<link>/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html</link>
 		<pubDate>Tue, 03 May 2016 20:36:38 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -177,8 +181,9 @@ de/server.js"</pre>
 		<category><![CDATA[Metasploit]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2094</guid>
-		<description><![CDATA[I made a few improvements (at least, I think they are) to the metasploit-frameword Dockerfile : A volume from the container /root/.msf4 to $HOME/.msf4, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>I made a few improvements (at least, I think they are) to the <a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">metasploit-frameword Dockerfile</a> :</p>
+		<guid isPermaLink="false">http://phocean.net/?p=2094</guid>
+		<description><![CDATA[I made a few improvements (at least, I think they are) to the metasploit-frameword Dockerfile : A volume from the container /root/.msf4 to $HOME/.msf4, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/05/03/small-improvements-to-the-metasploit-framework-dockerfile.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>I made a few improvements (at least, I think they are) to the <a href="/2016/04/27/metasploit-dockerfile.html">metasploit-frameword Dockerfile</a> :</p>
 <ul>
 <li>A <a href="https://docs.docker.com/engine/userguide/containers/dockervolumes/">volume</a> from the container <em>/root/.msf4</em> to <em>$HOME/.msf4</em>, so that you can benefit from your customized prompt, scripts and modules anytime and have persistence on them. In other words, just manage them on your host and they will be readily available to the <em>msf</em> container.</li>
 <li>A volume from the container <em>/tmp/data</em> to the host <em>/tmp/msf</em>, so that you can get access to dump files and stuff like that.</li>
@@ -192,8 +197,8 @@ de/server.js"</pre>
 			</item>
 		<item>
 		<title>Metasploit Dockerfile</title>
-		<link>/blog-archive/2016/04/27/metasploit-dockerfile.html</link>
-		<comments>/blog-archive/2016/04/27/metasploit-dockerfile.html#comments</comments>
+		<link>/2016/04/27/metasploit-dockerfile.html</link>
+		<comments>/2016/04/27/metasploit-dockerfile.html#comments</comments>
 		<pubDate>Wed, 27 Apr 2016 18:26:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -205,7 +210,8 @@ de/server.js"</pre>
 		<category><![CDATA[pentest]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
-		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2088</guid>
+		<description><![CDATA[Hey, Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive. Instead of keeping reproducing boring installation steps every x months, I decided to build a Dockerfile for once. I chose Debian for its good compromise between features, stability and lightness. I am aware of the Kali Dockerfile, that...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/27/metasploit-dockerfile.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Hey,</p>
 <p>Managing updates and dependencies of a Metasploit installation have definitely been too much trouble and repetitive.</p>
 <p>Instead of keeping reproducing boring installation steps every <em>x</em> months, I decided to build a <em>Dockerfile</em> for once.</p>
@@ -223,14 +229,15 @@ de/server.js"</pre>
 </ul>
 <p>You can find it on <a href="https://github.com/phocean/dockerfile-debian-metasploit">my github</a>.</p>
 <p>If you have any trouble or suggestion on how to improve it, please let me know. Enjoy it and go ahead if you want to fork it!</p>
-<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/blog-archive/wp-content/uploads/2016/04/msf-580x320.png 580w, /blog-archive/wp-content/uploads/2016/04/msf-624x344.png 624w, /blog-archive/wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/wp-content/uploads/2016/04/msf-580x320.png 580w, /wp-content/uploads/2016/04/msf-624x344.png 624w, /wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p><img class="aligncenter size-medium wp-image-2092" src="http://phocean.net/wp-content/uploads/2016/04/msf-580x320.png" alt="Docker running msf" width="580" height="320" srcset="/wp-content/uploads/2016/04/msf-580x320.png 580w, /wp-content/uploads/2016/04/msf-624x344.png 624w, /wp-content/uploads/2016/04/msf.png 715w" sizes="(max-width: 580px) 100vw, 580px" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/04/27/metasploit-dockerfile.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>A few (convenient) dockerfiles</title>
-		<link>/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html</link>
+		<link>/2016/04/10/a-few-convenient-dockerfiles.html</link>
 		<pubDate>Sun, 10 Apr 2016 17:22:40 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -244,7 +251,8 @@ de/server.js"</pre>
 		<category><![CDATA[Tor]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
-		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2084</guid>
+		<description><![CDATA[I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data. Here they are: Debian-based Etherpad Debian-based Phishing Frenzy Debian-based Tor Browser I used to use VirtualBox guests, but maintaining them was a hassle (updates, snapshots, disk defragmation...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/04/10/a-few-convenient-dockerfiles.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just put on my github a few dockerfiles for virtual machines that I frequently use to get some quick work done or to temporary share some data.</p>
 <p>Here they are:</p>
 <ul>

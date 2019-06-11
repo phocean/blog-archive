@@ -9,8 +9,8 @@
 
 <channel>
 	<title>SinFP &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/sinfp/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/sinfp/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>SinFP, part II : comparison with Nmap 4.20</title>
-		<link>/blog-archive/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
+		<link>/2006/12/24/sinfp-part-ii-comparison-with-nmap-420.html</link>
 		<pubDate>Sun, 24 Dec 2006 14:53:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -250,8 +250,8 @@ Nmap : <a hreflang="en" href="http://insecure.org/nmap/">http://insecure.org/nma
 			</item>
 		<item>
 		<title>SinFP, part I : introduction and comparison with Nmap 4.10</title>
-		<link>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
-		<comments>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
+		<link>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html</link>
+		<comments>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html#comments</comments>
 		<pubDate>Sun, 17 Dec 2006 06:59:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -445,9 +445,9 @@ IPv4: HEURISTIC0/P1P2P3: Windows: Windows: 2000</pre>
 <p style="margin-bottom: 0cm">The more signatures there will be, the more efficient this tool will be !</p>
 <p style="margin-bottom: 0cm">I did contact him, so I can tell you he is very reactive, helpful, and willing to improve his program.</p>
 <h3>SinFP : <a hreflang="en" href="http://www.gomor.org">http://www.gomor.org</a></h3>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
+<p><img src="/wp-content/uploads/2007/05/sinfp1.png" alt="sinfp1.png" /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/17/sinfp-part-i-introduction-and-comparison-with-nmap-410.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

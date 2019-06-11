@@ -9,8 +9,8 @@
 
 <channel>
 	<title>buffer &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/buffer/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/buffer/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>IOS : Configuration buffer full, can&#8217;t add command</title>
-		<link>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html</link>
-		<comments>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html#comments</comments>
+		<link>/2009/05/29/ios-configuration-buffer-full-cant-add-command.html</link>
+		<comments>/2009/05/29/ios-configuration-buffer-full-cant-add-command.html#comments</comments>
 		<pubDate>Fri, 29 May 2009 15:19:21 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -29,7 +29,8 @@
 		<category><![CDATA[ios]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=366</guid>
-		<description><![CDATA[This error message suddenly showed up on one of my router when I tried to save its running configuration. service compress-config allowed me to workaround this buffer problem : router#wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue?...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=366</guid>
+		<description><![CDATA[This error message suddenly showed up on one of my router when I tried to save its running configuration. service compress-config allowed me to workaround this buffer problem : router#wr mem Building configuration... % Warning: Saving this config to nvram may corrupt any network management or security files stored at the end of nvram. Continue?...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/29/ios-configuration-buffer-full-cant-add-command.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This error message suddenly showed up on one of my router when I tried to save its running configuration.</p>
 <p><strong>service compress-config</strong> allowed me to workaround this buffer problem :</p>
 <pre>router#wr mem
@@ -49,7 +50,7 @@ router#wr mem
 Building configuration...
 Compressed configuration from 21787 bytes to 7991 bytes[OK]</pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/05/29/ios-configuration-buffer-full-cant-add-command.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/05/29/ios-configuration-buffer-full-cant-add-command.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 	</channel>

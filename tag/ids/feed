@@ -9,8 +9,8 @@
 
 <channel>
 	<title>IDS &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ids/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ids/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Promiscuous mode detection</title>
-		<link>/blog-archive/2009/06/01/promiscuous-mode-detection.html</link>
+		<link>/2009/06/01/promiscuous-mode-detection.html</link>
 		<pubDate>Mon, 01 Jun 2009 18:46:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -34,7 +34,8 @@
 		<category><![CDATA[Sniffing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
-		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=375</guid>
+		<description><![CDATA[Detectpromisc is a python script based on Scapy, that allows to detect if a computer is sniffing the network. By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself. There are however several...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/06/01/promiscuous-mode-detection.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="Detectpromisc" href="http://detectpromisc.sourceforge.net/index.html" target="_blank">Detectpromisc</a> is a python script based on Scapy, that allows to detect if a computer is sniffing the network.</p>
 <p>By nature, it is quite difficult to detect if a machine is sniffing, because it operates passively, receiving all packets from the wire but, normaly, answering only to packets destinated to itself.</p>
 <p>There are however several methods that make the detection possible.</p>
@@ -64,7 +65,7 @@ probably: Windows 2k/NT4</pre>
 			</item>
 		<item>
 		<title>DecaffenatID : a little ARP IDS for Windows</title>
-		<link>/blog-archive/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
+		<link>/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
 		<pubDate>Wed, 27 Aug 2008 12:49:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -75,6 +76,7 @@ probably: Windows 2k/NT4</pre>
 		<category><![CDATA[IPS]]></category>
 		<category><![CDATA[spoofing]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
 		<description><![CDATA[DecaffeinatID is a tool for Windows that can be very useful against ARP attacks.]]></description>
 				<content:encoded><![CDATA[<p><a title="DecaffeinatID" href="http://www.irongeek.com/i.php?page=security/decaffeinatid-simple-ids-arpwatch-for-windows">DecaffeinatID</a> is a tool for Windows that can be very useful against ARP attacks.</p>

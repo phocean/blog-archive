@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Injection &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/injection/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/injection/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>New book about ModSecurity</title>
-		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<link>/2009/11/15/new-book-about-modsecurity.html</link>
 		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -31,9 +31,10 @@
 		<category><![CDATA[ModSecurity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
-		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>ModSecurity is essential when it comes to secure any web site.</p>
 <p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
 However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
@@ -43,8 +44,8 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 			</item>
 		<item>
 		<title>Windows 7 UAC security design flaw</title>
-		<link>/blog-archive/2009/05/15/363.html</link>
-		<comments>/blog-archive/2009/05/15/363.html#comments</comments>
+		<link>/2009/05/15/363.html</link>
+		<comments>/2009/05/15/363.html#comments</comments>
 		<pubDate>Fri, 15 May 2009 14:48:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -56,19 +57,20 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 		<category><![CDATA[Windows 7]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=363</guid>
-		<description><![CDATA[Video of a dummy vulnerability on Windows 7 . More info there. It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe). Also, I can&#8217;t imagine that no...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/15/363.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=363</guid>
+		<description><![CDATA[Video of a dummy vulnerability on Windows 7 . More info there. It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe). Also, I can&#8217;t imagine that no...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/15/363.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="WIndows 7 vulnerability" href="http://leo.lss.com.au/W7E_VID_INT/W7E_VID_INT.htm">Video of a dummy vulnerability</a> on Windows 7 . More <a title="Windows 7 UAC vulnerability" href="http://www.pretentiousname.com/misc/win7_uac_whitelist2.html" target="_blank">info there</a>.</p>
 <p>It is incredible that Microsoft invests so much money in its security and that there are still such a bad security design for programs that in no way should be granted any administrator access (calc.exe or notepad.exe).</p>
 <p>Also, I can&#8217;t imagine that no one could detect it in their teams during the quality process and security audit.</p>
 <p>What the hell are they doing ?</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/05/15/363.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/05/15/363.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -84,7 +86,8 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -287,7 +290,7 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

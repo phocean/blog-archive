@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Vaio &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/vaio/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/vaio/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Is it a good idea to buy a substitute battery ?</title>
-		<link>/blog-archive/2007/01/27/is-it-a-good-idea-to-buy-a-substitute-battery.html</link>
+		<link>/2007/01/27/is-it-a-good-idea-to-buy-a-substitute-battery.html</link>
 		<pubDate>Sat, 27 Jan 2007 16:52:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -40,13 +40,13 @@ At this price, it is better to buy a new laptop (maybe that&#8217;s what they ai
 <p>This new battery has 7200 mAh and offers me about 4h30 of work on battery ! To be compared with the 2h30 I had with the original one (and only 1h more recently).</p>
 <p>So, don&#8217;t be affraid anymore to buy no-name replacement batteries !<br />
 I will definitely so in the future, when I need.</p>
-<p><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/GBCOMUS-NSN020_DSCN2667-175x117x0.js" /></p>
+<p><img style="margin: 0pt auto; display: block" src="/wp-content/uploads/2007/05/public/GBCOMUS-NSN020_DSCN2667-175x117x0.js" /></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>buying a new laptop or upgrading to 1Gb RAM ?</title>
-		<link>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html</link>
-		<comments>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html#comments</comments>
+		<link>/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html</link>
+		<comments>/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html#comments</comments>
 		<pubDate>Sun, 03 Dec 2006 12:44:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -70,9 +70,9 @@ I will definitely so in the future, when I need.</p>
 <p>And now this is great ! It is much over what I expected. The system is now running smoothly, even with a virtual host running. The terrible hard drive is less often in use and that makes all the difference.</p>
 <p>Yes, 1 Gb has been the standard for a while and it was time for me to get it ! I feel much more relaxed while I am working. Now, I plan soon to change my hard drive for a 7200 Rpm Hitachi one. No doubt it will be smoother and give me better startup performances.</p>
 <p>My plan is now to enjoy my Vaio one more year. Do most of people need a core duo processor on their laptop ? I don&#8217;t think so, but many people may think they need when their computer is swapping&#8230; cunning marketing !</p>
-<p><img style="margin: 0pt auto; display: block" title="OLYMPUS DIGITAL CAMERA         " src="/blog-archive/wp-content/uploads/2007/05/public/PC030009.JPG" alt="OLYMPUS DIGITAL CAMERA         " /></p>
+<p><img style="margin: 0pt auto; display: block" title="OLYMPUS DIGITAL CAMERA         " src="/wp-content/uploads/2007/05/public/PC030009.JPG" alt="OLYMPUS DIGITAL CAMERA         " /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

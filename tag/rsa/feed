@@ -9,8 +9,8 @@
 
 <channel>
 	<title>RSA &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/rsa/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/rsa/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>SHA-1 vulnerable : consider SHA-2</title>
-		<link>/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
+		<link>/2009/05/10/sha-1-vulnerable-consider-sha-2.html</link>
 		<pubDate>Sun, 10 May 2009 07:58:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -33,8 +33,9 @@
 		<category><![CDATA[SHA-3]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
-		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/blog-archive/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=358</guid>
+		<description><![CDATA[Not long after md5, the computation progress has made another victim. Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211;...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/05/10/sha-1-vulnerable-consider-sha-2.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Not long after <a title="md5 vulnerability" href="/2009/01/02/md5-in-your-ssl-certificate-no-need-to-panic.html">md5</a>, the computation progress has made another victim.</p>
 <p>Last week, it was made public that the SHA-1 hash function should be now considered vulnerable. The discovery bring up that the computation to create a collision hash has been dramaticaly reduced. As a consequence, the SHA-1 function can&#8217;t warranty anymore the uniquity &#8211; and so the integrity &#8211; of the hashed object.</p>
 <p>There are a few ressources :</p>
 <ul>
@@ -43,7 +44,7 @@
 </ul>
 <p>This is the natural evolution of cryptography. Stronger cryptography is required against stronger CPU power. In this race, it is now suggested to migrate to SHA-2 whose digest lenghts range from 224 to 512 bits (instead of 160 bits for SHA-1). And until next time, where we will be urged to migrate to <a title="SHA-3" href="http://csrc.nist.gov/groups/ST/hash/sha-3/index.html" target="_blank">SHA-3</a> ;)</p>
 <p>Debian, whose infrastructure was based on SHA-1 (package management, development) is quickly migrating all its keys right now. The <a title="Debian pgp upgrade procedure" href="http://www.debian-administration.org/users/dkg/weblog/48" target="_blank">procedure</a> the Debian people should follow implies a transition period, where the new key will be signed with the former key, until the latter is revoked. Thus until all peers are updated too, to avoid breaking all the signing infrastruture.</p>
-<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/blog-archive/pgp_key.txt">my new key</a> here or linked from the <a href="/blog-archive/contact-me" target="_self">contact page</a>.</p>
+<p>Myself, I ugraded my keys from DSA/1024 bits to RSA/4096 bits (with SHA-2 hashing), so it should be ok for a while. You will find <a title="pgp key" href="/pgp_key.txt">my new key</a> here or linked from the <a href="/contact-me" target="_self">contact page</a>.</p>
 ]]></content:encoded>
 			</item>
 	</channel>

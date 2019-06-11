@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Webmin &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/webmin/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/webmin/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Webmin</title>
-		<link>/blog-archive/2007/03/03/webmin.html</link>
-		<comments>/blog-archive/2007/03/03/webmin.html#comments</comments>
+		<link>/2007/03/03/webmin.html</link>
+		<comments>/2007/03/03/webmin.html#comments</comments>
 		<pubDate>Sat, 03 Mar 2007 17:52:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[System]]></category>
@@ -41,12 +41,12 @@ $ rmdir webmin
 $ ln -s /usr/share/webmin
 </pre>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/03/03/webmin.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/03/03/webmin.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Hostname issue with Postfix Webmin module</title>
-		<link>/blog-archive/2007/01/12/hostname-issue-with-postfix-webmin-module.html</link>
+		<link>/2007/01/12/hostname-issue-with-postfix-webmin-module.html</link>
 		<pubDate>Fri, 12 Jan 2007 18:38:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -71,6 +71,7 @@ There are several possibilities.</p>
 <p><span lang="EN-GB">If so, check that <strong>/etc/mailname</strong> contains your machine name, as /etc/hosts do.</span></p>
 <p>Finally, also check that in <span lang="EN-GB"><strong>/etc/postfix/main.cf</strong>, the <strong>myhostname</strong> field is correct :<br />
 </span></p>
+<pre>myhostname = mail.phocean.net</pre>
 <pre>myhostname = mail.phocean.net</pre>
 <p>If you made any change in main.cf, restart postfix and that should be fine !</p>
 ]]></content:encoded>

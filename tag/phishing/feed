@@ -9,8 +9,8 @@
 
 <channel>
 	<title>phishing &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/phishing/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/phishing/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Tabnabbing</title>
-		<link>/blog-archive/2011/07/04/tabnabbing.html</link>
+		<link>/2011/07/04/tabnabbing.html</link>
 		<pubDate>Mon, 04 Jul 2011 21:08:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -29,6 +29,7 @@
 		<category><![CDATA[Tabnabbing]]></category>
 		<category><![CDATA[web]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=1147</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=1147</guid>
 		<description><![CDATA[On his website, Aza Raskin calls it Tabnabbing. Don&#8217;t miss the video there and the test web page. It is so simple and probably efficient with most users. Certainly another dangerous phishing attack.]]></description>
 				<content:encoded><![CDATA[<p>On his website, Aza Raskin calls it <a title="Tabnabbing" href="http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/" target="_blank">Tabnabbing</a>. Don&#8217;t miss the video there and the test web page. It is so simple and probably efficient with most users. Certainly another dangerous phishing attack.</p>

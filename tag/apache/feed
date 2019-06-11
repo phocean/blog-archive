@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Apache &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/apache/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/apache/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Mitigating Slow HTTP DoS Attacks</title>
-		<link>/blog-archive/2010/11/24/mitigating-slow-http-dos-attacks.html</link>
+		<link>/2010/11/24/mitigating-slow-http-dos-attacks.html</link>
 		<pubDate>Wed, 24 Nov 2010 22:54:29 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -32,6 +32,7 @@
 		<category><![CDATA[Slowloris]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=928</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=928</guid>
 		<description><![CDATA[Interesting article on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks. The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.]]></description>
 				<content:encoded><![CDATA[<p><a title="HTTP DoS attacks" href="http://blog.spiderlabs.com/2010/11/advanced-topic-of-the-week-mitigating-slow-http-dos-attacks.html" target="_blank">Interesting article</a> on the latest Apache and ModSecurity techniques to prevent DoS HTTP attacks.</p>
 <p>The attacks are well explained. I personally knew about Slowloris but didn&#8217;t about RUDY and post attacks.</p>
@@ -39,8 +40,8 @@
 			</item>
 		<item>
 		<title>Updates on OpenSSL CVE-2009-3555 (client renegociation)</title>
-		<link>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html</link>
-		<comments>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html#comments</comments>
+		<link>/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html</link>
+		<comments>/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html#comments</comments>
 		<pubDate>Mon, 05 Apr 2010 08:40:44 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -55,22 +56,23 @@
 		<category><![CDATA[mod-ssl]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=773</guid>
-		<description><![CDATA[So there are some news from the front of OpenSSL CVE-2009-3555 (see this and this for the history). Now the latest version of Apache mod_ssl (2.2) embeds an option to reactivate old way client renegociation : SSLInsecureRenegotiation on Check the official doc for more details. With this option activated, you can now safely upgrade openSSL...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>So there are some news from the front of OpenSSL CVE-2009-3555 (see <a title="SSL client authenticate breakage" href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" target="_self">this</a> and <a title="SSL/TLS RFC updated against CVE-2009-3555" href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html" target="_self">this</a> for the history).</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=773</guid>
+		<description><![CDATA[So there are some news from the front of OpenSSL CVE-2009-3555 (see this and this for the history). Now the latest version of Apache mod_ssl (2.2) embeds an option to reactivate old way client renegociation : SSLInsecureRenegotiation on Check the official doc for more details. With this option activated, you can now safely upgrade openSSL...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>So there are some news from the front of OpenSSL CVE-2009-3555 (see <a title="SSL client authenticate breakage" href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html" target="_self">this</a> and <a title="SSL/TLS RFC updated against CVE-2009-3555" href="/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html" target="_self">this</a> for the history).</p>
 <p>Now the latest version of Apache mod_ssl (2.2) embeds an <a title="mod_ssl client renegociation" href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslinsecurerenegotiation" target="_blank">option to reactivate old way client renegociation</a> :</p>
 <pre>SSLInsecureRenegotiation on</pre>
 <p>Check the official doc for more details. With this option activated, you can now safely upgrade openSSL and mod_ssl without breaking your clients. They should have done it from the begining, shouldn&#8217;t they ?</p>
 <p>The next step will be to move on to the new protocol definitely, to solve for good the CVE-2009-3555 vulnerability. For that we have to wait for the browsers to support it.</p>
 <p>Firefox has started to <a title="Firefox and CVE-2009-3555" href="https://wiki.mozilla.org/Security:Renegotiation" target="_blank">work seriously on it</a> and we can expect some support in the next releases (some settings will be possible through about:config).</p>
 <p>They even created a <a title="CVE-2009-3555 test page" href="https://ssltls.de/" target="_blank">test site</a>. This screenshot was taken from Google Chrome (5.0.366.2, <a title="openSUSE repos" href="http://en.opensuse.org/Additional_package_repositories" target="_blank">openSUSE repo</a>) which already has support for the SSL protocol :</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2010/04/chrome-ssl.png" rel="lightbox[773]"><img class="aligncenter size-full wp-image-776" title="chrome-ssl" src="/blog-archive/wp-content/uploads/2010/04/chrome-ssl.png" alt="" width="455" height="473" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2010/04/chrome-ssl.png" rel="lightbox[773]"><img class="aligncenter size-full wp-image-776" title="chrome-ssl" src="/wp-content/uploads/2010/04/chrome-ssl.png" alt="" width="455" height="473" /></a></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/05/updates-about-openssl-cve-2009-3555-client-renegociation.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>SSL/TLS RFC updated against CVE-2009-3555</title>
-		<link>/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
+		<link>/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
 		<pubDate>Sat, 09 Jan 2010 11:23:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -85,8 +87,9 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
-		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
+		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
 <p>At least, the IETF agreed on a fix as <a title="SSL/TLS fix" href="http://extendedsubset.com/?p=14" target="_blank">Marsh Ray</a> informs us, though it will still take some weeks for the whole validation process to complete.</p>
 <p>Moreover, as it requires both the servers and the clients to be patched, it will take months before the patches can be applied and one can have a working client authentification architecture. The longest will be the client side, of course, so I feel sorry for those who have a large park to manage.</p>
 <p>As far as I am concerned, fortunately, I will just have a few browsers that I manage directly to update. Anyway, still more patience is needed !</p>
@@ -94,7 +97,7 @@
 			</item>
 		<item>
 		<title>waf00f</title>
-		<link>/blog-archive/2009/12/16/waf00f.html</link>
+		<link>/2009/12/16/waf00f.html</link>
 		<pubDate>Wed, 16 Dec 2009 22:40:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -108,6 +111,7 @@
 		<category><![CDATA[waf00f]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=571</guid>
 		<description><![CDATA[waf00f is another nice fingerprinting tool. It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls. Its output can help you to determine the trust you can have in what httprint or any other web server fingerprinting tool found out. Check it there.]]></description>
 				<content:encoded><![CDATA[<p><strong>waf00f</strong> is another nice fingerprinting tool.<br />
 It is a good complement to a tool like httprint. It is able to detect Web Application Firewalls.<br />
@@ -117,7 +121,7 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 			</item>
 		<item>
 		<title>ModSecurity 2.5 review</title>
-		<link>/blog-archive/2009/12/10/modsecurity-2-5-review.html</link>
+		<link>/2009/12/10/modsecurity-2-5-review.html</link>
 		<pubDate>Thu, 10 Dec 2009 14:12:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -131,9 +135,10 @@ Check it <a title="waf00f" href="http://pentestit.com/2009/07/10/wafw00f-fingerp
 		<category><![CDATA[XSS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
-		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=555</guid>
+		<description><![CDATA[I finished reading the ModSecurity 2.5 book, written by Magnus Mischell and published by Packt Publishing. I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should. I was actually using it partially. It is not trivial to secure a web...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/10/modsecurity-2-5-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I finished reading the <strong>ModSecurity 2.5</strong> book, written by <strong>Magnus Mischell</strong> and published by <strong>Packt Publishing</strong>.</p>
-<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank"><img class="size-full wp-image-521  aligncenter" title="ModSecurity 2.5" src="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>I found a lot of interest reading it as I was already using ModSecurity &#8211; and I think anyone exposing an Apache web server should.<br />
 I was actually using it partially. It is not trivial to secure a web application, and the rule engine of ModSecurity is very powerful but it is also quite complex.</p>
 <p>So this book was a good opportunity for me to dig into it further.</p>
@@ -149,8 +154,8 @@ It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;
 			</item>
 		<item>
 		<title>OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</title>
-		<link>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
-		<comments>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
+		<link>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
+		<comments>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
 		<pubDate>Sat, 28 Nov 2009 16:08:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -164,7 +169,8 @@ It is definitely <strong>a great handbook about ModSecurity</strong> that&#8217;
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
-		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
+		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
 <p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
 <p>A proof of concept of an attack against Twitter was made.</p>
@@ -193,12 +199,12 @@ If anyone reading it knows a version that does it, please let me know.</p>
 <p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
 <p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>New book about ModSecurity</title>
-		<link>/blog-archive/2009/11/15/new-book-about-modsecurity.html</link>
+		<link>/2009/11/15/new-book-about-modsecurity.html</link>
 		<pubDate>Sun, 15 Nov 2009 13:49:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -210,9 +216,10 @@ If anyone reading it knows a version that does it, please let me know.</p>
 		<category><![CDATA[ModSecurity]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
-		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=520</guid>
+		<description><![CDATA[There will be a new book about mod-security coming out :  ModSecurity 2.5. ModSecurity is essential when it comes to secure any web site. It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole. However, it must be configured wisely...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/15/new-book-about-modsecurity.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There will be a new book about mod-security coming out :  <a title="Modsecurity 2.5" href="http://www.packtpub.com/modsecurity-2-5/book" target="_blank">ModSecurity 2.5</a>.</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2009/11/1847194745.js" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2009/11/1847194745.js" /></a></p>
 <p>ModSecurity is essential when it comes to secure any web site.</p>
 <p>It will make the work of the attacker much harder and  it may save you even if your favorite dynamic pages have a security hole.<br />
 However, it must be configured wisely to be efficient. It is just a firewall that works at the application layer : you need to know the attacker point of view and the basics before writing any mod-security rules, otherwise at best it will useless (and at worst, it will kick legitimate traffic off).</p>
@@ -222,8 +229,8 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 			</item>
 		<item>
 		<title>How to stop Firefox from prompting for the client certificate</title>
-		<link>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html</link>
-		<comments>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html#comments</comments>
+		<link>/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html</link>
+		<comments>/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html#comments</comments>
 		<pubDate>Sun, 16 Nov 2008 22:46:33 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -234,21 +241,22 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 		<category><![CDATA[SSL]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=303</guid>
-		<description><![CDATA[I am using a client certificate to authenticate against some Apache HTTPS website. By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file. I quickly realized that there is not setting in the preference tab to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=303</guid>
+		<description><![CDATA[I am using a client certificate to authenticate against some Apache HTTPS website. By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file. I quickly realized that there is not setting in the preference tab to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I am using a client certificate to authenticate against some Apache HTTPS website.</p>
 <p>By default, Firefox 3 has a very annoying setting : it will prompt you with a box to select your certificate, every time the browser access to a file.</p>
 <p>I quickly realized that there is not setting in the preference tab to change this behavior. That sucks, really !</p>
 <p>Fortunately, it is possible to tweak it within the <strong>about:config</strong> page. Set the <strong>security.default_personal_cert entry</strong> with <em><strong>Select Automatically</strong></em> instead of <em><strong>Ask Every Time</strong></em>.</p>
 <p>But what a dumb behavior !</p>
 <p>It is like the alert page that Firefox displays every time a self-signed certificate is used. I am now wondering if the developers really understood well what a certificate is !</p>
-<div id="attachment_304" style="width: 310px" class="wp-caption aligncenter"><a href="/blog-archive/wp-content/uploads/2008/11/capture-1.png" rel="lightbox[303]"><img class="size-medium wp-image-304" title="Setting Firefox properly for Client certificate" src="/blog-archive/wp-content/uploads/2008/11/capture-1.png" alt="Setting Firefox properly for Client certificate" width="300" height="187" /></a><p class="wp-caption-text">Setting Firefox properly for Client certificate</p></div>
+<div id="attachment_304" style="width: 310px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2008/11/capture-1.png" rel="lightbox[303]"><img class="size-medium wp-image-304" title="Setting Firefox properly for Client certificate" src="/wp-content/uploads/2008/11/capture-1.png" alt="Setting Firefox properly for Client certificate" width="300" height="187" /></a><p class="wp-caption-text">Setting Firefox properly for Client certificate</p></div>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/11/16/how-to-stop-firefox-from-prompting-for-the-client-certificate.html/feed</wfw:commentRss>
 		<slash:comments>6</slash:comments>
 		</item>
 		<item>
 		<title>How-to : Mod-security 2 set-up for Apache 2</title>
-		<link>/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
+		<link>/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html</link>
 		<pubDate>Sun, 13 Jul 2008 01:13:54 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Security]]></category>
@@ -259,7 +267,8 @@ However, it must be configured wisely to be efficient. It is just a firewall tha
 		<category><![CDATA[regxp]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
-		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=114</guid>
+		<description><![CDATA[Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests. It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/07/13/how-to-mod-security-2-set-up-for-apache-2.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Mod-security is a security proxy for Apache. It adds a frontal layer filtering unwanted clients, malformed packets and malicious requests.</p>
 <p>It is especially usefull if your website is dynamic, involving php, sql, javascript, etc. With such a complex environment, as you can never be sure that your website is not vulnerable or up-to-date enough, something like mod-security provides an interesting extra-security layer.<br />
 <span id="more-114"></span></p>
@@ -366,6 +375,7 @@ Include /etc/apache2/modsecurity/apache2-rules.conf</pre>
 <pre lang="text">[Fri Jul 11 19:33:08 2008] [error] [client 192.168.222.21] ModSecurity: Access
 denied with code 500 (phase 2). Match of "rx ^HTTP/(0\\\\.9|1\\\\.0|1\\\\.1|1\\
 \\.2)$" against "REQUEST_PROTOCOL" required. [<strong>id "340000"</strong>] [msg "Bad HTTP Proto
+col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 col"] [severity "ALERT"] [hostname "www.phocean.net"] [uri "/"] [unique_id "72F
 mG38AAAEAACa@AVUAAAAA"]</pre>
 <p>The ID number of the blocking rule is given. Just grep to find the faulty rule and correct / deactivate it :</p>

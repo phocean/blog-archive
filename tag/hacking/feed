@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Hacking &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/hacking/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/hacking/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>A relative got hacked for scamming activities</title>
-		<link>/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
+		<link>/2013/01/20/a-relative-got-hacked-for-scamming-activities.html</link>
 		<pubDate>Sun, 20 Jan 2013 16:40:03 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -35,7 +35,8 @@
 		<category><![CDATA[sqlite]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
-		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1474</guid>
+		<description><![CDATA[One of my relative got hacked. After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>One of my relative got hacked.</p>
 <p>After a phone conversation with him, I realized that his computer was hacked a few days before. He told me that he saw the mouse moving by itself, but what happened then was not clear to him. Anyway, he did not feel the urge to call me immediately. Needless to say that his knowledge on computers is low.<br />
 I immediately started to investigate.</p>
@@ -56,8 +57,8 @@ I immediately started to investigate.</p>
 <p>With support of <a title="forensicswiki.org" href="http://www.forensicswiki.org/wiki/Mozilla_Firefox">forensicswiki.org</a>, I dumped the full Firefox profile on my computer and started to analyze it with the <a title="Sqlite Manager" href="https://addons.mozilla.org/fr/firefox/addon/sqlite-manager/">Sqlite Manager</a> extension.</p>
 <blockquote><p>Sorry but I will be hiding private info and sensitive data that could be used for a legal action.</p></blockquote>
 <p>I got most info from the files <em><strong>cookies.sqlite</strong></em> and <em><strong>places.sqlite</strong></em>.</p>
-<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/cookies-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/cookies-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/cookies-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
-<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/blog-archive/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/blog-archive/wp-content/uploads/2013/01/places-580x345.png 580w, /blog-archive/wp-content/uploads/2013/01/places-940x560.png 940w, /blog-archive/wp-content/uploads/2013/01/places-500x298.png 500w, /blog-archive/wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
+<div id="attachment_1482" style="width: 590px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/cookies" rel="attachment wp-att-1482"><img class="size-medium wp-image-1482" alt="cookies.sqlite: a lot of info: email and billing info used by the attacker" src="/wp-content/uploads/2013/01/cookies-580x345.png" width="580" height="345" srcset="/wp-content/uploads/2013/01/cookies-580x345.png 580w, /wp-content/uploads/2013/01/cookies-940x560.png 940w, /wp-content/uploads/2013/01/cookies-500x298.png 500w, /wp-content/uploads/2013/01/cookies.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">cookies.sqlite: a lot of info: email and billing info used by the attacker</p></div>
+<div id="attachment_1483" style="width: 590px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/places" rel="attachment wp-att-1483"><img class=" wp-image-1483 " title="places.sqlite" alt="places" src="/wp-content/uploads/2013/01/places-580x345.png" width="580" height="345" srcset="/wp-content/uploads/2013/01/places-580x345.png 580w, /wp-content/uploads/2013/01/places-940x560.png 940w, /wp-content/uploads/2013/01/places-500x298.png 500w, /wp-content/uploads/2013/01/places.png 1394w" sizes="(max-width: 580px) 100vw, 580px" /></a><p class="wp-caption-text">places.sqlite: attacker&#8217;s browsing history, with interesting purchase references in GET parameters</p></div>
 <p>The guy didn&#8217;t loose time, he knew precisely what he wanted and what to do.</p>
 <ol>
 <li>He first visited two websites to localize the computer: <a title="ip2location.com" href="http://ip2location.com">ip2location.com</a> and <a title="ip-tracker.org" href="http://www.ip-tracker.org">ip-tracker.org</a>. You may think that it is a strange first move, but I will come back on that later as I have a theory.</li>
@@ -79,9 +80,9 @@ I immediately started to investigate.</p>
 <p>Also, GET parameters in URLs were very interesting.</p>
 <p>In some of them, you can guess the amount of the purchase he did. He for sure bought stuff for at least a total of 500$. But it is without counting the stuff that I cannot guess from URLs, so it is probably sensibly much more in reality.</p>
 <p>But, even better, some had order ids. Hey, wait! Let&#8217;s have a look on the 2co website:</p>
-<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/blog-archive/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /blog-archive/wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /blog-archive/wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
+<div id="attachment_1487" style="width: 474px" class="wp-caption alignnone"><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/2co_order_review" rel="attachment wp-att-1487"><img class=" wp-image-1487 " alt="2co order review = order number + email" src="/wp-content/uploads/2013/01/2co_order_review-580x362.png" width="464" height="290" srcset="/wp-content/uploads/2013/01/2co_order_review-580x362.png 580w, /wp-content/uploads/2013/01/2co_order_review-480x300.png 480w, /wp-content/uploads/2013/01/2co_order_review.png 781w" sizes="(max-width: 464px) 100vw, 464px" /></a><p class="wp-caption-text">2co order review = order number + email</p></div>
 <p>Hmmm&#8230; we have the email address and the order number&#8230; bingo!</p>
-<p><a href="/blog-archive/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/blog-archive/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/blog-archive/wp-content/uploads/2013/01/order-580x911.png 580w, /blog-archive/wp-content/uploads/2013/01/order-190x300.png 190w, /blog-archive/wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
+<p><a href="/2013/01/20/a-relative-got-hacked-for-scamming-activities.html/order" rel="attachment wp-att-1488"><img class="alignnone  wp-image-1488" alt="order" src="/wp-content/uploads/2013/01/order-580x911.png" width="406" height="638" srcset="/wp-content/uploads/2013/01/order-580x911.png 580w, /wp-content/uploads/2013/01/order-190x300.png 190w, /wp-content/uploads/2013/01/order.png 676w" sizes="(max-width: 406px) 100vw, 406px" /></a></p>
 <p>Now, we have at least all info of the credit card owner, certainly the biggest victim in this mess.</p>
 <h2>Conclusion</h2>
 <p>That&#8217;s it for now. We are still in the process of transmitting the info to the police and alerting the victim.</p>
@@ -113,7 +114,7 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 			</item>
 		<item>
 		<title>SSTIC 2012</title>
-		<link>/blog-archive/2012/06/10/sstic-2012.html</link>
+		<link>/2012/06/10/sstic-2012.html</link>
 		<pubDate>Sun, 10 Jun 2012 05:40:41 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
@@ -125,16 +126,17 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 		<category><![CDATA[SSTIC]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1246</guid>
-		<description><![CDATA[I came back from the 2012 edition of SSTIC, where despite the concerns, there were still some nice conferences. Until slides and papers are published, you can find some nice reports (all in French). But the most impressive will remain the challenge: look at the solution! What a hell! Just reading and trying to understand...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/sstic-2012.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1246</guid>
+		<description><![CDATA[I came back from the 2012 edition of SSTIC, where despite the concerns, there were still some nice conferences. Until slides and papers are published, you can find some nice reports (all in French). But the most impressive will remain the challenge: look at the solution! What a hell! Just reading and trying to understand...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/10/sstic-2012.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I came back from the 2012 edition of <a title="SSTIC" href="https://www.sstic.org">SSTIC</a>, where despite the concerns, there were still some nice conferences.</p>
-<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="/blog-archive/2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
+<p>Until slides and papers are published, you can find <a title="SSTIC 2012" href="http://sid.rstack.org/blog/index.php/545-sstic-2012-deuxieme-jour">some</a> <a title="SSTIC 2012" href="/2012/04/14/hes-2012.html">nice</a> <a title="SSTIC 2012" href="/2012/04/14/hes-2012.html">reports</a> (all in French). But the most impressive will remain the challenge: look at the <a title="SSTIC 2012" href="http://www.time0ut.org/blog/challenge/challenge-sstic-2012/">solution</a>! What a hell! Just reading and trying to understand all details in the solution is still challenging!</p>
 <p>Big respect for the guys who have the talent of going over so many tricks.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>World&#8217;s worst hacker</title>
-		<link>/blog-archive/2011/01/31/worlds-worst-hacker.html</link>
-		<comments>/blog-archive/2011/01/31/worlds-worst-hacker.html#comments</comments>
+		<link>/2011/01/31/worlds-worst-hacker.html</link>
+		<comments>/2011/01/31/worlds-worst-hacker.html#comments</comments>
 		<pubDate>Mon, 31 Jan 2011 18:44:20 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -147,15 +149,16 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 		<category><![CDATA[SSH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
 		<description><![CDATA[That was so funny !]]></description>
 				<content:encoded><![CDATA[<p><a title="World's worst hacker" href="http://george.hedfors.com/content/worlds-worst-hacker" target="_blank">That</a> was so funny !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Books review</title>
-		<link>/blog-archive/2010/05/16/books-review.html</link>
+		<link>/2010/05/16/books-review.html</link>
 		<pubDate>Sun, 16 May 2010 16:16:46 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -167,17 +170,18 @@ Finally, if he could not find a way to maintain access in seconds, he leaves. Mi
 		<category><![CDATA[Review]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
-		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=862</guid>
+		<description><![CDATA[I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them. Hacking: the next generation The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc. It was easy...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/05/16/books-review.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I just finished reading two electronic books I bought from O&#8217;reilly. Here is a short review on them.</p>
 <h4>Hacking: the next generation</h4>
-<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/blog-archive/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
+<p><a title="Hacking: the next generation" href="http://oreilly.com/catalog/9780596154585/" target="_blank"><img class="aligncenter size-full wp-image-863" title="hacking_next_gen" src="/wp-content/uploads/2010/05/hacking_next_gen.gif" alt="" width="180" height="236" /></a></p>
 <p>The purpose of this book is to give to the readers an overview of the most common attacks nowadays. It covers all fields : social engineering, web attacks, networking, etc.<br />
 It was easy to read : the authors are straight to the point and their sentences are clear.</p>
 <p>I especially appreciated their state of art about XSS and CSRF attacks. It is certainly the best I have read so far, greatly illustrated with exciting and real case studies.</p>
 <p>On the other hand,  I quickly passed over the networking stuff (both wired and wireless). It was too basic and didn&#8217;t show anything new &#8211; maybe it is because I specialize in those fields.</p>
 <p>Anyway, globally, I strongly recommend this book. It is worth while your money if you want to know more on web attacks or to have a good overview of modern threats.</p>
 <h4>Beautiful Security</h4>
-<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/blog-archive/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
+<p><a title="Beautiful Security" href="http://oreilly.com/catalog/9780596527488/" target="_blank"><img class="aligncenter size-full wp-image-864" title="beautiful_sec" src="/wp-content/uploads/2010/05/beautiful_sec.gif" alt="" width="180" height="236" /></a></p>
 <p>This is a collection of essays by some of the best security experts and hackers.</p>
 <p>Well, I won&#8217;t go around, I have been quite disappointed by this book. The overall lacks coherence and after a while you start wondering what this book is trying to demonstrate. At the end, there is a crual lack of connection between the essays and it globally makes it appear very confusing.</p>
 <p>It also sometimes lacks technical references and the writing style is too verbose, too literal for a technical book to be attractive.</p>
@@ -187,7 +191,7 @@ It was easy to read : the authors are straight to the point and their sentences 
 			</item>
 		<item>
 		<title>Simulated massive cyber attack filmed by CNN</title>
-		<link>/blog-archive/2010/02/18/simulated-massive-cyber-attack-filmed-by-cnn.html</link>
+		<link>/2010/02/18/simulated-massive-cyber-attack-filmed-by-cnn.html</link>
 		<pubDate>Thu, 18 Feb 2010 07:32:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -196,7 +200,8 @@ It was easy to read : the authors are straight to the point and their sentences 
 		<category><![CDATA[Hacking]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=719</guid>
-		<description><![CDATA[This video, while &#8220;amusing&#8221;, is quite interesting : Though not many details are given, I am quite skeptical about the possibility of such a massive attack. However, it shows well that security is not just a technical matter. It has many implications in law, politics, economics, and a whole information system must be prepared to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/02/18/simulated-massive-cyber-attack-filmed-by-cnn.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=719</guid>
+		<description><![CDATA[This video, while &#8220;amusing&#8221;, is quite interesting : Though not many details are given, I am quite skeptical about the possibility of such a massive attack. However, it shows well that security is not just a technical matter. It has many implications in law, politics, economics, and a whole information system must be prepared to...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/02/18/simulated-massive-cyber-attack-filmed-by-cnn.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This video, while &#8220;amusing&#8221;, is quite interesting :</p>
 <p style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.youtube.com/v/PJ0_Km7_s8I&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/PJ0_Km7_s8I&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
 <p>Though not many details are given, I am quite skeptical about the possibility of such a massive attack.</p>
@@ -206,7 +211,7 @@ It was easy to read : the authors are straight to the point and their sentences 
 			</item>
 		<item>
 		<title>DecaffenatID : a little ARP IDS for Windows</title>
-		<link>/blog-archive/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
+		<link>/2008/08/27/decaffenatid-a-little-arp-ids-for-windows.html</link>
 		<pubDate>Wed, 27 Aug 2008 12:49:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -218,14 +223,15 @@ It was easy to read : the authors are straight to the point and their sentences 
 		<category><![CDATA[spoofing]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=115</guid>
 		<description><![CDATA[DecaffeinatID is a tool for Windows that can be very useful against ARP attacks.]]></description>
 				<content:encoded><![CDATA[<p><a title="DecaffeinatID" href="http://www.irongeek.com/i.php?page=security/decaffeinatid-simple-ids-arpwatch-for-windows">DecaffeinatID</a> is a tool for Windows that can be very useful against ARP attacks.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Windows Vista memory protection : defeated ?</title>
-		<link>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html</link>
-		<comments>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
+		<link>/2008/08/08/windows-vista-memory-protection-defeated.html</link>
+		<comments>/2008/08/08/windows-vista-memory-protection-defeated.html#comments</comments>
 		<pubDate>Fri, 08 Aug 2008 15:44:45 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -235,17 +241,18 @@ It was easy to read : the authors are straight to the point and their sentences 
 		<category><![CDATA[memory injection]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
-		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=218</guid>
+		<description><![CDATA[It seems, at least according to some researchers showed it at the Black Hat conference. Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk. Especially, this...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/08/08/windows-vista-memory-protection-defeated.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>It seems, at least according to <a href="http://taossa.com/index.php/2008/08/07/impressing-girls-with-vista-memory-protection-bypasses/" target="_blank">some researchers showed it at the Black Hat conference</a>.</p>
 <p>Mark Dowd (IBM) and Alexander Sotirov (VMWare) found a way to bypass  the memory protection implemented in Vista to inject malicious instructions within Internet Explorer. They were able to copy any content wherever they wished on the disk.</p>
 <p>Especially, <a href="http://taossa.com/archive/bh08sotirovdowd.pdf" target="_blank">this paper</a> will be an interesting reading, even if it is not as simple as they say &#8211; at least for me.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/08/08/windows-vista-memory-protection-defeated.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>About network attacks&#8230;</title>
-		<link>/blog-archive/2008/06/23/about-network-attacks.html</link>
+		<link>/2008/06/23/about-network-attacks.html</link>
 		<pubDate>Sun, 22 Jun 2008 23:56:08 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Network]]></category>
@@ -259,13 +266,14 @@ It was easy to read : the authors are straight to the point and their sentences 
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=111</guid>
-		<description><![CDATA[I will post later a few examples of network attacks. But, before that, I want to clarify what I call a network attack. I see many people making a confusion about the use of this term, even among professional or specialized journalists. Whenever there is a hack originated from the Internet, they call it a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/23/about-network-attacks.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=111</guid>
+		<description><![CDATA[I will post later a few examples of network attacks. But, before that, I want to clarify what I call a network attack. I see many people making a confusion about the use of this term, even among professional or specialized journalists. Whenever there is a hack originated from the Internet, they call it a...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/23/about-network-attacks.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I will post later a few examples of network attacks. But, before that, I want to clarify what I call a network attack.</p>
 <p>I see many people making a confusion about the use of this term, even among professional or specialized journalists. Whenever there is a hack originated from the Internet, they call it a network attack.</p>
 <p>This is a true misunderstanding of the reality. We will see why when a website is hacked, or a domain name spoofed, we can&#8217;t call it a network attack.</p>
 <p>First of all, we need to have a good picture of the way the protocols of the Internet are organized.</p>
 <p>We can visualize it with the <strong>OSI </strong>concept, whose scheme is below :</p>
-<p style="text-align: center;"><a href="/blog-archive/wp-content/uploads/2008/06/osi.png" rel="lightbox[111]"><img class="size-medium wp-image-112" style="vertical-align: middle;" title="osi" src="/blog-archive/wp-content/uploads/2008/06/osi-300x270.png" alt="" width="300" height="270" srcset="/blog-archive/wp-content/uploads/2008/06/osi-300x270.png 300w, /blog-archive/wp-content/uploads/2008/06/osi.png 434w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2008/06/osi.png" rel="lightbox[111]"><img class="size-medium wp-image-112" style="vertical-align: middle;" title="osi" src="/wp-content/uploads/2008/06/osi-300x270.png" alt="" width="300" height="270" srcset="/wp-content/uploads/2008/06/osi-300x270.png 300w, /wp-content/uploads/2008/06/osi.png 434w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>This model offers <strong>7 layers</strong> to contain all protocols involved in the data transportation, from the system or the program of a local computer to its peer on the other side of the network.</p>
 <p><span id="more-111"></span></p>
 <p>Actually, and to the contrary of another common belief, this model was never really applied on the Internet. Instead, a simplified model of 4 layers was chosen, <a href="http://en.wikipedia.org/wiki/Tcp/ip_model">the TCP/IP model</a>.</p>
@@ -289,8 +297,8 @@ It was easy to read : the authors are straight to the point and their sentences 
 			</item>
 		<item>
 		<title>Hacked !</title>
-		<link>/blog-archive/2008/06/03/hacked.html</link>
-		<comments>/blog-archive/2008/06/03/hacked.html#comments</comments>
+		<link>/2008/06/03/hacked.html</link>
+		<comments>/2008/06/03/hacked.html#comments</comments>
 		<pubDate>Tue, 03 Jun 2008 20:25:25 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Forensic]]></category>
@@ -306,7 +314,8 @@ It was easy to read : the authors are straight to the point and their sentences 
 		<category><![CDATA[Wordpress]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
-		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=109</guid>
+		<description><![CDATA[This blog got hacked yesterday. It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress. It was not just like the classic SQL injection that is usually used to post some malicious post. The following code was added : &#60;?php echo '&#60;script type=&#34;text/javascript&#34;&#62;function count(str){var res = &#34;&#34;;for(i...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/06/03/hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>This blog got hacked yesterday.</p>
 <p>It looks like some spammer managed to inject some PHP code into almost all *.php files of WordPress.<br />
 It was not just like the classic SQL injection that is usually used to post some malicious post.</p>
@@ -509,7 +518,7 @@ testdata('end');
 ?&gt;</pre>
 <p>I will try anyway to put a deeper look when I have a little time : now, I have to go to work.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/06/03/hacked.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/06/03/hacked.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 	</channel>

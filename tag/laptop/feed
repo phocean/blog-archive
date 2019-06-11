@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Laptop &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/laptop/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/laptop/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>My new toy : Thinkpad T61</title>
-		<link>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html</link>
-		<comments>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
+		<link>/2008/02/21/my-new-toy-thinkpad-t61.html</link>
+		<comments>/2008/02/21/my-new-toy-thinkpad-t61.html#comments</comments>
 		<pubDate>Thu, 21 Feb 2008 12:22:48 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -29,10 +29,11 @@
 		<category><![CDATA[Thinkpad]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
-		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=97</guid>
+		<description><![CDATA[As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61. About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/21/my-new-toy-thinkpad-t61.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As a replacement of my old but reliable Vaio, I bought a Lenovo Thinkpad T61.</p>
-<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"></a></p>
-<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/blog-archive/?attachment_id=98"><img src="/blog-archive/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
+<p><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/?attachment_id=98"></a></p>
+<p style="text-align: center"><a title="T61, a nice piece of hardware" rel="attachment wp-att-98" href="/?attachment_id=98"><img src="/wp-content/uploads/2008/02/t61.thumbnail.js" /></a></p>
 <p>About laptop PC, I have always been conveiced that the best pieces of hardware are found among Sony and Lenovo (ex-IBM). In tough or ultra-light categories, I would add Panasonic, but it is not the kind of laptop I am looking for.<br />
 <span id="more-97"></span><br />
 So this time I am giving a try to Lenovo. What really decided me is its old fashion screen, I mean a non-bright one. My eyes are really getting tired with all these new bright laptop screens. Plus, its resolution is impressive : 1440 x 900.</p>
@@ -135,12 +136,12 @@ CONFIG_OUT_OF_LINE_PFN_TO_PAGE=y
 <p>At the end, I just have hibernation not working : it is nice to see how good the support of Debian Lenny is, thought the hardware is pretty recent. Things are really improving quickly.</p>
 <p>If you have some issue installing Linux on your Thinpad,  post your problem here. I will be happy to help you as much as I can.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/02/21/my-new-toy-thinkpad-t61.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>Is it a good idea to buy a substitute battery ?</title>
-		<link>/blog-archive/2007/01/27/is-it-a-good-idea-to-buy-a-substitute-battery.html</link>
+		<link>/2007/01/27/is-it-a-good-idea-to-buy-a-substitute-battery.html</link>
 		<pubDate>Sat, 27 Jan 2007 16:52:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -161,12 +162,12 @@ At this price, it is better to buy a new laptop (maybe that&#8217;s what they ai
 <p>This new battery has 7200 mAh and offers me about 4h30 of work on battery ! To be compared with the 2h30 I had with the original one (and only 1h more recently).</p>
 <p>So, don&#8217;t be affraid anymore to buy no-name replacement batteries !<br />
 I will definitely so in the future, when I need.</p>
-<p><img style="margin: 0pt auto; display: block" src="/blog-archive/wp-content/uploads/2007/05/public/GBCOMUS-NSN020_DSCN2667-175x117x0.js" /></p>
+<p><img style="margin: 0pt auto; display: block" src="/wp-content/uploads/2007/05/public/GBCOMUS-NSN020_DSCN2667-175x117x0.js" /></p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Final upgrade of my laptop</title>
-		<link>/blog-archive/2006/12/29/final-upgrade-of-my-laptop.html</link>
+		<link>/2006/12/29/final-upgrade-of-my-laptop.html</link>
 		<pubDate>Fri, 29 Dec 2006 20:47:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -181,7 +182,7 @@ Talking about speed, anyone who has a 5200 rpm or inferior disk will see what I 
 <p>Mine was a terrible 4200 rpm Hitachi disk (<span class="boldtitle">Travelstar 4K120)</span>. Just terrible. My old desktop was often faster just thanks to its 7200 rpm disks.</p>
 <p>Morever, I was not trustful anymore in its reliability. It produces an infamous click noise every time the head moves. Infamous, because there are many posts about that on many forums, concerning any laptop brand. It is not the kind of click when a disk dies, as it always did it. I have no evidence of that, but I am pretty sure it is the same model in all cases. It must be a common disk on cheap laptops. Anyway, for me no trick worked to kill this noise : on forums, laptop-mode tool was sometimes accused, and other times the ACPI setting of hdparm.</p>
 <p>I looked for a Hitachi Travelstar 7K100 &#8211; 100 (~ 130 €). Why this brand ? I am used to it, I have been always buying this brand since they took over IBM and was never disapointed by their speed, their silence and their reliability.</p>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/public/PC250054.JPG" alt="" width="300" height="331" align="absmiddle" /></p>
+<p><img src="/wp-content/uploads/2007/05/public/PC250054.JPG" alt="" width="300" height="331" align="absmiddle" /></p>
 <p>Its main features are the 7200 rpm, a cache of 8 Mb, 10 ms access time and a maximum power consumption of 5,5 W (2 W for reading/writing and 0.5 W idle).</p>
 <p>After having used it several days now, I have to say that I am extrimely satisfied.<br />
 It is not noisy at all despite its 7200 rpm. It is actually more silent than the 4200 and, very important, the click noise definitely dispeared !!!<br />
@@ -189,7 +190,7 @@ About speed, the difference is big too. I don&#8217;t want to do a full benchmar
 As an exemple, my Ubuntu starts in less than 30 s where it took 50 s before (from the BIOS to a fully operational Gnome).<br />
 One point I was worried about was its power consumption and its impact on the autonomy of the laptop. Normaly, a 7200 rpm needs more power than a 4200 one. I have been totally relieved now since I don&#8217;t see any change.<br />
 I was not expecting the last point : temperature. The 4K120 was rather hot : 42°C on normal charge, 50°C on full charge. The 7K100 impresses me : 33°C on normal charge, 39°C on full charge ! As good as the desktop models ! It is not only safer for the data, but it benefits to the whole laptop.</p>
-<p>Finally, I recycled the old disk in a USB box. This one, Advance BX-2520, is very cheap (~ 12 €), small and does what it is done for very well. <img src="/blog-archive/wp-content/uploads/2007/05/public/21317.js" /></p>
+<p>Finally, I recycled the old disk in a USB box. This one, Advance BX-2520, is very cheap (~ 12 €), small and does what it is done for very well. <img src="/wp-content/uploads/2007/05/public/21317.js" /></p>
 <p>To transfer the data, I first set up the new disk in the Advance usb box.<br />
 I copied the first partition (<strong>sda1</strong> is mounted as <strong>/</strong>) :</p>
 <pre lang="bash">$ sudo dd if=/dev/hda1 of=/dev/sda1</pre>
@@ -214,8 +215,8 @@ The line it contains must be :</p>
 			</item>
 		<item>
 		<title>buying a new laptop or upgrading to 1Gb RAM ?</title>
-		<link>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html</link>
-		<comments>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html#comments</comments>
+		<link>/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html</link>
+		<comments>/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html#comments</comments>
 		<pubDate>Sun, 03 Dec 2006 12:44:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -239,9 +240,9 @@ The line it contains must be :</p>
 <p>And now this is great ! It is much over what I expected. The system is now running smoothly, even with a virtual host running. The terrible hard drive is less often in use and that makes all the difference.</p>
 <p>Yes, 1 Gb has been the standard for a while and it was time for me to get it ! I feel much more relaxed while I am working. Now, I plan soon to change my hard drive for a 7200 Rpm Hitachi one. No doubt it will be smoother and give me better startup performances.</p>
 <p>My plan is now to enjoy my Vaio one more year. Do most of people need a core duo processor on their laptop ? I don&#8217;t think so, but many people may think they need when their computer is swapping&#8230; cunning marketing !</p>
-<p><img style="margin: 0pt auto; display: block" title="OLYMPUS DIGITAL CAMERA         " src="/blog-archive/wp-content/uploads/2007/05/public/PC030009.JPG" alt="OLYMPUS DIGITAL CAMERA         " /></p>
+<p><img style="margin: 0pt auto; display: block" title="OLYMPUS DIGITAL CAMERA         " src="/wp-content/uploads/2007/05/public/PC030009.JPG" alt="OLYMPUS DIGITAL CAMERA         " /></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2006/12/03/buying-a-new-laptop-or-upgrading-to-1gb-ram.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

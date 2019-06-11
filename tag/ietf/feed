@@ -9,8 +9,8 @@
 
 <channel>
 	<title>IETF &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ietf/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ietf/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>SSL/TLS RFC updated against CVE-2009-3555</title>
-		<link>/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
+		<link>/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html</link>
 		<pubDate>Sat, 09 Jan 2010 11:23:09 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -34,8 +34,9 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
-		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
-				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
+		<guid isPermaLink="false">http://www.phocean.net/?p=673</guid>
+		<description><![CDATA[A solution has been finally brought up to fix CVE-2009-3555 and the temporary solution that broke client authentication. At least, the IETF agreed on a fix as Marsh Ray informs us, though it will still take some weeks for the whole validation process to complete. Moreover, as it requires both the servers and the clients...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/01/09/ssltls-rfc-updated-against-cve-2009-3555.html">Continue Reading</a></span>]]></description>
+				<content:encoded><![CDATA[<p>A solution has been finally brought up to fix<a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html"> CVE-2009-3555 and the temporary solution that broke client authentication</a>.</p>
 <p>At least, the IETF agreed on a fix as <a title="SSL/TLS fix" href="http://extendedsubset.com/?p=14" target="_blank">Marsh Ray</a> informs us, though it will still take some weeks for the whole validation process to complete.</p>
 <p>Moreover, as it requires both the servers and the clients to be patched, it will take months before the patches can be applied and one can have a working client authentification architecture. The longest will be the client side, of course, so I feel sorry for those who have a large park to manage.</p>
 <p>As far as I am concerned, fortunately, I will just have a few browsers that I manage directly to update. Anyway, still more patience is needed !</p>

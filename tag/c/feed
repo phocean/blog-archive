@@ -9,8 +9,8 @@
 
 <channel>
 	<title>C &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/c/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/c/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Beware of source code (even from your favorite portal/forum/&#8230;)</title>
-		<link>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
-		<comments>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
+		<link>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html</link>
+		<comments>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html#comments</comments>
 		<pubDate>Sat, 24 Apr 2010 12:14:04 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -39,7 +39,8 @@
 		<category><![CDATA[social engineering]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
-		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=793</guid>
+		<description><![CDATA[The other day I stumbed upon a weired piece of software on howtoforge.com : dns-add (code on sourceforge.net). Actually, the purpose of dns-add was very intriguing : update your DNS in one command ! The output should look like this: ...::: ISP-fW DNS add v1.0 :::... http://isp-fw.sourceforge.net/ --== copyleft 2005-2006 ==-- &#124; Free memory: 864...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The other day I stumbed upon a weired piece of software on <a title="Howtoforge.com" href="http://howtoforge.com" target="_blank">howtoforge.com</a> : <a title="dns-add" href="http://www.howtoforge.com/adding-dns-servers-in-one-step-with-dns-add" target="_blank">dns-add</a> (code <a title="Sourceforge dns-add" href="http://sourceforge.net/projects/isp-fw/files/DNS-add/" target="_blank">on sourceforge.net</a>).</p>
 <p>Actually, the purpose of dns-add was very intriguing : update your DNS in one command !</p>
 <p>The output should look like this:</p>
@@ -241,9 +242,9 @@ If you really have to use code from an untrusted source, check it, or wait for t
 <p><strong><span style="color: #ff0000;"><em><span style="color: #ff0000;">* Update *</span></em></span></strong></p>
 <p><em><span style="color: #993300;">I did contact the author and didn't get any answer.<br />
 I reported the issue to Sourceforge, which deleted the account hosting dns-add, as it violated the website policies.</span></em></p>
-<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/blog-archive/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
+<p><em><span style="color: #993300;">You can download the source code </span></em><a href="/wp-content/uploads/2010/04/dns-add.tar.gz"><em><span style="color: #0000ff;">dns-add.tar.gz</span></em></a><em><span style="color: #993300;"> if you want to analyse it.</span></em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2010/04/24/beware-of-source-code-even-from-your-favorite-portalforum.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 	</channel>

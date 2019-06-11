@@ -9,8 +9,8 @@
 
 <channel>
 	<title>virtualbox &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/virtualbox/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/virtualbox/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>A journey with Btrfs</title>
-		<link>/blog-archive/2016/03/20/a-journey-with-btrfs.html</link>
-		<comments>/blog-archive/2016/03/20/a-journey-with-btrfs.html#comments</comments>
+		<link>/2016/03/20/a-journey-with-btrfs.html</link>
+		<comments>/2016/03/20/a-journey-with-btrfs.html#comments</comments>
 		<pubDate>Sun, 20 Mar 2016 15:35:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -31,7 +31,8 @@
 		<category><![CDATA[virtualbox]]></category>
 
 		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
-		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://phocean.net/?p=2064</guid>
+		<description><![CDATA[Why BTRFS ? I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4). I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me. As a quick reminder, the goal of this file system is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2016/03/20/a-journey-with-btrfs.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<h1>Why BTRFS ?</h1>
 <p>I have recently tested Btrfs as the file system for my /home partition (which was previously on ext4).</p>
 <p>I have been impressed by what this file system enables to do, but also came to the conclusion that it is not for me.</p>
@@ -166,7 +167,7 @@ Hell World!
 <li><a href="https://btrfs.wiki.kernel.org/index.php/Gotchas">Btrfs wiki: gotchas</a> (virtual machines and databases)</li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2016/03/20/a-journey-with-btrfs.html/feed</wfw:commentRss>
 		<slash:comments>4</slash:comments>
 		</item>
 	</channel>

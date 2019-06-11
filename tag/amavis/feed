@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Amavis &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/amavis/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/amavis/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Dovecot LDA vs Procmail</title>
-		<link>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html</link>
-		<comments>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
+		<link>/2009/12/09/dovecot-lda-vs-procmail.html</link>
+		<comments>/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
 		<pubDate>Wed, 09 Dec 2009 01:10:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -37,7 +37,8 @@
 		<category><![CDATA[umask]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
-		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
+		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I have a mail server configuration based on <strong>Postfix</strong> for the smtp, <strong>Dovecot</strong> for the imap and virtual users receiving e-mails in maildir boxes.</p>
 <p>I am also using <strong>Amavis</strong> and <strong>Spamassassin</strong> for content filtering.</p>
 <p>I am not going now to describe this configuration, I think there are already a lot of very good tutorials about it all over the web. Moreover, the openSUSE maintainers made such a configuration quite easy : a sensible part of the work just consists in commenting out some line in the configuration files.</p>
@@ -104,7 +105,7 @@ Restart Postfix and Dovecot, check the log to ensure that everything works fine.
 Now all new mails should come out in the maildir folder with permissions set to 660.</p>
 <p>Definitely, in my opinion, Dovecot LDA is the way to go : simple and extensible. Good bye Procmail and your cluttered configuration file.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

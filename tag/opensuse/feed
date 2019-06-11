@@ -9,8 +9,8 @@
 
 <channel>
 	<title>openSUSE &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/opensuse/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/opensuse/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Dovecot LDA vs Procmail</title>
-		<link>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html</link>
-		<comments>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
+		<link>/2009/12/09/dovecot-lda-vs-procmail.html</link>
+		<comments>/2009/12/09/dovecot-lda-vs-procmail.html#comments</comments>
 		<pubDate>Wed, 09 Dec 2009 01:10:17 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -37,7 +37,8 @@
 		<category><![CDATA[umask]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
-		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=542</guid>
+		<description><![CDATA[I have a mail server configuration based on Postfix for the smtp, Dovecot for the imap and virtual users receiving e-mails in maildir boxes. I am also using Amavis and Spamassassin for content filtering. I am not going now to describe this configuration, I think there are already a lot of very good tutorials about...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/12/09/dovecot-lda-vs-procmail.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I have a mail server configuration based on <strong>Postfix</strong> for the smtp, <strong>Dovecot</strong> for the imap and virtual users receiving e-mails in maildir boxes.</p>
 <p>I am also using <strong>Amavis</strong> and <strong>Spamassassin</strong> for content filtering.</p>
 <p>I am not going now to describe this configuration, I think there are already a lot of very good tutorials about it all over the web. Moreover, the openSUSE maintainers made such a configuration quite easy : a sensible part of the work just consists in commenting out some line in the configuration files.</p>
@@ -104,13 +105,13 @@ Restart Postfix and Dovecot, check the log to ensure that everything works fine.
 Now all new mails should come out in the maildir folder with permissions set to 660.</p>
 <p>Definitely, in my opinion, Dovecot LDA is the way to go : simple and extensible. Good bye Procmail and your cluttered configuration file.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/12/09/dovecot-lda-vs-procmail.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>OpenSSL : CVE-2009-3555 security fix and mod_ssl client authentication breakage</title>
-		<link>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
-		<comments>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
+		<link>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html</link>
+		<comments>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html#comments</comments>
 		<pubDate>Sat, 28 Nov 2009 16:08:50 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -124,7 +125,8 @@ Now all new mails should come out in the maildir folder with permissions set to 
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
-		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=524</guid>
+		<description><![CDATA[A security advisory on OpenSSL has recently been published. Details are there and there. It is vulnerable to a MiTM attack where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client. A proof of concept of an attack against Twitter was...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>A security advisory on OpenSSL has recently been published. Details are <a title="CVE-2009-3555" href="http://secunia.com/advisories/cve_reference/CVE-2009-3555/">there</a> and <a title="renegociation vulnerability" href="http://www.securegoose.org/2009/11/tls-renegotiation-vulnerability-cve.html">there</a>.</p>
 <p>It is vulnerable to a <strong>MiTM attack </strong>where the attacker can intercept and retrieve the credential to a trusted HTTPS website, by intercepting the session cookie sent back to the client.</p>
 <p>A proof of concept of an attack against Twitter was made.</p>
@@ -153,13 +155,13 @@ If anyone reading it knows a version that does it, please let me know.</p>
 <p><em>PS 1 : thanks again to Stittel for the good hint (I hope you will come by here) and to the always nice and helpful #suse channel in general ;)</em></p>
 <p><em>PS 2 : <a href="https://bugzilla.novell.com/show_bug.cgi?id=558176" target="_blank">bug reported</a> on openSUSE bugzilla</em></p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>openSUSE 11.1 and /boot on RAID 1</title>
-		<link>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
-		<comments>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
+		<link>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html</link>
+		<comments>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html#comments</comments>
 		<pubDate>Wed, 21 Oct 2009 18:06:27 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -171,7 +173,8 @@ If anyone reading it knows a version that does it, please let me know.</p>
 		<category><![CDATA[RAID]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
-		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=489</guid>
+		<description><![CDATA[I tried yesterday to set up a home server with two disks in a RAID 1 array. My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one. That&#8217;s the way I think it should work anyway, despite the number...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I tried yesterday to set up a home server with two disks in a RAID 1 array.</p>
 <p>My intention was to have everything on the RAID volume, including /boot, so that if a disk crash, I still can boot on the second one.<br />
 That&#8217;s the way I think it should work anyway, despite the number of tutorials or forum posts advising not to do so.</p>
@@ -192,13 +195,13 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 <p>I haven&#8217;t tested <strong>openSUSE 11.2</strong> yet because the purpose of this machine is to be a server, so I care about stability.</p>
 <p>But I will, and I wish it can support this feature also, or that it will be the case some day.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/10/21/opensuse-11-1-and-boot-on-raid-1.html/feed</wfw:commentRss>
 		<slash:comments>7</slash:comments>
 		</item>
 		<item>
 		<title>Automatic backup when inserting a drive</title>
-		<link>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
-		<comments>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
+		<link>/2009/09/28/automatic-backup-when-inserting-a-drive.html</link>
+		<comments>/2009/09/28/automatic-backup-when-inserting-a-drive.html#comments</comments>
 		<pubDate>Mon, 28 Sep 2009 09:34:11 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -211,7 +214,8 @@ There, no way to have /boot on a RAID volume, and the interface was really painf
 		<category><![CDATA[udev]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
-		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=419</guid>
+		<description><![CDATA[I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work. Being lazy, it happened that I did not backup my data. Yes, it is...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/28/automatic-backup-when-inserting-a-drive.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I bought a 500 GB 2.5&#8243; external disk drive to backup the data of my laptop. It is small, quiet, easy to move and far enough for the important data I want to backup, mostly documents, e-mails or script from work.</p>
 <p>Being lazy, it happened that I did not backup my data. Yes, it is a shame, but inserting a drive and launching the commands to rsync the discs was preventing me from this best practice.</p>
 <p>So, I decided to make it automatic. The goal was that the only thing I would have to do would be to insert the drive, and then remove it when it is done.</p>
@@ -292,12 +296,12 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 <p>That&#8217;s all for today folks. Let me know if there are some things not clear or that can be optimized.</p>
 <p>Next time, we will see how to run the same script from <strong>Hal</strong> instead. We will also use Zenity to get a nice GUI prompt when the disk is inserted.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/28/automatic-backup-when-inserting-a-drive.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>
 		<title>How to activate music preview in Nautilus</title>
-		<link>/blog-archive/2009/09/26/how-to-activate-music-preview-in-nautilus.html</link>
+		<link>/2009/09/26/how-to-activate-music-preview-in-nautilus.html</link>
 		<pubDate>Sat, 26 Sep 2009 03:21:32 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -306,6 +310,7 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 		<category><![CDATA[openSUSE]]></category>
 		<category><![CDATA[zypper]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=418</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=418</guid>
 		<description><![CDATA[It allows to play a music file by letting the cursor over it, without opening a player. Very easy to set up : $ zypper install mpg123 and it should work immediatly.]]></description>
 				<content:encoded><![CDATA[<p>It allows to play a music file by letting the cursor over it, without opening a player.</p>
@@ -316,8 +321,8 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 			</item>
 		<item>
 		<title>No Nessus gui client and limited support of the server for openSUSE</title>
-		<link>/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html</link>
-		<comments>/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html#comments</comments>
+		<link>/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html</link>
+		<comments>/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html#comments</comments>
 		<pubDate>Wed, 02 Sep 2009 13:27:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -328,7 +333,8 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 		<category><![CDATA[openSUSE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=416</guid>
-		<description><![CDATA[As I work on security, I used to use Nessus on my openSUSE system. But it seems that Tenable Network Security dropped support for the client on our favorite distribution. At least, for some reason, they stopped making an universal statically linked binary (though they keep doing it for the server part) and it hasn&#8217;t...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=416</guid>
+		<description><![CDATA[As I work on security, I used to use Nessus on my openSUSE system. But it seems that Tenable Network Security dropped support for the client on our favorite distribution. At least, for some reason, they stopped making an universal statically linked binary (though they keep doing it for the server part) and it hasn&#8217;t...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>As I work on security, I used to use Nessus on my openSUSE system.</p>
 <p>But it seems that <a href="https://discussions.nessus.org/message/2011#2011" target="_blank">Tenable Network Security dropped support for the client on our favorite distribution</a>.</p>
 <p>At least, for some reason, they stopped making an universal statically linked binary (though they keep doing it for the server part) and it hasn&#8217;t changed since april.</p>
@@ -338,13 +344,13 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 <p>So far, it seems that not many people are affected, because there are not many voices on the forum. I can live without it, but however, this is often a nice and useful tool.</p>
 <p>Does anyone use it here ? Or did you get it to work somehow ? If you feel concerned, please let it know to Tenable !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/09/02/no-nessus-gui-client-and-limited-support-of-the-server-for-opensuse.html/feed</wfw:commentRss>
 		<slash:comments>5</slash:comments>
 		</item>
 		<item>
 		<title>openSUSE : default desktop going to be KDE, but&#8230;</title>
-		<link>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html</link>
-		<comments>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html#comments</comments>
+		<link>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html</link>
+		<comments>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html#comments</comments>
 		<pubDate>Thu, 20 Aug 2009 19:03:03 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -354,7 +360,8 @@ For instance, I use a second drive (in the untrabay slot of my thinkpad) that co
 		<category><![CDATA[openSUSE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=411</guid>
-		<description><![CDATA[What is this ? It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid. On that point, and also as a Gnome user, I agree. In that case, why would you change anything ? No one is going to be satisfied...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=411</guid>
+		<description><![CDATA[What is this ? It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid. On that point, and also as a Gnome user, I agree. In that case, why would you change anything ? No one is going to be satisfied...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>What is <a href="http://www.kdedevelopers.org/node/4052" target="_blank">this</a> ?</p>
 <p>It is said that this change is useless and won&#8217;t make any difference. In a few words, you consider that the request was stupid.<br />
 On that point, and also as a Gnome user, I agree.</p>
@@ -363,13 +370,13 @@ On that point, and also as a Gnome user, I agree.</p>
 KDE users will be disappointed and Gnome users will feel marginalized.</p>
 <p>The only thing that would have made sense were either following the request and focussing on KDE integration, or clearly reject it and leave things as they are.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/08/20/opensuse-default-desktop-going-to-be-kde-but.html/feed</wfw:commentRss>
 		<slash:comments>8</slash:comments>
 		</item>
 		<item>
 		<title>openSUSE kernel sources : patching against sock_sendpage() NULL Pointer Dereference vulnerability</title>
-		<link>/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html</link>
-		<comments>/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html#comments</comments>
+		<link>/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html</link>
+		<comments>/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html#comments</comments>
 		<pubDate>Mon, 17 Aug 2009 12:47:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -382,21 +389,22 @@ KDE users will be disappointed and Gnome users will feel marginalized.</p>
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=405</guid>
-		<description><![CDATA[I am using the 2.6.30 kernel sources from Kernel:linux-next and noticed that it has not yet been patched against the ’sock_sendpage()’ NULL Pointer Dereference vulnerability. The threat is serious as it could allow a local user to gain root privileges. Those who compile their own 2.6.x kernel should apply this patch (from Linus, check there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=405</guid>
+		<description><![CDATA[I am using the 2.6.30 kernel sources from Kernel:linux-next and noticed that it has not yet been patched against the ’sock_sendpage()’ NULL Pointer Dereference vulnerability. The threat is serious as it could allow a local user to gain root privileges. Those who compile their own 2.6.x kernel should apply this patch (from Linus, check there...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I am using the 2.6.30 kernel sources from Kernel:linux-next and noticed that it has not yet been patched against the <a title="Null pointer deference" href="http://www.securitytracker.com/alerts/2009/Aug/1022732.html" target="_blank"><strong>’sock_sendpage()’ NULL Pointer Dereference</strong></a> vulnerability.</p>
 <p>The threat is serious as it could allow a local user to gain root privileges.</p>
-<p>Those who compile their own <strong>2.6.x kernel</strong> should apply <a href="/blog-archive/wp-content/uploads/2009/08/sock_sendpage.patch">this patch</a> (from Linus, check <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98">there</a> for more info) .</p>
+<p>Those who compile their own <strong>2.6.x kernel</strong> should apply <a href="/wp-content/uploads/2009/08/sock_sendpage.patch">this patch</a> (from Linus, check <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98">there</a> for more info) .</p>
 <p>Within your kernel source folder :</p>
 <pre>$ patch -u -p0 &lt; sock_sendpage.patch</pre>
 <p>I hope an official patch will be released soon for all kernels. I did not check if the 11.1 kernel has already been patched or not.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/08/17/opensuse-kernel-sources-patching-against-sock_sendpage-null-pointer-dereference-vulnerability.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Yersinia : patch to compile under openSUSE (11.1)</title>
-		<link>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html</link>
-		<comments>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html#comments</comments>
+		<link>/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html</link>
+		<comments>/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html#comments</comments>
 		<pubDate>Sun, 14 Jun 2009 19:25:34 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -409,16 +417,17 @@ KDE users will be disappointed and Gnome users will feel marginalized.</p>
 		<category><![CDATA[yersinia]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=391</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=391</guid>
 		<description><![CDATA[Yet another post in the series of compilation failures due to unexpected libraries paths. This time, it is about Yersinia and the ncurses library. I made the following yersinia-opensuse11.1 patch which should work for openSUSE 11.1 and maybe other versions or distros.]]></description>
 				<content:encoded><![CDATA[<p>Yet another post in the series of compilation failures due to unexpected libraries paths.</p>
-<p>This time, it is about <a title="Yersinia" href="http://www.yersinia.net/" target="_blank">Yersinia</a> and the ncurses library. I made the following <a href="/blog-archive/wp-content/uploads/2009/06/yersinia-opensuse11.1.patch">yersinia-opensuse11.1 patch</a> which should work for openSUSE 11.1 and maybe other versions or distros.</p>
+<p>This time, it is about <a title="Yersinia" href="http://www.yersinia.net/" target="_blank">Yersinia</a> and the ncurses library. I made the following <a href="/wp-content/uploads/2009/06/yersinia-opensuse11.1.patch">yersinia-opensuse11.1 patch</a> which should work for openSUSE 11.1 and maybe other versions or distros.</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2009/06/14/yersinia-patch-to-compile-under-opensuse-11-1.html/feed</wfw:commentRss>
 		<slash:comments>3</slash:comments>
 		</item>
 		<item>
 		<title>Compilation of PackETH on openSUSE</title>
-		<link>/blog-archive/2009/06/14/compilation-of-packeteth-on-opensuse.html</link>
+		<link>/2009/06/14/compilation-of-packeteth-on-opensuse.html</link>
 		<pubDate>Sun, 14 Jun 2009 12:08:01 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Dev]]></category>
@@ -431,9 +440,10 @@ KDE users will be disappointed and Gnome users will feel marginalized.</p>
 		<category><![CDATA[packETH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=387</guid>
-		<description><![CDATA[PackETH is a nice gkt tool to play with Ethernet packet. I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the packETH-opensuse patch to compile correctly. If you are on a 32 bits system, all you will have to do is editing the CPPFLAGS line...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/06/14/compilation-of-packeteth-on-opensuse.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=387</guid>
+		<description><![CDATA[PackETH is a nice gkt tool to play with Ethernet packet. I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the packETH-opensuse patch to compile correctly. If you are on a 32 bits system, all you will have to do is editing the CPPFLAGS line...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/06/14/compilation-of-packeteth-on-opensuse.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p><a title="PackETH" href="http://packeth.sourceforge.net/" target="_blank">PackETH</a> is a nice gkt tool to play with Ethernet packet.</p>
-<p>I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the <a href="/blog-archive/wp-content/uploads/2009/06/packETH-opensuse.patch">packETH-opensuse patch</a> to compile correctly.</p>
+<p>I encountered some path issues with the Makefile and openSUSE 11.1 64 bits to compile it, so here is the <a href="/wp-content/uploads/2009/06/packETH-opensuse.patch">packETH-opensuse patch</a> to compile correctly.</p>
 <p>If you are on a 32 bits system, all you will have to do is editing the <em>CPPFLAGS</em> line and replace all <em>lib64</em> occurences with<em> lib</em>.</p>
 <p>I hope one will find it useful.</p>
 ]]></content:encoded>

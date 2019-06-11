@@ -9,8 +9,8 @@
 
 <channel>
 	<title>honeypot &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/honeypot/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/honeypot/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>World&#8217;s worst hacker</title>
-		<link>/blog-archive/2011/01/31/worlds-worst-hacker.html</link>
-		<comments>/blog-archive/2011/01/31/worlds-worst-hacker.html#comments</comments>
+		<link>/2011/01/31/worlds-worst-hacker.html</link>
+		<comments>/2011/01/31/worlds-worst-hacker.html#comments</comments>
 		<pubDate>Mon, 31 Jan 2011 18:44:20 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -33,10 +33,11 @@
 		<category><![CDATA[SSH]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1003</guid>
 		<description><![CDATA[That was so funny !]]></description>
 				<content:encoded><![CDATA[<p><a title="World's worst hacker" href="http://george.hedfors.com/content/worlds-worst-hacker" target="_blank">That</a> was so funny !</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2011/01/31/worlds-worst-hacker.html/feed</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

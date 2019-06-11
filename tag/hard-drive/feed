@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Hard drive &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/hard-drive/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/hard-drive/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Disk wiping : Myth broken</title>
-		<link>/blog-archive/2011/03/06/disk-wiping-myth-broken.html</link>
+		<link>/2011/03/06/disk-wiping-myth-broken.html</link>
 		<pubDate>Sun, 06 Mar 2011 18:58:10 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>
@@ -32,7 +32,8 @@
 		<category><![CDATA[wiping]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1024</guid>
-		<description><![CDATA[There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;. At least until I found this very instructive article, &#8220;Disk Wiping &#8211; One pass is enough&#8220;. Don&#8217;t miss the second part which clarifies some points...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2011/03/06/disk-wiping-myth-broken.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1024</guid>
+		<description><![CDATA[There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;. At least until I found this very instructive article, &#8220;Disk Wiping &#8211; One pass is enough&#8220;. Don&#8217;t miss the second part which clarifies some points...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2011/03/06/disk-wiping-myth-broken.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>There are many urban legends in the industry. I did believe in one of them : &#8220;wiping a disk to properly prevent data restore requires random writes and several passes&#8221;.</p>
 <p>At least until I found this very instructive article, &#8220;<a title="Disk Wiping - one pass is enough" href="http://www.anti-forensics.com/disk-wiping-one-pass-is-enough" target="_blank">Disk Wiping &#8211; One pass is enough</a>&#8220;. Don&#8217;t miss <a title="Disk Wiping - one pas is enought - part 2" href="http://www.anti-forensics.com/disk-wiping-one-pass-is-enough-part-2-this-time-with-screenshots" target="_blank">the second part</a> which clarifies some points and gives more details.</p>
 <p>In short, after one pass, every bit of the disk is filled with zero and there is simply no way to find out what the previous value was. Even the best tools out there have no clue to do it.</p>
@@ -46,8 +47,8 @@
 			</item>
 		<item>
 		<title>Cold boot attack, not a threat to Full disk encryption (FDE)</title>
-		<link>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
-		<comments>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
+		<link>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html</link>
+		<comments>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html#comments</comments>
 		<pubDate>Tue, 26 Feb 2008 09:53:02 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -62,7 +63,8 @@
 		<category><![CDATA[Vulnerability]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
-		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=100</guid>
+		<description><![CDATA[Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption. Hardware encryption is provided by a few laptop makers, generally on high-range an business models. It has much less performance impact than software encryption,...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Since the new cold boot attack hack is on the news, touching most of the software encryption solutions, I have wondered if it had any chance to concern also hardware encryption.</p>
 <p>Hardware encryption is provided by a few laptop makers, generally on high-range an business models.</p>
 <p>It has much less performance impact than software encryption, and protect the data independently from your system configuration and its partitions.</p>
@@ -91,8 +93,8 @@
 <p>No. The encryption algorithm is not in the user land, so no key is stored in RAM.</p>
 <p><strong> The key hashes are stored directly on the disk.</strong></p>
 <p>These documents from Hitachi provide more detailed information :</p>
-<p><a title="Bulk encryption white paper" href="/blog-archive/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
-<p><a title="HowTo guide for bulk data encryption" href="/blog-archive/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
+<p><a title="Bulk encryption white paper" href="/wp-content/uploads/2008/02/bulk_encryption_white_paper.pdf">Bulk encryption white paper</a></p>
+<p><a title="HowTo guide for bulk data encryption" href="/wp-content/uploads/2008/02/howtoguide_bulkdataencryption_final.pdf">HowTo guide for bulk data encryption</a></p>
 <p><a title="Hardware encryption" href="http://en.wikipedia.org/wiki/Full_disk_encryption">This Wikipedia article</a>, underlining the main points of hardware encryption,  is also interesting.</p>
 <p>I guess that at some point it would be possible to read some hash on the hard drive electronic board, but this is not going to be easy. You need to be a hardware expert in hard drives and for sure it can&#8217;t be done as quickly as with the RAM chip.</p>
 <p>Of course, even the cold boot attack is extreme. Most of thief won&#8217;t care about your data, or won&#8217;t be the knowledge or the practical possibility to conduct a successful attack.</p>
@@ -101,12 +103,12 @@
 <p>Personally, as FDE offers more performance and transparency, I am using it on my laptop but I keep using dm-crypt on all my external drives.</p>
 <p>Now the question is : what good workaround can be found to provide more secure software encryption ?</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2008/02/26/cold-boot-attack-not-a-threat-to-full-disk-encryption-fde.html/feed</wfw:commentRss>
 		<slash:comments>2</slash:comments>
 		</item>
 		<item>
 		<title>Disk encryption methods : hacked !</title>
-		<link>/blog-archive/2008/02/25/disk-encryption-methods-hacked.html</link>
+		<link>/2008/02/25/disk-encryption-methods-hacked.html</link>
 		<pubDate>Mon, 25 Feb 2008 21:25:49 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -117,8 +119,10 @@
 		<category><![CDATA[Hard drive]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=99</guid>
-		<description><![CDATA[Damned ! A team of researchers found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I previously described on this blog. All systems are actually concerned, because the attack is low level. It is based on the RAM chips properties. After shutdown, and therefore no more...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2008/02/25/disk-encryption-methods-hacked.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=99</guid>
+		<description><![CDATA[Damned ! A team of researchers found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I previously described on this blog. All systems are actually concerned, because the attack is low level. It is based on the RAM chips properties. After shutdown, and therefore no more...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2008/02/25/disk-encryption-methods-hacked.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Damned !</p>
+<p><a title="disk encryption hackers" href="http://citp.princeton.edu/memory">A team of researchers</a> found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I <a title="dm-crypt tutorial" href="http://http//www.phocean.net/?p=85">previously described</a> on this blog.</p>
 <p><a title="disk encryption hackers" href="http://citp.princeton.edu/memory">A team of researchers</a> found a way to defeat all the most common disk encryption methods &#8211; including dm-crypt for Linux that I <a title="dm-crypt tutorial" href="http://http//www.phocean.net/?p=85">previously described</a> on this blog.</p>
 <p>All systems are actually concerned, because the attack is low level. It is based on the RAM chips properties. After shutdown, and therefore no more electricity powering, a chip will still contain some readable information during a few seconds.</p>
 <p>The data contained is deteriorating, but for example if you cool the chip enough, for example with a computer dry air dust cleaner, you can keep the data several minutes !</p>
@@ -127,13 +131,13 @@
 <p>But as many users, including me, use heavily suspend-to-ram with their laptop, this issue is rather problematic&#8230;</p>
 <p>The team provides a rather impressive video :</p>
 <p style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="355" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="wmode" value="transparent" /><param name="src" value="http://www.youtube.com/v/JDaicPIgn9U&amp;rel=1" /><embed type="application/x-shockwave-flash" width="425" height="355" src="http://www.youtube.com/v/JDaicPIgn9U&amp;rel=1" wmode="transparent"></embed></object></p>
-<p>I no longer use dm-crypt since my <a title="my thinkpad T61" href="/blog-archive/?p=97">Thinkpad</a> provides hardware encryption, but I wonder now where the key is stored in my case. I don&#8217;t think it is in RAM, but I have to check it to make sure.I will do it tomorrow, since I need to rest now.</p>
+<p>I no longer use dm-crypt since my <a title="my thinkpad T61" href="/?p=97">Thinkpad</a> provides hardware encryption, but I wonder now where the key is stored in my case. I don&#8217;t think it is in RAM, but I have to check it to make sure.I will do it tomorrow, since I need to rest now.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>Disk Encryption on Linux</title>
-		<link>/blog-archive/2007/11/18/disk-encryption-on-linux.html</link>
-		<comments>/blog-archive/2007/11/18/disk-encryption-on-linux.html#comments</comments>
+		<link>/2007/11/18/disk-encryption-on-linux.html</link>
+		<comments>/2007/11/18/disk-encryption-on-linux.html#comments</comments>
 		<pubDate>Sun, 18 Nov 2007 17:56:47 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Cryptography]]></category>
@@ -147,6 +151,7 @@
 		<category><![CDATA[Luks]]></category>
 		<category><![CDATA[swap]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=85</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=85</guid>
 		<description><![CDATA[I finally encrypted some partitions of my hard drive.
 
@@ -220,12 +225,12 @@ auth    optional        pam_mount.so use_first_pass</pre>
 <p>However I think it really must become more user-friendly for the masses. Most of people will still be scared to open a terminal and type the commands above, so I am looking forward to seeing some graphical front-end to manage all that. Sure there are coming, and if you already know some project, please let me know.</p>
 <p>About performance, if encryption must have a resource cost, I could not notice any slow down on a pretty modest hardware (celeron M 1,5 Ghz).</p>
 ]]></content:encoded>
-			<wfw:commentRss>/blog-archive/2007/11/18/disk-encryption-on-linux.html/feed</wfw:commentRss>
+			<wfw:commentRss>/2007/11/18/disk-encryption-on-linux.html/feed</wfw:commentRss>
 		<slash:comments>11</slash:comments>
 		</item>
 		<item>
 		<title>Measure the access time of your Hard Disk&#8230;</title>
-		<link>/blog-archive/2007/05/17/measure-the-access-time-of-your-hard-disk.html</link>
+		<link>/2007/05/17/measure-the-access-time-of-your-hard-disk.html</link>
 		<pubDate>Thu, 17 May 2007 18:32:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -261,7 +266,7 @@ sys     0m0.076s</p>
 			</item>
 		<item>
 		<title>Final upgrade of my laptop</title>
-		<link>/blog-archive/2006/12/29/final-upgrade-of-my-laptop.html</link>
+		<link>/2006/12/29/final-upgrade-of-my-laptop.html</link>
 		<pubDate>Fri, 29 Dec 2006 20:47:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Hardware]]></category>
@@ -276,7 +281,7 @@ Talking about speed, anyone who has a 5200 rpm or inferior disk will see what I 
 <p>Mine was a terrible 4200 rpm Hitachi disk (<span class="boldtitle">Travelstar 4K120)</span>. Just terrible. My old desktop was often faster just thanks to its 7200 rpm disks.</p>
 <p>Morever, I was not trustful anymore in its reliability. It produces an infamous click noise every time the head moves. Infamous, because there are many posts about that on many forums, concerning any laptop brand. It is not the kind of click when a disk dies, as it always did it. I have no evidence of that, but I am pretty sure it is the same model in all cases. It must be a common disk on cheap laptops. Anyway, for me no trick worked to kill this noise : on forums, laptop-mode tool was sometimes accused, and other times the ACPI setting of hdparm.</p>
 <p>I looked for a Hitachi Travelstar 7K100 &#8211; 100 (~ 130 €). Why this brand ? I am used to it, I have been always buying this brand since they took over IBM and was never disapointed by their speed, their silence and their reliability.</p>
-<p><img src="/blog-archive/wp-content/uploads/2007/05/public/PC250054.JPG" alt="" width="300" height="331" align="absmiddle" /></p>
+<p><img src="/wp-content/uploads/2007/05/public/PC250054.JPG" alt="" width="300" height="331" align="absmiddle" /></p>
 <p>Its main features are the 7200 rpm, a cache of 8 Mb, 10 ms access time and a maximum power consumption of 5,5 W (2 W for reading/writing and 0.5 W idle).</p>
 <p>After having used it several days now, I have to say that I am extrimely satisfied.<br />
 It is not noisy at all despite its 7200 rpm. It is actually more silent than the 4200 and, very important, the click noise definitely dispeared !!!<br />
@@ -284,7 +289,7 @@ About speed, the difference is big too. I don&#8217;t want to do a full benchmar
 As an exemple, my Ubuntu starts in less than 30 s where it took 50 s before (from the BIOS to a fully operational Gnome).<br />
 One point I was worried about was its power consumption and its impact on the autonomy of the laptop. Normaly, a 7200 rpm needs more power than a 4200 one. I have been totally relieved now since I don&#8217;t see any change.<br />
 I was not expecting the last point : temperature. The 4K120 was rather hot : 42°C on normal charge, 50°C on full charge. The 7K100 impresses me : 33°C on normal charge, 39°C on full charge ! As good as the desktop models ! It is not only safer for the data, but it benefits to the whole laptop.</p>
-<p>Finally, I recycled the old disk in a USB box. This one, Advance BX-2520, is very cheap (~ 12 €), small and does what it is done for very well. <img src="/blog-archive/wp-content/uploads/2007/05/public/21317.js" /></p>
+<p>Finally, I recycled the old disk in a USB box. This one, Advance BX-2520, is very cheap (~ 12 €), small and does what it is done for very well. <img src="/wp-content/uploads/2007/05/public/21317.js" /></p>
 <p>To transfer the data, I first set up the new disk in the Advance usb box.<br />
 I copied the first partition (<strong>sda1</strong> is mounted as <strong>/</strong>) :</p>
 <pre lang="bash">$ sudo dd if=/dev/hda1 of=/dev/sda1</pre>
@@ -309,7 +314,7 @@ The line it contains must be :</p>
 			</item>
 		<item>
 		<title>Back-up your disk with DD</title>
-		<link>/blog-archive/2006/12/04/back-up-your-disk-with-dd.html</link>
+		<link>/2006/12/04/back-up-your-disk-with-dd.html</link>
 		<pubDate>Mon, 04 Dec 2006 15:32:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Linux]]></category>

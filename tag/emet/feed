@@ -9,8 +9,8 @@
 
 <channel>
 	<title>EMET &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/emet/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/emet/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>EMET, pretty weak ALSR</title>
-		<link>/blog-archive/2011/08/16/emet-pretty-weak-alsr.html</link>
+		<link>/2011/08/16/emet-pretty-weak-alsr.html</link>
 		<pubDate>Tue, 16 Aug 2011 17:20:36 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -28,14 +28,15 @@
 		<category><![CDATA[EMET]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1150</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1150</guid>
 		<description><![CDATA[Didier Stevens &#8220;benchmarked&#8221; the efficiency of ALSR as implemented by the EMET tool. The conclusion is that it is pretty weak, whereas I thought it was on pair with true ALSR (as advertised). Very instructive.]]></description>
-				<content:encoded><![CDATA[<p>Didier Stevens &#8220;<a title="Pseudo ALSR" href="http://blog.didierstevens.com/2011/08/16/so-how-good-is-pseudo-aslr/" target="_blank">benchmarked</a>&#8221; the efficiency of ALSR as implemented by the <a title="EMET" href="/blog-archive/2010/09/25/emet-configure…ion-on-windows.html">EMET</a> tool.</p>
+				<content:encoded><![CDATA[<p>Didier Stevens &#8220;<a title="Pseudo ALSR" href="http://blog.didierstevens.com/2011/08/16/so-how-good-is-pseudo-aslr/" target="_blank">benchmarked</a>&#8221; the efficiency of ALSR as implemented by the <a title="EMET" href="/2010/09/25/emet-configure…ion-on-windows.html">EMET</a> tool.</p>
 <p>The conclusion is that it is pretty weak, whereas I thought it was on pair with true ALSR (as advertised). Very instructive.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>EMET: configure memory protection on Windows</title>
-		<link>/blog-archive/2010/09/25/emet-configure-memory-protection-on-windows.html</link>
+		<link>/2010/09/25/emet-configure-memory-protection-on-windows.html</link>
 		<pubDate>Sat, 25 Sep 2010 15:56:00 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Defense]]></category>
@@ -48,10 +49,11 @@
 		<category><![CDATA[SEHOP]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=911</guid>
-		<description><![CDATA[Microsoft published a nice tool named EMET (Enhanced Mitigation Experience Toolkit) whose purpose is to check and enforce the memory security policies such as ALSR and DEP. It shows and allows to configure the global settings, but also, and this is the most interesting part, indicated for each process running if it supports those security...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2010/09/25/emet-configure-memory-protection-on-windows.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=911</guid>
+		<description><![CDATA[Microsoft published a nice tool named EMET (Enhanced Mitigation Experience Toolkit) whose purpose is to check and enforce the memory security policies such as ALSR and DEP. It shows and allows to configure the global settings, but also, and this is the most interesting part, indicated for each process running if it supports those security...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2010/09/25/emet-configure-memory-protection-on-windows.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>Microsoft published a nice tool named <a title="EMET" href="http://www.microsoft.com/downloads/en/confirmation.aspx?FamilyID=c6f0a6ee-05ac-4eb6-acd0-362559fd2f04" target="_blank">EMET</a> (Enhanced Mitigation Experience Toolkit) whose purpose is to check and enforce the memory security policies such as ALSR and DEP.</p>
 <p>It shows and allows to configure the global settings, but also, and this is the most interesting part, indicated for each process running if it supports those security measures. It is even able to enforce the protections for each application which would not support it natively (i.e. not set at compilation time).</p>
-<p style="text-align: center;"><img class="aligncenter" title="EMET" src="/blog-archive/wp-content/uploads/2010/09/EMET.png" alt="" width="640" height="360" /></p>
+<p style="text-align: center;"><img class="aligncenter" title="EMET" src="/wp-content/uploads/2010/09/EMET.png" alt="" width="640" height="360" /></p>
 ]]></content:encoded>
 			</item>
 	</channel>

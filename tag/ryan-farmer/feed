@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Ryan Farmer &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ryan-farmer/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ryan-farmer/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,13 +19,14 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>Ryan Farmer is a spammer</title>
-		<link>/blog-archive/2008/08/15/ryan-farmer-is-a-spammer.html</link>
+		<link>/2008/08/15/ryan-farmer-is-a-spammer.html</link>
 		<pubDate>Fri, 15 Aug 2008 14:23:55 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
 		<category><![CDATA[Ryan Farmer]]></category>
 		<category><![CDATA[Spam]]></category>
 
+		<guid isPermaLink="false">http://www.phocean.net/?p=233</guid>
 		<guid isPermaLink="false">http://www.phocean.net/?p=233</guid>
 		<description><![CDATA[For those who still don&#8217;t know, Ryan Farmer would be a spammer and a liar. Quite embarassing to be caught like that. Maybe all this is a lot of noise, but such people deserve a good lesson of living in society. Really.]]></description>
 				<content:encoded><![CDATA[<p>For those who still don&#8217;t know, <a title="Ryan Farmer is a spammer" href="http://www.fooishbar.org/blog/tech/ryan-farmer-2008-08-14-21-24.html" target="_blank">Ryan Farmer would be a spammer and a liar</a>.</p>

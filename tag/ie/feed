@@ -9,8 +9,8 @@
 
 <channel>
 	<title>IE &#8211; Phocean.net</title>
-	<atom:link href="/blog-archive/tag/ie/feed" rel="self" type="application/rss+xml" />
-	<link>/blog-archive</link>
+	<atom:link href="/tag/ie/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Computer Security Blog</description>
 	<lastBuildDate>Fri, 24 Feb 2017 21:17:51 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.9.10</generator>
 	<item>
 		<title>CVE-2009-3555: Safari not yet patched ???</title>
-		<link>/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html</link>
+		<link>/2012/06/10/cve-2009-3555-safari-not-yet-patched.html</link>
 		<pubDate>Sun, 10 Jun 2012 18:17:59 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Mac OS]]></category>
@@ -37,18 +37,19 @@
 		<category><![CDATA[TLS]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1249</guid>
-		<description><![CDATA[The other day I was shocked to find this entry in my Apache logs: [error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page. So it seems...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1249</guid>
+		<description><![CDATA[The other day I was shocked to find this entry in my Apache logs: [error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page. So it seems...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2012/06/10/cve-2009-3555-safari-not-yet-patched.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>The other day I was shocked to find this entry in my Apache logs:</p>
 <pre>[error] SSL Library Error: 336068931 error:14080143:SSL routines:SSL3_ACCEPT:unsafe legacy renegotiation disabled</pre>
 <p>It occurs appears when I try to use a SSL client certificate with Safari. Of course, authentication is broken as it just fails on an 403 error page.</p>
-<p>So it seems that Safari is the last browser which was not patched against <a href="/blog-archive/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">CVE-2009-3555</a> !</p>
+<p>So it seems that Safari is the last browser which was not patched against <a href="/2009/11/28/openssl-cve-2009-3555-security-fix-and-mod_ssl-client-authentication-breakage.html">CVE-2009-3555</a> !</p>
 <p>2009 !! At least, I quickly checked the other browsers I had around and they were fine: IE, Firefox, Chrome&#8230; I am having an issue with Opera also, but although I have not identified the problem yet, it seems unrelated (and does not throw the same error).</p>
 <p>Note that I reported the issue to Apple, but I did not receive any answer. Silence on the wire.</p>
 ]]></content:encoded>
 			</item>
 		<item>
 		<title>FFFjacking</title>
-		<link>/blog-archive/2011/06/03/fffjacking.html</link>
+		<link>/2011/06/03/fffjacking.html</link>
 		<pubDate>Fri, 03 Jun 2011 17:39:56 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[Pentesting]]></category>
@@ -63,6 +64,7 @@
 		<category><![CDATA[web browser]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=1085</guid>
+		<guid isPermaLink="false">http://www.phocean.net/?p=1085</guid>
 		<description><![CDATA[FFFjacking is new web browser hacking technique discovered by  Roman Kümmel (aka .cCuMiNn.). Even though it requires a little of social engineering, it is quite dangerous. Yet another string to add to the bow.]]></description>
 				<content:encoded><![CDATA[<p><a title="FFFjacking" href="http://www.soom.cz/index.php?name=articles/show&amp;aid=550" target="_blank">FFFjacking</a> is new web browser hacking technique discovered by  Roman Kümmel (aka .cCuMiNn.).</p>
 <p>Even though it requires a little of social engineering, it is quite dangerous. Yet another string to add to the bow.</p>
@@ -70,7 +72,7 @@
 			</item>
 		<item>
 		<title>Anti-IE 6 campaign</title>
-		<link>/blog-archive/2009/03/03/anti-ie-6-campaign.html</link>
+		<link>/2009/03/03/anti-ie-6-campaign.html</link>
 		<pubDate>Tue, 03 Mar 2009 20:30:45 +0000</pubDate>
 		<dc:creator><![CDATA[phocean]]></dc:creator>
 				<category><![CDATA[News]]></category>
@@ -78,11 +80,12 @@
 		<category><![CDATA[IE]]></category>
 
 		<guid isPermaLink="false">http://www.phocean.net/?p=346</guid>
-		<description><![CDATA[I found this initiative, apparently started in Sweden, quite funny but also educative. So I just set up the Shockingly Big IE6 Warning plugin in this blog. Then I became curious and checked the stats of this site : So there is still about 9% of our visitors that are running IE 6 and 3%...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/blog-archive/2009/03/03/anti-ie-6-campaign.html">Continue Reading</a></span>]]></description>
+		<guid isPermaLink="false">http://www.phocean.net/?p=346</guid>
+		<description><![CDATA[I found this initiative, apparently started in Sweden, quite funny but also educative. So I just set up the Shockingly Big IE6 Warning plugin in this blog. Then I became curious and checked the stats of this site : So there is still about 9% of our visitors that are running IE 6 and 3%...<br><i class="icon-right-hand"></i> <span class="read-more"><a href="/2009/03/03/anti-ie-6-campaign.html">Continue Reading</a></span>]]></description>
 				<content:encoded><![CDATA[<p>I found <a title="anti-ie6 campaign" href="http://ie6.forteller.net/index.php?title=Main_Page#French">this initiative</a>, apparently started in Sweden, quite funny but also educative.</p>
 <p>So I just set up the <a title="anti-ie6 plugin" href="http://wordpress.org/extend/plugins/shockingly-big-ie6-warning/">Shockingly Big IE6 Warning plugin</a> in this blog.</p>
 <p>Then I became curious and checked the stats of this site :</p>
-<p><a href="/blog-archive/wp-content/uploads/2009/03/browser-stats.png" rel="lightbox[346]"><img class="aligncenter size-medium wp-image-347" title="browser-stats" src="/blog-archive/wp-content/uploads/2009/03/browser-stats-300x256.png" alt="browser-stats" width="300" height="256" srcset="/blog-archive/wp-content/uploads/2009/03/browser-stats-300x256.png 300w, /blog-archive/wp-content/uploads/2009/03/browser-stats.png 802w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="/wp-content/uploads/2009/03/browser-stats.png" rel="lightbox[346]"><img class="aligncenter size-medium wp-image-347" title="browser-stats" src="/wp-content/uploads/2009/03/browser-stats-300x256.png" alt="browser-stats" width="300" height="256" srcset="/wp-content/uploads/2009/03/browser-stats-300x256.png 300w, /wp-content/uploads/2009/03/browser-stats.png 802w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
 <p>So there is still about 9% of our visitors that are running IE 6 and 3% using some rather outdated versions of Firefox.</p>
 <p>And, my god, I would have never imagined that Netscape would appear in the list !</p>
 <p>Yes, there is still a lot of work to do about security awareness among users.</p>
